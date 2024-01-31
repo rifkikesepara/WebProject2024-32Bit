@@ -12,6 +12,8 @@ import {
   TableHead,
   TableRow,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import UndoIcon from "@mui/icons-material/Undo";
@@ -32,7 +34,7 @@ const menuItems = [
       <LocalGroceryStoreIcon
         sx={{
           backgroundColor: "#ec324f",
-          fontSize: 40,
+          fontSize: { md: 75, sm: 75, xs: 60 },
           color: "white",
           padding: 2,
           borderRadius: 5,
@@ -46,7 +48,7 @@ const menuItems = [
       <UndoIcon
         sx={{
           backgroundColor: "#ec324f",
-          fontSize: 40,
+          fontSize: { md: 75, sm: 75, xs: 60 },
           color: "white",
           padding: 2,
           borderRadius: 5,
@@ -60,7 +62,7 @@ const menuItems = [
       <DescriptionIcon
         sx={{
           backgroundColor: "#cb9114",
-          fontSize: 40,
+          fontSize: { md: 75, sm: 75, xs: 60 },
           color: "white",
           padding: 2,
           borderRadius: 5,
@@ -74,7 +76,7 @@ const menuItems = [
       <StoreIcon
         sx={{
           backgroundColor: "#794b94",
-          fontSize: 40,
+          fontSize: { md: 75, sm: 75, xs: 60 },
           color: "white",
           padding: 2,
           borderRadius: 5,
@@ -88,7 +90,7 @@ const menuItems = [
       <LocalOfferIcon
         sx={{
           backgroundColor: "#37536f",
-          fontSize: 40,
+          fontSize: { md: 75, sm: 75, xs: 60 },
           color: "white",
           padding: 2,
           borderRadius: 5,
@@ -102,7 +104,7 @@ const menuItems = [
       <PointOfSaleIcon
         sx={{
           backgroundColor: "#ec324f",
-          fontSize: 40,
+          fontSize: { md: 75, sm: 75, xs: 60 },
           color: "white",
           padding: 2,
           borderRadius: 5,
@@ -116,7 +118,7 @@ const menuItems = [
       <LayersIcon
         sx={{
           backgroundColor: "#6485d2",
-          fontSize: 40,
+          fontSize: { md: 75, sm: 75, xs: 60 },
           color: "white",
           padding: 2,
           borderRadius: 5,
@@ -130,7 +132,7 @@ const menuItems = [
       <LinkIcon
         sx={{
           backgroundColor: "#28b2c9",
-          fontSize: 40,
+          fontSize: { md: 75, sm: 75, xs: 60 },
           color: "white",
           padding: 2,
           borderRadius: 5,
@@ -217,7 +219,7 @@ const DrawerItems = () => {
                   width: "100%",
                   display: "flex",
                   alignItems: "center",
-                  height: 60,
+                  height: { md: 50, sm: 50, xs: 30 },
                   borderRadius: 5,
                   marginBlock: 2,
                   cursor: "pointer",
@@ -225,10 +227,12 @@ const DrawerItems = () => {
               >
                 {data.icon}
                 <Typography
-                  fontSize={30}
-                  fontWeight={"bold"}
-                  marginLeft={2}
-                  color={"black"}
+                  sx={{
+                    fontSize: { md: 30, sm: 30, xs: 20 },
+                    fontWeight: "bold",
+                    marginLeft: 2,
+                    color: "black",
+                  }}
                 >
                   {data.name}
                 </Typography>
@@ -269,6 +273,9 @@ const getMonthString = (index) => {
 };
 
 export default function MainScreen() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+
   const [showDrawer, setShowDrawer] = useState(false);
   const [date, setDate] = useState(new Date());
   const [time, setTime] = useState(new Date().toLocaleTimeString("tr-TR"));
@@ -292,18 +299,19 @@ export default function MainScreen() {
       }}
     >
       <IconButton
-        sx={{ position: "absolute", top: 0, left: 0 }}
+        sx={{ position: "absolute", top: 0, left: 0, zIndex: 100 }}
         onClick={() => setShowDrawer(true)}
       >
-        <MenuIcon sx={{ fontSize: 70, color: "black" }} />
+        <MenuIcon sx={{ fontSize: { md: 70, xs: 50 }, color: "black" }} />
       </IconButton>
-      <Grid container spacing={2} sx={{ width: "85%" }}>
+      <Grid container spacing={2} sx={{ width: { xs: "95%", md: "85%" } }}>
         <Grid item xs={12}>
           <Paper
             sx={{
               backgroundColor: "white",
               borderRadius: 1,
               display: "flex",
+              flexDirection: { md: "row", sm: "row", xs: "column" },
               justifyContent: "center",
               paddingInline: 1.5,
               paddingBlock: 2.5,
@@ -311,16 +319,24 @@ export default function MainScreen() {
               alignItems: "center",
             }}
           >
-            <Typography sx={{ fontSize: 30, fontWeight: "bold" }}>
+            <Typography
+              sx={{ fontSize: { md: 30, xs: 20 }, fontWeight: "bold" }}
+            >
               {getDayString(date.getDay())}, {date.getDate()}{" "}
               {getMonthString(date.getMonth())}
             </Typography>
-            <Typography sx={{ position: "absolute", right: 15, fontSize: 40 }}>
+            <Typography
+              sx={{
+                position: { md: "absolute", sm: "absolute" },
+                right: 15,
+                fontSize: 30,
+              }}
+            >
               {time}
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={matches ? 8 : 12}>
           <Paper
             elevation={2}
             sx={{
@@ -347,7 +363,7 @@ export default function MainScreen() {
               margin={{
                 top: 16,
                 right: 20,
-                left: 70,
+                left: matches ? 70 : 50,
                 bottom: 30,
               }}
               xAxis={[
@@ -359,7 +375,7 @@ export default function MainScreen() {
               ]}
               yAxis={[
                 {
-                  label: "Satışlar ($)",
+                  label: matches && "Satışlar ($)",
                   max: 5000,
                   tickNumber: 5,
                   labelStyle: { fontWeight: "bold", fontSize: 20 },
@@ -375,11 +391,14 @@ export default function MainScreen() {
                 [`& .${axisClasses.left} .${axisClasses.label}`]: {
                   transform: "translateX(-25px)",
                 },
+                "& .MuiLineElement-root": {
+                  strokeWidth: 3,
+                },
               }}
             />
           </Paper>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={matches ? 4 : 12}>
           <Paper
             elevation={2}
             sx={{
@@ -390,7 +409,7 @@ export default function MainScreen() {
               paddingInline: 1.5,
               paddingBlock: 2.5,
               minWidth: "50%",
-              height: 300,
+              height: { md: 300, sm: 300 },
               justifyContent: "space-between",
             }}
           >
@@ -407,7 +426,11 @@ export default function MainScreen() {
                 TOPLAM KAZANÇ
               </Typography>
               <Typography
-                sx={{ color: "black", fontWeight: "bold", fontSize: 80 }}
+                sx={{
+                  color: "black",
+                  fontWeight: "bold",
+                  fontSize: { xs: 30, sm: 40, md: 80 },
+                }}
               >
                 $3000
               </Typography>
@@ -418,7 +441,7 @@ export default function MainScreen() {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} sx={{ display: { md: "block", xs: "none" } }}>
           <Paper
             elevation={2}
             sx={{
@@ -438,21 +461,35 @@ export default function MainScreen() {
             <Table size="small">
               <TableHead>
                 <TableRow>
-                  <TableCell>Date</TableCell>
-                  <TableCell>Name</TableCell>
-                  <TableCell>Ship To</TableCell>
-                  <TableCell>Payment Method</TableCell>
-                  <TableCell align="right">Sale Amount</TableCell>
+                  <TableCell sx={{ fontWeight: "bold", fontSize: 20 }}>
+                    Tarih
+                  </TableCell>
+                  <TableCell sx={{ fontWeight: "bold", fontSize: 20 }}>
+                    İsim
+                  </TableCell>
+                  <TableCell sx={{ fontWeight: "bold", fontSize: 20 }}>
+                    Payment Method
+                  </TableCell>
+                  <TableCell
+                    sx={{ fontWeight: "bold", fontSize: 20 }}
+                    align="right"
+                  >
+                    Sale Amount
+                  </TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
-                {rows.map((row) => (
+                {rows.slice(0, 4).map((row) => (
                   <TableRow key={row.id}>
-                    <TableCell>{row.date}</TableCell>
-                    <TableCell>{row.name}</TableCell>
-                    <TableCell>{row.shipTo}</TableCell>
-                    <TableCell>{row.paymentMethod}</TableCell>
-                    <TableCell align="right">{`$${row.amount}`}</TableCell>
+                    <TableCell sx={{ fontSize: 20 }}>{row.date}</TableCell>
+                    <TableCell sx={{ fontSize: 20 }}>{row.name}</TableCell>
+                    <TableCell sx={{ fontSize: 20 }}>
+                      {row.paymentMethod}
+                    </TableCell>
+                    <TableCell
+                      sx={{ fontSize: 20 }}
+                      align="right"
+                    >{`$${row.amount}`}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>
@@ -467,7 +504,7 @@ export default function MainScreen() {
       >
         <Box
           sx={{
-            width: 500,
+            width: "100%",
             height: "100%",
             background: "white",
             display: "flex",

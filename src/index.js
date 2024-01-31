@@ -5,11 +5,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import MainScreen from "./pages/MainScreen";
+import Login from "./pages/Login";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/home",
     element: <MainScreen />,
+  },
+  {
+    path: "/",
+    element: <Login />,
   },
 ]);
 
