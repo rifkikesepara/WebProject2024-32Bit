@@ -6,6 +6,7 @@ import {
   IconButton,
   Paper,
   SwipeableDrawer,
+  Switch,
   Table,
   TableBody,
   TableCell,
@@ -24,8 +25,11 @@ import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import LayersIcon from "@mui/icons-material/Layers";
 import LinkIcon from "@mui/icons-material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
+import SettingsIcon from "@mui/icons-material/Settings";
+import LogoutIcon from "@mui/icons-material/Logout";
 import { useState } from "react";
 import { LineChart, axisClasses } from "@mui/x-charts";
+import { usePreferences } from "../context/Theme";
 
 const menuItems = [
   {
@@ -210,9 +214,9 @@ const rows = [
 const DrawerItems = () => {
   return (
     <>
-      {menuItems.map((data) => {
+      {menuItems.map((data, index) => {
         return (
-          <>
+          <Box key={index}>
             <Button>
               <Box
                 sx={{
@@ -223,6 +227,7 @@ const DrawerItems = () => {
                   borderRadius: 5,
                   marginBlock: 2,
                   cursor: "pointer",
+                  paddingRight: 1,
                 }}
               >
                 {data.icon}
@@ -239,7 +244,7 @@ const DrawerItems = () => {
               </Box>
             </Button>
             <Divider />
-          </>
+          </Box>
         );
       })}
     </>
@@ -269,14 +274,37 @@ const getMonthString = (index) => {
   switch (index) {
     case 0:
       return "Ocak";
+    case 1:
+      return "Şubat";
+    case 2:
+      return "Mart";
+    case 3:
+      return "Nisan";
+    case 4:
+      return "Mayıs";
+    case 5:
+      return "Haziran";
+    case 6:
+      return "Temmuz";
+    case 7:
+      return "Ağustos";
+    case 8:
+      return "Eylül";
+    case 9:
+      return "Ekim";
+    case 10:
+      return "Kasım";
+    case 11:
+      return "Aralık";
   }
 };
 
 export default function MainScreen() {
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  const { breakpoints } = useTheme();
+  const matches = useMediaQuery(breakpoints.up("sm"));
+  const { theme, toggleTheme } = usePreferences();
 
-  const [showDrawer, setShowDrawer] = useState(false);
+  const [showDrawer, setShowDrawer] = useState({ right: false, left: false });
   const [date, setDate] = useState(new Date());
   const [time, setTime] = useState(new Date().toLocaleTimeString("tr-TR"));
 
@@ -300,9 +328,15 @@ export default function MainScreen() {
     >
       <IconButton
         sx={{ position: "absolute", top: 0, left: 0, zIndex: 100 }}
-        onClick={() => setShowDrawer(true)}
+        onClick={() => setShowDrawer({ ...showDrawer, left: true })}
       >
         <MenuIcon sx={{ fontSize: { md: 70, xs: 50 }, color: "black" }} />
+      </IconButton>
+      <IconButton
+        sx={{ position: "absolute", top: 0, right: 0, zIndex: 100 }}
+        onClick={() => setShowDrawer({ ...showDrawer, right: true })}
+      >
+        <SettingsIcon sx={{ fontSize: { md: 70, xs: 50 }, color: "black" }} />
       </IconButton>
       <Grid container spacing={2} sx={{ width: { xs: "95%", md: "85%" } }}>
         <Grid item xs={12}>
@@ -498,9 +532,9 @@ export default function MainScreen() {
         </Grid>
       </Grid>
       <SwipeableDrawer
-        open={showDrawer}
+        open={showDrawer.left}
         anchor="left"
-        onClose={() => setShowDrawer(false)}
+        onClose={() => setShowDrawer({ ...showDrawer, left: false })}
       >
         <Box
           sx={{
@@ -512,6 +546,27 @@ export default function MainScreen() {
           }}
         >
           <DrawerItems />
+        </Box>
+      </SwipeableDrawer>
+      <SwipeableDrawer
+        anchor="right"
+        open={showDrawer.right}
+        onClose={() => setShowDrawer({ ...showDrawer, right: false })}
+      >
+        <Box sx={{ width: "100%" }}>
+          <Box
+            sx={{
+              minWidth: 200,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <Switch onChange={() => toggleTheme()} />
+            <IconButton href="../">
+              <LogoutIcon />
+            </IconButton>
+          </Box>
         </Box>
       </SwipeableDrawer>
     </Box>

@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import MainScreen from "./pages/MainScreen";
 import Login from "./pages/Login";
+import Theme from "./context/Theme";
+import AlertProvider, { AlertPopUp } from "./context/AlertProvider";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,12 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Theme>
+      <AlertProvider>
+        <AlertPopUp />
+        <RouterProvider router={router} />
+      </AlertProvider>
+    </Theme>
   </React.StrictMode>
 );
 
