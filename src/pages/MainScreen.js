@@ -27,9 +27,10 @@ import LinkIcon from "@mui/icons-material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { LineChart, axisClasses } from "@mui/x-charts";
-import { usePreferences } from "../context/Theme";
+import { usePreferences } from "../Context/Theme";
+import axios from "axios";
 
 const menuItems = [
   {
@@ -147,21 +148,21 @@ const menuItems = [
 ];
 
 // Generate Sales Data
-function createData(time, amount) {
-  return { time, amount: amount ?? null };
-}
+// function createData(time, amount) {
+//   return { time, amount: amount ?? null };
+// }
 
-const data = [
-  createData("00:00", 0),
-  createData("03:00", 300),
-  createData("06:00", 600),
-  createData("09:00", 800),
-  createData("12:00", 1500),
-  createData("15:00", 2000),
-  createData("18:00", 2400),
-  createData("21:00", 2400),
-  createData("24:00", 3000),
-];
+// const data = [
+//   createData("00:00", 0),
+//   createData("03:00", 300),
+//   createData("06:00", 600),
+//   createData("09:00", 800),
+//   createData("12:00", 1500),
+//   createData("15:00", 2000),
+//   createData("18:00", 2400),
+//   createData("21:00", 2400),
+//   createData("24:00", 3000),
+// ];
 
 // Generate Order Data
 function createRowData(id, date, name, shipTo, paymentMethod, amount) {
@@ -217,7 +218,7 @@ const DrawerItems = () => {
       {menuItems.map((data, index) => {
         return (
           <Box key={index}>
-            <Button>
+            <Button fullWidth>
               <Box
                 sx={{
                   width: "100%",
@@ -299,17 +300,70 @@ const getMonthString = (index) => {
   }
 };
 
+const adjustDataForChart = (data) => {
+  console.log("adjusting data");
+  const array = [];
+  let totalAmount = 0;
+  for (let i = 0; i < 24; i++) {
+    let total = 0;
+    data.map(({ time, amount }) => {
+      var newTime = time.split(":");
+      if (newTime[0] == i) {
+        total = total + amount;
+      }
+    });
+
+    totalAmount = total + totalAmount;
+    array.push({ time: i, amount: total });
+  }
+
+  return array;
+};
+
+const getTotalAmount = (data) => {
+  console.log("total amount");
+  let total = 0;
+  data.map(({ amount }) => {
+    total = total + amount;
+  });
+
+  return total;
+};
+
+const sortTheLastPayments = (data) => {
+  console.log("sortTheLastPaymeny");
+  let array = [];
+  array = data.sort((a, b) => {
+    if (a.time.split(":")[0] < b.time.split(":")[0]) return -1;
+  });
+
+  return array;
+};
+
 export default function MainScreen() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://run.mocky.io/v3/30693e9e-34e8-45ae-98eb-8198b6b22781")
+      .then((response) => setData(response.data))
+      .catch((err) => console.error(err));
+  }, []);
+
+  const chartData = useMemo(() => adjustDataForChart(data), [data]);
+  const tableData = useMemo(() => sortTheLastPayments(data), [data]);
+  const totalPublic = useMemo(() => getTotalAmount(data), [data]);
+
   const { breakpoints } = useTheme();
   const matches = useMediaQuery(breakpoints.up("sm"));
-  const { theme, toggleTheme } = usePreferences();
+  const { isThemeDark, toggleTheme } = usePreferences();
 
   const [showDrawer, setShowDrawer] = useState({ right: false, left: false });
   const [date, setDate] = useState(new Date());
-  const [time, setTime] = useState(new Date().toLocaleTimeString("tr-TR"));
+  // const [time, setTime] = useState(new Date().toLocaleTimeString("tr-TR"));
 
   const updateTime = () => {
-    setTime(new Date().toLocaleTimeString("tr-TR"));
+    setDate(new Date());
   };
 
   setInterval(updateTime, 1000);
@@ -346,13 +400,26 @@ export default function MainScreen() {
               borderRadius: 1,
               display: "flex",
               flexDirection: { md: "row", sm: "row", xs: "column" },
-              justifyContent: "center",
+              justifyContent: "space-between",
               paddingInline: 1.5,
               paddingBlock: 2.5,
               position: "relative",
               alignItems: "center",
             }}
           >
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <div
+                style={{
+                  height: 15,
+                  width: 15,
+                  backgroundColor: "green",
+                  boxShadow: "0px 0px 8px 0.5px green",
+                  borderRadius: 200,
+                  marginRight: 10,
+                }}
+              ></div>
+              <Typography>Mağaza Çevrimiçi</Typography>
+            </Box>
             <Typography
               sx={{ fontSize: { md: 30, xs: 20 }, fontWeight: "bold" }}
             >
@@ -361,12 +428,11 @@ export default function MainScreen() {
             </Typography>
             <Typography
               sx={{
-                position: { md: "absolute", sm: "absolute" },
                 right: 15,
                 fontSize: 30,
               }}
             >
-              {time}
+              {date.toLocaleTimeString("tr-TR")}
             </Typography>
           </Paper>
         </Grid>
@@ -393,7 +459,7 @@ export default function MainScreen() {
               BUGÜN
             </Typography>
             <LineChart
-              dataset={data}
+              dataset={chartData}
               margin={{
                 top: 16,
                 right: 20,
@@ -409,8 +475,8 @@ export default function MainScreen() {
               ]}
               yAxis={[
                 {
-                  label: matches && "Satışlar ($)",
-                  max: 5000,
+                  label: matches && "Satışlar (₺)",
+                  // max: 15000,
                   tickNumber: 5,
                   labelStyle: { fontWeight: "bold", fontSize: 20 },
                 },
@@ -463,12 +529,15 @@ export default function MainScreen() {
                 sx={{
                   color: "black",
                   fontWeight: "bold",
-                  fontSize: { xs: 30, sm: 40, md: 80 },
+                  fontSize: { xs: 30, sm: 40, md: 65 },
                 }}
               >
-                $3000
+                {totalPublic}₺
               </Typography>
-              <Typography sx={{ color: "#666666" }}>31 Ocak 2024</Typography>
+              <Typography sx={{ color: "#666666" }}>
+                {date.getDate()} {getMonthString(date.getMonth())}{" "}
+                {date.getFullYear()}
+              </Typography>
             </Box>
             <Typography sx={{ textDecoration: "underline", cursor: "pointer" }}>
               Detaylı Görüntüle
@@ -513,17 +582,20 @@ export default function MainScreen() {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {rows.slice(0, 4).map((row) => (
+                {tableData.slice(0, 4).map((row) => (
                   <TableRow key={row.id}>
-                    <TableCell sx={{ fontSize: 20 }}>{row.date}</TableCell>
-                    <TableCell sx={{ fontSize: 20 }}>{row.name}</TableCell>
                     <TableCell sx={{ fontSize: 20 }}>
-                      {row.paymentMethod}
+                      {date.getDate()} {getMonthString(date.getMonth())}{" "}
+                      {date.getFullYear()}
                     </TableCell>
+                    <TableCell sx={{ fontSize: 20 }}>
+                      {row.first_name}
+                    </TableCell>
+                    <TableCell sx={{ fontSize: 20 }}>{row.cardType}</TableCell>
                     <TableCell
                       sx={{ fontSize: 20 }}
                       align="right"
-                    >{`$${row.amount}`}</TableCell>
+                    >{`${row.amount}₺`}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>
@@ -532,6 +604,7 @@ export default function MainScreen() {
         </Grid>
       </Grid>
       <SwipeableDrawer
+        onOpen={() => setShowDrawer({ ...showDrawer, left: true })}
         open={showDrawer.left}
         anchor="left"
         onClose={() => setShowDrawer({ ...showDrawer, left: false })}
@@ -549,6 +622,7 @@ export default function MainScreen() {
         </Box>
       </SwipeableDrawer>
       <SwipeableDrawer
+        onOpen={() => setShowDrawer({ ...showDrawer, right: true })}
         anchor="right"
         open={showDrawer.right}
         onClose={() => setShowDrawer({ ...showDrawer, right: false })}
@@ -562,7 +636,7 @@ export default function MainScreen() {
               alignItems: "center",
             }}
           >
-            <Switch onChange={() => toggleTheme()} />
+            <Switch checked={isThemeDark} onChange={() => toggleTheme()} />
             <IconButton href="../">
               <LogoutIcon />
             </IconButton>

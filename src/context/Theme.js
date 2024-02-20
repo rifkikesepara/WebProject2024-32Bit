@@ -32,6 +32,7 @@ export default function Theme({ children }) {
   const [themeName, setThemeName] = useState(localStorage.getItem("theme"));
 
   let theme = themeName == "light" ? lightTheme : darkTheme;
+  let isThemeDark = themeName == "dark" ? true : false;
 
   const toggleTheme = useCallback(() => {
     if (themeName == "light") {
@@ -48,8 +49,9 @@ export default function Theme({ children }) {
       toggleTheme,
       themeName,
       theme,
+      isThemeDark,
     }),
-    [toggleTheme, themeName, theme]
+    [toggleTheme, themeName, theme, isThemeDark]
   );
 
   return (

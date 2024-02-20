@@ -1,0 +1,15 @@
+.myTheme {
+  border: 1px solid red;
+}
+
+.simple-keyboard {
+}
+
+.hg-button.hg-red {
+  background: rgb(255, 0, 0, 0.7);
+  color: white;
+}
+
+.hg-button {
+  background: red;
+}

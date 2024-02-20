@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "./Styles/index.css";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import MainScreen from "./pages/MainScreen";
-import Login from "./pages/Login";
-import Theme from "./context/Theme";
-import AlertProvider, { AlertPopUp } from "./context/AlertProvider";
+import MainScreen from "./Pages/MainScreen";
+import Login from "./Pages/Login";
+import Theme from "./Context/Theme";
+import AlertProvider, { AlertPopUp } from "./Context/AlertProvider";
 
 const router = createBrowserRouter([
   {
