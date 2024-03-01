@@ -5,6 +5,7 @@ import {
   Grid,
   IconButton,
   Paper,
+  Skeleton,
   SwipeableDrawer,
   Switch,
   Table,
@@ -27,10 +28,11 @@ import LinkIcon from "@mui/icons-material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { LineChart, axisClasses } from "@mui/x-charts";
 import { usePreferences } from "../Context/Theme";
-import axios from "axios";
+import useData from "../Hooks/useData";
+import { useNavigate } from "react-router-dom";
 
 const menuItems = [
   {
@@ -46,6 +48,7 @@ const menuItems = [
         }}
       />
     ),
+    path: "../sale",
   },
   {
     name: "İADE İŞLEMİ",
@@ -147,78 +150,14 @@ const menuItems = [
   },
 ];
 
-// Generate Sales Data
-// function createData(time, amount) {
-//   return { time, amount: amount ?? null };
-// }
-
-// const data = [
-//   createData("00:00", 0),
-//   createData("03:00", 300),
-//   createData("06:00", 600),
-//   createData("09:00", 800),
-//   createData("12:00", 1500),
-//   createData("15:00", 2000),
-//   createData("18:00", 2400),
-//   createData("21:00", 2400),
-//   createData("24:00", 3000),
-// ];
-
-// Generate Order Data
-function createRowData(id, date, name, shipTo, paymentMethod, amount) {
-  return { id, date, name, shipTo, paymentMethod, amount };
-}
-
-const rows = [
-  createRowData(
-    0,
-    "16 Mar, 2019",
-    "Elvis Presley",
-    "Tupelo, MS",
-    "VISA ⠀•••• 3719",
-    312.44
-  ),
-  createRowData(
-    1,
-    "16 Mar, 2019",
-    "Paul McCartney",
-    "London, UK",
-    "VISA ⠀•••• 2574",
-    866.99
-  ),
-  createRowData(
-    2,
-    "16 Mar, 2019",
-    "Tom Scholz",
-    "Boston, MA",
-    "MC ⠀•••• 1253",
-    100.81
-  ),
-  createRowData(
-    3,
-    "16 Mar, 2019",
-    "Michael Jackson",
-    "Gary, IN",
-    "AMEX ⠀•••• 2000",
-    654.39
-  ),
-  createRowData(
-    4,
-    "15 Mar, 2019",
-    "Bruce Springsteen",
-    "Long Branch, NJ",
-    "VISA ⠀•••• 5919",
-    212.79
-  ),
-];
-
 const DrawerItems = () => {
+  const navigate = useNavigate();
   return (
     <>
       {menuItems.map((data, index) => {
         return (
           <Box key={index}>
-            <Button fullWidth>
+            <Button fullWidth onClick={() => navigate(data.path)}>
               <Box
                 sx={{
                   width: "100%",
@@ -343,12 +282,13 @@ const sortTheLastPayments = (data) => {
 export default function MainScreen() {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get("https://run.mocky.io/v3/30693e9e-34e8-45ae-98eb-8198b6b22781")
-      .then((response) => setData(response.data))
-      .catch((err) => console.error(err));
-  }, []);
+  useData(
+    "https://run.mocky.io/v3/30693e9e-34e8-45ae-98eb-8198b6b22781",
+    (data) => setData(data),
+    () => {
+      console.log("data is fetching");
+    }
+  );
 
   const chartData = useMemo(() => adjustDataForChart(data), [data]);
   const tableData = useMemo(() => sortTheLastPayments(data), [data]);
@@ -393,215 +333,243 @@ export default function MainScreen() {
         <SettingsIcon sx={{ fontSize: { md: 70, xs: 50 }, color: "black" }} />
       </IconButton>
       <Grid container spacing={2} sx={{ width: { xs: "95%", md: "85%" } }}>
-        <Grid item xs={12}>
-          <Paper
-            sx={{
-              backgroundColor: "white",
-              borderRadius: 1,
-              display: "flex",
-              flexDirection: { md: "row", sm: "row", xs: "column" },
-              justifyContent: "space-between",
-              paddingInline: 1.5,
-              paddingBlock: 2.5,
-              position: "relative",
-              alignItems: "center",
-            }}
-          >
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <div
-                style={{
-                  height: 15,
-                  width: 15,
-                  backgroundColor: "green",
-                  boxShadow: "0px 0px 8px 0.5px green",
-                  borderRadius: 200,
-                  marginRight: 10,
+        {!data.length ? (
+          <Grid item xs={12}>
+            <Skeleton variant="rectangular" width={"100%"} height={85} />
+          </Grid>
+        ) : (
+          <Grid item xs={12}>
+            <Paper
+              sx={{
+                backgroundColor: "white",
+                borderRadius: 1,
+                display: "flex",
+                flexDirection: { md: "row", sm: "row", xs: "column" },
+                justifyContent: "space-between",
+                paddingInline: 1.5,
+                paddingBlock: 2.5,
+                position: "relative",
+                alignItems: "center",
+              }}
+            >
+              <Box sx={{ display: "flex", alignItems: "center" }}>
+                <div
+                  style={{
+                    height: 15,
+                    width: 15,
+                    backgroundColor: "green",
+                    boxShadow: "0px 0px 8px 0.5px green",
+                    borderRadius: 200,
+                    marginRight: 10,
+                  }}
+                ></div>
+                <Typography>Mağaza Çevrimiçi</Typography>
+              </Box>
+              <Typography
+                sx={{ fontSize: { md: 30, xs: 20 }, fontWeight: "bold" }}
+              >
+                {getDayString(date.getDay())}, {date.getDate()}{" "}
+                {getMonthString(date.getMonth())}
+              </Typography>
+              <Typography
+                sx={{
+                  right: 15,
+                  fontSize: 30,
                 }}
-              ></div>
-              <Typography>Mağaza Çevrimiçi</Typography>
-            </Box>
-            <Typography
-              sx={{ fontSize: { md: 30, xs: 20 }, fontWeight: "bold" }}
-            >
-              {getDayString(date.getDay())}, {date.getDate()}{" "}
-              {getMonthString(date.getMonth())}
-            </Typography>
-            <Typography
+              >
+                {date.toLocaleTimeString("tr-TR")}
+              </Typography>
+            </Paper>
+          </Grid>
+        )}
+        {!data.length ? (
+          <Grid item xs={matches ? 8 : 12}>
+            <Skeleton variant="rectangular" width={"100%"} height={300} />
+          </Grid>
+        ) : (
+          <Grid item xs={matches ? 8 : 12}>
+            <Paper
+              elevation={2}
               sx={{
-                right: 15,
-                fontSize: 30,
-              }}
-            >
-              {date.toLocaleTimeString("tr-TR")}
-            </Typography>
-          </Paper>
-        </Grid>
-        <Grid item xs={matches ? 8 : 12}>
-          <Paper
-            elevation={2}
-            sx={{
-              backgroundColor: "white",
-              borderRadius: 1,
-              display: "flex",
-              flexDirection: "column",
-              paddingInline: 1.5,
-              paddingBlock: 2.5,
-              height: 300,
-            }}
-          >
-            <Typography
-              sx={{
-                color: "#1976d2",
-                fontWeight: "bold",
-                fontSize: 20,
-              }}
-            >
-              BUGÜN
-            </Typography>
-            <LineChart
-              dataset={chartData}
-              margin={{
-                top: 16,
-                right: 20,
-                left: matches ? 70 : 50,
-                bottom: 30,
-              }}
-              xAxis={[
-                {
-                  scaleType: "point",
-                  dataKey: "time",
-                  tickNumber: 2,
-                },
-              ]}
-              yAxis={[
-                {
-                  label: matches && "Satışlar (₺)",
-                  // max: 15000,
-                  tickNumber: 5,
-                  labelStyle: { fontWeight: "bold", fontSize: 20 },
-                },
-              ]}
-              series={[
-                {
-                  dataKey: "amount",
-                  showMark: false,
-                },
-              ]}
-              sx={{
-                [`& .${axisClasses.left} .${axisClasses.label}`]: {
-                  transform: "translateX(-25px)",
-                },
-                "& .MuiLineElement-root": {
-                  strokeWidth: 3,
-                },
-              }}
-            />
-          </Paper>
-        </Grid>
-        <Grid item xs={matches ? 4 : 12}>
-          <Paper
-            elevation={2}
-            sx={{
-              backgroundColor: "white",
-              borderRadius: 1,
-              display: "flex",
-              flexDirection: "column",
-              paddingInline: 1.5,
-              paddingBlock: 2.5,
-              minWidth: "50%",
-              height: { md: 300, sm: 300 },
-              justifyContent: "space-between",
-            }}
-          >
-            <Box
-              sx={{
+                backgroundColor: "white",
+                borderRadius: 1,
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "center",
+                paddingInline: 1.5,
+                paddingBlock: 2.5,
+                height: 300,
+              }}
+            >
+              <Typography
+                sx={{
+                  color: "#1976d2",
+                  fontWeight: "bold",
+                  fontSize: 20,
+                }}
+              >
+                BUGÜN
+              </Typography>
+              <LineChart
+                dataset={chartData}
+                margin={{
+                  top: 16,
+                  right: 20,
+                  left: matches ? 70 : 50,
+                  bottom: 30,
+                }}
+                xAxis={[
+                  {
+                    scaleType: "point",
+                    dataKey: "time",
+                    tickNumber: 2,
+                  },
+                ]}
+                yAxis={[
+                  {
+                    label: matches && "Satışlar (₺)",
+                    // max: 15000,
+                    tickNumber: 5,
+                    labelStyle: { fontWeight: "bold", fontSize: 20 },
+                  },
+                ]}
+                series={[
+                  {
+                    dataKey: "amount",
+                    showMark: false,
+                  },
+                ]}
+                sx={{
+                  [`& .${axisClasses.left} .${axisClasses.label}`]: {
+                    transform: "translateX(-25px)",
+                  },
+                  "& .MuiLineElement-root": {
+                    strokeWidth: 3,
+                  },
+                }}
+              />
+            </Paper>
+          </Grid>
+        )}
+        {!data.length ? (
+          <Grid item xs={matches ? 4 : 12}>
+            <Skeleton variant="rectangular" width={"100%"} height={300} />
+          </Grid>
+        ) : (
+          <Grid item xs={matches ? 4 : 12}>
+            <Paper
+              elevation={2}
+              sx={{
+                backgroundColor: "white",
+                borderRadius: 1,
+                display: "flex",
+                flexDirection: "column",
+                paddingInline: 1.5,
+                paddingBlock: 2.5,
+                minWidth: "50%",
+                height: { md: 300, sm: 300 },
+                justifyContent: "space-between",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                }}
+              >
+                <Typography
+                  sx={{ color: "#1976d2", fontWeight: "bold", fontSize: 20 }}
+                >
+                  TOPLAM KAZANÇ
+                </Typography>
+                <Typography
+                  sx={{
+                    color: "black",
+                    fontWeight: "bold",
+                    fontSize: { xs: 30, sm: 40, md: 65 },
+                  }}
+                >
+                  {totalPublic}₺
+                </Typography>
+                <Typography sx={{ color: "#666666" }}>
+                  {date.getDate()} {getMonthString(date.getMonth())}{" "}
+                  {date.getFullYear()}
+                </Typography>
+              </Box>
+              <Typography
+                sx={{ textDecoration: "underline", cursor: "pointer" }}
+              >
+                Detaylı Görüntüle
+              </Typography>
+            </Paper>
+          </Grid>
+        )}
+        {!data.length ? (
+          <Grid item xs={12} sx={{ display: { md: "block", xs: "none" } }}>
+            <Skeleton variant="rectangular" width={"100%"} height={274} />
+          </Grid>
+        ) : (
+          <Grid item xs={12} sx={{ display: { md: "block", xs: "none" } }}>
+            <Paper
+              elevation={2}
+              sx={{
+                backgroundColor: "white",
+                borderRadius: 1,
+                display: "flex",
+                flexDirection: "column",
+                paddingInline: 1.5,
+                paddingBlock: 2.5,
               }}
             >
               <Typography
                 sx={{ color: "#1976d2", fontWeight: "bold", fontSize: 20 }}
               >
-                TOPLAM KAZANÇ
+                SON SATIŞLAR
               </Typography>
-              <Typography
-                sx={{
-                  color: "black",
-                  fontWeight: "bold",
-                  fontSize: { xs: 30, sm: 40, md: 65 },
-                }}
-              >
-                {totalPublic}₺
-              </Typography>
-              <Typography sx={{ color: "#666666" }}>
-                {date.getDate()} {getMonthString(date.getMonth())}{" "}
-                {date.getFullYear()}
-              </Typography>
-            </Box>
-            <Typography sx={{ textDecoration: "underline", cursor: "pointer" }}>
-              Detaylı Görüntüle
-            </Typography>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sx={{ display: { md: "block", xs: "none" } }}>
-          <Paper
-            elevation={2}
-            sx={{
-              backgroundColor: "white",
-              borderRadius: 1,
-              display: "flex",
-              flexDirection: "column",
-              paddingInline: 1.5,
-              paddingBlock: 2.5,
-            }}
-          >
-            <Typography
-              sx={{ color: "#1976d2", fontWeight: "bold", fontSize: 20 }}
-            >
-              SON SATIŞLAR
-            </Typography>
-            <Table size="small">
-              <TableHead>
-                <TableRow>
-                  <TableCell sx={{ fontWeight: "bold", fontSize: 20 }}>
-                    Tarih
-                  </TableCell>
-                  <TableCell sx={{ fontWeight: "bold", fontSize: 20 }}>
-                    İsim
-                  </TableCell>
-                  <TableCell sx={{ fontWeight: "bold", fontSize: 20 }}>
-                    Payment Method
-                  </TableCell>
-                  <TableCell
-                    sx={{ fontWeight: "bold", fontSize: 20 }}
-                    align="right"
-                  >
-                    Sale Amount
-                  </TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {tableData.slice(0, 4).map((row) => (
-                  <TableRow key={row.id}>
-                    <TableCell sx={{ fontSize: 20 }}>
-                      {date.getDate()} {getMonthString(date.getMonth())}{" "}
-                      {date.getFullYear()}
+              <Table size="small">
+                <TableHead>
+                  <TableRow>
+                    <TableCell sx={{ fontWeight: "bold", fontSize: 20 }}>
+                      Tarih
                     </TableCell>
-                    <TableCell sx={{ fontSize: 20 }}>
-                      {row.first_name}
+                    <TableCell sx={{ fontWeight: "bold", fontSize: 20 }}>
+                      İsim
                     </TableCell>
-                    <TableCell sx={{ fontSize: 20 }}>{row.cardType}</TableCell>
+                    <TableCell sx={{ fontWeight: "bold", fontSize: 20 }}>
+                      Payment Method
+                    </TableCell>
                     <TableCell
-                      sx={{ fontSize: 20 }}
+                      sx={{ fontWeight: "bold", fontSize: 20 }}
                       align="right"
-                    >{`${row.amount}₺`}</TableCell>
+                    >
+                      Sale Amount
+                    </TableCell>
                   </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </Paper>
-        </Grid>
+                </TableHead>
+                <TableBody>
+                  {tableData.slice(0, 4).map((row) => (
+                    <TableRow key={row.id}>
+                      <TableCell sx={{ fontSize: 20 }}>
+                        {date.getDate()} {getMonthString(date.getMonth())}{" "}
+                        {date.getFullYear()}
+                      </TableCell>
+                      <TableCell sx={{ fontSize: 20 }}>
+                        {row.first_name}
+                      </TableCell>
+                      <TableCell sx={{ fontSize: 20 }}>
+                        {row.cardType}
+                      </TableCell>
+                      <TableCell
+                        sx={{ fontSize: 20 }}
+                        align="right"
+                      >{`${row.amount}₺`}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </Paper>
+          </Grid>
+        )}
       </Grid>
       <SwipeableDrawer
         onOpen={() => setShowDrawer({ ...showDrawer, left: true })}

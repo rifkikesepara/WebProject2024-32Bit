@@ -3,10 +3,11 @@ import ReactDOM from "react-dom/client";
 import "./Styles/index.css";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import MainScreen from "./Pages/MainScreen";
 import Login from "./Pages/Login";
+import MainScreen from "./Pages/MainScreen";
 import Theme from "./Context/Theme";
 import AlertProvider, { AlertPopUp } from "./Context/AlertProvider";
+import Sale from "./Pages/Sale";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Login />,
+  },
+  {
+    path: "/sale",
+    element: <Sale />,
   },
 ]);
 
