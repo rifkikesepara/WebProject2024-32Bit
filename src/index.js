@@ -8,6 +8,7 @@ import MainScreen from "./Pages/MainScreen";
 import Theme from "./Context/Theme";
 import AlertProvider, { AlertPopUp } from "./Context/AlertProvider";
 import Sale from "./Pages/Sale";
+import Test from "./Pages/Test";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/sale",
     element: <Sale />,
+  },
+  {
+    path: "/test",
+    element: <Test />,
   },
 ]);
 

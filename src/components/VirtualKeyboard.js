@@ -4,8 +4,14 @@ import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 import "../Styles/Keyboard.css";
 
-export default function VirtualKeyboard({ onChangeInput, clear, keyboardRef }) {
+export default function VirtualKeyboard({
+  onChangeInput,
+  clear,
+  keyboardRef,
+  sx,
+}) {
   const [state, setState] = useState({ layoutName: "default", input: "" });
+  let keyboard = useRef();
 
   //   const onChangeInput = (event) => {
   //     const input = event.target.value;
@@ -38,7 +44,7 @@ export default function VirtualKeyboard({ onChangeInput, clear, keyboardRef }) {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ ...sx }}>
       <Keyboard
         theme="hg-theme-default hg-layout-default myTheme"
         buttonTheme={[
@@ -47,7 +53,10 @@ export default function VirtualKeyboard({ onChangeInput, clear, keyboardRef }) {
             buttons: "Q W E R T Y q w e r t y",
           },
         ]}
-        keyboardRef={keyboardRef}
+        keyboardRef={(r) => {
+          keyboardRef.current = r;
+          keyboard.current = r;
+        }}
         layoutName={state.layoutName}
         onChange={onChange}
         onKeyPress={onKeyPress}
