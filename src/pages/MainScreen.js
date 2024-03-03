@@ -205,7 +205,7 @@ const getDayString = (index) => {
       return "Cuma";
     case 6:
       return "Cumartesi";
-    case 7:
+    case 0:
       return "Pazar";
   }
 };
