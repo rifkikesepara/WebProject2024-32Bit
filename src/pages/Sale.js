@@ -19,6 +19,7 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useMemo, useRef, useState } from "react";
 import useData from "../Hooks/useData";
+import TextFieldVK from "../Components/TextFieldVK";
 
 export default function Sale() {
   const navigate = useNavigate();
@@ -123,14 +124,14 @@ export default function Sale() {
           }}
         >
           <IconButton
-            sx={{ position: "absolute", left: 0, marginTop: 1 }}
+            sx={{ position: "absolute", left: 0, marginTop: 1, zIndex: 100 }}
             disableRipple
             onClick={() => navigate("../home")}
           >
             <ArrowBackIosNewIcon sx={{ fontSize: 35, marginRight: 2 }} />
           </IconButton>
-          <TextField
-            sx={{ width: "90%", marginTop: 1.5, marginLeft: 4 }}
+          <TextFieldVK
+            textFieldSX={{ width: "90%", marginTop: 1.5, marginLeft: 4 }}
             autoComplete="off"
             placeholder="Klavyeden Barkod Girişi"
           />

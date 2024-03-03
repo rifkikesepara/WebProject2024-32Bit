@@ -28,7 +28,7 @@ import LinkIcon from "@mui/icons-material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { LineChart, axisClasses } from "@mui/x-charts";
 import { usePreferences } from "../Context/Theme";
 import useData from "../Hooks/useData";
@@ -205,7 +205,7 @@ const getDayString = (index) => {
       return "Cuma";
     case 6:
       return "Cumartesi";
-    case 7:
+    case 0:
       return "Pazar";
   }
 };
@@ -306,6 +306,13 @@ export default function MainScreen() {
     setDate(new Date());
   };
 
+  let stringDate = useMemo(() => {
+    return {
+      day: getDayString(date.getDay()),
+      month: getMonthString(date.getMonth()),
+    };
+  }, []);
+
   setInterval(updateTime, 1000);
 
   return (
@@ -368,8 +375,7 @@ export default function MainScreen() {
               <Typography
                 sx={{ fontSize: { md: 30, xs: 20 }, fontWeight: "bold" }}
               >
-                {getDayString(date.getDay())}, {date.getDate()}{" "}
-                {getMonthString(date.getMonth())}
+                {stringDate.day}, {date.getDate()} {stringDate.month}
               </Typography>
               <Typography
                 sx={{
@@ -550,8 +556,7 @@ export default function MainScreen() {
                   {tableData.slice(0, 4).map((row) => (
                     <TableRow key={row.id}>
                       <TableCell sx={{ fontSize: 20 }}>
-                        {date.getDate()} {getMonthString(date.getMonth())}{" "}
-                        {date.getFullYear()}
+                        {date.getDate()} {stringDate.month} {date.getFullYear()}
                       </TableCell>
                       <TableCell sx={{ fontSize: 20 }}>
                         {row.first_name}

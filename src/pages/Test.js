@@ -1,12 +1,13 @@
 import { Card, Container, TextField, Typography } from "@mui/material";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
 import { useRef, useState } from "react";
+import TextFieldVK from "../Components/TextFieldVK";
 
 export default function Test() {
   const [input, setInput] = useState("");
   let keyboard = useRef();
   return (
-    <Container sx={{ backgroundColor: "red" }} maxWidth>
+    <Container sx={{ backgroundColor: "red" }}>
       <Card
         sx={{
           height: "100vh",
@@ -15,7 +16,7 @@ export default function Test() {
           alignItems: "center",
         }}
       >
-        <TextField
+        {/* <TextField
           value={input}
           onChange={(e) => {
             keyboard.current.setInput(e.target.value);
@@ -31,7 +32,8 @@ export default function Test() {
           onChangeInput={(input) => {
             setInput(input);
           }}
-        />
+        /> */}
+        <TextFieldVK />
       </Card>
     </Container>
   );

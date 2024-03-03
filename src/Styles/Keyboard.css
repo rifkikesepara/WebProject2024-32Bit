@@ -1,8 +1,15 @@
 .myTheme {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .simple-keyboard {
+}
+
+.hg-theme-default {
+  width: 100%;
+}
+
+.hg-rows {
 }
 
 .hg-button.hg-red {
@@ -12,4 +19,21 @@
 
 .hg-button {
   background: red;
+}
+.hg-theme-default .hg-button {
+  max-height: 100px;
+}
+
+.simple-keyboard.hg-layout-default .hg-button {
+  min-height: 80px;
+  /* width: 80px; */
+}
+
+.simple-keyboard.hg-layout-numeric .hg-button {
+  height: 80px;
+  width: 80px;
+}
+
+.simple-keyboard.hg-layout-numeric {
+  width: 300px;
 }
