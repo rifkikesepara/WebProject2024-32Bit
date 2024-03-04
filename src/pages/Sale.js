@@ -134,6 +134,7 @@ export default function Sale() {
             textFieldSX={{ width: "90%", marginTop: 1.5, marginLeft: 4 }}
             autoComplete="off"
             placeholder="Klavyeden Barkod Girişi"
+            elevation={4}
           />
         </Box>
         <Box
@@ -185,7 +186,7 @@ export default function Sale() {
                   overflow: "hidden",
                   position: "relative",
                 }}
-                onClick={() => {
+                onClick={(e) => {
                   if (!cashout.find((data) => data.name == title)) {
                     setCashout([
                       ...cashout,
@@ -223,6 +224,32 @@ export default function Sale() {
               </Button>
             );
           })}
+        </Box>
+        <Box
+          sx={{
+            position: "fixed",
+            bottom: 0,
+            backgroundColor: "white",
+            width: "70%",
+            display: "flex",
+            justifyContent: "flex-start",
+            alignItems: "center",
+            height: 40,
+            borderTop: 1,
+          }}
+        >
+          <div
+            style={{
+              marginLeft: 10,
+              height: 15,
+              width: 15,
+              backgroundColor: "green",
+              // boxShadow: "0px 0px 8px 0.5px green",
+              borderRadius: 200,
+              marginRight: 10,
+            }}
+          ></div>
+          <Typography>Mağaza Çevrimiçi</Typography>
         </Box>
       </Box>
       <Box

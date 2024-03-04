@@ -5,7 +5,7 @@ import "react-simple-keyboard/build/css/index.css";
 import "../Styles/Keyboard.css";
 
 const numericLayout = {
-  default: ["1 2 3", "4 5 6", "7 8 9", "0 {bksp}"],
+  default: ["1 2 3", "4 5 6", "7 8 9", "{bksp} 0 {tick}"],
   shift: ["! / #", "$ % ^", "& * (", "{shift} ) +", "{bksp}"],
 };
 
@@ -33,6 +33,7 @@ export default function VirtualKeyboard({
   sx,
   onBlur = () => {},
   onInit = () => {},
+  onDone = () => {},
   layout = "default",
 }) {
   const [state, setState] = useState({ layoutName: "default", input: "" });
@@ -94,10 +95,12 @@ export default function VirtualKeyboard({
   };
 
   const onKeyPress = (button) => {
-    /**
-     * If you want to handle the shift and caps lock buttons
-     */
-    if (button === "{shift}" || button === "{lock}") handleShift();
+    if (button == "{tick}") setTimeout(() => onDone(), 400);
+    if (button === "{shift}" || button === "{lock}")
+      /**
+       * If you want to handle the shift and caps lock buttons
+       */
+      handleShift();
   };
 
   return (
@@ -105,6 +108,7 @@ export default function VirtualKeyboard({
       <Keyboard
         onInit={() => onInit()}
         theme={adjustLayout().class}
+        display={{ "{bksp}": "⌫", "{tick}": "✔" }}
         // buttonTheme={[
         //   {
         //     class: "hg-red",
