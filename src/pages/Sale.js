@@ -19,6 +19,7 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useMemo, useRef, useState } from "react";
 import useData from "../Hooks/useData";
+import { motion } from "framer-motion";
 
 export default function Sale() {
   const navigate = useNavigate();
@@ -50,49 +51,6 @@ export default function Sale() {
     });
     setCashout(newArray);
   };
-
-  const data = [
-    {
-      id: 1,
-      name: "ekmek",
-      price: 1,
-    },
-    {
-      id: 2,
-      name: "soğan",
-      price: 3,
-    },
-    {
-      id: 3,
-      name: "ekmek",
-      price: 1,
-    },
-    {
-      id: 4,
-      name: "soğan",
-      price: 3,
-    },
-    {
-      id: 5,
-      name: "ekmek",
-      price: 1,
-    },
-    {
-      id: 6,
-      name: "soğan",
-      price: 3,
-    },
-    {
-      id: 7,
-      name: "ekmek",
-      price: 1,
-    },
-    {
-      id: 8,
-      name: "soğan",
-      price: 3,
-    },
-  ];
 
   const [cashout, setCashout] = useState([]);
 
@@ -245,8 +203,34 @@ export default function Sale() {
                 behavior: "smooth",
               })
             }
+            sx={{
+              borderRadius: 5,
+            }}
           >
-            <QrCodeScannerIcon sx={{ fontSize: 40, color: "black" }} />
+            <QrCodeScannerIcon
+              sx={{ fontSize: 40, color: "black", border: 1 }}
+            />
+            <motion.div
+              style={{ display: "flex", alignItems: "center" }}
+              initial={{ opacity: 0, scaleX: 0 }}
+              animate={{ opacity: 1, scaleX: 1 }}
+              transition={{ duration: 1 }}
+            >
+              <Typography
+                sx={{
+                  position: "absolute",
+                  border: 1,
+                  borderLeft: 0,
+                  color: "black",
+                  borderTopRightRadius: 5,
+                  borderBottomRightRadius: 5,
+                  padding: 0.5,
+                  width: 100,
+                }}
+              >
+                FİYAT GÖR
+              </Typography>
+            </motion.div>
           </IconButton>
           <IconButton>
             <DeleteForeverIcon sx={{ fontSize: 40, color: "black" }} />
