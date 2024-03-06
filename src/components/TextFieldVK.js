@@ -1,6 +1,7 @@
 import { Box, Paper, TextField } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
 import VirtualKeyboard from "./VirtualKeyboard";
+import { motion } from "framer-motion";
 
 export default function TextFieldVK({
   textFieldSX,
@@ -11,8 +12,19 @@ export default function TextFieldVK({
 }) {
   const [visible, setVisible] = useState(false);
   const [textInput, setInput] = useState("");
+  const [animateState, setAnimateState] = useState("inactive");
   let keyboard = useRef();
 
+  const variants = {
+    active: {
+      opacity: 1,
+      scaleY: 1,
+    },
+    inactive: {
+      opacity: 0,
+      scaleY: 0,
+    },
+  };
   return (
     <Box
       sx={{
@@ -28,25 +40,38 @@ export default function TextFieldVK({
         placeholder={placeholder}
         autoComplete={autoComplete}
         value={textInput}
-        onFocus={() => setVisible(true)}
+        onFocus={() => {
+          setVisible(true);
+          setAnimateState("active");
+        }}
       />
-      <Paper
-        elevation={elevation}
-        sx={{
+      <motion.div
+        style={{
           position: "absolute",
           bottom: -350,
-          display: !visible && "none",
+          // display: !visible && "none",
           zIndex: 10000,
         }}
+        variants={variants}
+        animate={animateState}
+        transition={{ duration: 0.5 }}
       >
-        <VirtualKeyboard
-          keyboardRef={keyboard}
-          layout="numeric"
-          onBlur={() => setVisible(false)}
-          onChangeInput={(input) => setInput(input)}
-          onDone={() => setVisible(false)}
-        />
-      </Paper>
+        <Paper elevation={elevation}>
+          <VirtualKeyboard
+            keyboardRef={keyboard}
+            layout="numeric"
+            onBlur={() => {
+              setVisible(false);
+              setAnimateState("inactive");
+            }}
+            onChangeInput={(input) => setInput(input)}
+            onDone={() => {
+              setVisible(false);
+              setAnimateState("inactive");
+            }}
+          />
+        </Paper>
+      </motion.div>
     </Box>
   );
 }

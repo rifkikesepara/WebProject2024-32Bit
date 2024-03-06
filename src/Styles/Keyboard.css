@@ -30,10 +30,14 @@
 }
 
 .simple-keyboard.hg-layout-numeric .hg-button {
-  height: 80px;
-  width: 80px;
+  height: 100%;
+  width: 9vw;
+  box-shadow: none;
+  /*outlined*/
+  border: 1px solid black;
 }
 
 .simple-keyboard.hg-layout-numeric {
-  width: 300px;
+  /* width: 300px; */
+  background-color: transparent;
 }

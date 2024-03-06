@@ -17,28 +17,33 @@ import { useNavigate } from "react-router-dom";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import useData from "../Hooks/useData";
 import { motion } from "framer-motion";
 import TextFieldVK from "../Components/TextFieldVK";
+import VirtualKeyboard from "../Components/VirtualKeyboard";
 
 export default function Sale() {
   const navigate = useNavigate();
   const mainDiv = useRef();
+  let keyboard = useRef();
+
   const [selectedItems, setSelectedItems] = useState([]);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [clickedItem, setClickedItem] = useState();
   const [anchorEl, setAnchorEl] = useState(null);
   const [productsData, setProductsData] = useState([]);
+  const [inputFields, setInputFields] = useState({});
+  const [selectedInputField, setSelectedInputField] = useState("");
+  const [cashout, setCashout] = useState([]);
 
   useData("https://dummyjson.com/products", (data) =>
     setProductsData(data.products)
   );
 
-  const changeProductAmount = (increment) => {
+  const changeProductAmount = (increment, id) => {
     let newArray = cashout.map((a) => {
       var returnValue = { ...a };
-      if (a.id == clickedItem) {
+      if (a.id == id) {
         returnValue = {
           ...returnValue,
           price: increment
@@ -53,19 +58,26 @@ export default function Sale() {
     setCashout(newArray);
   };
 
-  const [cashout, setCashout] = useState([]);
-
   const total = useMemo(() => {
     let total = 0;
     cashout.map(({ price }) => (total = total + price));
     return total;
   }, [cashout]);
 
+  useEffect(() => {
+    keyboard.current.setInput(inputFields[selectedInputField]);
+    console.log("callback is running");
+  }, [selectedInputField]);
+
+  useEffect(() => {
+    mainDiv.current?.scrollIntoView({ behavior: "smooth" });
+  }, [cashout.length]);
+
   return (
     <Box sx={{ height: "100vh", display: "flex", width: "100%" }}>
       <Box
         sx={{
-          width: "70%",
+          width: "50%",
           display: "flex",
           alignItems: "center",
           flexDirection: "column",
@@ -88,11 +100,19 @@ export default function Sale() {
           >
             <ArrowBackIosNewIcon sx={{ fontSize: 35, marginRight: 2 }} />
           </IconButton>
-          <TextFieldVK
+          {/* <TextFieldVK
             textFieldSX={{ width: "90%", marginTop: 1.5, marginLeft: 4 }}
             autoComplete="off"
             placeholder="Klavyeden Barkod Girişi"
             elevation={4}
+          /> */}
+          <TextField
+            name="barcode"
+            autoComplete="off"
+            placeholder="Klaveden Barkod Girişi"
+            onFocus={(e) => setSelectedInputField(e.target.name)}
+            value={inputFields.barcode}
+            sx={{ width: "90%", marginTop: 1.5, marginLeft: 2 }}
           />
         </Box>
         <Box
@@ -105,7 +125,7 @@ export default function Sale() {
             paddingBlock: 2,
           }}
         >
-          <Menu
+          {/* <Menu
             anchorEl={anchorEl}
             anchorOrigin={{ vertical: "center", horizontal: "left" }}
             open={menuOpen}
@@ -129,7 +149,7 @@ export default function Sale() {
             >
               -
             </Button>
-          </Menu>
+          </Menu> */}
           {productsData.map(({ title, price, id, images }, index) => {
             return (
               <Button
@@ -185,14 +205,14 @@ export default function Sale() {
         </Box>
         <Box
           sx={{
-            position: "fixed",
+            position: "sticky",
             bottom: 0,
             backgroundColor: "white",
-            width: "70%",
+            width: "100%",
             display: "flex",
             justifyContent: "flex-start",
             alignItems: "center",
-            height: 40,
+            padding: 1,
             borderTop: 1,
           }}
         >
@@ -212,7 +232,7 @@ export default function Sale() {
       </Box>
       <Box
         sx={{
-          width: "30%",
+          width: "50%",
           borderLeft: 1,
           overflowY: "scroll",
         }}
@@ -226,11 +246,6 @@ export default function Sale() {
           }}
         >
           <IconButton
-            onClick={() =>
-              mainDiv.current?.scrollIntoView({
-                behavior: "smooth",
-              })
-            }
             sx={{
               borderRadius: 5,
             }}
@@ -266,9 +281,12 @@ export default function Sale() {
         </Box>
         <Box
           sx={{
-            height: "70%",
+            height: "47%",
             borderBottom: 1,
             overflowY: "scroll",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
           }}
         >
           <ToggleButtonGroup
@@ -279,46 +297,72 @@ export default function Sale() {
           >
             {cashout.map((data, index) => {
               return (
-                <ToggleButton
-                  onTouchMove={() => console.log("test")}
-                  key={index}
-                  value={data.id}
+                <Box
+                  ref={mainDiv}
                   sx={{
-                    border: "none",
                     display: "flex",
-                    justifyContent: "space-around",
-                    color: "black",
-                  }}
-                  onClick={(e) => {
-                    setAnchorEl(e.currentTarget);
-                    setMenuOpen(true);
-                    setClickedItem(data.id);
+                    width: "100%",
+                    minHeight: 80,
+                    paddingInline: 1,
                   }}
                 >
-                  <Typography>{data.count}</Typography>
-                  <Typography>{data.name}</Typography>
-                  <Typography>{data.price}₺</Typography>
-                </ToggleButton>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <Button
+                      variant="outlined"
+                      sx={{ padding: 0, minWidth: 30, height: "80%" }}
+                      onClick={() => changeProductAmount(false, data.id)}
+                    >
+                      -
+                    </Button>
+                    {/* <TextField
+                      name={data.name}
+                      value={inputFields[data.name]}
+                      onFocus={(e) => setSelectedInputField(e.target.name)}
+                      sx={{ width: 50 }}
+                      autoComplete="off"
+                    /> */}
+                    <Typography sx={{ paddingInline: 1.5 }}>
+                      {data.count}
+                    </Typography>
+                    <Button
+                      variant="outlined"
+                      sx={{ padding: 0, minWidth: 30, height: "80%" }}
+                      onClick={() => changeProductAmount(true, data.id)}
+                    >
+                      +
+                    </Button>
+                  </Box>
+                  <ToggleButton
+                    key={index}
+                    value={data.id}
+                    sx={{
+                      border: "none",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      color: "black",
+                      width: "100%",
+                    }}
+                    onClick={(e) => {
+                      setAnchorEl(e.currentTarget);
+                      setMenuOpen(true);
+                    }}
+                  >
+                    <Typography>{data.name}</Typography>
+                    <Typography>{data.price}₺</Typography>
+                  </ToggleButton>
+                </Box>
               );
             })}
           </ToggleButtonGroup>
-        </Box>
-        <Box
-          sx={{
-            borderBottom: 1,
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
           <Accordion
-            onChange={(e, expanded) => {
-              setTimeout(() => {
-                mainDiv.current?.scrollIntoView({
-                  behavior: "smooth",
-                });
-              }, 200);
-            }}
-            sx={{ margin: 0, width: "100%" }}
+            onChange={(e, expanded) => {}}
+            sx={{ margin: 0, width: "100%", position: "sticky", bottom: 0 }}
             disableGutters
             square
             elevation={0}
@@ -335,13 +379,21 @@ export default function Sale() {
           sx={{
             display: "flex",
             justifyContent: "center",
-            alignItems: "flex-end",
-            height: "15%",
+            alignItems: "center",
+            // height: "40%",
           }}
         >
-          <Button ref={mainDiv} variant="contained" disableElevation>
-            ÖDEMEYE İLERLE
-          </Button>
+          <VirtualKeyboard
+            keyboardRef={keyboard}
+            layout="numeric"
+            onChangeInput={(input) => {
+              console.log(inputFields[selectedInputField]);
+              console.log(inputFields);
+              if (selectedInputField != "")
+                setInputFields({ ...inputFields, [selectedInputField]: input });
+            }}
+            onDone={() => setSelectedInputField("")}
+          />
         </Box>
       </Box>
     </Box>
