@@ -1,0 +1,15 @@
+{
+  "fruit-vegetables": "https://api.a101prod.retter.io/dbmk89vnr/CALL/Store/getProductsByCategory/C078?id=C01&channel=SLOT&__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true",
+  "meat-fish": "https://api.a101prod.retter.io/dbmk89vnr/CALL/Store/getProductsByCategory/C078?id=C04&channel=SLOT&__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true",
+  "breakfast": "https://api.a101prod.retter.io/dbmk89vnr/CALL/Store/getProductsByCategory/C078?id=C05&channel=SLOT&__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true",
+  "bakery": "https://api.a101prod.retter.io/dbmk89vnr/CALL/Store/getProductsByCategory/C078?id=C02&channel=SLOT&__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true",
+  "basicGrocery": "https://api.a101prod.retter.io/dbmk89vnr/CALL/Store/getProductsByCategory/C078?id=C07&channel=SLOT&__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true",
+  "junkFood": "https://api.a101prod.retter.io/dbmk89vnr/CALL/Store/getProductsByCategory/C078?id=C06&channel=SLOT&__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true",
+  "drinks": "https://api.a101prod.retter.io/dbmk89vnr/CALL/Store/getProductsByCategory/C078?id=C08&channel=SLOT&__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true",
+  "fastFood": "https://api.a101prod.retter.io/dbmk89vnr/CALL/Store/getProductsByCategory/C078?id=C10&channel=SLOT&__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true",
+  "desert": "https://api.a101prod.retter.io/dbmk89vnr/CALL/Store/getProductsByCategory/C078?id=C03&channel=SLOT&__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true",
+  "icecream": "https://api.a101prod.retter.io/dbmk89vnr/CALL/CMS/getFAQ/CMS?__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true",
+  "cleaningStuff": "https://api.a101prod.retter.io/dbmk89vnr/CALL/Store/getProductsByCategory/C078?id=C11&channel=SLOT&__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true",
+  "bodyCareStuff": "https://api.a101prod.retter.io/dbmk89vnr/CALL/Store/getProductsByCategory/C078?id=C12&channel=SLOT&__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true",
+  "electronics": "https://api.a101prod.retter.io/dbmk89vnr/CALL/Store/getProductsByCategory/C078?id=C18&channel=SLOT&__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true"
+}

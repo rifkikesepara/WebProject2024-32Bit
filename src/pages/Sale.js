@@ -7,6 +7,7 @@ import {
   Button,
   IconButton,
   Menu,
+  Skeleton,
   TextField,
   ToggleButton,
   ToggleButtonGroup,
@@ -22,6 +23,7 @@ import useData from "../Hooks/useData";
 import { motion } from "framer-motion";
 import TextFieldVK from "../Components/TextFieldVK";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
+import API from "../productsAPI.json";
 
 export default function Sale() {
   const navigate = useNavigate();
@@ -29,15 +31,19 @@ export default function Sale() {
   let keyboard = useRef();
 
   const [selectedItems, setSelectedItems] = useState([]);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [anchorEl, setAnchorEl] = useState(null);
   const [productsData, setProductsData] = useState([]);
   const [inputFields, setInputFields] = useState({});
   const [selectedInputField, setSelectedInputField] = useState("");
   const [cashout, setCashout] = useState([]);
 
-  useData("https://dummyjson.com/products", (data) =>
-    setProductsData(data.products)
+  useData(
+    // "https://run.mocky.io/v3/fad7cc5d-33a9-40d7-8cbd-460172828770",
+    API.bodyCareStuff,
+    // (data) => setProductsData(data.products)
+    (data) => {
+      console.log(data.children[0].products);
+      setProductsData(data.children[0].products);
+    }
   );
 
   const changeProductAmount = (increment, id) => {
@@ -82,6 +88,7 @@ export default function Sale() {
           alignItems: "center",
           flexDirection: "column",
           overflowY: "scroll",
+          minHeight: "100vh",
         }}
       >
         <Box
@@ -123,85 +130,75 @@ export default function Sale() {
             justifyContent: "space-around",
             height: "auto",
             paddingBlock: 2,
+            marginBottom: "auto",
           }}
         >
-          {/* <Menu
-            anchorEl={anchorEl}
-            anchorOrigin={{ vertical: "center", horizontal: "left" }}
-            open={menuOpen}
-            elevation={1}
-            onClose={() => setMenuOpen(false)}
-            sx={{
-              left: -130,
-              top: -25,
-            }}
-            MenuListProps={{ sx: { padding: 0 } }}
-          >
-            <Button
-              sx={{ height: 50, borderRight: 1, borderRadius: 0 }}
-              onClick={() => changeProductAmount(true)}
-            >
-              +
-            </Button>
-            <Button
-              sx={{ height: 50 }}
-              onClick={() => changeProductAmount(false)}
-            >
-              -
-            </Button>
-          </Menu> */}
-          {productsData.map(({ title, price, id, images }, index) => {
-            return (
-              <Button
-                key={index}
-                sx={{
-                  width: 150,
-                  height: 150,
-                  border: "1px solid black",
-                  mt: 2,
-                  display: "flex",
-                  flexDirection: "column",
-                  overflow: "hidden",
-                  position: "relative",
-                }}
-                onClick={(e) => {
-                  if (!cashout.find((data) => data.name == title)) {
-                    setCashout([
-                      ...cashout,
-                      { id: id, name: title, price: price, count: 1 },
-                    ]);
-                  } else {
-                    let newArray = cashout.map((a) => {
-                      var returnValue = { ...a };
-                      if (a.name == title) {
-                        returnValue = {
-                          ...returnValue,
-                          price: a.price + a.price,
-                          count: a.count + 1,
-                        };
-                      }
-
-                      return returnValue;
-                    });
-                    setCashout(newArray);
-                  }
-                }}
-              >
-                <img src={images[0]} width={"100%"} />
-                <Typography
+          {productsData.length == 0 ? (
+            <Skeleton width={"100%"} height={750} variant="rounded" />
+          ) : (
+            productsData.map(({ id, attributes, images, price }, index) => {
+              return (
+                <Button
+                  key={index}
                   sx={{
-                    position: "absolute",
-                    bottom: 0,
-                    width: "100%",
-                    color: "black",
-                    backgroundColor: "rgba(255, 255, 255, 0.5)",
+                    width: 150,
+                    height: 150,
+                    border: "1px solid black",
+                    mt: 2,
+                    display: "flex",
+                    flexDirection: "column",
+                    overflow: "hidden",
+                    position: "relative",
+                  }}
+                  onClick={(e) => {
+                    if (!cashout.find((data) => data.name == attributes.name)) {
+                      setCashout([
+                        ...cashout,
+                        {
+                          id: id,
+                          name: attributes.name,
+                          price: price.normal,
+                          count: 1,
+                        },
+                      ]);
+                    } else {
+                      let newArray = cashout.map((a) => {
+                        var returnValue = { ...a };
+                        if (a.name == attributes.name) {
+                          returnValue = {
+                            ...returnValue,
+                            price: a.price + a.price,
+                            count: a.count + 1,
+                          };
+                        }
+
+                        return returnValue;
+                      });
+                      setCashout(newArray);
+                    }
                   }}
                 >
-                  {title}
-                </Typography>
-              </Button>
-            );
-          })}
+                  <img
+                    src={
+                      images.find(({ imageType }) => imageType == "product").url
+                    }
+                    width={"100%"}
+                  />
+                  <Typography
+                    sx={{
+                      position: "absolute",
+                      bottom: 0,
+                      width: "100%",
+                      color: "black",
+                      backgroundColor: "rgba(255, 255, 255, 0.5)",
+                    }}
+                  >
+                    {attributes.name}
+                  </Typography>
+                </Button>
+              );
+            })
+          )}
         </Box>
         <Box
           sx={{
@@ -348,10 +345,7 @@ export default function Sale() {
                       color: "black",
                       width: "100%",
                     }}
-                    onClick={(e) => {
-                      setAnchorEl(e.currentTarget);
-                      setMenuOpen(true);
-                    }}
+                    onClick={(e) => {}}
                   >
                     <Typography>{data.name}</Typography>
                     <Typography>{data.price}₺</Typography>
@@ -362,7 +356,13 @@ export default function Sale() {
           </ToggleButtonGroup>
           <Accordion
             onChange={(e, expanded) => {}}
-            sx={{ margin: 0, width: "100%", position: "sticky", bottom: 0 }}
+            sx={{
+              margin: 0,
+              width: "100%",
+              position: "sticky",
+              bottom: 0,
+              borderTop: 1,
+            }}
             disableGutters
             square
             elevation={0}
