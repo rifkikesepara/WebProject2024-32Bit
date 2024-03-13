@@ -101,6 +101,7 @@ export default function Sale() {
   }, [selectedInputField]);
 
   useEffect(() => {
+    if (mainDiv.current) console.log(mainDiv);
     mainDiv.current?.scrollIntoView({ behavior: "smooth" });
   }, [cashout.length]);
 
@@ -119,7 +120,7 @@ export default function Sale() {
           display: "flex",
           alignItems: "center",
           flexDirection: "column",
-          // overflowY: "scroll",
+          overflowY: "hidden",
           minHeight: "100vh",
         }}
       >

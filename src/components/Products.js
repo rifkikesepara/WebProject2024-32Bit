@@ -1,69 +1,64 @@
-import {
-  Box,
-  Button,
-  Skeleton,
-  ToggleButton,
-  ToggleButtonGroup,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Skeleton, Typography } from "@mui/material";
 import useData from "../Hooks/useData";
 import API from "../productsAPI.json";
 import { useState } from "react";
 import { FixedSizeGrid } from "react-window";
 import AutoSizer from "react-virtualized-auto-sizer";
+import ButtonGroup from "./ButtonGroup";
 
 const categories = [
+  { name: "Tüm Ürünler", value: "all" },
   {
     name: "Fırın Ürünleri",
-    keyword: "bakery",
+    value: "bakery",
   },
   {
     name: "Kahvaltılık",
-    keyword: "breakfast",
+    value: "breakfast",
   },
   {
     name: "Meyve ve Sebzeler",
-    keyword: "fruit-vegetables",
+    value: "fruit-vegetables",
   },
   {
     name: "Elektronik",
-    keyword: "electronics",
+    value: "electronics",
   },
   {
     name: "Et ve Balık",
-    keyword: "meat-fish",
+    value: "meat-fish",
   },
   {
     name: "Atıştırmalıklar",
-    keyword: "junkFood",
+    value: "junkFood",
   },
   {
     name: "Dondurmalar",
-    keyword: "icecream",
+    value: "icecream",
   },
   {
     name: "Kişisel Bakım",
-    keyword: "bodyCareStuff",
+    value: "bodyCareStuff",
   },
   {
     name: "Tatlılar",
-    keyword: "desert",
+    value: "desert",
   },
   {
     name: "Dondurlumuş Yiyecekler",
-    keyword: "fastFood",
+    value: "fastFood",
   },
   {
     name: "İçecekler",
-    keyword: "drinks",
+    value: "drinks",
   },
   {
     name: "Temel Gıdalar",
-    keyword: "basicGrocery",
+    value: "basicGrocery",
   },
   {
     name: "Temizlik",
-    keyword: "cleaningStuff",
+    value: "cleaningStuff",
   },
 ];
 
@@ -77,7 +72,13 @@ export default function Products({ sx, onSelectProduct = () => {} }) {
 
     // console.log(productsData[index]);
     return (
-      <div style={{ ...style, display: "flex", justifyContent: "center" }}>
+      <div
+        style={{
+          ...style,
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         {productsData[index] != undefined && (
           <Button
             key={productsData[index].id}
@@ -129,39 +130,28 @@ export default function Products({ sx, onSelectProduct = () => {} }) {
   useData(
     API[selectedCategory],
     (data) => {
-      console.log(data.children[0].products.length);
-      setProductsData(data.children[0].products);
+      console.log(data);
+      let array = [];
+      data.children.map(({ products }) => {
+        array.push(...products);
+      });
+      setProductsData(array);
     },
     () => {},
     selectedCategory
   );
   return (
     <Box sx={{ ...sx }}>
-      <ToggleButtonGroup
-        sx={{ overflowX: "scroll" }}
-        onChange={(e, v) => {
+      <ButtonGroup
+        buttons={categories}
+        onSelect={(v) => {
           setProductsData([]);
           setSelectedCategory(v);
-          if (v == null) setSelectedCategory("all");
         }}
-        exclusive
-        value={selectedCategory}
-      >
-        {categories.map(({ name, keyword }, index) => {
-          return (
-            <ToggleButton
-              key={index}
-              sx={{
-                padding: 0,
-                minWidth: 150,
-              }}
-              value={keyword}
-            >
-              {name}
-            </ToggleButton>
-          );
-        })}
-      </ToggleButtonGroup>
+        borderRadius={10}
+        spacing={10}
+        border="1px solid black"
+      />
       {productsData.length == 0 ? (
         <Skeleton width={"100%"} height={750} variant="rounded" />
       ) : (
@@ -175,58 +165,14 @@ export default function Products({ sx, onSelectProduct = () => {} }) {
           <AutoSizer>
             {({ height, width }) => (
               <FixedSizeGrid
-                style={{ paddingBottom: 50 }}
+                style={{ paddingBottom: 50, overflowX: "hidden" }}
                 columnCount={3}
-                columnWidth={200}
+                columnWidth={width / 3}
                 height={height}
                 rowCount={productsData.length / 3}
                 rowHeight={200}
                 width={width}
               >
-                {/* {productsData.map(({ id, attributes, images, price }, index) => {
-            return (
-              <Button
-                key={index}
-                sx={{
-                  width: 150,
-                  height: 150,
-                  border: "1px solid black",
-                  mt: 2,
-                  display: "flex",
-                  flexDirection: "column",
-                  overflow: "hidden",
-                  position: "relative",
-                }}
-                onClick={(e) => {
-                  let data = {
-                    id: id,
-                    attributes: attributes,
-                    images: images,
-                    price: price,
-                  };
-                  onSelectProduct(data);
-                }}
-              >
-                <img
-                  src={
-                    images.find(({ imageType }) => imageType == "product").url
-                  }
-                  width={"100%"}
-                />
-                <Typography
-                  sx={{
-                    position: "absolute",
-                    bottom: 0,
-                    width: "100%",
-                    color: "black",
-                    backgroundColor: "rgba(255, 255, 255, 0.5)",
-                  }}
-                >
-                  {attributes.name}
-                </Typography>
-              </Button>
-            );
-          })} */}
                 {Cell}
               </FixedSizeGrid>
             )}
