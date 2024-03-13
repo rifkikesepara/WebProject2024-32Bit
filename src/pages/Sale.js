@@ -18,12 +18,13 @@ import { useNavigate } from "react-router-dom";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import useData from "../Hooks/useData";
 import { motion } from "framer-motion";
 import TextFieldVK from "../Components/TextFieldVK";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
 import API from "../productsAPI.json";
+import Products from "../Components/Products";
 
 export default function Sale() {
   const navigate = useNavigate();
@@ -34,17 +35,41 @@ export default function Sale() {
   const [productsData, setProductsData] = useState([]);
   const [inputFields, setInputFields] = useState({});
   const [selectedInputField, setSelectedInputField] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [cashout, setCashout] = useState([]);
 
-  useData(
-    // "https://run.mocky.io/v3/fad7cc5d-33a9-40d7-8cbd-460172828770",
-    API.bodyCareStuff,
-    // (data) => setProductsData(data.products)
-    (data) => {
-      console.log(data.children[0].products);
-      setProductsData(data.children[0].products);
+  useData(API[selectedCategory], (data) => {
+    console.log(data.children[0].products);
+    setProductsData(data.children[0].products);
+  });
+
+  const addProductToCashout = ({ attributes, id, price, images }) => {
+    if (!cashout.find((data) => data.name == attributes.name)) {
+      setCashout([
+        ...cashout,
+        {
+          id: id,
+          name: attributes.name,
+          price: price.normal,
+          count: 1,
+        },
+      ]);
+    } else {
+      let newArray = cashout.map((a) => {
+        var returnValue = { ...a };
+        if (a.name == attributes.name) {
+          returnValue = {
+            ...returnValue,
+            price: a.price + a.price,
+            count: a.count + 1,
+          };
+        }
+
+        return returnValue;
+      });
+      setCashout(newArray);
     }
-  );
+  };
 
   const changeProductAmount = (increment, id) => {
     let newArray = cashout.map((a) => {
@@ -80,14 +105,21 @@ export default function Sale() {
   }, [cashout.length]);
 
   return (
-    <Box sx={{ height: "100vh", display: "flex", width: "100%" }}>
+    <Box
+      sx={{
+        height: "100vh",
+        display: "flex",
+        width: "100%",
+        overflow: "hidden",
+      }}
+    >
       <Box
         sx={{
           width: "50%",
           display: "flex",
           alignItems: "center",
           flexDirection: "column",
-          overflowY: "scroll",
+          // overflowY: "scroll",
           minHeight: "100vh",
         }}
       >
@@ -122,84 +154,19 @@ export default function Sale() {
             sx={{ width: "90%", marginTop: 1.5, marginLeft: 2 }}
           />
         </Box>
-        <Box
+        <Products
           sx={{
-            width: "90%",
+            width: "100%",
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "space-around",
-            height: "auto",
             paddingBlock: 2,
             marginBottom: "auto",
+            height: "100%",
           }}
-        >
-          {productsData.length == 0 ? (
-            <Skeleton width={"100%"} height={750} variant="rounded" />
-          ) : (
-            productsData.map(({ id, attributes, images, price }, index) => {
-              return (
-                <Button
-                  key={index}
-                  sx={{
-                    width: 150,
-                    height: 150,
-                    border: "1px solid black",
-                    mt: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    overflow: "hidden",
-                    position: "relative",
-                  }}
-                  onClick={(e) => {
-                    if (!cashout.find((data) => data.name == attributes.name)) {
-                      setCashout([
-                        ...cashout,
-                        {
-                          id: id,
-                          name: attributes.name,
-                          price: price.normal,
-                          count: 1,
-                        },
-                      ]);
-                    } else {
-                      let newArray = cashout.map((a) => {
-                        var returnValue = { ...a };
-                        if (a.name == attributes.name) {
-                          returnValue = {
-                            ...returnValue,
-                            price: a.price + a.price,
-                            count: a.count + 1,
-                          };
-                        }
+          onSelectProduct={(data) => addProductToCashout(data)}
+        />
 
-                        return returnValue;
-                      });
-                      setCashout(newArray);
-                    }
-                  }}
-                >
-                  <img
-                    src={
-                      images.find(({ imageType }) => imageType == "product").url
-                    }
-                    width={"100%"}
-                  />
-                  <Typography
-                    sx={{
-                      position: "absolute",
-                      bottom: 0,
-                      width: "100%",
-                      color: "black",
-                      backgroundColor: "rgba(255, 255, 255, 0.5)",
-                    }}
-                  >
-                    {attributes.name}
-                  </Typography>
-                </Button>
-              );
-            })
-          )}
-        </Box>
         <Box
           sx={{
             position: "sticky",
