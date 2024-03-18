@@ -9,6 +9,8 @@ import Theme from "./Context/Theme";
 import AlertProvider, { AlertPopUp } from "./Context/AlertProvider";
 import Sale from "./Pages/Sale";
 import Test from "./Pages/Test";
+import { SnackbarProvider } from "notistack";
+import { ProductSnackbar } from "./Components/ProductSnackbar";
 
 const router = createBrowserRouter([
   {
@@ -33,10 +35,17 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Theme>
-      <AlertProvider>
-        <AlertPopUp />
-        <RouterProvider router={router} />
-      </AlertProvider>
+      <SnackbarProvider
+        maxSnack={4}
+        Components={{
+          product: ProductSnackbar,
+        }}
+      >
+        <AlertProvider>
+          <AlertPopUp />
+          <RouterProvider router={router} />
+        </AlertProvider>
+      </SnackbarProvider>
     </Theme>
   </React.StrictMode>
 );

@@ -1,4 +1,4 @@
-import { Box, ToggleButton, ToggleButtonGroup } from "@mui/material";
+import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { useState } from "react";
 
 export default function ButtonGroup({
@@ -8,8 +8,9 @@ export default function ButtonGroup({
   borderRadius = 0,
   border = "none",
   onSelect = () => {},
+  intialSelected = "",
 }) {
-  const [selected, setSelected] = useState();
+  const [selected, setSelected] = useState(intialSelected);
 
   return (
     <ToggleButtonGroup

@@ -28,7 +28,7 @@ import LinkIcon from "@mui/icons-material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
-import { useCallback, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { LineChart, axisClasses } from "@mui/x-charts";
 import { usePreferences } from "../Context/Theme";
 import useData from "../Hooks/useData";

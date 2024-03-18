@@ -1,5 +1,5 @@
 import { Box, Paper, TextField } from "@mui/material";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import VirtualKeyboard from "./VirtualKeyboard";
 import { motion } from "framer-motion";
 

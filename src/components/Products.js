@@ -1,10 +1,18 @@
-import { Box, Button, Skeleton, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  CircularProgress,
+  Skeleton,
+  Typography,
+} from "@mui/material";
 import useData from "../Hooks/useData";
 import API from "../productsAPI.json";
 import { useState } from "react";
 import { FixedSizeGrid } from "react-window";
 import AutoSizer from "react-virtualized-auto-sizer";
 import ButtonGroup from "./ButtonGroup";
+import axios from "axios";
+import { useSnackbar } from "notistack";
 
 const categories = [
   { name: "Tüm Ürünler", value: "all" },
@@ -62,9 +70,16 @@ const categories = [
   },
 ];
 
-export default function Products({ sx, onSelectProduct = () => {} }) {
+export default function Products({
+  sx,
+  onSelectProduct = () => {},
+  onProducts = () => {},
+  onCount = () => {},
+}) {
   const [productsData, setProductsData] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  const { enqueueSnackbar } = useSnackbar();
 
   const Cell = ({ columnIndex, rowIndex, style }) => {
     let index =
@@ -99,6 +114,10 @@ export default function Products({ sx, onSelectProduct = () => {} }) {
                 images: productsData[index].images,
                 price: productsData[index].price,
               };
+              enqueueSnackbar(data.attributes.name + " eklendi.", {
+                variant: "product",
+                img: data.images,
+              });
               onSelectProduct(data);
             }}
           >
@@ -130,19 +149,43 @@ export default function Products({ sx, onSelectProduct = () => {} }) {
   useData(
     API[selectedCategory],
     (data) => {
-      console.log(data);
       let array = [];
+      setProductsData([]);
       data.children.map(({ products }) => {
         array.push(...products);
       });
-      setProductsData(array);
+      setTimeout(() => {
+        setProductsData(array);
+        onProducts(array);
+        onCount(array.length);
+      }, 1000);
     },
-    () => {},
-    selectedCategory
+    () => {
+      let array = [];
+      if (selectedCategory == "all") {
+        categories.map(({ value }) => {
+          if (value != "all") {
+            axios.get(API[value]).then((response) => {
+              response.data.children.map(({ products }) => {
+                array.push(...products);
+              });
+              setTimeout(() => {
+                setProductsData(array);
+                onProducts(array);
+                onCount(array.length);
+              }, 1000);
+            });
+          }
+        });
+      }
+    },
+    [selectedCategory]
   );
+
   return (
     <Box sx={{ ...sx }}>
       <ButtonGroup
+        intialSelected="all"
         buttons={categories}
         onSelect={(v) => {
           setProductsData([]);
@@ -153,7 +196,9 @@ export default function Products({ sx, onSelectProduct = () => {} }) {
         border="1px solid black"
       />
       {productsData.length == 0 ? (
-        <Skeleton width={"100%"} height={750} variant="rounded" />
+        <Box height={700} display={"flex"} alignItems={"center"}>
+          <CircularProgress />
+        </Box>
       ) : (
         <Box
           sx={{
@@ -165,7 +210,7 @@ export default function Products({ sx, onSelectProduct = () => {} }) {
           <AutoSizer>
             {({ height, width }) => (
               <FixedSizeGrid
-                style={{ paddingBottom: 50, overflowX: "hidden" }}
+                style={{ overflowX: "hidden" }}
                 columnCount={3}
                 columnWidth={width / 3}
                 height={height}
