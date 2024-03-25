@@ -1,5 +1,6 @@
 import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 export default function ButtonGroup({
   sx,
@@ -60,3 +61,8 @@ export default function ButtonGroup({
     </ToggleButtonGroup>
   );
 }
+
+ButtonGroup.propTypes = {
+  border: PropTypes.oneOf(["none", "1px solid black"]),
+  buttons: PropTypes.array.isRequired,
+};

@@ -36,7 +36,7 @@ root.render(
   <React.StrictMode>
     <Theme>
       <SnackbarProvider
-        maxSnack={4}
+        maxSnack={1}
         Components={{
           product: ProductSnackbar,
         }}

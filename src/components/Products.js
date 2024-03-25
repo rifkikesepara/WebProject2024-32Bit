@@ -132,6 +132,17 @@ export default function Products({
             <Typography
               sx={{
                 position: "absolute",
+                top: 0,
+                right: 0,
+                color: "black",
+                fontWeight: "bold",
+              }}
+            >
+              {productsData[index].price.normal / 100}₺
+            </Typography>
+            <Typography
+              sx={{
+                position: "absolute",
                 bottom: 0,
                 width: "100%",
                 color: "black",
