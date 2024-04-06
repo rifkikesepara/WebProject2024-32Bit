@@ -253,7 +253,7 @@ const adjustDataForChart = (data) => {
     });
 
     totalAmount = total + totalAmount;
-    array.push({ time: i, amount: total });
+    array.push({ id: i, time: i, amount: total });
   }
 
   return array;
@@ -283,7 +283,7 @@ export default function MainScreen() {
   const [data, setData] = useState([]);
 
   useData(
-    "https://run.mocky.io/v3/30693e9e-34e8-45ae-98eb-8198b6b22781",
+    "https://65b0e7e2d16d31d11bdd8b87.mockapi.io/api/Expenses",
     (data) => setData(data),
     () => {
       console.log("data is fetching");
@@ -349,7 +349,7 @@ export default function MainScreen() {
             <Paper
               sx={{
                 backgroundColor: "white",
-                borderRadius: 1,
+                borderRadius: 5,
                 display: "flex",
                 flexDirection: { md: "row", sm: "row", xs: "column" },
                 justifyContent: "space-between",
@@ -398,7 +398,7 @@ export default function MainScreen() {
               elevation={2}
               sx={{
                 backgroundColor: "white",
-                borderRadius: 1,
+                borderRadius: 5,
                 display: "flex",
                 flexDirection: "column",
                 paddingInline: 1.5,
@@ -466,7 +466,7 @@ export default function MainScreen() {
               elevation={2}
               sx={{
                 backgroundColor: "white",
-                borderRadius: 1,
+                borderRadius: 5,
                 display: "flex",
                 flexDirection: "column",
                 paddingInline: 1.5,
@@ -520,7 +520,7 @@ export default function MainScreen() {
               elevation={2}
               sx={{
                 backgroundColor: "white",
-                borderRadius: 1,
+                borderRadius: 5,
                 display: "flex",
                 flexDirection: "column",
                 paddingInline: 1.5,
@@ -542,13 +542,13 @@ export default function MainScreen() {
                       İsim
                     </TableCell>
                     <TableCell sx={{ fontWeight: "bold", fontSize: 20 }}>
-                      Payment Method
+                      Ödeme Yöntemi
                     </TableCell>
                     <TableCell
                       sx={{ fontWeight: "bold", fontSize: 20 }}
                       align="right"
                     >
-                      Sale Amount
+                      Tutar
                     </TableCell>
                   </TableRow>
                 </TableHead>

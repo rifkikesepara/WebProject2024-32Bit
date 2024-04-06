@@ -7,9 +7,8 @@ import {
   Dialog,
   IconButton,
   TextField,
-  ToggleButton,
-  ToggleButtonGroup,
   Typography,
+  Paper,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
@@ -121,7 +120,7 @@ export default function Sale() {
         flexDirection: { sm: "row", md: "row", xs: "column" },
       }}
     >
-      <Box
+      <Paper
         sx={{
           width: { md: "50%", xs: "100%" },
           display: "flex",
@@ -130,24 +129,27 @@ export default function Sale() {
           overflowY: "hidden",
           height: "100vh",
         }}
+        elevation={3}
       >
-        <Box
+        <Paper
           sx={{
             height: "8%",
-            borderBottom: 1,
+            // borderBottom: 1,
             display: "flex",
             justifyContent: "space-between",
             width: "100%",
+            borderRadius: 10,
+            marginBlock: 1,
           }}
+          elevation={3}
         >
           <IconButton
             sx={{
-              borderRadius: 5,
+              borderRadius: 10,
+              border: 1,
             }}
           >
-            <QrCodeScannerIcon
-              sx={{ fontSize: 40, color: "black", border: 1 }}
-            />
+            <QrCodeScannerIcon sx={{ fontSize: 40 }} />
             <motion.div
               style={{ display: "flex", alignItems: "center" }}
               initial={{ opacity: 0, scaleX: 0 }}
@@ -156,11 +158,7 @@ export default function Sale() {
             >
               <Typography
                 sx={{
-                  border: 1,
-                  borderLeft: 0,
                   color: "black",
-                  borderTopRightRadius: 5,
-                  borderBottomRightRadius: 5,
                   padding: 0.5,
                   width: 100,
                 }}
@@ -173,18 +171,18 @@ export default function Sale() {
             onClick={deleteSelected}
             disabled={selectedItems.length == 0 ? true : false}
             aria-label="delete"
-            sx={{ fontSize: 40 }}
+            sx={{ fontSize: 40, marginRight: 2 }}
             color="black"
           >
             <DeleteIcon fontSize="inherit" color="inherit" />
           </IconButton>
-        </Box>
+        </Paper>
         <Box
           sx={{
             height: "100vh",
             width: "100%",
             borderBottom: 1,
-            overflowY: "scroll",
+            // overflowY: "scroll",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
@@ -207,25 +205,23 @@ export default function Sale() {
               width: "100%",
               position: "sticky",
               bottom: 0,
-              borderTop: 1,
             }}
             disableGutters
             square
-            elevation={0}
+            elevation={5}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>Total: {total}₺</Typography>
+              <Typography>Toplam: {total}₺</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>Ara Toplam: {total}₺</Typography>
             </AccordionDetails>
           </Accordion>
         </Box>
-      </Box>
+      </Paper>
       <Box
         sx={{
           width: { md: "50%", xs: "100%" },
-          borderLeft: 1,
           height: "100vh",
           display: "flex",
           flexDirection: "column",
@@ -297,6 +293,7 @@ export default function Sale() {
             justifyContent: "center",
             alignItems: "center",
             flexDirection: "column",
+            position: "relative",
           }}
         >
           <Button
@@ -323,8 +320,23 @@ export default function Sale() {
               setSelectedInputField("");
             }}
           />
+          <Button
+            variant="contained"
+            disableElevation
+            color="secondary"
+            sx={{
+              position: "absolute",
+              bottom: -100,
+              padding: 0,
+              height: 80,
+              width: "100%",
+              fontSize: 30,
+            }}
+          >
+            ÖDEMEYE İLERLE
+          </Button>
         </Box>
-        <Box
+        <Paper
           sx={{
             position: "sticky",
             bottom: 0,
@@ -334,8 +346,8 @@ export default function Sale() {
             justifyContent: "flex-start",
             alignItems: "center",
             height: 50,
-            borderTop: 1,
           }}
+          elevation={1}
         >
           <div
             style={{
@@ -349,7 +361,7 @@ export default function Sale() {
             }}
           ></div>
           <Typography>Mağaza Çevrimiçi</Typography>
-        </Box>
+        </Paper>
       </Box>
     </Box>
   );

@@ -1,10 +1,4 @@
-import {
-  Box,
-  Button,
-  CircularProgress,
-  Skeleton,
-  Typography,
-} from "@mui/material";
+import { Box, Button, CircularProgress, Typography } from "@mui/material";
 import useData from "../Hooks/useData";
 import API from "../productsAPI.json";
 import { useState } from "react";
@@ -167,7 +161,7 @@ export default function Products({
       });
       setTimeout(() => {
         setProductsData(array);
-        onProducts(array);
+        // onProducts(array);
         onCount(array.length);
       }, 1000);
     },

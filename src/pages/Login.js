@@ -26,7 +26,7 @@ export default function Login() {
   const [showDialog, setShowDialog] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const [user, setUser] = useState({ userCode: "", password: "" });
+  const user = { userCode: "", password: "" };
 
   const { theme, toggleTheme } = usePreferences();
   const { setAlert } = useAlert();

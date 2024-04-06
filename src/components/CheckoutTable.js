@@ -12,7 +12,6 @@ import {
   Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
-import { useState } from "react";
 
 export default function CheckoutTable({
   data,
@@ -29,7 +28,7 @@ export default function CheckoutTable({
           onChange(newFormat);
         }}
         orientation="vertical"
-        sx={{ width: "100%" }}
+        sx={{ width: "100%", paddingBottom: 10 }}
       >
         <Table stickyHeader sx={{ width: "100%" }} aria-label="sticky table">
           <TableHead>
