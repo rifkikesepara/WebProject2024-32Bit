@@ -120,7 +120,7 @@ export default function Sale() {
         flexDirection: { sm: "row", md: "row", xs: "column" },
       }}
     >
-      <Paper
+      <Box
         sx={{
           width: { md: "50%", xs: "100%" },
           display: "flex",
@@ -128,8 +128,9 @@ export default function Sale() {
           flexDirection: "column",
           overflowY: "hidden",
           height: "100vh",
+          backgroundColor: "#e7ecf1",
+          zIndex: 2,
         }}
-        elevation={3}
       >
         <Paper
           sx={{
@@ -137,18 +138,14 @@ export default function Sale() {
             // borderBottom: 1,
             display: "flex",
             justifyContent: "space-between",
-            width: "100%",
-            borderRadius: 10,
+            width: "95%",
+            borderRadius: 7,
             marginBlock: 1,
+            zIndex: 100,
           }}
-          elevation={3}
+          elevation={2}
         >
-          <IconButton
-            sx={{
-              borderRadius: 10,
-              border: 1,
-            }}
-          >
+          <IconButton sx={{ ml: 1, color: "black" }}>
             <QrCodeScannerIcon sx={{ fontSize: 40 }} />
             <motion.div
               style={{ display: "flex", alignItems: "center" }}
@@ -161,6 +158,7 @@ export default function Sale() {
                   color: "black",
                   padding: 0.5,
                   width: 100,
+                  fontWeight: "bold",
                 }}
               >
                 FİYAT GÖR
@@ -171,22 +169,27 @@ export default function Sale() {
             onClick={deleteSelected}
             disabled={selectedItems.length == 0 ? true : false}
             aria-label="delete"
-            sx={{ fontSize: 40, marginRight: 2 }}
+            sx={{ fontSize: 40, marginRight: 2, color: "black" }}
             color="black"
           >
             <DeleteIcon fontSize="inherit" color="inherit" />
           </IconButton>
         </Paper>
-        <Box
+        <Paper
           sx={{
-            height: "100vh",
-            width: "100%",
-            borderBottom: 1,
+            height: "87vh",
+            width: "95%",
             // overflowY: "scroll",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
+            backgroundColor: "white",
+            overflow: "hidden",
+            // borderTopLeftRadius: 10,
+            // borderTopRightRadius: 10,
+            borderRadius: 7,
           }}
+          elevation={5}
         >
           <CheckoutTable
             data={cashout}
@@ -217,8 +220,8 @@ export default function Sale() {
               <Typography>Ara Toplam: {total}₺</Typography>
             </AccordionDetails>
           </Accordion>
-        </Box>
-      </Paper>
+        </Paper>
+      </Box>
       <Box
         sx={{
           width: { md: "50%", xs: "100%" },
@@ -227,36 +230,54 @@ export default function Sale() {
           flexDirection: "column",
           justifyContent: "space-between",
           alignItems: "center",
+          backgroundColor: "#e7ecf1",
         }}
       >
-        <TextField
-          name="barcode"
-          autoComplete="off"
-          placeholder="Klaveden Barkod Girişi"
-          onFocus={(e) => setSelectedInputField(e.target.name)}
-          value={inputFields.barcode}
-          sx={{ width: "90%", marginBottom: 1.5, marginLeft: 2 }}
-          onChange={(e) => {
-            //sync with physical keyboard(TODO)
-            setInputFields({
-              ...inputFields,
-              [selectedInputField]: e.target.value,
-            });
-          }}
-        />
+        <Box sx={{ marginBlock: "auto" }}>
+          <TextField
+            autoFocus
+            variant="standard"
+            name="barcode"
+            autoComplete="off"
+            label="Klaveden Barkod Girişi"
+            onFocus={(e) => setSelectedInputField(e.target.name)}
+            value={inputFields.barcode}
+            sx={{
+              width: "90%",
+              marginBottom: 1.5,
+              marginLeft: 2,
+            }}
+            onChange={(e) => {
+              //sync with physical keyboard(TODO)
+              setInputFields({
+                ...inputFields,
+                [selectedInputField]: e.target.value,
+              });
+            }}
+          />
 
-        <Dialog
-          maxWidth="xl"
-          open={selectListOpen}
-          onClose={() => {
-            setSelectListOpen(false);
-            closeSnackbar();
-          }}
-        >
-          <Box width={"100%"} height={"100vh"} overflow={"hidden"}>
-            <Box width={"100%"} display={"flex"} justifyContent={"flex-end"}>
+          <Dialog
+            maxWidth="xl"
+            open={selectListOpen}
+            onClose={() => {
+              setSelectListOpen(false);
+              closeSnackbar();
+            }}
+            PaperProps={{ sx: { borderRadius: 7 } }}
+          >
+            <Box
+              width={"100%"}
+              height={"100vh"}
+              overflow={"hidden"}
+              position={"relative"}
+            >
               <IconButton
-                sx={{ marginLeft: "auto" }}
+                sx={{
+                  marginLeft: "auto",
+                  position: "absolute",
+                  right: 10,
+                  zIndex: 11,
+                }}
                 onClick={() => {
                   setSelectListOpen(false);
                   closeSnackbar();
@@ -264,90 +285,110 @@ export default function Sale() {
               >
                 <CloseIcon />
               </IconButton>
+              <Products
+                sx={{
+                  width: "100%",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "space-around",
+                  paddingBottom: 12,
+                  marginBottom: "auto",
+                  height: "100%",
+                }}
+                onSelectProduct={(data) => {
+                  addProductToCashout(data);
+                  console.log(cashout);
+                }}
+                onProducts={(data) => setProductsData(data)}
+                onCount={(amount) => setProductAmount(amount)}
+              />
             </Box>
-            <Products
+            <Typography
               sx={{
-                width: "100%",
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "space-around",
-                paddingBottom: 5,
-                marginBottom: "auto",
-                height: "100%",
+                textAlign: "center",
+                boxShadow: "10px 20px 50px 70px white",
+                zIndex: 100,
               }}
-              onSelectProduct={(data) => {
-                addProductToCashout(data);
-                console.log(cashout);
-              }}
-              onProducts={(data) => setProductsData(data)}
-              onCount={(amount) => setProductAmount(amount)}
-            />
-          </Box>
-          <Typography textAlign={"center"}>
-            Ürün Sayısı: {productAmount}
-          </Typography>
-        </Dialog>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
-            position: "relative",
-          }}
-        >
-          <Button
-            variant="contained"
-            disableElevation
-            sx={{ width: "80%", height: 60 }}
-            size="large"
-            startIcon={<LocalGroceryStoreIcon />}
-            onClick={() => setSelectListOpen(true)}
-          >
-            Listeden Ürün Eklemek için Tıklayın
-          </Button>
-          <VirtualKeyboard
-            keyboardRef={keyboard}
-            layout="numeric"
-            onChangeInput={(input) => {
-              if (selectedInputField != "") {
-                setInputFields({ ...inputFields, [selectedInputField]: input });
-                if (selectedInputField != "barcode")
-                  changeProductAmount(input, testID);
-              }
-            }}
-            onDone={() => {
-              setSelectedInputField("");
-            }}
-          />
-          <Button
-            variant="contained"
-            disableElevation
-            color="secondary"
+            >
+              Ürün Sayısı: {productAmount}
+            </Typography>
+          </Dialog>
+          <Box
             sx={{
-              position: "absolute",
-              bottom: -100,
-              padding: 0,
-              height: 80,
-              width: "100%",
-              fontSize: 30,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+              position: "relative",
             }}
           >
-            ÖDEMEYE İLERLE
-          </Button>
+            <Button
+              variant="contained"
+              disableElevation
+              sx={{ width: "80%", height: 60 }}
+              size="large"
+              startIcon={<LocalGroceryStoreIcon />}
+              onClick={() => setSelectListOpen(true)}
+            >
+              Listeden Ürün Eklemek için Tıklayın
+            </Button>
+            <VirtualKeyboard
+              keyboardRef={keyboard}
+              layout="cashier"
+              onChangeInput={(input) => {
+                if (selectedInputField != "") {
+                  setInputFields({
+                    ...inputFields,
+                    [selectedInputField]: input,
+                  });
+                  if (selectedInputField != "barcode")
+                    changeProductAmount(input, testID);
+                }
+              }}
+              onDone={() => {
+                setSelectedInputField("");
+              }}
+            />
+            <Box
+              sx={{
+                display: "flex",
+                width: "100%",
+                justifyContent: "space-around",
+              }}
+            >
+              <Button
+                variant="contained"
+                disableElevation
+                onClick={() => navigate("../home")}
+              >
+                Geri Dön
+              </Button>
+              <Button
+                variant="contained"
+                disableElevation
+                color="secondary"
+                sx={{
+                  height: 80,
+                  fontSize: 20,
+                }}
+              >
+                ÖDEMEYE İLERLE
+              </Button>
+            </Box>
+          </Box>
         </Box>
-        <Paper
+        <Box
           sx={{
             position: "sticky",
             bottom: 0,
-            backgroundColor: "white",
+            backgroundColor: "#e7ecf1",
             width: "100%",
             display: "flex",
             justifyContent: "flex-start",
             alignItems: "center",
             height: 50,
+            zIndex: 1,
           }}
-          elevation={1}
         >
           <div
             style={{
@@ -361,7 +402,7 @@ export default function Sale() {
             }}
           ></div>
           <Typography>Mağaza Çevrimiçi</Typography>
-        </Paper>
+        </Box>
       </Box>
     </Box>
   );

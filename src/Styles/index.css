@@ -21,6 +21,7 @@ code {
 *::-webkit-scrollbar {
   background-color: #ffffff;
   width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-thumb,

@@ -1,4 +1,4 @@
-import { ToggleButton, ToggleButtonGroup } from "@mui/material";
+import { ToggleButton, ToggleButtonGroup, Paper } from "@mui/material";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
@@ -14,51 +14,52 @@ export default function ButtonGroup({
   const [selected, setSelected] = useState(intialSelected);
 
   return (
-    <ToggleButtonGroup
-      sx={{
-        overflowX: "scroll",
-        gridGap: spacing,
-        alignSelf: "center",
-        padding: 1,
-        border: "0px",
-      }}
-      exclusive
-      value={selected}
-      onChange={(e, v) => {
-        setSelected(v);
-        onSelect(v);
-      }}
-    >
-      {buttons.map(({ name, value }, index) => {
-        return (
-          <ToggleButton
-            key={index}
-            sx={{
-              height: 50,
-              minWidth: 150,
-              // boxShadow: "1px 1px 10px 1px #d4d4d4",
-              borderRadius: borderRadius,
-              border: border,
-              "&.MuiToggleButtonGroup-middleButton": {
+    <Paper sx={{ ...sx, overflowX: "scroll", zIndex: 10 }} elevation={3}>
+      <ToggleButtonGroup
+        sx={{
+          // overflowX: "scroll",
+          gridGap: spacing,
+          alignSelf: "center",
+          paddingInline: 1,
+          border: "0px",
+        }}
+        exclusive
+        value={selected}
+        onChange={(e, v) => {
+          setSelected(v);
+          onSelect(v);
+        }}
+      >
+        {buttons.map(({ name, value }, index) => {
+          return (
+            <ToggleButton
+              key={index}
+              sx={{
+                height: 50,
+                minWidth: 150,
                 borderRadius: borderRadius,
                 border: border,
-              },
-              "&.MuiToggleButtonGroup-firstButton": {
-                borderRadius: borderRadius,
-                border: border,
-              },
-              "&.MuiToggleButtonGroup-lastButton": {
-                borderRadius: borderRadius,
-                border: border,
-              },
-            }}
-            value={value}
-          >
-            {name}
-          </ToggleButton>
-        );
-      })}
-    </ToggleButtonGroup>
+                "&.MuiToggleButtonGroup-middleButton": {
+                  borderRadius: borderRadius,
+                  border: border,
+                },
+                "&.MuiToggleButtonGroup-firstButton": {
+                  borderRadius: borderRadius,
+                  border: border,
+                },
+                "&.MuiToggleButtonGroup-lastButton": {
+                  borderRadius: borderRadius,
+                  border: border,
+                },
+              }}
+              value={value}
+            >
+              {name}
+            </ToggleButton>
+          );
+        })}
+      </ToggleButtonGroup>
+    </Paper>
   );
 }
 

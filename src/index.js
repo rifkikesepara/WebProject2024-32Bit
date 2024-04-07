@@ -36,10 +36,16 @@ root.render(
   <React.StrictMode>
     <Theme>
       <SnackbarProvider
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "center",
+        }}
         maxSnack={1}
         Components={{
           product: ProductSnackbar,
         }}
+        preventDuplicate
+        autoHideDuration={1000}
       >
         <AlertProvider>
           <AlertPopUp />

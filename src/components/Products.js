@@ -76,10 +76,10 @@ export default function Products({
   const { enqueueSnackbar } = useSnackbar();
 
   const Cell = ({ columnIndex, rowIndex, style }) => {
+    //adjusting index as ascending number
     let index =
       rowIndex != 0 ? columnIndex + rowIndex * 3 : columnIndex + rowIndex;
 
-    // console.log(productsData[index]);
     return (
       <div
         style={{
@@ -90,29 +90,43 @@ export default function Products({
       >
         {productsData[index] != undefined && (
           <Button
+            disableRipple
             key={productsData[index].id}
             sx={{
-              width: 150,
+              width: 170,
               height: 150,
-              border: "1px solid black",
-              mt: 2,
+              borderRadius: 5,
+              overflow: "visible",
+              mt: 10,
               display: "flex",
               flexDirection: "column",
-              overflow: "hidden",
-              position: "relative",
+              justifyContent: "flex-end",
+              transition: "transform 0.2s ease", //animation
+              backgroundColor: "white",
+              boxShadow: "0px 0px 20px -1px rgba(0, 0, 0, 0.3)",
+              //scaling animation when it's hovered
+              "&:hover": {
+                transition: "transform 0.2s ease",
+                cursor: "pointer",
+                transform: "scale(1.05)",
+              },
             }}
             onClick={(e) => {
+              //adjusting product data to pass into the chekout section
               let data = {
                 id: productsData[index].id,
                 attributes: productsData[index].attributes,
                 images: productsData[index].images,
                 price: productsData[index].price,
               };
+
+              //pushing a snackbar to show the user which product has been added
               enqueueSnackbar(data.attributes.name + " eklendi.", {
                 variant: "product",
                 img: data.images,
               });
-              onSelectProduct(data);
+
+              onSelectProduct(data); //passing product data to parent component
             }}
           >
             <img
@@ -121,13 +135,16 @@ export default function Products({
                   ({ imageType }) => imageType == "product"
                 ).url
               }
-              width={"100%"}
+              width={"75%"}
+              style={{
+                position: "absolute",
+                bottom: "50%",
+                borderRadius: 100,
+                boxShadow: "0px 0px 10px -1px rgba(0, 0, 0, 0.3)",
+              }}
             />
             <Typography
               sx={{
-                position: "absolute",
-                top: 0,
-                right: 0,
                 color: "black",
                 fontWeight: "bold",
               }}
@@ -136,12 +153,12 @@ export default function Products({
             </Typography>
             <Typography
               sx={{
-                position: "absolute",
-                bottom: 0,
                 width: "100%",
                 color: "black",
-                backgroundColor: "rgba(255, 255, 255, 0.5)",
+                fontSize: "95%",
               }}
+              maxHeight={35}
+              overflow={"hidden"}
             >
               {productsData[index].attributes.name}
             </Typography>
@@ -190,11 +207,12 @@ export default function Products({
   return (
     <Box sx={{ ...sx }}>
       <ButtonGroup
+        sx={{ paddingTop: 5 }}
         intialSelected="all"
         buttons={categories}
         onSelect={(v) => {
-          setProductsData([]);
-          setSelectedCategory(v);
+          setProductsData([]); //emptying the products data
+          setSelectedCategory(v); //indicating which category selected
         }}
         borderRadius={10}
         spacing={10}
@@ -210,6 +228,7 @@ export default function Products({
             height: "100%",
             width: "100%",
             display: "flex",
+            backgroundColor: "#ecedf1",
           }}
         >
           <AutoSizer>
@@ -220,7 +239,7 @@ export default function Products({
                 columnWidth={width / 3}
                 height={height}
                 rowCount={productsData.length / 3}
-                rowHeight={200}
+                rowHeight={220}
                 width={width}
               >
                 {Cell}
