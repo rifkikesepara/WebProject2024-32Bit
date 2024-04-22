@@ -291,7 +291,7 @@ export default function Sale() {
                   display: "flex",
                   flexWrap: "wrap",
                   justifyContent: "space-around",
-                  paddingBottom: 12,
+                  paddingBottom: 20,
                   marginBottom: "auto",
                   height: "100%",
                 }}

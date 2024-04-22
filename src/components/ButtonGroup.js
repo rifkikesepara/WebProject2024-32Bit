@@ -1,20 +1,26 @@
 import { ToggleButton, ToggleButtonGroup, Paper } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 export default function ButtonGroup({
   sx,
+  buttonSX = { height: 50, minWidth: 150 },
   buttons = [],
   spacing,
   borderRadius = 0,
   border = "none",
   onSelect = () => {},
   intialSelected = "",
+  elevation = 0,
 }) {
   const [selected, setSelected] = useState(intialSelected);
 
+  useEffect(() => {
+    if (intialSelected != "") onSelect(intialSelected);
+  }, [intialSelected]);
+
   return (
-    <Paper sx={{ ...sx, overflowX: "scroll", zIndex: 10 }} elevation={3}>
+    <Paper sx={{ ...sx, overflowX: "scroll" }} elevation={elevation}>
       <ToggleButtonGroup
         sx={{
           // overflowX: "scroll",
@@ -24,7 +30,7 @@ export default function ButtonGroup({
           border: "0px",
         }}
         exclusive
-        value={selected}
+        value={intialSelected != "" ? selected : intialSelected}
         onChange={(e, v) => {
           setSelected(v);
           onSelect(v);
@@ -35,8 +41,7 @@ export default function ButtonGroup({
             <ToggleButton
               key={index}
               sx={{
-                height: 50,
-                minWidth: 150,
+                ...buttonSX,
                 borderRadius: borderRadius,
                 border: border,
                 "&.MuiToggleButtonGroup-middleButton": {

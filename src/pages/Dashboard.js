@@ -26,7 +26,6 @@ import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import LayersIcon from "@mui/icons-material/Layers";
 import LinkIcon from "@mui/icons-material/Link";
-import MenuIcon from "@mui/icons-material/Menu";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { useMemo, useState } from "react";
@@ -137,9 +136,9 @@ const menuItems = [
     ),
   },
   {
-    name: "WWW",
+    name: "AYARLAR",
     icon: (
-      <LinkIcon
+      <SettingsIcon
         sx={{
           backgroundColor: "#28b2c9",
           fontSize: { md: 75, sm: 75, xs: 60 },
@@ -149,6 +148,21 @@ const menuItems = [
         }}
       />
     ),
+  },
+  {
+    name: "ÇIKIŞ YAP",
+    icon: (
+      <LogoutIcon
+        sx={{
+          backgroundColor: "red",
+          fontSize: { md: 75, sm: 75, xs: 60 },
+          color: "white",
+          padding: 2,
+          borderRadius: 5,
+        }}
+      />
+    ),
+    path: "../",
   },
 ];
 
@@ -285,7 +299,7 @@ const sortTheLastPayments = (data) => {
   return array;
 };
 
-export default function MainScreen() {
+export default function Dashboard() {
   const [data, setData] = useState([]);
 
   useData(
@@ -333,18 +347,6 @@ export default function MainScreen() {
         flexDirection: "column",
       }}
     >
-      {/* <IconButton
-        sx={{ position: "absolute", top: 0, left: 0, zIndex: 100 }}
-        onClick={() => setShowDrawer({ ...showDrawer, left: true })}
-      >
-        <MenuIcon sx={{ fontSize: { md: 70, xs: 50 }, color: "black" }} />
-      </IconButton> */}
-      <IconButton
-        sx={{ position: "absolute", top: 0, right: 0, zIndex: 100 }}
-        onClick={() => setShowDrawer({ ...showDrawer, right: true })}
-      >
-        <SettingsIcon sx={{ fontSize: { md: 70, xs: 50 }, color: "black" }} />
-      </IconButton>
       <Grid
         container
         spacing={2}
@@ -591,46 +593,6 @@ export default function MainScreen() {
         onOpen={(o) => setShowDrawer({ ...showDrawer, left: o })}
         items={DrawerItems}
       />
-      {/* <SwipeableDrawer
-        onOpen={() => setShowDrawer({ ...showDrawer, left: true })}
-        onClose={() => setShowDrawer({ ...showDrawer, left: false })}
-        open={showDrawer.left}
-        anchor="left"
-      >
-        <Box
-          sx={{
-            width: "100%",
-            height: "100%",
-            background: "white",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          <DrawerItems />
-        </Box>
-      </SwipeableDrawer> */}
-      <SwipeableDrawer
-        onOpen={() => setShowDrawer({ ...showDrawer, right: true })}
-        anchor="right"
-        open={showDrawer.right}
-        onClose={() => setShowDrawer({ ...showDrawer, right: false })}
-      >
-        <Box sx={{ width: "100%" }}>
-          <Box
-            sx={{
-              minWidth: 200,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <Switch checked={isThemeDark} onChange={() => toggleTheme()} />
-            <IconButton href="../">
-              <LogoutIcon />
-            </IconButton>
-          </Box>
-        </Box>
-      </SwipeableDrawer>
     </Box>
   );
 }

@@ -4,7 +4,7 @@ import "./Styles/index.css";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Login from "./Pages/Login";
-import MainScreen from "./Pages/MainScreen";
+import Dashboard from "./Pages/Dashboard";
 import Theme from "./Context/Theme";
 import AlertProvider, { AlertPopUp } from "./Context/AlertProvider";
 import Sale from "./Pages/Sale";
@@ -15,7 +15,7 @@ import { ProductSnackbar } from "./Components/ProductSnackbar";
 const router = createBrowserRouter([
   {
     path: "/home",
-    element: <MainScreen />,
+    element: <Dashboard />,
   },
   {
     path: "/",

@@ -3,6 +3,9 @@ import {
   Button,
   Dialog,
   InputAdornment,
+  MenuItem,
+  Paper,
+  Select,
   TextField,
   Typography,
 } from "@mui/material";
@@ -70,10 +73,11 @@ export default function Login() {
         },
         justifyContent: { xs: "center", sm: "center" },
         alignItems: { xs: "center", sm: "center" },
-        backgroundColor: theme.background,
+        // backgroundColor: theme.background,
+        backgroundColor: "#e7ecf1",
       }}
     >
-      <Box
+      {/* <Box
         sx={{
           width: { md: "50%" },
           display: "flex",
@@ -82,20 +86,26 @@ export default function Login() {
         }}
       >
         <img src={Logo} width={200} />
-      </Box>
-      <Box
+      </Box> */}
+      <Paper
         sx={{
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          width: { md: "40%", sm: "90%", xs: "90%" },
+          // width: { md: "40%", sm: "90%", xs: "90%" },
+          p: 2,
         }}
+        elevation={3}
       >
         <form onSubmit={formik.handleSubmit}>
-          <Box sx={{ width: "100%" }}>
-            <Typography>Hoşgeldiniz!</Typography>
-            <Typography>Lütfen kullanıcı kodu ve şifrenizi giriniz.</Typography>
+          <Box sx={{ width: "100%", textAlign: "center" }}>
+            <Typography textAlign={"inherit"} variant="h4" fontWeight={"bold"}>
+              Hoşgeldiniz!
+            </Typography>
+            <Typography textAlign={"inherit"}>
+              Lütfen kullanıcı kodu ve şifrenizi giriniz.
+            </Typography>
           </Box>
           <TextField
             disabled={loading}
@@ -120,6 +130,7 @@ export default function Login() {
           />
           <TextField
             disabled={loading}
+            type="password"
             name="password"
             sx={{ marginBlock: 2 }}
             onChange={formik.handleChange}
@@ -230,7 +241,21 @@ export default function Login() {
             </Button> */}
           </Box>
         </Dialog>
-      </Box>
+        <Box
+          sx={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Typography>Version 1.2.3</Typography>
+          <Select>
+            <MenuItem>Türkçe</MenuItem>
+            <MenuItem>İngilizce</MenuItem>
+          </Select>
+        </Box>
+      </Paper>
     </Box>
   );
 }
