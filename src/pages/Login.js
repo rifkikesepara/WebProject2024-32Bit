@@ -10,23 +10,22 @@ import Logo from "../Resources/32bitlogo.png";
 import { AccountCircle } from "@mui/icons-material";
 import HttpsIcon from "@mui/icons-material/Https";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { LoadingButton } from "@mui/lab";
 import { usePreferences } from "../Context/Theme";
 import { useAlert } from "../Context/AlertProvider";
 import { useFormik } from "formik";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+  const user = { userCode: "admin", password: 123 };
+
   let keyboard = useRef();
   const navigate = useNavigate();
 
   const [currentInput, setCurrentInput] = useState("");
   const [showDialog, setShowDialog] = useState(false);
   const [loading, setLoading] = useState(false);
-
-  const user = { userCode: "", password: "" };
 
   const { theme, toggleTheme } = usePreferences();
   const { setAlert } = useAlert();
@@ -51,20 +50,13 @@ export default function Login() {
           navigate("/home");
         }, 3500);
       } else {
-        setAlert({ text: "Kullanıcı geçersiz!", type: "error" });
-        setLoading(false);
+        setTimeout(() => {
+          setAlert({ text: "Kullanıcı geçersiz!", type: "error" });
+          setLoading(false);
+        }, 2000);
       }
     },
   });
-
-  useEffect(() => {
-    axios
-      .get("https://run.mocky.io/v3/30693e9e-34e8-45ae-98eb-8198b6b22781")
-      // .get("https://run.mocky.io/v3/8d1913e8-b59b-4708-8f84-4cec4452db54")
-      // .then((reposne) => setUser(reposne.data[0]))
-      .then((response) => console.log(response.data))
-      .catch((err) => console.error(err));
-  }, []);
 
   return (
     <Box
@@ -179,6 +171,7 @@ export default function Login() {
             </Typography>
             <Box sx={{ display: "flex" }}>
               <TextField
+                name={currentInput}
                 value={
                   currentInput == "userCode"
                     ? formik.values.userCode
@@ -187,15 +180,17 @@ export default function Login() {
                 fullWidth
                 autoComplete="off"
                 onChange={(event) => {
+                  formik.handleChange(event);
                   const input = event.target.value;
-                  keyboard.setInput(input);
+                  keyboard.current?.setInput(input);
                 }}
               />
               <Button
                 variant="contained"
                 disableElevation
                 onClick={() => {
-                  keyboard.current.clearInput();
+                  keyboard.current?.setInput("");
+                  console.log(keyboard.current);
                   formik.setValues({ ...formik.values, [currentInput]: "" });
                 }}
               >
@@ -206,19 +201,24 @@ export default function Login() {
           <Box
             sx={{
               width: "90%",
-              height: 300,
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
             }}
           >
             <VirtualKeyboard
-              keyboardRef={(r) => (keyboard.current = r)}
+              sx={{ width: "100%" }}
+              keyboardRef={keyboard}
               onChangeInput={(input) =>
                 formik.setValues({ ...formik.values, [currentInput]: input })
               }
+              onPress={(key) => {
+                if (key == "{enter}") {
+                  setShowDialog(false);
+                }
+              }}
             />
-            <Button
+            {/* <Button
               variant="contained"
               disableElevation
               onClick={() => {
@@ -227,7 +227,7 @@ export default function Login() {
               sx={{ padding: 5 }}
             >
               Giriş
-            </Button>
+            </Button> */}
           </Box>
         </Dialog>
       </Box>
