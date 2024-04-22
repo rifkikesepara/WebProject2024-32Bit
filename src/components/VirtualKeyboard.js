@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 import "../Styles/Keyboard.css";
+import logo from "../Resources/enter.png";
 
 const numericLayout = {
   default: ["1 2 3", "4 5 6", "7 8 9", "{bksp} 0 {tick}"],
@@ -38,6 +39,7 @@ export default function VirtualKeyboard({
   onBlur = () => {},
   onInit = () => {},
   onDone = () => {},
+  onPress = () => {},
   layout = "default",
 }) {
   const [state, setState] = useState({ layoutName: "default", input: "" });
@@ -74,9 +76,7 @@ export default function VirtualKeyboard({
   useEffect(() => {
     // setState({ ...state, input: "" });
 
-    /**
-     * Alert if clicked on outside of element
-     */
+    //event of clicked outside of the keyboard
     function handleClickOutside(event) {
       if (ref.current && !ref.current.contains(event.target)) {
         onBlur();
@@ -103,7 +103,9 @@ export default function VirtualKeyboard({
     });
   };
 
-  const onKeyPress = (button) => {
+  const onKeyPress = (button, e) => {
+    e.preventDefault(); //preventing default event to not clicking somthing else behind the keyboard
+    onPress(button);
     if (button === "{cancel}") keyboard.current.setInput("");
     if (button == "{tick}") setTimeout(() => onDone(), 400);
     if (button === "{shift}" || button === "{lock}")
@@ -118,13 +120,24 @@ export default function VirtualKeyboard({
       <Keyboard
         onInit={() => onInit()}
         theme={adjustLayout().class}
-        display={{ "{bksp}": "⌫", "{tick}": "✔", "{cancel}": "C" }}
         buttonTheme={[
           {
             class: "hg-red",
             buttons: "{bksp}",
           },
         ]}
+        display={{
+          "{bksp}": "⌫",
+          "{tick}": "✔",
+          "{enter}": `<img src=${logo} width="50px" />`,
+          "{cancel}": "C",
+        }}
+        // buttonTheme={[
+        //   {
+        //     class: "hg-red",
+        //     buttons: "Q W E R T Y q w e r t y",
+        //   },
+        // ]}
         keyboardRef={(r) => {
           if (keyboardRef) keyboardRef.current = r;
           keyboard.current = r;
