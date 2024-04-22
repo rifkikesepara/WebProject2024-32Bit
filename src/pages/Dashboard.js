@@ -1,13 +1,8 @@
 import {
   Box,
-  Button,
-  Divider,
   Grid,
-  IconButton,
   Paper,
   Skeleton,
-  SwipeableDrawer,
-  Switch,
   Table,
   TableBody,
   TableCell,
@@ -16,7 +11,6 @@ import {
   Typography,
   useMediaQuery,
   useTheme,
-  Tooltip,
 } from "@mui/material";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import UndoIcon from "@mui/icons-material/Undo";
@@ -25,15 +19,14 @@ import StoreIcon from "@mui/icons-material/Store";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import LayersIcon from "@mui/icons-material/Layers";
-import LinkIcon from "@mui/icons-material/Link";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { useMemo, useState } from "react";
 import { LineChart, axisClasses } from "@mui/x-charts";
 import { usePreferences } from "../Context/Theme";
 import useData from "../Hooks/useData";
-import { useNavigate } from "react-router-dom";
 import MiniDrawer from "../Components/MiniDrawer";
+import { getDayString, getMonthString } from "../Utils/utilities";
 
 const menuItems = [
   {
@@ -166,99 +159,6 @@ const menuItems = [
   },
 ];
 
-const DrawerItems = () => {
-  const navigate = useNavigate();
-  return (
-    <>
-      {menuItems.map((data, index) => {
-        return (
-          <Tooltip title={data.name} placement="right" arrow>
-            <Box key={index}>
-              <Button fullWidth onClick={() => navigate(data.path)}>
-                <Box
-                  sx={{
-                    width: "100%",
-                    display: "flex",
-                    alignItems: "center",
-                    height: { md: 50, sm: 50, xs: 30 },
-                    borderRadius: 5,
-                    marginBlock: 2,
-                    cursor: "pointer",
-                    paddingRight: 1,
-                  }}
-                >
-                  {data.icon}
-                  <Typography
-                    sx={{
-                      fontSize: { md: 30, sm: 30, xs: 20 },
-                      fontWeight: "bold",
-                      marginLeft: 2,
-                      color: "black",
-                      width: 300,
-                    }}
-                    boxSizing={"border-box"}
-                  >
-                    {data.name}
-                  </Typography>
-                </Box>
-              </Button>
-              <Divider />
-            </Box>
-          </Tooltip>
-        );
-      })}
-    </>
-  );
-};
-
-const getDayString = (index) => {
-  switch (index) {
-    case 1:
-      return "Pazartesi";
-    case 2:
-      return "Salı";
-    case 3:
-      return "Çarşamba";
-    case 4:
-      return "Perşembe";
-    case 5:
-      return "Cuma";
-    case 6:
-      return "Cumartesi";
-    case 0:
-      return "Pazar";
-  }
-};
-
-const getMonthString = (index) => {
-  switch (index) {
-    case 0:
-      return "Ocak";
-    case 1:
-      return "Şubat";
-    case 2:
-      return "Mart";
-    case 3:
-      return "Nisan";
-    case 4:
-      return "Mayıs";
-    case 5:
-      return "Haziran";
-    case 6:
-      return "Temmuz";
-    case 7:
-      return "Ağustos";
-    case 8:
-      return "Eylül";
-    case 9:
-      return "Ekim";
-    case 10:
-      return "Kasım";
-    case 11:
-      return "Aralık";
-  }
-};
-
 const adjustDataForChart = (data) => {
   console.log("adjusting data");
   const array = [];
@@ -350,7 +250,11 @@ export default function Dashboard() {
       <Grid
         container
         spacing={2}
-        sx={{ width: { xs: "95%", md: "85%" }, ml: 7 }}
+        sx={{
+          width: { xs: "95%", md: "85%" },
+          ml: { md: 7 },
+          mt: { xs: 7, md: 0 },
+        }}
       >
         {!data.length ? (
           <Grid item xs={12}>
@@ -588,11 +492,14 @@ export default function Dashboard() {
           </Grid>
         )}
       </Grid>
-      <MiniDrawer
-        open={showDrawer.left}
-        onOpen={(o) => setShowDrawer({ ...showDrawer, left: o })}
-        items={DrawerItems}
-      />
+      {data.length != 0 && (
+        <MiniDrawer
+          oriantation={matches ? "vertical" : "horizontal"}
+          open={showDrawer.left}
+          onOpen={(o) => setShowDrawer({ ...showDrawer, left: o })}
+          items={menuItems}
+        />
+      )}
     </Box>
   );
 }
