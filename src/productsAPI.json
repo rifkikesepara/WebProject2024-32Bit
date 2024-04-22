@@ -8,7 +8,7 @@
   "drinks": "https://api.a101prod.retter.io/dbmk89vnr/CALL/Store/getProductsByCategory/C078?id=C08&channel=SLOT&__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true",
   "fastFood": "https://api.a101prod.retter.io/dbmk89vnr/CALL/Store/getProductsByCategory/C078?id=C10&channel=SLOT&__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true",
   "desert": "https://api.a101prod.retter.io/dbmk89vnr/CALL/Store/getProductsByCategory/C078?id=C03&channel=SLOT&__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true",
-  "icecream": "https://api.a101prod.retter.io/dbmk89vnr/CALL/CMS/getFAQ/CMS?__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true",
+  "icecream": "https://api.a101prod.retter.io/dbmk89vnr/CALL/Store/getProductsByCategory/C078?id=C09&channel=SLOT&__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true",
   "cleaningStuff": "https://api.a101prod.retter.io/dbmk89vnr/CALL/Store/getProductsByCategory/C078?id=C11&channel=SLOT&__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true",
   "bodyCareStuff": "https://api.a101prod.retter.io/dbmk89vnr/CALL/Store/getProductsByCategory/C078?id=C12&channel=SLOT&__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true",
   "electronics": "https://api.a101prod.retter.io/dbmk89vnr/CALL/Store/getProductsByCategory/C078?id=C18&channel=SLOT&__culture=tr-TR&__platform=web&data=e30%3D&__isbase64=true"

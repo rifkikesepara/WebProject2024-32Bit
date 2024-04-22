@@ -10,6 +10,10 @@ const numericLayout = {
   shift: ["! / #", "$ % ^", "& * (", "{shift} ) +", "{bksp}"],
 };
 
+const cashierLayout = {
+  default: ["{cancel} +/- {bksp}", "1 2 3", "4 5 6", "7 8 9", "00 0 ,"],
+};
+
 const englishLayout = {
   default: [
     "` 1 2 3 4 5 6 7 8 9 0 - = {bksp}",
@@ -61,6 +65,11 @@ export default function VirtualKeyboard({
           layout: numericLayout,
           class: "hg-theme-default hg-layout-numeric myTheme",
         };
+      case "cashier":
+        return {
+          layout: cashierLayout,
+          class: "hg-theme-default hg-layout-numeric myTheme",
+        };
     }
   };
 
@@ -94,9 +103,11 @@ export default function VirtualKeyboard({
     });
   };
 
-  const onKeyPress = (button, e) => {
-    e.preventDefault(); //preventing default event to not clicking somthing else behind the keyboard
+    
+  const onKeyPress = (button) => {
     onPress(button);
+    e.preventDefault(); //preventing default event to not clicking somthing else behind the keyboard
+    if (button === "{cancel}") keyboard.current.setInput("");
     if (button == "{tick}") setTimeout(() => onDone(), 400);
     if (button === "{shift}" || button === "{lock}")
       /**
@@ -115,12 +126,12 @@ export default function VirtualKeyboard({
           "{tick}": "✔",
           "{enter}": `<img src=${logo} width="50px" />`,
         }}
-        // buttonTheme={[
-        //   {
-        //     class: "hg-red",
-        //     buttons: "Q W E R T Y q w e r t y",
-        //   },
-        // ]}
+        buttonTheme={[
+          {
+            class: "hg-red",
+            buttons: "{bksp}",
+          },
+        ]}
         keyboardRef={(r) => {
           if (keyboardRef) keyboardRef.current = r;
           keyboard.current = r;

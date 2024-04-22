@@ -1,5 +1,5 @@
 import { Box, Paper, TextField } from "@mui/material";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import VirtualKeyboard from "./VirtualKeyboard";
 import { motion } from "framer-motion";
 
@@ -10,7 +10,6 @@ export default function TextFieldVK({
   divSX,
   elevation = 0,
 }) {
-  const [visible, setVisible] = useState(false);
   const [textInput, setInput] = useState("");
   const [animateState, setAnimateState] = useState("inactive");
   let keyboard = useRef();
@@ -41,7 +40,6 @@ export default function TextFieldVK({
         autoComplete={autoComplete}
         value={textInput}
         onFocus={() => {
-          setVisible(true);
           setAnimateState("active");
         }}
       />
@@ -61,12 +59,10 @@ export default function TextFieldVK({
             keyboardRef={keyboard}
             layout="numeric"
             onBlur={() => {
-              setVisible(false);
               setAnimateState("inactive");
             }}
             onChangeInput={(input) => setInput(input)}
             onDone={() => {
-              setVisible(false);
               setAnimateState("inactive");
             }}
           />

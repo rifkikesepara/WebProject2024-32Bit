@@ -2,28 +2,27 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
-  AppBar,
   Box,
   Button,
+  Dialog,
   IconButton,
-  Menu,
-  Skeleton,
   TextField,
-  ToggleButton,
-  ToggleButtonGroup,
   Typography,
+  Paper,
 } from "@mui/material";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { useNavigate } from "react-router-dom";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
-import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import DeleteIcon from "@mui/icons-material/Delete";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import useData from "../Hooks/useData";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import TextFieldVK from "../Components/TextFieldVK";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
-import API from "../productsAPI.json";
+import Products from "../Components/Products";
+import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
+import { closeSnackbar } from "notistack";
+import CloseIcon from "@mui/icons-material/Close";
+import LOG from "../Debug/Console";
+import CheckoutTable from "../Components/CheckoutTable";
 
 export default function Sale() {
   const navigate = useNavigate();
@@ -35,27 +34,59 @@ export default function Sale() {
   const [inputFields, setInputFields] = useState({});
   const [selectedInputField, setSelectedInputField] = useState("");
   const [cashout, setCashout] = useState([]);
+  const [productAmount, setProductAmount] = useState(0);
+  const [selectListOpen, setSelectListOpen] = useState(false);
+  const [testID, setID] = useState();
 
-  useData(
-    // "https://run.mocky.io/v3/fad7cc5d-33a9-40d7-8cbd-460172828770",
-    API.bodyCareStuff,
-    // (data) => setProductsData(data.products)
-    (data) => {
-      console.log(data.children[0].products);
-      setProductsData(data.children[0].products);
+  const addProductToCashout = ({ attributes, id, price, images }) => {
+    if (!cashout.find((data) => data.name == attributes.name)) {
+      setCashout([
+        ...cashout,
+        {
+          id: id,
+          name: attributes.name,
+          price: price.normal,
+          images: images,
+          count: 1,
+        },
+      ]);
+    } else {
+      let newArray = cashout.map((a) => {
+        var returnValue = { ...a };
+        if (a.name == attributes.name) {
+          returnValue = {
+            ...returnValue,
+            price: a.price + a.price,
+            count: a.count + 1,
+          };
+        }
+
+        return returnValue;
+      });
+      setCashout(newArray);
     }
-  );
+  };
 
-  const changeProductAmount = (increment, id) => {
+  const deleteSelected = () => {
+    LOG("deletedSelected", "yellow");
+    let array = cashout;
+    selectedItems.map((data) => {
+      let index = array.indexOf(cashout.find(({ id }) => id == data));
+      array.splice(index, 1);
+    });
+    setCashout(array);
+    setSelectedItems([]);
+  };
+
+  const changeProductAmount = (amount, id) => {
     let newArray = cashout.map((a) => {
       var returnValue = { ...a };
       if (a.id == id) {
         returnValue = {
           ...returnValue,
-          price: increment
-            ? a.price + productsData.find(({ id }) => a.id == id).price
-            : a.price - productsData.find(({ id }) => a.id == id).price,
-          count: increment ? a.count + 1 : a.count - 1,
+          price:
+            productsData.find(({ id }) => a.id == id).price.normal * amount,
+          count: amount,
         };
       }
 
@@ -65,14 +96,14 @@ export default function Sale() {
   };
 
   const total = useMemo(() => {
+    LOG("total calculated!", "yellow");
     let total = 0;
     cashout.map(({ price }) => (total = total + price));
-    return total;
-  }, [cashout]);
+    return total / 100;
+  }, [cashout, cashout.length]);
 
   useEffect(() => {
     keyboard.current.setInput(inputFields[selectedInputField]);
-    console.log("callback is running");
   }, [selectedInputField]);
 
   useEffect(() => {
@@ -80,137 +111,283 @@ export default function Sale() {
   }, [cashout.length]);
 
   return (
-    <Box sx={{ height: "100vh", display: "flex", width: "100%" }}>
+    <Box
+      sx={{
+        minHeight: "100vh",
+        display: "flex",
+        width: "100%",
+        overflow: "hidden",
+        flexDirection: { sm: "row", md: "row", xs: "column" },
+      }}
+    >
       <Box
         sx={{
-          width: "50%",
+          width: { md: "50%", xs: "100%" },
           display: "flex",
           alignItems: "center",
           flexDirection: "column",
-          overflowY: "scroll",
-          minHeight: "100vh",
+          overflowY: "hidden",
+          height: "100vh",
+          backgroundColor: "#e7ecf1",
+          zIndex: 2,
         }}
       >
-        <Box
+        <Paper
           sx={{
+            height: "8%",
+            // borderBottom: 1,
             display: "flex",
-            alignItems: "center",
-            width: "100%",
-            justifyContent: "center",
-            position: "relative",
+            justifyContent: "space-between",
+            width: "95%",
+            borderRadius: 7,
+            marginBlock: 1,
+            zIndex: 100,
           }}
+          elevation={2}
         >
-          <IconButton
-            sx={{ position: "absolute", left: 0, marginTop: 1, zIndex: 100 }}
-            disableRipple
-            onClick={() => navigate("../home")}
-          >
-            <ArrowBackIosNewIcon sx={{ fontSize: 35, marginRight: 2 }} />
+          <IconButton sx={{ ml: 1, color: "black" }}>
+            <QrCodeScannerIcon sx={{ fontSize: 40 }} />
+            <motion.div
+              style={{ display: "flex", alignItems: "center" }}
+              initial={{ opacity: 0, scaleX: 0 }}
+              animate={{ opacity: 1, scaleX: 1 }}
+              transition={{ duration: 1 }}
+            >
+              <Typography
+                sx={{
+                  color: "black",
+                  padding: 0.5,
+                  width: 100,
+                  fontWeight: "bold",
+                }}
+              >
+                FİYAT GÖR
+              </Typography>
+            </motion.div>
           </IconButton>
-          {/* <TextFieldVK
-            textFieldSX={{ width: "90%", marginTop: 1.5, marginLeft: 4 }}
-            autoComplete="off"
-            placeholder="Klavyeden Barkod Girişi"
-            elevation={4}
-          /> */}
+          <IconButton
+            onClick={deleteSelected}
+            disabled={selectedItems.length == 0 ? true : false}
+            aria-label="delete"
+            sx={{ fontSize: 40, marginRight: 2, color: "black" }}
+            color="black"
+          >
+            <DeleteIcon fontSize="inherit" color="inherit" />
+          </IconButton>
+        </Paper>
+        <Paper
+          sx={{
+            height: "87vh",
+            width: "95%",
+            // overflowY: "scroll",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            backgroundColor: "white",
+            overflow: "hidden",
+            // borderTopLeftRadius: 10,
+            // borderTopRightRadius: 10,
+            borderRadius: 7,
+          }}
+          elevation={5}
+        >
+          <CheckoutTable
+            data={cashout}
+            inputValues={inputFields}
+            onFocus={(e, { id }) => {
+              setSelectedInputField(e.target.name);
+              setID(id);
+            }}
+            selectionValues={selectedItems}
+            onChange={(newformats) => setSelectedItems(newformats)}
+          />
+          <Accordion
+            onChange={(e, expanded) => {}}
+            sx={{
+              margin: 0,
+              width: "100%",
+              position: "sticky",
+              bottom: 0,
+            }}
+            disableGutters
+            square
+            elevation={5}
+          >
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              <Typography>Toplam: {total}₺</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>Ara Toplam: {total}₺</Typography>
+            </AccordionDetails>
+          </Accordion>
+        </Paper>
+      </Box>
+      <Box
+        sx={{
+          width: { md: "50%", xs: "100%" },
+          height: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          alignItems: "center",
+          backgroundColor: "#e7ecf1",
+        }}
+      >
+        <Box sx={{ marginBlock: "auto" }}>
           <TextField
+            autoFocus
+            variant="standard"
             name="barcode"
             autoComplete="off"
-            placeholder="Klaveden Barkod Girişi"
+            label="Klaveden Barkod Girişi"
             onFocus={(e) => setSelectedInputField(e.target.name)}
             value={inputFields.barcode}
-            sx={{ width: "90%", marginTop: 1.5, marginLeft: 2 }}
+            sx={{
+              width: "90%",
+              marginBottom: 1.5,
+              marginLeft: 2,
+            }}
+            onChange={(e) => {
+              //sync with physical keyboard(TODO)
+              setInputFields({
+                ...inputFields,
+                [selectedInputField]: e.target.value,
+              });
+            }}
           />
-        </Box>
-        <Box
-          sx={{
-            width: "90%",
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-around",
-            height: "auto",
-            paddingBlock: 2,
-            marginBottom: "auto",
-          }}
-        >
-          {productsData.length == 0 ? (
-            <Skeleton width={"100%"} height={750} variant="rounded" />
-          ) : (
-            productsData.map(({ id, attributes, images, price }, index) => {
-              return (
-                <Button
-                  key={index}
-                  sx={{
-                    width: 150,
-                    height: 150,
-                    border: "1px solid black",
-                    mt: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    overflow: "hidden",
-                    position: "relative",
-                  }}
-                  onClick={(e) => {
-                    if (!cashout.find((data) => data.name == attributes.name)) {
-                      setCashout([
-                        ...cashout,
-                        {
-                          id: id,
-                          name: attributes.name,
-                          price: price.normal,
-                          count: 1,
-                        },
-                      ]);
-                    } else {
-                      let newArray = cashout.map((a) => {
-                        var returnValue = { ...a };
-                        if (a.name == attributes.name) {
-                          returnValue = {
-                            ...returnValue,
-                            price: a.price + a.price,
-                            count: a.count + 1,
-                          };
-                        }
 
-                        return returnValue;
-                      });
-                      setCashout(newArray);
-                    }
-                  }}
-                >
-                  <img
-                    src={
-                      images.find(({ imageType }) => imageType == "product").url
-                    }
-                    width={"100%"}
-                  />
-                  <Typography
-                    sx={{
-                      position: "absolute",
-                      bottom: 0,
-                      width: "100%",
-                      color: "black",
-                      backgroundColor: "rgba(255, 255, 255, 0.5)",
-                    }}
-                  >
-                    {attributes.name}
-                  </Typography>
-                </Button>
-              );
-            })
-          )}
+          <Dialog
+            maxWidth="xl"
+            open={selectListOpen}
+            onClose={() => {
+              setSelectListOpen(false);
+              closeSnackbar();
+            }}
+            PaperProps={{ sx: { borderRadius: 7 } }}
+          >
+            <Box
+              width={"100%"}
+              height={"100vh"}
+              overflow={"hidden"}
+              position={"relative"}
+            >
+              <IconButton
+                sx={{
+                  marginLeft: "auto",
+                  position: "absolute",
+                  right: 10,
+                  zIndex: 11,
+                }}
+                onClick={() => {
+                  setSelectListOpen(false);
+                  closeSnackbar();
+                }}
+              >
+                <CloseIcon />
+              </IconButton>
+              <Products
+                sx={{
+                  width: "100%",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "space-around",
+                  paddingBottom: 12,
+                  marginBottom: "auto",
+                  height: "100%",
+                }}
+                onSelectProduct={(data) => {
+                  addProductToCashout(data);
+                  console.log(cashout);
+                }}
+                onProducts={(data) => setProductsData(data)}
+                onCount={(amount) => setProductAmount(amount)}
+              />
+            </Box>
+            <Typography
+              sx={{
+                textAlign: "center",
+                boxShadow: "10px 20px 50px 70px white",
+                zIndex: 100,
+              }}
+            >
+              Ürün Sayısı: {productAmount}
+            </Typography>
+          </Dialog>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+              position: "relative",
+            }}
+          >
+            <Button
+              variant="contained"
+              disableElevation
+              sx={{ width: "80%", height: 60 }}
+              size="large"
+              startIcon={<LocalGroceryStoreIcon />}
+              onClick={() => setSelectListOpen(true)}
+            >
+              Listeden Ürün Eklemek için Tıklayın
+            </Button>
+            <VirtualKeyboard
+              keyboardRef={keyboard}
+              layout="cashier"
+              onChangeInput={(input) => {
+                if (selectedInputField != "") {
+                  setInputFields({
+                    ...inputFields,
+                    [selectedInputField]: input,
+                  });
+                  if (selectedInputField != "barcode")
+                    changeProductAmount(input, testID);
+                }
+              }}
+              onDone={() => {
+                setSelectedInputField("");
+              }}
+            />
+            <Box
+              sx={{
+                display: "flex",
+                width: "100%",
+                justifyContent: "space-around",
+              }}
+            >
+              <Button
+                variant="contained"
+                disableElevation
+                onClick={() => navigate("../home")}
+              >
+                Geri Dön
+              </Button>
+              <Button
+                variant="contained"
+                disableElevation
+                color="secondary"
+                sx={{
+                  height: 80,
+                  fontSize: 20,
+                }}
+              >
+                ÖDEMEYE İLERLE
+              </Button>
+            </Box>
+          </Box>
         </Box>
         <Box
           sx={{
             position: "sticky",
             bottom: 0,
-            backgroundColor: "white",
+            backgroundColor: "#e7ecf1",
             width: "100%",
             display: "flex",
             justifyContent: "flex-start",
             alignItems: "center",
-            padding: 1,
-            borderTop: 1,
+            height: 50,
+            zIndex: 1,
           }}
         >
           <div
@@ -225,175 +402,6 @@ export default function Sale() {
             }}
           ></div>
           <Typography>Mağaza Çevrimiçi</Typography>
-        </Box>
-      </Box>
-      <Box
-        sx={{
-          width: "50%",
-          borderLeft: 1,
-          overflowY: "scroll",
-        }}
-      >
-        <Box
-          sx={{
-            height: "8%",
-            borderBottom: 1,
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-          <IconButton
-            sx={{
-              borderRadius: 5,
-            }}
-          >
-            <QrCodeScannerIcon
-              sx={{ fontSize: 40, color: "black", border: 1 }}
-            />
-            <motion.div
-              style={{ display: "flex", alignItems: "center" }}
-              initial={{ opacity: 0, scaleX: 0 }}
-              animate={{ opacity: 1, scaleX: 1 }}
-              transition={{ duration: 1 }}
-            >
-              <Typography
-                sx={{
-                  position: "absolute",
-                  border: 1,
-                  borderLeft: 0,
-                  color: "black",
-                  borderTopRightRadius: 5,
-                  borderBottomRightRadius: 5,
-                  padding: 0.5,
-                  width: 100,
-                }}
-              >
-                FİYAT GÖR
-              </Typography>
-            </motion.div>
-          </IconButton>
-          <IconButton>
-            <DeleteForeverIcon sx={{ fontSize: 40, color: "black" }} />
-          </IconButton>
-        </Box>
-        <Box
-          sx={{
-            height: "47%",
-            borderBottom: 1,
-            overflowY: "scroll",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-          }}
-        >
-          <ToggleButtonGroup
-            value={selectedItems}
-            onChange={(e, newformats) => setSelectedItems(newformats)}
-            orientation="vertical"
-            sx={{ width: "100%" }}
-          >
-            {cashout.map((data, index) => {
-              return (
-                <Box
-                  ref={mainDiv}
-                  sx={{
-                    display: "flex",
-                    width: "100%",
-                    minHeight: 80,
-                    paddingInline: 1,
-                  }}
-                >
-                  <Box
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <Button
-                      variant="outlined"
-                      sx={{ padding: 0, minWidth: 30, height: "80%" }}
-                      onClick={() => changeProductAmount(false, data.id)}
-                    >
-                      -
-                    </Button>
-                    {/* <TextField
-                      name={data.name}
-                      value={inputFields[data.name]}
-                      onFocus={(e) => setSelectedInputField(e.target.name)}
-                      sx={{ width: 50 }}
-                      autoComplete="off"
-                    /> */}
-                    <Typography sx={{ paddingInline: 1.5 }}>
-                      {data.count}
-                    </Typography>
-                    <Button
-                      variant="outlined"
-                      sx={{ padding: 0, minWidth: 30, height: "80%" }}
-                      onClick={() => changeProductAmount(true, data.id)}
-                    >
-                      +
-                    </Button>
-                  </Box>
-                  <ToggleButton
-                    key={index}
-                    value={data.id}
-                    sx={{
-                      border: "none",
-                      display: "flex",
-                      justifyContent: "space-between",
-                      color: "black",
-                      width: "100%",
-                    }}
-                    onClick={(e) => {}}
-                  >
-                    <Typography>{data.name}</Typography>
-                    <Typography>{data.price}₺</Typography>
-                  </ToggleButton>
-                </Box>
-              );
-            })}
-          </ToggleButtonGroup>
-          <Accordion
-            onChange={(e, expanded) => {}}
-            sx={{
-              margin: 0,
-              width: "100%",
-              position: "sticky",
-              bottom: 0,
-              borderTop: 1,
-            }}
-            disableGutters
-            square
-            elevation={0}
-          >
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>Total: {total}₺</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>Ara Toplam: 30.35₺</Typography>
-            </AccordionDetails>
-          </Accordion>
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            // height: "40%",
-          }}
-        >
-          <VirtualKeyboard
-            keyboardRef={keyboard}
-            layout="numeric"
-            onChangeInput={(input) => {
-              console.log(inputFields[selectedInputField]);
-              console.log(inputFields);
-              if (selectedInputField != "")
-                setInputFields({ ...inputFields, [selectedInputField]: input });
-            }}
-            onDone={() => setSelectedInputField("")}
-          />
         </Box>
       </Box>
     </Box>
