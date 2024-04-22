@@ -16,6 +16,7 @@ import {
   Typography,
   useMediaQuery,
   useTheme,
+  Tooltip,
 } from "@mui/material";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import UndoIcon from "@mui/icons-material/Undo";
@@ -33,6 +34,7 @@ import { LineChart, axisClasses } from "@mui/x-charts";
 import { usePreferences } from "../Context/Theme";
 import useData from "../Hooks/useData";
 import { useNavigate } from "react-router-dom";
+import MiniDrawer from "../Components/MiniDrawer";
 
 const menuItems = [
   {
@@ -156,35 +158,39 @@ const DrawerItems = () => {
     <>
       {menuItems.map((data, index) => {
         return (
-          <Box key={index}>
-            <Button fullWidth onClick={() => navigate(data.path)}>
-              <Box
-                sx={{
-                  width: "100%",
-                  display: "flex",
-                  alignItems: "center",
-                  height: { md: 50, sm: 50, xs: 30 },
-                  borderRadius: 5,
-                  marginBlock: 2,
-                  cursor: "pointer",
-                  paddingRight: 1,
-                }}
-              >
-                {data.icon}
-                <Typography
+          <Tooltip title={data.name} placement="right" arrow>
+            <Box key={index}>
+              <Button fullWidth onClick={() => navigate(data.path)}>
+                <Box
                   sx={{
-                    fontSize: { md: 30, sm: 30, xs: 20 },
-                    fontWeight: "bold",
-                    marginLeft: 2,
-                    color: "black",
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    height: { md: 50, sm: 50, xs: 30 },
+                    borderRadius: 5,
+                    marginBlock: 2,
+                    cursor: "pointer",
+                    paddingRight: 1,
                   }}
                 >
-                  {data.name}
-                </Typography>
-              </Box>
-            </Button>
-            <Divider />
-          </Box>
+                  {data.icon}
+                  <Typography
+                    sx={{
+                      fontSize: { md: 30, sm: 30, xs: 20 },
+                      fontWeight: "bold",
+                      marginLeft: 2,
+                      color: "black",
+                      width: 300,
+                    }}
+                    boxSizing={"border-box"}
+                  >
+                    {data.name}
+                  </Typography>
+                </Box>
+              </Button>
+              <Divider />
+            </Box>
+          </Tooltip>
         );
       })}
     </>
@@ -327,19 +333,23 @@ export default function MainScreen() {
         flexDirection: "column",
       }}
     >
-      <IconButton
+      {/* <IconButton
         sx={{ position: "absolute", top: 0, left: 0, zIndex: 100 }}
         onClick={() => setShowDrawer({ ...showDrawer, left: true })}
       >
         <MenuIcon sx={{ fontSize: { md: 70, xs: 50 }, color: "black" }} />
-      </IconButton>
+      </IconButton> */}
       <IconButton
         sx={{ position: "absolute", top: 0, right: 0, zIndex: 100 }}
         onClick={() => setShowDrawer({ ...showDrawer, right: true })}
       >
         <SettingsIcon sx={{ fontSize: { md: 70, xs: 50 }, color: "black" }} />
       </IconButton>
-      <Grid container spacing={2} sx={{ width: { xs: "95%", md: "85%" } }}>
+      <Grid
+        container
+        spacing={2}
+        sx={{ width: { xs: "95%", md: "85%" }, ml: 7 }}
+      >
         {!data.length ? (
           <Grid item xs={12}>
             <Skeleton variant="rectangular" width={"100%"} height={85} />
@@ -576,11 +586,16 @@ export default function MainScreen() {
           </Grid>
         )}
       </Grid>
-      <SwipeableDrawer
+      <MiniDrawer
+        open={showDrawer.left}
+        onOpen={(o) => setShowDrawer({ ...showDrawer, left: o })}
+        items={DrawerItems}
+      />
+      {/* <SwipeableDrawer
         onOpen={() => setShowDrawer({ ...showDrawer, left: true })}
+        onClose={() => setShowDrawer({ ...showDrawer, left: false })}
         open={showDrawer.left}
         anchor="left"
-        onClose={() => setShowDrawer({ ...showDrawer, left: false })}
       >
         <Box
           sx={{
@@ -593,7 +608,7 @@ export default function MainScreen() {
         >
           <DrawerItems />
         </Box>
-      </SwipeableDrawer>
+      </SwipeableDrawer> */}
       <SwipeableDrawer
         onOpen={() => setShowDrawer({ ...showDrawer, right: true })}
         anchor="right"

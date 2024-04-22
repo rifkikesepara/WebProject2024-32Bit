@@ -1,94 +1,135 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import { LineChart } from "@mui/x-charts/LineChart";
-import { mangoFusionPalette } from "@mui/x-charts/colorPalettes";
-import { StyledEngineProvider } from "@mui/material";
+import Box from "@mui/material/Box";
+import List from "@mui/material/List";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import MailIcon from "@mui/icons-material/Mail";
+import { Paper } from "@mui/material";
 
-const defaultSeries = [
-  { id: "1", data: [4, 5, 1, 2, 3, 3, 2], area: true, stack: "1" },
-  { id: "2", data: [7, 4, 6, 7, 2, 3, 5], area: true, stack: "1" },
-  { id: "3", data: [6, 4, 1, 2, 6, 3, 3], area: true, stack: "1" },
-  { id: "4", data: [4, 7, 6, 1, 2, 7, 7], area: true, stack: "1" },
-  { id: "5", data: [2, 2, 1, 7, 1, 5, 3], area: true, stack: "1" },
-  { id: "6", data: [6, 6, 1, 6, 7, 1, 1], area: true, stack: "1" },
-  { id: "7", data: [7, 6, 1, 6, 4, 4, 6], area: true, stack: "1" },
-  { id: "8", data: [4, 3, 1, 6, 6, 3, 5], area: true, stack: "1" },
-  { id: "9", data: [7, 6, 2, 7, 4, 2, 7], area: true, stack: "1" },
-].map((item, index) => ({
-  ...item,
-  color: mangoFusionPalette("light")[index],
-}));
+const drawerWidth = 300;
 
-export default function Test() {
-  const [series, setSeries] = React.useState(defaultSeries);
-  const [nbSeries, setNbSeries] = React.useState(3);
-  const [skipAnimation, setSkipAnimation] = React.useState(false);
+const Drawer = ({ open, onOpen = () => {} }) => {
+  const handleDrawerOpen = () => {
+    onOpen(true);
+  };
 
+  const handleDrawerClose = () => {
+    onOpen(false);
+  };
   return (
-    <StyledEngineProvider injectFirst>
-      <div
-        style={{
-          width: "100%",
+    <Paper
+      sx={{
+        position: "fixed",
+        height: "100vh",
+        width: !open ? 70 : drawerWidth,
+        transition: "width 0.2s linear",
+        zIndex: 100,
+        backgroundColor: "white",
+        left: 0,
+      }}
+      elevation={3}
+    >
+      <Box
+        sx={{
+          width: 50,
           display: "flex",
-          flexDirection: "column",
+          justifyContent: "center",
+          ml: 1,
         }}
       >
-        <div>
-          <LineChart
-            xAxis={[{ data: [1, 2, 3, 4, 5, 6, 7] }]}
-            series={[
-              ...series.slice(0, Math.min(nbSeries, 8)),
-              ...series.slice(8, 10),
-            ]}
-            skipAnimation={skipAnimation}
-            height={400}
-          />
-        </div>
-        <Stack spacing={1} direction="row">
-          <Button
-            variant="outlined"
-            onClick={() =>
-              setSeries((prev) =>
-                prev.map((item) => ({
-                  ...item,
-                  data: item.data.map((v) =>
-                    Math.max(0.5, v - 4 + 8 * Math.random())
-                  ),
-                }))
-              )
-            }
-          >
-            randomize
-          </Button>
-          <Button
-            variant="outlined"
-            onClick={() => setNbSeries((prev) => prev - 1)}
-            disabled={nbSeries === 0}
-          >
-            remove
-          </Button>
-          <Button
-            variant="outlined"
-            onClick={() => setNbSeries((prev) => prev + 1)}
-            disabled={nbSeries === 8}
-          >
-            add
-          </Button>
-          <FormControlLabel
-            checked={skipAnimation}
-            control={
-              <Checkbox
-                onChange={(event) => setSkipAnimation(event.target.checked)}
-              />
-            }
-            label="skipAnimation"
-            labelPlacement="end"
-          />
-        </Stack>
-      </div>
-    </StyledEngineProvider>
+        <IconButton
+          sx={{ fontSize: 30 }}
+          onClick={!open ? handleDrawerOpen : handleDrawerClose}
+        >
+          {!open ? (
+            <ChevronRightIcon fontSize="inherit" />
+          ) : (
+            <ChevronLeftIcon fontSize="inherit" />
+          )}
+        </IconButton>
+      </Box>
+      <List>
+        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton
+              sx={{
+                height: 60,
+                justifyContent: open ? "initial" : "center",
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : "auto",
+                  justifyContent: "center",
+                }}
+              >
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {["All mail", "Trash", "Spam"].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton
+              sx={{
+                height: 60,
+                justifyContent: open ? "initial" : "center",
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : "auto",
+                  justifyContent: "center",
+                }}
+              >
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Box
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: "100%",
+          width: "100vw",
+          height: "100vh",
+          // backgroundColor: "green",
+        }}
+        onClick={() => onOpen(false)}
+      />
+    </Paper>
+  );
+};
+
+export default function MiniDrawer() {
+  const [open, setOpen] = React.useState(false);
+
+  return (
+    <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
+      <Drawer open={open} onOpen={(o) => setOpen(o)} />
+      <Box sx={{ ml: 20, height: 500, width: 800, border: 1 }}>
+        <Typography>Denem</Typography>
+      </Box>
+    </Box>
   );
 }
