@@ -104,8 +104,8 @@ export default function VirtualKeyboard({
   };
 
   const onKeyPress = (button, e) => {
-    e.preventDefault(); //preventing default event to not clicking somthing else behind the keyboard
     onPress(button);
+    e.preventDefault(); //preventing default event to not clicking somthing else behind the keyboard
     if (button === "{cancel}") keyboard.current.setInput("");
     if (button == "{tick}") setTimeout(() => onDone(), 400);
     if (button === "{shift}" || button === "{lock}")
