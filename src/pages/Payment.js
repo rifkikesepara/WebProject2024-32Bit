@@ -4,11 +4,11 @@ import {
   AccordionSummary,
   Box,
   Button,
-  Dialog,
   IconButton,
   TextField,
   Typography,
   Paper,
+  Divider,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
@@ -17,57 +17,22 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
-import Products from "../Components/Products";
-import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
-import { closeSnackbar } from "notistack";
-import CloseIcon from "@mui/icons-material/Close";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
 
-export default function Sale() {
+export default function Payment() {
   const navigate = useNavigate();
   const mainDiv = useRef();
   let keyboard = useRef();
 
   const [selectedItems, setSelectedItems] = useState([]);
-  const [productsData, setProductsData] = useState([]);
+  const [payment, setPayment] = useState({ cash: 0, card: 0 });
   const [inputFields, setInputFields] = useState({});
   const [selectedInputField, setSelectedInputField] = useState("");
   const [cashout, setCashout] = useState(
     JSON.parse(localStorage.getItem("cashout"))
   );
-  const [productAmount, setProductAmount] = useState(0);
-  const [selectListOpen, setSelectListOpen] = useState(false);
   const [testID, setID] = useState();
-
-  const addProductToCashout = ({ attributes, id, price, images }) => {
-    if (!cashout.find((data) => data.name == attributes.name)) {
-      setCashout([
-        ...cashout,
-        {
-          id: id,
-          name: attributes.name,
-          price: price.normal,
-          images: images,
-          count: 1,
-        },
-      ]);
-    } else {
-      let newArray = cashout.map((a) => {
-        var returnValue = { ...a };
-        if (a.name == attributes.name) {
-          returnValue = {
-            ...returnValue,
-            price: a.price + a.price,
-            count: a.count + 1,
-          };
-        }
-
-        return returnValue;
-      });
-      setCashout(newArray);
-    }
-  };
 
   const deleteSelected = () => {
     LOG("deletedSelected", "yellow");
@@ -83,11 +48,14 @@ export default function Sale() {
   const changeProductAmount = (amount, id) => {
     let newArray = cashout.map((a) => {
       var returnValue = { ...a };
-      if (a.id == id) {
+      if (a.id == id && amount != 0) {
+        let unitPrice =
+          cashout.find(({ id }) => a.id == id).price /
+          cashout.find(({ id }) => a.id == id).count;
+        console.log("Unit Price: " + unitPrice);
         returnValue = {
           ...returnValue,
-          price:
-            productsData.find(({ id }) => a.id == id).price.normal * amount,
+          price: unitPrice * amount,
           count: amount,
         };
       }
@@ -97,12 +65,31 @@ export default function Sale() {
     setCashout(newArray);
   };
 
+  const handleClick = (e) => {
+    let paymentAmount = parseFloat(inputFields.amount);
+    setInputFields({ ...inputFields, amount: "" });
+    keyboard.current.setInput("");
+    switch (e.target.name) {
+      case "card":
+        if (paymentAmount <= total) {
+          setPayment({ ...payment, card: paymentAmount });
+        }
+        break;
+      case "cash":
+        if (paymentAmount <= total) {
+          setPayment({ ...payment, cash: paymentAmount });
+        }
+        break;
+    }
+  };
+
   const total = useMemo(() => {
     LOG("total calculated!", "yellow");
     let total = 0;
     cashout.map(({ price }) => (total = total + price));
     return total / 100;
   }, [cashout, cashout.length]);
+  let due = total - (payment.cash + payment.card);
 
   useEffect(() => {
     keyboard.current.setInput(inputFields[selectedInputField]);
@@ -204,6 +191,7 @@ export default function Sale() {
             onChange={(newformats) => setSelectedItems(newformats)}
           />
           <Accordion
+            expanded
             onChange={(e, expanded) => {}}
             sx={{
               margin: 0,
@@ -221,6 +209,22 @@ export default function Sale() {
             <AccordionDetails>
               <Typography>Ara Toplam: {total}₺</Typography>
             </AccordionDetails>
+            <AccordionDetails sx={{ paddingBlock: 0 }}>
+              <Typography sx={{ color: "green", fontWeight: "bold" }}>
+                NAKİT: {payment.cash}₺
+              </Typography>
+            </AccordionDetails>
+            <AccordionDetails sx={{ paddingBlock: 0 }}>
+              <Typography sx={{ color: "blue", fontWeight: "bold" }}>
+                KREDİ KARTI: {payment.card}₺
+              </Typography>
+            </AccordionDetails>
+            <Divider />
+            <AccordionDetails>
+              <Typography sx={{ color: "red", fontWeight: "bold" }}>
+                KALAN: {total - (payment.cash + payment.card)}₺
+              </Typography>
+            </AccordionDetails>
           </Accordion>
         </Paper>
       </Box>
@@ -236,85 +240,78 @@ export default function Sale() {
         }}
       >
         <Box sx={{ marginBlock: "auto" }}>
-          <TextField
-            autoFocus
-            variant="standard"
-            name="barcode"
-            autoComplete="off"
-            label="Klaveden Barkod Girişi"
-            onFocus={(e) => setSelectedInputField(e.target.name)}
-            value={inputFields.barcode}
-            sx={{
-              width: "90%",
-              marginBottom: 1.5,
-              marginLeft: 2,
-            }}
-            onChange={(e) => {
-              //sync with physical keyboard(TODO)
-              setInputFields({
-                ...inputFields,
-                [selectedInputField]: e.target.value,
-              });
-            }}
-          />
-
-          <Dialog
-            maxWidth="xl"
-            open={selectListOpen}
-            onClose={() => {
-              setSelectListOpen(false);
-              closeSnackbar();
-            }}
-            PaperProps={{ sx: { borderRadius: 7 } }}
-          >
-            <Box
-              width={"100%"}
-              height={"100vh"}
-              overflow={"hidden"}
-              position={"relative"}
-            >
-              <IconButton
-                sx={{
-                  marginLeft: "auto",
-                  position: "absolute",
-                  right: 10,
-                  zIndex: 11,
-                }}
-                onClick={() => {
-                  setSelectListOpen(false);
-                  closeSnackbar();
-                }}
-              >
-                <CloseIcon />
-              </IconButton>
-              <Products
-                sx={{
-                  width: "100%",
-                  display: "flex",
-                  flexWrap: "wrap",
-                  justifyContent: "space-around",
-                  paddingBottom: 20,
-                  marginBottom: "auto",
-                  height: "100%",
-                }}
-                onSelectProduct={(data) => {
-                  addProductToCashout(data);
-                  console.log(cashout);
-                }}
-                onProducts={(data) => setProductsData(data)}
-                onCount={(amount) => setProductAmount(amount)}
-              />
-            </Box>
-            <Typography
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <TextField
+              focused
+              autoFocus
+              variant="standard"
+              name="amount"
+              autoComplete="off"
+              label="Tutar Giriniz"
+              onFocus={(e) => setSelectedInputField(e.target.name)}
+              value={inputFields.amount}
               sx={{
-                textAlign: "center",
-                boxShadow: "10px 20px 50px 70px white",
-                zIndex: 100,
+                height: "inherit",
+                width: "90%",
+                marginBottom: 1.5,
+                marginLeft: 2,
+              }}
+              onChange={(e) => {
+                setInputFields({
+                  ...inputFields,
+                  [selectedInputField]: e.target.value,
+                });
+                keyboard.current.setInput(e.target.value);
+              }}
+            />
+            <Button
+              variant="contained"
+              disableElevation
+              sx={{
+                height: 40,
+                ml: 1,
+              }}
+              onClick={() => {
+                setInputFields({ ...inputFields, amount: due });
               }}
             >
-              Ürün Sayısı: {productAmount}
-            </Typography>
-          </Dialog>
+              KALAN
+            </Button>
+          </Box>
+          <Box
+            sx={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "space-evenly",
+            }}
+          >
+            <Button
+              name="cash"
+              variant="contained"
+              disableElevation
+              sx={{
+                width: 160,
+                height: 80,
+                background: "green",
+              }}
+              onClick={handleClick}
+            >
+              NAKİT
+            </Button>
+            <Button
+              name="card"
+              variant="contained"
+              disableElevation
+              sx={{
+                width: 160,
+                height: 80,
+                background: "blue",
+              }}
+              onClick={handleClick}
+            >
+              KREDİ KARTI
+            </Button>
+          </Box>
           <Box
             sx={{
               display: "flex",
@@ -324,16 +321,6 @@ export default function Sale() {
               position: "relative",
             }}
           >
-            <Button
-              variant="contained"
-              disableElevation
-              sx={{ width: "80%", height: 60 }}
-              size="large"
-              startIcon={<LocalGroceryStoreIcon />}
-              onClick={() => setSelectListOpen(true)}
-            >
-              Listeden Ürün Eklemek için Tıklayın
-            </Button>
             <VirtualKeyboard
               keyboardRef={keyboard}
               layout="cashier"
@@ -343,7 +330,7 @@ export default function Sale() {
                     ...inputFields,
                     [selectedInputField]: input,
                   });
-                  if (selectedInputField != "barcode")
+                  if (selectedInputField != "amount")
                     changeProductAmount(input, testID);
                 }
               }}
@@ -361,11 +348,12 @@ export default function Sale() {
               <Button
                 variant="contained"
                 disableElevation
-                onClick={() => navigate("../home")}
+                onClick={() => navigate("../sale")}
               >
                 Geri Dön
               </Button>
               <Button
+                disabled={due != 0}
                 variant="contained"
                 disableElevation
                 color="secondary"
@@ -374,11 +362,11 @@ export default function Sale() {
                   fontSize: 20,
                 }}
                 onClick={() => {
-                  localStorage.setItem("cashout", JSON.stringify(cashout));
-                  navigate("./payment");
+                  localStorage.setItem("payment", JSON.stringify(payment));
+                  navigate("./result");
                 }}
               >
-                ÖDEMEYE İLERLE
+                ÖDEME YAP
               </Button>
             </Box>
           </Box>

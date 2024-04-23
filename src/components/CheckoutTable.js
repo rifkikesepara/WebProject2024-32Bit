@@ -14,6 +14,7 @@ import {
 import { Box } from "@mui/system";
 
 export default function CheckoutTable({
+  disabled = false,
   data,
   inputValues,
   selectionValues,
@@ -23,6 +24,7 @@ export default function CheckoutTable({
   return (
     <TableContainer>
       <ToggleButtonGroup
+        // disabled={disabled}
         value={selectionValues}
         onChange={(e, newFormat) => {
           onChange(newFormat);
@@ -48,6 +50,7 @@ export default function CheckoutTable({
                 <TableRow key={id}>
                   <TableCell sx={{ padding: 0, textAlign: "center" }}>
                     <TextField
+                      disabled={disabled}
                       defaultValue={count}
                       autoComplete="off"
                       name={name}
