@@ -27,7 +27,11 @@ const DrawerItems = ({ menuItems, oriantation }) => {
     >
       {menuItems.map((data, index) => {
         return (
-          <Tooltip title={data.name} placement="right" arrow>
+          <Tooltip
+            title={data.name}
+            placement={oriantation == "vertical" ? "right" : "bottom"}
+            arrow
+          >
             <Box key={index}>
               <Button
                 fullWidth

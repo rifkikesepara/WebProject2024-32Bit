@@ -1,21 +1,28 @@
 import { Box, Typography, Paper, Divider, Button, Dialog } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-import Receipt from "../Components/Receipt";
+import { Receipt } from "../Components/Receipt";
+import { useReactToPrint } from "react-to-print";
 
 export default function PaymentResult() {
   const navigate = useNavigate();
 
   const [selectedItems, setSelectedItems] = useState([]);
   const [showReceipt, setShowReceipt] = useState(false);
+  const receiptRef = useRef();
 
   const payment = JSON.parse(localStorage.getItem("payment"));
   const cashout = JSON.parse(localStorage.getItem("cashout"));
 
+  const handlePrint = useReactToPrint({
+    content: () => receiptRef.current,
+  });
+
   const total = useMemo(() => {
+    console.log(receiptRef);
     LOG("total calculated!", "yellow");
     let total = 0;
     cashout.map(({ price }) => (total = total + price));
@@ -42,7 +49,7 @@ export default function PaymentResult() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          minWidth: "65%",
+          width: "80vw",
         }}
       >
         <Paper
@@ -58,7 +65,9 @@ export default function PaymentResult() {
           }}
         >
           <CheckCircleOutlineIcon sx={{ color: "green", fontSize: 80 }} />
-          <Typography variant="h3">Ödeme Başarılı</Typography>
+          <Typography variant="h3" textAlign={"center"}>
+            Ödeme Başarılı
+          </Typography>
         </Paper>
         <Box
           sx={{
@@ -66,25 +75,24 @@ export default function PaymentResult() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            flexDirection: { md: "row", sm: "row", xs: "column" },
           }}
         >
           <Paper
             sx={{
               height: "50vh",
-              width: "70%",
-              // overflowY: "scroll",
-              display: "flex",
+              width: { md: "70%", sm: "62%", xs: "100%" },
+              display: { md: "flex", sm: "flex", xs: "none" },
               flexDirection: "column",
               justifyContent: "space-between",
               backgroundColor: "white",
               overflow: "hidden",
-              // borderTopLeftRadius: 10,
-              // borderTopRightRadius: 10,
               borderRadius: 7,
             }}
             elevation={5}
           >
             <CheckoutTable
+              sx={{ padding: 0 }}
               disabled={true}
               data={cashout}
               selectionValues={selectedItems}
@@ -93,8 +101,8 @@ export default function PaymentResult() {
           </Paper>
           <Paper
             sx={{
-              ml: 5,
-              width: "30%",
+              ml: { md: 5, sm: 2 },
+              width: { md: "30%", sm: "35%", xs: "100%" },
               height: "50vh",
               borderRadius: 7,
               display: "flex",
@@ -105,10 +113,15 @@ export default function PaymentResult() {
             }}
             elevation={5}
           >
-            <Typography fontWeight={"bold"} sx={{ fontSize: 28 }}>
-              TOPLAM: {total}₺
+            <Typography
+              textAlign={"center"}
+              fontWeight={"bold"}
+              sx={{ fontSize: 28 }}
+            >
+              TOPLAM: <br />
+              {total}₺
             </Typography>
-            <Divider sx={{ borderWidth: 2, width: "60%" }} />
+            <Divider sx={{ borderWidth: 2, width: "70%" }} />
             <Typography sx={{ fontSize: 20 }}>
               NAKİT: {payment.cash}₺
             </Typography>
@@ -120,7 +133,8 @@ export default function PaymentResult() {
         <Box
           sx={{
             display: "flex",
-            height: "10vh",
+            // height: "10vh",
+            paddingBlock: 3,
             width: "100%",
             alignItems: "center",
             justifyContent: "space-around",
@@ -128,15 +142,55 @@ export default function PaymentResult() {
         >
           <Button
             variant="contained"
-            sx={{ width: 200, height: 80 }}
-            onClick={() => setShowReceipt(true)}
+            sx={{
+              width: { md: 200, sm: 200, xs: 120 },
+              height: 80,
+              borderRadius: 7,
+            }}
+            onClick={() => {
+              localStorage.setItem("cashout", JSON.stringify([]));
+              localStorage.setItem("payment", JSON.stringify({}));
+              navigate("../sale");
+            }}
+          >
+            Yeni Satış
+          </Button>
+          <Button
+            variant="contained"
+            sx={{
+              width: { md: 200, sm: 200, xs: 120 },
+              height: 80,
+              borderRadius: 7,
+            }}
+            onClick={() => {
+              console.log(receiptRef);
+              setShowReceipt(true);
+            }}
           >
             Belgeyi Göster
           </Button>
-          <Button variant="contained" sx={{ width: 200, height: 80 }}>
+          <Button
+            variant="contained"
+            sx={{
+              width: { md: 200, sm: 200, xs: 120 },
+              height: 80,
+              borderRadius: 7,
+            }}
+            onClick={handlePrint}
+          >
             Belgeyi Yazdır
           </Button>
         </Box>
+      </Box>
+      <Box
+        sx={{
+          zIndex: -1000,
+          position: "absolute",
+          overflow: "hidden",
+          top: -1000,
+        }}
+      >
+        <Receipt ref={receiptRef} />
       </Box>
       <Dialog
         maxWidth="xl"

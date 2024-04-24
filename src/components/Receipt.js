@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
+import { forwardRef } from "react";
 
-export default function Receipt() {
+export const Receipt = forwardRef((props, ref) => {
   const cashout = JSON.parse(localStorage.getItem("cashout"));
   const payment = JSON.parse(localStorage.getItem("payment"));
   console.log(cashout);
@@ -13,6 +14,7 @@ export default function Receipt() {
 
   return (
     <Box
+      ref={ref}
       sx={{
         width: 450,
         display: "flex",
@@ -21,6 +23,7 @@ export default function Receipt() {
         alignItems: "center",
         paddingBlock: 3,
         paddingInline: 4,
+        ...props.sx,
       }}
     >
       <Typography>32-Bit Market</Typography>
@@ -153,4 +156,4 @@ export default function Receipt() {
       </Box>
     </Box>
   );
-}
+});

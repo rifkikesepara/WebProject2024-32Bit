@@ -14,6 +14,7 @@ import {
 import { Box } from "@mui/system";
 
 export default function CheckoutTable({
+  sx,
   disabled = false,
   data,
   inputValues,
@@ -30,7 +31,7 @@ export default function CheckoutTable({
           onChange(newFormat);
         }}
         orientation="vertical"
-        sx={{ width: "100%", paddingBottom: 10 }}
+        sx={{ width: "100%", paddingBottom: 10, ...sx }}
       >
         <Table stickyHeader sx={{ width: "100%" }} aria-label="sticky table">
           <TableHead>
