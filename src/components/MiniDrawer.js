@@ -10,12 +10,13 @@ import {
   Button,
   Typography,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const drawerWidth = 500;
 
-const DrawerItems = ({ menuItems, oriantation }) => {
+const DrawerItems = ({ open, menuItems, oriantation }) => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   return (
     <Box
@@ -28,11 +29,12 @@ const DrawerItems = ({ menuItems, oriantation }) => {
       {menuItems.map((data, index) => {
         return (
           <Tooltip
-            title={data.name}
+            title={t(data.name.toLowerCase())}
             placement={oriantation == "vertical" ? "right" : "bottom"}
             arrow
+            key={index}
           >
-            <Box key={index}>
+            <Box>
               <Button
                 fullWidth
                 onClick={() => {
@@ -61,10 +63,13 @@ const DrawerItems = ({ menuItems, oriantation }) => {
                         marginLeft: 2,
                         color: "black",
                         width: 300,
+                        transition: "opacity 0.2s ease",
+                        transitionDelay: open && "0.2s",
+                        opacity: open ? 1 : 0,
                       }}
                       boxSizing={"border-box"}
                     >
-                      {data.name}
+                      {t(data.name.toLowerCase())}
                     </Typography>
                   )}
                 </Box>
@@ -99,7 +104,8 @@ export default function MiniDrawer({
           height: oriantation == "vertical" ? "100vh" : "auto",
           width:
             oriantation == "vertical" ? (!open ? 100 : drawerWidth) : "100%",
-          transition: "width 0.2s ease-in-out",
+          transition: "width 0.2s ease",
+          transitionDelay: !open && "0.2s",
           zIndex: 100,
           backgroundColor: "white",
           overflowX: oriantation == "vertical" ? "hidden" : "scroll",
@@ -136,16 +142,12 @@ export default function MiniDrawer({
             <Divider absolute />
           </Box>
         )}
-        <Box
-          sx={
-            {
-              // display: "flex",
-              // flexDirection: "column",
-            }
-          }
-          disablePadding
-        >
-          <DrawerItems oriantation={oriantation} menuItems={items} />
+        <Box>
+          <DrawerItems
+            open={open}
+            oriantation={oriantation}
+            menuItems={items}
+          />
         </Box>
       </Paper>
       {open && (

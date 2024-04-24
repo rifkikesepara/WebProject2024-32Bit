@@ -13,6 +13,7 @@ import { SnackbarProvider } from "notistack";
 import { ProductSnackbar } from "./Components/ProductSnackbar";
 import Payment from "./Pages/Payment";
 import PaymentResult from "./Pages/PaymentResult";
+import "./config";
 
 const router = createBrowserRouter([
   {

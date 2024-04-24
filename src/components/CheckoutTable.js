@@ -12,6 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
+import { useTranslation } from "react-i18next";
 
 export default function CheckoutTable({
   sx,
@@ -22,6 +23,8 @@ export default function CheckoutTable({
   onFocus = () => {},
   onChange = () => {},
 }) {
+  const { t } = useTranslation();
+
   return (
     <TableContainer>
       <ToggleButtonGroup
@@ -36,12 +39,12 @@ export default function CheckoutTable({
         <Table stickyHeader sx={{ width: "100%" }} aria-label="sticky table">
           <TableHead>
             <TableRow>
-              <TableCell sx={{ width: 50 }}>ADET</TableCell>
+              <TableCell sx={{ width: 50 }}>{t("amount")}</TableCell>
               <TableCell align="center" width={"100%"}>
-                ÜRÜN
+                {t("product")}
               </TableCell>
               <TableCell align="right" width={50}>
-                FİYAT
+                {t("price")}
               </TableCell>
             </TableRow>
           </TableHead>
@@ -52,7 +55,7 @@ export default function CheckoutTable({
                   <TableCell sx={{ padding: 0, textAlign: "center" }}>
                     <TextField
                       disabled={disabled}
-                      defaultValue={count}
+                      // defaultValue={count}
                       autoComplete="off"
                       name={name}
                       value={count}

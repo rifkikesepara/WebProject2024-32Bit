@@ -27,10 +27,11 @@ import { usePreferences } from "../Context/Theme";
 import useData from "../Hooks/useData";
 import MiniDrawer from "../Components/MiniDrawer";
 import { getDayString, getMonthString } from "../Utils/utilities";
+import { useTranslation } from "react-i18next";
 
 const menuItems = [
   {
-    name: "SATIŞ",
+    name: "sale",
     icon: (
       <LocalGroceryStoreIcon
         sx={{
@@ -48,7 +49,7 @@ const menuItems = [
     },
   },
   {
-    name: "İADE İŞLEMİ",
+    name: "returnitems",
     icon: (
       <UndoIcon
         sx={{
@@ -62,7 +63,7 @@ const menuItems = [
     ),
   },
   {
-    name: "RAPORLAR",
+    name: "reports",
     icon: (
       <DescriptionIcon
         sx={{
@@ -75,22 +76,22 @@ const menuItems = [
       />
     ),
   },
+  // {
+  //   name: "DİREKT ÜRÜN GİRİŞİ",
+  //   icon: (
+  //     <StoreIcon
+  //       sx={{
+  //         backgroundColor: "#794b94",
+  //         fontSize: { md: 75, sm: 75, xs: 60 },
+  //         color: "white",
+  //         padding: 2,
+  //         borderRadius: 5,
+  //       }}
+  //     />
+  //   ),
+  // },
   {
-    name: "DİREKT ÜRÜN GİRİŞİ",
-    icon: (
-      <StoreIcon
-        sx={{
-          backgroundColor: "#794b94",
-          fontSize: { md: 75, sm: 75, xs: 60 },
-          color: "white",
-          padding: 2,
-          borderRadius: 5,
-        }}
-      />
-    ),
-  },
-  {
-    name: "FİYAT GÖR",
+    name: "checkPrice",
     icon: (
       <LocalOfferIcon
         sx={{
@@ -104,7 +105,7 @@ const menuItems = [
     ),
   },
   {
-    name: "TAHSİLATLAR",
+    name: "collections",
     icon: (
       <PointOfSaleIcon
         sx={{
@@ -118,7 +119,7 @@ const menuItems = [
     ),
   },
   {
-    name: "DİĞER İŞLEMLER",
+    name: "otherOptions",
     icon: (
       <LayersIcon
         sx={{
@@ -132,7 +133,7 @@ const menuItems = [
     ),
   },
   {
-    name: "AYARLAR",
+    name: "Settings",
     icon: (
       <SettingsIcon
         sx={{
@@ -146,7 +147,7 @@ const menuItems = [
     ),
   },
   {
-    name: "ÇIKIŞ YAP",
+    name: "Logout",
     icon: (
       <LogoutIcon
         sx={{
@@ -203,6 +204,7 @@ const sortTheLastPayments = (data) => {
 };
 
 export default function Dashboard() {
+  const { t } = useTranslation();
   const [data, setData] = useState([]);
 
   useData(
@@ -289,12 +291,13 @@ export default function Dashboard() {
                     marginRight: 10,
                   }}
                 ></div>
-                <Typography>Mağaza Çevrimiçi</Typography>
+                <Typography>{t("storeOnline")}</Typography>
               </Box>
               <Typography
                 sx={{ fontSize: { md: 30, xs: 20 }, fontWeight: "bold" }}
               >
-                {stringDate.day}, {date.getDate()} {stringDate.month}
+                {t(stringDate.day.toLocaleLowerCase())}, {date.getDate()}{" "}
+                {t(stringDate.month.toLowerCase())}
               </Typography>
               <Typography
                 sx={{
@@ -332,7 +335,7 @@ export default function Dashboard() {
                   fontSize: 20,
                 }}
               >
-                BUGÜN
+                {t("today").toUpperCase()}
               </Typography>
               <LineChart
                 dataset={chartData}
@@ -351,7 +354,7 @@ export default function Dashboard() {
                 ]}
                 yAxis={[
                   {
-                    label: matches && "Satışlar (₺)",
+                    label: matches && t("sales") + " (₺)",
                     // max: 15000,
                     tickNumber: 5,
                     labelStyle: { fontWeight: "bold", fontSize: 20 },
@@ -405,7 +408,7 @@ export default function Dashboard() {
                 <Typography
                   sx={{ color: "#1976d2", fontWeight: "bold", fontSize: 20 }}
                 >
-                  TOPLAM KAZANÇ
+                  {t("totalEarning").toUpperCase()}
                 </Typography>
                 <Typography
                   sx={{
@@ -424,7 +427,7 @@ export default function Dashboard() {
               <Typography
                 sx={{ textDecoration: "underline", cursor: "pointer" }}
               >
-                Detaylı Görüntüle
+                {t("seeDetails")}
               </Typography>
             </Paper>
           </Grid>
@@ -449,25 +452,25 @@ export default function Dashboard() {
               <Typography
                 sx={{ color: "#1976d2", fontWeight: "bold", fontSize: 20 }}
               >
-                SON SATIŞLAR
+                {t("lastSales")}
               </Typography>
               <Table size="small">
                 <TableHead>
                   <TableRow>
                     <TableCell sx={{ fontWeight: "bold", fontSize: 20 }}>
-                      Tarih
+                      {t("date")}
                     </TableCell>
                     <TableCell sx={{ fontWeight: "bold", fontSize: 20 }}>
-                      İsim
+                      {t("name")}
                     </TableCell>
                     <TableCell sx={{ fontWeight: "bold", fontSize: 20 }}>
-                      Ödeme Yöntemi
+                      {t("paymentMethod")}
                     </TableCell>
                     <TableCell
                       sx={{ fontWeight: "bold", fontSize: 20 }}
                       align="right"
                     >
-                      Tutar
+                      {t("sum")}
                     </TableCell>
                   </TableRow>
                 </TableHead>
@@ -475,7 +478,8 @@ export default function Dashboard() {
                   {tableData.slice(0, 4).map((row) => (
                     <TableRow key={row.id}>
                       <TableCell sx={{ fontSize: 20 }}>
-                        {date.getDate()} {stringDate.month} {date.getFullYear()}
+                        {date.getDate()} {t(stringDate.month.toLowerCase())}{" "}
+                        {date.getFullYear()}
                       </TableCell>
                       <TableCell sx={{ fontSize: 20 }}>
                         {row.first_name}

@@ -1,6 +1,7 @@
 import { ToggleButton, ToggleButtonGroup, Paper } from "@mui/material";
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 
 export default function ButtonGroup({
   sx,
@@ -13,6 +14,7 @@ export default function ButtonGroup({
   intialSelected = "",
   elevation = 0,
 }) {
+  const { t } = useTranslation();
   const [selected, setSelected] = useState(intialSelected);
 
   useEffect(() => {
@@ -59,7 +61,7 @@ export default function ButtonGroup({
               }}
               value={value}
             >
-              {name}
+              {t(value)}
             </ToggleButton>
           );
         })}

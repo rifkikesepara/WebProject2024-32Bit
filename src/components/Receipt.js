@@ -1,7 +1,9 @@
 import { Box, Typography } from "@mui/material";
 import { forwardRef } from "react";
+import { useTranslation } from "react-i18next";
 
 export const Receipt = forwardRef((props, ref) => {
+  const { t } = useTranslation();
   const cashout = JSON.parse(localStorage.getItem("cashout"));
   const payment = JSON.parse(localStorage.getItem("payment"));
   console.log(cashout);
@@ -27,14 +29,16 @@ export const Receipt = forwardRef((props, ref) => {
       }}
     >
       <Typography>32-Bit Market</Typography>
-      <Typography>RIFKI KESEPARA</Typography>
+      {/* <Typography>RIFKI KESEPARA</Typography> */}
       <Typography textAlign={"center"} textTransform={"uppercase"}>
         Bağdat Cad. Kumbaracılar Sk. No:18
       </Typography>
       <Typography textAlign={"center"} textTransform={"uppercase"}>
         Feneryolu / İstanbul
       </Typography>
-      <Typography textAlign={"center"}>TEŞEKKÜR EDERİZ</Typography>
+      <Typography textAlign={"center"}>
+        {t("thankYou").toUpperCase()}
+      </Typography>
 
       <Box
         sx={{
@@ -46,7 +50,7 @@ export const Receipt = forwardRef((props, ref) => {
       >
         <Box>
           <Typography>16/12/2017</Typography>
-          <Typography>SAAT: 10.56</Typography>
+          <Typography>{t("time").toUpperCase()}: 10.56</Typography>
         </Box>
         <Typography>FİŞ NO: 0001</Typography>
       </Box>
@@ -113,7 +117,7 @@ export const Receipt = forwardRef((props, ref) => {
         }}
       >
         <Typography fontWeight={"inherit"} fontSize={"inherit"}>
-          TOPLAM
+          {t("total").toUpperCase()}
         </Typography>
         <Typography fontWeight={"inherit"} fontSize={"inherit"}>
           {total()}₺
@@ -133,7 +137,7 @@ export const Receipt = forwardRef((props, ref) => {
         }}
       >
         <Typography fontWeight={"inherit"} fontSize={"inherit"}>
-          KREDİ:
+          {t("credit").toUpperCase()}:
         </Typography>
         <Typography fontWeight={"inherit"} fontSize={"inherit"}>
           {payment.card}₺
@@ -141,7 +145,7 @@ export const Receipt = forwardRef((props, ref) => {
       </Box>
 
       <Typography textAlign={"left"} width={"100%"} marginTop={5}>
-        KASİYER: A/KASİYER #1
+        {t("cashier").toUpperCase()}: A/KASİYER #1
       </Typography>
       <Box
         sx={{
