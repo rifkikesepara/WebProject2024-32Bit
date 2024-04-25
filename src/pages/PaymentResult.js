@@ -6,8 +6,10 @@ import CheckoutTable from "../Components/CheckoutTable";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import { Receipt } from "../Components/Receipt";
 import { useReactToPrint } from "react-to-print";
+import { useTranslation } from "react-i18next";
 
 export default function PaymentResult() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   const [selectedItems, setSelectedItems] = useState([]);
@@ -66,7 +68,7 @@ export default function PaymentResult() {
         >
           <CheckCircleOutlineIcon sx={{ color: "green", fontSize: 80 }} />
           <Typography variant="h3" textAlign={"center"}>
-            Ödeme Başarılı
+            {t("paymentSuccess")}
           </Typography>
         </Paper>
         <Box
@@ -118,15 +120,15 @@ export default function PaymentResult() {
               fontWeight={"bold"}
               sx={{ fontSize: 28 }}
             >
-              TOPLAM: <br />
+              {t("total").toUpperCase()}: <br />
               {total}₺
             </Typography>
             <Divider sx={{ borderWidth: 2, width: "70%" }} />
             <Typography sx={{ fontSize: 20 }}>
-              NAKİT: {payment.cash}₺
+              {t("cash").toUpperCase()}: {payment.cash}₺
             </Typography>
             <Typography sx={{ fontSize: 20 }}>
-              KREDİ KARTI: {payment.card}₺{" "}
+              {t("creditCard").toUpperCase()}: {payment.card}₺{" "}
             </Typography>
           </Paper>
         </Box>
@@ -153,7 +155,7 @@ export default function PaymentResult() {
               navigate("../sale");
             }}
           >
-            Yeni Satış
+            {t("newSale")}
           </Button>
           <Button
             variant="contained"
@@ -167,7 +169,7 @@ export default function PaymentResult() {
               setShowReceipt(true);
             }}
           >
-            Belgeyi Göster
+            {t("showReceipt")}
           </Button>
           <Button
             variant="contained"
@@ -178,7 +180,7 @@ export default function PaymentResult() {
             }}
             onClick={handlePrint}
           >
-            Belgeyi Yazdır
+            {t("printReceipt")}
           </Button>
         </Box>
       </Box>

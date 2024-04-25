@@ -9,7 +9,6 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import Logo from "../Resources/32bitlogo.png";
 import { AccountCircle } from "@mui/icons-material";
 import HttpsIcon from "@mui/icons-material/Https";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
@@ -19,8 +18,10 @@ import { usePreferences } from "../Context/Theme";
 import { useAlert } from "../Context/AlertProvider";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Login() {
+  const { t, i18n } = useTranslation();
   const user = { userCode: "admin", password: 123 };
 
   let keyboard = useRef();
@@ -47,14 +48,14 @@ export default function Login() {
       ) {
         console.log(values.userCode);
         setTimeout(() => {
-          setAlert({ text: "Başarıyla giriş yapıldı", type: "success" });
+          setAlert({ text: t("loginSuccessful"), type: "success" });
         }, 2000);
         setTimeout(() => {
           navigate("/home");
         }, 3500);
       } else {
         setTimeout(() => {
-          setAlert({ text: "Kullanıcı geçersiz!", type: "error" });
+          setAlert({ text: t("undefinedUser"), type: "error" });
           setLoading(false);
         }, 2000);
       }
@@ -104,11 +105,9 @@ export default function Login() {
         <form onSubmit={formik.handleSubmit}>
           <Box sx={{ width: "100%", textAlign: "center" }}>
             <Typography textAlign={"inherit"} variant="h4" fontWeight={"bold"}>
-              Hoşgeldiniz!
+              {t("welcome")}
             </Typography>
-            <Typography textAlign={"inherit"}>
-              Lütfen kullanıcı kodu ve şifrenizi giriniz.
-            </Typography>
+            <Typography textAlign={"inherit"}>{t("loginDesc")}</Typography>
           </Box>
           <TextField
             disabled={loading}
@@ -123,7 +122,7 @@ export default function Login() {
               ),
             }}
             fullWidth
-            placeholder="Kulanıcı Kodu"
+            placeholder={t("userCode")}
             autoComplete="off"
             value={formik.values.userCode}
             onClick={() => {
@@ -145,7 +144,7 @@ export default function Login() {
               ),
             }}
             fullWidth
-            placeholder="Şifre"
+            placeholder={t("password")}
             autoComplete="off"
             value={formik.values.password}
             onClick={() => {
@@ -162,7 +161,7 @@ export default function Login() {
             loading={loading}
             // href="/home"
           >
-            Giriş
+            {t("login")}
           </LoadingButton>
         </form>
         <Dialog
@@ -185,6 +184,8 @@ export default function Login() {
             </Typography>
             <Box sx={{ display: "flex" }}>
               <TextField
+                autoFocus
+                focused
                 name={currentInput}
                 value={
                   currentInput == "userCode"
@@ -197,6 +198,12 @@ export default function Login() {
                   formik.handleChange(event);
                   const input = event.target.value;
                   keyboard.current?.setInput(input);
+                }}
+                onKeyDown={(e) => {
+                  if (e.code == "Enter") {
+                    e.preventDefault();
+                    setShowDialog(false);
+                  }
                 }}
               />
               <Button
@@ -232,16 +239,6 @@ export default function Login() {
                 }
               }}
             />
-            {/* <Button
-              variant="contained"
-              disableElevation
-              onClick={() => {
-                setShowDialog(false);
-              }}
-              sx={{ padding: 5 }}
-            >
-              Giriş
-            </Button> */}
           </Box>
         </Dialog>
         <Box
@@ -252,10 +249,16 @@ export default function Login() {
             alignItems: "center",
           }}
         >
-          <Typography>Version 1.2.3</Typography>
-          <Select>
-            <MenuItem>Türkçe</MenuItem>
-            <MenuItem>İngilizce</MenuItem>
+          <Typography>{t("version")} 1.2.3</Typography>
+          <Select
+            value={localStorage.getItem("language")}
+            onChange={(e) => {
+              i18n.changeLanguage(e.target.value);
+              localStorage.setItem("language", e.target.value);
+            }}
+          >
+            <MenuItem value="tr">Türkçe</MenuItem>
+            <MenuItem value="en">İngilizce</MenuItem>
           </Select>
         </Box>
       </Paper>

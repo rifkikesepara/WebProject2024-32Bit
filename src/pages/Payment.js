@@ -19,8 +19,10 @@ import { motion } from "framer-motion";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
+import { useTranslation } from "react-i18next";
 
 export default function Payment() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const mainDiv = useRef();
   let keyboard = useRef();
@@ -146,11 +148,10 @@ export default function Payment() {
                 sx={{
                   color: "black",
                   padding: 0.5,
-                  width: 100,
                   fontWeight: "bold",
                 }}
               >
-                FİYAT GÖR
+                {t("checkprice")}
               </Typography>
             </motion.div>
           </IconButton>
@@ -204,25 +205,30 @@ export default function Payment() {
             elevation={5}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>Toplam: {total}₺</Typography>
+              <Typography>
+                {t("total")}: {total}₺
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>Ara Toplam: {total}₺</Typography>
+              <Typography>
+                {t("subTotal")}: {total}₺
+              </Typography>
             </AccordionDetails>
             <AccordionDetails sx={{ paddingBlock: 0 }}>
               <Typography sx={{ color: "green", fontWeight: "bold" }}>
-                NAKİT: {payment.cash}₺
+                {t("cash").toUpperCase()}: {payment.cash}₺
               </Typography>
             </AccordionDetails>
             <AccordionDetails sx={{ paddingBlock: 0 }}>
               <Typography sx={{ color: "blue", fontWeight: "bold" }}>
-                KREDİ KARTI: {payment.card}₺
+                {t("creditCard").toUpperCase()}: {payment.card}₺
               </Typography>
             </AccordionDetails>
             <Divider />
             <AccordionDetails>
               <Typography sx={{ color: "red", fontWeight: "bold" }}>
-                KALAN: {total - (payment.cash + payment.card)}₺
+                {t("due").toUpperCase()}:{" "}
+                {total - (payment.cash + payment.card)}₺
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -247,7 +253,7 @@ export default function Payment() {
               variant="standard"
               name="amount"
               autoComplete="off"
-              label="Tutar Giriniz"
+              label={t("enterAmountText")}
               onFocus={(e) => setSelectedInputField(e.target.name)}
               value={inputFields.amount}
               sx={{
@@ -275,7 +281,7 @@ export default function Payment() {
                 setInputFields({ ...inputFields, amount: due });
               }}
             >
-              KALAN
+              {t("due").toUpperCase()}
             </Button>
           </Box>
           <Box
@@ -296,7 +302,7 @@ export default function Payment() {
               }}
               onClick={handleClick}
             >
-              NAKİT
+              {t("cash")}
             </Button>
             <Button
               name="card"
@@ -309,7 +315,7 @@ export default function Payment() {
               }}
               onClick={handleClick}
             >
-              KREDİ KARTI
+              {t("creditCard")}
             </Button>
           </Box>
           <Box
@@ -350,7 +356,7 @@ export default function Payment() {
                 disableElevation
                 onClick={() => navigate("../sale")}
               >
-                Geri Dön
+                {t("goBack")}
               </Button>
               <Button
                 disabled={due != 0}
@@ -366,7 +372,7 @@ export default function Payment() {
                   navigate("./result");
                 }}
               >
-                ÖDEME YAP
+                {t("pay")}
               </Button>
             </Box>
           </Box>
@@ -395,7 +401,7 @@ export default function Payment() {
               marginRight: 10,
             }}
           ></div>
-          <Typography>Mağaza Çevrimiçi</Typography>
+          <Typography>{t("storeOnline")}</Typography>
         </Box>
       </Box>
     </Box>

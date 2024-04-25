@@ -85,14 +85,13 @@ export default function Products({
   onProducts = () => {},
   onCount = () => {},
 }) {
+  const { enqueueSnackbar } = useSnackbar();
   const [productsData, setProductsData] = useState([]);
 
   const [selectedSubCategory, setSelectedSubCategory] = useState("Ekmek");
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   const [subCat, setSubCat] = useState([]);
-
-  const { enqueueSnackbar } = useSnackbar();
 
   const getIndexOfSubCategory = (cat) => {
     return subCat.indexOf(subCat.find(({ name }, index) => name == cat));

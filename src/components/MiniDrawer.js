@@ -10,13 +10,14 @@ import {
   Button,
   Typography,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
 import { usePreferences } from "../Context/Theme";
+import { useTranslation } from "react-i18next";
 
 const drawerWidth = 500;
 
-const DrawerItems = ({ menuItems, oriantation }) => {
+const DrawerItems = ({ open, menuItems, oriantation }) => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { theme } = usePreferences();
 
@@ -35,11 +36,12 @@ const DrawerItems = ({ menuItems, oriantation }) => {
       {menuItems.map((data, index) => {
         return (
           <Tooltip
-            title={data.name}
+            title={t(data.name.toLowerCase())}
             placement={oriantation == "vertical" ? "right" : "bottom"}
             arrow
+            key={index}
           >
-            <Box key={index}>
+            <Box>
               <Button
                 fullWidth
                 onClick={() => {
@@ -68,10 +70,13 @@ const DrawerItems = ({ menuItems, oriantation }) => {
                         marginLeft: 2,
                         width: 300,
                         color: theme.palette.text.primary,
+                        transition: "opacity 0.2s ease",
+                        transitionDelay: open && "0.2s",
+                        opacity: open ? 1 : 0,
                       }}
                       boxSizing={"border-box"}
                     >
-                      {data.name}
+                      {t(data.name.toLowerCase())}
                     </Typography>
                   )}
                 </Box>
@@ -107,12 +112,15 @@ export default function MiniDrawer({
           height: oriantation == "vertical" ? "100vh" : "auto",
           width:
             oriantation == "vertical" ? (!open ? 100 : drawerWidth) : "100%",
-          transition: "width 0.2s ease-in-out",
+          transition: "width 0.2s ease",
+          transitionDelay: !open && "0.2s",
           zIndex: 100,
           left: oriantation == "vertical" && 0,
           top: oriantation != "vertical" && 0,
           "&::-webkit-scrollbar": { height: 0 },
-          borderRadius: 30,
+          borderTopRightRadius: 20,
+          borderBottomRightRadius: 20,
+          overflow: "hidden",
         }}
         elevation={3}
         // onBlur={() => onOpen(false)}
@@ -127,7 +135,7 @@ export default function MiniDrawer({
               top: 0,
               zIndex: 10,
               backgroundColor: theme.palette.background.paper,
-              borderTopRightRadius: 10,
+              borderTopRightRadius: 20,
               overflow: "hidden",
             }}
             elevation={0}
@@ -155,10 +163,13 @@ export default function MiniDrawer({
             // display: "flex",
             // flexDirection: "column",
             overflow: "hidden",
-            borderBottomRightRadius: 20,
           }}
         >
-          <DrawerItems oriantation={oriantation} menuItems={items} />
+          <DrawerItems
+            open={open}
+            oriantation={oriantation}
+            menuItems={items}
+          />
         </Box>
       </Paper>
       {open && (

@@ -23,9 +23,12 @@ import { closeSnackbar } from "notistack";
 import CloseIcon from "@mui/icons-material/Close";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
+import { useTranslation } from "react-i18next";
 
 export default function Sale() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
+
   const mainDiv = useRef();
   let keyboard = useRef();
 
@@ -159,11 +162,10 @@ export default function Sale() {
                 sx={{
                   color: "black",
                   padding: 0.5,
-                  width: 100,
                   fontWeight: "bold",
                 }}
               >
-                FİYAT GÖR
+                {t("checkprice").toUpperCase()}
               </Typography>
             </motion.div>
           </IconButton>
@@ -216,10 +218,14 @@ export default function Sale() {
             elevation={5}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>Toplam: {total}₺</Typography>
+              <Typography>
+                {t("total")}: {total}₺
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>Ara Toplam: {total}₺</Typography>
+              <Typography>
+                {t("subTotal")}: {total}₺
+              </Typography>
             </AccordionDetails>
           </Accordion>
         </Paper>
@@ -238,10 +244,11 @@ export default function Sale() {
         <Box sx={{ marginBlock: "auto" }}>
           <TextField
             autoFocus
+            focused
             variant="standard"
             name="barcode"
             autoComplete="off"
-            label="Klaveden Barkod Girişi"
+            label={t("enterBarcodeText")}
             onFocus={(e) => setSelectedInputField(e.target.name)}
             value={inputFields.barcode}
             sx={{
@@ -250,7 +257,6 @@ export default function Sale() {
               marginLeft: 2,
             }}
             onChange={(e) => {
-              //sync with physical keyboard(TODO)
               setInputFields({
                 ...inputFields,
                 [selectedInputField]: e.target.value,
@@ -312,7 +318,7 @@ export default function Sale() {
                 zIndex: 100,
               }}
             >
-              Ürün Sayısı: {productAmount}
+              {t("productAmount")}: {productAmount}
             </Typography>
           </Dialog>
           <Box
@@ -332,7 +338,7 @@ export default function Sale() {
               startIcon={<LocalGroceryStoreIcon />}
               onClick={() => setSelectListOpen(true)}
             >
-              Listeden Ürün Eklemek için Tıklayın
+              {t("addProductText")}
             </Button>
             <VirtualKeyboard
               keyboardRef={keyboard}
@@ -363,7 +369,7 @@ export default function Sale() {
                 disableElevation
                 onClick={() => navigate("../home")}
               >
-                Geri Dön
+                {t("goBack")}
               </Button>
               <Button
                 variant="contained"
@@ -378,7 +384,7 @@ export default function Sale() {
                   navigate("./payment");
                 }}
               >
-                ÖDEMEYE İLERLE
+                {t("goPayment")}
               </Button>
             </Box>
           </Box>
@@ -407,7 +413,7 @@ export default function Sale() {
               marginRight: 10,
             }}
           ></div>
-          <Typography>Mağaza Çevrimiçi</Typography>
+          <Typography>{t("storeOnline")}</Typography>
         </Box>
       </Box>
     </Box>
