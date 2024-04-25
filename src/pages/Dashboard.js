@@ -219,7 +219,7 @@ export default function Dashboard() {
 
   const { breakpoints } = useTheme();
   const matches = useMediaQuery(breakpoints.up("sm"));
-  const { isThemeDark, toggleTheme } = usePreferences();
+  const { theme, isThemeDark, toggleTheme } = usePreferences();
 
   const [showDrawer, setShowDrawer] = useState({ right: false, left: false });
   const [date, setDate] = useState(new Date());
@@ -241,7 +241,7 @@ export default function Dashboard() {
   return (
     <Box
       sx={{
-        backgroundColor: "#e7ecf1",
+        backgroundColor: theme.palette.background.default,
         display: "flex",
         height: "100vh",
         position: "relative",
@@ -267,7 +267,6 @@ export default function Dashboard() {
           <Grid item xs={12}>
             <Paper
               sx={{
-                backgroundColor: "white",
                 borderRadius: 5,
                 display: "flex",
                 flexDirection: { md: "row", sm: "row", xs: "column" },
@@ -316,7 +315,6 @@ export default function Dashboard() {
             <Paper
               elevation={2}
               sx={{
-                backgroundColor: "white",
                 borderRadius: 5,
                 display: "flex",
                 flexDirection: "column",
@@ -327,7 +325,6 @@ export default function Dashboard() {
             >
               <Typography
                 sx={{
-                  color: "#1976d2",
                   fontWeight: "bold",
                   fontSize: 20,
                 }}
@@ -384,7 +381,6 @@ export default function Dashboard() {
             <Paper
               elevation={2}
               sx={{
-                backgroundColor: "white",
                 borderRadius: 5,
                 display: "flex",
                 flexDirection: "column",
@@ -402,21 +398,18 @@ export default function Dashboard() {
                   justifyContent: "center",
                 }}
               >
-                <Typography
-                  sx={{ color: "#1976d2", fontWeight: "bold", fontSize: 20 }}
-                >
+                <Typography sx={{ fontWeight: "bold", fontSize: 20 }}>
                   TOPLAM KAZANÇ
                 </Typography>
                 <Typography
                   sx={{
-                    color: "black",
                     fontWeight: "bold",
                     fontSize: { xs: 30, sm: 40, md: 65 },
                   }}
                 >
                   {totalPublic}₺
                 </Typography>
-                <Typography sx={{ color: "#666666" }}>
+                <Typography sx={{}}>
                   {date.getDate()} {getMonthString(date.getMonth())}{" "}
                   {date.getFullYear()}
                 </Typography>
@@ -438,7 +431,6 @@ export default function Dashboard() {
             <Paper
               elevation={2}
               sx={{
-                backgroundColor: "white",
                 borderRadius: 5,
                 display: "flex",
                 flexDirection: "column",
@@ -446,9 +438,7 @@ export default function Dashboard() {
                 paddingBlock: 2.5,
               }}
             >
-              <Typography
-                sx={{ color: "#1976d2", fontWeight: "bold", fontSize: 20 }}
-              >
+              <Typography sx={{ fontWeight: "bold", fontSize: 20 }}>
                 SON SATIŞLAR
               </Typography>
               <Table size="small">

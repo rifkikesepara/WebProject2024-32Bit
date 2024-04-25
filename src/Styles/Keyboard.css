@@ -19,6 +19,7 @@
 
 .hg-button {
   background: red;
+  color: black;
 }
 .hg-theme-default .hg-button {
   max-height: 100px;

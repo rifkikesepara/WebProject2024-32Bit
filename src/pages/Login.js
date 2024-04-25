@@ -73,8 +73,9 @@ export default function Login() {
         },
         justifyContent: { xs: "center", sm: "center" },
         alignItems: { xs: "center", sm: "center" },
+        backgroundColor: theme.palette.background.default,
         // backgroundColor: theme.background,
-        backgroundColor: "#e7ecf1",
+        // backgroundColor: "#e7ecf1",
       }}
     >
       {/* <Box
@@ -94,6 +95,8 @@ export default function Login() {
           justifyContent: "center",
           alignItems: "center",
           // width: { md: "40%", sm: "90%", xs: "90%" },
+          // backgroundColor: theme.palette.background.grid,
+          borderRadius: 7,
           p: 2,
         }}
         elevation={3}

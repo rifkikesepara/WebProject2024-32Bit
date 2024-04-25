@@ -12,17 +12,24 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
+import { usePreferences } from "../Context/Theme";
 
 const drawerWidth = 500;
 
 const DrawerItems = ({ menuItems, oriantation }) => {
   const navigate = useNavigate();
+  const { theme } = usePreferences();
+
   return (
-    <Box
+    <Paper
       sx={{
         display: "flex",
         flexDirection: oriantation == "vertical" ? "column" : "row",
         width: "100%",
+        backgroundColor: theme.palette.background.paper,
+        overflowX: oriantation == "vertical" ? "hidden" : "scroll",
+        overflowY: oriantation == "vertical" ? "scroll" : "hidden",
+        "&::-webkit-scrollbar": { backgroundColor: "grey" },
       }}
     >
       {menuItems.map((data, index) => {
@@ -59,8 +66,8 @@ const DrawerItems = ({ menuItems, oriantation }) => {
                         fontSize: { md: 30, sm: 30, xs: 20 },
                         fontWeight: "bold",
                         marginLeft: 2,
-                        color: "black",
                         width: 300,
+                        color: theme.palette.text.primary,
                       }}
                       boxSizing={"border-box"}
                     >
@@ -74,7 +81,7 @@ const DrawerItems = ({ menuItems, oriantation }) => {
           </Tooltip>
         );
       })}
-    </Box>
+    </Paper>
   );
 };
 
@@ -84,6 +91,7 @@ export default function MiniDrawer({
   items,
   oriantation = "vertical",
 }) {
+  const { theme } = usePreferences();
   const handleDrawerOpen = () => {
     onOpen(true);
   };
@@ -101,18 +109,16 @@ export default function MiniDrawer({
             oriantation == "vertical" ? (!open ? 100 : drawerWidth) : "100%",
           transition: "width 0.2s ease-in-out",
           zIndex: 100,
-          backgroundColor: "white",
-          overflowX: oriantation == "vertical" ? "hidden" : "scroll",
-          overflowY: oriantation == "vertical" ? "scroll" : "hidden",
           left: oriantation == "vertical" && 0,
           top: oriantation != "vertical" && 0,
           "&::-webkit-scrollbar": { height: 0 },
+          borderRadius: 30,
         }}
         elevation={3}
         // onBlur={() => onOpen(false)}
       >
         {oriantation == "vertical" && (
-          <Box
+          <Paper
             sx={{
               width: "100%",
               display: "flex",
@@ -120,11 +126,19 @@ export default function MiniDrawer({
               position: "sticky",
               top: 0,
               zIndex: 10,
-              backgroundColor: "white",
+              backgroundColor: theme.palette.background.paper,
+              borderTopRightRadius: 10,
+              overflow: "hidden",
             }}
+            elevation={0}
           >
             <IconButton
-              sx={{ fontSize: 60, p: 0, ml: 2 }}
+              sx={{
+                fontSize: 60,
+                p: 0,
+                ml: 2,
+                color: theme.palette.text.primary,
+              }}
               onClick={!open ? handleDrawerOpen : handleDrawerClose}
             >
               {!open ? (
@@ -134,16 +148,15 @@ export default function MiniDrawer({
               )}
             </IconButton>
             <Divider absolute />
-          </Box>
+          </Paper>
         )}
         <Box
-          sx={
-            {
-              // display: "flex",
-              // flexDirection: "column",
-            }
-          }
-          disablePadding
+          sx={{
+            // display: "flex",
+            // flexDirection: "column",
+            overflow: "hidden",
+            borderBottomRightRadius: 20,
+          }}
         >
           <DrawerItems oriantation={oriantation} menuItems={items} />
         </Box>
