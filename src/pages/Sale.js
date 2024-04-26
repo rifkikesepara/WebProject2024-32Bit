@@ -9,12 +9,13 @@ import {
   TextField,
   Typography,
   Paper,
+  Slide,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { forwardRef, useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
 import Products from "../Components/Products";
@@ -37,6 +38,14 @@ export default function Sale() {
   const [productAmount, setProductAmount] = useState(0);
   const [selectListOpen, setSelectListOpen] = useState(false);
   const [testID, setID] = useState();
+
+  const Transition = useMemo(
+    () =>
+      forwardRef(function Transition(props, ref) {
+        return <Slide direction="up" ref={ref} {...props} />;
+      }),
+    []
+  );
 
   const addProductToCashout = ({ attributes, id, price, images }) => {
     if (!cashout.find((data) => data.name == attributes.name)) {
@@ -257,13 +266,26 @@ export default function Sale() {
           />
 
           <Dialog
+            TransitionComponent={Transition}
             maxWidth="xl"
             open={selectListOpen}
             onClose={() => {
               setSelectListOpen(false);
               closeSnackbar();
             }}
-            PaperProps={{ sx: { borderRadius: 7 } }}
+            PaperProps={{
+              sx: {
+                borderTopLeftRadius: 30,
+                borderTopRightRadius: 30,
+                margin: 0,
+                marginInline: { md: 6, xs: 0 },
+                maxWidth: { xs: "98%", md: 1500 },
+                borderBottomLeftRadius: { xs: 0, md: 30 },
+                borderBottomRightRadius: { xs: 0, md: 30 },
+                maxHeight: "90vh",
+                marginTop: { xs: "auto", md: 0 },
+              },
+            }}
           >
             <Box
               width={"100%"}

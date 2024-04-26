@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   CircularProgress,
+  IconButton,
   Paper,
   Typography,
 } from "@mui/material";
@@ -13,6 +14,7 @@ import AutoSizer from "react-virtualized-auto-sizer";
 import ButtonGroup from "./ButtonGroup";
 import axios from "axios";
 import { useSnackbar } from "notistack";
+import { FilterList, SearchOutlined } from "@mui/icons-material";
 
 const categories = [
   { name: "Tüm Ürünler", value: "all" },
@@ -287,6 +289,7 @@ export default function Products({
                 ? "translate(-100%, 0px)"
                 : "translate(0px, 0px)",
             "&::-webkit-scrollbar": { height: 0 },
+            width: "100%",
           }}
           buttonSX={{ minWidth: 200, height: 40 }}
           borderRadius={10}
@@ -298,7 +301,24 @@ export default function Products({
             setSelectedSubCategory(v);
           }}
         />
-        <Typography>Tests</Typography>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "flex-end",
+            alignItems: "center",
+            paddingInline: 1,
+            height: "100%",
+          }}
+        >
+          <IconButton
+            sx={{ fontSize: 30, display: { md: "block", xs: "none" } }}
+          >
+            <SearchOutlined fontSize="inherit" />
+          </IconButton>
+          <IconButton sx={{ fontSize: 30 }}>
+            <FilterList fontSize="inherit" />
+          </IconButton>
+        </Box>
       </Paper>
       {productsData?.length == 0 ? (
         <Box height={700} display={"flex"} alignItems={"center"}>
