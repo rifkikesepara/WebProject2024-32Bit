@@ -34,7 +34,6 @@ const englishLayout = {
 
 export default function VirtualKeyboard({
   onChangeInput = () => {},
-  clear,
   keyboardRef,
   sx,
   onBlur = () => {},
@@ -42,8 +41,9 @@ export default function VirtualKeyboard({
   onDone = () => {},
   onPress = () => {},
   layout = "default",
+  buttonSX = {},
 }) {
-  const { isThemeDark } = usePreferences();
+  const { isThemeDark, theme } = usePreferences();
   const [state, setState] = useState({ layoutName: "default", input: "" });
   let keyboard = useRef();
 
@@ -60,23 +60,17 @@ export default function VirtualKeyboard({
       case "default":
         return {
           layout: englishLayout,
-          class: !isThemeDark
-            ? "hg-theme-default hg-layout-default"
-            : "hg-theme-default hg-layout-default myTheme1",
+          class: "hg-theme-default hg-layout-default",
         };
       case "numeric":
         return {
           layout: numericLayout,
-          class: !isThemeDark
-            ? "hg-theme-default hg-layout-numeric"
-            : "hg-theme-default hg-layout-numeric myTheme1",
+          class: "hg-theme-default hg-layout-numeric",
         };
       case "cashier":
         return {
           layout: cashierLayout,
-          class: !isThemeDark
-            ? "hg-theme-default hg-layout-numeric"
-            : "hg-theme-default hg-layout-numeric myTheme1",
+          class: "hg-theme-default hg-layout-numeric",
         };
     }
   };
@@ -124,7 +118,34 @@ export default function VirtualKeyboard({
   };
 
   return (
-    <Box sx={{ ...sx }} ref={ref}>
+    <Box
+      sx={{
+        ...sx,
+        ".hg-button.hg-red": {
+          background: "rgb(255, 0, 0, 0.7)",
+          color: "white",
+          border: "none",
+          fontWeight: "bold",
+        },
+        ".hg-button.hg-red:active": {
+          background: "#d53c3e",
+          color: "white",
+          border: "none",
+          fontWeight: "bold",
+        },
+        ".hg-button": {
+          ...buttonSX,
+          backgroundColor: theme.palette.background.paper,
+          color: theme.palette.text.primary,
+          border:
+            layout === "default" && isThemeDark ? "1px solid white" : "none",
+        },
+        ".hg-button:active": {
+          backgroundColor: isThemeDark && "#2f2f2f",
+        },
+      }}
+      ref={ref}
+    >
       <Keyboard
         onInit={() => onInit()}
         theme={adjustLayout().class}
@@ -137,8 +158,12 @@ export default function VirtualKeyboard({
         display={{
           "{bksp}": "⌫",
           "{tick}": "✔",
-          "{enter}": `<img src=${logo} width="50px" />`,
+          "{enter}": "←----------",
           "{cancel}": "C",
+          "{tab}": "⇆",
+          "{lock}": "CapsLk",
+          "{shift}": "⇧",
+          "{space}": " ",
         }}
         // buttonTheme={[
         //   {

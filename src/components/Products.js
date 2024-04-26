@@ -7,7 +7,7 @@ import {
 } from "@mui/material";
 import useData from "../Hooks/useData";
 import API from "../productsAPI.json";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FixedSizeGrid } from "react-window";
 import AutoSizer from "react-virtualized-auto-sizer";
 import ButtonGroup from "./ButtonGroup";
@@ -112,7 +112,7 @@ export default function Products({
           flexDirection: "column",
           justifyContent: "flex-end",
           transition: "transform 0.2s ease", //animation
-          backgroundColor: "white",
+          // backgroundColor: "white",
           boxShadow: "0px 0px 20px -1px rgba(0, 0, 0, 0.3)",
           //scaling animation when it's hovered
           "&:hover": {
@@ -155,7 +155,6 @@ export default function Products({
         />
         <Typography
           sx={{
-            color: "black",
             fontWeight: "bold",
           }}
         >
@@ -164,7 +163,6 @@ export default function Products({
         <Typography
           sx={{
             width: "100%",
-            color: "black",
             fontSize: "95%",
           }}
           maxHeight={35}
