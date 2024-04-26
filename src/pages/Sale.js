@@ -165,7 +165,7 @@ export default function Sale() {
                   fontWeight: "bold",
                 }}
               >
-                {t("checkprice").toUpperCase()}
+                {t("checkPrice").toUpperCase()}
               </Typography>
             </motion.div>
           </IconButton>
