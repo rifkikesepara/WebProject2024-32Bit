@@ -1,15 +1,5 @@
-.myTheme {
-  /* border: 1px solid red; */
-}
-
-.simple-keyboard {
-}
-
 .hg-theme-default {
   width: 100%;
-}
-
-.hg-rows {
 }
 
 .hg-button.hg-red {
@@ -21,9 +11,9 @@
   background: red;
   color: black;
 }
-.hg-theme-default .hg-button {
+/* .hg-theme-default .hg-button {
   max-height: 100px;
-}
+} */
 
 .simple-keyboard.hg-layout-default .hg-button {
   min-height: 80px;
@@ -46,4 +36,35 @@
 .simple-keyboard.hg-layout-numeric {
   /* width: 300px; */
   background-color: transparent;
+}
+
+.simple-keyboard.hg-layout-default {
+  /* width: 300px; */
+  background-color: transparent;
+}
+/*
+  Theme: myTheme1
+*/
+
+.simple-keyboard.myTheme1 .hg-button {
+  border: 1px solid white;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1e1e1e;
+  color: white;
+}
+
+.simple-keyboard.myTheme1 .hg-button:active {
+  background: #1c4995;
+  color: white;
+}
+
+.simple-keyboard.myTheme1 .hg-button.hg-red {
+  background-color: red;
+}
+
+#root .simple-keyboard.myTheme1 + .simple-keyboard-preview {
+  background: #1c4995;
 }

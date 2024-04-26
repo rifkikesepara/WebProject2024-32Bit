@@ -309,7 +309,7 @@ export default function Products({
             height: "100%",
             width: "100%",
             display: "flex",
-            backgroundColor: "#ecedf1",
+            // backgroundColor: "#ecedf1",
           }}
         >
           <AutoSizer>

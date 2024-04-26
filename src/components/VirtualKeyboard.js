@@ -4,6 +4,7 @@ import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 import "../Styles/Keyboard.css";
 import logo from "../Resources/enter.png";
+import { usePreferences } from "../Context/Theme";
 
 const numericLayout = {
   default: ["1 2 3", "4 5 6", "7 8 9", "{bksp} 0 {tick}"],
@@ -42,6 +43,7 @@ export default function VirtualKeyboard({
   onPress = () => {},
   layout = "default",
 }) {
+  const { isThemeDark } = usePreferences();
   const [state, setState] = useState({ layoutName: "default", input: "" });
   let keyboard = useRef();
 
@@ -58,17 +60,23 @@ export default function VirtualKeyboard({
       case "default":
         return {
           layout: englishLayout,
-          class: "hg-theme-default hg-layout-default myTheme",
+          class: !isThemeDark
+            ? "hg-theme-default hg-layout-default"
+            : "hg-theme-default hg-layout-default myTheme1",
         };
       case "numeric":
         return {
           layout: numericLayout,
-          class: "hg-theme-default hg-layout-numeric myTheme",
+          class: !isThemeDark
+            ? "hg-theme-default hg-layout-numeric"
+            : "hg-theme-default hg-layout-numeric myTheme1",
         };
       case "cashier":
         return {
           layout: cashierLayout,
-          class: "hg-theme-default hg-layout-numeric myTheme",
+          class: !isThemeDark
+            ? "hg-theme-default hg-layout-numeric"
+            : "hg-theme-default hg-layout-numeric myTheme1",
         };
     }
   };
@@ -105,9 +113,9 @@ export default function VirtualKeyboard({
 
   const onKeyPress = (button, e) => {
     onPress(button);
-    e.preventDefault(); //preventing default event to not clicking somthing else behind the keyboard
+    if (button === "{enter}") e.preventDefault(); //preventing default event to not clicking somthing else behind the keyboard
     if (button === "{cancel}") keyboard.current.setInput("");
-    if (button == "{tick}") setTimeout(() => onDone(), 400);
+    if (button === "{tick}") setTimeout(() => onDone(), 400);
     if (button === "{shift}" || button === "{lock}")
       /**
        * If you want to handle the shift and caps lock buttons

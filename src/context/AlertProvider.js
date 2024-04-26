@@ -27,7 +27,7 @@ export const AlertPopUp = () => {
       anchorOrigin={{ vertical: "top", horizontal: "center" }}
       onClose={handleClose}
     >
-      <Alert severity={alert.type} variant="filled">
+      <Alert sx={{ color: "white" }} severity={alert.type} variant="filled">
         {alert.text}
       </Alert>
     </Snackbar>

@@ -7,9 +7,6 @@ export const DarkTheme = createTheme({
       default: "#121212",
       paper: "#1e1e1e",
     },
-    // text: {
-    //   primary: "#fff",
-    // },
     primary: { main: "#fff" },
   },
   components: {

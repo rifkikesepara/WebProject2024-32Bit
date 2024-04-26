@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 import { useTranslation } from "react-i18next";
+import { usePreferences } from "../Context/Theme";
 
 export default function CheckoutTable({
   sx,
@@ -24,6 +25,7 @@ export default function CheckoutTable({
   onChange = () => {},
 }) {
   const { t } = useTranslation();
+  const { theme } = usePreferences();
 
   return (
     <TableContainer>
@@ -39,11 +41,26 @@ export default function CheckoutTable({
         <Table stickyHeader sx={{ width: "100%" }} aria-label="sticky table">
           <TableHead>
             <TableRow>
-              <TableCell sx={{ width: 50 }}>{t("amount")}</TableCell>
-              <TableCell align="center" width={"100%"}>
+              <TableCell
+                sx={{
+                  width: 50,
+                  backgroundColor: theme.palette.background.paper,
+                }}
+              >
+                {t("amount")}
+              </TableCell>
+              <TableCell
+                align="center"
+                width={"100%"}
+                sx={{ backgroundColor: theme.palette.background.paper }}
+              >
                 {t("product")}
               </TableCell>
-              <TableCell align="right" width={50}>
+              <TableCell
+                align="right"
+                width={50}
+                sx={{ backgroundColor: theme.palette.background.paper }}
+              >
                 {t("price")}
               </TableCell>
             </TableRow>
@@ -89,7 +106,7 @@ export default function CheckoutTable({
                         border: "none",
                         display: "flex",
                         justifyContent: "space-between",
-                        color: "black",
+                        color: theme.palette.text.primary,
                         width: "100%",
                         paddingBlock: 2,
                       }}

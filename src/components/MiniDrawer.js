@@ -112,7 +112,7 @@ export default function MiniDrawer({
           height: oriantation == "vertical" ? "100vh" : "auto",
           width:
             oriantation == "vertical" ? (!open ? 100 : drawerWidth) : "100%",
-          transition: "width 0.2s ease",
+          transition: "width 0.2s linear",
           transitionDelay: !open && "0.2s",
           zIndex: 100,
           left: oriantation == "vertical" && 0,

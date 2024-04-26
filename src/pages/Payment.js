@@ -20,8 +20,10 @@ import VirtualKeyboard from "../Components/VirtualKeyboard";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
 import { useTranslation } from "react-i18next";
+import { usePreferences } from "../Context/Theme";
 
 export default function Payment() {
+  const { theme } = usePreferences();
   const { t } = useTranslation();
   const navigate = useNavigate();
   const mainDiv = useRef();
@@ -119,7 +121,7 @@ export default function Payment() {
           flexDirection: "column",
           overflowY: "hidden",
           height: "100vh",
-          backgroundColor: "#e7ecf1",
+          backgroundColor: theme.palette.background.default,
           zIndex: 2,
         }}
       >
@@ -136,7 +138,7 @@ export default function Payment() {
           }}
           elevation={2}
         >
-          <IconButton sx={{ ml: 1, color: "black" }}>
+          <IconButton sx={{ ml: 1 }}>
             <QrCodeScannerIcon sx={{ fontSize: 40 }} />
             <motion.div
               style={{ display: "flex", alignItems: "center" }}
@@ -146,7 +148,6 @@ export default function Payment() {
             >
               <Typography
                 sx={{
-                  color: "black",
                   padding: 0.5,
                   fontWeight: "bold",
                 }}
@@ -159,7 +160,7 @@ export default function Payment() {
             onClick={deleteSelected}
             disabled={selectedItems.length == 0 ? true : false}
             aria-label="delete"
-            sx={{ fontSize: 40, marginRight: 2, color: "black" }}
+            sx={{ fontSize: 40, marginRight: 2 }}
             color="black"
           >
             <DeleteIcon fontSize="inherit" color="inherit" />
@@ -169,14 +170,10 @@ export default function Payment() {
           sx={{
             height: "87vh",
             width: "95%",
-            // overflowY: "scroll",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            backgroundColor: "white",
             overflow: "hidden",
-            // borderTopLeftRadius: 10,
-            // borderTopRightRadius: 10,
             borderRadius: 7,
           }}
           elevation={5}
@@ -242,7 +239,7 @@ export default function Payment() {
           flexDirection: "column",
           justifyContent: "space-between",
           alignItems: "center",
-          backgroundColor: "#e7ecf1",
+          backgroundColor: theme.palette.background.default,
         }}
       >
         <Box sx={{ marginBlock: "auto" }}>
@@ -298,7 +295,6 @@ export default function Payment() {
               sx={{
                 width: 160,
                 height: 80,
-                background: "green",
               }}
               onClick={handleClick}
             >
@@ -311,7 +307,6 @@ export default function Payment() {
               sx={{
                 width: 160,
                 height: 80,
-                background: "blue",
               }}
               onClick={handleClick}
             >
@@ -381,7 +376,7 @@ export default function Payment() {
           sx={{
             position: "sticky",
             bottom: 0,
-            backgroundColor: "#e7ecf1",
+            backgroundColor: theme.palette.background.default,
             width: "100%",
             display: "flex",
             justifyContent: "flex-start",
@@ -401,7 +396,7 @@ export default function Payment() {
               marginRight: 10,
             }}
           ></div>
-          <Typography>{t("storeOnline")}</Typography>
+          <Typography color={"primary"}>{t("storeOnline")}</Typography>
         </Box>
       </Box>
     </Box>

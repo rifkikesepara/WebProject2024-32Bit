@@ -24,8 +24,10 @@ import CloseIcon from "@mui/icons-material/Close";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
 import { useTranslation } from "react-i18next";
+import { usePreferences } from "../Context/Theme";
 
 export default function Sale() {
+  const { theme } = usePreferences();
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -133,7 +135,7 @@ export default function Sale() {
           flexDirection: "column",
           overflowY: "hidden",
           height: "100vh",
-          backgroundColor: "#e7ecf1",
+          backgroundColor: theme.palette.background.default,
           zIndex: 2,
         }}
       >
@@ -150,7 +152,7 @@ export default function Sale() {
           }}
           elevation={2}
         >
-          <IconButton sx={{ ml: 1, color: "black" }}>
+          <IconButton sx={{ ml: 1 }}>
             <QrCodeScannerIcon sx={{ fontSize: 40 }} />
             <motion.div
               style={{ display: "flex", alignItems: "center" }}
@@ -159,8 +161,8 @@ export default function Sale() {
               transition={{ duration: 1 }}
             >
               <Typography
+                color={"primary"}
                 sx={{
-                  color: "black",
                   padding: 0.5,
                   fontWeight: "bold",
                 }}
@@ -173,10 +175,9 @@ export default function Sale() {
             onClick={deleteSelected}
             disabled={selectedItems.length == 0 ? true : false}
             aria-label="delete"
-            sx={{ fontSize: 40, marginRight: 2, color: "black" }}
-            color="black"
+            sx={{ fontSize: 40, marginRight: 2 }}
           >
-            <DeleteIcon fontSize="inherit" color="inherit" />
+            <DeleteIcon fontSize="inherit" />
           </IconButton>
         </Paper>
         <Paper
@@ -187,7 +188,7 @@ export default function Sale() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            backgroundColor: "white",
+            // backgroundColor: "white",
             overflow: "hidden",
             // borderTopLeftRadius: 10,
             // borderTopRightRadius: 10,
@@ -238,7 +239,7 @@ export default function Sale() {
           flexDirection: "column",
           justifyContent: "space-between",
           alignItems: "center",
-          backgroundColor: "#e7ecf1",
+          backgroundColor: theme.palette.background.default,
         }}
       >
         <Box sx={{ marginBlock: "auto" }}>
@@ -314,7 +315,7 @@ export default function Sale() {
             <Typography
               sx={{
                 textAlign: "center",
-                boxShadow: "10px 20px 50px 70px white",
+                boxShadow: `10px 20px 50px 70px ${theme.palette.background.paper}`,
                 zIndex: 100,
               }}
             >
@@ -393,7 +394,7 @@ export default function Sale() {
           sx={{
             position: "sticky",
             bottom: 0,
-            backgroundColor: "#e7ecf1",
+            backgroundColor: theme.palette.background.default,
             width: "100%",
             display: "flex",
             justifyContent: "flex-start",
@@ -413,7 +414,7 @@ export default function Sale() {
               marginRight: 10,
             }}
           ></div>
-          <Typography>{t("storeOnline")}</Typography>
+          <Typography color={"primary"}>{t("storeOnline")}</Typography>
         </Box>
       </Box>
     </Box>
