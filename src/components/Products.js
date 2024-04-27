@@ -8,13 +8,19 @@ import {
 } from "@mui/material";
 import useData from "../Hooks/useData";
 import API from "../productsAPI.json";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FixedSizeGrid } from "react-window";
 import AutoSizer from "react-virtualized-auto-sizer";
 import ButtonGroup from "./ButtonGroup";
 import axios from "axios";
 import { useSnackbar } from "notistack";
-import { FilterList, SearchOutlined } from "@mui/icons-material";
+import {
+  ArrowDownward,
+  ArrowForward,
+  ArrowUpward,
+  FilterList,
+  SearchOutlined,
+} from "@mui/icons-material";
 
 const categories = [
   { name: "Tüm Ürünler", value: "all" },
@@ -88,6 +94,7 @@ export default function Products({
   onCount = () => {},
 }) {
   const [productsData, setProductsData] = useState([]);
+  const scrollRef = useRef();
 
   const [selectedSubCategory, setSelectedSubCategory] = useState("Ekmek");
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -263,7 +270,7 @@ export default function Products({
           setProductsData([]); //emptying the products data
           setSubCat([]);
           setSelectedCategory(v); //indicating which category selected
-          console.log(selectedCategory);
+          // console.log(selectedCategory);
         }}
         borderRadius={10}
         spacing={10}
@@ -333,9 +340,42 @@ export default function Products({
             backgroundColor: "#ecedf1",
           }}
         >
+          <Box
+            sx={{
+              position: "absolute",
+              right: 0,
+              display: "flex",
+              flexDirection: "column",
+              zIndex: 10,
+            }}
+          >
+            <IconButton
+              sx={{ fontSize: 40 }}
+              onClick={() => {
+                scrollRef.current._outerRef.scroll({
+                  behavior: "smooth",
+                  top: scrollRef.current.state.scrollTop - 500,
+                });
+              }}
+            >
+              <ArrowUpward fontSize="inherit" />
+            </IconButton>
+            <IconButton
+              sx={{ fontSize: 40 }}
+              onClick={() => {
+                scrollRef.current._outerRef.scroll({
+                  behavior: "smooth",
+                  top: scrollRef.current.state.scrollTop + 500,
+                });
+              }}
+            >
+              <ArrowDownward fontSize="inherit" />
+            </IconButton>
+          </Box>
           <AutoSizer>
             {({ height, width }) => (
               <FixedSizeGrid
+                ref={scrollRef}
                 style={{ overflowX: "hidden" }}
                 columnCount={3}
                 columnWidth={width / 3}
