@@ -101,6 +101,7 @@ export default function VirtualKeyboard({
     const layoutName = state.layoutName;
 
     setState({
+      ...state,
       layoutName: layoutName === "default" ? "shift" : "default",
     });
   };
@@ -137,8 +138,12 @@ export default function VirtualKeyboard({
           ...buttonSX,
           backgroundColor: theme.palette.background.paper,
           color: theme.palette.text.primary,
-          border:
-            layout === "default" && isThemeDark ? "1px solid white" : "none",
+          border: () => {
+            if (layout === "default" && isThemeDark) return "1px solid white";
+            else if (layout === "default" && !isThemeDark)
+              return "1px solid black";
+            else return "none";
+          },
         },
         ".hg-button:active": {
           backgroundColor: isThemeDark && "#2f2f2f",
@@ -158,11 +163,11 @@ export default function VirtualKeyboard({
         display={{
           "{bksp}": "⌫",
           "{tick}": "✔",
-          "{enter}": "←----------",
+          "{enter}": "Enter",
           "{cancel}": "C",
-          "{tab}": "⇆",
+          "{tab}": "Tab",
           "{lock}": "CapsLk",
-          "{shift}": "⇧",
+          "{shift}": "Shift",
           "{space}": " ",
         }}
         // buttonTheme={[
