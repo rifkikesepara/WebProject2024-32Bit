@@ -4,7 +4,6 @@ import {
   AccordionSummary,
   Box,
   Button,
-  Dialog,
   IconButton,
   TextField,
   Typography,
@@ -19,13 +18,14 @@ import { motion } from "framer-motion";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
 import Products from "../Components/Products";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
-import { closeSnackbar } from "notistack";
-import CloseIcon from "@mui/icons-material/Close";
+import { closeSnackbar, enqueueSnackbar } from "notistack";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
+import { useAlert } from "../Context/AlertProvider";
 
 export default function Sale() {
   const navigate = useNavigate();
+  const { setAlert } = useAlert();
   const mainDiv = useRef();
   let keyboard = useRef();
 
@@ -37,10 +37,11 @@ export default function Sale() {
     JSON.parse(localStorage.getItem("cashout"))
   );
   const [productAmount, setProductAmount] = useState(0);
+
   const [selectListOpen, setSelectListOpen] = useState(false);
   const [testID, setID] = useState();
 
-  const addProductToCashout = ({ attributes, id, price, images }) => {
+  const addProductToCashout = ({ attributes, id, price, images, stock }) => {
     if (!cashout.find((data) => data.name == attributes.name)) {
       setCashout([
         ...cashout,
@@ -52,15 +53,27 @@ export default function Sale() {
           count: 1,
         },
       ]);
+      //pushing a snackbar to show the user which product has been added
+      enqueueSnackbar(attributes.name + " eklendi.", {
+        variant: "product",
+        img: images,
+      });
     } else {
       let newArray = cashout.map((a) => {
         var returnValue = { ...a };
         if (a.name == attributes.name) {
-          returnValue = {
-            ...returnValue,
-            price: a.price + a.price,
-            count: a.count + 1,
-          };
+          if (a.count + 1 <= stock) {
+            returnValue = {
+              ...returnValue,
+              price: a.price + a.price,
+              count: a.count + 1,
+            };
+            //pushing a snackbar to show the user which product has been added
+            enqueueSnackbar(attributes.name + " eklendi.", {
+              variant: "product",
+              img: images,
+            });
+          } else setAlert({ text: "Stok Yetersiz", type: "error" });
         }
 
         return returnValue;
@@ -84,12 +97,26 @@ export default function Sale() {
     let newArray = cashout.map((a) => {
       var returnValue = { ...a };
       if (a.id == id) {
-        returnValue = {
-          ...returnValue,
-          price:
-            productsData.find(({ id }) => a.id == id).price.normal * amount,
-          count: amount,
-        };
+        var product = productsData.find(({ id }) => a.id == id);
+        if (amount <= product.stock)
+          returnValue = {
+            ...returnValue,
+            price: product.price.normal * amount,
+            count: amount,
+          };
+        else {
+          setInputFields({
+            ...inputFields,
+            [selectedInputField]: product.stock,
+          });
+          keyboard.current.setInput(product.stock.toString());
+          setAlert({ text: "Stok Yetersiz", type: "error" });
+          returnValue = {
+            ...returnValue,
+            price: product.price.normal * product.stock,
+            count: product.stock,
+          };
+        }
       }
 
       return returnValue;
@@ -105,6 +132,7 @@ export default function Sale() {
   }, [cashout, cashout.length]);
 
   useEffect(() => {
+    console.log("useefffect");
     keyboard.current.setInput(inputFields[selectedInputField]);
   }, [selectedInputField]);
 
@@ -257,64 +285,29 @@ export default function Sale() {
               });
             }}
           />
-
-          <Dialog
-            maxWidth="xl"
+          <Products
             open={selectListOpen}
             onClose={() => {
               setSelectListOpen(false);
               closeSnackbar();
             }}
-            PaperProps={{ sx: { borderRadius: 7 } }}
-          >
-            <Box
-              width={"100%"}
-              height={"100vh"}
-              overflow={"hidden"}
-              position={"relative"}
-            >
-              <IconButton
-                sx={{
-                  marginLeft: "auto",
-                  position: "absolute",
-                  right: 10,
-                  zIndex: 11,
-                }}
-                onClick={() => {
-                  setSelectListOpen(false);
-                  closeSnackbar();
-                }}
-              >
-                <CloseIcon />
-              </IconButton>
-              <Products
-                sx={{
-                  width: "100%",
-                  display: "flex",
-                  flexWrap: "wrap",
-                  justifyContent: "space-around",
-                  paddingBottom: 20,
-                  marginBottom: "auto",
-                  height: "100%",
-                }}
-                onSelectProduct={(data) => {
-                  addProductToCashout(data);
-                  console.log(cashout);
-                }}
-                onProducts={(data) => setProductsData(data)}
-                onCount={(amount) => setProductAmount(amount)}
-              />
-            </Box>
-            <Typography
-              sx={{
-                textAlign: "center",
-                boxShadow: "10px 20px 50px 70px white",
-                zIndex: 100,
-              }}
-            >
-              Ürün Sayısı: {productAmount}
-            </Typography>
-          </Dialog>
+            sx={{
+              width: "100%",
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-around",
+              paddingBottom: 20,
+              marginBottom: "auto",
+              height: "100%",
+            }}
+            onSelectProduct={(data) => {
+              console.log(data);
+              addProductToCashout(data);
+              console.log(cashout);
+            }}
+            onProducts={(data) => setProductsData(data)}
+          />
+
           <Box
             sx={{
               display: "flex",

@@ -1,0 +1,5380 @@
+{
+  "parentId": "master",
+  "id": "C04",
+  "name": "Et, Balık, Tavuk",
+  "children": [
+    {
+      "parentId": "C04",
+      "id": "C0401",
+      "name": "Kırmızı Et",
+      "products": [
+        {
+          "id": "11001475",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "iQRGuf3VWl",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/iQRGuf3VWl_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ŞAMPİYON",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 401023,
+            "netWeight": 250,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Şampiyon Dondurulmuş Kuzu Kokoreç 250 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/sampiyon-dondurulmus-kuzu-kokorec-250-gr_p-11001475",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8681933090003", "8681933092502", "8680202552501"],
+            "grossWeight": 255,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0401", "name": "Kırmızı Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 9950,
+            "normalStr": "₺99,50",
+            "discounted": 9950,
+            "discountedStr": "₺99,50"
+          },
+          "stock": 8,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001472",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "qVY4WduhWZ",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/qVY4WduhWZ_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "BEŞLER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 401024,
+            "netWeight": 250,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Beşler Dondurulmuş Dana Döner 250 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/besler-dondurulmus-dana-doner-250-gr_p-11001472",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8681594300077"],
+            "grossWeight": 300,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0401", "name": "Kırmızı Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 11550,
+            "normalStr": "₺115,50",
+            "discounted": 11550,
+            "discountedStr": "₺115,50"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000320",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "r-0grX0fql",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/r-0grX0fql_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "KOMBİNET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 401033,
+            "netWeight": 450,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Kombinet Dondurulmuş Dana Kasap Köfte 450 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/kombinet-dondurulmus-dana-kasap-kofte-450-gr_p-11000320",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118043515"],
+            "grossWeight": 470,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0401", "name": "Kırmızı Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 14300,
+            "normalStr": "₺143,00",
+            "discounted": 14300,
+            "discountedStr": "₺143,00"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000323",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "e9t2zwN7SC",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/e9t2zwN7SC_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "KOMBİNET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 401034,
+            "netWeight": 450,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Kombinet Dondurulmuş Dana Kuzu İnegöl Köfte 450 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/kombinet-dondurulmus-dana-kuzu-inegol-kofte-450-gr_p-11000323",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118043492"],
+            "grossWeight": 482,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0401", "name": "Kırmızı Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 14300,
+            "normalStr": "₺143,00",
+            "discounted": 14300,
+            "discountedStr": "₺143,00"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000322",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "6wuihjNrZH",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/6wuihjNrZH_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "KOMBİNET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 401035,
+            "netWeight": 450,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Kombinet Dondurulmuş Dana Kuzu Kaşarlı Köfte 450 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/kombinet-dondurulmus-dana-kuzu-kasarli-kofte-450-gr_p-11000322",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118043508"],
+            "grossWeight": 482,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0401", "name": "Kırmızı Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 14300,
+            "normalStr": "₺143,00",
+            "discounted": 14300,
+            "discountedStr": "₺143,00"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002427",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "cBMbISgoIL",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/cBMbISgoIL_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "KOMBİNET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 401045,
+            "netWeight": 225,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Kombinet Dondurulmuş Dana Hamburger Köfte 225 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/kombinet-dondurulmus-dana-hamburger-kofte-225-gr_p-11002427",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "2060000112071",
+              "8699118018285",
+              "8699118006206",
+              "8699118069638"
+            ],
+            "grossWeight": 235,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0401", "name": "Kırmızı Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 7500,
+            "normalStr": "₺75,00",
+            "discounted": 7500,
+            "discountedStr": "₺75,00"
+          },
+          "stock": 15,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000127",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "QUtrA0R-eO",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/QUtrA0R-eO_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 6,
+            "brand": "AKÇASARAY",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 401048,
+            "netWeight": 500,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Akçasaray Dondurulmuş Dana Akçaabat Köftesi 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/akcasaray-dondurulmus-dana-akcaabat-koftesi-500-gr_p-11000127",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8680426100045"],
+            "grossWeight": 520,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0401", "name": "Kırmızı Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 22250,
+            "normalStr": "₺222,50",
+            "discounted": 22250,
+            "discountedStr": "₺222,50"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000289",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "rQsVqQxQyG",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/rQsVqQxQyG_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "RAMİZ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 401049,
+            "netWeight": 500,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Ramiz Dondurulmuş Dana Köfte 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/ramiz-dondurulmus-dana-kofte-500-gr_p-11000289",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Bölgesel",
+            "barcodes": ["8682002330133", "8682005330133"],
+            "grossWeight": 580,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0401", "name": "Kırmızı Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 26500,
+            "normalStr": "₺265,00",
+            "discounted": 26500,
+            "discountedStr": "₺265,00"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001693",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "wbo5ukZUks",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/wbo5ukZUks_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "BEŞLER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 401052,
+            "netWeight": 400,
+            "depolamaKosulu": "Et-Tavuk",
+            "name": "Beşler Dana Izgara Köfte 400 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/besler-dana-izgara-kofte-400-gr_p-11001693",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8681594300541"],
+            "grossWeight": 420,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0401", "name": "Kırmızı Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 16500,
+            "normalStr": "₺165,00",
+            "discounted": 16500,
+            "discountedStr": "₺165,00"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002022",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "ap0VKHY5g8",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ap0VKHY5g8_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["aldin-aldin-gida"],
+            "brand": "BEŞLER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 401105,
+            "netWeight": 400,
+            "depolamaKosulu": "Et-Tavuk",
+            "name": "Beşler Dana Yağsız Kuşbaşı 400 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/besler-dana-yagsiz-kusbasi-400-gr_p-11002022",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8681594304259", "8681594301937"],
+            "grossWeight": 420,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2002",
+              "name": "Temel Gıda, Hazır Yemek",
+              "parentId": "master"
+            },
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0401", "name": "Kırmızı Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z130",
+            "name": "AylıkFırsatÜrünü",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710115199000,
+            "type": "regular"
+          },
+          "price": {
+            "normal": 18000,
+            "discounted": 16400,
+            "normalStr": "₺180,00",
+            "discountedStr": "₺164,00",
+            "discountRate": 9,
+            "discountRateStr": "%9 İNDİRİM"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002020",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "ivt1PgCm1j",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ivt1PgCm1j_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["aldin-aldin-gida"],
+            "brand": "BEŞLER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 401106,
+            "netWeight": 400,
+            "depolamaKosulu": "Et-Tavuk",
+            "name": "Beşler Dana Kıyma %15 Yağlı 400 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/besler-dana-kiyma-15-yagli-400-gr_p-11002020",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8681594301944", "8681594304341"],
+            "grossWeight": 420,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2002",
+              "name": "Temel Gıda, Hazır Yemek",
+              "parentId": "master"
+            },
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0401", "name": "Kırmızı Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z130",
+            "name": "AylıkFırsatÜrünü",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710115199000,
+            "type": "regular"
+          },
+          "price": {
+            "normal": 17000,
+            "discounted": 15400,
+            "normalStr": "₺170,00",
+            "discountedStr": "₺154,00",
+            "discountRate": 9,
+            "discountRateStr": "%9 İNDİRİM"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Kırmızı Et Fiyatları ve Çeşitleri | A101 KAPIDA",
+      "seoDescription": "Kırmızı Et çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Kırmızı Et çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/kirmizi-et"
+    },
+    {
+      "parentId": "C04",
+      "id": "C0402",
+      "name": "Beyaz Et",
+      "products": [
+        {
+          "id": "11002839",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "MnnH1C1e9E",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/MnnH1C1e9E_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "HEMEN_maxWeight": 999999,
+            "HEMEN_minWeight": 1,
+            "brand": "LEZİTA",
+            "HEMEN_maxQty": 3,
+            "categoryRank": 402010,
+            "netWeight": 1000,
+            "depolamaKosulu": "Donuk(-18)",
+            "maxWeightForSales": 1250,
+            "name": "Lezita Dondurulmuş Piliç Izgara But 1250 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/lezita-dondurulmus-pilic-izgara-but-1250-gr_p-11002839",
+            "baseUnitOfMeasure": "KG",
+            "SLOT_maxQty": 3,
+            "nitelikAdi": "GrupSpot",
+            "SLOT_minWeight": 1,
+            "barcodes": ["2813374"],
+            "grossWeight": 1020,
+            "stepper": 1,
+            "SLOT_maxWeight": 999999,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 16125,
+            "discounted": 16125,
+            "normalStr": "₺161,25",
+            "discountedStr": "₺161,25"
+          },
+          "stock": 12000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001104",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "MLn6PT-TF6",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/MLn6PT-TF6_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "HEMEN_maxWeight": 999999,
+            "HEMEN_minWeight": 1,
+            "brand": "HASTAVUK",
+            "HEMEN_maxQty": 3,
+            "categoryRank": 402023,
+            "netWeight": 1000,
+            "depolamaKosulu": "Et-Tavuk",
+            "maxWeightForSales": 2250,
+            "name": "Hastavuk Poşetli Bütün Tavuk 2250 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/hastavuk-posetli-butun-tavuk-2250-gr_p-11001104",
+            "baseUnitOfMeasure": "KG",
+            "SLOT_maxQty": 3,
+            "nitelikAdi": "Regüler",
+            "SLOT_minWeight": 1,
+            "barcodes": ["2823883"],
+            "grossWeight": 1000,
+            "stepper": 1,
+            "SLOT_maxWeight": 999999,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 18563,
+            "normalStr": "₺185,63",
+            "discounted": 18563,
+            "discountedStr": "₺185,63"
+          },
+          "stock": 19000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001641",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "SSao5XnGse",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/SSao5XnGse_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "HEMEN_maxWeight": 999999,
+            "HEMEN_minWeight": 1,
+            "brand": "HASTAVUK",
+            "HEMEN_maxQty": 3,
+            "categoryRank": 402079,
+            "netWeight": 1000,
+            "depolamaKosulu": "Et-Tavuk",
+            "maxWeightForSales": 750,
+            "name": "Hastavuk Izgara Tavalık Tavuk But 750 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/hastavuk-izgara-tavalik-tavuk-but-750-gr_p-11001641",
+            "baseUnitOfMeasure": "KG",
+            "SLOT_maxQty": 3,
+            "nitelikAdi": "Regüler",
+            "SLOT_minWeight": 1,
+            "barcodes": ["2823912"],
+            "grossWeight": 1018,
+            "stepper": 1,
+            "SLOT_maxWeight": 999999,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 13125,
+            "normalStr": "₺131,25",
+            "discounted": 13125,
+            "discountedStr": "₺131,25"
+          },
+          "stock": 3000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001643",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "-Gx79bdP0d",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/-Gx79bdP0d_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "HEMEN_maxWeight": 999999,
+            "HEMEN_minWeight": 1,
+            "brand": "HASTAVUK",
+            "HEMEN_maxQty": 3,
+            "categoryRank": 402085,
+            "netWeight": 1000,
+            "depolamaKosulu": "Et-Tavuk",
+            "maxWeightForSales": 750,
+            "name": "Hastavuk Tavuk Ciğer 750 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/hastavuk-tavuk-ciger-750-gr_p-11001643",
+            "baseUnitOfMeasure": "KG",
+            "SLOT_maxQty": 3,
+            "nitelikAdi": "Regüler",
+            "SLOT_minWeight": 1,
+            "barcodes": ["2823890"],
+            "grossWeight": 1018,
+            "stepper": 1,
+            "SLOT_maxWeight": 999999,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4463,
+            "normalStr": "₺44,63",
+            "discounted": 4463,
+            "discountedStr": "₺44,63"
+          },
+          "stock": 2000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001640",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "80cchw0QnX",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/80cchw0QnX_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "HEMEN_maxWeight": 999999,
+            "HEMEN_minWeight": 1,
+            "brand": "HASTAVUK",
+            "HEMEN_maxQty": 3,
+            "categoryRank": 402097,
+            "netWeight": 1000,
+            "depolamaKosulu": "Et-Tavuk",
+            "maxWeightForSales": 1000,
+            "name": "Hastavuk Kalçalı Tavuk But 1 Kg",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/hastavuk-kalcali-tavuk-but-1-kg_p-11001640",
+            "baseUnitOfMeasure": "KG",
+            "SLOT_maxQty": 3,
+            "nitelikAdi": "Regüler",
+            "SLOT_minWeight": 1,
+            "barcodes": ["2823894"],
+            "grossWeight": 1018,
+            "stepper": 1,
+            "SLOT_maxWeight": 999999,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 7990,
+            "normalStr": "₺79,90",
+            "discounted": 7990,
+            "discountedStr": "₺79,90"
+          },
+          "stock": 4000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000340",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "l2KbJ1sq1h",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/l2KbJ1sq1h_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "HEMEN_maxWeight": 999999,
+            "HEMEN_minWeight": 1,
+            "brand": "HASTAVUK",
+            "HEMEN_maxQty": 3,
+            "categoryRank": 402161,
+            "netWeight": 1000,
+            "depolamaKosulu": "Et-Tavuk",
+            "maxWeightForSales": 500,
+            "name": "Hastavuk Parmak Tavuk Bonfile 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/hastavuk-parmak-tavuk-bonfile-500-gr_p-11000340",
+            "baseUnitOfMeasure": "KG",
+            "SLOT_maxQty": 3,
+            "nitelikAdi": "Bölgesel",
+            "SLOT_minWeight": 1,
+            "barcodes": ["2823929"],
+            "grossWeight": 10128,
+            "stepper": 1,
+            "SLOT_maxWeight": 999999,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 8300,
+            "normalStr": "₺83,00",
+            "discounted": 8300,
+            "discountedStr": "₺83,00"
+          },
+          "stock": 2000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001642",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "GqZgZxu0Ey",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/GqZgZxu0Ey_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "HEMEN_maxWeight": 999999,
+            "HEMEN_minWeight": 1,
+            "brand": "HASTAVUK",
+            "HEMEN_maxQty": 3,
+            "categoryRank": 402162,
+            "netWeight": 1000,
+            "depolamaKosulu": "Et-Tavuk",
+            "maxWeightForSales": 750,
+            "name": "Hastavuk Tavuk Kanat 750 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/hastavuk-tavuk-kanat-750-gr_p-11001642",
+            "baseUnitOfMeasure": "KG",
+            "SLOT_maxQty": 3,
+            "nitelikAdi": "Regüler",
+            "SLOT_minWeight": 1,
+            "barcodes": ["2823938", "2823936"],
+            "grossWeight": 1018,
+            "stepper": 1,
+            "SLOT_maxWeight": 999999,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 11925,
+            "normalStr": "₺119,25",
+            "discounted": 11925,
+            "discountedStr": "₺119,25"
+          },
+          "stock": 1000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002744",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "TYOSIAFzkS",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/TYOSIAFzkS_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "HEMEN_maxWeight": 999999,
+            "rank": 48,
+            "HEMEN_minWeight": 1,
+            "brand": "PAMUKKALE",
+            "HEMEN_maxQty": 3,
+            "categoryRank": 402174,
+            "netWeight": 1000,
+            "depolamaKosulu": "Donuk(-18)",
+            "maxWeightForSales": 1250,
+            "name": "Pamukkale Dondurulmuş Kanat Piliç",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/pamukkale-dondurulmus-kanat-pilic_p-11002744",
+            "baseUnitOfMeasure": "KG",
+            "SLOT_maxQty": 3,
+            "nitelikAdi": "TekSeferlik",
+            "SLOT_minWeight": 1,
+            "barcodes": ["2823238"],
+            "grossWeight": 1020,
+            "stepper": 1,
+            "SLOT_maxWeight": 999999,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 13625,
+            "discounted": 13625,
+            "normalStr": "₺136,25",
+            "discountedStr": "₺136,25"
+          },
+          "stock": 8000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001162",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "HICwWhNRLz",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/HICwWhNRLz_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "HEMEN_maxWeight": 999999,
+            "HEMEN_minWeight": 1,
+            "brand": "HASTAVUK",
+            "HEMEN_maxQty": 3,
+            "categoryRank": 402176,
+            "netWeight": 1000,
+            "depolamaKosulu": "Et-Tavuk",
+            "maxWeightForSales": 1000,
+            "name": "Hastavuk Tavuk Pirzola 1 Kg",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/hastavuk-tavuk-pirzola-1-kg_p-11001162",
+            "baseUnitOfMeasure": "KG",
+            "SLOT_maxQty": 3,
+            "nitelikAdi": "Regüler",
+            "SLOT_minWeight": 1,
+            "barcodes": ["2823908"],
+            "grossWeight": 1018,
+            "stepper": 1,
+            "SLOT_maxWeight": 999999,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 11500,
+            "normalStr": "₺115,00",
+            "discounted": 11500,
+            "discountedStr": "₺115,00"
+          },
+          "stock": 6000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001158",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "fqITqJ4GGg",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/fqITqJ4GGg_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "HEMEN_maxWeight": 999999,
+            "HEMEN_minWeight": 1,
+            "brand": "HASTAVUK",
+            "HEMEN_maxQty": 3,
+            "categoryRank": 402191,
+            "netWeight": 1000,
+            "depolamaKosulu": "Et-Tavuk",
+            "maxWeightForSales": 1500,
+            "name": "Hastavuk Tavuk Baget 1500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/hastavuk-tavuk-baget-1500-gr_p-11001158",
+            "baseUnitOfMeasure": "KG",
+            "SLOT_maxQty": 3,
+            "nitelikAdi": "Regüler",
+            "SLOT_minWeight": 1,
+            "barcodes": ["2823898"],
+            "grossWeight": 1018,
+            "stepper": 1,
+            "SLOT_maxWeight": 999999,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 17850,
+            "normalStr": "₺178,50",
+            "discounted": 17850,
+            "discountedStr": "₺178,50"
+          },
+          "stock": 4000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001644",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "XihpnBXY8e",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/XihpnBXY8e_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "HEMEN_maxWeight": 999999,
+            "HEMEN_minWeight": 1,
+            "brand": "HASTAVUK",
+            "HEMEN_maxQty": 3,
+            "categoryRank": 402198,
+            "netWeight": 1000,
+            "depolamaKosulu": "Et-Tavuk",
+            "maxWeightForSales": 750,
+            "name": "Hastavuk Tavuk Katı Taşlık 750 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/hastavuk-tavuk-kati-taslik-750-gr_p-11001644",
+            "baseUnitOfMeasure": "KG",
+            "SLOT_maxQty": 3,
+            "nitelikAdi": "Regüler",
+            "SLOT_minWeight": 1,
+            "barcodes": ["2823892"],
+            "grossWeight": 1018,
+            "stepper": 1,
+            "SLOT_maxWeight": 999999,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 6206,
+            "normalStr": "₺62,06",
+            "discounted": 6206,
+            "discountedStr": "₺62,06"
+          },
+          "stock": 3000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002297",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "4LZWzU9CDx",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/4LZWzU9CDx_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 14,
+            "brand": "KESKİNOĞLU",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 402226,
+            "netWeight": 300,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Keskinoğlu Piliç Nugget 300 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/keskinoglu-pilic-nugget-300-gr_p-11002297",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8693342007220"],
+            "grossWeight": 320,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3975,
+            "normalStr": "₺39,75",
+            "discounted": 3975,
+            "discountedStr": "₺39,75"
+          },
+          "stock": 8,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000337",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "nxyI7YucMe",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/nxyI7YucMe_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ERPİLİÇ",
+            "HEMEN_maxQty": 3,
+            "categoryRank": 402229,
+            "netWeight": 350,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Erpiliç Piliç Soslu Kanat 350 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/erpilic-pilic-soslu-kanat-350-gr_p-11000337",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 3,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8696024351116"],
+            "grossWeight": 360,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4975,
+            "normalStr": "₺49,75",
+            "discounted": 4975,
+            "discountedStr": "₺49,75"
+          },
+          "stock": 12,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000689",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "TlLCYBs5cR",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/TlLCYBs5cR_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "KESKİNOĞLU",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 402230,
+            "netWeight": 850,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Keskinoğlu Dondurulmuş Piliç Çıtır Kova 850 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/keskinoglu-dondurulmus-pilic-citir-kova-850-gr_p-21000689",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8693342009910", "8693342013962"],
+            "grossWeight": 895,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 14500,
+            "normalStr": "₺145,00",
+            "discounted": 14500,
+            "discountedStr": "₺145,00"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000394",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "uAWXpBp1mw",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/uAWXpBp1mw_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "KESKİNOĞLU",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 402234,
+            "netWeight": 1000,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Keskinoğlu Dondurulmuş Piliç Kasap Köfte 1 Kg",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/keskinoglu-dondurulmus-pilic-kasap-kofte-1-kg_p-11000394",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8693342013856", "8693342002270"],
+            "grossWeight": 1020,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 11900,
+            "normalStr": "₺119,00",
+            "discounted": 11900,
+            "discountedStr": "₺119,00"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001964",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "qWMWkpNwV7",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/qWMWkpNwV7_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "LEZİTA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 402235,
+            "netWeight": 120,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Lezita Izgara Dilimli Piliç Fileto 120 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/lezita-izgara-dilimli-pilic-fileto-120-gr_p-11001964",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8696425016041"],
+            "grossWeight": 130,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2450,
+            "normalStr": "₺24,50",
+            "discounted": 2450,
+            "discountedStr": "₺24,50"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000203",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "PMizJAjuYG",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/PMizJAjuYG_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ERPİLİÇ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 402237,
+            "netWeight": 250,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Erpiliç Piliç Göynük Köfte 250 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/erpilic-pilic-goynuk-kofte-250-gr_p-11000203",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8696024609071"],
+            "grossWeight": 260,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4250,
+            "normalStr": "₺42,50",
+            "discounted": 4250,
+            "discountedStr": "₺42,50"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000183",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "s3TFWsI1Jh",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/s3TFWsI1Jh_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 7,
+            "brand": "KESKİNOĞLU",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 402238,
+            "netWeight": 700,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Keskinoğlu Piliç Şinitzel 700 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/keskinoglu-pilic-sinitzel-700-gr_p-11000183",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8693342012620"],
+            "grossWeight": 750,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 7950,
+            "normalStr": "₺79,50",
+            "discounted": 7950,
+            "discountedStr": "₺79,50"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000172",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "nz4eLwdbxs",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/nz4eLwdbxs_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ERPİLİÇ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 402241,
+            "netWeight": 260,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Erpiliç Piliç Parmak Köfte 260 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/erpilic-pilic-parmak-kofte-260-gr_p-11000172",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8696024608074"],
+            "grossWeight": 270,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4250,
+            "normalStr": "₺42,50",
+            "discounted": 4250,
+            "discountedStr": "₺42,50"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000398",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "KsoiTOX5-n",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/KsoiTOX5-n_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "ge4dQzdmhz",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ge4dQzdmhz_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "HASTAVUK",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 402247,
+            "netWeight": 500,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Hastavuk Dondurulmuş Piliç Döner 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/hastavuk-dondurulmus-pilic-doner-500-gr_p-11000398",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8680751630651"],
+            "grossWeight": 520,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 12500,
+            "normalStr": "₺125,00",
+            "discounted": 12500,
+            "discountedStr": "₺125,00"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000350",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "gRqhUlcRqT",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/gRqhUlcRqT_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "HEMEN_maxWeight": 999999,
+            "rank": 36,
+            "HEMEN_minWeight": 1,
+            "brand": "ERPİLİÇ",
+            "HEMEN_maxQty": 3,
+            "categoryRank": 402249,
+            "netWeight": 1000,
+            "depolamaKosulu": "Donuk(-18)",
+            "maxWeightForSales": 1100,
+            "name": "Erpiliç Dondurulmuş Tavuk Bonfile 1,1 Kg",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/erpilic-dondurulmus-tavuk-bonfile-11-kg_p-11000350",
+            "baseUnitOfMeasure": "KG",
+            "SLOT_maxQty": 3,
+            "nitelikAdi": "GrupSpot",
+            "SLOT_minWeight": 1,
+            "barcodes": ["2807213"],
+            "grossWeight": 1018,
+            "stepper": 1,
+            "SLOT_maxWeight": 999999,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2002",
+              "name": "Temel Gıda, Hazır Yemek",
+              "parentId": "master"
+            },
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z110",
+            "name": "AldınAldın",
+            "badgeId": "promotion-aldinaldin",
+            "badgeType": "default",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710374399000,
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-aldinaldin_256x256.png",
+            "type": "regular",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aldin-aldin_256x256.png"
+          },
+          "price": {
+            "normal": 15290,
+            "normalStr": "₺152,90",
+            "discounted": 15290,
+            "discountedStr": "₺152,90"
+          },
+          "stock": 11000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000313",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "86ZLgpybBd",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/86ZLgpybBd_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "tTJ1LW8-Zg",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/tTJ1LW8-Zg_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "KESKİNOĞLU",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 402250,
+            "netWeight": 300,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Keskinoğlu Piliç Burger 300 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/keskinoglu-pilic-burger-300-gr_p-11000313",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8693342047196"],
+            "grossWeight": 330,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3750,
+            "normalStr": "₺37,50",
+            "discounted": 3750,
+            "discountedStr": "₺37,50"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002530",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "pMnMinDWSj",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/pMnMinDWSj_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "KESKİNOĞLU",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 402284,
+            "netWeight": 400,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Keskinoğlu Piliç Kebap 400 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/keskinoglu-pilic-kebap-400-gr_p-11002530",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8693342016253"],
+            "grossWeight": 420,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5250,
+            "normalStr": "₺52,50",
+            "discounted": 5250,
+            "discountedStr": "₺52,50"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002568",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "HqSxchuz6Y",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/HqSxchuz6Y_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 68,
+            "brand": "KESKİNOĞLU",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 402298,
+            "netWeight": 700,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Keskinoğlu Dondurulmuş Piliç Kroket 700 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/keskinoglu-dondurulmus-pilic-kroket-700-gr_p-11002568",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8693342017250"],
+            "grossWeight": 740,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 7375,
+            "normalStr": "₺73,75",
+            "discounted": 7375,
+            "discountedStr": "₺73,75"
+          },
+          "stock": 24,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002697",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "tZMeq-8sW5",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/tZMeq-8sW5_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ERPİLİÇ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 402306,
+            "netWeight": 700,
+            "depolamaKosulu": "Donuk(-18)",
+            "maxWeightForSales": null,
+            "name": "Erpiliç Dondurulmuş Piliç Çıtır Fileto 700 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/erpilic-dondurulmus-pilic-citir-fileto-700-gr_p-11002697",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8696024350256"],
+            "grossWeight": 750,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 12500,
+            "discounted": 12500,
+            "normalStr": "₺125,00",
+            "discountedStr": "₺125,00"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002710",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "TgIJhZMfjf",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/TgIJhZMfjf_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "KESKİNOĞLU",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 402307,
+            "netWeight": 1000,
+            "depolamaKosulu": "Donuk(-18)",
+            "maxWeightForSales": null,
+            "name": "Keskinoğlu Dondurulmuş Çıtır Piliç Burger 1000 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/keskinoglu-dondurulmus-citir-pilic-burger-1000-gr_p-11002710",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8693342000191"],
+            "grossWeight": 1060,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 11900,
+            "discounted": 11900,
+            "normalStr": "₺119,00",
+            "discountedStr": "₺119,00"
+          },
+          "stock": 1,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002718",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "wIfd-2NfUk",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/wIfd-2NfUk_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 18,
+            "brand": "ŞENPİLİÇ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 402309,
+            "netWeight": 200,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Şenpiliç Piliç Döner 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/senpilic-pilic-doner-200-gr_p-11002718",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8696415288793"],
+            "grossWeight": 220,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0402", "name": "Beyaz Et", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5250,
+            "discounted": 5250,
+            "normalStr": "₺52,50",
+            "discountedStr": "₺52,50"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Tavuk Ürünleri Çeşitleri ve Fiyatları | A101 KAPIDA",
+      "seoDescription": "Tavuk Ürünleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Tavuk ürünleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/beyaz-et"
+    },
+    {
+      "parentId": "C04",
+      "id": "C0403",
+      "name": "Deniz Ürünleri",
+      "products": [
+        {
+          "id": "11002659",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "vhOeiOOU52",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/vhOeiOOU52_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ERBA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 403017,
+            "netWeight": 500,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Erba Dondurulmuş Dilimli Somon 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/erba-dondurulmus-dilimli-somon-500-gr_p-11002659",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8682773936407"],
+            "grossWeight": 550,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0403", "name": "Deniz Ürünleri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 7900,
+            "discounted": 7900,
+            "normalStr": "₺79,00",
+            "discountedStr": "₺79,00"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002218",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "RClQGwxNan",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/RClQGwxNan_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ERBA SEA FOOD",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 403036,
+            "netWeight": 500,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Erba Sea Food Dondurulmuş Uskumru 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/erba-sea-food-dondurulmus-uskumru-500-gr_p-11002218",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8681980002134"],
+            "grossWeight": 550,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0403", "name": "Deniz Ürünleri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 7900,
+            "normalStr": "₺79,00",
+            "discounted": 7900,
+            "discountedStr": "₺79,00"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Balık & Deniz Ürünleri Çeşitleri ve Fiyatları | A101 KAPIDA",
+      "seoDescription": "Balık & Deniz Ürünleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Balık & Deniz ürünleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/deniz-urunleri"
+    },
+    {
+      "parentId": "C04",
+      "id": "C0404",
+      "name": "Şarküteri",
+      "products": [
+        {
+          "id": "11001202",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "ndf1C-H3SN",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ndf1C-H3SN_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "rank": 5,
+            "brand": "CUMHURİYET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404001,
+            "netWeight": 250,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Cumhuriyet Dana Kangal Sucuk 250 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/cumhuriyet-dana-kangal-sucuk-250-gr_p-11001202",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8697980760011"],
+            "grossWeight": 260,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2004",
+              "name": "Kahvaltılık, Şarküteri",
+              "parentId": "master"
+            },
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 18700,
+            "normalStr": "₺187,00",
+            "discounted": 18700,
+            "discountedStr": "₺187,00"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001053",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "9gUwZO1E9s",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/9gUwZO1E9s_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "rank": 12,
+            "brand": "CUMHURİYET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404002,
+            "netWeight": 350,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Cumhuriyet Dana Kangal Sucuk 350 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/cumhuriyet-dana-kangal-sucuk-350-gr_p-11001053",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8697980767737", "8697980764002"],
+            "grossWeight": 370,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2004",
+              "name": "Kahvaltılık, Şarküteri",
+              "parentId": "master"
+            },
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 23500,
+            "normalStr": "₺235,00",
+            "discounted": 23500,
+            "discountedStr": "₺235,00"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002620",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "NMyCzpoeha",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/NMyCzpoeha_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "rank": 7,
+            "brand": "TORKU",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404006,
+            "netWeight": 300,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Torku Dana Evlik Sucuk 300 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/torku-dana-evlik-sucuk-300-gr_p-11002620",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8680181141000"],
+            "grossWeight": 310,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2004",
+              "name": "Kahvaltılık, Şarküteri",
+              "parentId": "master"
+            },
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 17900,
+            "discounted": 17900,
+            "normalStr": "₺179,00",
+            "discountedStr": "₺179,00"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001571",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "pGl8mIJnVA",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/pGl8mIJnVA_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 2,
+            "brand": "TORKU",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404007,
+            "netWeight": 350,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Torku Dana Kangal Sucuk 350 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8680181084857"],
+            "grossWeight": 400,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/torku-dana-kangal-sucuk-350-gr_p-11001571"
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 20900,
+            "normalStr": "₺209,00",
+            "discounted": 20900,
+            "discountedStr": "₺209,00"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001498",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "nGGzHNEK5q",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/nGGzHNEK5q_256x256.png"
+            },
+            {
+              "id": "3l8cXKe4RY",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/3l8cXKe4RY_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "rank": 7,
+            "brand": "TORKU",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404009,
+            "netWeight": 400,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Torku Dana Kasap Sucuk 400 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/torku-dana-kasap-sucuk-400-gr_p-11001498",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8680181074391"],
+            "grossWeight": 450,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2004",
+              "name": "Kahvaltılık, Şarküteri",
+              "parentId": "master"
+            },
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 17900,
+            "normalStr": "₺179,00",
+            "discounted": 17900,
+            "discountedStr": "₺179,00"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002442",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "9E4RxS9v6U",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/9E4RxS9v6U_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "BAŞTACI",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404037,
+            "netWeight": 250,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Baştacı Dana Kangal Sucuk 250 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/bastaci-dana-kangal-sucuk-250-gr_p-11002442",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118042440",
+              "8699118060000",
+              "8699118054887",
+              "8699118026303",
+              "8699118017486"
+            ],
+            "grossWeight": 260,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 8900,
+            "normalStr": "₺89,00",
+            "discounted": 8900,
+            "discountedStr": "₺89,00"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002441",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "r9kh0xmIPq",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/r9kh0xmIPq_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "BAŞTACI",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404038,
+            "netWeight": 350,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Baştacı Dana Baton Sucuk 350 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/bastaci-dana-baton-sucuk-350-gr_p-11002441",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118042457",
+              "8699118059998",
+              "8699118054870",
+              "8699118027959",
+              "8699118017493"
+            ],
+            "grossWeight": 360,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 12800,
+            "normalStr": "₺128,00",
+            "discounted": 12800,
+            "discountedStr": "₺128,00"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002353",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "tWPZPJX3y8",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/tWPZPJX3y8_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 12,
+            "brand": "BAŞYAZICI",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404044,
+            "netWeight": 400,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Başyazıcı Dana Evlik Sucuk 400 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/basyazici-dana-evlik-sucuk-400-gr_p-11002353",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8691967732190"],
+            "grossWeight": 450,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 17900,
+            "normalStr": "₺179,00",
+            "discounted": 17900,
+            "discountedStr": "₺179,00"
+          },
+          "stock": 11,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000150",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "mzg8uHzavs",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/mzg8uHzavs_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "oc5xO3FFG9",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/oc5xO3FFG9_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 23,
+            "brand": "NAMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404046,
+            "netWeight": 350,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Namet Dana Mangal Sucuk 350 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/namet-dana-mangal-sucuk-350-gr_p-11000150",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8697471724331"],
+            "grossWeight": 373,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 16750,
+            "normalStr": "₺167,50",
+            "discounted": 16750,
+            "discountedStr": "₺167,50"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000306",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "Yu8zh7AyyX",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Yu8zh7AyyX_256x256.png"
+            },
+            {
+              "id": "IIFWRLbO1R",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/IIFWRLbO1R_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 24,
+            "brand": "NAMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404047,
+            "netWeight": 280,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Namet Dana Parmak Sucuk 280 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/namet-dana-parmak-sucuk-280-gr_p-11000306",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8697471728094", "2060000174390"],
+            "grossWeight": 300,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 11125,
+            "normalStr": "₺111,25",
+            "discounted": 11125,
+            "discountedStr": "₺111,25"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000305",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "CaJ3XcIbW5",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/CaJ3XcIbW5_256x256.png"
+            },
+            {
+              "id": "JM1Ro6u2Cc",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/JM1Ro6u2Cc_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 23,
+            "brand": "NAMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404048,
+            "netWeight": 280,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Namet Dana Kangal Sucuk 280 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/namet-dana-kangal-sucuk-280-gr_p-11000305",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8697471728841"],
+            "grossWeight": 300,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 11125,
+            "normalStr": "₺111,25",
+            "discounted": 11125,
+            "discountedStr": "₺111,25"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002603",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "qba6jaoUsE",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/qba6jaoUsE_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "COŞKUN",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404056,
+            "netWeight": 220,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Coşkun Dana Kangal Sucuk 220 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/coskun-dana-kangal-sucuk-220-gr_p-11002603",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Bölgesel",
+            "barcodes": ["8691114050160"],
+            "grossWeight": 230,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 11650,
+            "normalStr": "₺116,50",
+            "discounted": 11650,
+            "discountedStr": "₺116,50"
+          },
+          "stock": 10,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002605",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "hmo2ymGby3",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/hmo2ymGby3_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "rank": 11,
+            "brand": "BEŞLER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404061,
+            "netWeight": 400,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Beşler Piliç Kangal Sucuk 400 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/besler-pilic-kangal-sucuk-400-gr_p-11002605",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8681594303962"],
+            "grossWeight": 410,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2004",
+              "name": "Kahvaltılık, Şarküteri",
+              "parentId": "master"
+            },
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 7350,
+            "normalStr": "₺73,50",
+            "discounted": 7350,
+            "discountedStr": "₺73,50"
+          },
+          "stock": 8,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001079",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "4FyHSVUrIy",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/4FyHSVUrIy_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "PXj9dFZpfe",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/PXj9dFZpfe_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "KESKİNOĞLU",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404064,
+            "netWeight": 250,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Keskinoğlu Piliç Kangal Sucuk 250 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/keskinoglu-pilic-kangal-sucuk-250-gr_p-11001079",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8693342008524"],
+            "grossWeight": 270,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3750,
+            "normalStr": "₺37,50",
+            "discounted": 3750,
+            "discountedStr": "₺37,50"
+          },
+          "stock": 15,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002770",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "8GsDULegT4",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/8GsDULegT4_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 20,
+            "brand": "ŞAHİN",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404065,
+            "netWeight": 190,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Şahin Dana Kangal Sucuk 190 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/sahin-dana-kangal-sucuk-190-gr_p-11002770",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8697434840320"],
+            "grossWeight": 204,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 18900,
+            "discounted": 18900,
+            "normalStr": "₺189,00",
+            "discountedStr": "₺189,00"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002771",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "cb5ed0sr51",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/cb5ed0sr51_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 7,
+            "brand": "ŞAHİN",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404066,
+            "netWeight": 320,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Şahin Dana Evlik Sucuk 320 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/sahin-dana-evlik-sucuk-320-gr_p-11002771",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8697434840078"],
+            "grossWeight": 368,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z130",
+            "name": "AylıkFırsatÜrünü",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1711151999000,
+            "type": "regular"
+          },
+          "price": {
+            "normal": 24500,
+            "discounted": 19900,
+            "normalStr": "₺245,00",
+            "discountedStr": "₺199,00",
+            "discountRate": 19,
+            "discountRateStr": "%19 İNDİRİM"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002223",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "s5doB1bexD",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/s5doB1bexD_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "BANVİT",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404073,
+            "netWeight": 400,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Banvit Piliç Dilimli Sucuk 400 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/banvit-pilic-dilimli-sucuk-400-gr_p-11002223",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690451706174"],
+            "grossWeight": 450,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5950,
+            "normalStr": "₺59,50",
+            "discounted": 5950,
+            "discountedStr": "₺59,50"
+          },
+          "stock": 8,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000067",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "gOoGcYjosD",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/gOoGcYjosD_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "0rpuZWKP2T",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/0rpuZWKP2T_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 6,
+            "brand": "DOYFARM",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404086,
+            "netWeight": 450,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Doyfarm Piliç Büfe Sucuk 450 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/doyfarm-pilic-bufe-sucuk-450-gr_p-11000067",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8696415319916"],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 6375,
+            "normalStr": "₺63,75",
+            "discounted": 6375,
+            "discountedStr": "₺63,75"
+          },
+          "stock": 13,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001238",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "UYs0A-E8bE",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/UYs0A-E8bE_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "nxvHpQCeJk",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/nxvHpQCeJk_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "PINAR",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404093,
+            "netWeight": 70,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Pınar Aç Bitir Hindi Dilimli Salam 70 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/pinar-ac-bitir-hindi-dilimli-salam-70-gr_p-11001238",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690527011089"],
+            "grossWeight": 75,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z130",
+            "name": "AylıkFırsatÜrünü",
+            "source": "SAP",
+            "startDate": 1709337600000,
+            "endDate": 1710547199000,
+            "type": "regular"
+          },
+          "price": {
+            "normal": 1990,
+            "normalStr": "₺19,90",
+            "discounted": 1475,
+            "discountedStr": "₺14,75",
+            "discountRate": 26,
+            "discountRateStr": "%26 İNDİRİM"
+          },
+          "stock": 9,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001456",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "3dZjTdy8Za",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/3dZjTdy8Za_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "amhiQelphk",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/amhiQelphk_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "PINAR",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404094,
+            "netWeight": 75,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Pınar Lezzet Keyfi Hindi Salam 75 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/pinar-lezzet-keyfi-hindi-salam-75-gr_p-11001456",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690527011218"],
+            "grossWeight": 80,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1900,
+            "normalStr": "₺19,00",
+            "discounted": 1900,
+            "discountedStr": "₺19,00"
+          },
+          "stock": 23,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002670",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "tWFJypnBWm",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/tWFJypnBWm_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 31,
+            "brand": "PINAR",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404095,
+            "netWeight": 150,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Pınar Lezzet Keyfi Hindi Füme 150 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/pinar-lezzet-keyfi-hindi-fume-150-gr_p-11002670",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690527200520"],
+            "grossWeight": 170,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4750,
+            "discounted": 4750,
+            "normalStr": "₺47,50",
+            "discountedStr": "₺47,50"
+          },
+          "stock": 9,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002298",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "Y18piAFmWX",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Y18piAFmWX_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "BAŞTACI",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404097,
+            "netWeight": 60,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Baştacı Mini Dana Dilimli Salam 60 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/bastaci-mini-dana-dilimli-salam-60-gr_p-11002298",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118052784"],
+            "grossWeight": 70,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z130",
+            "name": "AylıkFırsatÜrünü",
+            "source": "SAP",
+            "startDate": 1709337600000,
+            "endDate": 1709942399000,
+            "type": "regular"
+          },
+          "price": {
+            "normal": 1900,
+            "normalStr": "₺19,00",
+            "discounted": 1675,
+            "discountedStr": "₺16,75",
+            "discountRate": 12,
+            "discountRateStr": "%12 İNDİRİM"
+          },
+          "stock": 17,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002299",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "0ZuxJUodS6",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/0ZuxJUodS6_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "BAŞTACI",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404101,
+            "netWeight": 60,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Baştacı Mini Dana Dilimli Fıstıklı Salam 60 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/bastaci-mini-dana-dilimli-fistikli-salam-60-gr_p-11002299",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118052777"],
+            "grossWeight": 70,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z130",
+            "name": "AylıkFırsatÜrünü",
+            "source": "SAP",
+            "startDate": 1709337600000,
+            "endDate": 1709942399000,
+            "type": "regular"
+          },
+          "price": {
+            "normal": 1900,
+            "normalStr": "₺19,00",
+            "discounted": 1675,
+            "discountedStr": "₺16,75",
+            "discountRate": 12,
+            "discountRateStr": "%12 İNDİRİM"
+          },
+          "stock": 17,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002169",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "7k-QfD59ia",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/7k-QfD59ia_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 27,
+            "brand": "BAŞTACI",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404104,
+            "netWeight": 75,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Baştacı Mini Hindi Dilimli Salam 75 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/bastaci-mini-hindi-dilimli-salam-75-gr_p-11002169",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118040927"],
+            "grossWeight": 80,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [
+            {
+              "name": "Çok Al, Az Öde Baştacı Mini Hindi Dilimli Salam 75 Gr (11002169)",
+              "description": "Çok Al, Az Öde Baştacı Mini Hindi Dilimli Salam 75 Gr (11002169)",
+              "id": "23243"
+            }
+          ],
+          "promotion": {
+            "code": "ZP01",
+            "name": "Çok Al Az Öde",
+            "badgeId": "promotion-cok-al-az-ode-3",
+            "badgeType": "priced",
+            "source": "back-office",
+            "qty": 3,
+            "price": 5400,
+            "discountedPrice": 4800,
+            "profit": 600,
+            "startDate": 1709337600000,
+            "endDate": 32503679999000,
+            "priceStr": "₺54,00",
+            "discountedPriceStr": "₺48,00",
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-cok-al-az-ode-3_256x256.png",
+            "importDate": 1709327438870,
+            "type": "multiplePriced",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/cok-al-az-ode_256x256.png"
+          },
+          "price": {
+            "normal": 1800,
+            "normalStr": "₺18,00",
+            "discounted": 1800,
+            "discountedStr": "₺18,00"
+          },
+          "stock": 15,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000304",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "EQFDS4-RlD",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/EQFDS4-RlD_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "TORKU",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404112,
+            "netWeight": 60,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Torku Dana Dilimli Macar Salam 60 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/torku-dana-dilimli-macar-salam-60-gr_p-11000304",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8680181001724"],
+            "grossWeight": 65,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3175,
+            "normalStr": "₺31,75",
+            "discounted": 3175,
+            "discountedStr": "₺31,75"
+          },
+          "stock": 14,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002560",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "dNdRw5fJ9l",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/dNdRw5fJ9l_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 55,
+            "brand": "LEZİTA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404116,
+            "netWeight": 150,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Lezita Piliç Füme 150 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/lezita-pilic-fume-150-gr_p-11002560",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8696425021342"],
+            "grossWeight": 170,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z130",
+            "name": "AylıkFırsatÜrünü",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1712361599000,
+            "type": "regular"
+          },
+          "price": {
+            "normal": 2650,
+            "normalStr": "₺26,50",
+            "discounted": 2250,
+            "discountedStr": "₺22,50",
+            "discountRate": 15,
+            "discountRateStr": "%15 İNDİRİM"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000290",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "zmo6QOwOIx",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/zmo6QOwOIx_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "m5bfYI19fq",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/m5bfYI19fq_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "POLONEZ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404118,
+            "netWeight": 60,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Polonez Piliç Füme 60 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/polonez-pilic-fume-60-gr_p-11000290",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8693407002740", "8693407000265"],
+            "grossWeight": 65,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1475,
+            "normalStr": "₺14,75",
+            "discounted": 1475,
+            "discountedStr": "₺14,75"
+          },
+          "stock": 24,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002464",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "AMRB5M9Bd8",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/AMRB5M9Bd8_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "POLONEZ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404119,
+            "netWeight": 60,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Polonez Piliç Dilimli Salam 60 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/polonez-pilic-dilimli-salam-60-gr_p-11002464",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8693407003938"],
+            "grossWeight": 80,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1150,
+            "normalStr": "₺11,50",
+            "discounted": 1150,
+            "discountedStr": "₺11,50"
+          },
+          "stock": 33,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002743",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "B0vdp2VNnt",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/B0vdp2VNnt_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DOYFARM",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 404137,
+            "netWeight": 250,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Doyfarm Piliç Salam 250 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/doyfarm-pilic-salam-250-gr_p-11002743",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8696415337767"],
+            "grossWeight": 260,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2675,
+            "discounted": 2675,
+            "normalStr": "₺26,75",
+            "discountedStr": "₺26,75"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002851",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "ydx7p9jZfR",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ydx7p9jZfR_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 59,
+            "brand": "LEZİTA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404142,
+            "netWeight": 1000,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Lezita Bi’Lezzetli Piliç Büfe Salam 1000 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/lezita-bilezzetli-pilic-bufe-salam-1000-gr_p-11002851",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8696425017932"],
+            "grossWeight": 1030,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4990,
+            "discounted": 4990,
+            "normalStr": "₺49,90",
+            "discountedStr": "₺49,90"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001606",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "teDZoDza4l",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/teDZoDza4l_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "rank": 10,
+            "brand": "PINAR",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404148,
+            "netWeight": 500,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Pınar Lezzet Keyfi Hindi Büfe Salam 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/pinar-lezzet-keyfi-hindi-bufe-salam-500-gr_p-11001606",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690527011263"],
+            "grossWeight": 550,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2004",
+              "name": "Kahvaltılık, Şarküteri",
+              "parentId": "master"
+            },
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z130",
+            "name": "AylıkFırsatÜrünü",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710374399000,
+            "type": "regular"
+          },
+          "price": {
+            "normal": 5500,
+            "normalStr": "₺55,00",
+            "discounted": 4250,
+            "discountedStr": "₺42,50",
+            "discountRate": 23,
+            "discountRateStr": "%23 İNDİRİM"
+          },
+          "stock": 9,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001279",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "6ZOeh7eYVz",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/6ZOeh7eYVz_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "F31UWI3uqN",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/F31UWI3uqN_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "BAŞTACI",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404152,
+            "netWeight": 250,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Baştacı Dana Macar Tombul Salam 250 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/bastaci-dana-macar-tombul-salam-250-gr_p-11001279",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118017349"],
+            "grossWeight": 300,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 6950,
+            "normalStr": "₺69,50",
+            "discounted": 6950,
+            "discountedStr": "₺69,50"
+          },
+          "stock": 9,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000066",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "fcUa3sbK5B",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/fcUa3sbK5B_256x256.png"
+            },
+            {
+              "id": "5rVWDmQoEM",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/5rVWDmQoEM_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 12,
+            "brand": "DOYFARM",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404155,
+            "netWeight": 850,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Doyfarm Piliç Büfe Salam 850 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/doyfarm-pilic-bufe-salam-850-gr_p-11000066",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8696415319862"],
+            "grossWeight": 900,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 6550,
+            "normalStr": "₺65,50",
+            "discounted": 6550,
+            "discountedStr": "₺65,50"
+          },
+          "stock": 14,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001320",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "5EAutLF2sb",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/5EAutLF2sb_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "kPg6SojHis",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/kPg6SojHis_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "BEŞLER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404165,
+            "netWeight": 240,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Beşler Dana Macar Salam 240 Gr ",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/besler-dana-macar-salam-240-gr-_p-11001320",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690182057521", "8690182055466"],
+            "grossWeight": 250,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 7900,
+            "normalStr": "₺79,00",
+            "discounted": 7900,
+            "discountedStr": "₺79,00"
+          },
+          "stock": 13,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001301",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "FFp-azg4MV",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/FFp-azg4MV_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 12,
+            "brand": "BEŞLER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404181,
+            "netWeight": 280,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Beşler Piliç Kokteyl Sosis 280 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/besler-pilic-kokteyl-sosis-280-gr_p-11001301",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690182056142"],
+            "grossWeight": 320,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4950,
+            "normalStr": "₺49,50",
+            "discounted": 4950,
+            "discountedStr": "₺49,50"
+          },
+          "stock": 16,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001042",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "ozus7fSuBS",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ozus7fSuBS_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "hABslRzv5v",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/hABslRzv5v_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "KESKİNOĞLU",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404183,
+            "netWeight": 340,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Keskinoğlu Piliç Uzun Sosis 340 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/keskinoglu-pilic-uzun-sosis-340-gr_p-11001042",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8693342008371"],
+            "grossWeight": 360,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4975,
+            "normalStr": "₺49,75",
+            "discounted": 4975,
+            "discountedStr": "₺49,75"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002690",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "JDkE4NJe0P",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/JDkE4NJe0P_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 3,
+            "brand": "DOYFARM",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404186,
+            "netWeight": 500,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Doyfarm Piliç Kokteyl Sosis 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/doyfarm-pilic-kokteyl-sosis-500-gr_p-11002690",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8696415319800"],
+            "grossWeight": 530,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5500,
+            "discounted": 5500,
+            "normalStr": "₺55,00",
+            "discountedStr": "₺55,00"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001186",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "3hACPR6LxZ",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/3hACPR6LxZ_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "MARET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404187,
+            "netWeight": 300,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Maret Yöre Dana Kokteyl Sosis 300 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/maret-yore-dana-kokteyl-sosis-300-gr_p-11001186",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8697471726588"],
+            "grossWeight": 310,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 9000,
+            "normalStr": "₺90,00",
+            "discounted": 9000,
+            "discountedStr": "₺90,00"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002840",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "pksytkCsRO",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/pksytkCsRO_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "POLONEZ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404191,
+            "netWeight": 320,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Polonez Piliç Jumbo Sosis 320 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/polonez-pilic-jumbo-sosis-320-gr_p-11002840",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 8,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8693407004522"],
+            "grossWeight": 330,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5650,
+            "discounted": 5650,
+            "normalStr": "₺56,50",
+            "discountedStr": "₺56,50"
+          },
+          "stock": 14,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002102",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "Sr2tz7M5qN",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Sr2tz7M5qN_256x256.png"
+            },
+            {
+              "id": "m4fulD3saC",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/m4fulD3saC_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 13,
+            "brand": "PINAR",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404192,
+            "netWeight": 240,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Pınar Lezzet Keyfi Hindi Kokteyl Sosis 240 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/pinar-lezzet-keyfi-hindi-kokteyl-sosis-240-gr_p-11002102",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690527030912"],
+            "grossWeight": 265,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3975,
+            "normalStr": "₺39,75",
+            "discounted": 3975,
+            "discountedStr": "₺39,75"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11001239",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "NRu4f2nkaH",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/NRu4f2nkaH_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 8,
+            "brand": "PINAR",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404194,
+            "netWeight": 170,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Pınar Aç Bitir Hindi Kokteyl Sosis 170 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/pinar-ac-bitir-hindi-kokteyl-sosis-170-gr_p-11001239",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690527030769"],
+            "grossWeight": 175,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3290,
+            "normalStr": "₺32,90",
+            "discounted": 3290,
+            "discountedStr": "₺32,90"
+          },
+          "stock": 16,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000449",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "B7ZwyRMusP",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/B7ZwyRMusP_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "MARET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404196,
+            "netWeight": 210,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Maret Yöre Dana Uzun Sosis 210 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/maret-yore-dana-uzun-sosis-210-gr_p-11000449",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8697471723037"],
+            "grossWeight": 220,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 6500,
+            "normalStr": "₺65,00",
+            "discounted": 6500,
+            "discountedStr": "₺65,00"
+          },
+          "stock": 8,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11000129",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "ghak6-bD4T",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ghak6-bD4T_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NAMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404201,
+            "netWeight": 50,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Namet 7/24 Dana Jambon 50 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/namet-724-dana-jambon-50-gr_p-11000129",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8697471720036"],
+            "grossWeight": 53,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2350,
+            "normalStr": "₺23,50",
+            "discounted": 2350,
+            "discountedStr": "₺23,50"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002577",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "Ik5cjRZ3OT",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Ik5cjRZ3OT_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "rank": 8,
+            "brand": "BAŞTACI",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404210,
+            "netWeight": 150,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Baştacı Dana Kavurma 150 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/bastaci-dana-kavurma-150-gr_p-11002577",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118069645",
+              "8699118063360",
+              "8699118063315",
+              "8699118062738",
+              "8699118058014",
+              "8699118058687",
+              "8699118060949"
+            ],
+            "grossWeight": 160,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2004",
+              "name": "Kahvaltılık, Şarküteri",
+              "parentId": "master"
+            },
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 9500,
+            "normalStr": "₺95,00",
+            "discounted": 9500,
+            "discountedStr": "₺95,00"
+          },
+          "stock": 17,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002716",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "54YZUMkobh",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/54YZUMkobh_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "BONFİLET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404214,
+            "netWeight": 150,
+            "depolamaKosulu": "Soğuk(+4)",
+            "maxWeightForSales": 0,
+            "name": "Bonfilet Dana Kavurma 150 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/bonfilet-dana-kavurma-150-gr_p-11002716",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8694517772042"],
+            "grossWeight": 155,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 9900,
+            "discounted": 9900,
+            "normalStr": "₺99,00",
+            "discountedStr": "₺99,00"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002429",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "dtk4v0JEJX",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/dtk4v0JEJX_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "BAŞTACI",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404228,
+            "netWeight": 120,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Baştacı Çemeni Sıyrılmış Dana Pastırma 120 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/bastaci-cemeni-siyrilmis-dana-pastirma-120-gr_p-11002429",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118042488",
+              "8699118069577",
+              "8699118055457",
+              "8699118046318",
+              "8699118012351"
+            ],
+            "grossWeight": 130,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 12500,
+            "normalStr": "₺125,00",
+            "discounted": 12500,
+            "discountedStr": "₺125,00"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002440",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "etNxU795mL",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/etNxU795mL_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "brand": "BAŞTACI",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404229,
+            "netWeight": 120,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Baştacı Çemenli Seçme Dana Pastırma 120 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/bastaci-cemenli-secme-dana-pastirma-120-gr_p-11002440",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118012368",
+              "8699118046301",
+              "8699118052791",
+              "8699118055440",
+              "8699118042495"
+            ],
+            "grossWeight": 130,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2004",
+              "name": "Kahvaltılık, Şarküteri",
+              "parentId": "master"
+            },
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 12000,
+            "normalStr": "₺120,00",
+            "discounted": 12000,
+            "discountedStr": "₺120,00"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "11002769",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "7ovlyCYCpS",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/7ovlyCYCpS_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 9,
+            "brand": "ŞAHİN",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 404238,
+            "netWeight": 80,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Şahin Çemeni Sıyrılmış Dana Pastırma 80 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/sahin-cemeni-siyrilmis-dana-pastirma-80-gr_p-11002769",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8697434840559"],
+            "grossWeight": 106,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C04", "name": "Et, Balık, Tavuk", "parentId": "master" },
+            { "id": "C0404", "name": "Şarküteri", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 12700,
+            "discounted": 12700,
+            "normalStr": "₺127,00",
+            "discountedStr": "₺127,00"
+          },
+          "stock": 15,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Şarküteri Ürünleri Çeşitleri & Sucuk Fiyatları | A101 KAPIDA",
+      "seoDescription": "Şarküteri çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Şarküteri çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk/sarkuteri"
+    }
+  ],
+  "seoTitle": "",
+  "seoDescription": "",
+  "seoUrl": "https://www.a101.com.tr/kapida/et-balik-tavuk",
+  "products": []
+}
