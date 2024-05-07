@@ -4,29 +4,28 @@ import {
   AccordionSummary,
   Box,
   Button,
-  Dialog,
   IconButton,
   TextField,
   Typography,
   Paper,
-  Slide,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { forwardRef, useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
 import Products from "../Components/Products";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
-import { closeSnackbar } from "notistack";
-import CloseIcon from "@mui/icons-material/Close";
+import { closeSnackbar, enqueueSnackbar } from "notistack";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
+import { useAlert } from "../Context/AlertProvider";
 
 export default function Sale() {
   const navigate = useNavigate();
+  const { setAlert } = useAlert();
   const mainDiv = useRef();
   let keyboard = useRef();
 
@@ -35,19 +34,10 @@ export default function Sale() {
   const [inputFields, setInputFields] = useState({});
   const [selectedInputField, setSelectedInputField] = useState("");
   const [cashout, setCashout] = useState([]);
-  const [productAmount, setProductAmount] = useState(0);
   const [selectListOpen, setSelectListOpen] = useState(false);
   const [testID, setID] = useState();
 
-  const Transition = useMemo(
-    () =>
-      forwardRef(function Transition(props, ref) {
-        return <Slide direction="up" ref={ref} {...props} />;
-      }),
-    []
-  );
-
-  const addProductToCashout = ({ attributes, id, price, images }) => {
+  const addProductToCashout = ({ attributes, id, price, images, stock }) => {
     if (!cashout.find((data) => data.name == attributes.name)) {
       setCashout([
         ...cashout,
@@ -59,15 +49,27 @@ export default function Sale() {
           count: 1,
         },
       ]);
+      //pushing a snackbar to show the user which product has been added
+      enqueueSnackbar(attributes.name + " eklendi.", {
+        variant: "product",
+        img: images,
+      });
     } else {
       let newArray = cashout.map((a) => {
         var returnValue = { ...a };
         if (a.name == attributes.name) {
-          returnValue = {
-            ...returnValue,
-            price: a.price + a.price,
-            count: a.count + 1,
-          };
+          if (a.count + 1 <= stock) {
+            returnValue = {
+              ...returnValue,
+              price: a.price + a.price,
+              count: a.count + 1,
+            };
+            //pushing a snackbar to show the user which product has been added
+            enqueueSnackbar(attributes.name + " eklendi.", {
+              variant: "product",
+              img: images,
+            });
+          } else setAlert({ text: "Stok Yetersiz", type: "error" });
         }
 
         return returnValue;
@@ -91,12 +93,26 @@ export default function Sale() {
     let newArray = cashout.map((a) => {
       var returnValue = { ...a };
       if (a.id == id) {
-        returnValue = {
-          ...returnValue,
-          price:
-            productsData.find(({ id }) => a.id == id).price.normal * amount,
-          count: amount,
-        };
+        var product = productsData.find(({ id }) => a.id == id);
+        if (amount <= product.stock)
+          returnValue = {
+            ...returnValue,
+            price: product.price.normal * amount,
+            count: amount,
+          };
+        else {
+          setInputFields({
+            ...inputFields,
+            [selectedInputField]: product.stock,
+          });
+          keyboard.current.setInput(product.stock.toString());
+          setAlert({ text: "Stok Yetersiz", type: "error" });
+          returnValue = {
+            ...returnValue,
+            price: product.price.normal * product.stock,
+            count: product.stock,
+          };
+        }
       }
 
       return returnValue;
@@ -112,6 +128,7 @@ export default function Sale() {
   }, [cashout, cashout.length]);
 
   useEffect(() => {
+    console.log("useefffect");
     keyboard.current.setInput(inputFields[selectedInputField]);
   }, [selectedInputField]);
 
@@ -264,77 +281,29 @@ export default function Sale() {
               });
             }}
           />
-
-          <Dialog
-            TransitionComponent={Transition}
-            maxWidth="xl"
+          <Products
             open={selectListOpen}
             onClose={() => {
               setSelectListOpen(false);
               closeSnackbar();
             }}
-            PaperProps={{
-              sx: {
-                borderTopLeftRadius: 30,
-                borderTopRightRadius: 30,
-                margin: 0,
-                marginInline: { md: 6, xs: 0 },
-                maxWidth: { xs: "98%", md: 1500 },
-                borderBottomLeftRadius: { xs: 0, md: 30 },
-                borderBottomRightRadius: { xs: 0, md: 30 },
-                maxHeight: "90vh",
-                marginTop: { xs: "auto", md: 0 },
-              },
+            sx={{
+              width: "100%",
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-around",
+              paddingBottom: 20,
+              marginBottom: "auto",
+              height: "100%",
             }}
-          >
-            <Box
-              width={"100%"}
-              height={"100vh"}
-              overflow={"hidden"}
-              position={"relative"}
-            >
-              <IconButton
-                sx={{
-                  marginLeft: "auto",
-                  position: "absolute",
-                  right: 10,
-                  zIndex: 11,
-                }}
-                onClick={() => {
-                  setSelectListOpen(false);
-                  closeSnackbar();
-                }}
-              >
-                <CloseIcon />
-              </IconButton>
-              <Products
-                sx={{
-                  width: "100%",
-                  display: "flex",
-                  flexWrap: "wrap",
-                  justifyContent: "space-around",
-                  paddingBottom: 20,
-                  marginBottom: "auto",
-                  height: "100%",
-                }}
-                onSelectProduct={(data) => {
-                  addProductToCashout(data);
-                  console.log(cashout);
-                }}
-                onProducts={(data) => setProductsData(data)}
-                onCount={(amount) => setProductAmount(amount)}
-              />
-            </Box>
-            <Typography
-              sx={{
-                textAlign: "center",
-                boxShadow: "10px 20px 50px 70px white",
-                zIndex: 100,
-              }}
-            >
-              Ürün Sayısı: {productAmount}
-            </Typography>
-          </Dialog>
+            onSelectProduct={(data) => {
+              console.log(data);
+              addProductToCashout(data);
+              console.log(cashout);
+            }}
+            onProducts={(data) => setProductsData(data)}
+          />
+
           <Box
             sx={{
               display: "flex",
