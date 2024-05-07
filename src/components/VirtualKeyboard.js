@@ -11,7 +11,7 @@ const numericLayout = {
 };
 
 const cashierLayout = {
-  default: ["{cancel} +/- {bksp}", "1 2 3", "4 5 6", "7 8 9", "00 0 ,"],
+  default: ["{cancel} +/- {bksp}", "1 2 3", "4 5 6", "7 8 9", "00 0 ."],
 };
 
 const englishLayout = {

@@ -11,6 +11,8 @@ import Sale from "./Pages/Sale";
 import Test from "./Pages/Test";
 import { SnackbarProvider } from "notistack";
 import { ProductSnackbar } from "./Components/ProductSnackbar";
+import Payment from "./Pages/Payment";
+import PaymentResult from "./Pages/PaymentResult";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
   {
     path: "/sale",
     element: <Sale />,
+  },
+  {
+    path: "/sale/payment",
+    element: <Payment />,
+  },
+  {
+    path: "/sale/payment/result",
+    element: <PaymentResult />,
   },
   {
     path: "/test",

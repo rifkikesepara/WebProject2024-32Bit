@@ -14,6 +14,8 @@ import {
 import { Box } from "@mui/system";
 
 export default function CheckoutTable({
+  sx,
+  disabled = false,
   data,
   inputValues,
   selectionValues,
@@ -23,12 +25,13 @@ export default function CheckoutTable({
   return (
     <TableContainer>
       <ToggleButtonGroup
+        // disabled={disabled}
         value={selectionValues}
         onChange={(e, newFormat) => {
           onChange(newFormat);
         }}
         orientation="vertical"
-        sx={{ width: "100%", paddingBottom: 10 }}
+        sx={{ width: "100%", paddingBottom: 10, ...sx }}
       >
         <Table stickyHeader sx={{ width: "100%" }} aria-label="sticky table">
           <TableHead>
@@ -48,6 +51,7 @@ export default function CheckoutTable({
                 <TableRow key={id}>
                   <TableCell sx={{ padding: 0, textAlign: "center" }}>
                     <TextField
+                      disabled={disabled}
                       defaultValue={count}
                       autoComplete="off"
                       name={name}
