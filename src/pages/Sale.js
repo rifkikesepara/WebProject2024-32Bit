@@ -22,22 +22,23 @@ import { closeSnackbar, enqueueSnackbar } from "notistack";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
 import { useAlert } from "../Context/AlertProvider";
+import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
 
 export default function Sale() {
   const navigate = useNavigate();
   const { setAlert } = useAlert();
+
   const mainDiv = useRef();
-  let keyboard = useRef();
+  const checkoutRef = useRef(null);
+  const keyboard = useRef();
 
   const [selectedItems, setSelectedItems] = useState([]);
   const [productsData, setProductsData] = useState([]);
   const [inputFields, setInputFields] = useState({});
   const [selectedInputField, setSelectedInputField] = useState("");
   const [cashout, setCashout] = useState(
-    JSON.parse(localStorage.getItem("cashout"))
+    JSON.parse(sessionStorage.getItem("cashout"))
   );
-  const [productAmount, setProductAmount] = useState(0);
-
   const [selectListOpen, setSelectListOpen] = useState(false);
   const [testID, setID] = useState();
 
@@ -168,6 +169,7 @@ export default function Sale() {
             // borderBottom: 1,
             display: "flex",
             justifyContent: "space-between",
+            alignItems: "center",
             width: "95%",
             borderRadius: 7,
             marginBlock: 1,
@@ -195,15 +197,48 @@ export default function Sale() {
               </Typography>
             </motion.div>
           </IconButton>
-          <IconButton
-            onClick={deleteSelected}
-            disabled={selectedItems.length == 0 ? true : false}
-            aria-label="delete"
-            sx={{ fontSize: 40, marginRight: 2, color: "black" }}
-            color="black"
-          >
-            <DeleteIcon fontSize="inherit" color="inherit" />
-          </IconButton>
+
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <IconButton
+              disableElevation
+              // variant="contained"
+              sx={{
+                height: 50,
+              }}
+              onClick={() =>
+                checkoutRef.current.scroll({
+                  behavior: "smooth",
+                  top: checkoutRef.current.scrollTop - 250,
+                })
+              }
+            >
+              <ArrowUpward />
+            </IconButton>
+            <IconButton
+              disableElevation
+              // variant="contained"
+              sx={{
+                height: 50,
+              }}
+              onClick={() =>
+                checkoutRef.current.scroll({
+                  behavior: "smooth",
+                  top: checkoutRef.current.scrollTop + 250,
+                })
+              }
+            >
+              <ArrowDownward />
+            </IconButton>
+            <IconButton
+              onClick={deleteSelected}
+              disabled={selectedItems.length == 0 ? true : false}
+              aria-label="delete"
+              sx={{ fontSize: 40, marginRight: 2, color: "black" }}
+              color="black"
+            >
+              <DeleteIcon fontSize="inherit" color="inherit" />
+            </IconButton>
+          </Box>
         </Paper>
         <Paper
           sx={{
@@ -218,10 +253,12 @@ export default function Sale() {
             // borderTopLeftRadius: 10,
             // borderTopRightRadius: 10,
             borderRadius: 7,
+            position: "relative",
           }}
           elevation={5}
         >
           <CheckoutTable
+            ref={checkoutRef}
             data={cashout}
             inputValues={inputFields}
             onFocus={(e, { id }) => {
@@ -300,11 +337,7 @@ export default function Sale() {
               marginBottom: "auto",
               height: "100%",
             }}
-            onSelectProduct={(data) => {
-              console.log(data);
-              addProductToCashout(data);
-              console.log(cashout);
-            }}
+            onSelectProduct={(data) => addProductToCashout(data)}
             onProducts={(data) => setProductsData(data)}
           />
 
@@ -327,23 +360,30 @@ export default function Sale() {
             >
               Listeden Ürün Eklemek için Tıklayın
             </Button>
-            <VirtualKeyboard
-              keyboardRef={keyboard}
-              layout="cashier"
-              onChangeInput={(input) => {
-                if (selectedInputField != "") {
-                  setInputFields({
-                    ...inputFields,
-                    [selectedInputField]: input,
-                  });
-                  if (selectedInputField != "barcode")
-                    changeProductAmount(input, testID);
-                }
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
               }}
-              onDone={() => {
-                setSelectedInputField("");
-              }}
-            />
+            >
+              <VirtualKeyboard
+                ref={keyboard}
+                layout="cashier"
+                onChangeInput={(input) => {
+                  if (selectedInputField != "") {
+                    setInputFields({
+                      ...inputFields,
+                      [selectedInputField]: input,
+                    });
+                    if (selectedInputField != "barcode")
+                      changeProductAmount(input, testID);
+                  }
+                }}
+                onDone={() => {
+                  setSelectedInputField("");
+                }}
+              />
+            </Box>
             <Box
               sx={{
                 display: "flex",
@@ -367,7 +407,7 @@ export default function Sale() {
                   fontSize: 20,
                 }}
                 onClick={() => {
-                  localStorage.setItem("cashout", JSON.stringify(cashout));
+                  sessionStorage.setItem("cashout", JSON.stringify(cashout));
                   navigate("./payment");
                 }}
               >

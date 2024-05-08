@@ -22,9 +22,9 @@ export default function ButtonGroup({
   const [selected, setSelected] = useState(intialSelected);
   const scrollRef = useRef();
 
-  useEffect(() => {
-    if (intialSelected != "") onSelect(intialSelected);
-  }, [intialSelected]);
+  // useEffect(() => {
+  //   if (intialSelected != "") onSelect(intialSelected);
+  // }, [intialSelected]);
 
   return (
     <Paper
@@ -43,7 +43,7 @@ export default function ButtonGroup({
           // width: "100%",
         }}
         exclusive
-        value={intialSelected != "" ? selected : intialSelected}
+        value={selected}
         onChange={(e, v) => {
           setSelected(v);
           onSelect(v);

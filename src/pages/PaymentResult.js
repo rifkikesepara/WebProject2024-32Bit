@@ -14,8 +14,8 @@ export default function PaymentResult() {
   const [showReceipt, setShowReceipt] = useState(false);
   const receiptRef = useRef();
 
-  const payment = JSON.parse(localStorage.getItem("payment"));
-  const cashout = JSON.parse(localStorage.getItem("cashout"));
+  const payment = JSON.parse(sessionStorage.getItem("payment"));
+  const cashout = JSON.parse(sessionStorage.getItem("cashout"));
 
   const handlePrint = useReactToPrint({
     content: () => receiptRef.current,
@@ -148,8 +148,8 @@ export default function PaymentResult() {
               borderRadius: 7,
             }}
             onClick={() => {
-              localStorage.setItem("cashout", JSON.stringify([]));
-              localStorage.setItem("payment", JSON.stringify({}));
+              sessionStorage.setItem("cashout", JSON.stringify([]));
+              sessionStorage.setItem("payment", JSON.stringify({}));
               navigate("../sale");
             }}
           >

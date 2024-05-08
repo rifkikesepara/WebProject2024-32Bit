@@ -2,8 +2,8 @@ import { Box, Typography } from "@mui/material";
 import { forwardRef } from "react";
 
 export const Receipt = forwardRef((props, ref) => {
-  const cashout = JSON.parse(localStorage.getItem("cashout"));
-  const payment = JSON.parse(localStorage.getItem("payment"));
+  const cashout = JSON.parse(sessionStorage.getItem("cashout"));
+  const payment = JSON.parse(sessionStorage.getItem("payment"));
   console.log(cashout);
 
   const total = () => {

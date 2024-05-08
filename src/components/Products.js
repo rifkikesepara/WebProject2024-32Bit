@@ -6,6 +6,7 @@ import {
   IconButton,
   Paper,
   Slide,
+  TextField,
   Typography,
 } from "@mui/material";
 import useData from "../Hooks/useData";
@@ -106,16 +107,24 @@ export default function Products({
     []
   );
 
-  const [productsData, setProductsData] = useState([]);
   const scrollRef = useRef();
 
+  const tempdata = useRef([]);
+  const [productsData, setProductsData] = useState([]);
+
   const [productDetailWindow, setProductDetailWindow] = useState(false);
-  const [selectedSubCategory, setSelectedSubCategory] = useState("Ekmek");
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedSubCategory, setSelectedSubCategory] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const [subCat, setSubCat] = useState([]);
   const [productAmount, setProductAmount] = useState(0);
+  const [search, setSearch] = useState(false);
+
+  useEffect(() => {
+    setSubCat([]);
+    setSelectedCategory("all");
+  }, [open]);
 
   const getIndexOfSubCategory = (cat) => {
     return subCat.indexOf(subCat.find(({ name }, index) => name == cat));
@@ -135,6 +144,19 @@ export default function Products({
       onSelectProduct(data); //passing product data to parent component
     }
     setSelectedProduct(data);
+  };
+
+  const handleFilter = (e) => {
+    filterProducts(e.target.value);
+  };
+
+  const filterProducts = (filter) => {
+    let array = [];
+    tempdata.current.map((data) => {
+      if (data.attributes.name.toLowerCase().includes(filter.toLowerCase()))
+        array.push(data);
+    });
+    setProductsData(array);
   };
 
   const CellContent = (productsData, index) => {
@@ -182,14 +204,39 @@ export default function Products({
               boxShadow: "0px 0px 10px -1px rgba(0, 0, 0, 0.3)",
             }}
           />
-          <Typography
-            sx={{
-              color: "black",
-              fontWeight: "bold",
-            }}
-          >
-            {productsData[index].price.normal / 100}₺
-          </Typography>
+          <Box sx={{ display: "flex" }}>
+            {productsData[index].price.normal !=
+              productsData[index].price.discounted && (
+              <Typography
+                sx={{
+                  color:
+                    productsData[index].price.normal ==
+                    productsData[index].price.discounted
+                      ? "black"
+                      : "green",
+                  fontWeight: "bold",
+                  mr: 1,
+                }}
+              >
+                {productsData[index].price.discounted / 100}₺
+              </Typography>
+            )}
+            <Typography
+              sx={{
+                color:
+                  productsData[index].price.normal ==
+                  productsData[index].price.discounted
+                    ? "black"
+                    : "red",
+                fontWeight: "bold",
+                textDecoration:
+                  productsData[index].price.normal !=
+                    productsData[index].price.discounted && "line-through",
+              }}
+            >
+              {productsData[index].price.normal / 100}₺
+            </Typography>
+          </Box>
           <Typography
             sx={{
               width: "100%",
@@ -247,6 +294,8 @@ export default function Products({
         setProductsData(
           data.children[getIndexOfSubCategory(selectedSubCategory)]?.products
         );
+        tempdata.current =
+          data.children[getIndexOfSubCategory(selectedSubCategory)]?.products;
         onCount(
           data.children[getIndexOfSubCategory(selectedSubCategory)]?.products
             .length
@@ -269,6 +318,7 @@ export default function Products({
               });
               setTimeout(() => {
                 setProductsData(array);
+                tempdata.current = array;
                 onProducts(array);
                 onCount(array.length);
                 setProductAmount(array.length);
@@ -280,7 +330,6 @@ export default function Products({
     },
     [selectedCategory, selectedSubCategory, open]
   );
-
   return (
     <Dialog
       TransitionComponent={Transition}
@@ -323,13 +372,13 @@ export default function Products({
         </IconButton>
         <ButtonGroup
           elevation={0}
+          intialSelected="all"
           sx={{
             zIndex: 3,
             paddingTop: 5,
             paddingBottom: 1,
             "&::-webkit-scrollbar": { height: 0 },
           }}
-          intialSelected="all"
           buttons={categories}
           onSelect={(v) => {
             setProductsData([]); //emptying the products data
@@ -367,7 +416,7 @@ export default function Products({
             borderRadius={10}
             spacing={10}
             border="1px solid black"
-            intialSelected={subCat[0]?.name}
+            // intialSelected={subCat[0]?.name}
             buttons={subCat}
             onSelect={(v) => {
               setSelectedSubCategory(v);
@@ -382,8 +431,26 @@ export default function Products({
               height: "100%",
             }}
           >
+            <TextField
+              disabled={
+                productsData?.length <= 0 || productsData == undefined
+                  ? true
+                  : false
+              }
+              sx={{
+                transition: "width 0.2s ease",
+                width: !search ? 0 : 200,
+                opacity: search ? 1 : 0,
+              }}
+              placeholder="Ürün Ara"
+              onChange={handleFilter}
+            />
             <IconButton
-              sx={{ fontSize: 30, display: { md: "block", xs: "none" } }}
+              sx={{
+                fontSize: 30,
+                display: { md: "block", sm: "block", xs: "none" },
+              }}
+              onClick={() => setSearch(!search)}
             >
               <SearchOutlined fontSize="inherit" />
             </IconButton>

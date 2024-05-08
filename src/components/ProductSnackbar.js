@@ -18,6 +18,7 @@ export const ProductSnackbar = forwardRef(({ id, ...props }, ref) => {
           height: 100,
           display: "flex",
           width: 300,
+          borderRadius: 7,
         }}
       >
         <img

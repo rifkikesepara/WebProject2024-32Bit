@@ -23,7 +23,7 @@ import { useNavigate } from "react-router-dom";
 export default function Login() {
   const user = { userCode: "admin", password: 123 };
 
-  let keyboard = useRef();
+  const keyboard = useRef();
   const navigate = useNavigate();
 
   const [currentInput, setCurrentInput] = useState("");
@@ -219,7 +219,7 @@ export default function Login() {
           >
             <VirtualKeyboard
               sx={{ width: "100%" }}
-              keyboardRef={keyboard}
+              ref={keyboard}
               onChangeInput={(input) =>
                 formik.setValues({ ...formik.values, [currentInput]: input })
               }

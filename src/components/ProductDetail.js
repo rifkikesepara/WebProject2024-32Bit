@@ -52,8 +52,12 @@ export default function ProductDetail({
               p: 1,
             }}
           >
-            {getBadgeImages().map(({ url, id }) => (
-              <img width={id == "yerliUretim" ? "100vw" : "50vw"} src={url} />
+            {getBadgeImages().map(({ url, id }, index) => (
+              <img
+                key={index}
+                width={id == "yerliUretim" ? "100vw" : "50vw"}
+                src={url}
+              />
             ))}
           </Box>
           <img

@@ -23,14 +23,14 @@ import CheckoutTable from "../Components/CheckoutTable";
 export default function Payment() {
   const navigate = useNavigate();
   const mainDiv = useRef();
-  let keyboard = useRef();
+  const keyboard = useRef();
 
   const [selectedItems, setSelectedItems] = useState([]);
   const [payment, setPayment] = useState({ cash: 0, card: 0 });
   const [inputFields, setInputFields] = useState({});
   const [selectedInputField, setSelectedInputField] = useState("");
   const [cashout, setCashout] = useState(
-    JSON.parse(localStorage.getItem("cashout"))
+    JSON.parse(sessionStorage.getItem("cashout"))
   );
   const [testID, setID] = useState();
 
@@ -322,7 +322,7 @@ export default function Payment() {
             }}
           >
             <VirtualKeyboard
-              keyboardRef={keyboard}
+              ref={keyboard}
               layout="cashier"
               onChangeInput={(input) => {
                 if (selectedInputField != "") {
@@ -362,7 +362,7 @@ export default function Payment() {
                   fontSize: 20,
                 }}
                 onClick={() => {
-                  localStorage.setItem("payment", JSON.stringify(payment));
+                  sessionStorage.setItem("payment", JSON.stringify(payment));
                   navigate("./result");
                 }}
               >

@@ -44,7 +44,7 @@ const menuItems = [
     ),
     path: "../sale",
     onClick: () => {
-      localStorage.setItem("cashout", JSON.stringify([]));
+      sessionStorage.setItem("cashout", JSON.stringify([]));
     },
   },
   {
