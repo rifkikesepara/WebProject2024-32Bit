@@ -25,7 +25,7 @@ export default function PaymentResult() {
     console.log(receiptRef);
     LOG("total calculated!", "yellow");
     let total = 0;
-    cashout.map(({ price }) => (total = total + price));
+    cashout.map(({ price }) => (total = total + price.cashout));
     return total / 100;
   }, [cashout, cashout.length]);
   let due = total - (payment.cash + payment.card);
@@ -126,7 +126,10 @@ export default function PaymentResult() {
               NAKİT: {payment.cash}₺
             </Typography>
             <Typography sx={{ fontSize: 20 }}>
-              KREDİ KARTI: {payment.card}₺{" "}
+              KREDİ KARTI: {payment.card}₺
+            </Typography>
+            <Typography sx={{ fontSize: 20 }}>
+              PARA ÜSTÜ: {payment.change}₺
             </Typography>
           </Paper>
         </Box>
@@ -182,20 +185,14 @@ export default function PaymentResult() {
           </Button>
         </Box>
       </Box>
-      <Box
-        sx={{
-          zIndex: -1000,
-          position: "absolute",
-          overflow: "hidden",
-          top: -1000,
-        }}
-      >
+      <Box sx={{ display: "none" }}>
         <Receipt ref={receiptRef} />
       </Box>
       <Dialog
         maxWidth="xl"
         open={showReceipt}
         onClose={() => setShowReceipt(false)}
+        scroll="body"
       >
         <Box overflowX={"hidden"}>
           <Receipt />

@@ -1,5 +1,7 @@
+import { InfoRounded } from "@mui/icons-material";
 import {
   Button,
+  IconButton,
   Table,
   TableBody,
   TableCell,
@@ -12,7 +14,8 @@ import {
   Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
-import { forwardRef } from "react";
+import { forwardRef, useState } from "react";
+import ProductDetail from "./ProductDetail";
 
 export const CheckoutTable = forwardRef(
   (
@@ -27,6 +30,11 @@ export const CheckoutTable = forwardRef(
     },
     ref
   ) => {
+    const [productDetailWindow, setProductDetailWindow] = useState({
+      open: false,
+      index: 0,
+    });
+
     return (
       <TableContainer ref={ref}>
         <ToggleButtonGroup
@@ -51,78 +59,129 @@ export const CheckoutTable = forwardRef(
               </TableRow>
             </TableHead>
             <TableBody>
-              {data.map(({ id, count, images, name, price }, index) => {
-                return (
-                  <TableRow key={id}>
-                    <TableCell sx={{ padding: 0, textAlign: "center" }}>
-                      <TextField
-                        disabled={disabled}
-                        defaultValue={count}
-                        autoComplete="off"
-                        name={name}
-                        value={count}
-                        inputProps={{
-                          sx: {
-                            textAlign: "center",
-                            border: "none",
-                            minHeight: 70,
-                          },
-                        }}
-                        variant="standard"
-                        InputProps={{
-                          disableUnderline: true,
-                        }}
-                        onFocus={(event) => {
-                          onFocus(event, { id, name });
-                          event.target.select();
-                        }}
-                      />
-                    </TableCell>
-                    <TableCell
-                      colSpan={2}
-                      sx={{
-                        padding: 0,
-                      }}
-                    >
-                      <ToggleButton
-                        key={index}
-                        value={id}
+              {data.map(
+                ({ id, count, images, attributes, price, stock }, index) => {
+                  return (
+                    <TableRow key={id}>
+                      <TableCell sx={{ padding: 0, textAlign: "center" }}>
+                        <TextField
+                          disabled={disabled}
+                          defaultValue={count}
+                          autoComplete="off"
+                          name={attributes.name}
+                          value={count}
+                          inputProps={{
+                            sx: {
+                              textAlign: "center",
+                              border: "none",
+                              minHeight: 70,
+                            },
+                          }}
+                          variant="standard"
+                          InputProps={{
+                            disableUnderline: true,
+                          }}
+                          onFocus={(event) => {
+                            onFocus(event, { id });
+                            event.target.select();
+                          }}
+                        />
+                      </TableCell>
+                      <TableCell
+                        colSpan={2}
                         sx={{
-                          border: "none",
-                          display: "flex",
-                          justifyContent: "space-between",
-                          color: "black",
-                          width: "100%",
-                          paddingBlock: 2,
+                          padding: 0,
+                          position: "relative",
                         }}
-                        onClick={(e) => {}}
                       >
-                        <Box
+                        <IconButton
+                          disableFocusRipple
+                          disableRipple
+                          onClick={() =>
+                            setProductDetailWindow({ open: true, index: index })
+                          }
                           sx={{
-                            display: "flex",
-                            alignItems: "center",
+                            height: "100%",
+                            position: "absolute",
+                            left: 15,
+                            zIndex: 10,
                           }}
                         >
-                          <img
-                            src={
-                              images.find(
-                                ({ imageType }) => imageType == "product"
-                              ).url
-                            }
-                            width={50}
-                          />
-                          <Typography marginLeft={2} maxWidth={200}>
-                            {name}
-                          </Typography>
-                        </Box>
-                        <Typography fontWeight={"bold"} minWidth={50}>
-                          {price / 100}₺
-                        </Typography>
-                      </ToggleButton>
-                    </TableCell>
-                  </TableRow>
-                );
-              })}
+                          <InfoRounded sx={{ opacity: 0 }} />
+                        </IconButton>
+                        <ToggleButton
+                          key={index}
+                          value={id}
+                          sx={{
+                            border: "none",
+                            display: "flex",
+                            justifyContent: "space-between",
+                            color: "black",
+                            width: "100%",
+                            paddingBlock: 2,
+                          }}
+                        >
+                          <Box
+                            sx={{
+                              display: "flex",
+                              alignItems: "center",
+                            }}
+                          >
+                            <img
+                              src={
+                                images.find(
+                                  ({ imageType }) => imageType == "product"
+                                ).url
+                              }
+                              width={50}
+                            />
+                            <Typography marginLeft={2} maxWidth={200}>
+                              {attributes.name}
+                            </Typography>
+                          </Box>
+                          <Box
+                            sx={{ display: "flex", flexDirection: "column" }}
+                          >
+                            <Typography
+                              sx={{
+                                fontWeight: "bold",
+                                minWidth: 50,
+                                color:
+                                  price.discounted != price.normal && "red",
+                                textDecoration:
+                                  price.discounted != price.normal &&
+                                  "line-through",
+                              }}
+                              fontWeight={"bold"}
+                              minWidth={50}
+                            >
+                              {(price.normal / 100) * count}₺
+                            </Typography>
+                            {price.discounted != price.normal && (
+                              <Typography
+                                sx={{
+                                  fontWeight: "bold",
+                                  minWidth: 50,
+                                  color: "green",
+                                }}
+                                fontWeight={"bold"}
+                                minWidth={50}
+                              >
+                                {price.cashout / 100}₺
+                              </Typography>
+                            )}
+                          </Box>
+                        </ToggleButton>
+                      </TableCell>
+                    </TableRow>
+                  );
+                }
+              )}
+              <ProductDetail
+                open={productDetailWindow.open}
+                product={data[productDetailWindow.index]}
+                onClose={() => setProductDetailWindow(false)}
+              />
             </TableBody>
           </Table>
         </ToggleButtonGroup>

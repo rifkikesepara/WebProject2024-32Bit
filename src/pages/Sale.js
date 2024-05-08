@@ -14,9 +14,8 @@ import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { motion } from "framer-motion";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
-import Products from "../Components/Products";
+import ProductsDialog from "../Components/ProductsDialog";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import { closeSnackbar, enqueueSnackbar } from "notistack";
 import LOG from "../Debug/Console";
@@ -28,7 +27,6 @@ export default function Sale() {
   const navigate = useNavigate();
   const { setAlert } = useAlert();
 
-  const mainDiv = useRef();
   const checkoutRef = useRef(null);
   const keyboard = useRef();
 
@@ -43,15 +41,20 @@ export default function Sale() {
   const [testID, setID] = useState();
 
   const addProductToCashout = ({ attributes, id, price, images, stock }) => {
-    if (!cashout.find((data) => data.name == attributes.name)) {
+    if (!cashout.find((data) => data.attributes.name == attributes.name)) {
       setCashout([
         ...cashout,
         {
           id: id,
-          name: attributes.name,
-          price: price.normal,
+          attributes: attributes,
+          price: {
+            cashout: price.discounted,
+            normal: price.normal,
+            discounted: price.discounted,
+          },
           images: images,
           count: 1,
+          stock: stock,
         },
       ]);
       //pushing a snackbar to show the user which product has been added
@@ -62,12 +65,17 @@ export default function Sale() {
     } else {
       let newArray = cashout.map((a) => {
         var returnValue = { ...a };
-        if (a.name == attributes.name) {
+        if (a.attributes.name == attributes.name) {
           if (a.count + 1 <= stock) {
             returnValue = {
               ...returnValue,
-              price: a.price + a.price,
+              price: {
+                cashout: a.price.discounted + a.price.discounted,
+                normal: price.normal,
+                discounted: price.discounted,
+              },
               count: a.count + 1,
+              stock: stock,
             };
             //pushing a snackbar to show the user which product has been added
             enqueueSnackbar(attributes.name + " eklendi.", {
@@ -102,7 +110,10 @@ export default function Sale() {
         if (amount <= product.stock)
           returnValue = {
             ...returnValue,
-            price: product.price.normal * amount,
+            price: {
+              ...a.price,
+              cashout: product.price.discounted * amount,
+            },
             count: amount,
           };
         else {
@@ -114,7 +125,10 @@ export default function Sale() {
           setAlert({ text: "Stok Yetersiz", type: "error" });
           returnValue = {
             ...returnValue,
-            price: product.price.normal * product.stock,
+            price: {
+              ...a.price,
+              cashout: product.price.discounted * product.stock,
+            },
             count: product.stock,
           };
         }
@@ -128,18 +142,13 @@ export default function Sale() {
   const total = useMemo(() => {
     LOG("total calculated!", "yellow");
     let total = 0;
-    cashout.map(({ price }) => (total = total + price));
+    cashout.map(({ price }) => (total = total + price.cashout));
     return total / 100;
   }, [cashout, cashout.length]);
 
   useEffect(() => {
-    console.log("useefffect");
     keyboard.current.setInput(inputFields[selectedInputField]);
   }, [selectedInputField]);
-
-  useEffect(() => {
-    mainDiv.current?.scrollIntoView({ behavior: "smooth" });
-  }, [cashout.length]);
 
   return (
     <Box
@@ -179,23 +188,16 @@ export default function Sale() {
         >
           <IconButton sx={{ ml: 1, color: "black" }}>
             <QrCodeScannerIcon sx={{ fontSize: 40 }} />
-            <motion.div
-              style={{ display: "flex", alignItems: "center" }}
-              initial={{ opacity: 0, scaleX: 0 }}
-              animate={{ opacity: 1, scaleX: 1 }}
-              transition={{ duration: 1 }}
+            <Typography
+              sx={{
+                color: "black",
+                padding: 0.5,
+                width: 100,
+                fontWeight: "bold",
+              }}
             >
-              <Typography
-                sx={{
-                  color: "black",
-                  padding: 0.5,
-                  width: 100,
-                  fontWeight: "bold",
-                }}
-              >
-                FİYAT GÖR
-              </Typography>
-            </motion.div>
+              FİYAT GÖR
+            </Typography>
           </IconButton>
 
           <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -322,7 +324,7 @@ export default function Sale() {
               });
             }}
           />
-          <Products
+          <ProductsDialog
             open={selectListOpen}
             onClose={() => {
               setSelectListOpen(false);

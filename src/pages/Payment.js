@@ -19,15 +19,18 @@ import { motion } from "framer-motion";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
+import { useAlert } from "../Context/AlertProvider";
 
 export default function Payment() {
   const navigate = useNavigate();
+  const { setAlert } = useAlert();
+
   const mainDiv = useRef();
   const keyboard = useRef();
 
   const [selectedItems, setSelectedItems] = useState([]);
-  const [payment, setPayment] = useState({ cash: 0, card: 0 });
-  const [inputFields, setInputFields] = useState({});
+  const [payment, setPayment] = useState({ cash: 0, card: 0, change: 0 });
+  const [inputFields, setInputFields] = useState({ amount: "" });
   const [selectedInputField, setSelectedInputField] = useState("");
   const [cashout, setCashout] = useState(
     JSON.parse(sessionStorage.getItem("cashout"))
@@ -49,13 +52,11 @@ export default function Payment() {
     let newArray = cashout.map((a) => {
       var returnValue = { ...a };
       if (a.id == id && amount != 0) {
-        let unitPrice =
-          cashout.find(({ id }) => a.id == id).price /
-          cashout.find(({ id }) => a.id == id).count;
+        let unitPrice = cashout.find(({ id }) => a.id == id).price.discounted;
         console.log("Unit Price: " + unitPrice);
         returnValue = {
           ...returnValue,
-          price: unitPrice * amount,
+          price: { ...a.price, cashout: unitPrice * amount },
           count: amount,
         };
       }
@@ -71,13 +72,34 @@ export default function Payment() {
     keyboard.current.setInput("");
     switch (e.target.name) {
       case "card":
-        if (paymentAmount <= total) {
-          setPayment({ ...payment, card: paymentAmount });
+        if (paymentAmount <= due) {
+          setPayment({
+            ...payment,
+            card: paymentAmount,
+            date: new Date().toLocaleString(),
+          });
+        } else {
+          setAlert({
+            text: "Kredi Kartıyla Kalandan Fazla Ödeme Yapamazsın!",
+            type: "error",
+          });
         }
         break;
       case "cash":
-        if (paymentAmount <= total) {
-          setPayment({ ...payment, cash: paymentAmount });
+        if (paymentAmount <= due) {
+          setPayment({
+            ...payment,
+            change: 0,
+            cash: paymentAmount,
+            date: new Date().toLocaleString(),
+          });
+        } else {
+          setPayment({
+            ...payment,
+            cash: paymentAmount,
+            change: (paymentAmount - (total - payment.card)).toFixed(2),
+            date: new Date().toLocaleString(),
+          });
         }
         break;
     }
@@ -86,10 +108,10 @@ export default function Payment() {
   const total = useMemo(() => {
     LOG("total calculated!", "yellow");
     let total = 0;
-    cashout.map(({ price }) => (total = total + price));
+    cashout.map(({ price }) => (total = total + price.cashout));
     return total / 100;
   }, [cashout, cashout.length]);
-  let due = total - (payment.cash + payment.card);
+  let due = payment.change > 0 ? 0 : total - (payment.cash + payment.card);
 
   useEffect(() => {
     keyboard.current.setInput(inputFields[selectedInputField]);
@@ -222,8 +244,13 @@ export default function Payment() {
             <Divider />
             <AccordionDetails>
               <Typography sx={{ color: "red", fontWeight: "bold" }}>
-                KALAN: {total - (payment.cash + payment.card)}₺
+                KALAN: {due.toFixed(2)}₺
               </Typography>
+              {payment.change != 0 && (
+                <Typography sx={{ color: "red", fontWeight: "bold" }}>
+                  PARA ÜSTÜ: {payment.change}₺
+                </Typography>
+              )}
             </AccordionDetails>
           </Accordion>
         </Paper>
@@ -273,6 +300,7 @@ export default function Payment() {
               }}
               onClick={() => {
                 setInputFields({ ...inputFields, amount: due });
+                keyboard.current.setInput(due.toString());
               }}
             >
               KALAN
@@ -286,6 +314,7 @@ export default function Payment() {
             }}
           >
             <Button
+              disabled={inputFields.amount == "" ? true : false}
               name="cash"
               variant="contained"
               disableElevation
@@ -299,6 +328,7 @@ export default function Payment() {
               NAKİT
             </Button>
             <Button
+              disabled={inputFields.amount == "" ? true : false}
               name="card"
               variant="contained"
               disableElevation
@@ -362,6 +392,7 @@ export default function Payment() {
                   fontSize: 20,
                 }}
                 onClick={() => {
+                  sessionStorage.setItem("cashout", JSON.stringify(cashout));
                   sessionStorage.setItem("payment", JSON.stringify(payment));
                   navigate("./result");
                 }}
