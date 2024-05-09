@@ -20,10 +20,12 @@ import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import { closeSnackbar, enqueueSnackbar } from "notistack";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
-import { useAlert } from "../Context/AlertProvider";
 import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
+import { useAlert } from "../Hooks/useAlert";
+import useStore from "../Hooks/useStore";
 
 export default function Sale() {
+  const storeInfo = useStore();
   const navigate = useNavigate();
   const { setAlert } = useAlert();
 
@@ -401,6 +403,7 @@ export default function Sale() {
                 Geri Dön
               </Button>
               <Button
+                disabled={!storeInfo.online}
                 variant="contained"
                 disableElevation
                 color="secondary"
@@ -436,8 +439,7 @@ export default function Sale() {
               marginLeft: 10,
               height: 15,
               width: 15,
-              backgroundColor: "green",
-              // boxShadow: "0px 0px 8px 0.5px green",
+              backgroundColor: storeInfo.online ? "green" : "red",
               borderRadius: 200,
               marginRight: 10,
             }}

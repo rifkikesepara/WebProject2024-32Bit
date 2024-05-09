@@ -16,9 +16,9 @@ import VirtualKeyboard from "../Components/VirtualKeyboard";
 import { useRef, useState } from "react";
 import { LoadingButton } from "@mui/lab";
 import { usePreferences } from "../Context/Theme";
-import { useAlert } from "../Context/AlertProvider";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
+import { useAlert } from "../Hooks/useAlert";
 
 export default function Login() {
   const user = { userCode: "admin", password: 123 };

@@ -27,6 +27,7 @@ import { usePreferences } from "../Context/Theme";
 import useData from "../Hooks/useData";
 import MiniDrawer from "../Components/MiniDrawer";
 import { getDayString, getMonthString } from "../Utils/utilities";
+import useStore from "../Hooks/useStore";
 
 const menuItems = [
   {
@@ -204,13 +205,10 @@ const sortTheLastPayments = (data) => {
 
 export default function Dashboard() {
   const [data, setData] = useState([]);
+  const storeInfo = useStore();
 
-  useData(
-    "https://65b0e7e2d16d31d11bdd8b87.mockapi.io/api/Expenses",
-    (data) => setData(data),
-    () => {
-      console.log("data is fetching");
-    }
+  useData("https://65b0e7e2d16d31d11bdd8b87.mockapi.io/api/Expenses", (data) =>
+    setData(data)
   );
 
   const chartData = useMemo(() => adjustDataForChart(data), [data]);
@@ -283,8 +281,10 @@ export default function Dashboard() {
                   style={{
                     height: 15,
                     width: 15,
-                    backgroundColor: "green",
-                    boxShadow: "0px 0px 8px 0.5px green",
+                    backgroundColor: storeInfo.online ? "green" : "red",
+                    boxShadow: storeInfo.online
+                      ? "0px 0px 8px 0.5px green"
+                      : "0px 0px 8px 0.5px red",
                     borderRadius: 200,
                     marginRight: 10,
                   }}

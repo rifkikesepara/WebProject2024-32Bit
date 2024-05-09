@@ -19,12 +19,11 @@ import { motion } from "framer-motion";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
-import { useAlert } from "../Context/AlertProvider";
+import { useAlert } from "../Hooks/useAlert";
 
 export default function Payment() {
   const navigate = useNavigate();
   const { setAlert } = useAlert();
-
   const mainDiv = useRef();
   const keyboard = useRef();
 
