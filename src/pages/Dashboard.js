@@ -23,11 +23,11 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { useMemo, useState } from "react";
 import { LineChart, axisClasses } from "@mui/x-charts";
-import { usePreferences } from "../Context/Theme";
 import useData from "../Hooks/useData";
 import MiniDrawer from "../Components/MiniDrawer";
 import { getDayString, getMonthString } from "../Utils/utilities";
 import useStore from "../Hooks/useStore";
+import usePreferences from "../Hooks/usePreferences";
 
 const menuItems = [
   {

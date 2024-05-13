@@ -73,6 +73,9 @@ export default function ProductDetail({
         <Typography>
           İade Gün Sayısı: {product?.attributes.returnDay} Gün
         </Typography>
+        <Typography fontWeight={"bold"}>
+          BARKOD: {product?.attributes.barcodes[0]}
+        </Typography>
       </Paper>
     </Dialog>
   );

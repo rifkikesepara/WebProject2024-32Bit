@@ -100,7 +100,10 @@ export const VirtualKeyboard = forwardRef(
       onPress(button);
       e.preventDefault(); //preventing default event to not clicking somthing else behind the keyboard
       if (button === "{cancel}") ref.current.setInput("");
-      if (button == "{tick}") setTimeout(() => onDone(), 400);
+      if (button == "{tick}") {
+        e.preventDefault();
+        onDone();
+      }
       if (button === "{shift}" || button === "{lock}")
         /**
          * If you want to handle the shift and caps lock buttons

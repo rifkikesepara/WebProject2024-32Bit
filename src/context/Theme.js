@@ -14,14 +14,10 @@ const darkTheme = {
   background: "black",
 };
 
-const ThemeContext = createContext({
+export const ThemeContext = createContext({
   theme: lightTheme,
   toggleTheme: () => {},
 });
-
-export function usePreferences() {
-  return useContext(ThemeContext);
-}
 
 export default function Theme({ children }) {
   useEffect(() => {

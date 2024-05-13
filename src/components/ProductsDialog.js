@@ -4,92 +4,94 @@ import {
   CircularProgress,
   Dialog,
   IconButton,
+  MenuItem,
   Paper,
+  Select,
   Slide,
-  TextField,
   Typography,
 } from "@mui/material";
-import useData from "../Hooks/useData";
-import API from "../productsAPI.json";
-import { forwardRef, useEffect, useMemo, useRef, useState } from "react";
+import {
+  forwardRef,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { FixedSizeGrid } from "react-window";
 import AutoSizer from "react-virtualized-auto-sizer";
 import ButtonGroup from "./ButtonGroup";
-import axios from "axios";
 import {
   ArrowDownward,
   ArrowUpward,
   FilterList,
-  SearchOutlined,
   InfoRounded,
+  Star,
+  StarOutline,
+  StartSharp,
 } from "@mui/icons-material";
 import CloseIcon from "@mui/icons-material/Close";
 import ProductDetail from "./ProductDetail";
+import TextFieldVK from "./TextFieldVK";
+import useProduct from "../Hooks/useProduct";
+import LOG from "../Debug/Console";
 
 const categories = [
+  { name: "Favoriler", value: "favourites" },
   { name: "Tüm Ürünler", value: "all" },
   {
     name: "Fırın Ürünleri",
-    value: "bakery",
+    value: "C02",
   },
   {
     name: "Kahvaltılık",
-    value: "breakfast",
+    value: "C05",
   },
   {
     name: "Meyve ve Sebzeler",
-    value: "fruit-vegetables",
+    value: "C01",
   },
   {
     name: "Elektronik",
-    value: "electronics",
+    value: "C18",
   },
   {
     name: "Et ve Balık",
-    value: "meat-fish",
+    value: "C04",
   },
   {
     name: "Atıştırmalıklar",
-    value: "junkFood",
+    value: "C06",
   },
   {
     name: "Dondurmalar",
-    value: "icecream",
+    value: "C09",
   },
   {
     name: "Kişisel Bakım",
-    value: "bodyCareStuff",
+    value: "C12",
   },
   {
     name: "Tatlılar",
-    value: "desert",
+    value: "C03",
   },
   {
     name: "Dondurlumuş Yiyecekler",
-    value: "fastFood",
+    value: "C10",
   },
   {
     name: "İçecekler",
-    value: "drinks",
+    value: "C08",
   },
   {
     name: "Temel Gıdalar",
-    value: "basicGrocery",
+    value: "C07",
   },
   {
     name: "Temizlik",
-    value: "cleaningStuff",
+    value: "C11",
   },
 ];
-
-const getTotalProducts = (data) => {
-  let total = 0;
-  data?.map((data) => {
-    total += data?.products?.length;
-  });
-
-  return total;
-};
 
 export default function Products({
   sx,
@@ -107,28 +109,47 @@ export default function Products({
     []
   );
 
+  const { products, getAllProducts, getCategorizedProducts, getSubCategories } =
+    useProduct();
+
   const scrollRef = useRef();
+  var tempdata = useRef([]);
+  var filteredProducts = useRef([]);
+  let sortType = -1;
 
-  const tempdata = useRef([]);
-  const [productsData, setProductsData] = useState([]);
-
+  const [productsData, setProductsData] = useState(products);
   const [productDetailWindow, setProductDetailWindow] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState("");
-  const [selectedSubCategory, setSelectedSubCategory] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-  const [subCat, setSubCat] = useState([]);
+  const [category, setCategory] = useState();
+  const [subCategories, setSubCategories] = useState([]);
   const [productAmount, setProductAmount] = useState(0);
-  const [search, setSearch] = useState(false);
+  const [search, setSearch] = useState(true);
+  const [favourites, setFavourites] = useState(
+    JSON.parse(localStorage.getItem("favourites"))
+  );
+
+  const clear = () => {
+    setSubCategories([]);
+    setProductsData([]);
+    tempdata.current = [];
+    filteredProducts.current = [];
+  };
+  const set = (array) => {
+    setProductsData(array);
+    filteredProducts.current = array;
+    onCount(array.length);
+    setProductAmount(array.length);
+  };
 
   useEffect(() => {
-    setSubCat([]);
-    setSelectedCategory("all");
+    clear();
+    setTimeout(() => {
+      var prd = getAllProducts();
+      set(prd);
+      tempdata.current = prd;
+    }, 1000);
   }, [open]);
-
-  const getIndexOfSubCategory = (cat) => {
-    return subCat.indexOf(subCat.find(({ name }, index) => name == cat));
-  };
 
   const selectProduct = (product, addToCart = true) => {
     //adjusting product data to pass into the chekout section
@@ -146,18 +167,117 @@ export default function Products({
     setSelectedProduct(data);
   };
 
-  const handleFilter = (e) => {
-    filterProducts(e.target.value);
-  };
-
   const filterProducts = (filter) => {
+    LOG("filterProducts", "green");
     let array = [];
     tempdata.current.map((data) => {
       if (data.attributes.name.toLowerCase().includes(filter.toLowerCase()))
         array.push(data);
     });
+    set(array);
+    sortProducts(sortType);
+  };
+  const sortProducts = (type) => {
+    LOG("sortProducts", "green");
+    var array = [...filteredProducts.current];
+    switch (type) {
+      case 0: {
+        array.sort((a, b) =>
+          a.price.discounted > b.price.discounted ? 1 : -1
+        );
+        break;
+      }
+      case 1: {
+        array.sort((a, b) =>
+          a.price.discounted < b.price.discounted ? 1 : -1
+        );
+        break;
+      }
+      case 2: {
+        array.sort((a, b) =>
+          a.attributes.name.localeCompare(b.attributes.name)
+        );
+        break;
+      }
+      case 3: {
+        array = array.filter((fav) => isFavourite(fav));
+      }
+    }
     setProductsData(array);
   };
+
+  const setFavourite = (product) => {
+    var array = [...favourites];
+    if (!isFavourite(product)) {
+      array.push(product);
+      setFavourites(array);
+    } else {
+      array.splice(array.indexOf(product), 1);
+      setFavourites(array);
+    }
+    localStorage.setItem("favourites", JSON.stringify(array));
+  };
+
+  const isFavourite = (product) => {
+    if (
+      JSON.parse(localStorage.getItem("favourites")).find(
+        ({ id }) => id == product.id
+      ) == undefined
+    )
+      return false;
+    else return true;
+  };
+
+  const FilterBox = useCallback(
+    ({ open }) => {
+      return (
+        <Paper
+          sx={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "space-around",
+            right: 0,
+            top: 0,
+            transition: "opacity 0.2s ease,height 0.2s ease",
+            opacity: !open ? 1 : 0,
+            height: open ? 0 : "12%",
+            padding: 1,
+            zIndex: 1,
+            borderRadius: 0,
+            p: 0,
+            paddingBottom: open ? 0 : 1,
+          }}
+          elevation={3}
+        >
+          <TextFieldVK
+            placeholder="Ürün Ara"
+            disabled={
+              productsData?.length <= 0 || productsData == undefined
+                ? true
+                : false
+            }
+            inputSX={{ boxSizing: "inherit", height: "100%" }}
+            onChange={(e, value) => filterProducts(value)}
+          />
+          <Select
+            value={sortType}
+            sx={{ width: 200 }}
+            onChange={(e) => {
+              sortType = e.target.value;
+              sortProducts(e.target.value);
+            }}
+          >
+            <MenuItem value={-1}>None</MenuItem>
+            <MenuItem value={0}>Fiyat Artan</MenuItem>
+            <MenuItem value={1}>Fiyat Azalan</MenuItem>
+            <MenuItem value={2}>A-Z</MenuItem>
+            <MenuItem value={3}>Favoriler</MenuItem>
+          </Select>
+        </Paper>
+      );
+    },
+    [subCategories]
+  );
 
   const CellContent = (productsData, index) => {
     return (
@@ -204,6 +324,7 @@ export default function Products({
               boxShadow: "0px 0px 10px -1px rgba(0, 0, 0, 0.3)",
             }}
           />
+
           <Box sx={{ display: "flex" }}>
             {productsData[index].price.normal !=
               productsData[index].price.discounted && (
@@ -251,6 +372,15 @@ export default function Products({
         </Button>
         <IconButton
           onClick={() => {
+            setFavourite(productsData[index]);
+            setProductsData(productsData);
+          }}
+          sx={{ position: "absolute", bottom: 40, right: 10 }}
+        >
+          {isFavourite(productsData[index]) ? <Star /> : <StarOutline />}
+        </IconButton>
+        <IconButton
+          onClick={() => {
             selectProduct(productsData[index], false);
             setProductDetailWindow(true);
           }}
@@ -280,56 +410,6 @@ export default function Products({
     );
   };
 
-  useData(
-    API[selectedCategory],
-    (data) => {
-      setProductsData([]);
-      setTimeout(() => {
-        let array = [];
-        data.children.map(({ name }) =>
-          array.push({ name: name, value: name })
-        );
-        setSubCat(array);
-
-        setProductsData(
-          data.children[getIndexOfSubCategory(selectedSubCategory)]?.products
-        );
-        tempdata.current =
-          data.children[getIndexOfSubCategory(selectedSubCategory)]?.products;
-        onCount(
-          data.children[getIndexOfSubCategory(selectedSubCategory)]?.products
-            .length
-        );
-        setProductAmount(
-          data.children[getIndexOfSubCategory(selectedSubCategory)]?.products
-            .length
-        );
-      }, 1000);
-    },
-    () => {
-      let array = [];
-      if (selectedCategory == "all") {
-        setSubCat([]);
-        categories.map(({ value }) => {
-          if (value != "all") {
-            axios.get(API[value]).then((response) => {
-              response.data.children.map(({ products }) => {
-                array.push(...products);
-              });
-              setTimeout(() => {
-                setProductsData(array);
-                tempdata.current = array;
-                onProducts(array);
-                onCount(array.length);
-                setProductAmount(array.length);
-              }, 1000);
-            });
-          }
-        });
-      }
-    },
-    [selectedCategory, selectedSubCategory, open]
-  );
   return (
     <Dialog
       TransitionComponent={Transition}
@@ -357,6 +437,7 @@ export default function Products({
           width: "100%",
           overflow: "hidden",
           position: "relative",
+          backgroundColor: "#ecedf1",
         }}
       >
         <IconButton
@@ -372,19 +453,31 @@ export default function Products({
         </IconButton>
         <ButtonGroup
           elevation={0}
+          force={true}
           intialSelected="all"
           sx={{
-            zIndex: 3,
+            zIndex: 10,
             paddingTop: 5,
             paddingBottom: 1,
             "&::-webkit-scrollbar": { height: 0 },
           }}
           buttons={categories}
           onSelect={(v) => {
-            setProductsData([]); //emptying the products data
-            setSubCat([]);
-            setSelectedCategory(v); //indicating which category selected
-            // console.log(selectedCategory);
+            clear();
+            var datas;
+            setCategory(v);
+            setTimeout(() => {
+              if (v == "all") {
+                datas = getAllProducts();
+              } else if (v == "favourites") {
+                datas = JSON.parse(localStorage.getItem("favourites"));
+              } else {
+                datas = getCategorizedProducts(v);
+                setSubCategories(getSubCategories(v));
+              }
+              set(datas);
+              tempdata.current = datas;
+            }, 1000);
           }}
           borderRadius={10}
           spacing={10}
@@ -397,16 +490,17 @@ export default function Products({
             width: "100%",
             minHeight: 50,
             paddingBottom: 1,
-            zIndex: 1,
+            zIndex: 5,
+            position: "relative",
           }}
-          elevation={3}
+          elevation={search ? 3 : 0}
         >
           <ButtonGroup
             sx={{
               overflowY: "hidden",
               transition: "transform 0.2s ease",
               transform:
-                subCat?.length == 0 || selectedCategory == "all"
+                subCategories?.length == 0
                   ? "translate(-100%, 0px)"
                   : "translate(0px, 0px)",
               "&::-webkit-scrollbar": { height: 0 },
@@ -416,11 +510,15 @@ export default function Products({
             borderRadius={10}
             spacing={10}
             border="1px solid black"
-            // intialSelected={subCat[0]?.name}
-            buttons={subCat}
-            onSelect={(v) => {
-              setSelectedSubCategory(v);
+            buttons={subCategories}
+            onSelect={(v, e) => {
+              var datas;
+              if (v) datas = getCategorizedProducts(v);
+              else datas = getCategorizedProducts(category);
+              tempdata.current = datas;
+              set(datas);
             }}
+            elevation={0}
           />
           <Box
             sx={{
@@ -431,34 +529,15 @@ export default function Products({
               height: "100%",
             }}
           >
-            <TextField
-              disabled={
-                productsData?.length <= 0 || productsData == undefined
-                  ? true
-                  : false
-              }
-              sx={{
-                transition: "width 0.2s ease",
-                width: !search ? 0 : 200,
-                opacity: search ? 1 : 0,
-              }}
-              placeholder="Ürün Ara"
-              onChange={handleFilter}
-            />
             <IconButton
-              sx={{
-                fontSize: 30,
-                display: { md: "block", sm: "block", xs: "none" },
-              }}
+              sx={{ fontSize: 30 }}
               onClick={() => setSearch(!search)}
             >
-              <SearchOutlined fontSize="inherit" />
-            </IconButton>
-            <IconButton sx={{ fontSize: 30 }}>
               <FilterList fontSize="inherit" />
             </IconButton>
           </Box>
         </Paper>
+        <FilterBox open={search} />
         {productsData?.length == 0 ? (
           <Box height={700} display={"flex"} alignItems={"center"}>
             <CircularProgress />

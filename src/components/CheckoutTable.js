@@ -66,7 +66,6 @@ export const CheckoutTable = forwardRef(
                       <TableCell sx={{ padding: 0, textAlign: "center" }}>
                         <TextField
                           disabled={disabled}
-                          defaultValue={count}
                           autoComplete="off"
                           name={attributes.name}
                           value={count}

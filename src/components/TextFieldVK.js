@@ -1,73 +1,98 @@
-import { Box, Paper, TextField } from "@mui/material";
-import React, { useRef, useState } from "react";
+import {
+  Box,
+  IconButton,
+  InputAdornment,
+  OutlinedInput,
+  Paper,
+  TextField,
+} from "@mui/material";
+import React, { useEffect, useRef, useState } from "react";
 import VirtualKeyboard from "./VirtualKeyboard";
-import { motion } from "framer-motion";
+import { KeyboardAlt } from "@mui/icons-material";
 
 export default function TextFieldVK({
-  textFieldSX,
-  placeholder,
-  autoComplete,
+  value = "",
+  inputSX,
   divSX,
+  placeholder,
+  autoComplete = "off",
+  layout = "default",
   elevation = 0,
+  onChange = () => {},
 }) {
-  const [textInput, setInput] = useState("");
-  const [animateState, setAnimateState] = useState("inactive");
-  let keyboard = useRef();
+  const [textInput, setInput] = useState(value);
+  const [showKeyboard, setShowKeyboard] = useState(false);
+  const keyboard = useRef();
 
-  const variants = {
-    active: {
-      opacity: 1,
-      scaleY: 1,
-    },
-    inactive: {
-      opacity: 0,
-      scaleY: 0,
-    },
-  };
+  const [displayInfo, setDisplayInfo] = useState("block");
+
+  useEffect(() => {
+    if (!showKeyboard) {
+      setTimeout(() => {
+        setDisplayInfo("none");
+      }, 400);
+    }
+  }, [showKeyboard, textInput]);
+
   return (
     <Box
       sx={{
         ...divSX,
-        width: "100%",
-        position: "relative",
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "flex-start ",
       }}
     >
-      <TextField
-        sx={{ ...textFieldSX }}
+      <OutlinedInput
+        sx={{ ...inputSX }}
         placeholder={placeholder}
         autoComplete={autoComplete}
         value={textInput}
-        onFocus={() => {
-          setAnimateState("active");
+        onChange={(e) => {
+          setInput(e.target.value);
+          keyboard.current.setInput(e.target.value);
+          onChange(e, e.target.value);
         }}
+        endAdornment={
+          <InputAdornment position="end">
+            <IconButton
+              onClick={() => {
+                setDisplayInfo("block");
+                setShowKeyboard(true);
+              }}
+            >
+              <KeyboardAlt />
+            </IconButton>
+          </InputAdornment>
+        }
       />
-      <motion.div
-        style={{
+      <Paper
+        sx={{
           position: "absolute",
-          bottom: -350,
-          // display: !visible && "none",
-          zIndex: 10000,
+          transition: "top 0.5s ease,opacity 0.2s ease",
+          top: showKeyboard ? 210 : -50,
+          opacity: showKeyboard ? 1 : 0,
+          width: "50%",
+          zIndex: -10,
         }}
-        variants={variants}
-        animate={animateState}
-        transition={{ duration: 0.5 }}
+        elevation={elevation}
       >
-        <Paper elevation={elevation}>
-          <VirtualKeyboard
-            keyboardRef={keyboard}
-            layout="numeric"
-            onBlur={() => {
-              setAnimateState("inactive");
-            }}
-            onChangeInput={(input) => setInput(input)}
-            onDone={() => {
-              setAnimateState("inactive");
-            }}
-          />
-        </Paper>
-      </motion.div>
+        <VirtualKeyboard
+          sx={{
+            height: 0,
+            display: displayInfo,
+          }}
+          ref={keyboard}
+          layout={layout}
+          onBlur={() => setShowKeyboard(false)}
+          onChangeInput={(input) => {
+            setInput(input);
+            onChange(null, input);
+          }}
+          onDone={() => {
+            setShowKeyboard(false);
+          }}
+        />
+      </Paper>
     </Box>
   );
 }

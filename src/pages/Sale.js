@@ -8,6 +8,7 @@ import {
   TextField,
   Typography,
   Paper,
+  InputAdornment,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
@@ -20,14 +21,18 @@ import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import { closeSnackbar, enqueueSnackbar } from "notistack";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
-import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
+import { ArrowDownward, ArrowUpward, Done } from "@mui/icons-material";
 import { useAlert } from "../Hooks/useAlert";
 import useStore from "../Hooks/useStore";
+import useData from "../Hooks/useData";
+import API from "../productsAPI.json";
+import useProduct from "../Hooks/useProduct";
 
 export default function Sale() {
   const storeInfo = useStore();
   const navigate = useNavigate();
   const { setAlert } = useAlert();
+  const { setProducts, getAllProducts } = useProduct();
 
   const checkoutRef = useRef(null);
   const keyboard = useRef();
@@ -43,7 +48,11 @@ export default function Sale() {
   const [testID, setID] = useState();
 
   const addProductToCashout = ({ attributes, id, price, images, stock }) => {
-    if (!cashout.find((data) => data.attributes.name == attributes.name)) {
+    var product = cashout.find(
+      (data) => data.attributes.name == attributes.name
+    );
+    console.log(product?.count);
+    if (!product) {
       setCashout([
         ...cashout,
         {
@@ -59,38 +68,14 @@ export default function Sale() {
           stock: stock,
         },
       ]);
-      //pushing a snackbar to show the user which product has been added
-      enqueueSnackbar(attributes.name + " eklendi.", {
-        variant: "product",
-        img: images,
-      });
     } else {
-      let newArray = cashout.map((a) => {
-        var returnValue = { ...a };
-        if (a.attributes.name == attributes.name) {
-          if (a.count + 1 <= stock) {
-            returnValue = {
-              ...returnValue,
-              price: {
-                cashout: a.price.discounted + a.price.discounted,
-                normal: price.normal,
-                discounted: price.discounted,
-              },
-              count: a.count + 1,
-              stock: stock,
-            };
-            //pushing a snackbar to show the user which product has been added
-            enqueueSnackbar(attributes.name + " eklendi.", {
-              variant: "product",
-              img: images,
-            });
-          } else setAlert({ text: "Stok Yetersiz", type: "error" });
-        }
-
-        return returnValue;
-      });
-      setCashout(newArray);
+      changeProductAmount(parseFloat(product.count) + 1, id);
     }
+    //pushing a snackbar to show the user which product has been added
+    enqueueSnackbar(attributes.name + " eklendi.", {
+      variant: "product",
+      img: images,
+    });
   };
 
   const deleteSelected = () => {
@@ -108,30 +93,29 @@ export default function Sale() {
     let newArray = cashout.map((a) => {
       var returnValue = { ...a };
       if (a.id == id) {
-        var product = productsData.find(({ id }) => a.id == id);
-        if (amount <= product.stock)
+        if (amount <= a.stock)
           returnValue = {
             ...returnValue,
             price: {
               ...a.price,
-              cashout: product.price.discounted * amount,
+              cashout: a.price.discounted * amount,
             },
             count: amount,
           };
         else {
           setInputFields({
             ...inputFields,
-            [selectedInputField]: product.stock,
+            [selectedInputField]: a.stock,
           });
-          keyboard.current.setInput(product.stock.toString());
+          keyboard.current.setInput(a.stock.toString());
           setAlert({ text: "Stok Yetersiz", type: "error" });
           returnValue = {
             ...returnValue,
             price: {
               ...a.price,
-              cashout: product.price.discounted * product.stock,
+              cashout: a.price.discounted * a.stock,
             },
-            count: product.stock,
+            count: a.stock,
           };
         }
       }
@@ -151,6 +135,15 @@ export default function Sale() {
   useEffect(() => {
     keyboard.current.setInput(inputFields[selectedInputField]);
   }, [selectedInputField]);
+
+  useData(
+    Object.values(API),
+    (data) => {
+      setProducts(data);
+    },
+    () => {},
+    [API]
+  );
 
   return (
     <Box
@@ -204,8 +197,6 @@ export default function Sale() {
 
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <IconButton
-              disableElevation
-              // variant="contained"
               sx={{
                 height: 50,
               }}
@@ -219,8 +210,6 @@ export default function Sale() {
               <ArrowUpward />
             </IconButton>
             <IconButton
-              disableElevation
-              // variant="contained"
               sx={{
                 height: 50,
               }}
@@ -267,6 +256,7 @@ export default function Sale() {
             inputValues={inputFields}
             onFocus={(e, { id }) => {
               setSelectedInputField(e.target.name);
+              console.log(id);
               setID(id);
             }}
             selectionValues={selectedItems}
@@ -325,6 +315,32 @@ export default function Sale() {
                 [selectedInputField]: e.target.value,
               });
             }}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton
+                    onClick={() => {
+                      getAllProducts().map(
+                        ({ attributes, id, images, price, stock }) => {
+                          if (inputFields.barcode == attributes.barcodes[0]) {
+                            addProductToCashout({
+                              attributes: attributes,
+                              id: id,
+                              images: images,
+                              price: price,
+                              stock: stock,
+                            });
+                          }
+                        }
+                      );
+                      setInputFields({ ...inputFields, barcode: "" });
+                    }}
+                  >
+                    <Done />
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
           />
           <ProductsDialog
             open={selectListOpen}
@@ -379,8 +395,10 @@ export default function Sale() {
                       ...inputFields,
                       [selectedInputField]: input,
                     });
-                    if (selectedInputField != "barcode")
+                    if (selectedInputField != "barcode") {
+                      console.log(testID);
                       changeProductAmount(input, testID);
+                    }
                   }
                 }}
                 onDone={() => {

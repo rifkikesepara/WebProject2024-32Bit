@@ -10,6 +10,7 @@ import { ArrowLeft, ArrowRight } from "@mui/icons-material";
 
 export default function ButtonGroup({
   sx,
+  force = false,
   buttonSX = { height: 50, minWidth: 150 },
   buttons = [],
   spacing,
@@ -45,8 +46,10 @@ export default function ButtonGroup({
         exclusive
         value={selected}
         onChange={(e, v) => {
-          setSelected(v);
-          onSelect(v);
+          if (v != null || !force) {
+            setSelected(v);
+            onSelect(v, e);
+          }
         }}
       >
         <IconButton
