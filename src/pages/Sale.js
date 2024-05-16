@@ -9,6 +9,8 @@ import {
   Typography,
   Paper,
   InputAdornment,
+  Tooltip,
+  Stack,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
@@ -27,6 +29,7 @@ import useStore from "../Hooks/useStore";
 import useData from "../Hooks/useData";
 import API from "../productsAPI.json";
 import useProduct from "../Hooks/useProduct";
+import OfferBox from "../Components/OfferBox";
 
 export default function Sale() {
   const storeInfo = useStore();
@@ -38,8 +41,7 @@ export default function Sale() {
   const keyboard = useRef();
 
   const [selectedItems, setSelectedItems] = useState([]);
-  const [productsData, setProductsData] = useState([]);
-  const [inputFields, setInputFields] = useState({});
+  const [inputFields, setInputFields] = useState({ barcode: "" });
   const [selectedInputField, setSelectedInputField] = useState("");
   const [cashout, setCashout] = useState(
     JSON.parse(sessionStorage.getItem("cashout"))
@@ -51,7 +53,6 @@ export default function Sale() {
     var product = cashout.find(
       (data) => data.attributes.name == attributes.name
     );
-    console.log(product?.count);
     if (!product) {
       setCashout([
         ...cashout,
@@ -125,6 +126,21 @@ export default function Sale() {
     setCashout(newArray);
   };
 
+  const barcodeToProduct = () => {
+    getAllProducts().map(({ attributes, id, images, price, stock }) => {
+      if (inputFields.barcode == attributes.barcodes[0]) {
+        addProductToCashout({
+          attributes: attributes,
+          id: id,
+          images: images,
+          price: price,
+          stock: stock,
+        });
+      }
+    });
+    setInputFields({ ...inputFields, barcode: "" });
+  };
+
   const total = useMemo(() => {
     LOG("total calculated!", "yellow");
     let total = 0;
@@ -144,7 +160,6 @@ export default function Sale() {
     () => {},
     [API]
   );
-
   return (
     <Box
       sx={{
@@ -181,19 +196,19 @@ export default function Sale() {
           }}
           elevation={2}
         >
-          <IconButton sx={{ ml: 1, color: "black" }}>
-            <QrCodeScannerIcon sx={{ fontSize: 40 }} />
-            <Typography
+          <Tooltip title="FİYAT GÖR" arrow>
+            <IconButton
               sx={{
+                ml: 1,
+                overflow: "hidden",
                 color: "black",
-                padding: 0.5,
-                width: 100,
-                fontWeight: "bold",
               }}
             >
-              FİYAT GÖR
-            </Typography>
-          </IconButton>
+              <QrCodeScannerIcon sx={{ fontSize: 40 }} />
+            </IconButton>
+          </Tooltip>
+
+          <OfferBox />
 
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <IconButton
@@ -315,27 +330,13 @@ export default function Sale() {
                 [selectedInputField]: e.target.value,
               });
             }}
+            onKeyDown={(e) => {
+              if (e.key == "Enter") barcodeToProduct();
+            }}
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">
-                  <IconButton
-                    onClick={() => {
-                      getAllProducts().map(
-                        ({ attributes, id, images, price, stock }) => {
-                          if (inputFields.barcode == attributes.barcodes[0]) {
-                            addProductToCashout({
-                              attributes: attributes,
-                              id: id,
-                              images: images,
-                              price: price,
-                              stock: stock,
-                            });
-                          }
-                        }
-                      );
-                      setInputFields({ ...inputFields, barcode: "" });
-                    }}
-                  >
+                  <IconButton onClick={barcodeToProduct}>
                     <Done />
                   </IconButton>
                 </InputAdornment>
@@ -358,7 +359,6 @@ export default function Sale() {
               height: "100%",
             }}
             onSelectProduct={(data) => addProductToCashout(data)}
-            onProducts={(data) => setProductsData(data)}
           />
 
           <Box
@@ -396,7 +396,6 @@ export default function Sale() {
                       [selectedInputField]: input,
                     });
                     if (selectedInputField != "barcode") {
-                      console.log(testID);
                       changeProductAmount(input, testID);
                     }
                   }

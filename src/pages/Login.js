@@ -1,33 +1,28 @@
 import {
   Box,
-  Button,
-  Dialog,
-  InputAdornment,
   MenuItem,
   Paper,
   Select,
   TextField,
   Typography,
 } from "@mui/material";
-import Logo from "../Resources/32bitlogo.png";
 import { AccountCircle } from "@mui/icons-material";
 import HttpsIcon from "@mui/icons-material/Https";
-import VirtualKeyboard from "../Components/VirtualKeyboard";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { LoadingButton } from "@mui/lab";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import { useAlert } from "../Hooks/useAlert";
 import usePreferences from "../Hooks/usePreferences";
+import TextFieldVK from "../Components/TextFieldVK";
+import useStore from "../Hooks/useStore";
 
 export default function Login() {
   const user = { userCode: "admin", password: 123 };
 
-  const keyboard = useRef();
   const navigate = useNavigate();
+  const storeInfo = useStore();
 
-  const [currentInput, setCurrentInput] = useState("");
-  const [showDialog, setShowDialog] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const { theme, toggleTheme } = usePreferences();
@@ -39,6 +34,7 @@ export default function Login() {
       password: "",
     },
     onSubmit: (values) => {
+      console.log(values);
       setLoading(true);
       // alert(JSON.stringify(values, null, 2));
       if (
@@ -73,32 +69,21 @@ export default function Login() {
         },
         justifyContent: { xs: "center", sm: "center" },
         alignItems: { xs: "center", sm: "center" },
-        // backgroundColor: theme.background,
         backgroundColor: "#e7ecf1",
       }}
     >
-      {/* <Box
-        sx={{
-          width: { md: "50%" },
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <img src={Logo} width={200} />
-      </Box> */}
       <Paper
         sx={{
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          // width: { md: "40%", sm: "90%", xs: "90%" },
+          width: 614,
           p: 2,
         }}
         elevation={3}
       >
-        <form onSubmit={formik.handleSubmit}>
+        <form onSubmit={formik.handleSubmit} style={{ width: "100%" }}>
           <Box sx={{ width: "100%", textAlign: "center" }}>
             <Typography textAlign={"inherit"} variant="h4" fontWeight={"bold"}>
               Hoşgeldiniz!
@@ -107,49 +92,36 @@ export default function Login() {
               Lütfen kullanıcı kodu ve şifrenizi giriniz.
             </Typography>
           </Box>
-          <TextField
+          <TextFieldVK
             disabled={loading}
+            placeholder="Kullanıcı Kodu"
             name="userCode"
-            sx={{ marginBlock: 2 }}
-            onChange={formik.handleChange}
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <AccountCircle />
-                </InputAdornment>
-              ),
-            }}
-            fullWidth
-            placeholder="Kulanıcı Kodu"
-            autoComplete="off"
+            inputSX={{ width: "100%" }}
             value={formik.values.userCode}
-            onClick={() => {
-              setShowDialog(true);
-              setCurrentInput("userCode");
+            onChange={(event, value) => {
+              formik.setValues({ ...formik.values, userCode: value });
             }}
+            onClear={() => {
+              formik.setValues({ ...formik.values, userCode: "" });
+            }}
+            startAdornment={<AccountCircle />}
           />
-          <TextField
+          <TextFieldVK
             disabled={loading}
-            type="password"
-            name="password"
-            sx={{ marginBlock: 2 }}
-            onChange={formik.handleChange}
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <HttpsIcon />
-                </InputAdornment>
-              ),
-            }}
-            fullWidth
             placeholder="Şifre"
-            autoComplete="off"
+            name="password"
+            type="password"
+            inputSX={{ width: "100%", marginBlock: 1 }}
             value={formik.values.password}
-            onClick={() => {
-              setShowDialog(true);
-              setCurrentInput("password");
+            onChange={(event, value) => {
+              formik.setValues({ ...formik.values, password: value });
             }}
+            onClear={() => {
+              formik.setValues({ ...formik.values, password: "" });
+            }}
+            startAdornment={<HttpsIcon />}
           />
+
           <LoadingButton
             type="submit"
             variant="contained"
@@ -157,90 +129,11 @@ export default function Login() {
             fullWidth
             sx={{ paddingBlock: 2 }}
             loading={loading}
-            // href="/home"
           >
             Giriş
           </LoadingButton>
         </form>
-        <Dialog
-          open={showDialog}
-          onClose={() => setShowDialog(false)}
-          maxWidth="md"
-          PaperProps={{
-            sx: {
-              width: "100%",
-              height: "100%",
-              alignItems: "center",
-              justifyContent: "center",
-            },
-          }}
-        >
-          <Box sx={{ width: "90%" }}>
-            <Typography textAlign={"center"}>
-              {currentInput == "userCode" ? "Kullanıcı kodunuzu" : "Şifrenizi"}{" "}
-              giriniz.
-            </Typography>
-            <Box sx={{ display: "flex" }}>
-              <TextField
-                name={currentInput}
-                value={
-                  currentInput == "userCode"
-                    ? formik.values.userCode
-                    : formik.values.password
-                }
-                fullWidth
-                autoComplete="off"
-                onChange={(event) => {
-                  formik.handleChange(event);
-                  const input = event.target.value;
-                  keyboard.current?.setInput(input);
-                }}
-              />
-              <Button
-                variant="contained"
-                disableElevation
-                onClick={() => {
-                  keyboard.current?.setInput("");
-                  console.log(keyboard.current);
-                  formik.setValues({ ...formik.values, [currentInput]: "" });
-                }}
-              >
-                Sil
-              </Button>
-            </Box>
-          </Box>
-          <Box
-            sx={{
-              width: "90%",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <VirtualKeyboard
-              sx={{ width: "100%" }}
-              ref={keyboard}
-              onChangeInput={(input) =>
-                formik.setValues({ ...formik.values, [currentInput]: input })
-              }
-              onPress={(key) => {
-                if (key == "{enter}") {
-                  setShowDialog(false);
-                }
-              }}
-            />
-            {/* <Button
-              variant="contained"
-              disableElevation
-              onClick={() => {
-                setShowDialog(false);
-              }}
-              sx={{ padding: 5 }}
-            >
-              Giriş
-            </Button> */}
-          </Box>
-        </Dialog>
+
         <Box
           sx={{
             display: "flex",
@@ -249,7 +142,7 @@ export default function Login() {
             alignItems: "center",
           }}
         >
-          <Typography>Version 1.2.3</Typography>
+          <Typography>Version {storeInfo.version}</Typography>
           <Select>
             <MenuItem>Türkçe</MenuItem>
             <MenuItem>İngilizce</MenuItem>

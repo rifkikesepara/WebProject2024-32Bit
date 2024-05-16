@@ -26,9 +26,9 @@ import {
   ArrowUpward,
   FilterList,
   InfoRounded,
+  Search,
   Star,
   StarOutline,
-  StartSharp,
 } from "@mui/icons-material";
 import CloseIcon from "@mui/icons-material/Close";
 import ProductDetail from "./ProductDetail";
@@ -94,12 +94,11 @@ const categories = [
 ];
 
 export default function Products({
-  sx,
-  open,
-  onClose = () => {},
-  onSelectProduct = () => {},
-  onProducts = () => {},
-  onCount = () => {},
+  sx = {},
+  open = false,
+  onClose = (e) => {},
+  onSelectProduct = (product) => {},
+  onCount = (amount) => {},
 }) {
   const Transition = useMemo(
     () =>
@@ -148,6 +147,7 @@ export default function Products({
       var prd = getAllProducts();
       set(prd);
       tempdata.current = prd;
+      setFavourites(JSON.parse(localStorage.getItem("favourites")));
     }, 1000);
   }, [open]);
 
@@ -251,13 +251,9 @@ export default function Products({
         >
           <TextFieldVK
             placeholder="Ürün Ara"
-            disabled={
-              productsData?.length <= 0 || productsData == undefined
-                ? true
-                : false
-            }
             inputSX={{ boxSizing: "inherit", height: "100%" }}
             onChange={(e, value) => filterProducts(value)}
+            startAdornment={<Search />}
           />
           <Select
             value={sortType}
@@ -299,7 +295,6 @@ export default function Products({
             transition: "transform 0.2s ease", //animation
             backgroundColor: "white",
             boxShadow: "0px 0px 20px -1px rgba(0, 0, 0, 0.3)",
-            //scaling animation when it's hovered
             "&:hover": {
               transition: "transform 0.2s ease",
               cursor: "pointer",
@@ -370,15 +365,18 @@ export default function Products({
             {productsData[index].attributes.name}
           </Typography>
         </Button>
-        <IconButton
-          onClick={() => {
-            setFavourite(productsData[index]);
-            setProductsData(productsData);
-          }}
-          sx={{ position: "absolute", bottom: 40, right: 10 }}
+        <Paper
+          sx={{ position: "absolute", top: 60, right: -10, borderRadius: 100 }}
         >
-          {isFavourite(productsData[index]) ? <Star /> : <StarOutline />}
-        </IconButton>
+          <IconButton
+            onClick={() => {
+              setFavourite(productsData[index]);
+              setProductsData(productsData);
+            }}
+          >
+            {isFavourite(productsData[index]) ? <Star /> : <StarOutline />}
+          </IconButton>
+        </Paper>
         <IconButton
           onClick={() => {
             selectProduct(productsData[index], false);
@@ -471,6 +469,7 @@ export default function Products({
                 datas = getAllProducts();
               } else if (v == "favourites") {
                 datas = JSON.parse(localStorage.getItem("favourites"));
+                setFavourites(datas);
               } else {
                 datas = getCategorizedProducts(v);
                 setSubCategories(getSubCategories(v));

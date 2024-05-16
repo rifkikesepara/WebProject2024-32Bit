@@ -34,8 +34,8 @@ const englishLayout = {
 export const VirtualKeyboard = forwardRef(
   (
     {
+      initialInput = "",
       onChangeInput = () => {},
-      clear,
       sx,
       onBlur = () => {},
       onInit = () => {},
@@ -83,6 +83,10 @@ export const VirtualKeyboard = forwardRef(
       };
     }, [boxRef]);
 
+    useEffect(() => {
+      ref.current.setInput(initialInput);
+    }, [initialInput]);
+
     const onChange = (input) => {
       onChangeInput(input);
       setState({ input });
@@ -98,7 +102,7 @@ export const VirtualKeyboard = forwardRef(
 
     const onKeyPress = (button, e) => {
       onPress(button);
-      e.preventDefault(); //preventing default event to not clicking somthing else behind the keyboard
+      // e.preventDefault(); //preventing default event to not clicking somthing else behind the keyboard
       if (button === "{cancel}") ref.current.setInput("");
       if (button == "{tick}") {
         e.preventDefault();
@@ -114,6 +118,7 @@ export const VirtualKeyboard = forwardRef(
     return (
       <Box sx={{ ...sx }} ref={boxRef}>
         <Keyboard
+          keyboardRef={(r) => (ref.current = r)}
           onInit={() => onInit()}
           theme={adjustLayout().class}
           buttonTheme={[
@@ -128,7 +133,6 @@ export const VirtualKeyboard = forwardRef(
             "{enter}": `<img src=${logo} width="50px" />`,
             "{cancel}": "C",
           }}
-          keyboardRef={(r) => (ref.current = r)}
           layout={adjustLayout().layout}
           onChange={onChange}
           onKeyPress={onKeyPress}
