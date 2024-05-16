@@ -4,72 +4,83 @@ import {
   AccordionSummary,
   Box,
   Button,
-  Dialog,
   IconButton,
   TextField,
   Typography,
   Paper,
+  InputAdornment,
+  Tooltip,
+  Stack,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { motion } from "framer-motion";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
-import Products from "../Components/Products";
+import ProductsDialog from "../Components/ProductsDialog";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
-import { closeSnackbar } from "notistack";
-import CloseIcon from "@mui/icons-material/Close";
+import { closeSnackbar, enqueueSnackbar } from "notistack";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
+import { ArrowDownward, ArrowUpward, Done } from "@mui/icons-material";
+import { useAlert } from "../Hooks/useAlert";
+import useStore from "../Hooks/useStore";
+import useData from "../Hooks/useData";
+import API from "../productsAPI.json";
+import useProduct from "../Hooks/useProduct";
+import OfferBox from "../Components/OfferBox";
 import { useTranslation } from "react-i18next";
+import usePreferences from "../Hooks/usePreferences";
 
 export default function Sale() {
-  const { t } = useTranslation();
+  const storeInfo = useStore();
   const navigate = useNavigate();
+  const { theme } = usePreferences();
+  const { t } = useTranslation();
+  const { setAlert } = useAlert();
+  const { setProducts, getAllProducts } = useProduct();
 
-  const mainDiv = useRef();
-  let keyboard = useRef();
+  const checkoutRef = useRef(null);
+  const keyboard = useRef();
 
   const [selectedItems, setSelectedItems] = useState([]);
-  const [productsData, setProductsData] = useState([]);
-  const [inputFields, setInputFields] = useState({});
+  const [inputFields, setInputFields] = useState({ barcode: "" });
   const [selectedInputField, setSelectedInputField] = useState("");
   const [cashout, setCashout] = useState(
-    JSON.parse(localStorage.getItem("cashout"))
+    JSON.parse(sessionStorage.getItem("cashout"))
   );
-  const [productAmount, setProductAmount] = useState(0);
   const [selectListOpen, setSelectListOpen] = useState(false);
   const [testID, setID] = useState();
 
-  const addProductToCashout = ({ attributes, id, price, images }) => {
-    if (!cashout.find((data) => data.name == attributes.name)) {
+  const addProductToCashout = ({ attributes, id, price, images, stock }) => {
+    var product = cashout.find(
+      (data) => data.attributes.name == attributes.name
+    );
+    if (!product) {
       setCashout([
         ...cashout,
         {
           id: id,
-          name: attributes.name,
-          price: price.normal,
+          attributes: attributes,
+          price: {
+            cashout: price.discounted,
+            normal: price.normal,
+            discounted: price.discounted,
+          },
           images: images,
           count: 1,
+          stock: stock,
         },
       ]);
     } else {
-      let newArray = cashout.map((a) => {
-        var returnValue = { ...a };
-        if (a.name == attributes.name) {
-          returnValue = {
-            ...returnValue,
-            price: a.price + a.price,
-            count: a.count + 1,
-          };
-        }
-
-        return returnValue;
-      });
-      setCashout(newArray);
+      changeProductAmount(parseFloat(product.count) + 1, id);
     }
+    //pushing a snackbar to show the user which product has been added
+    enqueueSnackbar(attributes.name + " eklendi.", {
+      variant: "product",
+      img: images,
+    });
   };
 
   const deleteSelected = () => {
@@ -87,12 +98,31 @@ export default function Sale() {
     let newArray = cashout.map((a) => {
       var returnValue = { ...a };
       if (a.id == id) {
-        returnValue = {
-          ...returnValue,
-          price:
-            productsData.find(({ id }) => a.id == id).price.normal * amount,
-          count: amount,
-        };
+        if (amount <= a.stock)
+          returnValue = {
+            ...returnValue,
+            price: {
+              ...a.price,
+              cashout: a.price.discounted * amount,
+            },
+            count: amount,
+          };
+        else {
+          setInputFields({
+            ...inputFields,
+            [selectedInputField]: a.stock,
+          });
+          keyboard.current.setInput(a.stock.toString());
+          setAlert({ text: "Stok Yetersiz", type: "error" });
+          returnValue = {
+            ...returnValue,
+            price: {
+              ...a.price,
+              cashout: a.price.discounted * a.stock,
+            },
+            count: a.stock,
+          };
+        }
       }
 
       return returnValue;
@@ -100,10 +130,25 @@ export default function Sale() {
     setCashout(newArray);
   };
 
+  const barcodeToProduct = () => {
+    getAllProducts().map(({ attributes, id, images, price, stock }) => {
+      if (inputFields.barcode == attributes.barcodes[0]) {
+        addProductToCashout({
+          attributes: attributes,
+          id: id,
+          images: images,
+          price: price,
+          stock: stock,
+        });
+      }
+    });
+    setInputFields({ ...inputFields, barcode: "" });
+  };
+
   const total = useMemo(() => {
     LOG("total calculated!", "yellow");
     let total = 0;
-    cashout.map(({ price }) => (total = total + price));
+    cashout.map(({ price }) => (total = total + price.cashout));
     return total / 100;
   }, [cashout, cashout.length]);
 
@@ -111,10 +156,14 @@ export default function Sale() {
     keyboard.current.setInput(inputFields[selectedInputField]);
   }, [selectedInputField]);
 
-  useEffect(() => {
-    mainDiv.current?.scrollIntoView({ behavior: "smooth" });
-  }, [cashout.length]);
-
+  useData(
+    Object.values(API),
+    (data) => {
+      setProducts(data);
+    },
+    () => {},
+    [API]
+  );
   return (
     <Box
       sx={{
@@ -133,7 +182,7 @@ export default function Sale() {
           flexDirection: "column",
           overflowY: "hidden",
           height: "100vh",
-          backgroundColor: "#e7ecf1",
+          backgroundColor: theme.palette.background.default,
           zIndex: 2,
         }}
       >
@@ -143,6 +192,7 @@ export default function Sale() {
             // borderBottom: 1,
             display: "flex",
             justifyContent: "space-between",
+            alignItems: "center",
             width: "95%",
             borderRadius: 7,
             marginBlock: 1,
@@ -150,34 +200,57 @@ export default function Sale() {
           }}
           elevation={2}
         >
-          <IconButton sx={{ ml: 1, color: "black" }}>
-            <QrCodeScannerIcon sx={{ fontSize: 40 }} />
-            <motion.div
-              style={{ display: "flex", alignItems: "center" }}
-              initial={{ opacity: 0, scaleX: 0 }}
-              animate={{ opacity: 1, scaleX: 1 }}
-              transition={{ duration: 1 }}
+          <Tooltip title="FİYAT GÖR" arrow>
+            <IconButton
+              sx={{
+                ml: 1,
+                overflow: "hidden",
+                color: theme.palette.text.primary,
+              }}
             >
-              <Typography
-                sx={{
-                  color: "black",
-                  padding: 0.5,
-                  fontWeight: "bold",
-                }}
-              >
-                {t("checkPrice").toUpperCase()}
-              </Typography>
-            </motion.div>
-          </IconButton>
-          <IconButton
-            onClick={deleteSelected}
-            disabled={selectedItems.length == 0 ? true : false}
-            aria-label="delete"
-            sx={{ fontSize: 40, marginRight: 2, color: "black" }}
-            color="black"
-          >
-            <DeleteIcon fontSize="inherit" color="inherit" />
-          </IconButton>
+              <QrCodeScannerIcon sx={{ fontSize: 40 }} />
+            </IconButton>
+          </Tooltip>
+
+          <OfferBox />
+
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <IconButton
+              sx={{
+                height: 50,
+              }}
+              onClick={() =>
+                checkoutRef.current.scroll({
+                  behavior: "smooth",
+                  top: checkoutRef.current.scrollTop - 250,
+                })
+              }
+            >
+              <ArrowUpward />
+            </IconButton>
+            <IconButton
+              sx={{
+                height: 50,
+              }}
+              onClick={() =>
+                checkoutRef.current.scroll({
+                  behavior: "smooth",
+                  top: checkoutRef.current.scrollTop + 250,
+                })
+              }
+            >
+              <ArrowDownward />
+            </IconButton>
+            <IconButton
+              onClick={deleteSelected}
+              disabled={selectedItems.length == 0 ? true : false}
+              aria-label="delete"
+              sx={{ fontSize: 40, marginRight: 2 }}
+              color="black"
+            >
+              <DeleteIcon fontSize="inherit" color="inherit" />
+            </IconButton>
+          </Box>
         </Paper>
         <Paper
           sx={{
@@ -187,19 +260,22 @@ export default function Sale() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            backgroundColor: "white",
+            // backgroundColor: "white",
             overflow: "hidden",
             // borderTopLeftRadius: 10,
             // borderTopRightRadius: 10,
             borderRadius: 7,
+            position: "relative",
           }}
           elevation={5}
         >
           <CheckoutTable
+            ref={checkoutRef}
             data={cashout}
             inputValues={inputFields}
             onFocus={(e, { id }) => {
               setSelectedInputField(e.target.name);
+              console.log(id);
               setID(id);
             }}
             selectionValues={selectedItems}
@@ -238,7 +314,7 @@ export default function Sale() {
           flexDirection: "column",
           justifyContent: "space-between",
           alignItems: "center",
-          backgroundColor: "#e7ecf1",
+          backgroundColor: theme.palette.background.default,
         }}
       >
         <Box sx={{ marginBlock: "auto" }}>
@@ -262,65 +338,37 @@ export default function Sale() {
                 [selectedInputField]: e.target.value,
               });
             }}
+            onKeyDown={(e) => {
+              if (e.key == "Enter") barcodeToProduct();
+            }}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton onClick={barcodeToProduct}>
+                    <Done />
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
           />
-
-          <Dialog
-            maxWidth="xl"
+          <ProductsDialog
             open={selectListOpen}
             onClose={() => {
               setSelectListOpen(false);
               closeSnackbar();
             }}
-            PaperProps={{ sx: { borderRadius: 7 } }}
-          >
-            <Box
-              width={"100%"}
-              height={"100vh"}
-              overflow={"hidden"}
-              position={"relative"}
-            >
-              <IconButton
-                sx={{
-                  marginLeft: "auto",
-                  position: "absolute",
-                  right: 10,
-                  zIndex: 11,
-                }}
-                onClick={() => {
-                  setSelectListOpen(false);
-                  closeSnackbar();
-                }}
-              >
-                <CloseIcon />
-              </IconButton>
-              <Products
-                sx={{
-                  width: "100%",
-                  display: "flex",
-                  flexWrap: "wrap",
-                  justifyContent: "space-around",
-                  paddingBottom: 20,
-                  marginBottom: "auto",
-                  height: "100%",
-                }}
-                onSelectProduct={(data) => {
-                  addProductToCashout(data);
-                  console.log(cashout);
-                }}
-                onProducts={(data) => setProductsData(data)}
-                onCount={(amount) => setProductAmount(amount)}
-              />
-            </Box>
-            <Typography
-              sx={{
-                textAlign: "center",
-                boxShadow: "10px 20px 50px 70px white",
-                zIndex: 100,
-              }}
-            >
-              {t("productAmount")}: {productAmount}
-            </Typography>
-          </Dialog>
+            sx={{
+              width: "100%",
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-around",
+              paddingBottom: 20,
+              marginBottom: "auto",
+              height: "100%",
+            }}
+            onSelectProduct={(data) => addProductToCashout(data)}
+          />
+
           <Box
             sx={{
               display: "flex",
@@ -340,23 +388,31 @@ export default function Sale() {
             >
               {t("addProductText")}
             </Button>
-            <VirtualKeyboard
-              keyboardRef={keyboard}
-              layout="cashier"
-              onChangeInput={(input) => {
-                if (selectedInputField != "") {
-                  setInputFields({
-                    ...inputFields,
-                    [selectedInputField]: input,
-                  });
-                  if (selectedInputField != "barcode")
-                    changeProductAmount(input, testID);
-                }
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
               }}
-              onDone={() => {
-                setSelectedInputField("");
-              }}
-            />
+            >
+              <VirtualKeyboard
+                ref={keyboard}
+                layout="cashier"
+                onChangeInput={(input) => {
+                  if (selectedInputField != "") {
+                    setInputFields({
+                      ...inputFields,
+                      [selectedInputField]: input,
+                    });
+                    if (selectedInputField != "barcode") {
+                      changeProductAmount(input, testID);
+                    }
+                  }
+                }}
+                onDone={() => {
+                  setSelectedInputField("");
+                }}
+              />
+            </Box>
             <Box
               sx={{
                 display: "flex",
@@ -372,6 +428,7 @@ export default function Sale() {
                 {t("goBack")}
               </Button>
               <Button
+                disabled={!storeInfo.online}
                 variant="contained"
                 disableElevation
                 color="secondary"
@@ -380,7 +437,7 @@ export default function Sale() {
                   fontSize: 20,
                 }}
                 onClick={() => {
-                  localStorage.setItem("cashout", JSON.stringify(cashout));
+                  sessionStorage.setItem("cashout", JSON.stringify(cashout));
                   navigate("./payment");
                 }}
               >
@@ -393,7 +450,7 @@ export default function Sale() {
           sx={{
             position: "sticky",
             bottom: 0,
-            backgroundColor: "#e7ecf1",
+            backgroundColor: theme.palette.background.default,
             width: "100%",
             display: "flex",
             justifyContent: "flex-start",
@@ -407,13 +464,12 @@ export default function Sale() {
               marginLeft: 10,
               height: 15,
               width: 15,
-              backgroundColor: "green",
-              // boxShadow: "0px 0px 8px 0.5px green",
+              backgroundColor: storeInfo.online ? "green" : "red",
               borderRadius: 200,
               marginRight: 10,
             }}
           ></div>
-          <Typography>{t("storeOnline")}</Typography>
+          <Typography color={"primary"}>{t("storeOnline")}</Typography>
         </Box>
       </Box>
     </Box>

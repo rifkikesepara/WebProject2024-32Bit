@@ -19,20 +19,24 @@ import { motion } from "framer-motion";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
+import { useAlert } from "../Hooks/useAlert";
 import { useTranslation } from "react-i18next";
+import usePreferences from "../Hooks/usePreferences";
 
 export default function Payment() {
+  const { theme } = usePreferences();
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const { setAlert } = useAlert();
   const mainDiv = useRef();
-  let keyboard = useRef();
+  const keyboard = useRef();
 
   const [selectedItems, setSelectedItems] = useState([]);
-  const [payment, setPayment] = useState({ cash: 0, card: 0 });
-  const [inputFields, setInputFields] = useState({});
+  const [payment, setPayment] = useState({ cash: 0, card: 0, change: 0 });
+  const [inputFields, setInputFields] = useState({ amount: "" });
   const [selectedInputField, setSelectedInputField] = useState("");
   const [cashout, setCashout] = useState(
-    JSON.parse(localStorage.getItem("cashout"))
+    JSON.parse(sessionStorage.getItem("cashout"))
   );
   const [testID, setID] = useState();
 
@@ -51,13 +55,11 @@ export default function Payment() {
     let newArray = cashout.map((a) => {
       var returnValue = { ...a };
       if (a.id == id && amount != 0) {
-        let unitPrice =
-          cashout.find(({ id }) => a.id == id).price /
-          cashout.find(({ id }) => a.id == id).count;
+        let unitPrice = cashout.find(({ id }) => a.id == id).price.discounted;
         console.log("Unit Price: " + unitPrice);
         returnValue = {
           ...returnValue,
-          price: unitPrice * amount,
+          price: { ...a.price, cashout: unitPrice * amount },
           count: amount,
         };
       }
@@ -73,13 +75,34 @@ export default function Payment() {
     keyboard.current.setInput("");
     switch (e.target.name) {
       case "card":
-        if (paymentAmount <= total) {
-          setPayment({ ...payment, card: paymentAmount });
+        if (paymentAmount <= due) {
+          setPayment({
+            ...payment,
+            card: paymentAmount,
+            date: new Date().toLocaleString(),
+          });
+        } else {
+          setAlert({
+            text: "Kredi Kartıyla Kalandan Fazla Ödeme Yapamazsın!",
+            type: "error",
+          });
         }
         break;
       case "cash":
-        if (paymentAmount <= total) {
-          setPayment({ ...payment, cash: paymentAmount });
+        if (paymentAmount <= due) {
+          setPayment({
+            ...payment,
+            change: 0,
+            cash: paymentAmount,
+            date: new Date().toLocaleString(),
+          });
+        } else {
+          setPayment({
+            ...payment,
+            cash: paymentAmount,
+            change: (paymentAmount - (total - payment.card)).toFixed(2),
+            date: new Date().toLocaleString(),
+          });
         }
         break;
     }
@@ -88,10 +111,10 @@ export default function Payment() {
   const total = useMemo(() => {
     LOG("total calculated!", "yellow");
     let total = 0;
-    cashout.map(({ price }) => (total = total + price));
+    cashout.map(({ price }) => (total = total + price.cashout));
     return total / 100;
   }, [cashout, cashout.length]);
-  let due = total - (payment.cash + payment.card);
+  let due = payment.change > 0 ? 0 : total - (payment.cash + payment.card);
 
   useEffect(() => {
     keyboard.current.setInput(inputFields[selectedInputField]);
@@ -119,7 +142,7 @@ export default function Payment() {
           flexDirection: "column",
           overflowY: "hidden",
           height: "100vh",
-          backgroundColor: "#e7ecf1",
+          backgroundColor: theme.palette.background.default,
           zIndex: 2,
         }}
       >
@@ -136,7 +159,7 @@ export default function Payment() {
           }}
           elevation={2}
         >
-          <IconButton sx={{ ml: 1, color: "black" }}>
+          <IconButton sx={{ ml: 1 }}>
             <QrCodeScannerIcon sx={{ fontSize: 40 }} />
             <motion.div
               style={{ display: "flex", alignItems: "center" }}
@@ -146,7 +169,6 @@ export default function Payment() {
             >
               <Typography
                 sx={{
-                  color: "black",
                   padding: 0.5,
                   fontWeight: "bold",
                 }}
@@ -159,7 +181,7 @@ export default function Payment() {
             onClick={deleteSelected}
             disabled={selectedItems.length == 0 ? true : false}
             aria-label="delete"
-            sx={{ fontSize: 40, marginRight: 2, color: "black" }}
+            sx={{ fontSize: 40, marginRight: 2 }}
             color="black"
           >
             <DeleteIcon fontSize="inherit" color="inherit" />
@@ -169,14 +191,10 @@ export default function Payment() {
           sx={{
             height: "87vh",
             width: "95%",
-            // overflowY: "scroll",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            backgroundColor: "white",
             overflow: "hidden",
-            // borderTopLeftRadius: 10,
-            // borderTopRightRadius: 10,
             borderRadius: 7,
           }}
           elevation={5}
@@ -227,9 +245,13 @@ export default function Payment() {
             <Divider />
             <AccordionDetails>
               <Typography sx={{ color: "red", fontWeight: "bold" }}>
-                {t("due").toUpperCase()}:{" "}
-                {total - (payment.cash + payment.card)}₺
+                {t("due").toUpperCase()}: {due.toFixed(2)}₺
               </Typography>
+              {payment.change != 0 && (
+                <Typography sx={{ color: "red", fontWeight: "bold" }}>
+                  PARA ÜSTÜ: {payment.change}₺
+                </Typography>
+              )}
             </AccordionDetails>
           </Accordion>
         </Paper>
@@ -242,7 +264,7 @@ export default function Payment() {
           flexDirection: "column",
           justifyContent: "space-between",
           alignItems: "center",
-          backgroundColor: "#e7ecf1",
+          backgroundColor: theme.palette.background.default,
         }}
       >
         <Box sx={{ marginBlock: "auto" }}>
@@ -279,6 +301,7 @@ export default function Payment() {
               }}
               onClick={() => {
                 setInputFields({ ...inputFields, amount: due });
+                keyboard.current.setInput(due.toString());
               }}
             >
               {t("due").toUpperCase()}
@@ -292,26 +315,26 @@ export default function Payment() {
             }}
           >
             <Button
+              disabled={inputFields.amount == "" ? true : false}
               name="cash"
               variant="contained"
               disableElevation
               sx={{
                 width: 160,
                 height: 80,
-                background: "green",
               }}
               onClick={handleClick}
             >
               {t("cash")}
             </Button>
             <Button
+              disabled={inputFields.amount == "" ? true : false}
               name="card"
               variant="contained"
               disableElevation
               sx={{
                 width: 160,
                 height: 80,
-                background: "blue",
               }}
               onClick={handleClick}
             >
@@ -328,7 +351,7 @@ export default function Payment() {
             }}
           >
             <VirtualKeyboard
-              keyboardRef={keyboard}
+              ref={keyboard}
               layout="cashier"
               onChangeInput={(input) => {
                 if (selectedInputField != "") {
@@ -368,7 +391,8 @@ export default function Payment() {
                   fontSize: 20,
                 }}
                 onClick={() => {
-                  localStorage.setItem("payment", JSON.stringify(payment));
+                  sessionStorage.setItem("cashout", JSON.stringify(cashout));
+                  sessionStorage.setItem("payment", JSON.stringify(payment));
                   navigate("./result");
                 }}
               >
@@ -381,7 +405,7 @@ export default function Payment() {
           sx={{
             position: "sticky",
             bottom: 0,
-            backgroundColor: "#e7ecf1",
+            backgroundColor: theme.palette.background.default,
             width: "100%",
             display: "flex",
             justifyContent: "flex-start",
@@ -401,7 +425,7 @@ export default function Payment() {
               marginRight: 10,
             }}
           ></div>
-          <Typography>{t("storeOnline")}</Typography>
+          <Typography color={"primary"}>{t("storeOnline")}</Typography>
         </Box>
       </Box>
     </Box>

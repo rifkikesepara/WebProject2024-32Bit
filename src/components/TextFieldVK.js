@@ -1,73 +1,181 @@
-import { Box, Paper, TextField } from "@mui/material";
-import React, { useRef, useState } from "react";
+import {
+  Box,
+  Button,
+  Dialog,
+  IconButton,
+  InputAdornment,
+  OutlinedInput,
+  Paper,
+  Stack,
+  TextField,
+} from "@mui/material";
+import React, { useEffect, useRef, useState } from "react";
 import VirtualKeyboard from "./VirtualKeyboard";
-import { motion } from "framer-motion";
+import { KeyboardAlt } from "@mui/icons-material";
 
 export default function TextFieldVK({
-  textFieldSX,
-  placeholder,
-  autoComplete,
+  disabled = false,
+  value = "",
+  name = "",
+  type = "text",
+  inputSX,
   divSX,
+  placeholder,
+  autoComplete = "off",
+  layout = "default",
   elevation = 0,
+  dialog = false,
+  startAdornment,
+  onChange = (event, value) => {},
+  onClear = () => {},
 }) {
-  const [textInput, setInput] = useState("");
-  const [animateState, setAnimateState] = useState("inactive");
-  let keyboard = useRef();
+  const keyboard = useRef();
 
-  const variants = {
-    active: {
-      opacity: 1,
-      scaleY: 1,
-    },
-    inactive: {
-      opacity: 0,
-      scaleY: 0,
-    },
+  const [textInput, setInput] = useState(value);
+  const [showKeyboard, setShowKeyboard] = useState(false);
+  const [displayInfo, setDisplayInfo] = useState("block");
+
+  const handleChange = (event, value) => {
+    setInput(value);
+    keyboard?.current?.setInput(value);
+    onChange(event, value);
   };
+
+  useEffect(() => {
+    if (!showKeyboard) {
+      setTimeout(() => {
+        setDisplayInfo("none");
+      }, 400);
+    }
+  }, [showKeyboard, textInput]);
+
   return (
     <Box
       sx={{
         ...divSX,
-        width: "100%",
-        position: "relative",
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "flex-start ",
       }}
     >
-      <TextField
-        sx={{ ...textFieldSX }}
+      <OutlinedInput
+        disabled={disabled}
+        type={type}
+        sx={{ ...inputSX }}
+        name={name}
         placeholder={placeholder}
         autoComplete={autoComplete}
         value={textInput}
-        onFocus={() => {
-          setAnimateState("active");
+        onChange={(e) => {
+          handleChange(e, e.target.value);
         }}
+        startAdornment={
+          <InputAdornment position="start">{startAdornment}</InputAdornment>
+        }
+        endAdornment={
+          <InputAdornment position="end">
+            <IconButton
+              disabled={disabled}
+              onClick={() => {
+                setDisplayInfo("block");
+                setShowKeyboard(true);
+              }}
+            >
+              <KeyboardAlt />
+            </IconButton>
+          </InputAdornment>
+        }
       />
-      <motion.div
-        style={{
-          position: "absolute",
-          bottom: -350,
-          // display: !visible && "none",
-          zIndex: 10000,
-        }}
-        variants={variants}
-        animate={animateState}
-        transition={{ duration: 0.5 }}
-      >
-        <Paper elevation={elevation}>
+      {dialog ? (
+        <Paper
+          sx={{
+            position: "absolute",
+            transition: "top 0.5s ease,opacity 0.2s ease",
+            top: showKeyboard ? 210 : -50,
+            opacity: showKeyboard ? 1 : 0,
+            width: "50%",
+            zIndex: -10,
+          }}
+          elevation={elevation}
+        >
           <VirtualKeyboard
-            keyboardRef={keyboard}
-            layout="numeric"
-            onBlur={() => {
-              setAnimateState("inactive");
+            ref={keyboard}
+            sx={{
+              height: 0,
+              display: displayInfo,
             }}
-            onChangeInput={(input) => setInput(input)}
+            layout={layout}
+            onBlur={() => setShowKeyboard(false)}
+            onChangeInput={(input) => {
+              handleChange(null, input);
+            }}
             onDone={() => {
-              setAnimateState("inactive");
+              setShowKeyboard(false);
             }}
           />
         </Paper>
-      </motion.div>
+      ) : (
+        <Dialog
+          open={showKeyboard}
+          onClose={() => setShowKeyboard(false)}
+          maxWidth="md"
+          PaperProps={{
+            sx: {
+              paddingBlock: 5,
+              width: "100%",
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: 7,
+            },
+          }}
+        >
+          <Stack direction={"row"} width={"90%"}>
+            <TextField
+              name={name}
+              type={type}
+              placeholder={placeholder}
+              value={textInput}
+              fullWidth
+              autoComplete="off"
+              onChange={(event) => {
+                const input = event.target.value;
+                keyboard.current?.setInput(input);
+                setInput(input);
+                onChange(event, input);
+              }}
+            />
+            <Button
+              variant="contained"
+              disableElevation
+              onClick={() => {
+                handleChange(null, "");
+                onClear();
+              }}
+            >
+              Sil
+            </Button>
+          </Stack>
+          <Stack
+            sx={{
+              width: "90%",
+              alignItems: "center",
+            }}
+          >
+            <VirtualKeyboard
+              ref={keyboard}
+              initialInput={textInput}
+              sx={{ width: "100%" }}
+              onChangeInput={(input) => {
+                handleChange(null, input);
+              }}
+              onPress={(key) => {
+                if (key == "{enter}") {
+                  setShowKeyboard(false);
+                }
+              }}
+            />
+          </Stack>
+        </Dialog>
+      )}
     </Box>
   );
 }

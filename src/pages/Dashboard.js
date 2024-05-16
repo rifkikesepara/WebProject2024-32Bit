@@ -23,10 +23,11 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { useMemo, useState } from "react";
 import { LineChart, axisClasses } from "@mui/x-charts";
-import { usePreferences } from "../Context/Theme";
 import useData from "../Hooks/useData";
 import MiniDrawer from "../Components/MiniDrawer";
 import { getDayString, getMonthString } from "../Utils/utilities";
+import useStore from "../Hooks/useStore";
+import usePreferences from "../Hooks/usePreferences";
 import { useTranslation } from "react-i18next";
 
 const menuItems = [
@@ -45,7 +46,7 @@ const menuItems = [
     ),
     path: "../sale",
     onClick: () => {
-      localStorage.setItem("cashout", JSON.stringify([]));
+      sessionStorage.setItem("cashout", JSON.stringify([]));
     },
   },
   {
@@ -206,13 +207,10 @@ const sortTheLastPayments = (data) => {
 export default function Dashboard() {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
+  const storeInfo = useStore();
 
-  useData(
-    "https://65b0e7e2d16d31d11bdd8b87.mockapi.io/api/Expenses",
-    (data) => setData(data),
-    () => {
-      console.log("data is fetching");
-    }
+  useData("https://65b0e7e2d16d31d11bdd8b87.mockapi.io/api/Expenses", (data) =>
+    setData(data)
   );
 
   const chartData = useMemo(() => adjustDataForChart(data), [data]);
@@ -221,7 +219,7 @@ export default function Dashboard() {
 
   const { breakpoints } = useTheme();
   const matches = useMediaQuery(breakpoints.up("sm"));
-  const { isThemeDark, toggleTheme } = usePreferences();
+  const { theme, isThemeDark, toggleTheme } = usePreferences();
 
   const [showDrawer, setShowDrawer] = useState({ right: false, left: false });
   const [date, setDate] = useState(new Date());
@@ -243,7 +241,7 @@ export default function Dashboard() {
   return (
     <Box
       sx={{
-        backgroundColor: "#e7ecf1",
+        backgroundColor: theme.palette.background.default,
         display: "flex",
         height: "100vh",
         position: "relative",
@@ -269,7 +267,6 @@ export default function Dashboard() {
           <Grid item xs={12}>
             <Paper
               sx={{
-                backgroundColor: "white",
                 borderRadius: 5,
                 display: "flex",
                 flexDirection: { md: "row", sm: "row", xs: "column" },
@@ -285,8 +282,10 @@ export default function Dashboard() {
                   style={{
                     height: 15,
                     width: 15,
-                    backgroundColor: "green",
-                    boxShadow: "0px 0px 8px 0.5px green",
+                    backgroundColor: storeInfo.online ? "green" : "red",
+                    boxShadow: storeInfo.online
+                      ? "0px 0px 8px 0.5px green"
+                      : "0px 0px 8px 0.5px red",
                     borderRadius: 200,
                     marginRight: 10,
                   }}
@@ -319,7 +318,6 @@ export default function Dashboard() {
             <Paper
               elevation={2}
               sx={{
-                backgroundColor: "white",
                 borderRadius: 5,
                 display: "flex",
                 flexDirection: "column",
@@ -330,7 +328,6 @@ export default function Dashboard() {
             >
               <Typography
                 sx={{
-                  color: "#1976d2",
                   fontWeight: "bold",
                   fontSize: 20,
                 }}
@@ -387,7 +384,6 @@ export default function Dashboard() {
             <Paper
               elevation={2}
               sx={{
-                backgroundColor: "white",
                 borderRadius: 5,
                 display: "flex",
                 flexDirection: "column",
@@ -405,21 +401,18 @@ export default function Dashboard() {
                   justifyContent: "center",
                 }}
               >
-                <Typography
-                  sx={{ color: "#1976d2", fontWeight: "bold", fontSize: 20 }}
-                >
+                <Typography sx={{ fontWeight: "bold", fontSize: 20 }}>
                   {t("totalEarning").toUpperCase()}
                 </Typography>
                 <Typography
                   sx={{
-                    color: "black",
                     fontWeight: "bold",
                     fontSize: { xs: 30, sm: 40, md: 65 },
                   }}
                 >
                   {totalPublic}₺
                 </Typography>
-                <Typography sx={{ color: "#666666" }}>
+                <Typography sx={{}}>
                   {date.getDate()} {getMonthString(date.getMonth())}{" "}
                   {date.getFullYear()}
                 </Typography>
@@ -441,7 +434,6 @@ export default function Dashboard() {
             <Paper
               elevation={2}
               sx={{
-                backgroundColor: "white",
                 borderRadius: 5,
                 display: "flex",
                 flexDirection: "column",
@@ -449,9 +441,7 @@ export default function Dashboard() {
                 paddingBlock: 2.5,
               }}
             >
-              <Typography
-                sx={{ color: "#1976d2", fontWeight: "bold", fontSize: 20 }}
-              >
+              <Typography sx={{ fontWeight: "bold", fontSize: 20 }}>
                 {t("lastSales")}
               </Typography>
               <Table size="small">

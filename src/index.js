@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dashboard";
-import Theme from "./Context/Theme";
+import Theme, { usePreferences } from "./Context/Theme";
 import AlertProvider, { AlertPopUp } from "./Context/AlertProvider";
 import Sale from "./Pages/Sale";
 import Test from "./Pages/Test";
@@ -13,6 +13,7 @@ import { SnackbarProvider } from "notistack";
 import { ProductSnackbar } from "./Components/ProductSnackbar";
 import Payment from "./Pages/Payment";
 import PaymentResult from "./Pages/PaymentResult";
+import ProductProvider from "./Context/ProductProvider";
 import "./config";
 
 const router = createBrowserRouter([
@@ -43,28 +44,29 @@ const router = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-  <React.StrictMode>
-    <Theme>
-      <SnackbarProvider
-        anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "center",
-        }}
-        maxSnack={1}
-        Components={{
-          product: ProductSnackbar,
-        }}
-        preventDuplicate
-        autoHideDuration={1000}
-      >
+  <Theme>
+    <SnackbarProvider
+      anchorOrigin={{
+        vertical: "bottom",
+        horizontal: "center",
+      }}
+      maxSnack={1}
+      Components={{
+        product: ProductSnackbar,
+      }}
+      preventDuplicate
+      autoHideDuration={1000}
+    >
+      <ProductProvider>
         <AlertProvider>
           <AlertPopUp />
           <RouterProvider router={router} />
         </AlertProvider>
-      </SnackbarProvider>
-    </Theme>
-  </React.StrictMode>
+      </ProductProvider>
+    </SnackbarProvider>
+  </Theme>
 );
 
 // If you want to start measuring performance in your app, pass a function

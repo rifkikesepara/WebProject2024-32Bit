@@ -1,5 +1,7 @@
+import { InfoRounded } from "@mui/icons-material";
 import {
   Button,
+  IconButton,
   Table,
   TableBody,
   TableCell,
@@ -12,118 +14,206 @@ import {
   Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
+import { forwardRef, useState } from "react";
+import ProductDetail from "./ProductDetail";
 import { useTranslation } from "react-i18next";
+import usePreferences from "../Hooks/usePreferences";
 
-export default function CheckoutTable({
-  sx,
-  disabled = false,
-  data,
-  inputValues,
-  selectionValues,
-  onFocus = () => {},
-  onChange = () => {},
-}) {
-  const { t } = useTranslation();
-
-  return (
-    <TableContainer>
-      <ToggleButtonGroup
-        // disabled={disabled}
-        value={selectionValues}
-        onChange={(e, newFormat) => {
-          onChange(newFormat);
-        }}
-        orientation="vertical"
-        sx={{ width: "100%", paddingBottom: 10, ...sx }}
-      >
-        <Table stickyHeader sx={{ width: "100%" }} aria-label="sticky table">
-          <TableHead>
-            <TableRow>
-              <TableCell sx={{ width: 50 }}>{t("amount")}</TableCell>
-              <TableCell align="center" width={"100%"}>
-                {t("product")}
-              </TableCell>
-              <TableCell align="right" width={50}>
-                {t("price")}
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {data.map(({ id, count, images, name, price }, index) => {
-              return (
-                <TableRow key={id}>
-                  <TableCell sx={{ padding: 0, textAlign: "center" }}>
-                    <TextField
-                      disabled={disabled}
-                      // defaultValue={count}
-                      autoComplete="off"
-                      name={name}
-                      value={count}
-                      inputProps={{
-                        sx: {
-                          textAlign: "center",
-                          border: "none",
-                          minHeight: 70,
-                        },
-                      }}
-                      variant="standard"
-                      InputProps={{
-                        disableUnderline: true,
-                      }}
-                      onFocus={(event) => {
-                        onFocus(event, { id, name });
-                        event.target.select();
-                      }}
-                    />
-                  </TableCell>
-                  <TableCell
-                    colSpan={2}
-                    sx={{
-                      padding: 0,
-                    }}
-                  >
-                    <ToggleButton
-                      key={index}
-                      value={id}
-                      sx={{
-                        border: "none",
-                        display: "flex",
-                        justifyContent: "space-between",
-                        color: "black",
-                        width: "100%",
-                        paddingBlock: 2,
-                      }}
-                      onClick={(e) => {}}
-                    >
-                      <Box
+const CheckoutTable = forwardRef(
+  (
+    {
+      sx,
+      disabled = false,
+      data,
+      inputValues,
+      selectionValues,
+      onFocus = () => {},
+      onChange = () => {},
+    },
+    ref
+  ) => {
+    const [productDetailWindow, setProductDetailWindow] = useState({
+      open: false,
+      index: 0,
+    });
+    const { t } = useTranslation();
+    const { theme } = usePreferences();
+    return (
+      <TableContainer ref={ref}>
+        <ToggleButtonGroup
+          // disabled={disabled}
+          value={selectionValues}
+          onChange={(e, newFormat) => {
+            onChange(newFormat);
+          }}
+          orientation="vertical"
+          sx={{ width: "100%", paddingBottom: 10, ...sx }}
+        >
+          <Table stickyHeader sx={{ width: "100%" }} aria-label="sticky table">
+            <TableHead>
+              <TableRow>
+                <TableCell
+                  sx={{
+                    width: 50,
+                    backgroundColor: theme.palette.background.paper,
+                  }}
+                >
+                  {t("amount")}
+                </TableCell>
+                <TableCell
+                  align="center"
+                  width={"100%"}
+                  sx={{ backgroundColor: theme.palette.background.paper }}
+                >
+                  {t("product")}
+                </TableCell>
+                <TableCell
+                  align="right"
+                  width={50}
+                  sx={{ backgroundColor: theme.palette.background.paper }}
+                >
+                  {t("price")}
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {data.map(
+                ({ id, count, images, attributes, price, stock }, index) => {
+                  return (
+                    <TableRow key={id}>
+                      <TableCell sx={{ padding: 0, textAlign: "center" }}>
+                        <TextField
+                          disabled={disabled}
+                          autoComplete="off"
+                          name={attributes.name}
+                          value={count}
+                          inputProps={{
+                            sx: {
+                              textAlign: "center",
+                              border: "none",
+                              minHeight: 70,
+                            },
+                          }}
+                          variant="standard"
+                          InputProps={{
+                            disableUnderline: true,
+                          }}
+                          onFocus={(event) => {
+                            onFocus(event, { id });
+                            event.target.select();
+                          }}
+                        />
+                      </TableCell>
+                      <TableCell
+                        colSpan={2}
                         sx={{
-                          display: "flex",
-                          alignItems: "center",
+                          padding: 0,
                         }}
                       >
-                        <img
-                          src={
-                            images.find(
-                              ({ imageType }) => imageType == "product"
-                            ).url
-                          }
-                          width={50}
-                        />
-                        <Typography marginLeft={2} maxWidth={200}>
-                          {name}
-                        </Typography>
-                      </Box>
-                      <Typography fontWeight={"bold"} minWidth={50}>
-                        {price / 100}₺
-                      </Typography>
-                    </ToggleButton>
-                  </TableCell>
-                </TableRow>
-              );
-            })}
-          </TableBody>
-        </Table>
-      </ToggleButtonGroup>
-    </TableContainer>
-  );
-}
+                        <Box
+                          sx={{
+                            padding: 0,
+                            position: "relative",
+                          }}
+                        >
+                          <IconButton
+                            disableFocusRipple
+                            disableRipple
+                            onClick={() =>
+                              setProductDetailWindow({
+                                open: true,
+                                index: index,
+                              })
+                            }
+                            sx={{
+                              height: "100%",
+                              position: "absolute",
+                              left: 15,
+                              zIndex: 10,
+                            }}
+                          >
+                            <InfoRounded sx={{ opacity: 0 }} />
+                          </IconButton>
+                          <ToggleButton
+                            key={index}
+                            value={id}
+                            sx={{
+                              border: "none",
+                              display: "flex",
+                              justifyContent: "space-between",
+                              width: "100%",
+                              paddingBlock: 2,
+                              color: theme.palette.text.primary,
+                            }}
+                          >
+                            <Box
+                              sx={{
+                                display: "flex",
+                                alignItems: "center",
+                              }}
+                            >
+                              <img
+                                src={
+                                  images.find(
+                                    ({ imageType }) => imageType == "product"
+                                  ).url
+                                }
+                                width={50}
+                              />
+                              <Typography marginLeft={2} maxWidth={200}>
+                                {attributes.name}
+                              </Typography>
+                            </Box>
+                            <Box
+                              sx={{ display: "flex", flexDirection: "column" }}
+                            >
+                              <Typography
+                                sx={{
+                                  fontWeight: "bold",
+                                  minWidth: 50,
+                                  color:
+                                    price.discounted != price.normal && "red",
+                                  textDecoration:
+                                    price.discounted != price.normal &&
+                                    "line-through",
+                                }}
+                                fontWeight={"bold"}
+                                minWidth={50}
+                              >
+                                {(price.normal / 100) * count}₺
+                              </Typography>
+                              {price.discounted != price.normal && (
+                                <Typography
+                                  sx={{
+                                    fontWeight: "bold",
+                                    minWidth: 50,
+                                    color: "green",
+                                  }}
+                                  fontWeight={"bold"}
+                                  minWidth={50}
+                                >
+                                  {price.cashout / 100}₺
+                                </Typography>
+                              )}
+                            </Box>
+                          </ToggleButton>
+                        </Box>
+                      </TableCell>
+                    </TableRow>
+                  );
+                }
+              )}
+              <ProductDetail
+                open={productDetailWindow.open}
+                product={data[productDetailWindow.index]}
+                onClose={() => setProductDetailWindow(false)}
+              />
+            </TableBody>
+          </Table>
+        </ToggleButtonGroup>
+      </TableContainer>
+    );
+  }
+);
+
+export default CheckoutTable;

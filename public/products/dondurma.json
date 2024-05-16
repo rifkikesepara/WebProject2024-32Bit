@@ -1,0 +1,4162 @@
+{
+  "parentId": "master",
+  "id": "C09",
+  "name": "Dondurma",
+  "children": [
+    {
+      "parentId": "C09",
+      "id": "C0901",
+      "name": "Tek Dondurma",
+      "products": [
+        {
+          "id": "21001005",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "PZftgeIiqb",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/PZftgeIiqb_256x256.png"
+            },
+            {
+              "id": "xYi4YXCVem",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/xYi4YXCVem_256x256.png"
+            },
+            {
+              "id": "BPlBKxriNj",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/BPlBKxriNj_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 34,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901000,
+            "netWeight": 65,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Twister Forest Dondurma 65 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-twister-forest-dondurma-65-ml_p-21001005",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637904950", "8690637900426"],
+            "grossWeight": 65,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1000,
+            "normalStr": "₺10,00",
+            "discounted": 1000,
+            "discountedStr": "₺10,00"
+          },
+          "stock": 24,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000519",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "5Dl-rxgLUv",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/5Dl-rxgLUv_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 31,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901006,
+            "netWeight": 65,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Classics Kakao Dondurma 65 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-classics-kakao-dondurma-65-ml_p-21000519",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8690637897283",
+              "8690637846922",
+              "8690637784408",
+              "8690637716812",
+              "8690637684760",
+              "8690637639791",
+              "8690637615627"
+            ],
+            "grossWeight": 70,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1500,
+            "normalStr": "₺15,00",
+            "discounted": 1500,
+            "discountedStr": "₺15,00"
+          },
+          "stock": 30,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000983",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "q4u4ELQR1E",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/q4u4ELQR1E_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 35,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901007,
+            "netWeight": 65,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Classics Vanilya Dondurma 65 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-classics-vanilya-dondurma-65-ml_p-21000983",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637897092", "8690637846908"],
+            "grossWeight": 65,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1500,
+            "normalStr": "₺15,00",
+            "discounted": 1500,
+            "discountedStr": "₺15,00"
+          },
+          "stock": 35,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001060",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "SG1RpSHDJG",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/SG1RpSHDJG_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 29,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901008,
+            "netWeight": 65,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Classics Oreo Dondurma 65 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-classics-oreo-dondurma-65-ml_p-21001060",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637934025"],
+            "grossWeight": 65,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1500,
+            "normalStr": "₺15,00",
+            "discounted": 1500,
+            "discountedStr": "₺15,00"
+          },
+          "stock": 1,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000659",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "NXeQOEszmT",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/NXeQOEszmT_256x256.png"
+            },
+            {
+              "id": "sW6pt-kCdW",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/sW6pt-kCdW_256x256.png"
+            },
+            {
+              "id": "TL8JtSQ0qj",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/TL8JtSQ0qj_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901012,
+            "netWeight": 105,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Keyif Kornet Çikolata/Vanilya Dondurma 110 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-keyif-kornet-cikolatavanilya-dondurma-110-ml_p-21000659",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637691126", "8690637892660"],
+            "grossWeight": 150,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1500,
+            "normalStr": "₺15,00",
+            "discounted": 1500,
+            "discountedStr": "₺15,00"
+          },
+          "stock": 11,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000062",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "N8OK9fUt8o",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/N8OK9fUt8o_256x256.png"
+            },
+            {
+              "id": "NycMKa4rm3",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/NycMKa4rm3_256x256.png"
+            },
+            {
+              "id": "yMU8yDdbJ0",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yMU8yDdbJ0_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901013,
+            "netWeight": 145,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Nogger Kakao Karamel Dondurma 145 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-nogger-kakao-karamel-dondurma-145-ml_p-21000062",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637117121", "8690637852053", "8690637878374"],
+            "grossWeight": 150,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3000,
+            "normalStr": "₺30,00",
+            "discounted": 3000,
+            "discountedStr": "₺30,00"
+          },
+          "stock": 10,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000654",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "z36ABAO9yl",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/z36ABAO9yl_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "XO4VhDxtoQ",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/XO4VhDxtoQ_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "SkxHM0idbS",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/SkxHM0idbS_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901015,
+            "netWeight": 65,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Frigola Dondurma 65 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-frigola-dondurma-65-ml_p-21000654",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": [
+              "8690637000263",
+              "8690637788390",
+              "8690637816505",
+              "8690637688720"
+            ],
+            "grossWeight": 70,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1750,
+            "normalStr": "₺17,50",
+            "discounted": 1750,
+            "discountedStr": "₺17,50"
+          },
+          "stock": 12,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000024",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "Po7kg1tms3",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Po7kg1tms3_256x256.png"
+            },
+            {
+              "id": "WL9k17XFgZ",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/WL9k17XFgZ_256x256.png"
+            },
+            {
+              "id": "70f9xvnI4Y",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/70f9xvnI4Y_256x256.png"
+            },
+            {
+              "id": "QcGIrBytWf",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/QcGIrBytWf_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901016,
+            "netWeight": 100,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Magnum Bademli Dondurma 100 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-magnum-bademli-dondurma-100-ml_p-21000024",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8690637860362",
+              "8690637788666",
+              "8690637721021",
+              "8690637687662",
+              "8690637560736",
+              "40561073",
+              "8690637064241"
+            ],
+            "grossWeight": 110,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4000,
+            "normalStr": "₺40,00",
+            "discounted": 4000,
+            "discountedStr": "₺40,00"
+          },
+          "stock": 23,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001004",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "H5skU4mdW6",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/H5skU4mdW6_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "ljLXkgwObQ",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ljLXkgwObQ_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "zbqMbMbYVK",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/zbqMbMbYVK_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901017,
+            "netWeight": 125,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Cornetto Classico Çikolatalı Dondurma 125 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-cornetto-classico-cikolatali-dondurma-125-ml_p-21001004",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637820021"],
+            "grossWeight": 125,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2500,
+            "normalStr": "₺25,00",
+            "discounted": 2500,
+            "discountedStr": "₺25,00"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000788",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "is9IKZFbfZ",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/is9IKZFbfZ_256x256.png"
+            },
+            {
+              "id": "Nj-46LVXdA",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Nj-46LVXdA_256x256.png"
+            },
+            {
+              "id": "BP7FneSlx5",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/BP7FneSlx5_256x256.png"
+            },
+            {
+              "id": "VegaBt55iP",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/VegaBt55iP_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901019,
+            "netWeight": 100,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Magnum Double Karadut/Böğürtlen Dondurma 95 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-magnum-double-karadutbogurtlen-dondurma-95-ml_p-21000788",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8690637719783",
+              "8690637721144",
+              "8690637788505",
+              "8690637860393"
+            ],
+            "grossWeight": 110,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4000,
+            "normalStr": "₺40,00",
+            "discounted": 4000,
+            "discountedStr": "₺40,00"
+          },
+          "stock": 22,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001341",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "mAKAlFBGyV",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/mAKAlFBGyV_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901021,
+            "netWeight": 60,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Frigola Dondurma 60 Ml ",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-frigola-dondurma-60-ml-_p-21001341",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8683130068120"],
+            "grossWeight": 60,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1750,
+            "discounted": 1750,
+            "normalStr": "₺17,50",
+            "discountedStr": "₺17,50"
+          },
+          "stock": 10,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001227",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "GKFznYc291",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/GKFznYc291_256x256.png"
+            },
+            {
+              "id": "c4mEO-FzZo",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/c4mEO-FzZo_256x256.png"
+            },
+            {
+              "id": "-ht1bQTkq0",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/-ht1bQTkq0_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901027,
+            "netWeight": 115,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Maraş Kornet Dondurma 115 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-maras-kornet-dondurma-115-ml_p-21001227",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8683130042427"],
+            "grossWeight": 115,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3000,
+            "discounted": 3000,
+            "normalStr": "₺30,00",
+            "discountedStr": "₺30,00"
+          },
+          "stock": 12,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000987",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "2gOESWmPS6",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/2gOESWmPS6_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901028,
+            "netWeight": 35,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Max Mini Milk Sade Dondurma 35 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-max-mini-milk-sade-dondurma-35-ml_p-21000987",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637898044", "8690637006111"],
+            "grossWeight": 35,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 500,
+            "normalStr": "₺5,00",
+            "discounted": 500,
+            "discountedStr": "₺5,00"
+          },
+          "stock": 11,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000025",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "UzlcDgJA3X",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/UzlcDgJA3X_256x256.png"
+            },
+            {
+              "id": "J-GGbxgfyr",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/J-GGbxgfyr_256x256.png"
+            },
+            {
+              "id": "3FS19NIocP",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/3FS19NIocP_256x256.png"
+            },
+            {
+              "id": "qwx4fzpRA4",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/qwx4fzpRA4_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901029,
+            "netWeight": 100,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Magnum Classic Dondurma 100 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-magnum-classic-dondurma-100-ml_p-21000025",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8690637788437",
+              "8690637721007",
+              "8690637687419",
+              "8690637560712",
+              "8690637064234",
+              "8690637860355",
+              "40561172"
+            ],
+            "grossWeight": 110,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4000,
+            "normalStr": "₺40,00",
+            "discounted": 4000,
+            "discountedStr": "₺40,00"
+          },
+          "stock": 19,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001202",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "MbN9aWI6QL",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/MbN9aWI6QL_256x256.png"
+            },
+            {
+              "id": "jleGDbFz4X",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/jleGDbFz4X_256x256.png"
+            },
+            {
+              "id": "IrfLBcNm4K",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/IrfLBcNm4K_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901031,
+            "netWeight": 130,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Cornetto Disc Milka Dondurma 130 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-cornetto-disc-milka-dondurma-130-ml_p-21001202",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8683130038154"],
+            "grossWeight": 130,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3500,
+            "discounted": 3500,
+            "normalStr": "₺35,00",
+            "discountedStr": "₺35,00"
+          },
+          "stock": 12,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000880",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "mzrpti9VZn",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/mzrpti9VZn_256x256.png"
+            },
+            {
+              "id": "OiUWVHt1Vh",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/OiUWVHt1Vh_256x256.png"
+            },
+            {
+              "id": "fES2bAsuCj",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/fES2bAsuCj_256x256.png"
+            },
+            {
+              "id": "oicQXKGRzE",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/oicQXKGRzE_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901032,
+            "netWeight": 100,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Magnum Beyaz Dondurma 100 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-magnum-beyaz-dondurma-100-ml_p-21000880",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637687433", "8690637721106", "8690637860379"],
+            "grossWeight": 100,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4000,
+            "normalStr": "₺40,00",
+            "discounted": 4000,
+            "discountedStr": "₺40,00"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001203",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "IXolr94np4",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/IXolr94np4_256x256.png"
+            },
+            {
+              "id": "G1pYg4yMkw",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/G1pYg4yMkw_256x256.png"
+            },
+            {
+              "id": "dtvwVV38QS",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/dtvwVV38QS_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901033,
+            "netWeight": 130,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Disc Cornetto Vanilya Karamel Dondurma 130 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-disc-cornetto-vanilya-karamel-dondurma-130-ml_p-21001203",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8683130038185"],
+            "grossWeight": 130,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3500,
+            "discounted": 3500,
+            "normalStr": "₺35,00",
+            "discountedStr": "₺35,00"
+          },
+          "stock": 10,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001214",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "HfPIzdGD2q",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/HfPIzdGD2q_256x256.png"
+            },
+            {
+              "id": "iPzQH7ewFJ",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/iPzQH7ewFJ_256x256.png"
+            },
+            {
+              "id": "Wzsay8RAWq",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Wzsay8RAWq_256x256.png"
+            },
+            {
+              "id": "hTMbo9NVZb",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/hTMbo9NVZb_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901034,
+            "netWeight": 85,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Magnum Double Sunlover Dondurma 85 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-magnum-double-sunlover-dondurma-85-ml_p-21001214",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8683130038406"],
+            "grossWeight": 85,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4000,
+            "discounted": 4000,
+            "normalStr": "₺40,00",
+            "discountedStr": "₺40,00"
+          },
+          "stock": 23,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000883",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "1mwZWRpkbN",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/1mwZWRpkbN_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "Smm-fMFL3m",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Smm-fMFL3m_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "tqBpD8mmTd",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/tqBpD8mmTd_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901035,
+            "netWeight": 68,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Boom Boom Dondurma 85 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-boom-boom-dondurma-85-ml_p-21000883",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8683130015995", "8690637809279"],
+            "grossWeight": 68,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2000,
+            "normalStr": "₺20,00",
+            "discounted": 2000,
+            "discountedStr": "₺20,00"
+          },
+          "stock": 10,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000049",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "QxwrqqYaGr",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/QxwrqqYaGr_256x256.png"
+            },
+            {
+              "id": "Orc0JslLoe",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Orc0JslLoe_256x256.png"
+            },
+            {
+              "id": "fcltY8nQ3w",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/fcltY8nQ3w_256x256.png"
+            },
+            {
+              "id": "6rRv7NlMmq",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/6rRv7NlMmq_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901039,
+            "netWeight": 95,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Magnum Cookie Dondurma 95 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-magnum-cookie-dondurma-95-ml_p-21000049",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637936036"],
+            "grossWeight": 95,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4000,
+            "normalStr": "₺40,00",
+            "discounted": 4000,
+            "discountedStr": "₺40,00"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000996",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "kRbcilFg51",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/kRbcilFg51_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901040,
+            "netWeight": 60,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Conboo Çilek/Vanilya Dondurma 60 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-conboo-cilekvanilya-dondurma-60-ml_p-21000996",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637899249", "8690637904912"],
+            "grossWeight": 60,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 750,
+            "normalStr": "₺7,50",
+            "discounted": 750,
+            "discountedStr": "₺7,50"
+          },
+          "stock": 1,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001127",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "Ljoi24Rjn8",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Ljoi24Rjn8_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901041,
+            "netWeight": 35,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Max Minimilk Kakao Dondurma 35 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-max-minimilk-kakao-dondurma-35-ml_p-21001127",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637898068"],
+            "grossWeight": 35,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 500,
+            "normalStr": "₺5,00",
+            "discounted": 500,
+            "discountedStr": "₺5,00"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001223",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "3nmCYCIiDa",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/3nmCYCIiDa_256x256.png"
+            },
+            {
+              "id": "62gEC2IjDo",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/62gEC2IjDo_256x256.png"
+            },
+            {
+              "id": "jR0xHrZIJQ",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/jR0xHrZIJQ_256x256.png"
+            },
+            {
+              "id": "ZbPEGpFyJ2",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ZbPEGpFyJ2_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901043,
+            "netWeight": 85,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Magnum Double Starchaser Dondurma 85 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-magnum-double-starchaser-dondurma-85-ml_p-21001223",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8683130038390"],
+            "grossWeight": 85,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4000,
+            "discounted": 4000,
+            "normalStr": "₺40,00",
+            "discountedStr": "₺40,00"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000797",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "7psxzMwMUq",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/7psxzMwMUq_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 186,
+            "brand": "ETİ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901044,
+            "netWeight": 60,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Eti Alaska Frigo Sütlü Dondurma 60 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/eti-alaska-frigo-sutlu-dondurma-60-ml_p-21000797",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Bölgesel",
+            "barcodes": ["8690526099606"],
+            "grossWeight": 65,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2500,
+            "normalStr": "₺25,00",
+            "discounted": 2500,
+            "discountedStr": "₺25,00"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000796",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "CAKICVLLRG",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/CAKICVLLRG_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 185,
+            "brand": "ETİ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901045,
+            "netWeight": 60,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Eti Alaska Frigo Bitter Dondurma 60 Ml ",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/eti-alaska-frigo-bitter-dondurma-60-ml-_p-21000796",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Bölgesel",
+            "barcodes": ["8690526099613"],
+            "grossWeight": 65,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2500,
+            "normalStr": "₺25,00",
+            "discounted": 2500,
+            "discountedStr": "₺25,00"
+          },
+          "stock": 14,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001224",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "Gx1Qfxr7Bd",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Gx1Qfxr7Bd_256x256.png"
+            },
+            {
+              "id": "zDJXJuQDJQ",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/zDJXJuQDJQ_256x256.png"
+            },
+            {
+              "id": "o8S0XflGvo",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/o8S0XflGvo_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901049,
+            "netWeight": 60,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Möö Shake Dondurma 60 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-moo-shake-dondurma-60-ml_p-21001224",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8683130042076"],
+            "grossWeight": 60,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1500,
+            "discounted": 1500,
+            "normalStr": "₺15,00",
+            "discountedStr": "₺15,00"
+          },
+          "stock": 11,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "17000164",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "2Ml10rXE3f",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/2Ml10rXE3f_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "XROLL",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 901073,
+            "netWeight": 45,
+            "depolamaKosulu": "Gıda",
+            "name": "Xroll Kağıt Helva 45 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/xroll-kagit-helva-45-gr_p-17000164",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118053248", "8699118040477"],
+            "grossWeight": 47.37,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0901", "name": "Tek Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 750,
+            "normalStr": "₺7,50",
+            "discounted": 750,
+            "discountedStr": "₺7,50"
+          },
+          "stock": 70,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Tek Dondurma Fiyatları & Çeşitleri | A101 KAPIDA",
+      "seoDescription": "Tek Dondurma çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Tek Dondurma çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/dondurma/tek-dondurma"
+    },
+    {
+      "parentId": "C09",
+      "id": "C0902",
+      "name": "Kap Dondurma",
+      "products": [
+        {
+          "id": "21001014",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "o14SLf1jt6",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/o14SLf1jt6_256x256.png"
+            },
+            {
+              "id": "8T4ewf3Yu5",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/8T4ewf3Yu5_256x256.png"
+            },
+            {
+              "id": "iTlBd4vmiF",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/iTlBd4vmiF_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902000,
+            "netWeight": 345,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Magnum Mini Badem Dondurma 6x57,5 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-magnum-mini-badem-dondurma-6x575-ml_p-21001014",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637911668", "8690637910814"],
+            "grossWeight": 345,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 15990,
+            "normalStr": "₺159,90",
+            "discounted": 15990,
+            "discountedStr": "₺159,90"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001013",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "WmDDNGZn1R",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/WmDDNGZn1R_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 0,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902001,
+            "netWeight": 1400,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Boncremo Kakao/Vanilya/Çilek Dondurma 1400 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637894442"],
+            "grossWeight": 1400,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-boncremo-kakaovanilyacilek-dondurma-1400-ml_p-21001013"
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 6490,
+            "normalStr": "₺64,90",
+            "discounted": 6490,
+            "discountedStr": "₺64,90"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001012",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "mMi807h4K8",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/mMi807h4K8_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 2,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902002,
+            "netWeight": 1400,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Boncremo Kakao/Vanilya/Fıstık Dondurma 1400 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637894435"],
+            "grossWeight": 1400,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-boncremo-kakaovanilyafistik-dondurma-1400-ml_p-21001012"
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 6490,
+            "normalStr": "₺64,90",
+            "discounted": 6490,
+            "discountedStr": "₺64,90"
+          },
+          "stock": 9,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001011",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "9eNnehs5HV",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/9eNnehs5HV_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 1,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902003,
+            "netWeight": 1400,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Bocremo Kakao Vanilya Dondurma 1400 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637896781"],
+            "grossWeight": 1400,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-bocremo-kakao-vanilya-dondurma-1400-ml_p-21001011"
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 6490,
+            "normalStr": "₺64,90",
+            "discounted": 6490,
+            "discountedStr": "₺64,90"
+          },
+          "stock": 19,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001015",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "Q7VogwuHZM",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Q7VogwuHZM_256x256.png"
+            },
+            {
+              "id": "cbXNm3ux65",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/cbXNm3ux65_256x256.png"
+            },
+            {
+              "id": "yAVIpeOmss",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yAVIpeOmss_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902004,
+            "netWeight": 345,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Magnum Mini Classic/Badem/Beyaz Dondurma 6x57,5 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-magnum-mini-classicbadembeyaz-dondurma-6x575-ml_p-21001015",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637911675", "8690637910821"],
+            "grossWeight": 345,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 15990,
+            "normalStr": "₺159,90",
+            "discounted": 15990,
+            "discountedStr": "₺159,90"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001123",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "BpcPCDeibf",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/BpcPCDeibf_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "zI6eXlvk-c",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/zI6eXlvk-c_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "MS58Rly2yN",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/MS58Rly2yN_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "EIgWef8j1S",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/EIgWef8j1S_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902006,
+            "netWeight": 850,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Carte D'or İsviçre Çikolata/Karamel/Muz Dondurma 850 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-carte-dor-isvicre-cikolatakaramelmuz-dondurma-850-ml_p-21001123",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8683130007341", "8683130044865"],
+            "grossWeight": 850,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 12990,
+            "normalStr": "₺129,90",
+            "discounted": 12990,
+            "discountedStr": "₺129,90"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001137",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "NYwm0cNDvG",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/NYwm0cNDvG_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "kxU2mlbBmi",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/kxU2mlbBmi_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "XzXBnkD-rq",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/XzXBnkD-rq_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "73tDQO4TEN",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/73tDQO4TEN_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902007,
+            "netWeight": 850,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Carte D'or Vişne/Bitter/Vanilya Dondurma 850 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-carte-dor-visnebittervanilya-dondurma-850-ml_p-21001137",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8683130044889", "8683130009727"],
+            "grossWeight": 850,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 12990,
+            "normalStr": "₺129,90",
+            "discounted": 12990,
+            "discountedStr": "₺129,90"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001132",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "07AZDCjhrT",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/07AZDCjhrT_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "6IUXb2OAeH",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/6IUXb2OAeH_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "zVbFPWasWK",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/zVbFPWasWK_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902008,
+            "netWeight": 850,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Carte D'or Bal Badem/Karamel/Vanilya Dondurma 850 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-carte-dor-bal-bademkaramelvanilya-dondurma-850-ml_p-21001132",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8683130009741", "8683130044896"],
+            "grossWeight": 850,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 12990,
+            "normalStr": "₺129,90",
+            "discounted": 12990,
+            "discountedStr": "₺129,90"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001018",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "WdFgQq6GI7",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/WdFgQq6GI7_256x256.png"
+            },
+            {
+              "id": "63TZqgObQA",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/63TZqgObQA_256x256.png"
+            },
+            {
+              "id": "JgYEvH7Xx9",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/JgYEvH7Xx9_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902009,
+            "netWeight": 345,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Magnum Mini Classic Dondurma 6x57,5 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-magnum-mini-classic-dondurma-6x575-ml_p-21001018",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637911682", "8690637806858", "8690637910838"],
+            "grossWeight": 345,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 15990,
+            "normalStr": "₺159,90",
+            "discounted": 15990,
+            "discountedStr": "₺159,90"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001088",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "G-OO9OYCQX",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/G-OO9OYCQX_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "g8mHSZyuMk",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/g8mHSZyuMk_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902019,
+            "netWeight": 1400,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Boncremo Rengarengo Dondurma 1400 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-boncremo-rengarengo-dondurma-1400-ml_p-21001088",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Delist",
+            "barcodes": ["8683130002162"],
+            "grossWeight": 1400,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 6490,
+            "normalStr": "₺64,90",
+            "discounted": 6490,
+            "discountedStr": "₺64,90"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000935",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "7oa70Zo3av",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/7oa70Zo3av_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "AIn3UIvQnN",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/AIn3UIvQnN_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "zh70RkfkVk",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/zh70RkfkVk_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902020,
+            "netWeight": 500,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Maraş Çifte Dövülmüş Dondurma 500 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637849114"],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-maras-cifte-dovulmus-dondurma-500-ml_p-21000935"
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 10990,
+            "normalStr": "₺109,90",
+            "discounted": 10990,
+            "discountedStr": "₺109,90"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000722",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "9j4zpEPnvU",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/9j4zpEPnvU_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "j7aStD6cE1",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/j7aStD6cE1_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "HiAhf7Dupf",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/HiAhf7Dupf_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902022,
+            "netWeight": 500,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Maraş Sade Dondurma 500 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-maras-sade-dondurma-500-ml_p-21000722",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8690637715785",
+              "8690637760471",
+              "8683130040492",
+              "8690637883576",
+              "8690637849169"
+            ],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 7990,
+            "normalStr": "₺79,90",
+            "discounted": 7990,
+            "discountedStr": "₺79,90"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001135",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "ukHYgBT8qv",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ukHYgBT8qv_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "KPIgEyXISI",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/KPIgEyXISI_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "KLuXhL6RNV",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/KLuXhL6RNV_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902023,
+            "netWeight": 800,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Carte D'or Selection Çikolata Karnavalı Dondurma 800 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8683130006788"],
+            "grossWeight": 800,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-carte-dor-selection-cikolata-karnavali-dondurma-800-ml_p-21001135"
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 13990,
+            "normalStr": "₺139,90",
+            "discounted": 13990,
+            "discountedStr": "₺139,90"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000954",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "qBVNInzptt",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/qBVNInzptt_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "MzW2PwmAhO",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/MzW2PwmAhO_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902024,
+            "netWeight": 750,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Keyif Kakao Vanilya Dondurma 750 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637878084"],
+            "grossWeight": 750,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-keyif-kakao-vanilya-dondurma-750-ml_p-21000954"
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5990,
+            "normalStr": "₺59,90",
+            "discounted": 5990,
+            "discountedStr": "₺59,90"
+          },
+          "stock": 11,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001061",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "VBNa8oyT0w",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/VBNa8oyT0w_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "KZ7yauDw0W",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/KZ7yauDw0W_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "DUvHnEyncO",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/DUvHnEyncO_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902025,
+            "netWeight": 400,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Twister Mini Dondurma 8x50 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637992087"],
+            "grossWeight": 400,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-twister-mini-dondurma-8x50-ml_p-21001061"
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 7490,
+            "normalStr": "₺74,90",
+            "discounted": 7490,
+            "discountedStr": "₺74,90"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000711",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "r50uAXbrN7",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/r50uAXbrN7_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "T44FrDkNPR",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/T44FrDkNPR_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "trbF1w-Htc",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/trbF1w-Htc_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902026,
+            "netWeight": 800,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Vienetta Çikolata/Vanilya Dondurma 800 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637720888"],
+            "grossWeight": 840,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-vienetta-cikolatavanilya-dondurma-800-ml_p-21000711"
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 11490,
+            "normalStr": "₺114,90",
+            "discounted": 11490,
+            "discountedStr": "₺114,90"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001134",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "wDFTqY94nO",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/wDFTqY94nO_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "mEkbZMvHMq",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/mEkbZMvHMq_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "74JSmf8Com",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/74JSmf8Com_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "6QTvOu4UQD",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/6QTvOu4UQD_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902027,
+            "netWeight": 800,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Carte D'or Selection Meyve Şöleni Dondurma 800 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8683130006511"],
+            "grossWeight": 800,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-carte-dor-selection-meyve-soleni-dondurma-800-ml_p-21001134"
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 13990,
+            "normalStr": "₺139,90",
+            "discounted": 13990,
+            "discountedStr": "₺139,90"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001324",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "AlxQmJrCMp",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/AlxQmJrCMp_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902028,
+            "netWeight": 700,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Carte D'or Selection Belçika Çikolata Dondurma 700 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-carte-dor-selection-belcika-cikolata-dondurma-700-ml_p-21001324",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8683130057810"],
+            "grossWeight": 700,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 8990,
+            "discounted": 8990,
+            "normalStr": "₺89,90",
+            "discountedStr": "₺89,90"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000955",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "5NzZyfSSoX",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/5NzZyfSSoX_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "AyPibAXig9",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/AyPibAXig9_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902029,
+            "netWeight": 750,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Keyif Vanilya Dondurma 750 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637878091"],
+            "grossWeight": 750,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-keyif-vanilya-dondurma-750-ml_p-21000955"
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5990,
+            "normalStr": "₺59,90",
+            "discounted": 5990,
+            "discountedStr": "₺59,90"
+          },
+          "stock": 11,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000723",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "oIFXaFGPH-",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/oIFXaFGPH-_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "z5UCvyEMqM",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/z5UCvyEMqM_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "VzrN18fseq",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/VzrN18fseq_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902031,
+            "netWeight": 500,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Maraş Sade Çikolata Dondurma 500 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-maras-sade-cikolata-dondurma-500-ml_p-21000723",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8690637871375",
+              "8690637883583",
+              "8690637849206",
+              "8690637715815"
+            ],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 7990,
+            "normalStr": "₺79,90",
+            "discounted": 7990,
+            "discountedStr": "₺79,90"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000129",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "DoWXkxmt4k",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/DoWXkxmt4k_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902033,
+            "netWeight": 1800,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Keyif Kakao Vanilya Dondurma 1800 Ml ",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690637960765"],
+            "grossWeight": 1800,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-keyif-kakao-vanilya-dondurma-1800-ml-_p-21000129"
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5990,
+            "normalStr": "₺59,90",
+            "discounted": 5990,
+            "discountedStr": "₺59,90"
+          },
+          "stock": 1,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000980",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "I0R9ofSmhF",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/I0R9ofSmhF_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "bRs9Glanz9",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/bRs9Glanz9_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "ia-Cm8gsmV",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ia-Cm8gsmV_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902034,
+            "netWeight": 650,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Maraş Kesme Sade Dondurma 650 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637910685"],
+            "grossWeight": 650,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-maras-kesme-sade-dondurma-650-ml_p-21000980"
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 11490,
+            "normalStr": "₺114,90",
+            "discounted": 11490,
+            "discountedStr": "₺114,90"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001136",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "4xrv8LAvsa",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/4xrv8LAvsa_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "AZdsoSlNeU",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/AZdsoSlNeU_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "T54qbFhopL",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/T54qbFhopL_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "7dex2S4wGc",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/7dex2S4wGc_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902036,
+            "netWeight": 850,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Carte D'or Bitter/Vanilya/Fıstık Dondurma 850 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-carte-dor-bittervanilyafistik-dondurma-850-ml_p-21001136",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8683130044902", "8683130009758"],
+            "grossWeight": 850,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 12990,
+            "normalStr": "₺129,90",
+            "discounted": 12990,
+            "discountedStr": "₺129,90"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000988",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "hxaPVhwsW6",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/hxaPVhwsW6_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902040,
+            "netWeight": 750,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Keyif Fıstık/Vanilya Dondurma 750 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-keyif-fistikvanilya-dondurma-750-ml_p-21000988",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690637878121"],
+            "grossWeight": 750,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5990,
+            "normalStr": "₺59,90",
+            "discounted": 5990,
+            "discountedStr": "₺59,90"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001244",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "ItC8sDTLPe",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ItC8sDTLPe_256x256.png"
+            },
+            {
+              "id": "oA2EY8KAhP",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/oA2EY8KAhP_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "FREEDO",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902044,
+            "netWeight": 1000,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Freedo Vini Vanilyalı Kakaolu Dondurma 1000 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/freedo-vini-vanilyali-kakaolu-dondurma-1000-ml_p-21001244",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118067047"],
+            "grossWeight": 1000,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4750,
+            "discounted": 4750,
+            "normalStr": "₺47,50",
+            "discountedStr": "₺47,50"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001242",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "-jPnYayHhh",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/-jPnYayHhh_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "FREEDO",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902045,
+            "netWeight": 1500,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Freedo Vini Vişne Çilek Dondurma Dondurma 1500 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/freedo-vini-visne-cilek-dondurma-dondurma-1500-ml_p-21001242",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118067054"],
+            "grossWeight": 1500,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5950,
+            "discounted": 5950,
+            "normalStr": "₺59,50",
+            "discountedStr": "₺59,50"
+          },
+          "stock": 8,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001241",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "Pe2mhCYYD4",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Pe2mhCYYD4_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "FREEDO",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902046,
+            "netWeight": 1500,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Freedo Vini Kakao/Çilek/Vanilya Dondurma 1500 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/freedo-vini-kakaocilekvanilya-dondurma-1500-ml_p-21001241",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118067061"],
+            "grossWeight": 1500,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5950,
+            "discounted": 5950,
+            "normalStr": "₺59,50",
+            "discountedStr": "₺59,50"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001236",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "OD-ehqrLCp",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/OD-ehqrLCp_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "FREEDO",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902048,
+            "netWeight": 900,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Freedo Selection Çikolata Rüyası Dondurma 900 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/freedo-selection-cikolata-ruyasi-dondurma-900-ml_p-21001236",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118066156"],
+            "grossWeight": 900,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 8950,
+            "discounted": 8950,
+            "normalStr": "₺89,50",
+            "discountedStr": "₺89,50"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001237",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "hcp9M4a7MH",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/hcp9M4a7MH_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "FREEDO",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902049,
+            "netWeight": 1000,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Freedo Vini Gold Kaymaklı Dondurma 1000 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/freedo-vini-gold-kaymakli-dondurma-1000-ml_p-21001237",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118066163"],
+            "grossWeight": 1000,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 9500,
+            "discounted": 9500,
+            "normalStr": "₺95,00",
+            "discountedStr": "₺95,00"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000878",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "liWiArcTUA",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/liWiArcTUA_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ALGİDA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902052,
+            "netWeight": 850,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Algida Carte D'or Selection Çikolata Karnavalı Dondurma 850 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-carte-dor-selection-cikolata-karnavali-dondurma-850-ml_p-21000878",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690637111044", "8690637883620"],
+            "grossWeight": 900,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 13990,
+            "normalStr": "₺139,90",
+            "discounted": 13990,
+            "discountedStr": "₺139,90"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001243",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "NbB2PW8Oen",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/NbB2PW8Oen_256x256.png"
+            },
+            {
+              "id": "jk91v4iHvs",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/jk91v4iHvs_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "FREEDO",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 902059,
+            "netWeight": 1000,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Freedo Vini Vanilya Dondurma 1000 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurma/freedo-vini-vanilya-dondurma-1000-ml_p-21001243",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118067030"],
+            "grossWeight": 1000,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C09", "name": "Dondurma", "parentId": "master" },
+            { "id": "C0902", "name": "Kap Dondurma", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4750,
+            "discounted": 4750,
+            "normalStr": "₺47,50",
+            "discountedStr": "₺47,50"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Kap Dondurma Çeşitleri & Fiyatları | A101 KAPIDA",
+      "seoDescription": "Kap Dondurma çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Kap Dondurma çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/dondurma/kap-dondurma"
+    }
+  ],
+  "seoTitle": "",
+  "seoDescription": "",
+  "seoUrl": "https://www.a101.com.tr/kapida/dondurma",
+  "products": []
+}

@@ -1,9 +1,10 @@
 import { Box } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
+import { forwardRef, useEffect, useRef, useState } from "react";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 import "../Styles/Keyboard.css";
 import logo from "../Resources/enter.png";
+import usePreferences from "../Hooks/usePreferences";
 
 const numericLayout = {
   default: ["1 2 3", "4 5 6", "7 8 9", "{bksp} 0 {tick}"],
@@ -11,7 +12,7 @@ const numericLayout = {
 };
 
 const cashierLayout = {
-  default: ["{cancel} +/- {bksp}", "1 2 3", "4 5 6", "7 8 9", "00 0 ."],
+  default: ["{cancel} +/- {bksp}", "1 2 3", "4 5 6", "7 8 9", "00 0 ,"],
 };
 
 const englishLayout = {
@@ -31,121 +32,149 @@ const englishLayout = {
   ],
 };
 
-export default function VirtualKeyboard({
-  onChangeInput = () => {},
-  clear,
-  keyboardRef,
-  sx,
-  onBlur = () => {},
-  onInit = () => {},
-  onDone = () => {},
-  onPress = () => {},
-  layout = "default",
-}) {
-  const [state, setState] = useState({ layoutName: "default", input: "" });
-  let keyboard = useRef();
+export const VirtualKeyboard = forwardRef(
+  (
+    {
+      initialInput = "",
+      onChangeInput = () => {},
+      sx,
+      onBlur = () => {},
+      onInit = () => {},
+      onDone = () => {},
+      onPress = () => {},
+      buttonSX = {},
+      layout = "default",
+    },
+    ref
+  ) => {
+    const { isThemeDark, theme } = usePreferences();
+    const [state, setState] = useState({ layoutName: "default", input: "" });
+    const boxRef = useRef();
 
-  //   const onChangeInput = (event) => {
-  //     const input = event.target.value;
-  //     this.setState({ input });
-  //     this.keyboard.setInput(input);
-  //   };
-
-  const ref = useRef();
-
-  const adjustLayout = () => {
-    switch (layout) {
-      case "default":
-        return {
-          layout: englishLayout,
-          class: "hg-theme-default hg-layout-default myTheme",
-        };
-      case "numeric":
-        return {
-          layout: numericLayout,
-          class: "hg-theme-default hg-layout-numeric myTheme",
-        };
-      case "cashier":
-        return {
-          layout: cashierLayout,
-          class: "hg-theme-default hg-layout-numeric myTheme",
-        };
-    }
-  };
-
-  useEffect(() => {
-    // setState({ ...state, input: "" });
-
-    //event of clicked outside of the keyboard
-    function handleClickOutside(event) {
-      if (ref.current && !ref.current.contains(event.target)) {
-        onBlur();
+    const adjustLayout = () => {
+      switch (layout) {
+        case "default":
+          return {
+            layout: englishLayout,
+            class: "hg-theme-default hg-layout-default",
+          };
+        case "numeric":
+          return {
+            layout: numericLayout,
+            class: "hg-theme-default hg-layout-numeric",
+          };
+        case "cashier":
+          return {
+            layout: cashierLayout,
+            class: "hg-theme-default hg-layout-numeric",
+          };
       }
-    }
-    // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [ref]);
 
-  const onChange = (input) => {
-    onChangeInput(input);
-    setState({ input });
-  };
+    useEffect(() => {
+      //event of clicked outside of the keyboard
+      function handleClickOutside(event) {
+        if (boxRef.current && !boxRef.current.contains(event.target)) {
+          onBlur();
+        }
+      }
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [boxRef]);
 
-  const handleShift = () => {
-    const layoutName = state.layoutName;
+    useEffect(() => {
+      ref.current.setInput(initialInput);
+    }, [initialInput]);
 
-    setState({
-      layoutName: layoutName === "default" ? "shift" : "default",
-    });
-  };
+    const onChange = (input) => {
+      onChangeInput(input);
+      setState({ input });
+    };
 
-  const onKeyPress = (button, e) => {
-    onPress(button);
-    e.preventDefault(); //preventing default event to not clicking somthing else behind the keyboard
-    if (button === "{cancel}") keyboard.current.setInput("");
-    if (button == "{tick}") setTimeout(() => onDone(), 400);
-    if (button === "{shift}" || button === "{lock}")
-      /**
-       * If you want to handle the shift and caps lock buttons
-       */
-      handleShift();
-  };
+    const handleShift = () => {
+      const layoutName = state.layoutName;
 
-  return (
-    <Box sx={{ ...sx }} ref={ref}>
-      <Keyboard
-        onInit={() => onInit()}
-        theme={adjustLayout().class}
-        buttonTheme={[
-          {
-            class: "hg-red",
-            buttons: "{bksp}",
+      setState({
+        layoutName: layoutName === "default" ? "shift" : "default",
+      });
+    };
+
+    const onKeyPress = (button, e) => {
+      onPress(button);
+      if (button === "{enter}") e.preventDefault(); //preventing default event to not clicking somthing else behind the keyboard
+      if (button === "{cancel}") ref.current.setInput("");
+      if (button === "{tick}") setTimeout(() => onDone(), 400);
+      if (button === "{shift}" || button === "{lock}")
+        /**
+         * If you want to handle the shift and caps lock buttons
+         */
+        handleShift();
+    };
+
+    return (
+      <Box
+        ref={boxRef}
+        sx={{
+          ...sx,
+          ".hg-button.hg-red": {
+            background: "rgb(255, 0, 0, 0.7)",
+            color: "white",
+            border: "none",
+            fontWeight: "bold",
           },
-        ]}
-        display={{
-          "{bksp}": "⌫",
-          "{tick}": "✔",
-          "{enter}": `<img src=${logo} width="50px" />`,
-          "{cancel}": "C",
+          ".hg-button.hg-red:active": {
+            background: "#d53c3e",
+            color: "white",
+            border: "none",
+            fontWeight: "bold",
+          },
+          ".hg-button": {
+            ...buttonSX,
+            backgroundColor: theme.palette.background.paper,
+            color: theme.palette.text.primary,
+            border: () => {
+              if (layout === "default" && isThemeDark) return "1px solid white";
+              else if (layout === "default" && !isThemeDark)
+                return "1px solid black";
+              else return "none";
+            },
+          },
+          ".hg-button:active": {
+            backgroundColor: isThemeDark && "#2f2f2f",
+          },
         }}
-        // buttonTheme={[
-        //   {
-        //     class: "hg-red",
-        //     buttons: "Q W E R T Y q w e r t y",
-        //   },
-        // ]}
-        keyboardRef={(r) => {
-          if (keyboardRef) keyboardRef.current = r;
-          keyboard.current = r;
-        }}
-        layout={adjustLayout().layout}
-        onChange={onChange}
-        onKeyPress={onKeyPress}
-      />
-    </Box>
-  );
-}
+      >
+        <Keyboard
+          keyboardRef={(r) => (ref.current = r)}
+          onInit={() => onInit()}
+          theme={adjustLayout().class}
+          buttonTheme={[
+            {
+              class: "hg-red",
+              buttons: "{bksp}",
+            },
+          ]}
+          display={{
+            "{bksp}": "⌫",
+            "{tick}": "✔",
+            "{enter}": "Enter",
+            "{cancel}": "C",
+            "{tab}": "Tab",
+            "{lock}": "CapsLk",
+            "{shift}": "Shift",
+            "{space}": " ",
+          }}
+          layout={adjustLayout().layout}
+          onChange={onChange}
+          onKeyPress={onKeyPress}
+        />
+      </Box>
+    );
+  }
+);
+
+export default VirtualKeyboard;

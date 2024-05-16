@@ -7,8 +7,10 @@ import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import { Receipt } from "../Components/Receipt";
 import { useReactToPrint } from "react-to-print";
 import { useTranslation } from "react-i18next";
+import usePreferences from "../Hooks/usePreferences";
 
 export default function PaymentResult() {
+  const { theme } = usePreferences();
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -16,8 +18,8 @@ export default function PaymentResult() {
   const [showReceipt, setShowReceipt] = useState(false);
   const receiptRef = useRef();
 
-  const payment = JSON.parse(localStorage.getItem("payment"));
-  const cashout = JSON.parse(localStorage.getItem("cashout"));
+  const payment = JSON.parse(sessionStorage.getItem("payment"));
+  const cashout = JSON.parse(sessionStorage.getItem("cashout"));
 
   const handlePrint = useReactToPrint({
     content: () => receiptRef.current,
@@ -27,7 +29,7 @@ export default function PaymentResult() {
     console.log(receiptRef);
     LOG("total calculated!", "yellow");
     let total = 0;
-    cashout.map(({ price }) => (total = total + price));
+    cashout.map(({ price }) => (total = total + price.cashout));
     return total / 100;
   }, [cashout, cashout.length]);
   let due = total - (payment.cash + payment.card);
@@ -42,7 +44,7 @@ export default function PaymentResult() {
         alignItems: "center",
         width: "100%",
         overflow: "hidden",
-        backgroundColor: "#e7ecf1",
+        backgroundColor: theme.palette.background.default,
       }}
     >
       <Box
@@ -87,7 +89,6 @@ export default function PaymentResult() {
               display: { md: "flex", sm: "flex", xs: "none" },
               flexDirection: "column",
               justifyContent: "space-between",
-              backgroundColor: "white",
               overflow: "hidden",
               borderRadius: 7,
             }}
@@ -128,7 +129,10 @@ export default function PaymentResult() {
               {t("cash").toUpperCase()}: {payment.cash}₺
             </Typography>
             <Typography sx={{ fontSize: 20 }}>
-              {t("creditCard").toUpperCase()}: {payment.card}₺{" "}
+              {t("creditCard").toUpperCase()}: {payment.card}₺
+            </Typography>
+            <Typography sx={{ fontSize: 20 }}>
+              PARA ÜSTÜ: {payment.change}₺
             </Typography>
           </Paper>
         </Box>
@@ -150,8 +154,8 @@ export default function PaymentResult() {
               borderRadius: 7,
             }}
             onClick={() => {
-              localStorage.setItem("cashout", JSON.stringify([]));
-              localStorage.setItem("payment", JSON.stringify({}));
+              sessionStorage.setItem("cashout", JSON.stringify([]));
+              sessionStorage.setItem("payment", JSON.stringify({}));
               navigate("../sale");
             }}
           >
@@ -184,20 +188,14 @@ export default function PaymentResult() {
           </Button>
         </Box>
       </Box>
-      <Box
-        sx={{
-          zIndex: -1000,
-          position: "absolute",
-          overflow: "hidden",
-          top: -1000,
-        }}
-      >
+      <Box sx={{ display: "none" }}>
         <Receipt ref={receiptRef} />
       </Box>
       <Dialog
         maxWidth="xl"
         open={showReceipt}
         onClose={() => setShowReceipt(false)}
+        scroll="body"
       >
         <Box overflowX={"hidden"}>
           <Receipt />
