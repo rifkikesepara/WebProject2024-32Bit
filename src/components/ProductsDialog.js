@@ -35,6 +35,7 @@ import ProductDetail from "./ProductDetail";
 import TextFieldVK from "./TextFieldVK";
 import useProduct from "../Hooks/useProduct";
 import LOG from "../Debug/Console";
+import usePreferences from "../Hooks/usePreferences";
 
 const categories = [
   { name: "Favoriler", value: "favourites" },
@@ -107,6 +108,8 @@ export default function Products({
       }),
     []
   );
+
+  const { theme } = usePreferences();
 
   const { products, getAllProducts, getCategorizedProducts, getSubCategories } =
     useProduct();
@@ -278,11 +281,16 @@ export default function Products({
   const CellContent = (productsData, index) => {
     return (
       <Box
-        sx={{ display: "flex", justifyContent: "center", position: "relative" }}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          position: "relative",
+        }}
       >
         <Button
           disableRipple
           key={productsData[index].id}
+          color="primary"
           sx={{
             width: 170,
             height: 200,
@@ -293,7 +301,7 @@ export default function Products({
             flexDirection: "column",
             justifyContent: "flex-end",
             transition: "transform 0.2s ease", //animation
-            backgroundColor: "white",
+            backgroundColor: theme.palette.background.paper,
             boxShadow: "0px 0px 20px -1px rgba(0, 0, 0, 0.3)",
             "&:hover": {
               transition: "transform 0.2s ease",
@@ -326,10 +334,8 @@ export default function Products({
               <Typography
                 sx={{
                   color:
-                    productsData[index].price.normal ==
-                    productsData[index].price.discounted
-                      ? "black"
-                      : "green",
+                    productsData[index].price.normal !=
+                      productsData[index].price.discounted && "green",
                   fontWeight: "bold",
                   mr: 1,
                 }}
@@ -340,10 +346,8 @@ export default function Products({
             <Typography
               sx={{
                 color:
-                  productsData[index].price.normal ==
-                  productsData[index].price.discounted
-                    ? "black"
-                    : "red",
+                  productsData[index].price.normal !=
+                    productsData[index].price.discounted && "red",
                 fontWeight: "bold",
                 textDecoration:
                   productsData[index].price.normal !=
@@ -356,7 +360,6 @@ export default function Products({
           <Typography
             sx={{
               width: "100%",
-              color: "black",
               fontSize: "95%",
             }}
             maxHeight={35}
@@ -420,11 +423,12 @@ export default function Products({
           borderTopRightRadius: 30,
           margin: 0,
           marginInline: { md: 6, xs: 0 },
-          maxWidth: { xs: "98%", md: 1500 },
+          maxWidth: { xs: "98%", md: 928 },
           borderBottomLeftRadius: { xs: 0, md: 30 },
           borderBottomRightRadius: { xs: 0, md: 30 },
           maxHeight: "90vh",
           marginTop: { xs: "auto", md: 0 },
+          backgroundColor: theme.palette.background.paper,
         },
       }}
     >
@@ -435,7 +439,6 @@ export default function Products({
           width: "100%",
           overflow: "hidden",
           position: "relative",
-          backgroundColor: "#ecedf1",
         }}
       >
         <IconButton
@@ -547,7 +550,6 @@ export default function Products({
               height: "100%",
               width: "100%",
               display: "flex",
-              backgroundColor: "#ecedf1",
             }}
           >
             <Box
@@ -604,7 +606,7 @@ export default function Products({
       <Typography
         sx={{
           textAlign: "center",
-          boxShadow: "10px 20px 50px 70px white",
+          boxShadow: "10px 20px 50px 70px " + theme.palette.background.paper,
           zIndex: 100,
         }}
       >

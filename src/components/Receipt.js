@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { forwardRef } from "react";
+import { useTranslation } from "react-i18next";
 
 export const Receipt = forwardRef(
   (
@@ -10,6 +11,8 @@ export const Receipt = forwardRef(
     },
     ref
   ) => {
+    const { t } = useTranslation();
+
     const date = payment.date.split(" ")[0].split(".");
     const time = payment.date.split(" ")[1].split(":");
 
@@ -42,7 +45,9 @@ export const Receipt = forwardRef(
         <Typography textAlign={"center"} textTransform={"uppercase"}>
           Feneryolu / İstanbul
         </Typography>
-        <Typography textAlign={"center"}>TEŞEKKÜR EDERİZ</Typography>
+        <Typography textAlign={"center"}>
+          {t("thankYou").toUpperCase()}
+        </Typography>
 
         <Box
           sx={{
@@ -84,7 +89,7 @@ export const Receipt = forwardRef(
                   </Typography>
                   <Typography> X{count}</Typography>
                 </Box>
-                <Typography>{price.cashout}₺</Typography>
+                <Typography>{price.cashout / 100}₺</Typography>
               </Box>
             );
           })}
@@ -121,7 +126,7 @@ export const Receipt = forwardRef(
           }}
         >
           <Typography fontWeight={"inherit"} fontSize={"inherit"}>
-            TOPLAM
+            {t("total").toUpperCase()}
           </Typography>
           <Typography fontWeight={"inherit"} fontSize={"inherit"}>
             {total()}₺
@@ -141,7 +146,7 @@ export const Receipt = forwardRef(
           }}
         >
           <Typography fontWeight={"inherit"} fontSize={"inherit"}>
-            KREDİ:
+            {t("credit").toUpperCase()}:
           </Typography>
           <Typography fontWeight={"inherit"} fontSize={"inherit"}>
             {payment.card}₺
@@ -163,9 +168,8 @@ export const Receipt = forwardRef(
             {payment.change}₺
           </Typography>
         </Box>
-
-        <Typography textAlign={"left"} width={"100%"} marginTop={3}>
-          KASİYER: A/KASİYER #1
+        <Typography textAlign={"left"} width={"100%"} marginTop={5}>
+          {t("cashier").toUpperCase()}: A/KASİYER #1
         </Typography>
         <Box
           sx={{

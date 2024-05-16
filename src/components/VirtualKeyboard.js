@@ -4,6 +4,7 @@ import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 import "../Styles/Keyboard.css";
 import logo from "../Resources/enter.png";
+import usePreferences from "../Hooks/usePreferences";
 
 const numericLayout = {
   default: ["1 2 3", "4 5 6", "7 8 9", "{bksp} 0 {tick}"],
@@ -41,10 +42,12 @@ export const VirtualKeyboard = forwardRef(
       onInit = () => {},
       onDone = () => {},
       onPress = () => {},
+      buttonSX = {},
       layout = "default",
     },
     ref
   ) => {
+    const { isThemeDark, theme } = usePreferences();
     const [state, setState] = useState({ layoutName: "default", input: "" });
     const boxRef = useRef();
 
@@ -53,17 +56,17 @@ export const VirtualKeyboard = forwardRef(
         case "default":
           return {
             layout: englishLayout,
-            class: "hg-theme-default hg-layout-default myTheme",
+            class: "hg-theme-default hg-layout-default",
           };
         case "numeric":
           return {
             layout: numericLayout,
-            class: "hg-theme-default hg-layout-numeric myTheme",
+            class: "hg-theme-default hg-layout-numeric",
           };
         case "cashier":
           return {
             layout: cashierLayout,
-            class: "hg-theme-default hg-layout-numeric myTheme",
+            class: "hg-theme-default hg-layout-numeric",
           };
       }
     };
@@ -102,12 +105,9 @@ export const VirtualKeyboard = forwardRef(
 
     const onKeyPress = (button, e) => {
       onPress(button);
-      // e.preventDefault(); //preventing default event to not clicking somthing else behind the keyboard
+      if (button === "{enter}") e.preventDefault(); //preventing default event to not clicking somthing else behind the keyboard
       if (button === "{cancel}") ref.current.setInput("");
-      if (button == "{tick}") {
-        e.preventDefault();
-        onDone();
-      }
+      if (button === "{tick}") setTimeout(() => onDone(), 400);
       if (button === "{shift}" || button === "{lock}")
         /**
          * If you want to handle the shift and caps lock buttons
@@ -116,7 +116,38 @@ export const VirtualKeyboard = forwardRef(
     };
 
     return (
-      <Box sx={{ ...sx }} ref={boxRef}>
+      <Box
+        ref={boxRef}
+        sx={{
+          ...sx,
+          ".hg-button.hg-red": {
+            background: "rgb(255, 0, 0, 0.7)",
+            color: "white",
+            border: "none",
+            fontWeight: "bold",
+          },
+          ".hg-button.hg-red:active": {
+            background: "#d53c3e",
+            color: "white",
+            border: "none",
+            fontWeight: "bold",
+          },
+          ".hg-button": {
+            ...buttonSX,
+            backgroundColor: theme.palette.background.paper,
+            color: theme.palette.text.primary,
+            border: () => {
+              if (layout === "default" && isThemeDark) return "1px solid white";
+              else if (layout === "default" && !isThemeDark)
+                return "1px solid black";
+              else return "none";
+            },
+          },
+          ".hg-button:active": {
+            backgroundColor: isThemeDark && "#2f2f2f",
+          },
+        }}
+      >
         <Keyboard
           keyboardRef={(r) => (ref.current = r)}
           onInit={() => onInit()}
@@ -130,8 +161,12 @@ export const VirtualKeyboard = forwardRef(
           display={{
             "{bksp}": "⌫",
             "{tick}": "✔",
-            "{enter}": `<img src=${logo} width="50px" />`,
+            "{enter}": "Enter",
             "{cancel}": "C",
+            "{tab}": "Tab",
+            "{lock}": "CapsLk",
+            "{shift}": "Shift",
+            "{space}": " ",
           }}
           layout={adjustLayout().layout}
           onChange={onChange}

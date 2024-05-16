@@ -25,12 +25,13 @@ export default function ProductDetail({
     >
       <Paper
         sx={{
-          p: 1,
+          paddingBlock: 1,
+          paddingInline: 10,
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          width: { xs: "80vw", md: "50vw" },
+          // width: { xs: "80vw", md: "50vw" },
         }}
       >
         <Box

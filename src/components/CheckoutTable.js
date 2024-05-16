@@ -16,8 +16,10 @@ import {
 import { Box } from "@mui/system";
 import { forwardRef, useState } from "react";
 import ProductDetail from "./ProductDetail";
+import { useTranslation } from "react-i18next";
+import usePreferences from "../Hooks/usePreferences";
 
-export const CheckoutTable = forwardRef(
+const CheckoutTable = forwardRef(
   (
     {
       sx,
@@ -34,7 +36,8 @@ export const CheckoutTable = forwardRef(
       open: false,
       index: 0,
     });
-
+    const { t } = useTranslation();
+    const { theme } = usePreferences();
     return (
       <TableContainer ref={ref}>
         <ToggleButtonGroup
@@ -49,12 +52,27 @@ export const CheckoutTable = forwardRef(
           <Table stickyHeader sx={{ width: "100%" }} aria-label="sticky table">
             <TableHead>
               <TableRow>
-                <TableCell sx={{ width: 50 }}>ADET</TableCell>
-                <TableCell align="center" width={"100%"}>
-                  ÜRÜN
+                <TableCell
+                  sx={{
+                    width: 50,
+                    backgroundColor: theme.palette.background.paper,
+                  }}
+                >
+                  {t("amount")}
                 </TableCell>
-                <TableCell align="right" width={50}>
-                  FİYAT
+                <TableCell
+                  align="center"
+                  width={"100%"}
+                  sx={{ backgroundColor: theme.palette.background.paper }}
+                >
+                  {t("product")}
+                </TableCell>
+                <TableCell
+                  align="right"
+                  width={50}
+                  sx={{ backgroundColor: theme.palette.background.paper }}
+                >
+                  {t("price")}
                 </TableCell>
               </TableRow>
             </TableHead>
@@ -90,87 +108,96 @@ export const CheckoutTable = forwardRef(
                         colSpan={2}
                         sx={{
                           padding: 0,
-                          position: "relative",
                         }}
                       >
-                        <IconButton
-                          disableFocusRipple
-                          disableRipple
-                          onClick={() =>
-                            setProductDetailWindow({ open: true, index: index })
-                          }
+                        <Box
                           sx={{
-                            height: "100%",
-                            position: "absolute",
-                            left: 15,
-                            zIndex: 10,
+                            padding: 0,
+                            position: "relative",
                           }}
                         >
-                          <InfoRounded sx={{ opacity: 0 }} />
-                        </IconButton>
-                        <ToggleButton
-                          key={index}
-                          value={id}
-                          sx={{
-                            border: "none",
-                            display: "flex",
-                            justifyContent: "space-between",
-                            color: "black",
-                            width: "100%",
-                            paddingBlock: 2,
-                          }}
-                        >
-                          <Box
+                          <IconButton
+                            disableFocusRipple
+                            disableRipple
+                            onClick={() =>
+                              setProductDetailWindow({
+                                open: true,
+                                index: index,
+                              })
+                            }
                             sx={{
-                              display: "flex",
-                              alignItems: "center",
+                              height: "100%",
+                              position: "absolute",
+                              left: 15,
+                              zIndex: 10,
                             }}
                           >
-                            <img
-                              src={
-                                images.find(
-                                  ({ imageType }) => imageType == "product"
-                                ).url
-                              }
-                              width={50}
-                            />
-                            <Typography marginLeft={2} maxWidth={200}>
-                              {attributes.name}
-                            </Typography>
-                          </Box>
-                          <Box
-                            sx={{ display: "flex", flexDirection: "column" }}
+                            <InfoRounded sx={{ opacity: 0 }} />
+                          </IconButton>
+                          <ToggleButton
+                            key={index}
+                            value={id}
+                            sx={{
+                              border: "none",
+                              display: "flex",
+                              justifyContent: "space-between",
+                              width: "100%",
+                              paddingBlock: 2,
+                              color: theme.palette.text.primary,
+                            }}
                           >
-                            <Typography
+                            <Box
                               sx={{
-                                fontWeight: "bold",
-                                minWidth: 50,
-                                color:
-                                  price.discounted != price.normal && "red",
-                                textDecoration:
-                                  price.discounted != price.normal &&
-                                  "line-through",
+                                display: "flex",
+                                alignItems: "center",
                               }}
-                              fontWeight={"bold"}
-                              minWidth={50}
                             >
-                              {(price.normal / 100) * count}₺
-                            </Typography>
-                            {price.discounted != price.normal && (
+                              <img
+                                src={
+                                  images.find(
+                                    ({ imageType }) => imageType == "product"
+                                  ).url
+                                }
+                                width={50}
+                              />
+                              <Typography marginLeft={2} maxWidth={200}>
+                                {attributes.name}
+                              </Typography>
+                            </Box>
+                            <Box
+                              sx={{ display: "flex", flexDirection: "column" }}
+                            >
                               <Typography
                                 sx={{
                                   fontWeight: "bold",
                                   minWidth: 50,
-                                  color: "green",
+                                  color:
+                                    price.discounted != price.normal && "red",
+                                  textDecoration:
+                                    price.discounted != price.normal &&
+                                    "line-through",
                                 }}
                                 fontWeight={"bold"}
                                 minWidth={50}
                               >
-                                {price.cashout / 100}₺
+                                {(price.normal / 100) * count}₺
                               </Typography>
-                            )}
-                          </Box>
-                        </ToggleButton>
+                              {price.discounted != price.normal && (
+                                <Typography
+                                  sx={{
+                                    fontWeight: "bold",
+                                    minWidth: 50,
+                                    color: "green",
+                                  }}
+                                  fontWeight={"bold"}
+                                  minWidth={50}
+                                >
+                                  {price.cashout / 100}₺
+                                </Typography>
+                              )}
+                            </Box>
+                          </ToggleButton>
+                        </Box>
                       </TableCell>
                     </TableRow>
                   );

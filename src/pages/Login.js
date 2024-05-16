@@ -16,8 +16,10 @@ import { useAlert } from "../Hooks/useAlert";
 import usePreferences from "../Hooks/usePreferences";
 import TextFieldVK from "../Components/TextFieldVK";
 import useStore from "../Hooks/useStore";
+import { useTranslation } from "react-i18next";
 
 export default function Login() {
+  const { t, i18n } = useTranslation();
   const user = { userCode: "admin", password: 123 };
 
   const navigate = useNavigate();
@@ -43,14 +45,14 @@ export default function Login() {
       ) {
         console.log(values.userCode);
         setTimeout(() => {
-          setAlert({ text: "Başarıyla giriş yapıldı", type: "success" });
+          setAlert({ text: t("loginSuccessful"), type: "success" });
         }, 2000);
         setTimeout(() => {
           navigate("/home");
         }, 3500);
       } else {
         setTimeout(() => {
-          setAlert({ text: "Kullanıcı geçersiz!", type: "error" });
+          setAlert({ text: t("undefinedUser"), type: "error" });
           setLoading(false);
         }, 2000);
       }
@@ -69,7 +71,9 @@ export default function Login() {
         },
         justifyContent: { xs: "center", sm: "center" },
         alignItems: { xs: "center", sm: "center" },
-        backgroundColor: "#e7ecf1",
+        backgroundColor: theme.palette.background.default,
+        // backgroundColor: theme.background,
+        // backgroundColor: "#e7ecf1",
       }}
     >
       <Paper
@@ -86,16 +90,14 @@ export default function Login() {
         <form onSubmit={formik.handleSubmit} style={{ width: "100%" }}>
           <Box sx={{ width: "100%", textAlign: "center" }}>
             <Typography textAlign={"inherit"} variant="h4" fontWeight={"bold"}>
-              Hoşgeldiniz!
+              {t("welcome")}
             </Typography>
-            <Typography textAlign={"inherit"}>
-              Lütfen kullanıcı kodu ve şifrenizi giriniz.
-            </Typography>
+            <Typography textAlign={"inherit"}>{t("loginDesc")}</Typography>
           </Box>
           <TextFieldVK
             disabled={loading}
-            placeholder="Kullanıcı Kodu"
             name="userCode"
+            placeholder={t("userCode")}
             inputSX={{ width: "100%" }}
             value={formik.values.userCode}
             onChange={(event, value) => {
@@ -108,7 +110,7 @@ export default function Login() {
           />
           <TextFieldVK
             disabled={loading}
-            placeholder="Şifre"
+            placeholder={t("password")}
             name="password"
             type="password"
             inputSX={{ width: "100%", marginBlock: 1 }}
@@ -130,10 +132,9 @@ export default function Login() {
             sx={{ paddingBlock: 2 }}
             loading={loading}
           >
-            Giriş
+            {t("login")}
           </LoadingButton>
         </form>
-
         <Box
           sx={{
             display: "flex",
@@ -143,9 +144,15 @@ export default function Login() {
           }}
         >
           <Typography>Version {storeInfo.version}</Typography>
-          <Select>
-            <MenuItem>Türkçe</MenuItem>
-            <MenuItem>İngilizce</MenuItem>
+          <Select
+            value={localStorage.getItem("language")}
+            onChange={(e) => {
+              i18n.changeLanguage(e.target.value);
+              localStorage.setItem("language", e.target.value);
+            }}
+          >
+            <MenuItem value="tr">Türkçe</MenuItem>
+            <MenuItem value="en">İngilizce</MenuItem>
           </Select>
         </Box>
       </Paper>

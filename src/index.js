@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dashboard";
-import Theme from "./Context/Theme";
+import Theme, { usePreferences } from "./Context/Theme";
 import AlertProvider, { AlertPopUp } from "./Context/AlertProvider";
 import Sale from "./Pages/Sale";
 import Test from "./Pages/Test";
@@ -14,6 +14,7 @@ import { ProductSnackbar } from "./Components/ProductSnackbar";
 import Payment from "./Pages/Payment";
 import PaymentResult from "./Pages/PaymentResult";
 import ProductProvider from "./Context/ProductProvider";
+import "./config";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,7 @@ const router = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <Theme>
     <SnackbarProvider

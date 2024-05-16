@@ -20,8 +20,12 @@ import VirtualKeyboard from "../Components/VirtualKeyboard";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
 import { useAlert } from "../Hooks/useAlert";
+import { useTranslation } from "react-i18next";
+import usePreferences from "../Hooks/usePreferences";
 
 export default function Payment() {
+  const { theme } = usePreferences();
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { setAlert } = useAlert();
   const mainDiv = useRef();
@@ -138,7 +142,7 @@ export default function Payment() {
           flexDirection: "column",
           overflowY: "hidden",
           height: "100vh",
-          backgroundColor: "#e7ecf1",
+          backgroundColor: theme.palette.background.default,
           zIndex: 2,
         }}
       >
@@ -155,7 +159,7 @@ export default function Payment() {
           }}
           elevation={2}
         >
-          <IconButton sx={{ ml: 1, color: "black" }}>
+          <IconButton sx={{ ml: 1 }}>
             <QrCodeScannerIcon sx={{ fontSize: 40 }} />
             <motion.div
               style={{ display: "flex", alignItems: "center" }}
@@ -165,13 +169,11 @@ export default function Payment() {
             >
               <Typography
                 sx={{
-                  color: "black",
                   padding: 0.5,
-                  width: 100,
                   fontWeight: "bold",
                 }}
               >
-                FİYAT GÖR
+                {t("checkprice")}
               </Typography>
             </motion.div>
           </IconButton>
@@ -179,7 +181,7 @@ export default function Payment() {
             onClick={deleteSelected}
             disabled={selectedItems.length == 0 ? true : false}
             aria-label="delete"
-            sx={{ fontSize: 40, marginRight: 2, color: "black" }}
+            sx={{ fontSize: 40, marginRight: 2 }}
             color="black"
           >
             <DeleteIcon fontSize="inherit" color="inherit" />
@@ -189,14 +191,10 @@ export default function Payment() {
           sx={{
             height: "87vh",
             width: "95%",
-            // overflowY: "scroll",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            backgroundColor: "white",
             overflow: "hidden",
-            // borderTopLeftRadius: 10,
-            // borderTopRightRadius: 10,
             borderRadius: 7,
           }}
           elevation={5}
@@ -225,25 +223,29 @@ export default function Payment() {
             elevation={5}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>Toplam: {total}₺</Typography>
+              <Typography>
+                {t("total")}: {total}₺
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>Ara Toplam: {total}₺</Typography>
+              <Typography>
+                {t("subTotal")}: {total}₺
+              </Typography>
             </AccordionDetails>
             <AccordionDetails sx={{ paddingBlock: 0 }}>
               <Typography sx={{ color: "green", fontWeight: "bold" }}>
-                NAKİT: {payment.cash}₺
+                {t("cash").toUpperCase()}: {payment.cash}₺
               </Typography>
             </AccordionDetails>
             <AccordionDetails sx={{ paddingBlock: 0 }}>
               <Typography sx={{ color: "blue", fontWeight: "bold" }}>
-                KREDİ KARTI: {payment.card}₺
+                {t("creditCard").toUpperCase()}: {payment.card}₺
               </Typography>
             </AccordionDetails>
             <Divider />
             <AccordionDetails>
               <Typography sx={{ color: "red", fontWeight: "bold" }}>
-                KALAN: {due.toFixed(2)}₺
+                {t("due").toUpperCase()}: {due.toFixed(2)}₺
               </Typography>
               {payment.change != 0 && (
                 <Typography sx={{ color: "red", fontWeight: "bold" }}>
@@ -262,7 +264,7 @@ export default function Payment() {
           flexDirection: "column",
           justifyContent: "space-between",
           alignItems: "center",
-          backgroundColor: "#e7ecf1",
+          backgroundColor: theme.palette.background.default,
         }}
       >
         <Box sx={{ marginBlock: "auto" }}>
@@ -273,7 +275,7 @@ export default function Payment() {
               variant="standard"
               name="amount"
               autoComplete="off"
-              label="Tutar Giriniz"
+              label={t("enterAmountText")}
               onFocus={(e) => setSelectedInputField(e.target.name)}
               value={inputFields.amount}
               sx={{
@@ -302,7 +304,7 @@ export default function Payment() {
                 keyboard.current.setInput(due.toString());
               }}
             >
-              KALAN
+              {t("due").toUpperCase()}
             </Button>
           </Box>
           <Box
@@ -320,11 +322,10 @@ export default function Payment() {
               sx={{
                 width: 160,
                 height: 80,
-                background: "green",
               }}
               onClick={handleClick}
             >
-              NAKİT
+              {t("cash")}
             </Button>
             <Button
               disabled={inputFields.amount == "" ? true : false}
@@ -334,11 +335,10 @@ export default function Payment() {
               sx={{
                 width: 160,
                 height: 80,
-                background: "blue",
               }}
               onClick={handleClick}
             >
-              KREDİ KARTI
+              {t("creditCard")}
             </Button>
           </Box>
           <Box
@@ -379,7 +379,7 @@ export default function Payment() {
                 disableElevation
                 onClick={() => navigate("../sale")}
               >
-                Geri Dön
+                {t("goBack")}
               </Button>
               <Button
                 disabled={due != 0}
@@ -396,7 +396,7 @@ export default function Payment() {
                   navigate("./result");
                 }}
               >
-                ÖDEME YAP
+                {t("pay")}
               </Button>
             </Box>
           </Box>
@@ -405,7 +405,7 @@ export default function Payment() {
           sx={{
             position: "sticky",
             bottom: 0,
-            backgroundColor: "#e7ecf1",
+            backgroundColor: theme.palette.background.default,
             width: "100%",
             display: "flex",
             justifyContent: "flex-start",
@@ -425,7 +425,7 @@ export default function Payment() {
               marginRight: 10,
             }}
           ></div>
-          <Typography>Mağaza Çevrimiçi</Typography>
+          <Typography color={"primary"}>{t("storeOnline")}</Typography>
         </Box>
       </Box>
     </Box>

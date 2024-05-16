@@ -4,9 +4,11 @@ import {
   Paper,
   IconButton,
 } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import PropTypes from "prop-types";
 import { ArrowLeft, ArrowRight } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
+import usePreferences from "../Hooks/usePreferences";
 
 export default function ButtonGroup({
   sx,
@@ -20,12 +22,10 @@ export default function ButtonGroup({
   intialSelected = "",
   elevation = 0,
 }) {
+  const { t } = useTranslation();
+  const { theme, isThemeDark } = usePreferences();
   const [selected, setSelected] = useState(intialSelected);
   const scrollRef = useRef();
-
-  // useEffect(() => {
-  //   if (intialSelected != "") onSelect(intialSelected);
-  // }, [intialSelected]);
 
   return (
     <Paper
@@ -35,13 +35,10 @@ export default function ButtonGroup({
     >
       <ToggleButtonGroup
         sx={{
-          // overflowX: "scroll",
           gridGap: spacing,
           alignSelf: "center",
-          // paddingInline: 1,
           border: "0px",
           position: "relative",
-          // width: "100%",
         }}
         exclusive
         value={selected}
@@ -62,8 +59,9 @@ export default function ButtonGroup({
             // height: "100%",
             borderRadius: 0,
             zIndex: 2,
-            backgroundImage:
-              "linear-gradient(to right, rgba(255,255,255,1) 70% , rgba(255,255,255,0))",
+            backgroundImage: !isThemeDark
+              ? "linear-gradient(to right, rgba(255,255,255,1) 70% , rgba(255,255,255,0))"
+              : "linear-gradient(to right, rgba(60,60,60,1) 70% , rgba(60,60,60,0))",
           }}
           onClick={() =>
             scrollRef.current.scroll({
@@ -98,7 +96,7 @@ export default function ButtonGroup({
               }}
               value={value}
             >
-              {name}
+              {t(name)}
             </ToggleButton>
           );
         })}
@@ -109,10 +107,10 @@ export default function ButtonGroup({
           sx={{
             position: "sticky",
             right: 0,
-            // height: "100%",
             borderRadius: 0,
-            backgroundImage:
-              "linear-gradient(to left, rgba(255,255,255,1) 70% , rgba(255,255,255,0))",
+            backgroundImage: !isThemeDark
+              ? "linear-gradient(to left, rgba(255,255,255,1) 70% , rgba(255,255,255,0))"
+              : "linear-gradient(to left, rgba(60,60,60,1) 70% , rgba(60,60,60,0))",
           }}
           onClick={() =>
             scrollRef.current.scroll({

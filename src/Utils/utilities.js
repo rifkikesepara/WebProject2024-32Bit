@@ -1,47 +1,47 @@
 export const getDayString = (index) => {
   switch (index) {
     case 1:
-      return "Pazartesi";
+      return "Monday";
     case 2:
-      return "Salı";
+      return "Tuesday";
     case 3:
-      return "Çarşamba";
+      return "Wednesday";
     case 4:
-      return "Perşembe";
+      return "Thursday";
     case 5:
-      return "Cuma";
+      return "Friday";
     case 6:
-      return "Cumartesi";
+      return "Saturday";
     case 0:
-      return "Pazar";
+      return "Sunday";
   }
 };
 
 export const getMonthString = (index) => {
   switch (index) {
     case 0:
-      return "Ocak";
+      return "January";
     case 1:
-      return "Şubat";
+      return "Feburary";
     case 2:
-      return "Mart";
+      return "March";
     case 3:
-      return "Nisan";
+      return "April";
     case 4:
-      return "Mayıs";
+      return "May";
     case 5:
-      return "Haziran";
+      return "June";
     case 6:
-      return "Temmuz";
+      return "July";
     case 7:
-      return "Ağustos";
+      return "August";
     case 8:
-      return "Eylül";
+      return "September";
     case 9:
-      return "Ekim";
+      return "October";
     case 10:
-      return "Kasım";
+      return "November";
     case 11:
-      return "Aralık";
+      return "December";
   }
 };

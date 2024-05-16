@@ -57,12 +57,14 @@ export default function OfferBox() {
       >
         <Stack
           //   height={"80vh"}
-          width={"80vw"}
+          paddingInline={20}
+          paddingBlock={3}
+          // width={"80vw"}
           justifyContent={"center"}
           alignItems={"center"}
         >
           <Typography variant="h4">Aktif Teklifler</Typography>
-          <Box height={100} overflow={"scroll"} width={"50%"}>
+          <Box height={100} overflow={"scroll"} width={"100%"}>
             {texts.map((text, index) => {
               return (
                 <Stack

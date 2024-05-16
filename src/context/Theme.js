@@ -7,15 +7,12 @@ import {
   useState,
 } from "react";
 
-const lightTheme = {
-  background: "white",
-};
-const darkTheme = {
-  background: "black",
-};
+import { DarkTheme, LightTheme } from "../Styles/Themes";
+import { Switch, ThemeProvider } from "@mui/material";
 
 export const ThemeContext = createContext({
-  theme: lightTheme,
+  theme: LightTheme, //intial theme
+  isThemeDark: false,
   toggleTheme: () => {},
 });
 
@@ -27,7 +24,7 @@ export default function Theme({ children }) {
 
   const [themeName, setThemeName] = useState(localStorage.getItem("theme"));
 
-  let theme = themeName == "light" ? lightTheme : darkTheme;
+  let theme = themeName == "light" ? LightTheme : DarkTheme;
   let isThemeDark = themeName == "dark" ? true : false;
 
   const toggleTheme = useCallback(() => {
@@ -52,7 +49,17 @@ export default function Theme({ children }) {
 
   return (
     <ThemeContext.Provider value={preferences}>
-      {children}
+      <ThemeProvider theme={theme}>
+        <Switch
+          checked={isThemeDark}
+          sx={{ position: "absolute", right: 0, zIndex: 1000 }}
+          onChange={(e, checked) => {
+            toggleTheme();
+          }}
+        />
+
+        {children}
+      </ThemeProvider>
     </ThemeContext.Provider>
   );
 }

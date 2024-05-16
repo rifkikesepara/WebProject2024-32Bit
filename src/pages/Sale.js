@@ -30,10 +30,14 @@ import useData from "../Hooks/useData";
 import API from "../productsAPI.json";
 import useProduct from "../Hooks/useProduct";
 import OfferBox from "../Components/OfferBox";
+import { useTranslation } from "react-i18next";
+import usePreferences from "../Hooks/usePreferences";
 
 export default function Sale() {
   const storeInfo = useStore();
   const navigate = useNavigate();
+  const { theme } = usePreferences();
+  const { t } = useTranslation();
   const { setAlert } = useAlert();
   const { setProducts, getAllProducts } = useProduct();
 
@@ -178,7 +182,7 @@ export default function Sale() {
           flexDirection: "column",
           overflowY: "hidden",
           height: "100vh",
-          backgroundColor: "#e7ecf1",
+          backgroundColor: theme.palette.background.default,
           zIndex: 2,
         }}
       >
@@ -201,7 +205,7 @@ export default function Sale() {
               sx={{
                 ml: 1,
                 overflow: "hidden",
-                color: "black",
+                color: theme.palette.text.primary,
               }}
             >
               <QrCodeScannerIcon sx={{ fontSize: 40 }} />
@@ -241,7 +245,7 @@ export default function Sale() {
               onClick={deleteSelected}
               disabled={selectedItems.length == 0 ? true : false}
               aria-label="delete"
-              sx={{ fontSize: 40, marginRight: 2, color: "black" }}
+              sx={{ fontSize: 40, marginRight: 2 }}
               color="black"
             >
               <DeleteIcon fontSize="inherit" color="inherit" />
@@ -256,7 +260,7 @@ export default function Sale() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            backgroundColor: "white",
+            // backgroundColor: "white",
             overflow: "hidden",
             // borderTopLeftRadius: 10,
             // borderTopRightRadius: 10,
@@ -290,10 +294,14 @@ export default function Sale() {
             elevation={5}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>Toplam: {total}₺</Typography>
+              <Typography>
+                {t("total")}: {total}₺
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>Ara Toplam: {total}₺</Typography>
+              <Typography>
+                {t("subTotal")}: {total}₺
+              </Typography>
             </AccordionDetails>
           </Accordion>
         </Paper>
@@ -306,16 +314,17 @@ export default function Sale() {
           flexDirection: "column",
           justifyContent: "space-between",
           alignItems: "center",
-          backgroundColor: "#e7ecf1",
+          backgroundColor: theme.palette.background.default,
         }}
       >
         <Box sx={{ marginBlock: "auto" }}>
           <TextField
             autoFocus
+            focused
             variant="standard"
             name="barcode"
             autoComplete="off"
-            label="Klaveden Barkod Girişi"
+            label={t("enterBarcodeText")}
             onFocus={(e) => setSelectedInputField(e.target.name)}
             value={inputFields.barcode}
             sx={{
@@ -324,7 +333,6 @@ export default function Sale() {
               marginLeft: 2,
             }}
             onChange={(e) => {
-              //sync with physical keyboard(TODO)
               setInputFields({
                 ...inputFields,
                 [selectedInputField]: e.target.value,
@@ -378,7 +386,7 @@ export default function Sale() {
               startIcon={<LocalGroceryStoreIcon />}
               onClick={() => setSelectListOpen(true)}
             >
-              Listeden Ürün Eklemek için Tıklayın
+              {t("addProductText")}
             </Button>
             <Box
               sx={{
@@ -417,7 +425,7 @@ export default function Sale() {
                 disableElevation
                 onClick={() => navigate("../home")}
               >
-                Geri Dön
+                {t("goBack")}
               </Button>
               <Button
                 disabled={!storeInfo.online}
@@ -433,7 +441,7 @@ export default function Sale() {
                   navigate("./payment");
                 }}
               >
-                ÖDEMEYE İLERLE
+                {t("goPayment")}
               </Button>
             </Box>
           </Box>
@@ -442,7 +450,7 @@ export default function Sale() {
           sx={{
             position: "sticky",
             bottom: 0,
-            backgroundColor: "#e7ecf1",
+            backgroundColor: theme.palette.background.default,
             width: "100%",
             display: "flex",
             justifyContent: "flex-start",
@@ -461,7 +469,7 @@ export default function Sale() {
               marginRight: 10,
             }}
           ></div>
-          <Typography>Mağaza Çevrimiçi</Typography>
+          <Typography color={"primary"}>{t("storeOnline")}</Typography>
         </Box>
       </Box>
     </Box>
