@@ -36,6 +36,7 @@ import TextFieldVK from "./TextFieldVK";
 import useProduct from "../Hooks/useProduct";
 import LOG from "../Debug/Console";
 import usePreferences from "../Hooks/usePreferences";
+import { GetFromLocalStorage, SaveToLocalStorage } from "../Utils/utilities";
 
 const categories = [
   { name: "Favoriler", value: "favourites" },
@@ -128,7 +129,7 @@ export default function Products({
   const [productAmount, setProductAmount] = useState(0);
   const [search, setSearch] = useState(true);
   const [favourites, setFavourites] = useState(
-    JSON.parse(localStorage.getItem("favourites"))
+    GetFromLocalStorage("favourites")
   );
 
   const clear = () => {
@@ -150,7 +151,7 @@ export default function Products({
       var prd = getAllProducts();
       set(prd);
       tempdata.current = prd;
-      setFavourites(JSON.parse(localStorage.getItem("favourites")));
+      setFavourites(GetFromLocalStorage("favourites"));
     }, 1000);
   }, [open]);
 
@@ -162,6 +163,7 @@ export default function Products({
       images: product.images,
       price: product.price,
       stock: product.stock,
+      category: product.categories[0].id,
     };
 
     if (addToCart) {
@@ -218,14 +220,13 @@ export default function Products({
       array.splice(array.indexOf(product), 1);
       setFavourites(array);
     }
-    localStorage.setItem("favourites", JSON.stringify(array));
+    SaveToLocalStorage("favourites", array);
   };
 
   const isFavourite = (product) => {
     if (
-      JSON.parse(localStorage.getItem("favourites")).find(
-        ({ id }) => id == product.id
-      ) == undefined
+      GetFromLocalStorage("favourites").find(({ id }) => id == product.id) ==
+      undefined
     )
       return false;
     else return true;
@@ -471,7 +472,7 @@ export default function Products({
               if (v == "all") {
                 datas = getAllProducts();
               } else if (v == "favourites") {
-                datas = JSON.parse(localStorage.getItem("favourites"));
+                datas = GetFromLocalStorage("favourites");
                 setFavourites(datas);
               } else {
                 datas = getCategorizedProducts(v);

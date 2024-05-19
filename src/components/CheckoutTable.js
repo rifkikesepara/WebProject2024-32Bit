@@ -2,6 +2,7 @@ import { InfoRounded } from "@mui/icons-material";
 import {
   Button,
   IconButton,
+  Stack,
   Table,
   TableBody,
   TableCell,
@@ -77,132 +78,143 @@ const CheckoutTable = forwardRef(
               </TableRow>
             </TableHead>
             <TableBody>
-              {data.map(
-                ({ id, count, images, attributes, price, stock }, index) => {
-                  return (
-                    <TableRow key={id}>
-                      <TableCell sx={{ padding: 0, textAlign: "center" }}>
-                        <TextField
-                          disabled={disabled}
-                          autoComplete="off"
-                          name={attributes.name}
-                          value={count}
-                          inputProps={{
-                            sx: {
-                              textAlign: "center",
-                              border: "none",
-                              minHeight: 70,
-                            },
-                          }}
-                          variant="standard"
-                          InputProps={{
-                            disableUnderline: true,
-                          }}
-                          onFocus={(event) => {
-                            onFocus(event, { id });
-                            event.target.select();
-                          }}
-                        />
-                      </TableCell>
-                      <TableCell
-                        colSpan={2}
+              {data.map((product, index) => {
+                const isDiscounted =
+                  product.price.cashout !=
+                    product.count * product.price.discounted ||
+                  product.price.discounted != product.price.normal;
+                return (
+                  <TableRow key={product.id}>
+                    <TableCell sx={{ padding: 0, textAlign: "center" }}>
+                      <TextField
+                        disabled={disabled}
+                        autoComplete="off"
+                        name={product.attributes.name}
+                        value={product.count}
+                        inputProps={{
+                          sx: {
+                            textAlign: "center",
+                            border: "none",
+                            minHeight: 70,
+                          },
+                        }}
+                        variant="standard"
+                        InputProps={{
+                          disableUnderline: true,
+                        }}
+                        onFocus={(event) => {
+                          onFocus(event, product);
+                          event.target.select();
+                        }}
+                      />
+                    </TableCell>
+                    <TableCell
+                      colSpan={2}
+                      sx={{
+                        padding: 0,
+                      }}
+                    >
+                      <Box
                         sx={{
                           padding: 0,
+                          position: "relative",
                         }}
                       >
-                        <Box
+                        <IconButton
+                          disableFocusRipple
+                          disableRipple
+                          onClick={() =>
+                            setProductDetailWindow({
+                              open: true,
+                              index: index,
+                            })
+                          }
                           sx={{
-                            padding: 0,
-                            position: "relative",
+                            height: "100%",
+                            position: "absolute",
+                            left: 15,
+                            zIndex: 10,
                           }}
                         >
-                          <IconButton
-                            disableFocusRipple
-                            disableRipple
-                            onClick={() =>
-                              setProductDetailWindow({
-                                open: true,
-                                index: index,
-                              })
-                            }
+                          <InfoRounded sx={{ opacity: 0 }} />
+                        </IconButton>
+                        <ToggleButton
+                          key={index}
+                          value={product.id}
+                          sx={{
+                            border: "none",
+                            display: "flex",
+                            justifyContent: "space-between",
+                            width: "100%",
+                            paddingBlock: 2,
+                            color: theme.palette.text.primary,
+                          }}
+                        >
+                          <Box
                             sx={{
-                              height: "100%",
-                              position: "absolute",
-                              left: 15,
-                              zIndex: 10,
-                            }}
-                          >
-                            <InfoRounded sx={{ opacity: 0 }} />
-                          </IconButton>
-                          <ToggleButton
-                            key={index}
-                            value={id}
-                            sx={{
-                              border: "none",
                               display: "flex",
-                              justifyContent: "space-between",
-                              width: "100%",
-                              paddingBlock: 2,
-                              color: theme.palette.text.primary,
+                              alignItems: "center",
                             }}
                           >
-                            <Box
+                            <img
+                              src={
+                                product.images.find(
+                                  ({ imageType }) => imageType == "product"
+                                ).url
+                              }
+                              width={50}
+                            />
+                            <Stack
+                              marginLeft={2}
+                              maxWidth={200}
+                              alignItems={"flex-start"}
+                            >
+                              <Typography>{product.attributes.name}</Typography>
+                              {product.offer != undefined && (
+                                <Typography
+                                  variant="body2"
+                                  sx={{ color: "red" }}
+                                >
+                                  {product.offer} x{product.offerApplied}
+                                </Typography>
+                              )}
+                            </Stack>
+                          </Box>
+                          <Box
+                            sx={{ display: "flex", flexDirection: "column" }}
+                          >
+                            <Typography
                               sx={{
-                                display: "flex",
-                                alignItems: "center",
+                                fontWeight: "bold",
+                                minWidth: 50,
+                                color: isDiscounted && "red",
+                                textDecoration: isDiscounted && "line-through",
                               }}
+                              fontWeight={"bold"}
+                              minWidth={50}
                             >
-                              <img
-                                src={
-                                  images.find(
-                                    ({ imageType }) => imageType == "product"
-                                  ).url
-                                }
-                                width={50}
-                              />
-                              <Typography marginLeft={2} maxWidth={200}>
-                                {attributes.name}
-                              </Typography>
-                            </Box>
-                            <Box
-                              sx={{ display: "flex", flexDirection: "column" }}
-                            >
+                              {(product.price.normal / 100) * product.count}₺
+                            </Typography>
+                            {isDiscounted && (
                               <Typography
                                 sx={{
                                   fontWeight: "bold",
                                   minWidth: 50,
-                                  color:
-                                    price.discounted != price.normal && "red",
-                                  textDecoration:
-                                    price.discounted != price.normal &&
-                                    "line-through",
+                                  color: "green",
                                 }}
                                 fontWeight={"bold"}
                                 minWidth={50}
                               >
-                                {(price.normal / 100) * count}₺
+                                {product.price.cashout / 100}₺
                               </Typography>
-                              {price.discounted != price.normal && (
-                                <Typography
-                                  sx={{
-                                    fontWeight: "bold",
-                                    minWidth: 50,
-                                    color: "green",
-                                  }}
-                                  fontWeight={"bold"}
-                                  minWidth={50}
-                                >
-                                  {price.cashout / 100}₺
-                                </Typography>
-                              )}
-                            </Box>
-                          </ToggleButton>
-                        </Box>
-                      </TableCell>
-                    </TableRow>
-                  );
-                }
-              )}
+                            )}
+                          </Box>
+                        </ToggleButton>
+                      </Box>
+                    </TableCell>
+                  </TableRow>
+                );
+              })}
               <ProductDetail
                 open={productDetailWindow.open}
                 product={data[productDetailWindow.index]}

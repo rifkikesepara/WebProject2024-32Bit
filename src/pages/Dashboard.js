@@ -219,6 +219,7 @@ export default function Dashboard() {
 
   const { breakpoints } = useTheme();
   const matches = useMediaQuery(breakpoints.up("sm"));
+  const matchesTablet = useMediaQuery(breakpoints.up("md"));
   const { theme, isThemeDark, toggleTheme } = usePreferences();
 
   const [showDrawer, setShowDrawer] = useState({ right: false, left: false });
@@ -491,7 +492,7 @@ export default function Dashboard() {
       </Grid>
       {data.length != 0 && (
         <MiniDrawer
-          oriantation={matches ? "vertical" : "horizontal"}
+          oriantation={matches && matchesTablet ? "vertical" : "horizontal"}
           open={showDrawer.left}
           onOpen={(o) => setShowDrawer({ ...showDrawer, left: o })}
           items={menuItems}

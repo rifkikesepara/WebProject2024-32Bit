@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "offerName": "Yumurta 3 Al 2 Öde",
+    "productID": 11002425,
+    "categoryID": null,
+    "type": "amount",
+    "discount": "3:1"
+  },
+  {
+    "id": 2,
+    "offerName": "Sepette %25 İndirim",
+    "productID": null,
+    "categoryID": null,
+    "type": "percentage",
+    "discount": 25
+  },
+  {
+    "id": 3,
+    "offerName": "Bütün Ürünlerde 3 Al 2 Öde",
+    "productID": null,
+    "categoryID": null,
+    "type": "amount",
+    "discount": "3:2"
+  },
+  {
+    "id": 4,
+    "offerName": "Bütün Dondurmalarda %25 İndirim",
+    "productID": null,
+    "categoryID": "C09",
+    "type": "percentage",
+    "discount": 25
+  }
+]

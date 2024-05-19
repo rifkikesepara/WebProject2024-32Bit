@@ -7,78 +7,106 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { useRef, useState } from "react";
-
-const texts = [
-  { text: "one", activated: true },
-  { text: "two", activated: true },
-  { text: "three", activated: true },
-];
+import { useMemo, useRef, useState } from "react";
+import useData from "../Hooks/useData";
+import LOG from "../Debug/Console";
+import { GetFromLocalStorage, SaveToLocalStorage } from "../Utils/utilities";
 
 export default function OfferBox() {
+  const i = useRef(0);
+
   const [animation, setAnimation] = useState(true);
   const [openDialog, setOpenDialog] = useState(false);
-  const i = useRef(0);
+  const [offers, setOffers] = useState(GetFromLocalStorage("offers"));
+
+  const activeOffers = useMemo(
+    () => offers.filter(({ activated }) => activated),
+    [offers]
+  );
+
+  const setOffer = (offerID, active) => {
+    const array = offers;
+    const index = offers.indexOf(offers.find(({ id }) => id == offerID));
+    array[index].activated = active;
+    setOffers(array);
+    SaveToLocalStorage("offers", array);
+  };
+
+  useData("./offers.json", (data) => {
+    LOG("fetching offers...", "red");
+    const array = [];
+    data.map((data) => {
+      array.push({ ...data, activated: true });
+    });
+    if (!GetFromLocalStorage("offers").length) {
+      SaveToLocalStorage("offers", array);
+      setOffers(array);
+    }
+  });
+
   return (
     <Stack
       justifyContent={"center"}
       alignItems={"center"}
       sx={{ width: "100%", height: "100%" }}
     >
-      <Button sx={{ width: "100%", height: "100%" }}>
+      <Button
+        key={0}
+        sx={{ width: "100%", height: "100%" }}
+        onClick={() => setOpenDialog(true)}
+      >
         <Fade
           in={animation}
           timeout={1500}
           onEntered={() => setAnimation(false)}
           onExited={() => {
-            if (i.current == texts.length - 1) {
-              for (let index = 0; index < texts.length; index++) {
-                if (texts[index].activated) {
-                  i.current = index;
-                  break;
-                }
-              }
-            } else {
-              do {
-                i.current += 1;
-              } while (!texts[i.current].activated);
-            }
+            if (i.current < activeOffers.length - 1) i.current += 1;
+            else i.current = 0;
             setAnimation(true);
           }}
-          onClick={() => setOpenDialog(true)}
         >
-          <Typography width={"100%"}>{texts[i.current].text}</Typography>
+          <Typography
+            sx={{
+              width: "100%",
+              fontSize: { xs: 13, md: "1.5vw", sm: "1.7vw" },
+            }}
+          >
+            {activeOffers[i.current]?.offerName}
+          </Typography>
         </Fade>
       </Button>
       <Dialog
         maxWidth="lg"
         open={openDialog}
         onClose={() => setOpenDialog(false)}
+        PaperProps={{ sx: { width: "50%" } }}
       >
-        <Stack
-          //   height={"80vh"}
-          paddingInline={20}
-          paddingBlock={3}
-          // width={"80vw"}
-          justifyContent={"center"}
-          alignItems={"center"}
-        >
+        <Stack paddingBlock={3} justifyContent={"center"} alignItems={"center"}>
           <Typography variant="h4">Aktif Teklifler</Typography>
-          <Box height={100} overflow={"scroll"} width={"100%"}>
-            {texts.map((text, index) => {
+          <Box
+            sx={{
+              height: 200,
+              width: "100%",
+              overflowY: "scroll",
+              overflowX: "hidden",
+            }}
+          >
+            {offers.map((offer, index) => {
               return (
                 <Stack
                   key={index}
-                  width={"20%"}
                   direction={"row"}
                   alignItems={"center"}
                   justifyContent={"flex-start"}
                 >
                   <Checkbox
-                    checked={text.activated}
-                    onChange={(e, c) => (text.activated = c)}
+                    checked={offer.activated}
+                    onChange={(e, value) => {
+                      setOffer(offer.id, value);
+                      i.current = 0;
+                    }}
                   />
-                  <Typography>{text.text}</Typography>
+                  <Typography>{offer.offerName}</Typography>
                 </Stack>
               );
             })}

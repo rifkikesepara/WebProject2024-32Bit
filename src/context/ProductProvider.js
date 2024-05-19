@@ -1,15 +1,28 @@
-import { createContext, useMemo, useState } from "react";
+import { createContext, useEffect, useMemo, useState } from "react";
+import useData from "../Hooks/useData";
+import API from "../productsAPI.json";
+import LOG from "../Debug/Console";
 
 export const ProductContext = createContext({
   products: [],
-  setProducts: () => {},
+  setProducts: ([]) => {},
   getAllProducts: () => [{}],
-  getCategorizedProducts: (category) => [{}],
+  getCategorizedProducts: (category = "C01") => [{}],
   getSubCategories: (category) => ["", ""],
 });
 
 export default function ProductProvider({ children }) {
   const [products, setProducts] = useState([]);
+
+  useData(
+    Object.values(API),
+    (data) => {
+      LOG("fetching all products...", "red");
+      setProducts(data);
+    },
+    () => {},
+    [API]
+  );
 
   const getAllProducts = () => {
     var array = [];
