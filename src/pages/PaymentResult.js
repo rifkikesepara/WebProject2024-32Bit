@@ -188,7 +188,7 @@ export default function PaymentResult() {
           </Button>
         </Box>
       </Box>
-      <Box sx={{ display: "none" }}>
+      <Box sx={{ overflow: "hidden", height: 0 }}>
         <Receipt ref={receiptRef} />
       </Box>
       <Dialog

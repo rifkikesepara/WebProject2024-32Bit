@@ -27,19 +27,19 @@ import { ArrowDownward, ArrowUpward, Done } from "@mui/icons-material";
 import { useAlert } from "../Hooks/useAlert";
 import useStore from "../Hooks/useStore";
 import useData from "../Hooks/useData";
-import API from "../productsAPI.json";
 import useProduct from "../Hooks/useProduct";
 import OfferBox from "../Components/OfferBox";
 import { useTranslation } from "react-i18next";
 import usePreferences from "../Hooks/usePreferences";
+import Products from "../Components/Products";
 
 export default function Sale() {
   const storeInfo = useStore();
   const navigate = useNavigate();
-  const { theme } = usePreferences();
+  const { theme, isDesktop } = usePreferences();
   const { t } = useTranslation();
   const { setAlert } = useAlert();
-  const { setProducts, getAllProducts } = useProduct();
+  const { getAllProducts } = useProduct();
 
   const checkoutRef = useRef(null);
   const keyboard = useRef();
@@ -156,30 +156,63 @@ export default function Sale() {
     keyboard.current.setInput(inputFields[selectedInputField]);
   }, [selectedInputField]);
 
-  useData(
-    Object.values(API),
-    (data) => {
-      setProducts(data);
-    },
-    () => {},
-    [API]
-  );
   return (
     <Box
       sx={{
         minHeight: "100vh",
         display: "flex",
+        justifyContent: "space-around",
         width: "100%",
         overflow: "hidden",
         flexDirection: { sm: "row", md: "row", xs: "column" },
+        backgroundColor: theme.palette.background.default,
       }}
     >
+      {isDesktop && (
+        <Box
+          sx={{
+            maxWidth: { md: 600, xs: "100%" },
+            minWidth: 550,
+            height: "100vh",
+            backgroundColor: theme.palette.background.default,
+            zIndex: 2,
+            display: "flex",
+            alignItems: "center",
+            paddingInline: 2,
+          }}
+        >
+          <Paper
+            sx={{
+              borderTopLeftRadius: 30,
+              borderTopRightRadius: 30,
+              margin: 0,
+              borderBottomLeftRadius: { xs: 0, md: 30 },
+              borderBottomRightRadius: { xs: 0, md: 30 },
+              // maxHeight: "90vh",
+              marginTop: { xs: "auto", md: 0 },
+              backgroundColor: theme.palette.background.paper,
+              overflowY: "hidden",
+              width: "100%",
+              height: "96%",
+            }}
+            elevation={3}
+          >
+            <Products
+              open={true}
+              onSelectProduct={(data) => addProductToCashout(data)}
+            />
+          </Paper>
+        </Box>
+      )}
       <Box
         sx={{
-          width: { md: "50%", xs: "100%" },
+          width: { md: "100%", sm: 600, xs: "100%" },
+          minWidth: 400,
+          maxWidth: 800,
           display: "flex",
           alignItems: "center",
           flexDirection: "column",
+          justifyContent: "center",
           overflowY: "hidden",
           height: "100vh",
           backgroundColor: theme.palette.background.default,
@@ -256,14 +289,10 @@ export default function Sale() {
           sx={{
             height: "87vh",
             width: "95%",
-            // overflowY: "scroll",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            // backgroundColor: "white",
             overflow: "hidden",
-            // borderTopLeftRadius: 10,
-            // borderTopRightRadius: 10,
             borderRadius: 7,
             position: "relative",
           }}
@@ -308,7 +337,7 @@ export default function Sale() {
       </Box>
       <Box
         sx={{
-          width: { md: "50%", xs: "100%" },
+          width: { md: 650, sm: 600, xs: "100%" },
           height: "100vh",
           display: "flex",
           flexDirection: "column",
@@ -378,16 +407,18 @@ export default function Sale() {
               position: "relative",
             }}
           >
-            <Button
-              variant="contained"
-              disableElevation
-              sx={{ width: "80%", height: 60 }}
-              size="large"
-              startIcon={<LocalGroceryStoreIcon />}
-              onClick={() => setSelectListOpen(true)}
-            >
-              {t("addProductText")}
-            </Button>
+            {!isDesktop && (
+              <Button
+                variant="contained"
+                disableElevation
+                sx={{ width: "80%", height: 60 }}
+                size="large"
+                startIcon={<LocalGroceryStoreIcon />}
+                onClick={() => setSelectListOpen(true)}
+              >
+                {t("addProductText")}
+              </Button>
+            )}
             <Box
               sx={{
                 display: "flex",

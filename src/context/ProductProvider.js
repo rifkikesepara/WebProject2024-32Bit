@@ -1,4 +1,7 @@
 import { createContext, useMemo, useState } from "react";
+import API from "../productsAPI.json";
+import useData from "../Hooks/useData";
+import LOG from "../Debug/Console";
 
 export const ProductContext = createContext({
   products: [],
@@ -10,6 +13,16 @@ export const ProductContext = createContext({
 
 export default function ProductProvider({ children }) {
   const [products, setProducts] = useState([]);
+
+  useData(
+    Object.values(API),
+    (data) => {
+      LOG("fetching all products...", "red");
+      setProducts(data);
+    },
+    () => {},
+    [API]
+  );
 
   const getAllProducts = () => {
     var array = [];

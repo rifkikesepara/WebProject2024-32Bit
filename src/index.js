@@ -15,6 +15,7 @@ import Payment from "./Pages/Payment";
 import PaymentResult from "./Pages/PaymentResult";
 import ProductProvider from "./Context/ProductProvider";
 import "./config";
+import SettingsDialog from "./Components/SettingsDialog";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: "/test",
     element: <Test />,
+  },
+  {
+    path: "/settings",
+    element: <SettingsDialog open={true} />,
   },
 ]);
 

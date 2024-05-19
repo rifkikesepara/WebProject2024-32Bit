@@ -8,10 +8,11 @@ import {
 } from "react";
 
 import { DarkTheme, LightTheme } from "../Styles/Themes";
-import { Switch, ThemeProvider } from "@mui/material";
+import { Switch, ThemeProvider, useMediaQuery } from "@mui/material";
 
 export const ThemeContext = createContext({
   theme: LightTheme, //intial theme
+  isDesktop: true,
   isThemeDark: false,
   toggleTheme: () => {},
 });
@@ -26,6 +27,7 @@ export default function Theme({ children }) {
 
   let theme = themeName == "light" ? LightTheme : DarkTheme;
   let isThemeDark = themeName == "dark" ? true : false;
+  let isDesktop = useMediaQuery("(min-width:1366px)");
 
   const toggleTheme = useCallback(() => {
     if (themeName == "light") {
@@ -43,8 +45,9 @@ export default function Theme({ children }) {
       themeName,
       theme,
       isThemeDark,
+      isDesktop,
     }),
-    [toggleTheme, themeName, theme, isThemeDark]
+    [toggleTheme, themeName, theme, isThemeDark, isDesktop]
   );
 
   return (
