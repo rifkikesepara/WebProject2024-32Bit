@@ -2,35 +2,15 @@ import { Box } from "@mui/material";
 import { forwardRef, useEffect, useRef, useState } from "react";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
-import "../Styles/Keyboard.css";
-import logo from "../Resources/enter.png";
 import usePreferences from "../Hooks/usePreferences";
-
-const numericLayout = {
-  default: ["1 2 3", "4 5 6", "7 8 9", "{bksp} 0 {tick}"],
-  shift: ["! / #", "$ % ^", "& * (", "{shift} ) +", "{bksp}"],
-};
-
-const cashierLayout = {
-  default: ["{cancel} +/- {bksp}", "1 2 3", "4 5 6", "7 8 9", "00 0 ,"],
-};
-
-const englishLayout = {
-  default: [
-    "` 1 2 3 4 5 6 7 8 9 0 - = {bksp}",
-    "{tab} q w e r t y u i o p [ ] \\",
-    "{lock} a s d f g h j k l ; ' {enter}",
-    "{shift} z x c v b n m , . / {shift}",
-    ".com @ {space}",
-  ],
-  shift: [
-    "~ ! @ # $ % ^ & * ( ) _ + {bksp}",
-    "{tab} Q W E R T Y U I O P { } |",
-    '{lock} A S D F G H J K L : " {enter}',
-    "{shift} Z X C V B N M < > ? {shift}",
-    ".com @ {space}",
-  ],
-};
+import {
+  NumericLayout,
+  CashierLayout,
+  EnglishLayout,
+  TurkishLayout,
+} from "../Layout/KeyboardLayouts";
+import "../Styles/Keyboard.css";
+import { useTranslation } from "react-i18next";
 
 export const VirtualKeyboard = forwardRef(
   (
@@ -47,6 +27,7 @@ export const VirtualKeyboard = forwardRef(
     },
     ref
   ) => {
+    const { i18n } = useTranslation();
     const { isThemeDark, theme } = usePreferences();
     const [state, setState] = useState({ layoutName: "default", input: "" });
     const boxRef = useRef();
@@ -55,17 +36,17 @@ export const VirtualKeyboard = forwardRef(
       switch (layout) {
         case "default":
           return {
-            layout: englishLayout,
+            layout: i18n.language == "en" ? EnglishLayout : TurkishLayout,
             class: "hg-theme-default hg-layout-default",
           };
         case "numeric":
           return {
-            layout: numericLayout,
+            layout: NumericLayout,
             class: "hg-theme-default hg-layout-numeric",
           };
         case "cashier":
           return {
-            layout: cashierLayout,
+            layout: CashierLayout,
             class: "hg-theme-default hg-layout-numeric",
           };
       }
@@ -92,7 +73,7 @@ export const VirtualKeyboard = forwardRef(
 
     const onChange = (input) => {
       onChangeInput(input);
-      setState({ input });
+      // setState({ input });
     };
 
     const handleShift = () => {
@@ -108,11 +89,7 @@ export const VirtualKeyboard = forwardRef(
       if (button === "{enter}") e.preventDefault(); //preventing default event to not clicking somthing else behind the keyboard
       if (button === "{cancel}") ref.current.setInput("");
       if (button === "{tick}") setTimeout(() => onDone(), 400);
-      if (button === "{shift}" || button === "{lock}")
-        /**
-         * If you want to handle the shift and caps lock buttons
-         */
-        handleShift();
+      if (button === "{shift}" || button === "{lock}") handleShift();
     };
 
     return (
@@ -169,6 +146,7 @@ export const VirtualKeyboard = forwardRef(
             "{space}": " ",
           }}
           layout={adjustLayout().layout}
+          layoutName={state.layoutName}
           onChange={onChange}
           onKeyPress={onKeyPress}
         />

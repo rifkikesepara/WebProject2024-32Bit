@@ -39,9 +39,9 @@ code {
 @media print {
   html,
   body {
-    height: 100vh; /* Use 100% here to support printing more than a single page*/
-    margin: 0 !important;
+    height: 100%; /* Use 100% here to support printing more than a single page*/
+    margin-left: 45px !important;
     padding: 0 !important;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 }

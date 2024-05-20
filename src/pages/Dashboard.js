@@ -146,6 +146,7 @@ const menuItems = [
         }}
       />
     ),
+    path: "../settings",
   },
   {
     name: "Logout",

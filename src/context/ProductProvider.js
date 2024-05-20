@@ -1,6 +1,6 @@
-import { createContext, useEffect, useMemo, useState } from "react";
-import useData from "../Hooks/useData";
+import { createContext, useMemo, useState } from "react";
 import API from "../productsAPI.json";
+import useData from "../Hooks/useData";
 import LOG from "../Debug/Console";
 
 export const ProductContext = createContext({

@@ -9,6 +9,7 @@ import {
   Typography,
   Paper,
   Divider,
+  Tooltip,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
@@ -22,14 +23,17 @@ import CheckoutTable from "../Components/CheckoutTable";
 import { useAlert } from "../Hooks/useAlert";
 import { useTranslation } from "react-i18next";
 import usePreferences from "../Hooks/usePreferences";
+import CardPayment from "../Components/CardPayment";
+import OfferBox from "../Components/OfferBox";
+import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
 
 export default function Payment() {
   const { theme } = usePreferences();
   const { t } = useTranslation();
   const navigate = useNavigate();
   const { setAlert } = useAlert();
-  const mainDiv = useRef();
   const keyboard = useRef();
+  const checkoutRef = useRef();
 
   const [selectedItems, setSelectedItems] = useState([]);
   const [payment, setPayment] = useState({ cash: 0, card: 0, change: 0 });
@@ -38,6 +42,7 @@ export default function Payment() {
   const [cashout, setCashout] = useState(
     JSON.parse(sessionStorage.getItem("cashout"))
   );
+  const [showCardPayment, setShowCardPayment] = useState(false);
   const [testID, setID] = useState();
 
   const deleteSelected = () => {
@@ -71,21 +76,18 @@ export default function Payment() {
 
   const handleClick = (e) => {
     let paymentAmount = parseFloat(inputFields.amount);
-    setInputFields({ ...inputFields, amount: "" });
-    keyboard.current.setInput("");
+
     switch (e.target.name) {
       case "card":
         if (paymentAmount <= due) {
-          setPayment({
-            ...payment,
-            card: paymentAmount,
-            date: new Date().toLocaleString(),
-          });
+          setShowCardPayment(true);
         } else {
           setAlert({
             text: "Kredi Kartıyla Kalandan Fazla Ödeme Yapamazsın!",
             type: "error",
           });
+          setInputFields({ ...inputFields, amount: "" });
+          keyboard.current.setInput("");
         }
         break;
       case "cash":
@@ -104,6 +106,8 @@ export default function Payment() {
             date: new Date().toLocaleString(),
           });
         }
+        setInputFields({ ...inputFields, amount: "" });
+        keyboard.current.setInput("");
         break;
     }
   };
@@ -119,10 +123,6 @@ export default function Payment() {
   useEffect(() => {
     keyboard.current.setInput(inputFields[selectedInputField]);
   }, [selectedInputField]);
-
-  useEffect(() => {
-    mainDiv.current?.scrollIntoView({ behavior: "smooth" });
-  }, [cashout.length]);
 
   return (
     <Box
@@ -152,6 +152,7 @@ export default function Payment() {
             // borderBottom: 1,
             display: "flex",
             justifyContent: "space-between",
+            alignItems: "center",
             width: "95%",
             borderRadius: 7,
             marginBlock: 1,
@@ -159,33 +160,57 @@ export default function Payment() {
           }}
           elevation={2}
         >
-          <IconButton sx={{ ml: 1 }}>
-            <QrCodeScannerIcon sx={{ fontSize: 40 }} />
-            <motion.div
-              style={{ display: "flex", alignItems: "center" }}
-              initial={{ opacity: 0, scaleX: 0 }}
-              animate={{ opacity: 1, scaleX: 1 }}
-              transition={{ duration: 1 }}
+          <Tooltip title="FİYAT GÖR" arrow>
+            <IconButton
+              sx={{
+                ml: 1,
+                overflow: "hidden",
+                color: theme.palette.text.primary,
+              }}
             >
-              <Typography
-                sx={{
-                  padding: 0.5,
-                  fontWeight: "bold",
-                }}
-              >
-                {t("checkprice")}
-              </Typography>
-            </motion.div>
-          </IconButton>
-          <IconButton
-            onClick={deleteSelected}
-            disabled={selectedItems.length == 0 ? true : false}
-            aria-label="delete"
-            sx={{ fontSize: 40, marginRight: 2 }}
-            color="black"
-          >
-            <DeleteIcon fontSize="inherit" color="inherit" />
-          </IconButton>
+              <QrCodeScannerIcon sx={{ fontSize: 40 }} />
+            </IconButton>
+          </Tooltip>
+
+          <OfferBox />
+
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <IconButton
+              sx={{
+                height: 50,
+              }}
+              onClick={() =>
+                checkoutRef.current.scroll({
+                  behavior: "smooth",
+                  top: checkoutRef.current.scrollTop - 250,
+                })
+              }
+            >
+              <ArrowUpward />
+            </IconButton>
+            <IconButton
+              sx={{
+                height: 50,
+              }}
+              onClick={() =>
+                checkoutRef.current.scroll({
+                  behavior: "smooth",
+                  top: checkoutRef.current.scrollTop + 250,
+                })
+              }
+            >
+              <ArrowDownward />
+            </IconButton>
+            <IconButton
+              onClick={deleteSelected}
+              disabled={selectedItems.length == 0 ? true : false}
+              aria-label="delete"
+              sx={{ fontSize: 40, marginRight: 2 }}
+              color="black"
+            >
+              <DeleteIcon fontSize="inherit" color="inherit" />
+            </IconButton>
+          </Box>
         </Paper>
         <Paper
           sx={{
@@ -200,6 +225,7 @@ export default function Payment() {
           elevation={5}
         >
           <CheckoutTable
+            ref={checkoutRef}
             data={cashout}
             inputValues={inputFields}
             onFocus={(e, { id }) => {
@@ -340,6 +366,19 @@ export default function Payment() {
             >
               {t("creditCard")}
             </Button>
+            <CardPayment
+              open={showCardPayment}
+              onClose={() => setShowCardPayment(false)}
+              onDone={() => {
+                setPayment({
+                  ...payment,
+                  card: inputFields.amount,
+                  date: new Date().toLocaleString(),
+                });
+                setInputFields({ ...inputFields, amount: "" });
+                keyboard.current.setInput("");
+              }}
+            />
           </Box>
           <Box
             sx={{
