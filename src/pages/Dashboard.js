@@ -25,7 +25,11 @@ import { useMemo, useState } from "react";
 import { LineChart, axisClasses } from "@mui/x-charts";
 import useData from "../Hooks/useData";
 import MiniDrawer from "../Components/MiniDrawer";
-import { getDayString, getMonthString } from "../Utils/utilities";
+import {
+  SaveToSessionStorage,
+  getDayString,
+  getMonthString,
+} from "../Utils/utilities";
 import useStore from "../Hooks/useStore";
 import usePreferences from "../Hooks/usePreferences";
 import { useTranslation } from "react-i18next";
@@ -46,7 +50,8 @@ const menuItems = [
     ),
     path: "../sale",
     onClick: () => {
-      sessionStorage.setItem("cashout", JSON.stringify([]));
+      SaveToSessionStorage("cashout", []);
+      SaveToSessionStorage("usedOffers", []);
     },
   },
   {

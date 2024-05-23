@@ -1,7 +1,4 @@
 import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
   Box,
   Button,
   IconButton,
@@ -14,7 +11,6 @@ import {
 import { useNavigate } from "react-router-dom";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
 import DeleteIcon from "@mui/icons-material/Delete";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useEffect, useMemo, useRef, useState } from "react";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
 import ProductsDialog from "../Components/ProductsDialog";
@@ -22,7 +18,7 @@ import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import { closeSnackbar, enqueueSnackbar } from "notistack";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
-import { ArrowDownward, ArrowUpward, Done } from "@mui/icons-material";
+import { ArrowDownward, ArrowUpward, Done, Info } from "@mui/icons-material";
 import { useAlert } from "../Hooks/useAlert";
 import useStore from "../Hooks/useStore";
 import useProduct from "../Hooks/useProduct";
@@ -31,6 +27,10 @@ import { useTranslation } from "react-i18next";
 import usePreferences from "../Hooks/usePreferences";
 import { CheckAndApplyOffer } from "../Utils/offers";
 import Products from "../Components/Products";
+import {
+  GetFromSessionStorage,
+  SaveToSessionStorage,
+} from "../Utils/utilities";
 
 export default function Sale() {
   const storeInfo = useStore();
@@ -46,9 +46,7 @@ export default function Sale() {
   const [selectedItems, setSelectedItems] = useState([]);
   const [inputFields, setInputFields] = useState({ barcode: "" });
   const [selectedInputField, setSelectedInputField] = useState("");
-  const [cashout, setCashout] = useState(
-    JSON.parse(sessionStorage.getItem("cashout"))
-  );
+  const [cashout, setCashout] = useState(GetFromSessionStorage("cashout"));
   const [selectListOpen, setSelectListOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState();
 
@@ -69,6 +67,7 @@ export default function Sale() {
     if (!product) {
       data = CheckAndApplyOffer(data, cashout);
       setCashout([...cashout, data]);
+      SaveToSessionStorage("cashout", [...cashout, data]);
     } else {
       changeProductAmount(parseFloat(product.count) + 1, data);
     }
@@ -84,8 +83,18 @@ export default function Sale() {
   const deleteSelected = () => {
     LOG("deletedSelected", "yellow");
     let array = cashout;
+    const usedOffers = GetFromSessionStorage("usedOffers");
     selectedItems.map((data) => {
       let index = array.indexOf(cashout.find(({ id }) => id == data));
+      console.log(array[index]);
+
+      const isThereOffer = usedOffers.find(
+        ({ id }) => id == array[index].offer?.id
+      );
+      if (isThereOffer) {
+        usedOffers.splice(usedOffers.indexOf(isThereOffer), 1);
+        SaveToSessionStorage("usedOffers", usedOffers);
+      }
       array.splice(index, 1);
     });
     setCashout(array);
@@ -144,20 +153,18 @@ export default function Sale() {
     setInputFields({ ...inputFields, barcode: "" });
   };
 
-  const totals = useMemo(() => {
-    LOG("total calculated!", "yellow");
-    let total = 0,
-      subTotal = 0;
-    cashout.map(({ price, count }) => {
-      total = total + price.cashout;
-      subTotal += price.normal * count;
-    });
-    return { total: total / 100, subTotal: subTotal / 100 };
-  }, [cashout, cashout.length]);
-
   useEffect(() => {
     keyboard.current.setInput(inputFields[selectedInputField]);
   }, [selectedInputField]);
+
+  useEffect(() => {
+    // sessionStorage.clear();
+    const cachedProducts = [];
+    cashout.map((product) => {
+      cachedProducts.push(CheckAndApplyOffer(product, cashout));
+    });
+    setCashout(cachedProducts);
+  }, []);
 
   return (
     <Box
@@ -314,29 +321,6 @@ export default function Sale() {
             selectionValues={selectedItems}
             onChange={(newformats) => setSelectedItems(newformats)}
           />
-          <Accordion
-            onChange={(e, expanded) => {}}
-            sx={{
-              margin: 0,
-              width: "100%",
-              position: "sticky",
-              bottom: 0,
-            }}
-            disableGutters
-            square
-            elevation={5}
-          >
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>
-                {t("total")}: {totals.total}₺
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                {t("subTotal")}: {totals.subTotal}₺
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
         </Paper>
       </Box>
       <Box
@@ -472,7 +456,7 @@ export default function Sale() {
                   fontSize: 20,
                 }}
                 onClick={() => {
-                  sessionStorage.setItem("cashout", JSON.stringify(cashout));
+                  SaveToSessionStorage("cashout", cashout);
                   navigate("./payment");
                 }}
               >

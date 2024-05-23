@@ -10,7 +10,90 @@ import {
 import { useMemo, useRef, useState } from "react";
 import useData from "../Hooks/useData";
 import LOG from "../Debug/Console";
-import { GetFromLocalStorage, SaveToLocalStorage } from "../Utils/utilities";
+import {
+  GetFromLocalStorage,
+  GetFromSessionStorage,
+  SaveToLocalStorage,
+} from "../Utils/utilities";
+
+export const UsedOffersDialog = ({ open, onClose = () => {} }) => {
+  return (
+    <Dialog
+      open={open}
+      onClose={onClose}
+      maxWidth="xl"
+      PaperProps={{ sx: { p: 2 } }}
+    >
+      {GetFromSessionStorage("usedOffers").map((offer) => {
+        return (
+          <Stack
+            key={offer.id}
+            direction={"row"}
+            spacing={5}
+            justifyContent={"space-between"}
+          >
+            <Typography>{offer.offerName}</Typography>
+            <Typography fontWeight={"bold"}>{offer.payback / 100}₺</Typography>
+          </Stack>
+        );
+      })}
+    </Dialog>
+  );
+};
+
+export const OffersDialog = ({
+  open,
+  onClose = () => {},
+  readOnly = false,
+}) => {
+  const [offers, setOffers] = useState(GetFromLocalStorage("offers"));
+  const changeActiveOffers = (offer, active) => {
+    const temp = [...offers];
+    const index = temp.indexOf(temp.find((data) => data.id == offer.id));
+    temp[index].activated = active;
+    setOffers(temp);
+    SaveToLocalStorage("offers", temp);
+  };
+
+  return (
+    <Dialog
+      maxWidth="lg"
+      open={open}
+      onClose={onClose}
+      PaperProps={{ sx: { width: "50%" } }}
+    >
+      <Stack paddingBlock={3} justifyContent={"center"} alignItems={"center"}>
+        <Typography variant="h4">Teklifler</Typography>
+        <Box
+          sx={{
+            height: 200,
+            width: "100%",
+            overflowY: "scroll",
+            overflowX: "hidden",
+          }}
+        >
+          {offers.map((offer, index) => {
+            return (
+              <Stack
+                key={index}
+                direction={"row"}
+                alignItems={"center"}
+                justifyContent={"flex-start"}
+              >
+                <Checkbox
+                  disabled={readOnly}
+                  checked={offer.activated}
+                  onChange={(e, checked) => changeActiveOffers(offer, checked)}
+                />
+                <Typography>{offer.offerName}</Typography>
+              </Stack>
+            );
+          })}
+        </Box>
+      </Stack>
+    </Dialog>
+  );
+};
 
 export default function OfferBox() {
   const i = useRef(0);
@@ -36,9 +119,9 @@ export default function OfferBox() {
     LOG("fetching offers...", "red");
     const array = [];
     data.map((data) => {
-      array.push({ ...data, activated: true });
+      array.push({ ...data });
     });
-    if (!GetFromLocalStorage("offers").length) {
+    if (GetFromLocalStorage("offers").length != array.length) {
       SaveToLocalStorage("offers", array);
       setOffers(array);
     }
@@ -68,51 +151,18 @@ export default function OfferBox() {
           <Typography
             sx={{
               width: "100%",
-              fontSize: { xs: 13, md: "1.5vw", sm: "1.7vw" },
+              fontSize: { xs: 13, md: 16, sm: "1.7vw" },
             }}
           >
             {activeOffers[i.current]?.offerName}
           </Typography>
         </Fade>
       </Button>
-      <Dialog
-        maxWidth="lg"
+      <OffersDialog
+        readOnly={true}
         open={openDialog}
         onClose={() => setOpenDialog(false)}
-        PaperProps={{ sx: { width: "50%" } }}
-      >
-        <Stack paddingBlock={3} justifyContent={"center"} alignItems={"center"}>
-          <Typography variant="h4">Aktif Teklifler</Typography>
-          <Box
-            sx={{
-              height: 200,
-              width: "100%",
-              overflowY: "scroll",
-              overflowX: "hidden",
-            }}
-          >
-            {offers.map((offer, index) => {
-              return (
-                <Stack
-                  key={index}
-                  direction={"row"}
-                  alignItems={"center"}
-                  justifyContent={"flex-start"}
-                >
-                  <Checkbox
-                    checked={offer.activated}
-                    onChange={(e, value) => {
-                      setOffer(offer.id, value);
-                      i.current = 0;
-                    }}
-                  />
-                  <Typography>{offer.offerName}</Typography>
-                </Stack>
-              );
-            })}
-          </Box>
-        </Stack>
-      </Dialog>
+      />
     </Stack>
   );
 }

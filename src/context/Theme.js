@@ -27,7 +27,7 @@ export default function Theme({ children }) {
 
   let theme = themeName == "light" ? LightTheme : DarkTheme;
   let isThemeDark = themeName == "dark" ? true : false;
-  let isDesktop = useMediaQuery("(min-width:1366px)");
+  let isDesktop = useMediaQuery("(min-width:1367px)");
 
   const toggleTheme = useCallback(() => {
     if (themeName == "light") {

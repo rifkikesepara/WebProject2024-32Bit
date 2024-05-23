@@ -5,30 +5,25 @@
     "productID": 11002425,
     "categoryID": null,
     "type": "amount",
-    "discount": "3:1"
+    "discount": "3:1",
+    "activated": true
   },
   {
     "id": 2,
-    "offerName": "Sepette %25 İndirim",
-    "productID": null,
+    "offerName": "Algida Boom Boom Alana İkincisi %25 İndirimli",
+    "productID": 21000883,
     "categoryID": null,
-    "type": "percentage",
-    "discount": 25
+    "type": "amount",
+    "discount": "2:1:25",
+    "activated": true
   },
   {
     "id": 3,
-    "offerName": "Bütün Ürünlerde 3 Al 2 Öde",
-    "productID": null,
+    "offerName": "Ekmek 2+2 Kampanyası",
+    "productID": 14000041,
     "categoryID": null,
     "type": "amount",
-    "discount": "3:2"
-  },
-  {
-    "id": 4,
-    "offerName": "Bütün Dondurmalarda %25 İndirim",
-    "productID": null,
-    "categoryID": "C09",
-    "type": "percentage",
-    "discount": 25
+    "discount": "4:2",
+    "activated": true
   }
 ]
