@@ -25,6 +25,12 @@ import usePreferences from "../Hooks/usePreferences";
 import CardPayment from "../Components/CardPayment";
 import OfferBox from "../Components/OfferBox";
 import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
+import {
+  GetFromLocalStorage,
+  GetFromSessionStorage,
+  SaveToLocalStorage,
+  SaveToSessionStorage,
+} from "../Utils/utilities";
 
 export default function Payment() {
   const { theme } = usePreferences();
@@ -38,9 +44,7 @@ export default function Payment() {
   const [payment, setPayment] = useState({ cash: 0, card: 0, change: 0 });
   const [inputFields, setInputFields] = useState({ amount: "" });
   const [selectedInputField, setSelectedInputField] = useState("");
-  const [cashout, setCashout] = useState(
-    JSON.parse(sessionStorage.getItem("cashout"))
-  );
+  const [cashout, setCashout] = useState(GetFromSessionStorage("cashout"));
   const [showCardPayment, setShowCardPayment] = useState(false);
   const [testID, setID] = useState();
 
@@ -109,6 +113,12 @@ export default function Payment() {
         keyboard.current.setInput("");
         break;
     }
+  };
+
+  const pushReceipt = () => {
+    const receipts = GetFromLocalStorage("receipts");
+    receipts.push({ id: receipts.length, products: cashout, payment: payment });
+    SaveToLocalStorage("receipts", receipts);
   };
 
   const total = useMemo(() => {
@@ -433,8 +443,9 @@ export default function Payment() {
                   fontSize: 20,
                 }}
                 onClick={() => {
-                  sessionStorage.setItem("cashout", JSON.stringify(cashout));
-                  sessionStorage.setItem("payment", JSON.stringify(payment));
+                  SaveToSessionStorage("cashout", cashout);
+                  SaveToSessionStorage("payment", payment);
+                  pushReceipt();
                   navigate("./result");
                 }}
               >

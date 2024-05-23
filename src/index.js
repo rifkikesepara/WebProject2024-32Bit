@@ -16,6 +16,7 @@ import PaymentResult from "./Pages/PaymentResult";
 import ProductProvider from "./Context/ProductProvider";
 import "./config";
 import SettingsDialog from "./Components/SettingsDialog";
+import ItemReturn from "./Pages/ItemReturn";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
   {
     path: "/settings",
     element: <SettingsDialog open={true} />,
+  },
+  {
+    path: "/return",
+    element: <ItemReturn />,
   },
 ]);
 

@@ -67,6 +67,7 @@ const menuItems = [
         }}
       />
     ),
+    path: "../return",
   },
   {
     name: "reports",
