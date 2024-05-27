@@ -79,3 +79,11 @@ export function dateDiffInDays(a, b) {
 
   return Math.floor((utc2 - utc1) / _MS_PER_DAY);
 }
+
+export function ChangeProductAmount(amount, product, cashout) {
+  const temp = [...cashout];
+  const index = temp.findIndex(({ id }) => id == product.id);
+  temp[index].count = amount;
+  temp[index].price.cashout = temp[index].price.discounted * amount;
+  return temp;
+}

@@ -35,8 +35,9 @@ const CheckoutTable = forwardRef(
       data,
       selectionValues,
       accordionVisible = true,
-      onFocus = () => {},
+      onFocus = (event, product) => {},
       onChange = () => {},
+      onTotal = (total) => {},
     },
     ref
   ) => {
@@ -63,17 +64,19 @@ const CheckoutTable = forwardRef(
         (offer) => (payback += offer.payback)
       );
       discount = subTotal - total - payback;
-      return {
+      const object = {
         total: total / 100,
         subTotal: subTotal / 100,
         payback: payback / 100,
         discount: discount / 100,
       };
+      onTotal(object);
+      return object;
     }, [data, data.length]);
 
     return (
       <>
-        <TableContainer ref={ref}>
+        <TableContainer sx={{ height: "100%" }} ref={ref}>
           <ToggleButtonGroup
             // disabled={disabled}
             value={selectionValues}
@@ -184,7 +187,7 @@ const CheckoutTable = forwardRef(
                               justifyContent: "space-between",
                               width: "100%",
                               paddingBlock: 2,
-                              color: theme.palette.text.primary,
+                              color: "text.primary",
                             }}
                           >
                             <Box
@@ -215,9 +218,12 @@ const CheckoutTable = forwardRef(
                                 {product.offer != undefined &&
                                   product.offer != [] && (
                                     <Typography
+                                      color={"text.discount"}
                                       key={index}
                                       variant="body2"
-                                      sx={{ color: "red", textAlign: "left" }}
+                                      sx={{
+                                        textAlign: "left",
+                                      }}
                                     >
                                       {product.offer.offerName} x
                                       {product.offer.offerApplied}
@@ -229,10 +235,10 @@ const CheckoutTable = forwardRef(
                               sx={{ display: "flex", flexDirection: "column" }}
                             >
                               <Typography
+                                color={isDiscounted && "text.discount"}
                                 sx={{
                                   fontWeight: "bold",
                                   minWidth: 50,
-                                  color: isDiscounted && "red",
                                   textDecoration:
                                     isDiscounted && "line-through",
                                 }}
@@ -297,7 +303,7 @@ const CheckoutTable = forwardRef(
               </Typography>
               {GetFromSessionStorage("usedOffers").length != 0 && (
                 <Stack direction={"row"} alignItems={"center"}>
-                  <Typography color={"red"}>
+                  <Typography color={"text.discount"}>
                     KAMPANYALAR: -{totals.payback}₺
                   </Typography>
                   <IconButton onClick={() => setOfferDetail(true)}>
@@ -310,7 +316,7 @@ const CheckoutTable = forwardRef(
                 </Stack>
               )}
               {totals.discount != 0 && (
-                <Typography color={"red"}>
+                <Typography color={"text.discount"}>
                   İNDİRİM: -{totals.discount}₺
                 </Typography>
               )}

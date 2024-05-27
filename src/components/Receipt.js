@@ -1,6 +1,30 @@
-import { Box, Typography } from "@mui/material";
-import { forwardRef } from "react";
+import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
+import { Box, IconButton, Paper, Stack, Typography } from "@mui/material";
+import { forwardRef, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import ScrollButtons from "./ScrollButtons";
+
+export const ReceiptWithScrollButtons = forwardRef(
+  (
+    {
+      sx,
+      payment = JSON.parse(sessionStorage.getItem("payment")),
+      cashout = JSON.parse(sessionStorage.getItem("cashout")),
+    },
+    ref
+  ) => {
+    const scrollRef = useRef();
+    return (
+      <Stack sx={{ position: "relative" }}>
+        <ScrollButtons
+          sx={{ position: "absolute", top: -50, right: "38%" }}
+          scrollRef={scrollRef}
+        />
+        <Receipt ref={scrollRef} sx={sx} payment={payment} cashout={cashout} />
+      </Stack>
+    );
+  }
+);
 
 export const Receipt = forwardRef(
   (
@@ -16,7 +40,6 @@ export const Receipt = forwardRef(
     const date = payment.date.split(" ")[0].split(".");
     const time = payment.date.split(" ")[1].split(":");
 
-    console.log(time);
     const total = () => {
       let total = 0;
       cashout.map(({ price }) => (total = total + price.cashout));
@@ -65,9 +88,10 @@ export const Receipt = forwardRef(
         </Box>
 
         <Box mt={3} width={"100%"}>
-          {cashout.map(({ attributes, price, count }) => {
+          {cashout.map(({ attributes, price, count }, index) => {
             return (
               <Box
+                key={index}
                 sx={{
                   display: "flex",
                   width: "100%",

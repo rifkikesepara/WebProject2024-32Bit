@@ -33,7 +33,7 @@ import {
 } from "../Utils/utilities";
 
 export default function Payment() {
-  const { theme } = usePreferences();
+  const { theme, isDesktop } = usePreferences();
   const { t } = useTranslation();
   const navigate = useNavigate();
   const { setAlert } = useAlert();
@@ -127,7 +127,10 @@ export default function Payment() {
     cashout.map(({ price }) => (total = total + price.cashout));
     return total / 100;
   }, [cashout, cashout.length]);
-  let due = payment.change > 0 ? 0 : total - (payment.cash + payment.card);
+  let due =
+    payment.change > 0
+      ? 0
+      : total - (parseFloat(payment.cash) + parseFloat(payment.card));
 
   useEffect(() => {
     keyboard.current.setInput(inputFields[selectedInputField]);
@@ -141,6 +144,8 @@ export default function Payment() {
         width: "100%",
         overflow: "hidden",
         flexDirection: { sm: "row", md: "row", xs: "column" },
+        justifyContent: isDesktop && "space-around",
+        backgroundColor: theme.palette.background.default,
       }}
     >
       <Box
@@ -272,18 +277,18 @@ export default function Payment() {
               </Typography>
             </AccordionDetails>
             <AccordionDetails sx={{ paddingBlock: 0 }}>
-              <Typography sx={{ color: "green", fontWeight: "bold" }}>
+              <Typography sx={{ fontWeight: "bold" }}>
                 {t("cash").toUpperCase()}: {payment.cash}₺
               </Typography>
             </AccordionDetails>
             <AccordionDetails sx={{ paddingBlock: 0 }}>
-              <Typography sx={{ color: "blue", fontWeight: "bold" }}>
+              <Typography sx={{ fontWeight: "bold" }}>
                 {t("creditCard").toUpperCase()}: {payment.card}₺
               </Typography>
             </AccordionDetails>
             <Divider />
             <AccordionDetails>
-              <Typography sx={{ color: "red", fontWeight: "bold" }}>
+              <Typography sx={{ color: "text.discount", fontWeight: "bold" }}>
                 {t("due").toUpperCase()}: {due.toFixed(2)}₺
               </Typography>
               {payment.change != 0 && (
@@ -434,7 +439,7 @@ export default function Payment() {
                 {t("goBack")}
               </Button>
               <Button
-                disabled={due != 0}
+                disabled={due}
                 variant="contained"
                 disableElevation
                 color="secondary"

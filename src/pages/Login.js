@@ -82,7 +82,8 @@ export default function Login() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          width: 614,
+          width: { xs: "90%", md: 614 },
+          maxWidth: 614,
           p: 2,
         }}
         elevation={3}

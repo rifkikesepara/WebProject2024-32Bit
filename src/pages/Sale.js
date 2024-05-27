@@ -313,7 +313,6 @@ export default function Sale() {
           <CheckoutTable
             ref={checkoutRef}
             data={cashout}
-            inputValues={inputFields}
             onFocus={(e, product) => {
               setSelectedInputField(e.target.name);
               setSelectedProduct(product);
