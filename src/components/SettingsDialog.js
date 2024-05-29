@@ -1,4 +1,4 @@
-import { ArrowBack, Edit } from "@mui/icons-material";
+import { ArrowBack, Edit, Print } from "@mui/icons-material";
 import {
   Box,
   Dialog,
@@ -15,7 +15,10 @@ import usePreferences from "../Hooks/usePreferences";
 import { useTranslation } from "react-i18next";
 import { ThemeToggleSwitch } from "./ThemeToggleSwitch";
 import { OffersDialog, UsedOffersDialog } from "./OfferBox";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { Receipt } from "./Receipt";
+import { GetFromLocalStorage } from "../Utils/utilities";
+import { useReactToPrint } from "react-to-print";
 
 const Setting = ({ sx, children }) => {
   const { theme } = usePreferences();
@@ -43,7 +46,14 @@ const Setting = ({ sx, children }) => {
 export default function SettingsDialog({ open }) {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
-  const { theme, isThemeDark, toggleTheme } = usePreferences();
+  const { isThemeDark, toggleTheme } = usePreferences();
+
+  const receiptRef = useRef();
+  const receipts = GetFromLocalStorage("receipts");
+
+  const handlePrint = useReactToPrint({
+    content: () => receiptRef.current,
+  });
 
   const [offersDialog, setOffersDialog] = useState(false);
 
@@ -53,6 +63,7 @@ export default function SettingsDialog({ open }) {
         width: "100%",
         height: "100vh",
         borderRadius: 0,
+        overflow: "hidden",
       }}
     >
       <Dialog
@@ -112,8 +123,21 @@ export default function SettingsDialog({ open }) {
               onClose={() => setOffersDialog(false)}
             />
           </Setting>
+          <Setting>
+            <Typography fontSize={30}>Print Test</Typography>
+            <IconButton sx={{ fontSize: 30 }} onClick={handlePrint}>
+              <Print fontSize="inherit" />
+            </IconButton>
+          </Setting>
         </Stack>
       </Dialog>
+      <Box sx={{ overflow: "hidden", height: 0 }}>
+        <Receipt
+          ref={receiptRef}
+          payment={receipts[0].payment}
+          cashout={receipts[0].products}
+        />
+      </Box>
     </Paper>
   );
 }

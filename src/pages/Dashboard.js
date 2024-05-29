@@ -21,18 +21,20 @@ import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import LayersIcon from "@mui/icons-material/Layers";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { LineChart, axisClasses } from "@mui/x-charts";
-import useData from "../Hooks/useData";
 import MiniDrawer from "../Components/MiniDrawer";
 import {
+  GetFromLocalStorage,
   SaveToSessionStorage,
+  getDateFromString,
   getDayString,
   getMonthString,
 } from "../Utils/utilities";
 import useStore from "../Hooks/useStore";
 import usePreferences from "../Hooks/usePreferences";
 import { useTranslation } from "react-i18next";
+import LOG from "../Debug/Console";
 
 const menuItems = [
   {
@@ -171,26 +173,6 @@ const menuItems = [
   },
 ];
 
-const adjustDataForChart = (data) => {
-  console.log("adjusting data");
-  const array = [];
-  let totalAmount = 0;
-  for (let i = 0; i < 24; i++) {
-    let total = 0;
-    data.map(({ time, amount }) => {
-      var newTime = time.split(":");
-      if (newTime[0] == i) {
-        total = total + amount;
-      }
-    });
-
-    totalAmount = total + totalAmount;
-    array.push({ id: i, time: i, amount: total });
-  }
-
-  return array;
-};
-
 const getTotalAmount = (data) => {
   console.log("total amount");
   let total = 0;
@@ -201,35 +183,7 @@ const getTotalAmount = (data) => {
   return total;
 };
 
-const sortTheLastPayments = (data) => {
-  console.log("sortTheLastPaymeny");
-  let array = [];
-  array = data.sort((a, b) => {
-    if (a.time.split(":")[0] < b.time.split(":")[0]) return -1;
-  });
-
-  return array;
-};
-
-export default function Dashboard() {
-  const { t } = useTranslation();
-  const [data, setData] = useState([]);
-  const storeInfo = useStore();
-
-  useData("https://65b0e7e2d16d31d11bdd8b87.mockapi.io/api/Expenses", (data) =>
-    setData(data)
-  );
-
-  const chartData = useMemo(() => adjustDataForChart(data), [data]);
-  const tableData = useMemo(() => sortTheLastPayments(data), [data]);
-  const totalPublic = useMemo(() => getTotalAmount(data), [data]);
-
-  const { breakpoints } = useTheme();
-  const matches = useMediaQuery(breakpoints.up("sm"));
-  const matchesTablet = useMediaQuery(breakpoints.up("md"));
-  const { theme, isThemeDark, toggleTheme } = usePreferences();
-
-  const [showDrawer, setShowDrawer] = useState({ right: false, left: false });
+const Clock = () => {
   const [date, setDate] = useState(new Date());
   // const [time, setTime] = useState(new Date().toLocaleTimeString("tr-TR"));
 
@@ -237,14 +191,105 @@ export default function Dashboard() {
     setDate(new Date());
   };
 
+  setInterval(updateTime, 1000);
+
+  return (
+    <Typography
+      sx={{
+        right: 15,
+        fontSize: 30,
+      }}
+    >
+      {date.toLocaleTimeString("tr-TR")}
+    </Typography>
+  );
+};
+
+const LastExpensesTable = (data = []) => {
+  const { t } = useTranslation();
+  const temp = [...data.data];
+  return (
+    <Table size="small">
+      <TableHead>
+        <TableRow>
+          <TableCell sx={{ fontWeight: "bold", fontSize: 20 }}>
+            {t("date")}
+          </TableCell>
+          <TableCell align="center" sx={{ fontWeight: "bold", fontSize: 20 }}>
+            {t("time")}
+          </TableCell>
+          <TableCell sx={{ fontWeight: "bold", fontSize: 20 }} align="right">
+            {t("sum")}
+          </TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {temp
+          .reverse()
+          .slice(0, 4)
+          .map((row) => (
+            <TableRow key={row.id}>
+              <TableCell sx={{ fontSize: 20 }}>
+                {row.time.toLocaleDateString()}
+              </TableCell>
+              <TableCell align="center" sx={{ fontSize: 20 }}>
+                {row.time.toLocaleTimeString()}
+              </TableCell>
+              <TableCell
+                sx={{ fontSize: 20 }}
+                align="right"
+              >{`${row.amount}₺`}</TableCell>
+            </TableRow>
+          ))}
+      </TableBody>
+    </Table>
+  );
+};
+
+export default function Dashboard() {
+  LOG("re-render Dashboard", "red");
+
+  const { t } = useTranslation();
+  const [data, setData] = useState([]);
+  const storeInfo = useStore();
+  const date = new Date();
+
+  const sales = GetFromLocalStorage("receipts").sort(
+    (a, b) =>
+      getDateFromString(a.payment.date) - getDateFromString(b.payment.date)
+  );
+  const chartData = useMemo(() => {
+    return sales.map((receipt, index) => {
+      // const time = receipt.payment.date.split(" ")[1].split(":");
+      const total =
+        parseFloat(receipt.payment.cash) +
+        parseFloat(receipt.payment.card) -
+        parseFloat(receipt.payment.change);
+      return {
+        id: index,
+        time: getDateFromString(receipt.payment.date),
+        amount: parseInt(total),
+      };
+    });
+  }, [data]);
+  useEffect(() => {
+    setTimeout(() => {
+      setData(chartData);
+    }, 1000);
+  }, []);
+
+  const total = useMemo(() => getTotalAmount(data), [data]);
+
+  const { breakpoints } = useTheme();
+  const matchesTablet = useMediaQuery(breakpoints.up("md"));
+  const { theme } = usePreferences();
+
   let stringDate = useMemo(() => {
     return {
       day: getDayString(date.getDay()),
       month: getMonthString(date.getMonth()),
     };
   }, []);
-
-  setInterval(updateTime, 1000);
 
   return (
     <Box
@@ -256,6 +301,7 @@ export default function Dashboard() {
         alignItems: "center",
         justifyContent: "space-around",
         flexDirection: "column",
+        overflow: "hidden",
       }}
     >
       <Grid
@@ -306,23 +352,16 @@ export default function Dashboard() {
                 {t(stringDate.day.toLocaleLowerCase())}, {date.getDate()}{" "}
                 {t(stringDate.month.toLowerCase())}
               </Typography>
-              <Typography
-                sx={{
-                  right: 15,
-                  fontSize: 30,
-                }}
-              >
-                {date.toLocaleTimeString("tr-TR")}
-              </Typography>
+              <Clock />
             </Paper>
           </Grid>
         )}
         {!data.length ? (
-          <Grid item xs={matches ? 8 : 12}>
+          <Grid item xs={12} md={8}>
             <Skeleton variant="rectangular" width={"100%"} height={300} />
           </Grid>
         ) : (
-          <Grid item xs={matches ? 8 : 12}>
+          <Grid item xs={12} md={8}>
             <Paper
               elevation={2}
               sx={{
@@ -347,28 +386,32 @@ export default function Dashboard() {
                 margin={{
                   top: 16,
                   right: 20,
-                  left: matches ? 70 : 50,
+                  left: 70,
                   bottom: 30,
                 }}
                 xAxis={[
                   {
-                    scaleType: "point",
+                    scaleType: "time",
                     dataKey: "time",
-                    tickNumber: 2,
+                    // tickNumber: 3,
+                    // data: chartData.map((data) => data.time),
                   },
                 ]}
                 yAxis={[
                   {
-                    label: matches && t("sales") + " (₺)",
+                    label: t("sales") + " (₺)",
                     // max: 15000,
                     tickNumber: 5,
                     labelStyle: { fontWeight: "bold", fontSize: 20 },
+                    dataKey: "amount",
                   },
                 ]}
                 series={[
                   {
                     dataKey: "amount",
-                    showMark: false,
+                    area: true,
+                    showMark: true,
+                    valueFormatter: (v) => v + "TL",
                   },
                 ]}
                 sx={{
@@ -384,11 +427,15 @@ export default function Dashboard() {
           </Grid>
         )}
         {!data.length ? (
-          <Grid item xs={matches ? 4 : 12}>
-            <Skeleton variant="rectangular" width={"100%"} height={300} />
+          <Grid item xs={12} sm={12} md={4}>
+            <Skeleton
+              variant="rectangular"
+              width={"100%"}
+              sx={{ height: { md: 300, xs: 178 } }}
+            />
           </Grid>
         ) : (
-          <Grid item xs={matches ? 4 : 12}>
+          <Grid item xs={12} sm={12} md={4}>
             <Paper
               elevation={2}
               sx={{
@@ -398,7 +445,7 @@ export default function Dashboard() {
                 paddingInline: 1.5,
                 paddingBlock: 2.5,
                 minWidth: "50%",
-                height: { md: 300, sm: 300 },
+                height: { md: 300 },
                 justifyContent: "space-between",
               }}
             >
@@ -415,10 +462,10 @@ export default function Dashboard() {
                 <Typography
                   sx={{
                     fontWeight: "bold",
-                    fontSize: { xs: 30, sm: 40, md: 65 },
+                    fontSize: "3em",
                   }}
                 >
-                  {totalPublic}₺
+                  {total}₺
                 </Typography>
                 <Typography sx={{}}>
                   {date.getDate()} {getMonthString(date.getMonth())}{" "}
@@ -452,56 +499,14 @@ export default function Dashboard() {
               <Typography sx={{ fontWeight: "bold", fontSize: 20 }}>
                 {t("lastSales")}
               </Typography>
-              <Table size="small">
-                <TableHead>
-                  <TableRow>
-                    <TableCell sx={{ fontWeight: "bold", fontSize: 20 }}>
-                      {t("date")}
-                    </TableCell>
-                    <TableCell sx={{ fontWeight: "bold", fontSize: 20 }}>
-                      {t("name")}
-                    </TableCell>
-                    <TableCell sx={{ fontWeight: "bold", fontSize: 20 }}>
-                      {t("paymentMethod")}
-                    </TableCell>
-                    <TableCell
-                      sx={{ fontWeight: "bold", fontSize: 20 }}
-                      align="right"
-                    >
-                      {t("sum")}
-                    </TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {tableData.slice(0, 4).map((row) => (
-                    <TableRow key={row.id}>
-                      <TableCell sx={{ fontSize: 20 }}>
-                        {date.getDate()} {t(stringDate.month.toLowerCase())}{" "}
-                        {date.getFullYear()}
-                      </TableCell>
-                      <TableCell sx={{ fontSize: 20 }}>
-                        {row.first_name}
-                      </TableCell>
-                      <TableCell sx={{ fontSize: 20 }}>
-                        {row.cardType}
-                      </TableCell>
-                      <TableCell
-                        sx={{ fontSize: 20 }}
-                        align="right"
-                      >{`${row.amount}₺`}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
+              <LastExpensesTable data={chartData} />
             </Paper>
           </Grid>
         )}
       </Grid>
       {data.length != 0 && (
         <MiniDrawer
-          oriantation={matches && matchesTablet ? "vertical" : "horizontal"}
-          open={showDrawer.left}
-          onOpen={(o) => setShowDrawer({ ...showDrawer, left: o })}
+          oriantation={matchesTablet ? "vertical" : "horizontal"}
           items={menuItems}
         />
       )}
