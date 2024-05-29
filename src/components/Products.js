@@ -2,12 +2,10 @@ import {
   Box,
   Button,
   CircularProgress,
-  Dialog,
   IconButton,
   MenuItem,
   Paper,
   Select,
-  Slide,
   Stack,
   Typography,
 } from "@mui/material";
@@ -36,6 +34,7 @@ import TextFieldVK from "./TextFieldVK";
 import useProduct from "../Hooks/useProduct";
 import LOG from "../Debug/Console";
 import usePreferences from "../Hooks/usePreferences";
+import { GetFromLocalStorage, SaveToLocalStorage } from "../Utils/utilities";
 
 const categories = [
   { name: "Favoriler", value: "favourites" },
@@ -104,11 +103,14 @@ export default function Products({
     useProduct();
 
   const scrollRef = useRef();
-  var tempdata = useRef([]);
-  var filteredProducts = useRef([]);
+  var tempdata = useRef(GetFromLocalStorage("favourites"));
+  var filteredProducts = useRef(GetFromLocalStorage("favourites"));
   let sortType = -1;
+  const productAmount = useRef(GetFromLocalStorage("favourites").length);
 
-  const [productsData, setProductsData] = useState([]);
+  const [productsData, setProductsData] = useState(
+    GetFromLocalStorage("favourites")
+  );
   const [productDetailWindow, setProductDetailWindow] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -116,7 +118,7 @@ export default function Products({
   const [subCategories, setSubCategories] = useState([]);
   const [search, setSearch] = useState(true);
   const [favourites, setFavourites] = useState(
-    JSON.parse(localStorage.getItem("favourites"))
+    GetFromLocalStorage("favourites")
   );
 
   const clear = () => {
@@ -129,16 +131,17 @@ export default function Products({
     setProductsData(array);
     filteredProducts.current = array;
     onCount(array.length);
+    productAmount.current = array.length;
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      var prd = getAllProducts();
-      set(prd);
-      tempdata.current = prd;
-      setFavourites(JSON.parse(localStorage.getItem("favourites")));
-    }, 1000);
-  }, [products]);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     const favourites = GetFromLocalStorage("favourites");
+  //     set(favourites);
+  //     tempdata.current = favourites;
+  //     setFavourites(favourites);
+  //   }, 1000);
+  // }, [products]);
 
   const selectProduct = (product, addToCart = true) => {
     //adjusting product data to pass into the chekout section
@@ -204,14 +207,13 @@ export default function Products({
       array.splice(array.indexOf(product), 1);
       setFavourites(array);
     }
-    localStorage.setItem("favourites", JSON.stringify(array));
+    SaveToLocalStorage("favourites", array);
   };
 
   const isFavourite = (product) => {
     if (
-      JSON.parse(localStorage.getItem("favourites")).find(
-        ({ id }) => id == product.id
-      ) == undefined
+      GetFromLocalStorage("favourites").find(({ id }) => id == product.id) ==
+      undefined
     )
       return false;
     else return true;
@@ -401,7 +403,7 @@ export default function Products({
     <>
       <Box
         sx={{
-          height: "100vh",
+          height: "100%",
           width: "100%",
           overflow: "hidden",
           position: "relative",
@@ -411,7 +413,7 @@ export default function Products({
           <ButtonGroup
             elevation={0}
             force={true}
-            intialSelected="all"
+            intialSelected="favourites"
             sx={{
               zIndex: 10,
               paddingTop: 5,
@@ -427,7 +429,7 @@ export default function Products({
                 if (v == "all") {
                   datas = getAllProducts();
                 } else if (v == "favourites") {
-                  datas = JSON.parse(localStorage.getItem("favourites"));
+                  datas = GetFromLocalStorage("favourites");
                   setFavourites(datas);
                 } else {
                   datas = getCategorizedProducts(v);
@@ -554,6 +556,20 @@ export default function Products({
             </AutoSizer>
           </Box>
         )}
+        <Typography
+          sx={{
+            position: "absolute",
+            bottom: 0,
+            width: "100%",
+            marginLeft: "auto",
+            marginRight: "auto",
+            textAlign: "center",
+            boxShadow: "10px 20px 50px 70px " + theme.palette.background.paper,
+            backgroundColor: theme.palette.background.paper,
+          }}
+        >
+          Ürün Sayısı: {productAmount.current}
+        </Typography>
       </Box>
       <ProductDetail
         product={selectedProduct}

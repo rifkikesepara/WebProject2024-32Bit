@@ -45,3 +45,21 @@ export const getMonthString = (index) => {
       return "December";
   }
 };
+
+export const SaveToLocalStorage = (item = "", data = JSON) => {
+  localStorage.setItem(item, JSON.stringify(data));
+};
+export const SaveToSessionStorage = (item = "", data = JSON) => {
+  sessionStorage.setItem(item, JSON.stringify(data));
+};
+
+export const GetFromLocalStorage = (item = "") => {
+  return localStorage.getItem(item) == undefined
+    ? []
+    : JSON.parse(localStorage.getItem(item));
+};
+export const GetFromSessionStorage = (item = "") => {
+  return sessionStorage.getItem(item) == undefined
+    ? []
+    : JSON.parse(sessionStorage.getItem(item));
+};

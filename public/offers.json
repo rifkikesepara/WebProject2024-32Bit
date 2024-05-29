@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "offerName": "Yumurta 3 Al 2 Öde",
+    "productID": 11002425,
+    "categoryID": null,
+    "type": "amount",
+    "discount": "3:1",
+    "activated": true
+  },
+  {
+    "id": 2,
+    "offerName": "Algida Boom Boom Alana İkincisi %25 İndirimli",
+    "productID": 21000883,
+    "categoryID": null,
+    "type": "amount",
+    "discount": "2:1:25",
+    "activated": true
+  },
+  {
+    "id": 3,
+    "offerName": "Ekmek 2+2 Kampanyası",
+    "productID": 14000041,
+    "categoryID": null,
+    "type": "amount",
+    "discount": "4:2",
+    "activated": true
+  }
+]

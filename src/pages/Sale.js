@@ -1,7 +1,4 @@
 import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
   Box,
   Button,
   IconButton,
@@ -10,12 +7,10 @@ import {
   Paper,
   InputAdornment,
   Tooltip,
-  Stack,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
 import DeleteIcon from "@mui/icons-material/Delete";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useEffect, useMemo, useRef, useState } from "react";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
 import ProductsDialog from "../Components/ProductsDialog";
@@ -23,15 +18,19 @@ import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import { closeSnackbar, enqueueSnackbar } from "notistack";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
-import { ArrowDownward, ArrowUpward, Done } from "@mui/icons-material";
+import { ArrowDownward, ArrowUpward, Done, Info } from "@mui/icons-material";
 import { useAlert } from "../Hooks/useAlert";
 import useStore from "../Hooks/useStore";
-import useData from "../Hooks/useData";
 import useProduct from "../Hooks/useProduct";
 import OfferBox from "../Components/OfferBox";
 import { useTranslation } from "react-i18next";
 import usePreferences from "../Hooks/usePreferences";
+import { CheckAndApplyOffer } from "../Utils/offers";
 import Products from "../Components/Products";
+import {
+  GetFromSessionStorage,
+  SaveToSessionStorage,
+} from "../Utils/utilities";
 
 export default function Sale() {
   const storeInfo = useStore();
@@ -47,67 +46,76 @@ export default function Sale() {
   const [selectedItems, setSelectedItems] = useState([]);
   const [inputFields, setInputFields] = useState({ barcode: "" });
   const [selectedInputField, setSelectedInputField] = useState("");
-  const [cashout, setCashout] = useState(
-    JSON.parse(sessionStorage.getItem("cashout"))
-  );
+  const [cashout, setCashout] = useState(GetFromSessionStorage("cashout"));
   const [selectListOpen, setSelectListOpen] = useState(false);
-  const [testID, setID] = useState();
+  const [selectedProduct, setSelectedProduct] = useState();
 
-  const addProductToCashout = ({ attributes, id, price, images, stock }) => {
+  const addProductToCashout = (productData) => {
     var product = cashout.find(
-      (data) => data.attributes.name == attributes.name
+      (data) => data.attributes.name == productData.attributes.name
     );
+    console.log(productData);
+    var data = {
+      ...productData,
+      price: {
+        ...productData.price,
+        cashout: productData.price.discounted,
+      },
+      count: 1,
+    };
+
     if (!product) {
-      setCashout([
-        ...cashout,
-        {
-          id: id,
-          attributes: attributes,
-          price: {
-            cashout: price.discounted,
-            normal: price.normal,
-            discounted: price.discounted,
-          },
-          images: images,
-          count: 1,
-          stock: stock,
-        },
-      ]);
+      data = CheckAndApplyOffer(data, cashout);
+      setCashout([...cashout, data]);
+      SaveToSessionStorage("cashout", [...cashout, data]);
     } else {
-      changeProductAmount(parseFloat(product.count) + 1, id);
+      changeProductAmount(parseFloat(product.count) + 1, data);
     }
+    console.log(data);
+
     //pushing a snackbar to show the user which product has been added
-    enqueueSnackbar(attributes.name + " eklendi.", {
+    enqueueSnackbar(productData.attributes.name + " eklendi.", {
       variant: "product",
-      img: images,
+      img: productData.images,
     });
   };
 
   const deleteSelected = () => {
     LOG("deletedSelected", "yellow");
     let array = cashout;
+    const usedOffers = GetFromSessionStorage("usedOffers");
     selectedItems.map((data) => {
       let index = array.indexOf(cashout.find(({ id }) => id == data));
+      console.log(array[index]);
+
+      const isThereOffer = usedOffers.find(
+        ({ id }) => id == array[index].offer?.id
+      );
+      if (isThereOffer) {
+        usedOffers.splice(usedOffers.indexOf(isThereOffer), 1);
+        SaveToSessionStorage("usedOffers", usedOffers);
+      }
       array.splice(index, 1);
     });
     setCashout(array);
     setSelectedItems([]);
   };
 
-  const changeProductAmount = (amount, id) => {
+  const changeProductAmount = (amount, product) => {
     let newArray = cashout.map((a) => {
       var returnValue = { ...a };
-      if (a.id == id) {
-        if (amount <= a.stock)
+      if (a.id == product.id) {
+        if (amount <= a.stock) {
           returnValue = {
             ...returnValue,
             price: {
-              ...a.price,
-              cashout: a.price.discounted * amount,
+              ...product.price,
+              cashout: product.price.discounted * amount,
             },
             count: amount,
           };
-        else {
+          returnValue = CheckAndApplyOffer(returnValue, cashout);
+        } else {
           setInputFields({
             ...inputFields,
             [selectedInputField]: a.stock,
@@ -145,16 +153,18 @@ export default function Sale() {
     setInputFields({ ...inputFields, barcode: "" });
   };
 
-  const total = useMemo(() => {
-    LOG("total calculated!", "yellow");
-    let total = 0;
-    cashout.map(({ price }) => (total = total + price.cashout));
-    return total / 100;
-  }, [cashout, cashout.length]);
-
   useEffect(() => {
     keyboard.current.setInput(inputFields[selectedInputField]);
   }, [selectedInputField]);
+
+  useEffect(() => {
+    // sessionStorage.clear();
+    const cachedProducts = [];
+    cashout.map((product) => {
+      cachedProducts.push(CheckAndApplyOffer(product, cashout));
+    });
+    setCashout(cachedProducts);
+  }, []);
 
   return (
     <Box
@@ -251,6 +261,7 @@ export default function Sale() {
             <IconButton
               sx={{
                 height: 50,
+                display: { xs: "none", sm: "block", md: "block" },
               }}
               onClick={() =>
                 checkoutRef.current.scroll({
@@ -264,6 +275,7 @@ export default function Sale() {
             <IconButton
               sx={{
                 height: 50,
+                display: { xs: "none", sm: "block", md: "block" },
               }}
               onClick={() =>
                 checkoutRef.current.scroll({
@@ -302,37 +314,13 @@ export default function Sale() {
             ref={checkoutRef}
             data={cashout}
             inputValues={inputFields}
-            onFocus={(e, { id }) => {
+            onFocus={(e, product) => {
               setSelectedInputField(e.target.name);
-              console.log(id);
-              setID(id);
+              setSelectedProduct(product);
             }}
             selectionValues={selectedItems}
             onChange={(newformats) => setSelectedItems(newformats)}
           />
-          <Accordion
-            onChange={(e, expanded) => {}}
-            sx={{
-              margin: 0,
-              width: "100%",
-              position: "sticky",
-              bottom: 0,
-            }}
-            disableGutters
-            square
-            elevation={5}
-          >
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>
-                {t("total")}: {total}₺
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                {t("subTotal")}: {total}₺
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
         </Paper>
       </Box>
       <Box
@@ -435,7 +423,7 @@ export default function Sale() {
                       [selectedInputField]: input,
                     });
                     if (selectedInputField != "barcode") {
-                      changeProductAmount(input, testID);
+                      changeProductAmount(input, selectedProduct);
                     }
                   }
                 }}
@@ -459,7 +447,7 @@ export default function Sale() {
                 {t("goBack")}
               </Button>
               <Button
-                disabled={!storeInfo.online}
+                disabled={!storeInfo.online || cashout.length == 0}
                 variant="contained"
                 disableElevation
                 color="secondary"
@@ -468,7 +456,7 @@ export default function Sale() {
                   fontSize: 20,
                 }}
                 onClick={() => {
-                  sessionStorage.setItem("cashout", JSON.stringify(cashout));
+                  SaveToSessionStorage("cashout", cashout);
                   navigate("./payment");
                 }}
               >

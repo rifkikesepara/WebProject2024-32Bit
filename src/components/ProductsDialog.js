@@ -1,4 +1,4 @@
-import { Dialog, IconButton, Slide, Typography } from "@mui/material";
+import { Box, Dialog, IconButton, Slide, Typography } from "@mui/material";
 import { forwardRef, useMemo, useState } from "react";
 
 import usePreferences from "../Hooks/usePreferences";
@@ -53,11 +53,13 @@ export default function ProductsDialog({
       >
         <Close />
       </IconButton>
-      <Products
-        onCount={(amount) => setProductAmount(amount)}
-        onSelectProduct={onSelectProduct}
-      />
-      <Typography
+      <Box height={"100vh"}>
+        <Products
+          onCount={(amount) => setProductAmount(amount)}
+          onSelectProduct={onSelectProduct}
+        />
+      </Box>
+      {/* <Typography
         sx={{
           textAlign: "center",
           boxShadow: "10px 20px 50px 70px " + theme.palette.background.paper,
@@ -65,7 +67,7 @@ export default function ProductsDialog({
         }}
       >
         Ürün Sayısı: {productAmount}
-      </Typography>
+      </Typography> */}
     </Dialog>
   );
 }

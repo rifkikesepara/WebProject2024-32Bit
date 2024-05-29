@@ -16,7 +16,6 @@ import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { motion } from "framer-motion";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
@@ -136,10 +135,13 @@ export default function Payment() {
     >
       <Box
         sx={{
-          width: { md: "50%", xs: "100%" },
+          width: { md: "100%", sm: 600, xs: "100%" },
+          minWidth: 400,
+          maxWidth: 800,
           display: "flex",
           alignItems: "center",
           flexDirection: "column",
+          justifyContent: "center",
           overflowY: "hidden",
           height: "100vh",
           backgroundColor: theme.palette.background.default,
@@ -234,6 +236,7 @@ export default function Payment() {
             }}
             selectionValues={selectedItems}
             onChange={(newformats) => setSelectedItems(newformats)}
+            accordionVisible={false}
           />
           <Accordion
             expanded
@@ -284,7 +287,7 @@ export default function Payment() {
       </Box>
       <Box
         sx={{
-          width: { md: "50%", xs: "100%" },
+          width: { md: 650, sm: 600, xs: "100%" },
           height: "100vh",
           display: "flex",
           flexDirection: "column",

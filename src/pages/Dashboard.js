@@ -25,7 +25,11 @@ import { useMemo, useState } from "react";
 import { LineChart, axisClasses } from "@mui/x-charts";
 import useData from "../Hooks/useData";
 import MiniDrawer from "../Components/MiniDrawer";
-import { getDayString, getMonthString } from "../Utils/utilities";
+import {
+  SaveToSessionStorage,
+  getDayString,
+  getMonthString,
+} from "../Utils/utilities";
 import useStore from "../Hooks/useStore";
 import usePreferences from "../Hooks/usePreferences";
 import { useTranslation } from "react-i18next";
@@ -46,7 +50,8 @@ const menuItems = [
     ),
     path: "../sale",
     onClick: () => {
-      sessionStorage.setItem("cashout", JSON.stringify([]));
+      SaveToSessionStorage("cashout", []);
+      SaveToSessionStorage("usedOffers", []);
     },
   },
   {
@@ -220,6 +225,7 @@ export default function Dashboard() {
 
   const { breakpoints } = useTheme();
   const matches = useMediaQuery(breakpoints.up("sm"));
+  const matchesTablet = useMediaQuery(breakpoints.up("md"));
   const { theme, isThemeDark, toggleTheme } = usePreferences();
 
   const [showDrawer, setShowDrawer] = useState({ right: false, left: false });
@@ -492,7 +498,7 @@ export default function Dashboard() {
       </Grid>
       {data.length != 0 && (
         <MiniDrawer
-          oriantation={matches ? "vertical" : "horizontal"}
+          oriantation={matches && matchesTablet ? "vertical" : "horizontal"}
           open={showDrawer.left}
           onOpen={(o) => setShowDrawer({ ...showDrawer, left: o })}
           items={menuItems}

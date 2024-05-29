@@ -5,9 +5,9 @@ import LOG from "../Debug/Console";
 
 export const ProductContext = createContext({
   products: [],
-  setProducts: () => {},
+  setProducts: ([]) => {},
   getAllProducts: () => [{}],
-  getCategorizedProducts: (category) => [{}],
+  getCategorizedProducts: (category = "C01") => [{}],
   getSubCategories: (category) => ["", ""],
 });
 

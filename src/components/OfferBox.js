@@ -7,84 +7,162 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
+import useData from "../Hooks/useData";
+import LOG from "../Debug/Console";
+import {
+  GetFromLocalStorage,
+  GetFromSessionStorage,
+  SaveToLocalStorage,
+} from "../Utils/utilities";
 
-const texts = [
-  { text: "one", activated: true },
-  { text: "two", activated: true },
-  { text: "three", activated: true },
-];
+export const UsedOffersDialog = ({ open, onClose = () => {} }) => {
+  return (
+    <Dialog
+      open={open}
+      onClose={onClose}
+      maxWidth="xl"
+      PaperProps={{ sx: { p: 2 } }}
+    >
+      {GetFromSessionStorage("usedOffers").map((offer) => {
+        return (
+          <Stack
+            key={offer.id}
+            direction={"row"}
+            spacing={5}
+            justifyContent={"space-between"}
+          >
+            <Typography>{offer.offerName}</Typography>
+            <Typography fontWeight={"bold"}>{offer.payback / 100}₺</Typography>
+          </Stack>
+        );
+      })}
+    </Dialog>
+  );
+};
+
+export const OffersDialog = ({
+  open,
+  onClose = () => {},
+  readOnly = false,
+}) => {
+  const [offers, setOffers] = useState(GetFromLocalStorage("offers"));
+  const changeActiveOffers = (offer, active) => {
+    const temp = [...offers];
+    const index = temp.indexOf(temp.find((data) => data.id == offer.id));
+    temp[index].activated = active;
+    setOffers(temp);
+    SaveToLocalStorage("offers", temp);
+  };
+
+  return (
+    <Dialog
+      maxWidth="lg"
+      open={open}
+      onClose={onClose}
+      PaperProps={{ sx: { width: "50%" } }}
+    >
+      <Stack paddingBlock={3} justifyContent={"center"} alignItems={"center"}>
+        <Typography variant="h4">Teklifler</Typography>
+        <Box
+          sx={{
+            height: 200,
+            width: "100%",
+            overflowY: "scroll",
+            overflowX: "hidden",
+          }}
+        >
+          {offers.map((offer, index) => {
+            return (
+              <Stack
+                key={index}
+                direction={"row"}
+                alignItems={"center"}
+                justifyContent={"flex-start"}
+              >
+                <Checkbox
+                  disabled={readOnly}
+                  checked={offer.activated}
+                  onChange={(e, checked) => changeActiveOffers(offer, checked)}
+                />
+                <Typography>{offer.offerName}</Typography>
+              </Stack>
+            );
+          })}
+        </Box>
+      </Stack>
+    </Dialog>
+  );
+};
 
 export default function OfferBox() {
+  const i = useRef(0);
+
   const [animation, setAnimation] = useState(true);
   const [openDialog, setOpenDialog] = useState(false);
-  const i = useRef(0);
+  const [offers, setOffers] = useState(GetFromLocalStorage("offers"));
+
+  const activeOffers = useMemo(
+    () => offers.filter(({ activated }) => activated),
+    [offers]
+  );
+
+  const setOffer = (offerID, active) => {
+    const array = offers;
+    const index = offers.indexOf(offers.find(({ id }) => id == offerID));
+    array[index].activated = active;
+    setOffers(array);
+    SaveToLocalStorage("offers", array);
+  };
+
+  useData("./offers.json", (data) => {
+    LOG("fetching offers...", "red");
+    const array = [];
+    data.map((data) => {
+      array.push({ ...data });
+    });
+    if (GetFromLocalStorage("offers").length != array.length) {
+      SaveToLocalStorage("offers", array);
+      setOffers(array);
+    }
+  });
+
   return (
     <Stack
       justifyContent={"center"}
       alignItems={"center"}
       sx={{ width: "100%", height: "100%" }}
     >
-      <Button sx={{ width: "100%", height: "100%" }}>
+      <Button
+        key={0}
+        sx={{ width: "100%", height: "100%" }}
+        onClick={() => setOpenDialog(true)}
+      >
         <Fade
           in={animation}
           timeout={1500}
           onEntered={() => setAnimation(false)}
           onExited={() => {
-            if (i.current == texts.length - 1) {
-              for (let index = 0; index < texts.length; index++) {
-                if (texts[index].activated) {
-                  i.current = index;
-                  break;
-                }
-              }
-            } else {
-              do {
-                i.current += 1;
-              } while (!texts[i.current].activated);
-            }
+            if (i.current < activeOffers.length - 1) i.current += 1;
+            else i.current = 0;
             setAnimation(true);
           }}
-          onClick={() => setOpenDialog(true)}
         >
-          <Typography width={"100%"}>{texts[i.current].text}</Typography>
+          <Typography
+            sx={{
+              width: "100%",
+              fontSize: { xs: 13, md: 16, sm: "1.7vw" },
+            }}
+          >
+            {activeOffers[i.current]?.offerName}
+          </Typography>
         </Fade>
       </Button>
-      <Dialog
-        maxWidth="lg"
+      <OffersDialog
+        readOnly={true}
         open={openDialog}
         onClose={() => setOpenDialog(false)}
-      >
-        <Stack
-          //   height={"80vh"}
-          paddingInline={20}
-          paddingBlock={3}
-          // width={"80vw"}
-          justifyContent={"center"}
-          alignItems={"center"}
-        >
-          <Typography variant="h4">Aktif Teklifler</Typography>
-          <Box height={100} overflow={"scroll"} width={"100%"}>
-            {texts.map((text, index) => {
-              return (
-                <Stack
-                  key={index}
-                  width={"20%"}
-                  direction={"row"}
-                  alignItems={"center"}
-                  justifyContent={"flex-start"}
-                >
-                  <Checkbox
-                    checked={text.activated}
-                    onChange={(e, c) => (text.activated = c)}
-                  />
-                  <Typography>{text.text}</Typography>
-                </Stack>
-              );
-            })}
-          </Box>
-        </Stack>
-      </Dialog>
+      />
     </Stack>
   );
 }

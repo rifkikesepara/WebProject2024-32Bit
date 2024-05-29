@@ -119,8 +119,8 @@ export default function MiniDrawer({
           left: oriantation == "vertical" && 0,
           top: oriantation != "vertical" && 0,
           "&::-webkit-scrollbar": { height: 0, width: 0 },
-          borderTopRightRadius: 20,
-          borderBottomRightRadius: 20,
+          borderTopRightRadius: oriantation == "vertical" && 20,
+          borderBottomRightRadius: oriantation == "vertical" && 20,
           overflow: "scroll",
         }}
         elevation={3}
