@@ -1,26 +1,46 @@
-import { Box, Stack } from "@mui/material";
-import OfferBox from "../Components/OfferBox";
-import Products from "../Components/Products";
+import { Button, Paper, Typography } from "@mui/material";
 import usePreferences from "../Hooks/usePreferences";
+import DialogWithButtons from "../Components/DialogWithButtons";
+import { useState } from "react";
+import { GetFromLocalStorage } from "../Utils/utilities";
+import { Receipt } from "../Components/Receipt";
 
 export default function Test() {
   const { theme } = usePreferences();
+  const [show, setShow] = useState(false);
+
+  const testData = GetFromLocalStorage("receipts")[3];
   return (
-    <Stack
-      height={"100vh"}
-      width={"100%"}
-      justifyContent={"center"}
-      alignItems={"center"}
-    >
-      <Box
+    <>
+      <Button variant="contained" onClick={() => setShow(true)}>
+        Show
+      </Button>
+      <DialogWithButtons
         sx={{
-          width: "50%",
-          height: "100%",
-          backgroundColor: theme.palette.background.paper,
+          width: { md: "50%", xs: "100%" },
+          maxWidth: 200,
+          height: "70%",
+          borderTopLeftRadius: 7,
+          borderBottomLeftRadius: 7,
         }}
+        open={show}
+        onClose={() => setShow(false)}
+        startAdornment={
+          <Paper
+            sx={{
+              // width: { md: "50%", xs: "100%" },
+              borderTopLeftRadius: 7,
+              borderBottomLeftRadius: 7,
+            }}
+          >
+            <Receipt payment={testData.payment} cashout={testData.cashout} />
+          </Paper>
+        }
       >
-        <Products />
-      </Box>
-    </Stack>
+        <Typography>deneme</Typography>
+        <Typography>deneme</Typography>
+        <Typography>deneme</Typography>
+      </DialogWithButtons>
+    </>
   );
 }

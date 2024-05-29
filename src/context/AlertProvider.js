@@ -2,7 +2,10 @@ import { Alert, Snackbar } from "@mui/material";
 import { createContext, useContext, useState } from "react";
 import { useAlert } from "../Hooks/useAlert";
 
-export const AlertContext = createContext({ alert: "", setAlert: () => {} });
+export const AlertContext = createContext({
+  alert: "",
+  setAlert: ({ text = "Test", type = "success" }) => {},
+});
 
 export const AlertPopUp = () => {
   const { alert, setAlert } = useAlert();

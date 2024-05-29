@@ -25,9 +25,15 @@ import usePreferences from "../Hooks/usePreferences";
 import CardPayment from "../Components/CardPayment";
 import OfferBox from "../Components/OfferBox";
 import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
+import {
+  GetFromLocalStorage,
+  GetFromSessionStorage,
+  SaveToLocalStorage,
+  SaveToSessionStorage,
+} from "../Utils/utilities";
 
 export default function Payment() {
-  const { theme } = usePreferences();
+  const { theme, isDesktop } = usePreferences();
   const { t } = useTranslation();
   const navigate = useNavigate();
   const { setAlert } = useAlert();
@@ -38,9 +44,7 @@ export default function Payment() {
   const [payment, setPayment] = useState({ cash: 0, card: 0, change: 0 });
   const [inputFields, setInputFields] = useState({ amount: "" });
   const [selectedInputField, setSelectedInputField] = useState("");
-  const [cashout, setCashout] = useState(
-    JSON.parse(sessionStorage.getItem("cashout"))
-  );
+  const [cashout, setCashout] = useState(GetFromSessionStorage("cashout"));
   const [showCardPayment, setShowCardPayment] = useState(false);
   const [testID, setID] = useState();
 
@@ -111,13 +115,22 @@ export default function Payment() {
     }
   };
 
+  const pushReceipt = () => {
+    const receipts = GetFromLocalStorage("receipts");
+    receipts.push({ id: receipts.length, products: cashout, payment: payment });
+    SaveToLocalStorage("receipts", receipts);
+  };
+
   const total = useMemo(() => {
     LOG("total calculated!", "yellow");
     let total = 0;
     cashout.map(({ price }) => (total = total + price.cashout));
     return total / 100;
   }, [cashout, cashout.length]);
-  let due = payment.change > 0 ? 0 : total - (payment.cash + payment.card);
+  let due =
+    payment.change > 0
+      ? 0
+      : total - (parseFloat(payment.cash) + parseFloat(payment.card));
 
   useEffect(() => {
     keyboard.current.setInput(inputFields[selectedInputField]);
@@ -131,6 +144,8 @@ export default function Payment() {
         width: "100%",
         overflow: "hidden",
         flexDirection: { sm: "row", md: "row", xs: "column" },
+        justifyContent: isDesktop && "space-around",
+        backgroundColor: theme.palette.background.default,
       }}
     >
       <Box
@@ -262,18 +277,18 @@ export default function Payment() {
               </Typography>
             </AccordionDetails>
             <AccordionDetails sx={{ paddingBlock: 0 }}>
-              <Typography sx={{ color: "green", fontWeight: "bold" }}>
+              <Typography sx={{ fontWeight: "bold" }}>
                 {t("cash").toUpperCase()}: {payment.cash}₺
               </Typography>
             </AccordionDetails>
             <AccordionDetails sx={{ paddingBlock: 0 }}>
-              <Typography sx={{ color: "blue", fontWeight: "bold" }}>
+              <Typography sx={{ fontWeight: "bold" }}>
                 {t("creditCard").toUpperCase()}: {payment.card}₺
               </Typography>
             </AccordionDetails>
             <Divider />
             <AccordionDetails>
-              <Typography sx={{ color: "red", fontWeight: "bold" }}>
+              <Typography sx={{ color: "text.discount", fontWeight: "bold" }}>
                 {t("due").toUpperCase()}: {due.toFixed(2)}₺
               </Typography>
               {payment.change != 0 && (
@@ -424,7 +439,7 @@ export default function Payment() {
                 {t("goBack")}
               </Button>
               <Button
-                disabled={due != 0}
+                disabled={due}
                 variant="contained"
                 disableElevation
                 color="secondary"
@@ -433,8 +448,9 @@ export default function Payment() {
                   fontSize: 20,
                 }}
                 onClick={() => {
-                  sessionStorage.setItem("cashout", JSON.stringify(cashout));
-                  sessionStorage.setItem("payment", JSON.stringify(payment));
+                  SaveToSessionStorage("cashout", cashout);
+                  SaveToSessionStorage("payment", payment);
+                  pushReceipt();
                   navigate("./result");
                 }}
               >

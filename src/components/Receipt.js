@@ -1,6 +1,123 @@
-import { Box, Typography } from "@mui/material";
-import { forwardRef } from "react";
+import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
+import { Box, IconButton, Paper, Stack, Typography } from "@mui/material";
+import { forwardRef, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import ScrollButtons from "./ScrollButtons";
+
+export const ReceiptWithScrollButtons = forwardRef(
+  (
+    {
+      sx,
+      payment = JSON.parse(sessionStorage.getItem("payment")),
+      cashout = JSON.parse(sessionStorage.getItem("cashout")),
+    },
+    ref
+  ) => {
+    const scrollRef = useRef();
+    return (
+      <Stack sx={{ position: "relative" }}>
+        <ScrollButtons
+          sx={{ position: "absolute", top: -50, right: "38%" }}
+          scrollRef={scrollRef}
+        />
+        <Receipt ref={scrollRef} sx={sx} payment={payment} cashout={cashout} />
+      </Stack>
+    );
+  }
+);
+
+export const ReturnReceipt = forwardRef(({ sx, returnedItems = [] }, ref) => {
+  const { t } = useTranslation();
+  console.log(returnedItems);
+  // const date = returnedItems.date.split(" ")[0].split(".");
+  // const time = returnedItems.date.split(" ")[1].split(":");
+
+  const total = () => {
+    let total = 0;
+    returnedItems.products.map(({ price }) => (total += price.cashout));
+    return total / 100;
+  };
+
+  return (
+    <Box
+      ref={ref}
+      sx={{
+        width: 450,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        paddingBlock: 3,
+        paddingInline: 4,
+        ...sx,
+      }}
+    >
+      <Typography>32-Bit Market</Typography>
+      <Typography>RIFKI KESEPARA</Typography>
+      <Typography textAlign={"center"} textTransform={"uppercase"}>
+        Bağdat Cad. Kumbaracılar Sk. No:18
+      </Typography>
+      <Typography textAlign={"center"} textTransform={"uppercase"}>
+        Feneryolu / İstanbul
+      </Typography>
+      <Typography textAlign={"center"}>İADE FATURASI</Typography>
+      <Box
+        sx={{
+          display: "flex",
+          width: "100%",
+          justifyContent: "space-between",
+          mt: 4,
+        }}
+      >
+        <Box>
+          <Typography>{returnedItems?.date.toLocaleDateString()}</Typography>
+          <Typography>
+            SAAT: {returnedItems?.date.toLocaleTimeString()}
+          </Typography>
+        </Box>
+        <Typography>FİŞ NO: {returnedItems.receipt.id}</Typography>
+      </Box>
+      <Box mt={3} width={"100%"}>
+        {returnedItems.products.map(({ attributes, price, count }, index) => {
+          return (
+            <Box
+              key={index}
+              sx={{
+                display: "flex",
+                width: "100%",
+                justifyContent: "space-between",
+                alignItems: "center",
+                mb: 1,
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  width: "80%",
+                }}
+              >
+                <Typography maxWidth={250} textOverflow={"ellipsis"}>
+                  {attributes.name}
+                </Typography>
+                <Typography> X{count}</Typography>
+              </Box>
+              <Typography>{price.cashout / 100}₺</Typography>
+            </Box>
+          );
+        })}
+      </Box>
+      <Typography>
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        - -{" "}
+      </Typography>
+      <Typography fontWeight={"inherit"} fontSize={"inherit"}>
+        TOPLAM: {total()}₺
+      </Typography>
+    </Box>
+  );
+});
 
 export const Receipt = forwardRef(
   (
@@ -16,7 +133,6 @@ export const Receipt = forwardRef(
     const date = payment.date.split(" ")[0].split(".");
     const time = payment.date.split(" ")[1].split(":");
 
-    console.log(time);
     const total = () => {
       let total = 0;
       cashout.map(({ price }) => (total = total + price.cashout));
@@ -65,9 +181,10 @@ export const Receipt = forwardRef(
         </Box>
 
         <Box mt={3} width={"100%"}>
-          {cashout.map(({ attributes, price, count }) => {
+          {cashout.map(({ attributes, price, count }, index) => {
             return (
               <Box
+                key={index}
                 sx={{
                   display: "flex",
                   width: "100%",

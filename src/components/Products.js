@@ -35,6 +35,7 @@ import useProduct from "../Hooks/useProduct";
 import LOG from "../Debug/Console";
 import usePreferences from "../Hooks/usePreferences";
 import { GetFromLocalStorage, SaveToLocalStorage } from "../Utils/utilities";
+import ScrollButtons from "./ScrollButtons";
 
 const categories = [
   { name: "Favoriler", value: "favourites" },
@@ -103,6 +104,7 @@ export default function Products({
     useProduct();
 
   const scrollRef = useRef();
+  const innerRef = useRef();
   var tempdata = useRef(GetFromLocalStorage("favourites"));
   var filteredProducts = useRef(GetFromLocalStorage("favourites"));
   let sortType = -1;
@@ -416,7 +418,7 @@ export default function Products({
             intialSelected="favourites"
             sx={{
               zIndex: 10,
-              paddingTop: 5,
+              paddingTop: 7,
               paddingBottom: 1,
               "&::-webkit-scrollbar": { height: 0 },
             }}
@@ -506,42 +508,15 @@ export default function Products({
               display: "flex",
             }}
           >
-            <Box
-              sx={{
-                position: "absolute",
-                right: 0,
-                display: "flex",
-                flexDirection: "column",
-                zIndex: 10,
-              }}
-            >
-              <IconButton
-                sx={{ fontSize: 40 }}
-                onClick={() => {
-                  scrollRef.current._outerRef.scroll({
-                    behavior: "smooth",
-                    top: scrollRef.current.state.scrollTop - 500,
-                  });
-                }}
-              >
-                <ArrowUpward fontSize="inherit" />
-              </IconButton>
-              <IconButton
-                sx={{ fontSize: 40 }}
-                onClick={() => {
-                  scrollRef.current._outerRef.scroll({
-                    behavior: "smooth",
-                    top: scrollRef.current.state.scrollTop + 500,
-                  });
-                }}
-              >
-                <ArrowDownward fontSize="inherit" />
-              </IconButton>
-            </Box>
+            <ScrollButtons
+              scrollRef={scrollRef}
+              sx={{ zIndex: 1000, top: 0, right: "43%" }}
+              elevation={0}
+            />
             <AutoSizer>
               {({ height, width }) => (
                 <FixedSizeGrid
-                  ref={scrollRef}
+                  outerRef={scrollRef}
                   style={{ overflowX: "hidden" }}
                   columnCount={3}
                   columnWidth={width / 3}

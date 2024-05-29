@@ -8,6 +8,7 @@ export const DarkTheme = createTheme({
       paper: "#3c3c3c",
     },
     primary: { main: "#fff" },
+    text: { discount: "#57A6A1" },
   },
   components: {
     MuiPaper: {
@@ -36,6 +37,7 @@ export const LightTheme = createTheme({
     },
     text: {
       primary: "#040D12",
+      discount: "red",
     },
   },
 });

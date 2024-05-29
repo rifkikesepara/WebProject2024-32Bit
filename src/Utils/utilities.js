@@ -63,3 +63,27 @@ export const GetFromSessionStorage = (item = "") => {
     ? []
     : JSON.parse(sessionStorage.getItem(item));
 };
+
+export const getDateFromString = (dateStr) => {
+  const dateAndTimeStr = dateStr.split(" ");
+  const date = dateAndTimeStr[0].split(".");
+  const time = dateAndTimeStr[1].split(":");
+  return new Date(date[2], date[1] - 1, date[0], time[0], time[1], time[2]);
+};
+
+export function dateDiffInDays(a, b) {
+  const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+  // Discard the time and time-zone information.
+  const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
+  const utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate());
+
+  return Math.floor((utc2 - utc1) / _MS_PER_DAY);
+}
+
+export function ChangeProductAmount(amount, product, cashout) {
+  const temp = [...cashout];
+  const index = temp.findIndex(({ id }) => id == product.id);
+  temp[index].count = amount;
+  temp[index].price.cashout = temp[index].price.discounted * amount;
+  return temp;
+}

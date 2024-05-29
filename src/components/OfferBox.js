@@ -15,6 +15,7 @@ import {
   GetFromSessionStorage,
   SaveToLocalStorage,
 } from "../Utils/utilities";
+import DialogWithButtons from "./DialogWithButtons";
 
 export const UsedOffersDialog = ({ open, onClose = () => {} }) => {
   return (
@@ -46,6 +47,8 @@ export const OffersDialog = ({
   onClose = () => {},
   readOnly = false,
 }) => {
+  const scrollRef = useRef();
+
   const [offers, setOffers] = useState(GetFromLocalStorage("offers"));
   const changeActiveOffers = (offer, active) => {
     const temp = [...offers];
@@ -56,15 +59,16 @@ export const OffersDialog = ({
   };
 
   return (
-    <Dialog
-      maxWidth="lg"
+    <DialogWithButtons
+      scrollRef={scrollRef}
       open={open}
       onClose={onClose}
-      PaperProps={{ sx: { width: "50%" } }}
+      sx={{ width: "50%" }}
     >
       <Stack paddingBlock={3} justifyContent={"center"} alignItems={"center"}>
         <Typography variant="h4">Teklifler</Typography>
         <Box
+          ref={scrollRef}
           sx={{
             height: 200,
             width: "100%",
@@ -91,7 +95,7 @@ export const OffersDialog = ({
           })}
         </Box>
       </Stack>
-    </Dialog>
+    </DialogWithButtons>
   );
 };
 
