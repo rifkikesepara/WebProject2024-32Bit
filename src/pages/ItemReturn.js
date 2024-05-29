@@ -1,4 +1,12 @@
-import { Box, Button, Dialog, Paper, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Dialog,
+  IconButton,
+  Paper,
+  Stack,
+  Typography,
+} from "@mui/material";
 import usePreferences from "../Hooks/usePreferences";
 import TextFieldVK from "../Components/TextFieldVK";
 import { useNavigate } from "react-router-dom";
@@ -16,8 +24,13 @@ import { useAlert } from "../Hooks/useAlert";
 import { LoadingButton } from "@mui/lab";
 import DialogWithButtons from "../Components/DialogWithButtons";
 import ScrollButtons from "../Components/ScrollButtons";
+import { Receipt, ReturnReceipt } from "../Components/Receipt";
+import { Print } from "@mui/icons-material";
+import { useReactToPrint } from "react-to-print";
 
 const ReceiptBox = ({ data, onSelect = (receipt) => {} }) => {
+  const [showReceipt, setShowReceipt] = useState(false);
+
   return (
     <Paper
       sx={{
@@ -31,6 +44,19 @@ const ReceiptBox = ({ data, onSelect = (receipt) => {} }) => {
         <Typography>Toplam Tutar: {data.payment.cash}₺</Typography>
         <Typography>Tarih: {data.payment.date}</Typography>
         <Button
+          variant="contained"
+          onClick={() => {
+            console.log(data);
+            setShowReceipt(true);
+          }}
+          sx={{
+            paddingBlock: 2,
+            display: { md: "none", sm: "block", xs: "block" },
+          }}
+        >
+          Göster
+        </Button>
+        <Button
           color="secondary"
           variant="contained"
           onClick={() => onSelect(data)}
@@ -38,6 +64,16 @@ const ReceiptBox = ({ data, onSelect = (receipt) => {} }) => {
         >
           Seç
         </Button>
+        <Dialog
+          maxWidth="xl"
+          open={showReceipt}
+          onClose={() => setShowReceipt(false)}
+          scroll="body"
+        >
+          <Box overflowX={"hidden"}>
+            <Receipt payment={data.payment} cashout={data.products} />
+          </Box>
+        </Dialog>
       </Stack>
     </Paper>
   );
@@ -103,12 +139,15 @@ export default function ItemReturn() {
 
   const keyboard = useRef(null);
   const receiptsScrollRef = useRef();
+  const returnReceiptRef = useRef();
 
+  const [loading, setLoading] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState();
 
   const [selectedProducts, setSelectedProducts] = useState([]);
   const [receiptInput, setReceiptInput] = useState("");
   const [showReceipts, setShowReceipts] = useState(false);
+  const [showReturnReceipt, setShowReturnReceipt] = useState(false);
   const [returnItemDialog, setReturnItemDialog] = useState({
     show: false,
     receipt: -1,
@@ -128,6 +167,10 @@ export default function ItemReturn() {
         ChangeProductAmount(parseInt(amount), selectedProduct, selectedProducts)
       );
   };
+
+  const handlePrint = useReactToPrint({
+    content: () => returnReceiptRef.current,
+  });
 
   useData("./fakeReceipts.json", (data) => {
     if (!GetFromLocalStorage("receipts").length)
@@ -266,6 +309,14 @@ export default function ItemReturn() {
             </Button>
             {selectedProducts.length != 0 && (
               <LoadingButton
+                loading={loading}
+                onClick={() => {
+                  setLoading(true);
+                  setTimeout(() => {
+                    setLoading(false);
+                    setShowReturnReceipt(true);
+                  }, 1000);
+                }}
                 color="secondary"
                 variant="contained"
                 sx={{ paddingBlock: 3, width: "100%" }}
@@ -295,6 +346,33 @@ export default function ItemReturn() {
             setSelectedProducts(items);
           }}
         />
+        <DialogWithButtons
+          open={showReturnReceipt}
+          onClose={() => {
+            setShowReturnReceipt(false);
+            window.location.reload();
+          }}
+          buttons={{
+            endAdornment: (
+              <Paper>
+                <IconButton onClick={handlePrint} sx={{ borderRadius: 0 }}>
+                  <Print />
+                </IconButton>
+              </Paper>
+            ),
+          }}
+        >
+          <Paper>
+            <ReturnReceipt
+              ref={returnReceiptRef}
+              returnedItems={{
+                receipt: returnItemDialog.receipt,
+                date: new Date(),
+                products: selectedProducts,
+              }}
+            />
+          </Paper>
+        </DialogWithButtons>
       </Stack>
     </Stack>
   );
