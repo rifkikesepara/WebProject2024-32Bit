@@ -1,10 +1,10 @@
-import { Alert, Snackbar } from "@mui/material";
+import { Alert, Snackbar, duration } from "@mui/material";
 import { createContext, useContext, useState } from "react";
 import { useAlert } from "../Hooks/useAlert";
 
 export const AlertContext = createContext({
   alert: "",
-  setAlert: ({ text = "Test", type = "success" }) => {},
+  setAlert: ({ text = "Test", type = "success", duration = 2000 }) => {},
 });
 
 export const AlertPopUp = () => {
@@ -19,11 +19,12 @@ export const AlertPopUp = () => {
     setOpen(false);
     setAlert({ ...alert, text: "" });
   };
+  console.log(alert.duration);
 
   return (
     <Snackbar
       open={alert.text != "" || open ? true : false}
-      autoHideDuration={2000}
+      autoHideDuration={alert.duration}
       anchorOrigin={{ vertical: "top", horizontal: "center" }}
       onClose={handleClose}
     >
@@ -35,7 +36,13 @@ export const AlertPopUp = () => {
 };
 
 export default function AlertProvider({ children }) {
-  const [alert, setAlert] = useState({ text: "", type: "" });
+  const defaultAlert = {
+    text: "",
+    type: "",
+    duration: 2000,
+  };
+  const [alert, idicateAlert] = useState(defaultAlert);
+  const setAlert = (object) => idicateAlert({ ...defaultAlert, ...object });
 
   return (
     <AlertContext.Provider value={{ alert, setAlert }}>

@@ -46,24 +46,6 @@ export const getMonthString = (index) => {
   }
 };
 
-export const SaveToLocalStorage = (item = "", data = JSON) => {
-  localStorage.setItem(item, JSON.stringify(data));
-};
-export const SaveToSessionStorage = (item = "", data = JSON) => {
-  sessionStorage.setItem(item, JSON.stringify(data));
-};
-
-export const GetFromLocalStorage = (item = "") => {
-  return localStorage.getItem(item) == undefined
-    ? []
-    : JSON.parse(localStorage.getItem(item));
-};
-export const GetFromSessionStorage = (item = "") => {
-  return sessionStorage.getItem(item) == undefined
-    ? []
-    : JSON.parse(sessionStorage.getItem(item));
-};
-
 export const getDateFromString = (dateStr) => {
   const dateAndTimeStr = dateStr.split(" ");
   const date = dateAndTimeStr[0].split(".");
@@ -87,3 +69,27 @@ export function ChangeProductAmount(amount, product, cashout) {
   temp[index].price.cashout = temp[index].price.discounted * amount;
   return temp;
 }
+
+//store data to local storage-------------
+export const SaveToLocalStorage = (item = "", data = JSON) => {
+  localStorage.setItem(item, JSON.stringify(data));
+};
+export const GetFromLocalStorage = (item = "") => {
+  if (localStorage.getItem(item) == undefined) {
+    localStorage.setItem(item, JSON.stringify([]));
+    return [];
+  } else return JSON.parse(localStorage.getItem(item));
+};
+//----------------------------------------
+
+//store data to session storage--------------
+export const SaveToSessionStorage = (item = "", data = JSON) => {
+  sessionStorage.setItem(item, JSON.stringify(data));
+};
+export const GetFromSessionStorage = (item = "") => {
+  if (sessionStorage.getItem(item) == undefined) {
+    sessionStorage.setItem(item, JSON.stringify([]));
+    return [];
+  } else return JSON.parse(sessionStorage.getItem(item));
+};
+//----------------------------------------------

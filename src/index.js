@@ -17,6 +17,7 @@ import ProductProvider from "./Context/ProductProvider";
 import "./config";
 import SettingsDialog from "./Components/SettingsDialog";
 import ItemReturn from "./Pages/ItemReturn";
+import TimerProvider from "./Context/TimerProvider";
 
 const router = createBrowserRouter([
   {
@@ -72,7 +73,9 @@ root.render(
       <ProductProvider>
         <AlertProvider>
           <AlertPopUp />
-          <RouterProvider router={router} />
+          <TimerProvider>
+            <RouterProvider router={router} />
+          </TimerProvider>
         </AlertProvider>
       </ProductProvider>
     </SnackbarProvider>

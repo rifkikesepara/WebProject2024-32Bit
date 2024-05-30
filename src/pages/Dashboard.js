@@ -1,8 +1,10 @@
 import {
   Box,
+  Button,
   Grid,
   Paper,
   Skeleton,
+  Stack,
   Table,
   TableBody,
   TableCell,
@@ -26,6 +28,7 @@ import { LineChart, axisClasses } from "@mui/x-charts";
 import MiniDrawer from "../Components/MiniDrawer";
 import {
   GetFromLocalStorage,
+  GetFromSessionStorage,
   SaveToSessionStorage,
   getDateFromString,
   getDayString,
@@ -35,6 +38,8 @@ import useStore from "../Hooks/useStore";
 import usePreferences from "../Hooks/usePreferences";
 import { useTranslation } from "react-i18next";
 import LOG from "../Debug/Console";
+import { LoadingButton } from "@mui/lab";
+import ShiftButton from "../Components/Shift";
 
 const menuItems = [
   {
@@ -42,7 +47,7 @@ const menuItems = [
     icon: (
       <LocalGroceryStoreIcon
         sx={{
-          backgroundColor: "#ec324f",
+          backgroundColor: "#65a614",
           fontSize: { md: 75, sm: 75, xs: 60 },
           color: "white",
           padding: 2,
@@ -176,31 +181,26 @@ const menuItems = [
 const getTotalAmount = (data) => {
   console.log("total amount");
   let total = 0;
-  data.map(({ amount }) => {
+  data?.map(({ amount }) => {
     total = total + amount;
   });
 
   return total;
 };
 
-const Clock = () => {
+const Clock = ({ sx }) => {
   const [date, setDate] = useState(new Date());
   // const [time, setTime] = useState(new Date().toLocaleTimeString("tr-TR"));
 
   const updateTime = () => {
     setDate(new Date());
   };
-
+  const clock = date.toLocaleTimeString("tr-TR");
   setInterval(updateTime, 1000);
 
   return (
-    <Typography
-      sx={{
-        right: 15,
-        fontSize: 30,
-      }}
-    >
-      {date.toLocaleTimeString("tr-TR")}
+    <Typography sx={{ ...sx }}>
+      {clock.split(":")[0]}:{clock.split(":")[1]}
     </Typography>
   );
 };
@@ -250,10 +250,10 @@ export default function Dashboard() {
   LOG("re-render Dashboard", "red");
 
   const { t } = useTranslation();
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(undefined);
   const storeInfo = useStore();
-  const date = new Date();
 
+  const employee = GetFromSessionStorage("employee");
   const sales = GetFromLocalStorage("receipts").sort(
     (a, b) =>
       getDateFromString(a.payment.date) - getDateFromString(b.payment.date)
@@ -272,7 +272,13 @@ export default function Dashboard() {
       };
     });
   }, [data]);
+
   useEffect(() => {
+    // SaveToSessionStorage("shift", {
+    //   employeeID: 10,
+    //   startingTime: null,
+    //   endingTime: null,
+    // });
     setTimeout(() => {
       setData(chartData);
     }, 1000);
@@ -284,6 +290,7 @@ export default function Dashboard() {
   const matchesTablet = useMediaQuery(breakpoints.up("md"));
   const { theme } = usePreferences();
 
+  const date = new Date();
   let stringDate = useMemo(() => {
     return {
       day: getDayString(date.getDay()),
@@ -313,7 +320,7 @@ export default function Dashboard() {
           mt: { xs: 7, md: 0 },
         }}
       >
-        {!data.length ? (
+        {!data ? (
           <Grid item xs={12}>
             <Skeleton variant="rectangular" width={"100%"} height={85} />
           </Grid>
@@ -324,39 +331,61 @@ export default function Dashboard() {
                 borderRadius: 5,
                 display: "flex",
                 flexDirection: { md: "row", sm: "row", xs: "column" },
-                justifyContent: "space-between",
+                justifyContent: "center",
                 paddingInline: 1.5,
                 paddingBlock: 2.5,
                 position: "relative",
                 alignItems: "center",
               }}
             >
-              <Box sx={{ display: "flex", alignItems: "center" }}>
-                <div
-                  style={{
-                    height: 15,
-                    width: 15,
-                    backgroundColor: storeInfo.online ? "green" : "red",
-                    boxShadow: storeInfo.online
-                      ? "0px 0px 8px 0.5px green"
-                      : "0px 0px 8px 0.5px red",
-                    borderRadius: 200,
-                    marginRight: 10,
-                  }}
-                ></div>
-                <Typography>{t("storeOnline")}</Typography>
-              </Box>
-              <Typography
-                sx={{ fontSize: { md: 30, xs: 20 }, fontWeight: "bold" }}
+              <Stack spacing={0.25} sx={{ position: "absolute", left: 15 }}>
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <div
+                    style={{
+                      height: 15,
+                      width: 15,
+                      backgroundColor: storeInfo.online ? "green" : "red",
+                      boxShadow: storeInfo.online
+                        ? "0px 0px 8px 0.5px green"
+                        : "0px 0px 8px 0.5px red",
+                      borderRadius: 200,
+                      marginRight: 10,
+                    }}
+                  ></div>
+                  <Typography>
+                    {storeInfo.online ? t("storeOnline") : t("storeOffline")}
+                  </Typography>
+                </Box>
+                <Typography>Version: {storeInfo.version}</Typography>
+                <Typography>
+                  Last Login:{" "}
+                  {new Date(employee.loginTime).toLocaleDateString()}
+                </Typography>
+              </Stack>
+              <Stack alignItems={"center"}>
+                <Typography
+                  sx={{ fontSize: { md: 30, xs: 20 }, fontWeight: "bold" }}
+                >
+                  {employee.employeeName}
+                </Typography>
+                <Stack direction={"row"} spacing={2}>
+                  <Typography>
+                    {t(stringDate.day.toLocaleLowerCase())}, {date.getDate()}{" "}
+                    {t(stringDate.month.toLowerCase())}
+                  </Typography>
+                  <Clock />
+                </Stack>
+              </Stack>
+              <Stack
+                sx={{ position: "absolute", right: 15, alignItems: "center" }}
               >
-                {t(stringDate.day.toLocaleLowerCase())}, {date.getDate()}{" "}
-                {t(stringDate.month.toLowerCase())}
-              </Typography>
-              <Clock />
+                <Typography>CashierID: {employee.employeeID}</Typography>
+                <ShiftButton disabled={!storeInfo.online} />
+              </Stack>
             </Paper>
           </Grid>
         )}
-        {!data.length ? (
+        {!data ? (
           <Grid item xs={12} md={8}>
             <Skeleton variant="rectangular" width={"100%"} height={300} />
           </Grid>
@@ -426,7 +455,7 @@ export default function Dashboard() {
             </Paper>
           </Grid>
         )}
-        {!data.length ? (
+        {!data ? (
           <Grid item xs={12} sm={12} md={4}>
             <Skeleton
               variant="rectangular"
@@ -480,7 +509,7 @@ export default function Dashboard() {
             </Paper>
           </Grid>
         )}
-        {!data.length ? (
+        {!data ? (
           <Grid item xs={12} sx={{ display: { md: "block", xs: "none" } }}>
             <Skeleton variant="rectangular" width={"100%"} height={274} />
           </Grid>
@@ -504,7 +533,7 @@ export default function Dashboard() {
           </Grid>
         )}
       </Grid>
-      {data.length != 0 && (
+      {data && (
         <MiniDrawer
           oriantation={matchesTablet ? "vertical" : "horizontal"}
           items={menuItems}

@@ -1,12 +1,13 @@
 import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
 import { IconButton, Paper, Stack } from "@mui/material";
+import React from "react";
 
 export default function ScrollButtons({
   sx,
   scrollRef,
   direction = "row",
-  startAdornment,
-  endAdornment,
+  startAdornment = <></>,
+  endAdornment = <></>,
   elevation = 1,
 }) {
   return (

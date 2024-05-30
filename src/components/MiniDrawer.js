@@ -122,7 +122,6 @@ export default function MiniDrawer({
         ? ref.current.scrollTop
         : ref.current.scrollLeft;
 
-    console.log(ref);
     ref.current.scroll({
       behavior: "smooth",
       top: oriantation == "vertical" && current + amount,
@@ -271,7 +270,10 @@ export default function MiniDrawer({
             height: "100vh",
             // backgroundColor: "green",
           }}
-          onClick={() => onOpen(false)}
+          onClick={() => {
+            setOpen(false);
+            onOpen(false);
+          }}
         />
       )}
     </>

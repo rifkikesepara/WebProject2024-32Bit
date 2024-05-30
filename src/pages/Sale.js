@@ -446,7 +446,11 @@ export default function Sale() {
                 {t("goBack")}
               </Button>
               <Button
-                disabled={!storeInfo.online || cashout.length == 0}
+                disabled={
+                  !storeInfo.online ||
+                  cashout.length == 0 ||
+                  !GetFromSessionStorage("shift").started
+                }
                 variant="contained"
                 disableElevation
                 color="secondary"

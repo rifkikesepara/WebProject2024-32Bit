@@ -1,6 +1,6 @@
 import { Close } from "@mui/icons-material";
 import { Box, Button, Dialog, IconButton, Paper } from "@mui/material";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import ScrollButtons from "./ScrollButtons";
 
 const DialogPaper = (props) => {
@@ -43,9 +43,9 @@ const DialogPaper = (props) => {
 
 export default function DialogWithButtons({
   children,
-  startAdornment,
-  endAdornment,
-  buttons = { startAdornment: () => {}, endAdornment: () => {} },
+  startAdornment = <></>,
+  endAdornment = <></>,
+  buttons = { startAdornment: <></>, endAdornment: <></> },
   open = true,
   sx = {},
   onClose = (e) => {},

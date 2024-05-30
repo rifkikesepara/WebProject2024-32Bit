@@ -17,10 +17,16 @@ import usePreferences from "../Hooks/usePreferences";
 import TextFieldVK from "../Components/TextFieldVK";
 import useStore from "../Hooks/useStore";
 import { useTranslation } from "react-i18next";
+import { SaveToSessionStorage } from "../Utils/utilities";
 
 export default function Login() {
   const { t, i18n } = useTranslation();
-  const user = { userCode: "admin", password: 123 };
+  const user = {
+    userCode: "rifki",
+    password: 123,
+    employeeID: 254,
+    name: "Rıfkı Kesepara",
+  };
 
   const navigate = useNavigate();
   const storeInfo = useStore();
@@ -49,6 +55,18 @@ export default function Login() {
         }, 2000);
         setTimeout(() => {
           navigate("/home");
+          SaveToSessionStorage("employee", {
+            employeeID: 254,
+            employeeName: user.name,
+            loginTime: new Date(),
+          });
+          SaveToSessionStorage("shift", {
+            started: false,
+            employeeID: 254,
+            startTime: null,
+            endTime: null,
+            duration: null,
+          });
         }, 3500);
       } else {
         setTimeout(() => {

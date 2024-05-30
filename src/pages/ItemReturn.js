@@ -70,7 +70,7 @@ const ReceiptBox = ({ data, onSelect = (receipt) => {} }) => {
           onClose={() => setShowReceipt(false)}
           scroll="body"
         >
-          <Box overflowX={"hidden"}>
+          <Box>
             <Receipt payment={data.payment} cashout={data.products} />
           </Box>
         </Dialog>
@@ -171,6 +171,21 @@ export default function ItemReturn() {
   const handlePrint = useReactToPrint({
     content: () => returnReceiptRef.current,
   });
+
+  const handleReturn = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setShowReturnReceipt(true);
+      const returnReceipts = GetFromLocalStorage("returnReceipts");
+      returnReceipts.push({
+        id: returnReceipts.length,
+        returnedItems: selectedProducts,
+        date: new Date(),
+      });
+      SaveToLocalStorage("returnReceipts", returnReceipts);
+    }, 1000);
+  };
 
   useData("./fakeReceipts.json", (data) => {
     if (!GetFromLocalStorage("receipts").length)
@@ -310,13 +325,7 @@ export default function ItemReturn() {
             {selectedProducts.length != 0 && (
               <LoadingButton
                 loading={loading}
-                onClick={() => {
-                  setLoading(true);
-                  setTimeout(() => {
-                    setLoading(false);
-                    setShowReturnReceipt(true);
-                  }, 1000);
-                }}
+                onClick={handleReturn}
                 color="secondary"
                 variant="contained"
                 sx={{ paddingBlock: 3, width: "100%" }}
@@ -350,7 +359,8 @@ export default function ItemReturn() {
           open={showReturnReceipt}
           onClose={() => {
             setShowReturnReceipt(false);
-            window.location.reload();
+
+            setSelectedProducts([]);
           }}
           buttons={{
             endAdornment: (

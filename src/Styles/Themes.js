@@ -8,6 +8,7 @@ export const DarkTheme = createTheme({
       paper: "#3c3c3c",
     },
     primary: { main: "#fff" },
+    danger: { main: "#4e3534" },
     text: { discount: "#57A6A1" },
   },
   components: {
@@ -32,6 +33,7 @@ export const LightTheme = createTheme({
     primary: {
       main: "#121212",
     },
+    danger: { main: "#ff0012" },
     background: {
       default: "#e7ecf1",
     },

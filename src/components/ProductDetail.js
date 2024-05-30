@@ -68,6 +68,7 @@ export default function ProductDetail({
             }
           />
         </Box>
+        <Typography>{product?.id}</Typography>
         <Typography textAlign={"center"}>{product?.attributes.name}</Typography>
         <Typography>Ağırlık: {product?.attributes.grossWeight}g</Typography>
         <Typography>Stok: {product?.stock} Adet</Typography>
