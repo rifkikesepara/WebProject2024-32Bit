@@ -99,14 +99,12 @@ export default function Payment() {
             ...payment,
             change: 0,
             cash: paymentAmount,
-            date: new Date().toLocaleString(),
           });
         } else {
           setPayment({
             ...payment,
             cash: paymentAmount,
             change: (paymentAmount - (total - payment.card)).toFixed(2),
-            date: new Date().toLocaleString(),
           });
         }
         setInputFields({ ...inputFields, amount: "" });
@@ -117,7 +115,14 @@ export default function Payment() {
 
   const pushReceipt = () => {
     const receipts = GetFromLocalStorage("receipts");
-    receipts.push({ id: receipts.length, products: cashout, payment: payment });
+    const currentReceipt = {
+      id: receipts.length,
+      products: cashout,
+      payment: payment,
+      date: new Date().toLocaleString(),
+    };
+    receipts.push(currentReceipt);
+    SaveToSessionStorage("currentReceipt", currentReceipt);
     SaveToLocalStorage("receipts", receipts);
   };
 
@@ -391,7 +396,6 @@ export default function Payment() {
                 setPayment({
                   ...payment,
                   card: inputFields.amount,
-                  date: new Date().toLocaleString(),
                 });
                 setInputFields({ ...inputFields, amount: "" });
                 keyboard.current.setInput("");

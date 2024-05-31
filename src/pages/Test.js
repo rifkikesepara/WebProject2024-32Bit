@@ -1,46 +1,21 @@
-import { Button, Paper, Typography } from "@mui/material";
-import usePreferences from "../Hooks/usePreferences";
-import DialogWithButtons from "../Components/DialogWithButtons";
-import { useState } from "react";
-import { GetFromLocalStorage } from "../Utils/utilities";
-import { Receipt } from "../Components/Receipt";
+import ZReport from "../Components/ZReport";
+import { Paper, Stack } from "@mui/material";
+import { getCollapsedReceiptsByDate } from "../Utils/receipts";
 
 export default function Test() {
-  const { theme } = usePreferences();
-  const [show, setShow] = useState(false);
-
-  const testData = GetFromLocalStorage("receipts")[3];
+  const zReportsData = getCollapsedReceiptsByDate()[2];
+  console.log(zReportsData);
   return (
-    <>
-      <Button variant="contained" onClick={() => setShow(true)}>
-        Show
-      </Button>
-      <DialogWithButtons
-        sx={{
-          width: { md: "50%", xs: "100%" },
-          maxWidth: 200,
-          height: "70%",
-          borderTopLeftRadius: 7,
-          borderBottomLeftRadius: 7,
-        }}
-        open={show}
-        onClose={() => setShow(false)}
-        startAdornment={
-          <Paper
-            sx={{
-              // width: { md: "50%", xs: "100%" },
-              borderTopLeftRadius: 7,
-              borderBottomLeftRadius: 7,
-            }}
-          >
-            <Receipt payment={testData.payment} cashout={testData.cashout} />
-          </Paper>
-        }
-      >
-        <Typography>deneme</Typography>
-        <Typography>deneme</Typography>
-        <Typography>deneme</Typography>
-      </DialogWithButtons>
-    </>
+    <Stack
+      minHeight={"100vh"}
+      width={"100%"}
+      alignItems={"center"}
+      justifyContent={"center"}
+      sx={{ backgroundColor: "background.default" }}
+    >
+      <Paper>
+        <ZReport data={zReportsData} />
+      </Paper>
+    </Stack>
   );
 }

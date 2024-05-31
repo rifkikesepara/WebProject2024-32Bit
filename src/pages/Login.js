@@ -58,7 +58,7 @@ export default function Login() {
           SaveToSessionStorage("employee", {
             employeeID: 254,
             employeeName: user.name,
-            loginTime: new Date(),
+            loginTime: new Date().toLocaleString(),
           });
           SaveToSessionStorage("shift", {
             started: false,

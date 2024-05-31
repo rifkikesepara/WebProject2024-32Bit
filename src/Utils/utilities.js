@@ -62,6 +62,16 @@ export function dateDiffInDays(a, b) {
   return Math.floor((utc2 - utc1) / _MS_PER_DAY);
 }
 
+export const isBetweenDates = (startDate, endDate, date) => {
+  return (
+    date.getTime() >= startDate.getTime() && date.getTime() <= endDate.getTime()
+  );
+};
+
+export const getValueByPercentege = (value, percentege) => {
+  return (value / 100) * percentege;
+};
+
 export function ChangeProductAmount(amount, product, cashout) {
   const temp = [...cashout];
   const index = temp.findIndex(({ id }) => id == product.id);

@@ -506,6 +506,7 @@ export default function Products({
               height: "100%",
               width: "100%",
               display: "flex",
+              paddingBottom: 25,
             }}
           >
             <ScrollButtons

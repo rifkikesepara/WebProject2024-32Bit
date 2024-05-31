@@ -1,18 +1,15 @@
-import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
-import { Box, IconButton, Paper, Stack, Typography } from "@mui/material";
-import { forwardRef, useRef } from "react";
+import { Box, Stack, Typography } from "@mui/material";
+import { forwardRef, useMemo, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import ScrollButtons from "./ScrollButtons";
+import {
+  GetFromSessionStorage,
+  getValueByPercentege,
+} from "../Utils/utilities";
+import { getTotalTaxOfReceipt } from "../Utils/receipts";
 
 export const ReceiptWithScrollButtons = forwardRef(
-  (
-    {
-      sx,
-      payment = JSON.parse(sessionStorage.getItem("payment")),
-      cashout = JSON.parse(sessionStorage.getItem("cashout")),
-    },
-    ref
-  ) => {
+  ({ sx, receiptData = GetFromSessionStorage("currentReceipt") }, ref) => {
     const scrollRef = useRef();
     return (
       <Stack sx={{ position: "relative" }}>
@@ -20,7 +17,7 @@ export const ReceiptWithScrollButtons = forwardRef(
           sx={{ position: "absolute", top: -50, right: "38%" }}
           scrollRef={scrollRef}
         />
-        <Receipt ref={scrollRef} sx={sx} payment={payment} cashout={cashout} />
+        <Receipt ref={scrollRef} sx={sx} receiptData={receiptData} />
       </Stack>
     );
   }
@@ -32,11 +29,11 @@ export const ReturnReceipt = forwardRef(({ sx, returnedItems = [] }, ref) => {
   // const date = returnedItems.date.split(" ")[0].split(".");
   // const time = returnedItems.date.split(" ")[1].split(":");
 
-  const total = () => {
+  const total = useMemo(() => {
     let total = 0;
     returnedItems.products.map(({ price }) => (total += price.cashout));
     return total / 100;
-  };
+  }, [returnedItems]);
 
   return (
     <Box
@@ -113,31 +110,29 @@ export const ReturnReceipt = forwardRef(({ sx, returnedItems = [] }, ref) => {
         - -{" "}
       </Typography>
       <Typography fontWeight={"inherit"} fontSize={"inherit"}>
-        TOPLAM: {total()}₺
+        TOPLAM: {total}₺
       </Typography>
     </Box>
   );
 });
 
 export const Receipt = forwardRef(
-  (
-    {
-      sx,
-      payment = JSON.parse(sessionStorage.getItem("payment")),
-      cashout = JSON.parse(sessionStorage.getItem("cashout")),
-    },
-    ref
-  ) => {
+  ({ sx, receiptData = GetFromSessionStorage("currentReceipt") }, ref) => {
     const { t } = useTranslation();
 
-    const date = payment.date.split(" ")[0].split(".");
-    const time = payment.date.split(" ")[1].split(":");
+    const date = receiptData.date.split(" ")[0].split(".");
+    const time = receiptData.date.split(" ")[1].split(":");
 
-    const total = () => {
-      let total = 0;
-      cashout.map(({ price }) => (total = total + price.cashout));
-      return total / 100;
-    };
+    console.log(getTotalTaxOfReceipt(receiptData));
+    const total = useMemo(() => {
+      let total = 0,
+        taxesTotal = 0;
+      receiptData.products.map(({ price }) => {
+        taxesTotal += getValueByPercentege(price.cashout / 100, price.tax);
+        total += price.cashout;
+      });
+      return { total: total / 100, taxesTotal: taxesTotal.toFixed(2) };
+    });
 
     return (
       <Box
@@ -177,11 +172,17 @@ export const Receipt = forwardRef(
             <Typography>{date[0] + "/" + date[1] + "/" + date[2]}</Typography>
             <Typography>SAAT: {time[0] + "." + time[1]}</Typography>
           </Box>
-          <Typography>FİŞ NO: 0001</Typography>
+          <Typography>
+            FİŞ NO:{" "}
+            {receiptData.id.toLocaleString("tr-TR", {
+              minimumIntegerDigits: 4,
+              useGrouping: false,
+            })}
+          </Typography>
         </Box>
 
         <Box mt={3} width={"100%"}>
-          {cashout.map(({ attributes, price, count }, index) => {
+          {receiptData.products.map(({ attributes, price, count }, index) => {
             return (
               <Box
                 key={index}
@@ -229,7 +230,7 @@ export const Receipt = forwardRef(
             KDV
           </Typography>
           <Typography fontWeight={"inherit"} fontSize={"inherit"}>
-            1,28₺
+            {total.taxesTotal}₺
           </Typography>
         </Box>
         <Box
@@ -246,7 +247,7 @@ export const Receipt = forwardRef(
             {t("total").toUpperCase()}
           </Typography>
           <Typography fontWeight={"inherit"} fontSize={"inherit"}>
-            {total()}₺
+            {total.total}₺
           </Typography>
         </Box>
         <Typography>
@@ -266,7 +267,7 @@ export const Receipt = forwardRef(
             {t("credit").toUpperCase()}:
           </Typography>
           <Typography fontWeight={"inherit"} fontSize={"inherit"}>
-            {payment.card}₺
+            {receiptData.payment.card}₺
           </Typography>
         </Box>
         <Box
@@ -282,11 +283,12 @@ export const Receipt = forwardRef(
             PARA ÜSTÜ:
           </Typography>
           <Typography fontWeight={"inherit"} fontSize={"inherit"}>
-            {payment.change}₺
+            {receiptData.payment.change}₺
           </Typography>
         </Box>
         <Typography textAlign={"left"} width={"100%"} marginTop={5}>
-          {t("cashier").toUpperCase()}: A/KASİYER #1
+          {t("cashier").toUpperCase()}:{" "}
+          {GetFromSessionStorage("employee").employeeID}
         </Typography>
         <Box
           sx={{

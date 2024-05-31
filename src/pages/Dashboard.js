@@ -89,6 +89,7 @@ const menuItems = [
         }}
       />
     ),
+    path: "../reports",
   },
   // {
   //   name: "DİREKT ÜRÜN GİRİŞİ",
@@ -255,31 +256,30 @@ export default function Dashboard() {
 
   const employee = GetFromSessionStorage("employee");
   const sales = GetFromLocalStorage("receipts").sort(
-    (a, b) =>
-      getDateFromString(a.payment.date) - getDateFromString(b.payment.date)
+    (a, b) => getDateFromString(a.date) - getDateFromString(b.date)
   );
   const chartData = useMemo(() => {
-    return sales.map((receipt, index) => {
+    const temp = [];
+    sales.map((receipt) => {
       // const time = receipt.payment.date.split(" ")[1].split(":");
       const total =
         parseFloat(receipt.payment.cash) +
         parseFloat(receipt.payment.card) -
         parseFloat(receipt.payment.change);
-      return {
-        id: index,
-        time: getDateFromString(receipt.payment.date),
-        amount: parseInt(total),
-      };
+
+      if (new Date().toLocaleDateString() == receipt.date.split(" ")[0])
+        temp.push({
+          id: receipt.id,
+          time: getDateFromString(receipt.date),
+          amount: parseInt(total),
+        });
     });
+    return temp;
   }, [data]);
 
   useEffect(() => {
-    // SaveToSessionStorage("shift", {
-    //   employeeID: 10,
-    //   startingTime: null,
-    //   endingTime: null,
-    // });
     setTimeout(() => {
+      console.log(chartData);
       setData(chartData);
     }, 1000);
   }, []);
@@ -357,9 +357,11 @@ export default function Dashboard() {
                   </Typography>
                 </Box>
                 <Typography>Version: {storeInfo.version}</Typography>
-                <Typography>
-                  Last Login:{" "}
-                  {new Date(employee.loginTime).toLocaleDateString()}
+                <Typography sx={{ display: { xs: "none", md: "block" } }}>
+                  Last Login: {employee.loginTime.split(" ")[0]}{" "}
+                  {employee.loginTime.split(" ")[1].split(":")[0]}
+                  {":"}
+                  {employee.loginTime.split(" ")[1].split(":")[1]}
                 </Typography>
               </Stack>
               <Stack alignItems={"center"}>
@@ -420,10 +422,13 @@ export default function Dashboard() {
                 }}
                 xAxis={[
                   {
-                    scaleType: "time",
+                    scaleType: "utc",
                     dataKey: "time",
-                    // tickNumber: 3,
-                    // data: chartData.map((data) => data.time),
+                    valueFormatter: (v) => {
+                      const time = v.toLocaleTimeString().split(":");
+                      return time[0] + ":" + time[1];
+                    },
+                    data: [...chartData.map(({ time }) => time)],
                   },
                 ]}
                 yAxis={[
@@ -433,14 +438,28 @@ export default function Dashboard() {
                     tickNumber: 5,
                     labelStyle: { fontWeight: "bold", fontSize: 20 },
                     dataKey: "amount",
+                    // data: chartData.map(({ amount }) => amount),
+                    valueFormatter: (v) => v + "TL",
+                    disableLine: true,
                   },
                 ]}
                 series={[
                   {
+                    dataKey: "id",
+                    area: false,
+                    showMark: false,
+                    disableHighlight: true,
+                    data: chartData.map(({ amount }) => amount),
+                    color: "red",
+                    valueFormatter: (v) => "ID: " + v,
+                  },
+                  {
                     dataKey: "amount",
                     area: true,
-                    showMark: true,
-                    valueFormatter: (v) => v + "TL",
+                    showMark: false,
+                    // data: chartData.map(({ amount }) => amount),
+
+                    valueFormatter: (v) => "Total: " + v + "TL",
                   },
                 ]}
                 sx={{

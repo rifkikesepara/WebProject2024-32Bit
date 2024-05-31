@@ -7,6 +7,7 @@ import {
   Paper,
   InputAdornment,
   Tooltip,
+  Stack,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
@@ -481,17 +482,28 @@ export default function Sale() {
             zIndex: 1,
           }}
         >
-          <div
-            style={{
-              marginLeft: 10,
-              height: 15,
-              width: 15,
-              backgroundColor: storeInfo.online ? "green" : "red",
-              borderRadius: 200,
-              marginRight: 10,
-            }}
-          ></div>
-          <Typography color={"primary"}>{t("storeOnline")}</Typography>
+          <Stack
+            direction={"row"}
+            width={"100%"}
+            justifyContent={"space-between"}
+          >
+            <Stack direction={"row"} alignItems={"center"}>
+              <div
+                style={{
+                  marginLeft: 10,
+                  height: 15,
+                  width: 15,
+                  backgroundColor: storeInfo.online ? "green" : "red",
+                  borderRadius: 200,
+                  marginRight: 10,
+                }}
+              ></div>
+              <Typography color={"primary"}>{t("storeOnline")}</Typography>
+            </Stack>
+            <Typography marginRight={1} color={"primary"} fontWeight={"bold"}>
+              Kasiyer No: {GetFromSessionStorage("employee").employeeID}
+            </Typography>
+          </Stack>
         </Box>
       </Box>
     </Box>

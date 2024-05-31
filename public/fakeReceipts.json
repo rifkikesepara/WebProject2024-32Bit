@@ -82,549 +82,6 @@
           "normalStr": "₺55,00",
           "discounted": 5500,
           "discountedStr": "₺55,00",
-          "cashout": 5500
-        },
-        "stock": 47,
-        "count": 1
-      },
-      {
-        "id": "21000883",
-        "attributes": {
-          "returnDay": 15,
-          "brand": "ALGİDA",
-          "HEMEN_maxQty": 8,
-          "categoryRank": 901035,
-          "netWeight": 68,
-          "depolamaKosulu": "Donuk(-18)",
-          "name": "Algida Boom Boom Dondurma 85 Ml",
-          "SLOT_minQty": 1,
-          "salesUnitOfMeasure": "ADT",
-          "HEMEN_minQty": 1,
-          "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-boom-boom-dondurma-85-ml_p-21000883",
-          "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 10,
-          "nitelikAdi": "GrupSpot",
-          "barcodes": ["8683130015995", "8690637809279"],
-          "grossWeight": 68,
-          "stepper": 1,
-          "hediye": true
-        },
-        "images": [
-          {
-            "id": "donukUrun",
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "yerliUretim",
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "1mwZWRpkbN",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/1mwZWRpkbN_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "Smm-fMFL3m",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Smm-fMFL3m_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "tqBpD8mmTd",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/tqBpD8mmTd_256x256.png",
-            "isExternal": false
-          }
-        ],
-        "price": {
-          "normal": 2000,
-          "normalStr": "₺20,00",
-          "discounted": 2000,
-          "discountedStr": "₺20,00",
-          "cashout": 2000
-        },
-        "stock": 10,
-        "count": 1
-      },
-      {
-        "id": "14000041",
-        "attributes": {
-          "returnDay": 3,
-          "brand": "B O Ş",
-          "HEMEN_maxQty": 8,
-          "categoryRank": 201000,
-          "netWeight": 200,
-          "depolamaKosulu": "Ekmek",
-          "name": "Ekmek",
-          "SLOT_minQty": 1,
-          "salesUnitOfMeasure": "ADT",
-          "HEMEN_minQty": 1,
-          "seoUrl": "https://www.a101.com.tr/kapida/firindan/ekmek_p-14000041",
-          "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 10,
-          "nitelikAdi": "Regüler",
-          "barcodes": ["2050000000102", "2001814", "14000041"],
-          "grossWeight": 200,
-          "stepper": 1,
-          "hediye": true
-        },
-        "images": [
-          {
-            "id": "yerliUretim",
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "VpqV-kVxkD",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/VpqV-kVxkD_256x256.png",
-            "isExternal": false
-          }
-        ],
-        "price": {
-          "normal": 750,
-          "normalStr": "₺7,50",
-          "discounted": 750,
-          "discountedStr": "₺7,50",
-          "cashout": 750
-        },
-        "stock": 47,
-        "count": 1
-      }
-    ],
-    "payment": {
-      "cash": 82.5,
-      "card": 0,
-      "change": 0,
-      "date": "23.05.2024 03:20:00"
-    }
-  },
-  {
-    "id": 1,
-    "products": [
-      {
-        "id": "21000883",
-        "attributes": {
-          "returnDay": 15,
-          "brand": "ALGİDA",
-          "HEMEN_maxQty": 8,
-          "categoryRank": 901035,
-          "netWeight": 68,
-          "depolamaKosulu": "Donuk(-18)",
-          "name": "Algida Boom Boom Dondurma 85 Ml",
-          "SLOT_minQty": 1,
-          "salesUnitOfMeasure": "ADT",
-          "HEMEN_minQty": 1,
-          "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-boom-boom-dondurma-85-ml_p-21000883",
-          "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 10,
-          "nitelikAdi": "GrupSpot",
-          "barcodes": ["8683130015995", "8690637809279"],
-          "grossWeight": 68,
-          "stepper": 1,
-          "hediye": true
-        },
-        "images": [
-          {
-            "id": "donukUrun",
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "yerliUretim",
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "1mwZWRpkbN",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/1mwZWRpkbN_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "Smm-fMFL3m",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Smm-fMFL3m_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "tqBpD8mmTd",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/tqBpD8mmTd_256x256.png",
-            "isExternal": false
-          }
-        ],
-        "price": {
-          "normal": 2000,
-          "normalStr": "₺20,00",
-          "discounted": 2000,
-          "discountedStr": "₺20,00",
-          "cashout": 2000
-        },
-        "stock": 10,
-        "count": 1
-      },
-      {
-        "id": "14000041",
-        "attributes": {
-          "returnDay": 3,
-          "brand": "B O Ş",
-          "HEMEN_maxQty": 8,
-          "categoryRank": 201000,
-          "netWeight": 200,
-          "depolamaKosulu": "Ekmek",
-          "name": "Ekmek",
-          "SLOT_minQty": 1,
-          "salesUnitOfMeasure": "ADT",
-          "HEMEN_minQty": 1,
-          "seoUrl": "https://www.a101.com.tr/kapida/firindan/ekmek_p-14000041",
-          "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 10,
-          "nitelikAdi": "Regüler",
-          "barcodes": ["2050000000102", "2001814", "14000041"],
-          "grossWeight": 200,
-          "stepper": 1,
-          "hediye": true
-        },
-        "images": [
-          {
-            "id": "yerliUretim",
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "VpqV-kVxkD",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/VpqV-kVxkD_256x256.png",
-            "isExternal": false
-          }
-        ],
-        "price": {
-          "normal": 750,
-          "normalStr": "₺7,50",
-          "discounted": 750,
-          "discountedStr": "₺7,50",
-          "cashout": 750
-        },
-        "stock": 47,
-        "count": 1
-      },
-      {
-        "id": "11002425",
-        "attributes": {
-          "returnDay": 15,
-          "collections": ["aldin-aldin-gida"],
-          "brand": "B O Ş",
-          "HEMEN_maxQty": 8,
-          "categoryRank": 503000,
-          "netWeight": 1012,
-          "depolamaKosulu": "Gıda",
-          "name": "Yumurta L Boy 15'li ",
-          "SLOT_minQty": 1,
-          "salesUnitOfMeasure": "ADT",
-          "HEMEN_minQty": 1,
-          "seoUrl": "https://www.a101.com.tr/kapida/ramazan/yumurta-l-boy-15li-_p-11002425",
-          "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 10,
-          "nitelikAdi": "Regüler",
-          "barcodes": [
-            "2060000108555",
-            "8697445064029",
-            "8699383750019",
-            "8682811605814",
-            "8698573420220",
-            "8683880472130",
-            "8697550050290",
-            "8693944190290",
-            "8697853270067",
-            "8697853270326",
-            "8681469068354",
-            "8694293060111",
-            "8699956030388",
-            "8699856330069",
-            "8699316990116",
-            "8697831790075",
-            "8697581700010",
-            "8697461552371",
-            "8697409380059",
-            "8697048001308",
-            "8695895101738",
-            "8693880060718",
-            "8698445090193",
-            "8699158210014",
-            "8697435860235",
-            "8695905000228",
-            "8681682009516",
-            "8680734284062",
-            "8691365000099",
-            "8691365000174",
-            "8697880560605",
-            "8697581700591",
-            "8692510600331",
-            "8699425632228",
-            "8692196000142"
-          ],
-          "grossWeight": 1062,
-          "stepper": 1,
-          "hediye": true
-        },
-        "images": [
-          {
-            "id": "yerliUretim",
-            "isExternal": false,
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
-          },
-          {
-            "id": "V-X10Fn3x-",
-            "isExternal": false,
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/V-X10Fn3x-_256x256.png"
-          }
-        ],
-        "price": {
-          "normal": 5500,
-          "normalStr": "₺55,00",
-          "discounted": 5500,
-          "discountedStr": "₺55,00",
-          "cashout": 5500
-        },
-        "stock": 47,
-        "count": 1
-      }
-    ],
-    "payment": {
-      "cash": 82.5,
-      "card": 0,
-      "change": 0,
-      "date": "23.05.2024 03:21:02"
-    }
-  },
-  {
-    "id": 2,
-    "products": [
-      {
-        "id": "21000883",
-        "attributes": {
-          "returnDay": 15,
-          "brand": "ALGİDA",
-          "HEMEN_maxQty": 8,
-          "categoryRank": 901035,
-          "netWeight": 68,
-          "depolamaKosulu": "Donuk(-18)",
-          "name": "Algida Boom Boom Dondurma 85 Ml",
-          "SLOT_minQty": 1,
-          "salesUnitOfMeasure": "ADT",
-          "HEMEN_minQty": 1,
-          "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-boom-boom-dondurma-85-ml_p-21000883",
-          "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 10,
-          "nitelikAdi": "GrupSpot",
-          "barcodes": ["8683130015995", "8690637809279"],
-          "grossWeight": 68,
-          "stepper": 1,
-          "hediye": true
-        },
-        "images": [
-          {
-            "id": "donukUrun",
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "yerliUretim",
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "1mwZWRpkbN",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/1mwZWRpkbN_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "Smm-fMFL3m",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Smm-fMFL3m_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "tqBpD8mmTd",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/tqBpD8mmTd_256x256.png",
-            "isExternal": false
-          }
-        ],
-        "price": {
-          "normal": 2000,
-          "normalStr": "₺20,00",
-          "discounted": 2000,
-          "discountedStr": "₺20,00",
-          "cashout": 2000
-        },
-        "stock": 10,
-        "count": 1
-      },
-      {
-        "id": "14000041",
-        "attributes": {
-          "returnDay": 3,
-          "brand": "B O Ş",
-          "HEMEN_maxQty": 8,
-          "categoryRank": 201000,
-          "netWeight": 200,
-          "depolamaKosulu": "Ekmek",
-          "name": "Ekmek",
-          "SLOT_minQty": 1,
-          "salesUnitOfMeasure": "ADT",
-          "HEMEN_minQty": 1,
-          "seoUrl": "https://www.a101.com.tr/kapida/firindan/ekmek_p-14000041",
-          "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 10,
-          "nitelikAdi": "Regüler",
-          "barcodes": ["2050000000102", "2001814", "14000041"],
-          "grossWeight": 200,
-          "stepper": 1,
-          "hediye": true
-        },
-        "images": [
-          {
-            "id": "yerliUretim",
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "VpqV-kVxkD",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/VpqV-kVxkD_256x256.png",
-            "isExternal": false
-          }
-        ],
-        "price": {
-          "normal": 750,
-          "normalStr": "₺7,50",
-          "discounted": 750,
-          "discountedStr": "₺7,50",
-          "cashout": 750
-        },
-        "stock": 47,
-        "count": 1
-      },
-      {
-        "id": "11002425",
-        "attributes": {
-          "returnDay": 15,
-          "collections": ["aldin-aldin-gida"],
-          "brand": "B O Ş",
-          "HEMEN_maxQty": 8,
-          "categoryRank": 503000,
-          "netWeight": 1012,
-          "depolamaKosulu": "Gıda",
-          "name": "Yumurta L Boy 15'li ",
-          "SLOT_minQty": 1,
-          "salesUnitOfMeasure": "ADT",
-          "HEMEN_minQty": 1,
-          "seoUrl": "https://www.a101.com.tr/kapida/ramazan/yumurta-l-boy-15li-_p-11002425",
-          "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 10,
-          "nitelikAdi": "Regüler",
-          "barcodes": [
-            "2060000108555",
-            "8697445064029",
-            "8699383750019",
-            "8682811605814",
-            "8698573420220",
-            "8683880472130",
-            "8697550050290",
-            "8693944190290",
-            "8697853270067",
-            "8697853270326",
-            "8681469068354",
-            "8694293060111",
-            "8699956030388",
-            "8699856330069",
-            "8699316990116",
-            "8697831790075",
-            "8697581700010",
-            "8697461552371",
-            "8697409380059",
-            "8697048001308",
-            "8695895101738",
-            "8693880060718",
-            "8698445090193",
-            "8699158210014",
-            "8697435860235",
-            "8695905000228",
-            "8681682009516",
-            "8680734284062",
-            "8691365000099",
-            "8691365000174",
-            "8697880560605",
-            "8697581700591",
-            "8692510600331",
-            "8699425632228",
-            "8692196000142"
-          ],
-          "grossWeight": 1062,
-          "stepper": 1,
-          "hediye": true
-        },
-        "images": [
-          {
-            "id": "yerliUretim",
-            "isExternal": false,
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
-          },
-          {
-            "id": "V-X10Fn3x-",
-            "isExternal": false,
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/V-X10Fn3x-_256x256.png"
-          }
-        ],
-        "price": {
-          "normal": 5500,
-          "normalStr": "₺55,00",
-          "discounted": 5500,
-          "discountedStr": "₺55,00",
           "cashout": 11000
         },
         "stock": 47,
@@ -639,18 +96,86 @@
           "activated": true,
           "offerApplied": 1
         }
-      }
-    ],
-    "payment": {
-      "cash": 0,
-      "card": 137.5,
-      "change": 0,
-      "date": "23.05.2024 03:22:29"
-    }
-  },
-  {
-    "id": 3,
-    "products": [
+      },
+      {
+        "id": "21000883",
+        "attributes": {
+          "returnDay": 15,
+          "brand": "ALGİDA",
+          "HEMEN_maxQty": 8,
+          "categoryRank": 901035,
+          "netWeight": 68,
+          "depolamaKosulu": "Donuk(-18)",
+          "name": "Algida Boom Boom Dondurma 85 Ml",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-boom-boom-dondurma-85-ml_p-21000883",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 10,
+          "nitelikAdi": "GrupSpot",
+          "barcodes": ["8683130015995", "8690637809279"],
+          "grossWeight": 68,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "donukUrun",
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "yerliUretim",
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "1mwZWRpkbN",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/1mwZWRpkbN_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "Smm-fMFL3m",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Smm-fMFL3m_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "tqBpD8mmTd",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/tqBpD8mmTd_256x256.png",
+            "isExternal": false
+          }
+        ],
+        "price": {
+          "normal": 2000,
+          "normalStr": "₺20,00",
+          "discounted": 2000,
+          "discountedStr": "₺20,00",
+          "cashout": 10500
+        },
+        "stock": 10,
+        "count": 6,
+        "offer": {
+          "id": 2,
+          "offerName": "Algida Boom Boom Alana İkincisi %25 İndirimli",
+          "productID": 21000883,
+          "categoryID": null,
+          "type": "amount",
+          "discount": "2:1:25",
+          "activated": true,
+          "offerApplied": 3
+        }
+      },
       {
         "id": "14000041",
         "attributes": {
@@ -694,95 +219,141 @@
           "normalStr": "₺7,50",
           "discounted": 750,
           "discountedStr": "₺7,50",
-          "cashout": 750
+          "cashout": 3000
         },
         "stock": 47,
-        "count": 1
-      },
+        "count": 8,
+        "offer": {
+          "id": 3,
+          "offerName": "Ekmek 2+2 Kampanyası",
+          "productID": 14000041,
+          "categoryID": null,
+          "type": "amount",
+          "discount": "4:2",
+          "activated": true,
+          "offerApplied": 2
+        }
+      }
+    ],
+    "payment": { "cash": 500, "card": 0, "change": "255.00" },
+    "date": "25.05.2024 19:30:39"
+  },
+  {
+    "id": 1,
+    "products": [
       {
-        "id": "14000091",
+        "id": "12000001",
         "attributes": {
-          "returnDay": 3,
-          "brand": "B O Ş",
+          "returnDay": 15,
+          "collections": ["aldin-aldin-gida"],
+          "rank": 0,
+          "brand": "BİRŞAH",
           "HEMEN_maxQty": 8,
-          "categoryRank": 201001,
-          "netWeight": 250,
-          "depolamaKosulu": "Ekmek",
-          "name": "Taş Fırın Ekmeği Adet",
+          "categoryRank": 502001,
+          "netWeight": 1000,
+          "depolamaKosulu": "Gıda",
+          "name": "Birşah Yağlı Süt 1 Lt",
           "SLOT_minQty": 1,
           "salesUnitOfMeasure": "ADT",
           "HEMEN_minQty": 1,
-          "seoUrl": "https://www.a101.com.tr/kapida/firindan/tas-firin-ekmegi-adet_p-14000091",
+          "seoUrl": "https://www.a101.com.tr/kapida/ramazan/birsah-yagli-sut-1-lt_p-12000001",
           "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 10,
+          "SLOT_maxQty": 12,
           "nitelikAdi": "Regüler",
-          "barcodes": ["14000091", "2001845", "2050000000508"],
-          "grossWeight": 250,
+          "barcodes": [
+            "8699118052739",
+            "8699118068631",
+            "8699118068440",
+            "8699118061175",
+            "8699118000556",
+            "8699118059240",
+            "8699118059264",
+            "8699118058786",
+            "8699118060239",
+            "8699118018025",
+            "8699118024446",
+            "8699118038559",
+            "8699118041290",
+            "8699118041702",
+            "8699118041931",
+            "8699118060451",
+            "8699118060499"
+          ],
+          "grossWeight": 1050,
           "stepper": 1,
           "hediye": true
         },
         "images": [
           {
             "id": "yerliUretim",
+            "isExternal": false,
             "imageType": "badge",
             "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
-            "isExternal": false
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
           },
           {
-            "id": "CZmoVyeUY9",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/CZmoVyeUY9_256x256.png",
-            "isExternal": false
-          }
-        ],
-        "price": {
-          "normal": 800,
-          "normalStr": "₺8,00",
-          "discounted": 800,
-          "discountedStr": "₺8,00",
-          "cashout": 800
-        },
-        "stock": 48,
-        "count": 1
-      },
-      {
-        "id": "28000348",
-        "attributes": {
-          "returnDay": 3,
-          "brand": "NİMET",
-          "HEMEN_maxQty": 8,
-          "categoryRank": 201012,
-          "netWeight": 200,
-          "depolamaKosulu": "Ekmek",
-          "name": "Nimet Sivas Katmer Ekmek 200 Gr",
-          "SLOT_minQty": 1,
-          "salesUnitOfMeasure": "ADT",
-          "HEMEN_minQty": 1,
-          "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 10,
-          "nitelikAdi": "Bölgesel",
-          "barcodes": ["8698823992231"],
-          "grossWeight": 200,
-          "stepper": 1,
-          "hediye": true,
-          "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-sivas-katmer-ekmek-200-gr_p-28000348"
-        },
-        "images": [
-          {
-            "id": "gTLd9ZxgPi",
+            "id": "Vj0YTQaaJk",
             "isExternal": false,
             "imageType": "product",
             "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/gTLd9ZxgPi_256x256.png"
-          },
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Vj0YTQaaJk_256x256.png"
+          }
+        ],
+        "price": {
+          "normal": 2750,
+          "normalStr": "₺27,50",
+          "discounted": 2750,
+          "discountedStr": "₺27,50",
+          "cashout": 19250
+        },
+        "stock": 573,
+        "count": 7
+      }
+    ],
+    "payment": { "cash": 192.5, "card": 0, "change": 0 },
+    "date": "27.05.2024 19:48:23"
+  },
+  {
+    "id": 2,
+    "products": [
+      {
+        "id": "20000026",
+        "attributes": {
+          "returnDay": 3,
+          "incrementInfo": "<!DOCTYPE html>\r\r\r\r\r\r\r\r\r\r\r\r\r\n<html>\r\r\r\r\r\r\r\r\r\r\r\r\r\n<head>\r\r\r\r\r\r\r\r\r\r\r\r\r\n</head>\r\r\r\r\r\r\r\r\r\r\r\r\r\n<body>\r\r\r\r\r\r\r\r\r\r\r\r\r\n\r\r\r\r\r\r\r\r\r\r\r\r\r\n</body>\r\r\r\r\r\r\r\r\r\r\r\r\r\n</html>",
+          "collections": ["seciliurunler"],
+          "brand": null,
+          "HEMEN_maxQty": 8,
+          "categoryRank": 102008,
+          "netWeight": 300,
+          "depolamaKosulu": "Meyve-Sebze",
+          "name": "Kırmızı Biber Paket 300 Gr",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/kirmizi-biber-paket-300-gr_p-20000026",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 10,
+          "nitelikAdi": "Regüler",
+          "barcodes": ["2060000191960", "2000268"],
+          "grossWeight": 500,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
           {
             "id": "yerliUretim",
             "isExternal": false,
             "imageType": "badge",
             "tags": [],
             "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+          },
+          {
+            "id": "KnYP0ACo88",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/KnYP0ACo88_256x256.png"
           }
         ],
         "price": {
@@ -792,32 +363,233 @@
           "discountedStr": "₺29,95",
           "cashout": 2995
         },
+        "stock": 2,
+        "count": 1
+      },
+      {
+        "id": "21000062",
+        "attributes": {
+          "returnDay": 15,
+          "brand": "ALGİDA",
+          "HEMEN_maxQty": 8,
+          "categoryRank": 901013,
+          "netWeight": 145,
+          "depolamaKosulu": "Donuk(-18)",
+          "name": "Algida Nogger Kakao Karamel Dondurma 145 Ml",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-nogger-kakao-karamel-dondurma-145-ml_p-21000062",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 10,
+          "nitelikAdi": "Regüler",
+          "barcodes": ["8690637117121", "8690637852053", "8690637878374"],
+          "grossWeight": 150,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "donukUrun",
+            "isExternal": false,
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+          },
+          {
+            "id": "yerliUretim",
+            "isExternal": false,
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+          },
+          {
+            "id": "N8OK9fUt8o",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/N8OK9fUt8o_256x256.png"
+          },
+          {
+            "id": "NycMKa4rm3",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/NycMKa4rm3_256x256.png"
+          },
+          {
+            "id": "yMU8yDdbJ0",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yMU8yDdbJ0_256x256.png"
+          }
+        ],
+        "price": {
+          "normal": 3000,
+          "normalStr": "₺30,00",
+          "discounted": 3000,
+          "discountedStr": "₺30,00",
+          "cashout": 3000
+        },
+        "stock": 10,
+        "count": 1
+      },
+      {
+        "id": "21000659",
+        "attributes": {
+          "returnDay": 15,
+          "brand": "ALGİDA",
+          "HEMEN_maxQty": 8,
+          "categoryRank": 901012,
+          "netWeight": 105,
+          "depolamaKosulu": "Donuk(-18)",
+          "name": "Algida Keyif Kornet Çikolata/Vanilya Dondurma 110 Ml",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-keyif-kornet-cikolatavanilya-dondurma-110-ml_p-21000659",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 10,
+          "nitelikAdi": "Regüler",
+          "barcodes": ["8690637691126", "8690637892660"],
+          "grossWeight": 150,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "donukUrun",
+            "isExternal": false,
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+          },
+          {
+            "id": "yerliUretim",
+            "isExternal": false,
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+          },
+          {
+            "id": "NXeQOEszmT",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/NXeQOEszmT_256x256.png"
+          },
+          {
+            "id": "sW6pt-kCdW",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/sW6pt-kCdW_256x256.png"
+          },
+          {
+            "id": "TL8JtSQ0qj",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/TL8JtSQ0qj_256x256.png"
+          }
+        ],
+        "price": {
+          "normal": 1500,
+          "normalStr": "₺15,00",
+          "discounted": 1500,
+          "discountedStr": "₺15,00",
+          "cashout": 1500
+        },
+        "stock": 11,
+        "count": 1
+      },
+      {
+        "id": "21001060",
+        "attributes": {
+          "returnDay": 15,
+          "rank": 29,
+          "brand": "ALGİDA",
+          "HEMEN_maxQty": 8,
+          "categoryRank": 901008,
+          "netWeight": 65,
+          "depolamaKosulu": "Donuk(-18)",
+          "name": "Algida Classics Oreo Dondurma 65 Ml",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-classics-oreo-dondurma-65-ml_p-21001060",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 10,
+          "nitelikAdi": "Regüler",
+          "barcodes": ["8690637934025"],
+          "grossWeight": 65,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "SG1RpSHDJG",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/SG1RpSHDJG_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "donukUrun",
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "yerliUretim",
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+            "isExternal": false
+          }
+        ],
+        "price": {
+          "normal": 1500,
+          "normalStr": "₺15,00",
+          "discounted": 1500,
+          "discountedStr": "₺15,00",
+          "cashout": 1500
+        },
         "stock": 1,
         "count": 1
       },
       {
-        "id": "14000687",
+        "id": "21000883",
         "attributes": {
-          "returnDay": 3,
-          "brand": "B O Ş",
+          "returnDay": 15,
+          "brand": "ALGİDA",
           "HEMEN_maxQty": 8,
-          "categoryRank": 201018,
-          "netWeight": 300,
-          "depolamaKosulu": "Ekmek",
-          "name": "Bazlama Ekmek 300 Gr",
+          "categoryRank": 901035,
+          "netWeight": 68,
+          "depolamaKosulu": "Donuk(-18)",
+          "name": "Algida Boom Boom Dondurma 85 Ml",
           "SLOT_minQty": 1,
           "salesUnitOfMeasure": "ADT",
           "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-boom-boom-dondurma-85-ml_p-21000883",
           "baseUnitOfMeasure": "ADT",
           "SLOT_maxQty": 10,
-          "nitelikAdi": "Bölgesel",
-          "barcodes": ["8698823995423"],
-          "grossWeight": 310,
+          "nitelikAdi": "GrupSpot",
+          "barcodes": ["8683130015995", "8690637809279"],
+          "grossWeight": 68,
           "stepper": 1,
-          "hediye": true,
-          "seoUrl": "https://www.a101.com.tr/kapida/firindan/bazlama-ekmek-300-gr_p-14000687"
+          "hediye": true
         },
         "images": [
+          {
+            "id": "donukUrun",
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+            "isExternal": false
+          },
           {
             "id": "yerliUretim",
             "imageType": "badge",
@@ -826,690 +598,336 @@
             "isExternal": false
           },
           {
-            "id": "NceAu9tjyV",
+            "id": "1mwZWRpkbN",
             "imageType": "product",
             "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/NceAu9tjyV_256x256.png",
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/1mwZWRpkbN_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "Smm-fMFL3m",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Smm-fMFL3m_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "tqBpD8mmTd",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/tqBpD8mmTd_256x256.png",
             "isExternal": false
           }
         ],
         "price": {
-          "normal": 2495,
-          "normalStr": "₺24,95",
-          "discounted": 2495,
-          "discountedStr": "₺24,95",
-          "cashout": 2495
+          "normal": 2000,
+          "normalStr": "₺20,00",
+          "discounted": 2000,
+          "discountedStr": "₺20,00",
+          "cashout": 9000
+        },
+        "stock": 10,
+        "count": 5,
+        "offer": {
+          "id": 2,
+          "offerName": "Algida Boom Boom Alana İkincisi %25 İndirimli",
+          "productID": 21000883,
+          "categoryID": null,
+          "type": "amount",
+          "discount": "2:1:25",
+          "activated": true,
+          "offerApplied": 2
+        }
+      }
+    ],
+    "payment": { "cash": 0, "card": 179.95, "change": 0 },
+    "date": "31.05.2024 18:18:57"
+  },
+  {
+    "id": 3,
+    "products": [
+      {
+        "id": "22002259",
+        "attributes": {
+          "returnDay": 15,
+          "collections": ["pg-urunleri"],
+          "rank": 2,
+          "brand": "FAIRY",
+          "HEMEN_maxQty": 5,
+          "categoryRank": 1102002,
+          "netWeight": 970.2,
+          "depolamaKosulu": "GıdaDışı",
+          "name": "Fairy Hepsi 1 Arada Bulaşık Makinesi Kapsülü 60'lı",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/temizlik-urunleri/fairy-hepsi-1-arada-bulasik-makinesi-kapsulu-60li_p-22002259",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 5,
+          "nitelikAdi": "KasaAktivitesi",
+          "barcodes": ["8001090587206"],
+          "grossWeight": 993.04,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "pbIUQyZcnX",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/pbIUQyZcnX_256x256.png"
+          }
+        ],
+        "price": {
+          "normal": 44500,
+          "discounted": 44500,
+          "normalStr": "₺445,00",
+          "discountedStr": "₺445,00",
+          "cashout": 44500
+        },
+        "stock": 181,
+        "count": 1
+      },
+      {
+        "id": "22002240",
+        "attributes": {
+          "returnDay": 15,
+          "collections": ["", "pg-urunleri"],
+          "rank": 7,
+          "brand": "FAIRY",
+          "HEMEN_maxQty": 5,
+          "categoryRank": 1102004,
+          "netWeight": 2827.2,
+          "depolamaKosulu": "GıdaDışı",
+          "name": "Fairy Platinum Plus Bulaşık Makinesi Kapsülü 40'lı",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/temizlik-urunleri/fairy-platinum-plus-bulasik-makinesi-kapsulu-40li_p-22002240",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 5,
+          "nitelikAdi": "GrupSpot",
+          "barcodes": ["8001090983381"],
+          "grossWeight": 3160.42,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "cBCEzdg7cf",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/cBCEzdg7cf_256x256.png"
+          }
+        ],
+        "price": {
+          "normal": 19900,
+          "discounted": 19900,
+          "normalStr": "₺199,00",
+          "discountedStr": "₺199,00",
+          "cashout": 19900
+        },
+        "stock": 73,
+        "count": 1
+      },
+      {
+        "id": "22002508",
+        "attributes": {
+          "returnDay": 15,
+          "brand": "FAIRY",
+          "HEMEN_maxQty": 3,
+          "categoryRank": 1102010,
+          "netWeight": 895.5,
+          "depolamaKosulu": "GıdaDışı",
+          "name": "Fairy Platinum Plus Bulaşık Makinesi Kapsülü 50'li",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/temizlik-urunleri/fairy-platinum-plus-bulasik-makinesi-kapsulu-50li_p-22002508",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 3,
+          "nitelikAdi": "Regüler",
+          "barcodes": ["8001841911410"],
+          "grossWeight": 912.41,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "qCqExlaCQT",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/qCqExlaCQT_256x256.png"
+          }
+        ],
+        "price": {
+          "normal": 49875,
+          "discounted": 49875,
+          "normalStr": "₺498,75",
+          "discountedStr": "₺498,75",
+          "cashout": 49875
         },
         "stock": 4,
         "count": 1
       },
       {
-        "id": "14001036",
-        "attributes": {
-          "returnDay": 3,
-          "brand": "B O Ş",
-          "HEMEN_maxQty": 8,
-          "categoryRank": 201019,
-          "netWeight": 150,
-          "depolamaKosulu": "Ekmek",
-          "name": "Bazlama Ekmek 150 Gr",
-          "SLOT_minQty": 1,
-          "salesUnitOfMeasure": "ADT",
-          "HEMEN_minQty": 1,
-          "seoUrl": "https://www.a101.com.tr/kapida/firindan/bazlama-ekmek-150-gr_p-14001036",
-          "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 10,
-          "nitelikAdi": "Bölgesel",
-          "barcodes": ["8698823997182", "14001036"],
-          "grossWeight": 152,
-          "stepper": 1,
-          "hediye": true
-        },
-        "images": [
-          {
-            "id": "yerliUretim",
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "tRyIJF3O9j",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/tRyIJF3O9j_256x256.png",
-            "isExternal": false
-          }
-        ],
-        "price": {
-          "normal": 1450,
-          "normalStr": "₺14,50",
-          "discounted": 1450,
-          "discountedStr": "₺14,50",
-          "cashout": 1450
-        },
-        "stock": 9,
-        "count": 1
-      },
-      {
-        "id": "28000377",
-        "attributes": {
-          "returnDay": 3,
-          "brand": "UNO",
-          "HEMEN_maxQty": 8,
-          "categoryRank": 201060,
-          "netWeight": 460,
-          "depolamaKosulu": "Ekmek",
-          "name": "Uno Çok Tahıllı Ekmek 460 Gr",
-          "SLOT_minQty": 1,
-          "salesUnitOfMeasure": "ADT",
-          "HEMEN_minQty": 1,
-          "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 10,
-          "nitelikAdi": "Regüler",
-          "barcodes": ["8690698511760"],
-          "grossWeight": 460,
-          "stepper": 1,
-          "hediye": true,
-          "seoUrl": "https://www.a101.com.tr/kapida/firindan/uno-cok-tahilli-ekmek-460-gr_p-28000377"
-        },
-        "images": [
-          {
-            "id": "yerliUretim",
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "jpBANWe17i",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/jpBANWe17i_256x256.png",
-            "isExternal": false
-          }
-        ],
-        "price": {
-          "normal": 3750,
-          "normalStr": "₺37,50",
-          "discounted": 3750,
-          "discountedStr": "₺37,50",
-          "cashout": 15000
-        },
-        "stock": 6,
-        "count": 4
-      },
-      {
-        "id": "28000299",
+        "id": "22002424",
         "attributes": {
           "returnDay": 15,
-          "brand": "NİMET",
-          "HEMEN_maxQty": 8,
-          "categoryRank": 203007,
-          "netWeight": 400,
-          "depolamaKosulu": "Gıda",
-          "name": "Nimet Süt Kaymaklı Kurabiye 400 Gr",
-          "SLOT_minQty": 1,
-          "salesUnitOfMeasure": "ADT",
-          "HEMEN_minQty": 1,
-          "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 10,
-          "nitelikAdi": "Regüler",
-          "barcodes": ["8699118027706"],
-          "grossWeight": 400,
-          "stepper": 1,
-          "hediye": true,
-          "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-sut-kaymakli-kurabiye-400-gr_p-28000299"
-        },
-        "images": [
-          {
-            "id": "yerliUretim",
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "jW-aOeiRRS",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/jW-aOeiRRS_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "FkC4IfVfgB",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/FkC4IfVfgB_256x256.png",
-            "isExternal": false
-          }
-        ],
-        "price": {
-          "normal": 4950,
-          "normalStr": "₺49,50",
-          "discounted": 4950,
-          "discountedStr": "₺49,50",
-          "cashout": 4950
-        },
-        "stock": 9,
-        "count": 1
-      },
-      {
-        "id": "28000197",
-        "attributes": {
-          "returnDay": 3,
-          "brand": "NİMET",
-          "HEMEN_maxQty": 8,
-          "categoryRank": 201083,
-          "netWeight": 455,
-          "depolamaKosulu": "Ekmek",
-          "name": "Nimet Sandviç Ekmeği 7x65 Gr",
-          "SLOT_minQty": 1,
-          "salesUnitOfMeasure": "ADT",
-          "HEMEN_minQty": 1,
-          "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-sandvic-ekmegi-7x65-gr_p-28000197",
-          "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 10,
-          "nitelikAdi": "Regüler",
-          "barcodes": ["8699118014058", "8699118011101", "2060000073198"],
-          "grossWeight": 458,
-          "stepper": 1,
-          "hediye": true
-        },
-        "images": [
-          {
-            "id": "yerliUretim",
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "BqHSGljXhm",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/BqHSGljXhm_256x256.png",
-            "isExternal": false
-          }
-        ],
-        "price": {
-          "normal": 3125,
-          "normalStr": "₺31,25",
-          "discounted": 2850,
-          "discountedStr": "₺28,50",
-          "discountRate": 9,
-          "discountRateStr": "%9 İNDİRİM",
-          "cashout": 2850
-        },
-        "stock": 2,
-        "count": 1
-      },
-      {
-        "id": "14000891",
-        "attributes": {
-          "returnDay": 3,
-          "brand": "NİMET",
-          "HEMEN_maxQty": 8,
-          "categoryRank": 201086,
-          "netWeight": 200,
-          "depolamaKosulu": "Ekmek",
-          "name": "Mini Sade Atıştırmalık Kanepe 200 Gr",
-          "SLOT_minQty": 1,
-          "salesUnitOfMeasure": "ADT",
-          "HEMEN_minQty": 1,
-          "seoUrl": "https://www.a101.com.tr/kapida/firindan/mini-sade-atistirmalik-kanepe-200-gr_p-14000891",
-          "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 10,
-          "nitelikAdi": "Bölgesel",
-          "barcodes": ["8693601001563", "14000891"],
-          "grossWeight": 200,
-          "stepper": 1,
-          "hediye": true
-        },
-        "images": [
-          {
-            "id": "yerliUretim",
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "E1ohcSqJbh",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/E1ohcSqJbh_256x256.png",
-            "isExternal": false
-          }
-        ],
-        "price": {
-          "normal": 2795,
-          "normalStr": "₺27,95",
-          "discounted": 2495,
-          "discountedStr": "₺24,95",
-          "discountRate": 11,
-          "discountRateStr": "%11 İNDİRİM",
-          "cashout": 2495
-        },
-        "stock": 2,
-        "count": 1
-      },
-      {
-        "id": "28000496",
-        "attributes": {
-          "returnDay": 15,
-          "brand": "NİMET",
-          "HEMEN_maxQty": 8,
-          "categoryRank": 203025,
-          "netWeight": 200,
-          "depolamaKosulu": "Gıda",
-          "name": "Nimet Sade Yaprak Galeta 200 Gr",
-          "SLOT_minQty": 1,
-          "salesUnitOfMeasure": "ADT",
-          "HEMEN_minQty": 1,
-          "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-sade-yaprak-galeta-200-gr_p-28000496",
-          "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 10,
-          "nitelikAdi": "Regüler",
-          "barcodes": ["8699118026136", "2060000176363"],
-          "grossWeight": 200,
-          "stepper": 1,
-          "hediye": true
-        },
-        "images": [
-          {
-            "id": "yerliUretim",
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "ubEenHynKD",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ubEenHynKD_256x256.png",
-            "isExternal": false
-          }
-        ],
-        "price": {
-          "normal": 2500,
-          "normalStr": "₺25,00",
-          "discounted": 2500,
-          "discountedStr": "₺25,00",
-          "cashout": 2500
-        },
-        "stock": 2,
-        "count": 1
-      }
-    ],
-    "payment": {
-      "cash": 500,
-      "card": 0,
-      "change": "137.15",
-      "date": "15.05.2024 03:41:26"
-    }
-  },
-  {
-    "id": 4,
-    "products": [
-      {
-        "id": "20000820",
-        "attributes": {
-          "returnDay": 3,
-          "collections": ["seciliurunler"],
-          "HEMEN_maxWeight": 7500,
-          "HEMEN_minWeight": 500,
-          "brand": null,
-          "categoryRank": 101000,
-          "netWeight": 1000,
-          "depolamaKosulu": "Meyve-Sebze",
-          "name": "Mandalina Kg",
-          "salesUnitOfMeasure": "KG",
-          "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/mandalina-kg_p-20000820",
-          "baseUnitOfMeasure": "KG",
-          "nitelikAdi": "Sezonluk",
-          "SLOT_minWeight": 500,
-          "barcodes": ["2060000002785", "2920820"],
-          "grossWeight": 1000,
-          "stepper": 100,
-          "SLOT_maxWeight": 10000,
-          "hediye": true
-        },
-        "images": [
-          {
-            "id": "yerliUretim",
-            "isExternal": false,
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
-          },
-          {
-            "id": "kws6H6hzyw",
-            "isExternal": false,
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/kws6H6hzyw_256x256.png"
-          }
-        ],
-        "price": {
-          "normal": 2475,
-          "normalStr": "₺24,75",
-          "discounted": 2475,
-          "discountedStr": "₺24,75",
-          "cashout": 24750
-        },
-        "stock": 46000,
-        "count": "10"
-      },
-      {
-        "id": "20000816",
-        "attributes": {
-          "returnDay": 3,
-          "collections": ["seciliurunler"],
-          "HEMEN_maxWeight": 7500,
-          "HEMEN_minWeight": 500,
-          "brand": null,
-          "seoDescription": "",
-          "categoryRank": 101001,
-          "netWeight": 1000,
-          "depolamaKosulu": "Meyve-Sebze",
-          "name": "Portakal Kg",
-          "salesUnitOfMeasure": "KG",
-          "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/portakal-kg_p-20000816",
-          "baseUnitOfMeasure": "KG",
-          "nitelikAdi": "Sezonluk",
-          "SLOT_minWeight": 500,
-          "barcodes": ["2920816", "2060000002211"],
-          "grossWeight": 1000,
-          "stepper": 100,
-          "SLOT_maxWeight": 10000,
-          "hediye": true
-        },
-        "images": [
-          {
-            "id": "yerliUretim",
-            "isExternal": false,
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
-          },
-          {
-            "id": "NasX2-Zzqm",
-            "isExternal": false,
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/NasX2-Zzqm_256x256.png"
-          }
-        ],
-        "price": {
-          "normal": 1975,
-          "normalStr": "₺19,75",
-          "discounted": 1975,
-          "discountedStr": "₺19,75",
-          "cashout": 1975
-        },
-        "stock": 9000,
-        "count": 1
-      },
-      {
-        "id": "20000800",
-        "attributes": {
-          "returnDay": 3,
-          "collections": ["seciliurunler"],
-          "HEMEN_maxWeight": 7500,
-          "HEMEN_minWeight": 500,
-          "brand": null,
-          "categoryRank": 101002,
-          "netWeight": 1000,
-          "depolamaKosulu": "Meyve-Sebze",
-          "name": "Limon Kg",
-          "salesUnitOfMeasure": "KG",
-          "HEMEN_minQty": 500,
-          "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/limon-kg_p-20000800",
-          "baseUnitOfMeasure": "KG",
-          "nitelikAdi": "Regüler",
-          "SLOT_minWeight": 500,
-          "barcodes": ["2060000002686", "2920800007000", "2890648", "2920800"],
-          "grossWeight": 1000,
-          "stepper": 100,
-          "SLOT_maxWeight": 10000,
-          "hediye": true
-        },
-        "images": [
-          {
-            "id": "yerliUretim",
-            "isExternal": false,
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
-          },
-          {
-            "id": "wBVi1VFk1Q",
-            "isExternal": false,
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/wBVi1VFk1Q_256x256.png"
-          }
-        ],
-        "price": {
-          "normal": 1875,
-          "normalStr": "₺18,75",
-          "discounted": 1875,
-          "discountedStr": "₺18,75",
-          "cashout": 1875
-        },
-        "stock": 61000,
-        "count": 1
-      },
-      {
-        "id": "20000776",
-        "attributes": {
-          "returnDay": 3,
-          "brand": null,
-          "HEMEN_maxQty": 8,
-          "categoryRank": 103003,
-          "netWeight": 1000,
-          "depolamaKosulu": "Meyve-Sebze",
-          "name": "Marul Göbek Adet",
-          "SLOT_minQty": 1,
-          "salesUnitOfMeasure": "ADT",
-          "HEMEN_minQty": 1,
-          "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/marul-gobek-adet_p-20000776",
-          "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 10,
-          "nitelikAdi": "Regüler",
-          "barcodes": ["8681057140196", "2000022000000", "2000022"],
-          "grossWeight": 1000,
-          "stepper": 1,
-          "hediye": true
-        },
-        "images": [
-          {
-            "id": "yerliUretim",
-            "imageType": "badge",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
-            "isExternal": false
-          },
-          {
-            "id": "fOx7ER4fKz",
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/fOx7ER4fKz_256x256.png",
-            "isExternal": false
-          }
-        ],
-        "price": {
-          "normal": 3275,
-          "normalStr": "₺32,75",
-          "discounted": 3275,
-          "discountedStr": "₺32,75",
-          "cashout": 9825
-        },
-        "stock": 7,
-        "count": 3
-      },
-      {
-        "id": "26041166",
-        "attributes": {
-          "returnDay": 15,
-          "rank": 1,
-          "brand": "PHILIPS",
-          "HEMEN_maxQty": 1,
-          "categoryRank": 1810002,
-          "netWeight": 0,
-          "depolamaKosulu": "Spot",
-          "name": "Philips UHD Smart Led TV 43PUS7608 43''",
-          "SLOT_minQty": 1,
-          "salesUnitOfMeasure": "ADT",
-          "HEMEN_minQty": 1,
-          "seoUrl": "https://www.a101.com.tr/kapida/elektronik/philips-uhd-smart-led-tv-43pus7608-43_p-26041166",
-          "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 1,
-          "nitelikAdi": "Spot",
-          "barcodes": ["8718863039748"],
-          "grossWeight": 0,
-          "stepper": 1,
-          "hediye": true
-        },
-        "images": [
-          {
-            "id": "v5sJAPBFbx",
-            "isExternal": false,
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/v5sJAPBFbx_256x256.png"
-          },
-          {
-            "id": "gZpRqCCgQf",
-            "isExternal": false,
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/gZpRqCCgQf_256x256.png"
-          },
-          {
-            "id": "qSpYf99xIC",
-            "isExternal": false,
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/qSpYf99xIC_256x256.png"
-          },
-          {
-            "id": "ea7LMfthBG",
-            "isExternal": false,
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ea7LMfthBG_256x256.png"
-          }
-        ],
-        "price": {
-          "normal": 1459900,
-          "discounted": 1459900,
-          "normalStr": "₺14.599,00",
-          "discountedStr": "₺14.599,00",
-          "cashout": 1459900
-        },
-        "stock": 1,
-        "count": 1
-      },
-      {
-        "id": "26041158",
-        "attributes": {
-          "returnDay": 15,
-          "rank": 4,
-          "brand": "PHILIPS",
-          "HEMEN_maxQty": 1,
-          "categoryRank": 1810008,
-          "netWeight": 0,
-          "depolamaKosulu": "Spot",
-          "name": "Philips UHD Smart Led TV 50PUS7608 50''",
-          "SLOT_minQty": 1,
-          "salesUnitOfMeasure": "ADT",
-          "HEMEN_minQty": 1,
-          "seoUrl": "https://www.a101.com.tr/kapida/elektronik/philips-uhd-smart-led-tv-50pus7608-50_p-26041158",
-          "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 1,
-          "nitelikAdi": "Spot",
-          "barcodes": ["8718863037386"],
-          "grossWeight": 0,
-          "stepper": 1,
-          "hediye": true
-        },
-        "images": [
-          {
-            "id": "mt8SUgklXf",
-            "isExternal": false,
-            "imageType": "product",
-            "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/mt8SUgklXf_256x256.png"
-          }
-        ],
-        "price": {
-          "normal": 1749900,
-          "discounted": 1749900,
-          "normalStr": "₺17.499,00",
-          "discountedStr": "₺17.499,00",
-          "cashout": 1749900
-        },
-        "stock": 1,
-        "count": 1
-      },
-      {
-        "id": "25003240",
-        "attributes": {
-          "returnDay": 15,
-          "returnConditions": "<!DOCTYPE html>\r\r\n\r\r\n\r\r\n\r\r\n<html>\r\r\n\r\r\n\r\r\n\r\r\n<head>\r\r\n\r\r\n\r\r\n\r\r\n</head>\r\r\n\r\r\n\r\r\n\r\r\n<body>\r\r\n\r\r\n\r\r\n\r\r\n<p><strong>İptal ve İade Koşulları</strong><br />A101 Kapıda web sitesi veya mobil uygulaması &uuml;zerinden satın almış olduğunuz &uuml;r&uuml;nlerimizden; cayma hakkı istisnası kapsamında olmayan &uuml;r&uuml;nlerimizi teslim tarihinden itibaren 15 g&uuml;n i&ccedil;inde cayma hakkınızı kullanarak veya ayıplı olan &uuml;r&uuml;nlerimizi ayıplı olması gerek&ccedil;esiyle iptal veya iade edebilirsiniz. <br /><br />Siparişinizi iptal etmek veya &uuml;r&uuml;nlerinizi iade etmek i&ccedil;in uygulamamız/web sitemizde yer alan &ldquo;Profilim&rdquo; men&uuml;s&uuml;ndeki &ldquo;Siparişlerim&rdquo; sayfasına giderek iade etmek istediğiniz &uuml;r&uuml;n/&uuml;r&uuml;nleri se&ccedil;ip iade talebinizi oluşturabilirsiniz. Ayrıca, 09:00 &ndash; 22:00 saatleri arasında Canlı Destek &uuml;zerinden bize yazabilir, 0850 808 21 01 numarasından M&uuml;şteri Hizmetlerimizi arayabilirsiniz. Mağazalarımızdan iade se&ccedil;eneğimiz bulunmamaktadır. <br /><br /><strong>İptal/İade Koşulları</strong><br />İade edilmek istenen &uuml;r&uuml;nlerin, teslimat adresinize y&ouml;nlendirilecek olan kurye vasıtasıyla tarafımıza g&ouml;nderilmesi gerekmektedir. <br /><br />İade edilmek istenen &uuml;r&uuml;nlerin orijinal kutuları veya ambalajları bozulmamış, yeniden satılabilirlik &ouml;zelliğini yitirmemiş ve hasar almamış olması gerekmektedir. <br /><br />Televizyon, g&ouml;r&uuml;nt&uuml; sistemleri, cep telefonu, tablet, notebook, buzdolabı, bulaşık makinesi gibi elektronik &uuml;r&uuml;nlerin &uuml;r&uuml;n iadeleri, &uuml;r&uuml;nlerin iadeye uygun olduğuna ilişkin yetkili servis raporu alınması halinde yapılabilmektedir. Bu &uuml;r&uuml;nlerin, t&uuml;m aksesuarları ile birlikte tarafımıza iade edilmesi gerekmektedir. <br /><br />Kurulumu yetkili servis tarafından yapılması gereken &uuml;r&uuml;nlerin yetkili servis dışındaki kişiler tarafından kurulması halinde &uuml;r&uuml;n&uuml;n garanti kapsamında değerlendirilmesi ve iade işleminin ger&ccedil;ekleştirilmesi m&uuml;mk&uuml;n olmamaktadır. <br /><br />Kurulum esnasında yetkili servis tarafından &uuml;r&uuml;nde bir ayıp tespit edilmesi halinde hasar tespit tutanağı d&uuml;zenlenmesi gerekmektedir. B&ouml;yle bir tespit tutanağı bulunmaması halinde iade işlemi ger&ccedil;ekleştirilmemektedir. <br /><br />Teslimat esnasında; kurye tarafından teslim edilen koli/paketlerde hasar bulunması, siparişinizde yer alan &uuml;r&uuml;nlerin eksik olması, kutudan &ccedil;ıkan &uuml;r&uuml;nlerde kırık, &ccedil;atlak vb. hasarların bulunması halinde bu durumu kuryeye bildirerek &uuml;r&uuml;nleri teslim almadan tarafımıza geri g&ouml;ndermelisiniz. Aksi halde, &uuml;r&uuml;nlerin ve koli/paketlerin tarafınıza hasarsız ve ayıpsız şekilde teslim edilmiş olduğunu kabul etmiş olursunuz.. <br /><br />Tarafınıza teslim edilen elektronik &uuml;r&uuml;nler, ilgili mevzuatta belirtilen kapsam ve s&uuml;re dahilinde, yetkili servis garantisinde bulunmaktadır. Elektronik &uuml;r&uuml;nlerde yaşanan sorunlar ya da ayıplı mal sebebiyle yapılacak iadeler ancak yetkili servis tarafından iadeye uygun olduğu belgelendikten sonra t&uuml;m aksesuarları ile birlikte ger&ccedil;ekleştirilebilmektedir. Bazı elektronik &uuml;r&uuml;nlerde garanti belgesinin kaşelenmesi i&ccedil;in elektronik &uuml;r&uuml;nlerin kutusu a&ccedil;ılmakta ve orjinal ambalajı a&ccedil;ık şekilde teslim edilmektedir. S&ouml;z konusu elektronik &uuml;r&uuml;nlerde bu nedenle kutunun a&ccedil;ık olması iade sebebi olarak kabul edilmemektedir. <br /><br />Siparişinize ilişkin fatura oluşturulmuş ise s&ouml;z konusu siparişin iptal edilmesi m&uuml;mk&uuml;n değildir. B&ouml;yle bir durumda, bu siparişlere ilişkin olarak iade talebi oluşturmanız veya tarafınıza g&ouml;nderilen siparişi teslim almayarak iade s&uuml;recini başlatmanız gerekmektedir. <br /><br /><strong>Cayma Hakkının Ge&ccedil;erli Olmadığı Durumlar</strong><br />Son olarak mevzuatımız gereğince, aşağıdaki s&ouml;zleşmelere ilişkin olarak cayma hakkının kullanılamadığını belirtmek isteriz. Bu s&ouml;zleşmeleri aşağıda bulabilirsiniz: </p>\r\r\n\r\r\n\r\r\n\r\r\n<ul>\r\r\n\r\r\n\r\r\n\r\r\n<li>&Ccedil;abuk bozulabilen veya son kullanma tarihi ge&ccedil;ebilecek malların teslimine ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n<li>Tesliminden sonra ambalaj, bant, m&uuml;h&uuml;r, paket gibi koruyucu unsurları a&ccedil;ılmış olan mallardan; iadesi sağlık ve hijyen a&ccedil;ısından uygun olmayanların teslimine ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n<li>Malın tesliminden sonra ambalaj, bant, m&uuml;h&uuml;r, paket gibi koruyucu unsurları a&ccedil;ılmış olması halinde maddi ortamda sunulan kitap, dijital i&ccedil;erik ve bilgisayar sarf malzemelerine ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n<li>Abonelik s&ouml;zleşmesi kapsamında sağlananlar dışında, gazete ve dergi gibi s&uuml;reli yayınların teslimine ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n<li>Belirli bir tarihte veya d&ouml;nemde yapılması gereken, konaklama, eşya taşıma, araba kiralama, yiyecek-i&ccedil;ecek tedariki ve eğlence veya dinlenme amacıyla yapılan boş zamanın değerlendirilmesine ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n<li>Elektronik ortamda anında ifa edilen hizmetler veya t&uuml;keticiye anında teslim edilen gayrimaddi mallara ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n<li>Cayma hakkı s&uuml;resi sona ermeden &ouml;nce, t&uuml;keticinin onayı ile ifasına başlanan hizmetlere ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n<li>Fiyatı finansal piyasalardaki dalgalanmalara bağlı olarak değişen ve satıcı veya sağlayıcının kontrol&uuml;nde olmayan mal veya hizmetlere ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n<li>T&uuml;keticinin istekleri veya kişisel ihtiya&ccedil;ları doğrultusunda hazırlanan mallara ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n<li>Tesliminden sonra başka &uuml;r&uuml;nlerle karışan ve doğası gereği ayrıştırılması m&uuml;mk&uuml;n olmayan mallara ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n</ul>\r\r\n\r\r\n\r\r\n\r\r\n<p>İptal ve iade s&uuml;re&ccedil;lerimizde 6502 sayılı Kanun, Mesafeli S&ouml;zleşmeler Y&ouml;netmeliği ve sair mevzuata uygun hareket ettiğimizi, İptal ve İade Koşullarımızda yazmayan konularda ilgili mevzuat h&uuml;k&uuml;mlerini inceleyebileceğinizi belirtmek isteriz.</p>\r\r\n\r\r\n\r\r\n\r\r\n</body>\r\r\n\r\r\n\r\r\n\r\r\n</html>",
-          "brand": "PIRANHA",
-          "HEMEN_maxQty": 8,
-          "categoryRank": 1806008,
-          "netWeight": 0,
+          "rank": 223,
+          "brand": "ÇİÇEĞİM",
+          "HEMEN_maxQty": 3,
+          "categoryRank": 1102012,
+          "netWeight": 5630,
           "depolamaKosulu": "GıdaDışı",
-          "name": "Piranha Led Telefon Işık ",
+          "name": "Çiçeğim Bulaşık Deterjanı 6 Kg",
           "SLOT_minQty": 1,
           "salesUnitOfMeasure": "ADT",
           "HEMEN_minQty": 1,
-          "seoUrl": "https://www.a101.com.tr/kapida/elektronik/piranha-led-telefon-isik-_p-25003240",
+          "seoUrl": "https://www.a101.com.tr/kapida/temizlik-urunleri/cicegim-bulasik-deterjani-6-kg_p-22002424",
           "baseUnitOfMeasure": "ADT",
-          "SLOT_maxQty": 10,
+          "SLOT_maxQty": 3,
           "nitelikAdi": "GrupSpot",
-          "barcodes": ["8681438193353", "2060000061379", "2060000061607"],
-          "grossWeight": 0,
+          "barcodes": ["8699118066286"],
+          "grossWeight": 6000,
           "stepper": 1,
           "hediye": true
         },
         "images": [
           {
-            "id": "G8a5gFTU3B",
+            "id": "yerliUretim",
             "isExternal": false,
-            "imageType": "product",
+            "imageType": "badge",
             "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/G8a5gFTU3B_256x256.png"
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
           },
           {
-            "id": "g1tLIgGyPj",
+            "id": "HXC7DVtgg9",
             "isExternal": false,
             "imageType": "product",
             "tags": [],
-            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/g1tLIgGyPj_256x256.png"
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/HXC7DVtgg9_256x256.png"
           }
         ],
         "price": {
-          "normal": 2025,
-          "normalStr": "₺20,25",
-          "discounted": 2025,
-          "discountedStr": "₺20,25",
-          "cashout": 2025
+          "normal": 9900,
+          "discounted": 9900,
+          "normalStr": "₺99,00",
+          "discountedStr": "₺99,00",
+          "cashout": 9900
         },
-        "stock": 1,
+        "stock": 4,
+        "count": 1
+      },
+      {
+        "id": "22001713",
+        "attributes": {
+          "returnDay": 15,
+          "collections": ["deterjan-urunleri"],
+          "rank": 0,
+          "brand": "PRIL",
+          "HEMEN_maxQty": 3,
+          "categoryRank": 1102013,
+          "netWeight": 4000,
+          "depolamaKosulu": "GıdaDışı",
+          "name": "Pril Bulaşık Deterjanı 4 Kg",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/temizlik-urunleri/pril-bulasik-deterjani-4-kg_p-22001713",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 3,
+          "nitelikAdi": "Regüler",
+          "barcodes": ["9000101017649"],
+          "grossWeight": 4192,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "yerliUretim",
+            "isExternal": false,
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+          },
+          {
+            "id": "gsGpHAgz5p",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/gsGpHAgz5p_256x256.png"
+          }
+        ],
+        "price": {
+          "normal": 15990,
+          "normalStr": "₺159,90",
+          "discounted": 15990,
+          "discountedStr": "₺159,90",
+          "cashout": 15990
+        },
+        "stock": 8,
+        "count": 1
+      },
+      {
+        "id": "22001187",
+        "attributes": {
+          "returnDay": 15,
+          "rank": 2,
+          "brand": "ÇİÇEĞİM",
+          "HEMEN_maxQty": 5,
+          "categoryRank": 1102016,
+          "netWeight": 4000,
+          "depolamaKosulu": "GıdaDışı",
+          "name": "Çiçeğim Bulaşık Deterjanı 4 Kg",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/temizlik-urunleri/cicegim-bulasik-deterjani-4-kg_p-22001187",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 5,
+          "nitelikAdi": "Regüler",
+          "barcodes": [
+            "8699118015277",
+            "8699118028291",
+            "8699118034292",
+            "8699118042556"
+          ],
+          "grossWeight": 4500,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "yerliUretim",
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "0oa1O3mMPU",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/0oa1O3mMPU_256x256.png",
+            "isExternal": false
+          }
+        ],
+        "price": {
+          "normal": 7050,
+          "normalStr": "₺70,50",
+          "discounted": 7050,
+          "discountedStr": "₺70,50",
+          "cashout": 7050
+        },
+        "stock": 9,
         "count": 1
       }
     ],
-    "payment": {
-      "cash": 100,
-      "card": 32402.5,
-      "change": 0,
-      "date": "23.05.2024 03:44:22"
-    }
+    "payment": { "cash": 500, "card": 972.1500000000001, "change": 0 },
+    "date": "31.05.2024 19:19:42"
   }
 ]

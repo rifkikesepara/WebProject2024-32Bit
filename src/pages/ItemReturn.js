@@ -7,7 +7,6 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import usePreferences from "../Hooks/usePreferences";
 import TextFieldVK from "../Components/TextFieldVK";
 import { useNavigate } from "react-router-dom";
 import { forwardRef, useRef, useState } from "react";
@@ -42,7 +41,7 @@ const ReceiptBox = ({ data, onSelect = (receipt) => {} }) => {
       <Stack spacing={1}>
         <Typography>Fatura Kodu: {data.id}</Typography>
         <Typography>Toplam Tutar: {data.payment.cash}₺</Typography>
-        <Typography>Tarih: {data.payment.date}</Typography>
+        <Typography>Tarih: {data.date}</Typography>
         <Button
           variant="contained"
           onClick={() => {
@@ -180,8 +179,9 @@ export default function ItemReturn() {
       const returnReceipts = GetFromLocalStorage("returnReceipts");
       returnReceipts.push({
         id: returnReceipts.length,
+        receiptID: returnItemDialog.receipt.id,
         returnedItems: selectedProducts,
-        date: new Date(),
+        date: new Date().toLocaleString(),
       });
       SaveToLocalStorage("returnReceipts", returnReceipts);
     }, 1000);

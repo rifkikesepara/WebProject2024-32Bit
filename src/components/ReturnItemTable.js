@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Dialog,
   IconButton,
   Paper,
   Stack,
@@ -19,9 +18,9 @@ import {
   InfoRounded,
 } from "@mui/icons-material";
 import ProductDetail from "./ProductDetail";
-import { forwardRef, useEffect, useRef, useState } from "react";
+import { forwardRef, useEffect, useMemo, useRef, useState } from "react";
 import DialogWithButtons from "./DialogWithButtons";
-import { Receipt, ReceiptWithScrollButtons } from "./Receipt";
+import { ReceiptWithScrollButtons } from "./Receipt";
 
 export function ReturnItemDialog({
   open = false,
@@ -66,8 +65,7 @@ export function ReturnItemDialog({
               overflowY: "scroll",
               maxHeight: "80vh",
             }}
-            payment={receipt.payment}
-            cashout={receipt.products}
+            receiptData={receipt}
           />
         </Paper>
       }
@@ -263,8 +261,42 @@ export const ReturnItemTable = forwardRef(
       onSelected(temp);
     }
 
+    function alreadyReturnedItems() {
+      const temp = [];
+      GetFromLocalStorage("returnReceipts")
+        .map((returnReceipt) => {
+          if (returnReceipt.receiptID == receipt.id) return returnReceipt;
+        })
+        .map(({ returnedItems }) => {
+          returnedItems.map(({ id, count }) => {
+            const findProduct = temp.findIndex(
+              ({ productID }) => productID == id
+            );
+            if (findProduct != -1) {
+              return (temp[findProduct].count += count);
+            } else
+              temp.push({
+                productID: id,
+                count: count,
+              });
+          });
+        });
+
+      // console.log(temp);
+      receipt.products = receipt.products.map((product) => {
+        const findProduct = temp.find(
+          ({ productID }) => productID == product.id
+        );
+        if (findProduct)
+          return { ...product, count: product.count - findProduct.count };
+        else return { ...product };
+      });
+    }
+    useMemo(() => {
+      alreadyReturnedItems();
+    }, []);
     function isReturnValid(product) {
-      const date = getDateFromString(receipt.payment.date);
+      const date = getDateFromString(receipt.date);
       if (product.attributes.returnDay >= dateDiffInDays(date, new Date()))
         return true;
       else return false;
@@ -304,7 +336,7 @@ export const ReturnItemTable = forwardRef(
               <ReturnItem
                 key={product.id}
                 product={product}
-                returnable={isReturnValid(product)}
+                returnable={isReturnValid(product) && product.count}
                 onSelect={addSelectedItems}
                 selected={selected}
               />

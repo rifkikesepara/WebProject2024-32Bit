@@ -18,6 +18,7 @@ import "./config";
 import SettingsDialog from "./Components/SettingsDialog";
 import ItemReturn from "./Pages/ItemReturn";
 import TimerProvider from "./Context/TimerProvider";
+import Reports from "./Pages/Reports";
 
 const router = createBrowserRouter([
   {
@@ -41,16 +42,20 @@ const router = createBrowserRouter([
     element: <PaymentResult />,
   },
   {
-    path: "/test",
-    element: <Test />,
-  },
-  {
     path: "/settings",
     element: <SettingsDialog open={true} />,
   },
   {
     path: "/return",
     element: <ItemReturn />,
+  },
+  {
+    path: "/reports",
+    element: <Reports />,
+  },
+  {
+    path: "/test",
+    element: <Test />,
   },
 ]);
 

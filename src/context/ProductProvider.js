@@ -27,7 +27,17 @@ export default function ProductProvider({ children }) {
   const getAllProducts = () => {
     var array = [];
     products.map(({ children }) =>
-      children.map(({ products }) => array.push(...products))
+      children.map(({ products }) => {
+        const withTaxes = products.map((product) => {
+          const productCategory = product.categories[0].id;
+          if (productCategory == "C02")
+            return { ...product, price: { ...product.price, tax: 1 } };
+          else if (productCategory == "C18")
+            return { ...product, price: { ...product.price, tax: 18 } };
+          else return { ...product, price: { ...product.price, tax: 8 } };
+        });
+        array.push(...withTaxes);
+      })
     );
     return array;
   };

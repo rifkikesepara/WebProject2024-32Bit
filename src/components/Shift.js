@@ -2,7 +2,9 @@ import { LoadingButton } from "@mui/lab";
 import { useRef, useState } from "react";
 import useTimer from "../Hooks/useTimer";
 import {
+  GetFromLocalStorage,
   GetFromSessionStorage,
+  SaveToLocalStorage,
   SaveToSessionStorage,
 } from "../Utils/utilities";
 import { Typography } from "@mui/material";
@@ -22,18 +24,22 @@ export default function ShiftButton({ disabled }) {
     if (shift.started) stopTheTimer("shiftTimer");
     setTimeout(() => {
       if (!shift.started) {
-        shiftTemp.startTime = new Date();
+        shiftTemp.startTime = new Date().toLocaleString();
         shiftTemp.started = true;
         setShift(shiftTemp);
         addTimer("shiftTimer");
         setAlert({ text: "Mesai Başlatıldı", type: "success", duration: 1000 });
       } else {
         shiftTemp.started = false;
-        shiftTemp.endTime = new Date();
+        shiftTemp.endTime = new Date().toLocaleString();
         shiftTemp.duration = timer;
+        SaveToLocalStorage("shifts", [
+          ...GetFromLocalStorage("shifts"),
+          { ...shiftTemp },
+        ]);
         setShift(shiftTemp);
         setAlert({
-          text: "Mesai Bitirildi " + new Date().toLocaleString("tr-TR"),
+          text: "Mesai Bitirildi " + new Date().toLocaleString(),
           type: "error",
         });
       }

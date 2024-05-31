@@ -197,7 +197,7 @@ export default function PaymentResult() {
         onClose={() => setShowReceipt(false)}
         scroll="body"
       >
-        <Box overflowX={"hidden"}>
+        <Box>
           <Receipt />
         </Box>
       </Dialog>
