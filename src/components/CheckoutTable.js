@@ -302,7 +302,7 @@ const CheckoutTable = forwardRef(
               {GetFromSessionStorage("usedOffers").length != 0 && (
                 <Stack direction={"row"} alignItems={"center"}>
                   <Typography color={"text.discount"}>
-                    KAMPANYALAR: -{totals.payback}₺
+                    {t("campaigns").toUpperCase()}: -{totals.payback}₺
                   </Typography>
                   <IconButton onClick={() => setOfferDetail(true)}>
                     <Info />
@@ -315,7 +315,7 @@ const CheckoutTable = forwardRef(
               )}
               {totals.discount != 0 && (
                 <Typography color={"text.discount"}>
-                  İNDİRİM: -{totals.discount}₺
+                  {t("discounts").toUpperCase()}: -{totals.discount}₺
                 </Typography>
               )}
             </AccordionDetails>

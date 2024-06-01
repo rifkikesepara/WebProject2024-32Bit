@@ -1,10 +1,13 @@
 import { Box, Dialog, Paper, Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 export default function ProductDetail({
   product,
   open = false,
   onClose = (e) => {},
 }) {
+  const { t } = useTranslation();
+
   const getBadgeImages = () => {
     let array = [];
     product?.images.map(({ imageType, url, id }) => {
@@ -70,13 +73,17 @@ export default function ProductDetail({
         </Box>
         <Typography>{product?.id}</Typography>
         <Typography textAlign={"center"}>{product?.attributes.name}</Typography>
-        <Typography>Ağırlık: {product?.attributes.grossWeight}g</Typography>
-        <Typography>Stok: {product?.stock} Adet</Typography>
         <Typography>
-          İade Gün Sayısı: {product?.attributes.returnDay} Gün
+          {t("weight")}: {product?.attributes.grossWeight}g
+        </Typography>
+        <Typography>
+          {t("stock")}: {product?.stock} {t("amount")}
+        </Typography>
+        <Typography>
+          {t("returnDayAmount")}: {product?.attributes.returnDay} {t("day")}
         </Typography>
         <Typography fontWeight={"bold"}>
-          BARKOD: {product?.attributes.barcodes[0]}
+          {t("barcode").toUpperCase()}: {product?.attributes.barcodes[0]}
         </Typography>
       </Paper>
     </Dialog>

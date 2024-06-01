@@ -7,12 +7,15 @@ import {
   Typography,
 } from "@mui/material";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function CardPayment({
   open = false,
   onClose = () => {},
   onDone = () => {},
 }) {
+  const { t } = useTranslation();
+
   const [state, setState] = useState(0);
   const handleClick = () => {
     setState(1);
@@ -42,14 +45,14 @@ export default function CardPayment({
             <IconButton onClick={handleClick} sx={{ fontSize: 100 }}>
               <CreditCard fontSize="inherit" />
             </IconButton>
-            <Typography fontSize={20}>Ödeme Bekleniyor</Typography>
+            <Typography fontSize={20}>{t("paymentPending")}</Typography>
           </>
         ) : state === 1 ? (
           <CircularProgress />
         ) : (
           <>
             <Done sx={{ fontSize: 100 }} />
-            <Typography fontSize={20}>Ödeme Tamamlandı</Typography>
+            <Typography fontSize={20}>{t("paymentSuccess")}</Typography>
           </>
         )}
       </Stack>

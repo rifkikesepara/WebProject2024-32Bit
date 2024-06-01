@@ -26,9 +26,11 @@ import ScrollButtons from "../Components/ScrollButtons";
 import { Receipt, ReturnReceipt } from "../Components/Receipt";
 import { Print } from "@mui/icons-material";
 import { useReactToPrint } from "react-to-print";
+import { useTranslation } from "react-i18next";
 
 const ReceiptBox = ({ data, onSelect = (receipt) => {} }) => {
   const [showReceipt, setShowReceipt] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <Paper
@@ -39,9 +41,15 @@ const ReceiptBox = ({ data, onSelect = (receipt) => {} }) => {
       }}
     >
       <Stack spacing={1}>
-        <Typography>Fatura Kodu: {data.id}</Typography>
-        <Typography>Toplam Tutar: {data.payment.cash}₺</Typography>
-        <Typography>Tarih: {data.date}</Typography>
+        <Typography>
+          {t("receiptID")}: {data.id}
+        </Typography>
+        <Typography>
+          {t("total")}: {data.payment.cash}₺
+        </Typography>
+        <Typography>
+          {t("date")}: {data.date}
+        </Typography>
         <Button
           variant="contained"
           onClick={() => {
@@ -53,7 +61,7 @@ const ReceiptBox = ({ data, onSelect = (receipt) => {} }) => {
             display: { md: "none", sm: "block", xs: "block" },
           }}
         >
-          Göster
+          {t("show")}
         </Button>
         <Button
           color="secondary"
@@ -61,7 +69,7 @@ const ReceiptBox = ({ data, onSelect = (receipt) => {} }) => {
           onClick={() => onSelect(data)}
           sx={{ paddingBlock: 2 }}
         >
-          Seç
+          {t("choose")}
         </Button>
         <Dialog
           maxWidth="xl"
@@ -135,6 +143,7 @@ const findTheReceiptByID = (receiptID) => {
 export default function ItemReturn() {
   const { setAlert } = useAlert();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const keyboard = useRef(null);
   const receiptsScrollRef = useRef();
@@ -232,7 +241,7 @@ export default function ItemReturn() {
           }}
         >
           <Typography variant="h4" color={"primary"} textAlign={"center"}>
-            Son Satışlar
+            {t("lastSales")}
           </Typography>
           <ScrollButtons
             scrollRef={receiptsScrollRef}
@@ -278,7 +287,7 @@ export default function ItemReturn() {
                 Son Satışlar
               </Button>
               <TextFieldVK
-                placeholder="Fatura Kodunu Giriniz"
+                placeholder={t("enterReceiptID")}
                 onChange={(e, v) => setReceiptInput(v)}
               />
               <Button
@@ -295,7 +304,7 @@ export default function ItemReturn() {
                   })
                 }
               >
-                Giriş
+                {t("enter")}
               </Button>
             </>
           ) : (
@@ -320,7 +329,7 @@ export default function ItemReturn() {
                 else setSelectedProducts([]);
               }}
             >
-              Geri Dön
+              {t("goBack")}
             </Button>
             {selectedProducts.length != 0 && (
               <LoadingButton
@@ -330,7 +339,7 @@ export default function ItemReturn() {
                 variant="contained"
                 sx={{ paddingBlock: 3, width: "100%" }}
               >
-                İade Et
+                {t("return")}
               </LoadingButton>
             )}
           </Stack>

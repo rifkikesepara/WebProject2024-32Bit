@@ -43,7 +43,7 @@ const DrawerItems = React.forwardRef(
         {menuItems.map((data, index) => {
           return (
             <Tooltip
-              title={t(data.name.toLowerCase())}
+              title={t(data.name)}
               placement={oriantation == "vertical" ? "right" : "bottom"}
               arrow
               key={index}
@@ -82,7 +82,7 @@ const DrawerItems = React.forwardRef(
                         }}
                         boxSizing={"border-box"}
                       >
-                        {t(data.name.toLowerCase())}
+                        {t(data.name)}
                       </Typography>
                     )}
                   </Box>

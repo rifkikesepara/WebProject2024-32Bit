@@ -9,8 +9,10 @@ import {
 } from "../Utils/utilities";
 import { Typography } from "@mui/material";
 import { useAlert } from "../Hooks/useAlert";
+import { useTranslation } from "react-i18next";
 
 export default function ShiftButton({ disabled }) {
+  const { t } = useTranslation();
   const { setAlert } = useAlert();
   const [loading, setLoading] = useState(false);
   const [shift, setShift] = useState(GetFromSessionStorage("shift"));
@@ -28,7 +30,7 @@ export default function ShiftButton({ disabled }) {
         shiftTemp.started = true;
         setShift(shiftTemp);
         addTimer("shiftTimer");
-        setAlert({ text: "Mesai Başlatıldı", type: "success", duration: 1000 });
+        setAlert({ text: t("shiftStarted"), type: "success", duration: 1000 });
       } else {
         shiftTemp.started = false;
         shiftTemp.endTime = new Date().toLocaleString();
@@ -39,7 +41,7 @@ export default function ShiftButton({ disabled }) {
         ]);
         setShift(shiftTemp);
         setAlert({
-          text: "Mesai Bitirildi " + new Date().toLocaleString(),
+          text: t("shiftEnded") + " " + new Date().toLocaleString(),
           type: "error",
         });
       }
@@ -59,7 +61,7 @@ export default function ShiftButton({ disabled }) {
       sx={{ minWidth: 180 }}
     >
       {!shift.started ? (
-        "Start The Shift"
+        t("startTheShift")
       ) : (
         <Typography fontWeight={"bold"}>
           {timer.hours + ":" + timer.minutes + ":" + timer.seconds}

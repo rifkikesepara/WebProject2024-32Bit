@@ -57,7 +57,9 @@ export const ReturnReceipt = forwardRef(({ sx, returnedItems = [] }, ref) => {
       <Typography textAlign={"center"} textTransform={"uppercase"}>
         Feneryolu / İstanbul
       </Typography>
-      <Typography textAlign={"center"}>İADE FATURASI</Typography>
+      <Typography textAlign={"center"}>
+        {t("returnReceipt").toUpperCase()}
+      </Typography>
       <Box
         sx={{
           display: "flex",
@@ -69,10 +71,13 @@ export const ReturnReceipt = forwardRef(({ sx, returnedItems = [] }, ref) => {
         <Box>
           <Typography>{returnedItems?.date.toLocaleDateString()}</Typography>
           <Typography>
-            SAAT: {returnedItems?.date.toLocaleTimeString()}
+            {t("time").toUpperCase()}:{" "}
+            {returnedItems?.date.toLocaleTimeString()}
           </Typography>
         </Box>
-        <Typography>FİŞ NO: {returnedItems.receipt.id}</Typography>
+        <Typography>
+          {t("receiptID")}: {returnedItems.receipt.id}
+        </Typography>
       </Box>
       <Box mt={3} width={"100%"}>
         {returnedItems.products.map(({ attributes, price, count }, index) => {
@@ -110,7 +115,7 @@ export const ReturnReceipt = forwardRef(({ sx, returnedItems = [] }, ref) => {
         - -{" "}
       </Typography>
       <Typography fontWeight={"inherit"} fontSize={"inherit"}>
-        TOPLAM: {total}₺
+        {t("total").toUpperCase()}: {total}₺
       </Typography>
     </Box>
   );
@@ -173,7 +178,7 @@ export const Receipt = forwardRef(
             <Typography>SAAT: {time[0] + "." + time[1]}</Typography>
           </Box>
           <Typography>
-            FİŞ NO:{" "}
+            {t("receiptID").toUpperCase()}:{" "}
             {receiptData.id.toLocaleString("tr-TR", {
               minimumIntegerDigits: 4,
               useGrouping: false,
@@ -280,7 +285,7 @@ export const Receipt = forwardRef(
           }}
         >
           <Typography fontWeight={"inherit"} fontSize={"inherit"}>
-            PARA ÜSTÜ:
+            {t("change").toUpperCase()}:
           </Typography>
           <Typography fontWeight={"inherit"} fontSize={"inherit"}>
             {receiptData.payment.change}₺

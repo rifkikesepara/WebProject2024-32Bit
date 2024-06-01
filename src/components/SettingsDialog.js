@@ -83,18 +83,18 @@ export default function SettingsDialog({ open }) {
           >
             <ArrowBack fontSize="inherit" />
           </IconButton>
-          <Typography fontSize={40}>Settings</Typography>
+          <Typography fontSize={40}>{t("settings")}</Typography>
         </Stack>
         <Stack spacing={2}>
           <Setting>
-            <Typography fontSize={30}>Tema</Typography>
+            <Typography fontSize={30}>{t("theme")}</Typography>
             <ThemeToggleSwitch
               checked={isThemeDark}
               onChange={() => toggleTheme()}
             />
           </Setting>
           <Setting>
-            <Typography fontSize={30}>Uygulama Dili</Typography>
+            <Typography fontSize={30}>{t("appLanguage")}</Typography>
             <Select
               variant="standard"
               value={localStorage.getItem("language")}
@@ -103,12 +103,12 @@ export default function SettingsDialog({ open }) {
                 localStorage.setItem("language", e.target.value);
               }}
             >
-              <MenuItem value="tr">Türkçe</MenuItem>
-              <MenuItem value="en">İngilizce</MenuItem>
+              <MenuItem value="tr">{t("turkish")}</MenuItem>
+              <MenuItem value="en">{t("english")}</MenuItem>
             </Select>
           </Setting>
           <Setting>
-            <Typography fontSize={30}>Kampanyalar</Typography>
+            <Typography fontSize={30}>{t("campaigns")}</Typography>
             <IconButton
               sx={{ fontSize: 30 }}
               onClick={() => setOffersDialog(true)}
@@ -121,7 +121,7 @@ export default function SettingsDialog({ open }) {
             />
           </Setting>
           <Setting>
-            <Typography fontSize={30}>Print Test</Typography>
+            <Typography fontSize={30}>{t("printerTest")}</Typography>
             <IconButton sx={{ fontSize: 30 }} onClick={handlePrint}>
               <Print fontSize="inherit" />
             </IconButton>

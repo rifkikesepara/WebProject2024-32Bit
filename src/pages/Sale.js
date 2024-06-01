@@ -75,7 +75,7 @@ export default function Sale() {
     console.log(data);
 
     //pushing a snackbar to show the user which product has been added
-    enqueueSnackbar(productData.attributes.name + " eklendi.", {
+    enqueueSnackbar(productData.attributes.name + " " + t("added"), {
       variant: "product",
       img: productData.images,
     });
@@ -122,7 +122,7 @@ export default function Sale() {
             [selectedInputField]: a.stock,
           });
           keyboard.current.setInput(a.stock.toString());
-          setAlert({ text: "Stok Yetersiz", type: "error" });
+          setAlert({ text: t("outOfStock"), type: "error" });
           returnValue = {
             ...returnValue,
             price: {
@@ -244,7 +244,7 @@ export default function Sale() {
           }}
           elevation={2}
         >
-          <Tooltip title="FİYAT GÖR" arrow>
+          <Tooltip title={t("checkprice")} arrow>
             <IconButton
               sx={{
                 ml: 1,

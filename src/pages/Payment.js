@@ -86,7 +86,7 @@ export default function Payment() {
           setShowCardPayment(true);
         } else {
           setAlert({
-            text: "Kredi Kartıyla Kalandan Fazla Ödeme Yapamazsın!",
+            text: t("tooMuchCredit"),
             type: "error",
           });
           setInputFields({ ...inputFields, amount: "" });
@@ -298,7 +298,7 @@ export default function Payment() {
               </Typography>
               {payment.change != 0 && (
                 <Typography sx={{ color: "red", fontWeight: "bold" }}>
-                  PARA ÜSTÜ: {payment.change}₺
+                  {t("change").toUpperCase()}: {payment.change}₺
                 </Typography>
               )}
             </AccordionDetails>
