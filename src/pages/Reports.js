@@ -17,6 +17,7 @@ import { Print } from "@mui/icons-material";
 import { useReactToPrint } from "react-to-print";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import ScrollButtons from "../Components/ScrollButtons";
 
 const ShiftBox = ({ data, onSelect = (shift) => {} }) => {
   const { t } = useTranslation();
@@ -52,7 +53,7 @@ const ShiftBox = ({ data, onSelect = (shift) => {} }) => {
             display: { md: "none", sm: "block", xs: "block" },
           }}
         >
-          Göster
+          {t("show")}
         </Button>
         <Button
           color="secondary"
@@ -141,6 +142,9 @@ export default function Reports() {
   const shifts = GetFromLocalStorage("shifts");
   const navigate = useNavigate();
 
+  const shiftsScrollRef = useRef();
+  const zReportsScrollRef = useRef();
+
   return (
     <Stack
       width={"100%"}
@@ -156,11 +160,17 @@ export default function Reports() {
         justifyContent={"center"}
         spacing={5}
       >
-        <Box width={"100%"}>
+        <Box width={"100%"} position={"relative"}>
           <Typography variant="h4" textAlign={"center"} color={"primary"}>
             {t("shifts").toUpperCase()}
           </Typography>
+          <ScrollButtons
+            scrollRef={shiftsScrollRef}
+            sx={{ bottom: 0, zIndex: 20 }}
+            elevation={3}
+          />
           <Paper
+            ref={shiftsScrollRef}
             sx={{
               height: "80vh",
               overflowY: "scroll",
@@ -197,11 +207,17 @@ export default function Reports() {
           </Paper>
         </Box>
 
-        <Box width={"100%"}>
+        <Box width={"100%"} position={"relative"}>
           <Typography variant="h4" textAlign={"center"} color={"primary"}>
             {t("zReports").toUpperCase()}
           </Typography>
+          <ScrollButtons
+            scrollRef={zReportsScrollRef}
+            sx={{ bottom: 0, zIndex: 20 }}
+            elevation={3}
+          />
           <Paper
+            ref={zReportsScrollRef}
             sx={{
               height: "80vh",
               overflowY: "scroll",

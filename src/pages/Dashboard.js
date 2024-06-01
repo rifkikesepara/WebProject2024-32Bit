@@ -258,17 +258,13 @@ export default function Dashboard() {
   const chartData = useMemo(() => {
     const temp = [];
     sales.map((receipt) => {
-      // const time = receipt.payment.date.split(" ")[1].split(":");
-      const total =
-        parseFloat(receipt.payment.cash) +
-        parseFloat(receipt.payment.card) -
-        parseFloat(receipt.payment.change);
-
       if (new Date().toLocaleDateString() == receipt.date.split(" ")[0])
         temp.push({
           id: receipt.id,
           time: getDateFromString(receipt.date),
-          amount: total,
+          amount: receipt.payment.total,
+          discount: receipt.payment.discount,
+          payback: receipt.payment.payback,
         });
     });
     return temp;
@@ -454,9 +450,30 @@ export default function Dashboard() {
                     valueFormatter: (v) => "ID: " + v,
                   },
                   {
+                    dataKey: "discount",
+                    area: false,
+                    showMark: false,
+                    disableHighlight: true,
+                    data: chartData.map(({ amount }) => amount),
+                    color: "yellow",
+                    valueFormatter: (v) =>
+                      t("discounts") + ": " + v.toFixed(2) + "₺",
+                  },
+                  {
+                    dataKey: "payback",
+                    area: false,
+                    showMark: false,
+                    disableHighlight: true,
+                    data: chartData.map(({ amount }) => amount),
+                    color: "yellow",
+                    valueFormatter: (v) =>
+                      t("campaigns") + ": " + v.toFixed(2) + "₺",
+                  },
+                  {
                     dataKey: "amount",
                     area: true,
-                    showMark: false,
+                    showMark: true,
+                    color: "#72ccff",
                     // data: chartData.map(({ amount }) => amount),
 
                     valueFormatter: (v) =>

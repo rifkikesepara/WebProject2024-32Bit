@@ -89,7 +89,7 @@ export const SaveToLocalStorage = (item = "", data = JSON) => {
   localStorage.setItem(item, JSON.stringify(data));
 };
 export const GetFromLocalStorage = (item = "") => {
-  if (localStorage.getItem(item) === undefined) {
+  if (localStorage.getItem(item) == undefined) {
     localStorage.setItem(item, JSON.stringify([]));
     return [];
   } else return JSON.parse(localStorage.getItem(item));
@@ -101,7 +101,7 @@ export const SaveToSessionStorage = (item = "", data = JSON) => {
   sessionStorage.setItem(item, JSON.stringify(data));
 };
 export const GetFromSessionStorage = (item = "") => {
-  if (sessionStorage.getItem(item) === undefined) {
+  if (sessionStorage.getItem(item) == undefined) {
     sessionStorage.setItem(item, JSON.stringify([]));
     return [];
   } else return JSON.parse(sessionStorage.getItem(item));

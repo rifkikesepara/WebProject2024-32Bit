@@ -18,11 +18,12 @@ import {
   ArrowRight,
   ArrowUpward,
 } from "@mui/icons-material";
+import usePreferences from "../Hooks/usePreferences";
 
 const drawerWidth = 500;
 
 const DrawerItems = React.forwardRef(
-  ({ open, menuItems, oriantation }, ref) => {
+  ({ open, menuItems, oriantation, onScroll }, ref) => {
     const { t } = useTranslation();
     const navigate = useNavigate();
 
@@ -39,6 +40,7 @@ const DrawerItems = React.forwardRef(
           overflowY: oriantation == "vertical" ? "hidden" : "hidden",
           "&::-webkit-scrollbar": { backgroundColor: "grey" },
         }}
+        onScroll={onScroll}
       >
         {menuItems.map((data, index) => {
           return (
@@ -103,6 +105,9 @@ export default function MiniDrawer({
   items,
   oriantation = "vertical",
 }) {
+  const { isThemeDark } = usePreferences();
+
+  const buttonImageColor = !isThemeDark ? "255,255,255" : "60,60,60";
   const [open, setOpen] = React.useState(expand);
 
   const [top, setTop] = React.useState(0);
@@ -161,6 +166,9 @@ export default function MiniDrawer({
         }}
         elevation={3}
         // onBlur={() => onOpen(false)}
+        onScroll={(e) => {
+          if (oriantation == "vertical") setTop(e.target.scrollTop);
+        }}
       >
         {oriantation == "vertical" && (
           <Paper
@@ -203,6 +211,7 @@ export default function MiniDrawer({
         >
           {top > 0 && (
             <IconButton
+              disableRipple
               sx={{
                 position: oriantation != "vertical" ? "absolute" : "fixed",
                 bottom: oriantation == "vertical" && 0,
@@ -214,8 +223,20 @@ export default function MiniDrawer({
                 borderRadius: 0,
                 transition: "width 0.2s linear",
                 transitionDelay: !open && "0.2s",
-                backgroundColor: "background.paper",
+                // backgroundColor: "background.paper",
                 zIndex: 100,
+                backgroundImage:
+                  oriantation == "vertical"
+                    ? "linear-gradient(to bottom, rgba(" +
+                      buttonImageColor +
+                      ",1) 70% , rgba(" +
+                      buttonImageColor +
+                      ",0))"
+                    : "linear-gradient(to right, rgba(" +
+                      buttonImageColor +
+                      ",1) 70% , rgba(" +
+                      buttonImageColor +
+                      ",0))",
               }}
               onClick={() => {
                 handleScroll(-100);
@@ -229,9 +250,11 @@ export default function MiniDrawer({
             open={open}
             oriantation={oriantation}
             menuItems={items}
+            onScroll={(e) => setTop(e.target.scrollLeft)}
           />
           {top < bottom && (
             <IconButton
+              disableRipple
               sx={{
                 position: oriantation != "vertical" ? "absolute" : "fixed",
                 bottom: oriantation == "vertical" && 0,
@@ -245,8 +268,19 @@ export default function MiniDrawer({
                 borderBottomRightRadius: oriantation == "vertical" && 20,
                 transition: "width 0.2s linear",
                 transitionDelay: !open && "0.2s",
-                backgroundColor: "background.paper",
                 zIndex: 100,
+                backgroundImage:
+                  oriantation == "vertical"
+                    ? "linear-gradient(to top, rgba(" +
+                      buttonImageColor +
+                      ",1) 70% , rgba(" +
+                      buttonImageColor +
+                      ",0))"
+                    : "linear-gradient(to left, rgba(" +
+                      buttonImageColor +
+                      ",1) 70% , rgba(" +
+                      buttonImageColor +
+                      ",0))",
               }}
               onClick={() => {
                 handleScroll(100);

@@ -32,6 +32,7 @@ export const ZReport = forwardRef(({ data }, ref) => {
       outcome = 0,
       total = 0,
       totalCard = 0,
+      discount = 0,
       taxes = { "%8": 0, "%1": 0, "%18": 0 };
     data.receipts.map((receipt) => {
       income += receipt.payment.cash;
@@ -39,6 +40,7 @@ export const ZReport = forwardRef(({ data }, ref) => {
       total +=
         parseFloat(receipt.payment.card) +
         (parseFloat(receipt.payment.cash) - parseFloat(receipt.payment.change));
+      discount += receipt.payment.discount + receipt.payment.payback;
       totalCard += parseFloat(receipt.payment.card);
       taxes["%1"] += getTaxesFromReceipt(receipt)["%1"];
       taxes["%8"] += getTaxesFromReceipt(receipt)["%8"];
@@ -51,6 +53,7 @@ export const ZReport = forwardRef(({ data }, ref) => {
       totalCard: totalCard,
       total: total,
       taxes: taxes,
+      discount: discount,
     };
   }, [data]);
 
@@ -170,7 +173,10 @@ export const ZReport = forwardRef(({ data }, ref) => {
         data={[
           { header: "EVRAK SAYISI:", value: data.receipts.length },
           { header: "TOPLAM TUTAR:", value: calculated.total.toFixed(2) + "₺" },
-          { header: "TOPLAM İNDİRİM:", value: "0.00" },
+          {
+            header: "TOPLAM İNDİRİM:",
+            value: calculated.discount.toFixed(2) + "₺",
+          },
         ]}
       />
 

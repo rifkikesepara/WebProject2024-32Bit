@@ -55,7 +55,7 @@ const CheckoutTable = forwardRef(
         discount = 0;
 
       data.map(({ price, count }) => {
-        total = total + price.cashout;
+        total += price.cashout;
         subTotal += price.normal * count;
       });
       GetFromSessionStorage("usedOffers").map(

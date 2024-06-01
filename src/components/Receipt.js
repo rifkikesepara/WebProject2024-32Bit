@@ -3,6 +3,7 @@ import { forwardRef, useMemo, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import ScrollButtons from "./ScrollButtons";
 import {
+  GetFromLocalStorage,
   GetFromSessionStorage,
   getValueByPercentege,
 } from "../Utils/utilities";
@@ -304,7 +305,13 @@ export const Receipt = forwardRef(
           }}
         >
           <Typography>EKÜ NO: 0001</Typography>
-          <Typography>Z NO: 0019</Typography>
+          <Typography>
+            Z NO:{" "}
+            {GetFromLocalStorage("zReports").length.toLocaleString("tr-TR", {
+              minimumIntegerDigits: 4,
+              useGrouping: false,
+            })}
+          </Typography>
         </Box>
       </Box>
     );

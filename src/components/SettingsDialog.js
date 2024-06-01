@@ -18,6 +18,7 @@ import { useRef, useState } from "react";
 import { Receipt } from "./Receipt";
 import { GetFromLocalStorage } from "../Utils/utilities";
 import { useReactToPrint } from "react-to-print";
+import DummyReceipt from "../Resources/DummyReceipt.json";
 
 const Setting = ({ sx, children }) => {
   return (
@@ -46,7 +47,6 @@ export default function SettingsDialog({ open }) {
   const { isThemeDark, toggleTheme } = usePreferences();
 
   const receiptRef = useRef();
-  const receipts = GetFromLocalStorage("receipts");
 
   const handlePrint = useReactToPrint({
     content: () => receiptRef.current,
@@ -129,11 +129,7 @@ export default function SettingsDialog({ open }) {
         </Stack>
       </Dialog>
       <Box sx={{ overflow: "hidden", height: 0 }}>
-        <Receipt
-          ref={receiptRef}
-          payment={receipts[0].payment}
-          cashout={receipts[0].products}
-        />
+        <Receipt ref={receiptRef} receiptData={DummyReceipt} />
       </Box>
     </Paper>
   );

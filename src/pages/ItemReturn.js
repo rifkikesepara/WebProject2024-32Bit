@@ -45,7 +45,7 @@ const ReceiptBox = ({ data, onSelect = (receipt) => {} }) => {
           {t("receiptID")}: {data.id}
         </Typography>
         <Typography>
-          {t("total")}: {data.payment.cash}₺
+          {t("total")}: {data.payment.total.toFixed(2)}₺
         </Typography>
         <Typography>
           {t("date")}: {data.date}
@@ -196,10 +196,10 @@ export default function ItemReturn() {
     }, 1000);
   };
 
-  useData("./fakeReceipts.json", (data) => {
-    if (!GetFromLocalStorage("receipts").length)
-      SaveToLocalStorage("receipts", data);
-  });
+  // useData("./fakeReceipts.json", (data) => {
+  //   if (!GetFromLocalStorage("receipts").length)
+  //     SaveToLocalStorage("receipts", data);
+  // });
 
   return (
     <Stack

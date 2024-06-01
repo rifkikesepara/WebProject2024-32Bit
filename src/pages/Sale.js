@@ -43,6 +43,7 @@ export default function Sale() {
 
   const checkoutRef = useRef(null);
   const keyboard = useRef();
+  const totalsObject = useRef();
 
   const [selectedItems, setSelectedItems] = useState([]);
   const [inputFields, setInputFields] = useState({ barcode: "" });
@@ -320,6 +321,7 @@ export default function Sale() {
             }}
             selectionValues={selectedItems}
             onChange={(newformats) => setSelectedItems(newformats)}
+            onTotal={(total) => (totalsObject.current = total)}
           />
         </Paper>
       </Box>
@@ -461,6 +463,7 @@ export default function Sale() {
                 }}
                 onClick={() => {
                   SaveToSessionStorage("cashout", cashout);
+                  SaveToSessionStorage("totals", totalsObject.current);
                   navigate("./payment");
                 }}
               >

@@ -117,9 +117,14 @@ export default function Payment() {
     const receipts = GetFromLocalStorage("receipts");
     const currentReceipt = {
       id: receipts.length,
-      products: cashout,
-      payment: payment,
       date: new Date().toLocaleString(),
+      products: cashout,
+      payment: {
+        ...payment,
+        card: parseFloat(payment.card),
+        change: parseFloat(payment.change),
+        ...GetFromSessionStorage("totals"),
+      },
     };
     receipts.push(currentReceipt);
     SaveToSessionStorage("currentReceipt", currentReceipt);
@@ -278,9 +283,18 @@ export default function Payment() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                {t("subTotal")}: {total}₺
+                {t("subTotal")}: {GetFromSessionStorage("totals").subTotal}₺
+              </Typography>
+              <Typography color={"text.discount"}>
+                {t("discounts").toUpperCase()}:{" "}
+                {GetFromSessionStorage("totals").discount}₺
+              </Typography>
+              <Typography color={"text.discount"}>
+                {t("campaigns").toUpperCase()}:{" "}
+                {GetFromSessionStorage("totals").payback}₺
               </Typography>
             </AccordionDetails>
+            <Divider />
             <AccordionDetails sx={{ paddingBlock: 0 }}>
               <Typography sx={{ fontWeight: "bold" }}>
                 {t("cash").toUpperCase()}: {payment.cash}₺
