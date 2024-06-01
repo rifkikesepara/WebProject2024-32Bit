@@ -18,7 +18,7 @@ import {
   ArrowRight,
   ArrowUpward,
 } from "@mui/icons-material";
-import usePreferences from "../Hooks/usePreferences";
+import usePreferences from "../../Hooks/usePreferences";
 
 const drawerWidth = 500;
 

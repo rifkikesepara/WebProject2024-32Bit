@@ -7,17 +7,17 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import ZReport from "../Components/ZReport";
+import ZReport from "../../Components/ZReport";
 import { useRef, useState } from "react";
-import { getCollapsedReceiptsByDate } from "../Utils/receipts";
-import { GetFromLocalStorage } from "../Utils/utilities";
-import TextFieldVK from "../Components/TextFieldVK";
-import DialogWithButtons from "../Components/DialogWithButtons";
+import { getCollapsedReceiptsByDate } from "../../Utils/receipts";
+import { GetFromLocalStorage } from "../../Utils/utilities";
+import TextFieldVK from "../../Components/TextFieldVK";
+import DialogWithButtons from "../../Components/DialogWithButtons";
 import { Print } from "@mui/icons-material";
 import { useReactToPrint } from "react-to-print";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import ScrollButtons from "../Components/ScrollButtons";
+import ScrollButtons from "../../Components/ScrollButtons";
 
 const ShiftBox = ({ data, onSelect = (shift) => {} }) => {
   const { t } = useTranslation();

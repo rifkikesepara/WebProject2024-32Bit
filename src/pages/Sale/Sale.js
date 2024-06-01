@@ -13,25 +13,25 @@ import { useNavigate } from "react-router-dom";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { useEffect, useRef, useState } from "react";
-import VirtualKeyboard from "../Components/VirtualKeyboard";
-import ProductsDialog from "../Components/ProductsDialog";
+import VirtualKeyboard from "../../Components/VirtualKeyboard";
+import ProductsDialog from "../../Components/ProductsDialog";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import { closeSnackbar, enqueueSnackbar } from "notistack";
-import LOG from "../Debug/Console";
-import CheckoutTable from "../Components/CheckoutTable";
+import LOG from "../../Debug/Console";
+import CheckoutTable from "../../Components/CheckoutTable";
 import { ArrowDownward, ArrowUpward, Done } from "@mui/icons-material";
-import { useAlert } from "../Hooks/useAlert";
-import useStore from "../Hooks/useStore";
-import useProduct from "../Hooks/useProduct";
-import OfferBox from "../Components/OfferBox";
+import { useAlert } from "../../Hooks/useAlert";
+import useStore from "../../Hooks/useStore";
+import useProduct from "../../Hooks/useProduct";
+import OfferBox from "../../Components/OfferBox";
 import { useTranslation } from "react-i18next";
-import usePreferences from "../Hooks/usePreferences";
-import { CheckAndApplyOffer } from "../Utils/offers";
-import Products from "../Components/Products";
+import usePreferences from "../../Hooks/usePreferences";
+import { CheckAndApplyOffer } from "../../Utils/offers";
+import Products from "../../Components/Products";
 import {
   GetFromSessionStorage,
   SaveToSessionStorage,
-} from "../Utils/utilities";
+} from "../../Utils/utilities";
 
 export default function Sale() {
   const storeInfo = useStore();
@@ -75,7 +75,7 @@ export default function Sale() {
     }
     console.log(data);
 
-    //pushing a snackbar to show the user which product has been added
+    //pushing a snackbar to show to user the product which has been added
     enqueueSnackbar(productData.attributes.name + " " + t("added"), {
       variant: "product",
       img: productData.images,
@@ -504,7 +504,7 @@ export default function Sale() {
               <Typography color={"primary"}>{t("storeOnline")}</Typography>
             </Stack>
             <Typography marginRight={1} color={"primary"} fontWeight={"bold"}>
-              Kasiyer No: {GetFromSessionStorage("employee").employeeID}
+              {t("cashierID")}: {GetFromSessionStorage("employee").employeeID}
             </Typography>
           </Stack>
         </Box>

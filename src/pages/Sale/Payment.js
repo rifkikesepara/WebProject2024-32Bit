@@ -16,21 +16,21 @@ import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useEffect, useMemo, useRef, useState } from "react";
-import VirtualKeyboard from "../Components/VirtualKeyboard";
-import LOG from "../Debug/Console";
-import CheckoutTable from "../Components/CheckoutTable";
-import { useAlert } from "../Hooks/useAlert";
+import VirtualKeyboard from "../../Components/VirtualKeyboard";
+import LOG from "../../Debug/Console";
+import CheckoutTable from "../../Components/CheckoutTable";
+import { useAlert } from "../../Hooks/useAlert";
 import { useTranslation } from "react-i18next";
-import usePreferences from "../Hooks/usePreferences";
-import CardPayment from "../Components/CardPayment";
-import OfferBox from "../Components/OfferBox";
+import usePreferences from "../../Hooks/usePreferences";
+import CardPayment from "./CardPayment";
+import OfferBox from "../../Components/OfferBox";
 import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
 import {
   GetFromLocalStorage,
   GetFromSessionStorage,
   SaveToLocalStorage,
   SaveToSessionStorage,
-} from "../Utils/utilities";
+} from "../../Utils/utilities";
 
 export default function Payment() {
   const { isDesktop } = usePreferences();

@@ -3,24 +3,30 @@ import ReactDOM from "react-dom/client";
 import "./Styles/index.css";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Login from "./Pages/Login";
-import Dashboard from "./Pages/Dashboard";
+import Login from "./Pages/Login/Login";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 import Theme from "./Context/Theme";
 import AlertProvider, { AlertPopUp } from "./Context/AlertProvider";
-import Sale from "./Pages/Sale";
+import Sale from "./Pages/Sale/Sale";
 import Test from "./Pages/Test";
 import { SnackbarProvider } from "notistack";
 import { ProductSnackbar } from "./Components/ProductSnackbar";
-import Payment from "./Pages/Payment";
-import PaymentResult from "./Pages/PaymentResult";
+import Payment from "./Pages/Sale/Payment";
+import PaymentResult from "./Pages/Sale/PaymentResult";
 import ProductProvider from "./Context/ProductProvider";
 import "./config";
 import SettingsDialog from "./Components/SettingsDialog";
-import ItemReturn from "./Pages/ItemReturn";
+import ItemReturn from "./Pages/ItemReturn/ItemReturn";
 import TimerProvider from "./Context/TimerProvider";
-import Reports from "./Pages/Reports";
+import Reports from "./Pages/Reports/Reports";
+import Error from "./Pages/Error";
 
 const router = createBrowserRouter([
+  {
+    path: "/*",
+    element: <Error />,
+    errorElement: <Error />,
+  },
   {
     path: "/home",
     element: <Dashboard />,

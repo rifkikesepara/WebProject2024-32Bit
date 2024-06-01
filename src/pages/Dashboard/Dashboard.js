@@ -23,8 +23,7 @@ import LayersIcon from "@mui/icons-material/Layers";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { useEffect, useMemo, useState } from "react";
-import { LineChart, axisClasses } from "@mui/x-charts";
-import MiniDrawer from "../Components/MiniDrawer";
+import MiniDrawer from "./MiniDrawer";
 import {
   GetFromLocalStorage,
   GetFromSessionStorage,
@@ -32,11 +31,13 @@ import {
   getDateFromString,
   getDayString,
   getMonthString,
-} from "../Utils/utilities";
-import useStore from "../Hooks/useStore";
+} from "../../Utils/utilities";
+import useStore from "../../Hooks/useStore";
 import { useTranslation } from "react-i18next";
-import LOG from "../Debug/Console";
-import ShiftButton from "../Components/Shift";
+import LOG from "../../Debug/Console";
+import ShiftButton from "../../Components/Shift";
+import LastSalesTable from "./LastSalesTable";
+import ChartLine from "../../Components/ChartLine";
 
 const menuItems = [
   {
@@ -176,16 +177,6 @@ const menuItems = [
   },
 ];
 
-const getTotalAmount = (data) => {
-  console.log("total amount");
-  let total = 0;
-  data?.map(({ amount }) => {
-    total = total + amount;
-  });
-
-  return total;
-};
-
 const Clock = ({ sx }) => {
   const [date, setDate] = useState(new Date());
   // const [time, setTime] = useState(new Date().toLocaleTimeString("tr-TR"));
@@ -203,45 +194,14 @@ const Clock = ({ sx }) => {
   );
 };
 
-const LastSalesTable = (data = []) => {
-  const { t } = useTranslation();
-  const temp = [...data.data];
-  return (
-    <Table size="small">
-      <TableHead>
-        <TableRow>
-          <TableCell sx={{ fontWeight: "bold", fontSize: 20 }}>
-            {t("date")}
-          </TableCell>
-          <TableCell align="center" sx={{ fontWeight: "bold", fontSize: 20 }}>
-            {t("time")}
-          </TableCell>
-          <TableCell sx={{ fontWeight: "bold", fontSize: 20 }} align="right">
-            {t("sum")}
-          </TableCell>
-        </TableRow>
-      </TableHead>
-      <TableBody>
-        {temp
-          .reverse()
-          .slice(0, 4)
-          .map((row) => (
-            <TableRow key={row.id}>
-              <TableCell sx={{ fontSize: 20 }}>
-                {row.time.toLocaleDateString()}
-              </TableCell>
-              <TableCell align="center" sx={{ fontSize: 20 }}>
-                {row.time.toLocaleTimeString()}
-              </TableCell>
-              <TableCell
-                sx={{ fontSize: 20 }}
-                align="right"
-              >{`${row.amount.toFixed(2)}₺`}</TableCell>
-            </TableRow>
-          ))}
-      </TableBody>
-    </Table>
-  );
+const getTotalAmount = (data) => {
+  console.log("total amount");
+  let total = 0;
+  data?.map(({ amount }) => {
+    total = total + amount;
+  });
+
+  return total;
 };
 
 export default function Dashboard() {
@@ -408,87 +368,7 @@ export default function Dashboard() {
               >
                 {t("today").toUpperCase()}
               </Typography>
-              <LineChart
-                dataset={chartData}
-                margin={{
-                  top: 16,
-                  right: 20,
-                  left: 70,
-                  bottom: 30,
-                }}
-                xAxis={[
-                  {
-                    scaleType: "utc",
-                    dataKey: "time",
-                    valueFormatter: (v) => {
-                      const time = v.toLocaleTimeString().split(":");
-                      return time[0] + ":" + time[1];
-                    },
-                    data: [...chartData.map(({ time }) => time)],
-                  },
-                ]}
-                yAxis={[
-                  {
-                    label: t("sales") + " (₺)",
-                    // max: 15000,
-                    tickNumber: 5,
-                    labelStyle: { fontWeight: "bold", fontSize: 20 },
-                    dataKey: "amount",
-                    // data: chartData.map(({ amount }) => amount),
-                    valueFormatter: (v) => v + "₺",
-                    disableLine: true,
-                  },
-                ]}
-                series={[
-                  {
-                    dataKey: "id",
-                    area: false,
-                    showMark: false,
-                    disableHighlight: true,
-                    data: chartData.map(({ amount }) => amount),
-                    color: "red",
-                    valueFormatter: (v) => "ID: " + v,
-                  },
-                  {
-                    dataKey: "discount",
-                    area: false,
-                    showMark: false,
-                    disableHighlight: true,
-                    data: chartData.map(({ amount }) => amount),
-                    color: "yellow",
-                    valueFormatter: (v) =>
-                      t("discounts") + ": " + v.toFixed(2) + "₺",
-                  },
-                  {
-                    dataKey: "payback",
-                    area: false,
-                    showMark: false,
-                    disableHighlight: true,
-                    data: chartData.map(({ amount }) => amount),
-                    color: "yellow",
-                    valueFormatter: (v) =>
-                      t("campaigns") + ": " + v.toFixed(2) + "₺",
-                  },
-                  {
-                    dataKey: "amount",
-                    area: true,
-                    showMark: true,
-                    color: "#72ccff",
-                    // data: chartData.map(({ amount }) => amount),
-
-                    valueFormatter: (v) =>
-                      t("total") + ": " + v.toFixed(2) + "₺",
-                  },
-                ]}
-                sx={{
-                  [`& .${axisClasses.left} .${axisClasses.label}`]: {
-                    transform: "translateX(-25px)",
-                  },
-                  "& .MuiLineElement-root": {
-                    strokeWidth: 3,
-                  },
-                }}
-              />
+              <ChartLine chartData={chartData} />
             </Paper>
           </Grid>
         )}

@@ -128,7 +128,7 @@ export const ZReport = forwardRef(({ data }, ref) => {
           { header: "ÇIKIŞ:", value: calculated.outcome + "₺" },
           {
             header: "BAKİYE:",
-            value: calculated.income - calculated.outcome + "₺",
+            value: (calculated.income - calculated.outcome).toFixed(2) + "₺",
           },
         ]}
       />

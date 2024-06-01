@@ -1,10 +1,10 @@
 import { Box, Typography, Paper, Divider, Button, Dialog } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useMemo, useRef, useState } from "react";
-import LOG from "../Debug/Console";
-import CheckoutTable from "../Components/CheckoutTable";
+import LOG from "../../Debug/Console";
+import CheckoutTable from "../../Components/CheckoutTable";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-import { Receipt } from "../Components/Receipt";
+import { Receipt } from "../../Components/Receipt";
 import { useReactToPrint } from "react-to-print";
 import { useTranslation } from "react-i18next";
 

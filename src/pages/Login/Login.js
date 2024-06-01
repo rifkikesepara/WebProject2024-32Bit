@@ -5,11 +5,11 @@ import { useState } from "react";
 import { LoadingButton } from "@mui/lab";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
-import { useAlert } from "../Hooks/useAlert";
-import TextFieldVK from "../Components/TextFieldVK";
-import useStore from "../Hooks/useStore";
+import { useAlert } from "../../Hooks/useAlert";
+import TextFieldVK from "../../Components/TextFieldVK";
+import useStore from "../../Hooks/useStore";
 import { useTranslation } from "react-i18next";
-import { SaveToSessionStorage } from "../Utils/utilities";
+import { SaveToSessionStorage } from "../../Utils/utilities";
 
 export default function Login() {
   const { t, i18n } = useTranslation();

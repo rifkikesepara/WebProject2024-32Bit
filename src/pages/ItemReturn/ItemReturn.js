@@ -7,23 +7,23 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import TextFieldVK from "../Components/TextFieldVK";
+import TextFieldVK from "../../Components/TextFieldVK";
 import { useNavigate } from "react-router-dom";
 import { forwardRef, useRef, useState } from "react";
 import {
   ChangeProductAmount,
   GetFromLocalStorage,
   SaveToLocalStorage,
-} from "../Utils/utilities";
-import { ReturnItemDialog } from "../Components/ReturnItemTable";
-import useData from "../Hooks/useData";
-import CheckoutTable from "../Components/CheckoutTable";
-import VirtualKeyboard from "../Components/VirtualKeyboard";
-import { useAlert } from "../Hooks/useAlert";
+} from "../../Utils/utilities";
+import { ReturnItemDialog } from "./ReturnItemTable";
+import useData from "../../Hooks/useData";
+import CheckoutTable from "../../Components/CheckoutTable";
+import VirtualKeyboard from "../../Components/VirtualKeyboard";
+import { useAlert } from "../../Hooks/useAlert";
 import { LoadingButton } from "@mui/lab";
-import DialogWithButtons from "../Components/DialogWithButtons";
-import ScrollButtons from "../Components/ScrollButtons";
-import { Receipt, ReturnReceipt } from "../Components/Receipt";
+import DialogWithButtons from "../../Components/DialogWithButtons";
+import ScrollButtons from "../../Components/ScrollButtons";
+import { Receipt, ReturnReceipt } from "../../Components/Receipt";
 import { Print } from "@mui/icons-material";
 import { useReactToPrint } from "react-to-print";
 import { useTranslation } from "react-i18next";

@@ -10,17 +10,17 @@ import {
   GetFromLocalStorage,
   dateDiffInDays,
   getDateFromString,
-} from "../Utils/utilities";
-import usePreferences from "../Hooks/usePreferences";
+} from "../../Utils/utilities";
+import usePreferences from "../../Hooks/usePreferences";
 import {
   CheckCircleOutline,
   CircleOutlined,
   InfoRounded,
 } from "@mui/icons-material";
-import ProductDetail from "./ProductDetail";
+import ProductDetail from "../../Components/ProductDetail";
 import { forwardRef, useEffect, useMemo, useRef, useState } from "react";
-import DialogWithButtons from "./DialogWithButtons";
-import { ReceiptWithScrollButtons } from "./Receipt";
+import DialogWithButtons from "../../Components/DialogWithButtons";
+import { ReceiptWithScrollButtons } from "../../Components/Receipt";
 import { useTranslation } from "react-i18next";
 
 export function ReturnItemDialog({
