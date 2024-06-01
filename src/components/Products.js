@@ -9,20 +9,11 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import {
-  forwardRef,
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { useCallback, useRef, useState } from "react";
 import { FixedSizeGrid } from "react-window";
 import AutoSizer from "react-virtualized-auto-sizer";
 import ButtonGroup from "./ButtonGroup";
 import {
-  ArrowDownward,
-  ArrowUpward,
   FilterList,
   InfoRounded,
   Search,
@@ -33,7 +24,6 @@ import ProductDetail from "./ProductDetail";
 import TextFieldVK from "./TextFieldVK";
 import useProduct from "../Hooks/useProduct";
 import LOG from "../Debug/Console";
-import usePreferences from "../Hooks/usePreferences";
 import { GetFromLocalStorage, SaveToLocalStorage } from "../Utils/utilities";
 import ScrollButtons from "./ScrollButtons";
 
@@ -98,8 +88,6 @@ export default function Products({
   onSelectProduct = (product) => {},
   onCount = (amount) => {},
 }) {
-  const { theme } = usePreferences();
-
   const { products, getAllProducts, getCategorizedProducts, getSubCategories } =
     useProduct();
 
@@ -291,7 +279,7 @@ export default function Products({
             flexDirection: "column",
             justifyContent: "flex-end",
             transition: "transform 0.2s ease", //animation
-            backgroundColor: theme.palette.background.paper,
+            backgroundColor: "background.paper",
             boxShadow: "0px 0px 20px -1px rgba(0, 0, 0, 0.3)",
             "&:hover": {
               transition: "transform 0.2s ease",
@@ -540,8 +528,8 @@ export default function Products({
             marginLeft: "auto",
             marginRight: "auto",
             textAlign: "center",
-            boxShadow: "10px 20px 50px 70px " + theme.palette.background.paper,
-            backgroundColor: theme.palette.background.paper,
+            boxShadow: "10px 20px 50px 70px " + "background.paper",
+            backgroundColor: "background.paper",
           }}
         >
           Ürün Sayısı: {productAmount.current}

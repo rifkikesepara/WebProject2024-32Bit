@@ -12,7 +12,6 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import usePreferences from "../Hooks/usePreferences";
 import {
   ArrowDownward,
   ArrowLeft,
@@ -26,7 +25,6 @@ const DrawerItems = React.forwardRef(
   ({ open, menuItems, oriantation }, ref) => {
     const { t } = useTranslation();
     const navigate = useNavigate();
-    const { theme } = usePreferences();
 
     return (
       <Paper
@@ -36,7 +34,7 @@ const DrawerItems = React.forwardRef(
           flexDirection: oriantation == "vertical" ? "column" : "row",
           width: "100%",
           height: "100%",
-          backgroundColor: theme.palette.background.paper,
+          backgroundColor: "background.paper",
           overflowX: oriantation == "vertical" ? "hidden" : "scroll",
           overflowY: oriantation == "vertical" ? "hidden" : "hidden",
           "&::-webkit-scrollbar": { backgroundColor: "grey" },
@@ -78,7 +76,6 @@ const DrawerItems = React.forwardRef(
                           fontWeight: "bold",
                           marginLeft: 2,
                           width: 300,
-                          color: theme.palette.text.primary,
                           transition: "opacity 0.2s ease",
                           transitionDelay: open && "0.2s",
                           opacity: open ? 1 : 0,
@@ -107,7 +104,6 @@ export default function MiniDrawer({
   oriantation = "vertical",
 }) {
   const [open, setOpen] = React.useState(expand);
-  const { theme } = usePreferences();
 
   const [top, setTop] = React.useState(0);
   const [bottom, setBottom] = React.useState(10);
@@ -175,7 +171,7 @@ export default function MiniDrawer({
               position: "sticky",
               top: 0,
               zIndex: 10,
-              backgroundColor: theme.palette.background.paper,
+              backgroundColor: "background.paper",
               borderTopRightRadius: 20,
               overflow: "hidden",
             }}
@@ -186,7 +182,7 @@ export default function MiniDrawer({
                 fontSize: 60,
                 p: 0,
                 ml: 2,
-                color: theme.palette.text.primary,
+                color: "text.primary",
               }}
               onClick={!open ? handleDrawerOpen : handleDrawerClose}
             >

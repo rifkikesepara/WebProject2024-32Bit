@@ -33,7 +33,7 @@ import {
 } from "../Utils/utilities";
 
 export default function Payment() {
-  const { theme, isDesktop } = usePreferences();
+  const { isDesktop } = usePreferences();
   const { t } = useTranslation();
   const navigate = useNavigate();
   const { setAlert } = useAlert();
@@ -150,7 +150,7 @@ export default function Payment() {
         overflow: "hidden",
         flexDirection: { sm: "row", md: "row", xs: "column" },
         justifyContent: isDesktop && "space-around",
-        backgroundColor: theme.palette.background.default,
+        backgroundColor: "background.default",
       }}
     >
       <Box
@@ -164,7 +164,7 @@ export default function Payment() {
           justifyContent: "center",
           overflowY: "hidden",
           height: "100vh",
-          backgroundColor: theme.palette.background.default,
+          backgroundColor: "background.default",
           zIndex: 2,
         }}
       >
@@ -187,7 +187,7 @@ export default function Payment() {
               sx={{
                 ml: 1,
                 overflow: "hidden",
-                color: theme.palette.text.primary,
+                color: "text.primary",
               }}
             >
               <QrCodeScannerIcon sx={{ fontSize: 40 }} />
@@ -313,7 +313,7 @@ export default function Payment() {
           flexDirection: "column",
           justifyContent: "space-between",
           alignItems: "center",
-          backgroundColor: theme.palette.background.default,
+          backgroundColor: "background.default",
         }}
       >
         <Box sx={{ marginBlock: "auto" }}>
@@ -467,7 +467,7 @@ export default function Payment() {
           sx={{
             position: "sticky",
             bottom: 0,
-            backgroundColor: theme.palette.background.default,
+            backgroundColor: "background.default",
             width: "100%",
             display: "flex",
             justifyContent: "flex-start",

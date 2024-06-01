@@ -1,4 +1,3 @@
-import { getValue } from "@testing-library/user-event/dist/utils";
 import {
   GetFromLocalStorage,
   getDateFromString,
@@ -13,18 +12,19 @@ export const getReceiptsBetweenDates = (beginDate = "", endDate = "") => {
 
   return receipts.filter((receipt) => {
     const date = getDateFromString(receipt.date);
-    if (isBetweenDates(bD, eD, date)) return receipt;
+    if (isBetweenDates(bD, eD, date)) return true;
+    return false;
   });
 };
 
 export const getCollapsedReceiptsByDate = () => {
   const temp = [];
   const receipts = GetFromLocalStorage("receipts");
-  receipts.map((receipt) => {
+  receipts.forEach((receipt) => {
     const index = temp.findIndex(
-      ({ date }) => date == receipt.date.split(" ")[0]
+      ({ date }) => date === receipt.date.split(" ")[0]
     );
-    if (index == -1)
+    if (index === -1)
       temp.push({ date: receipt.date.split(" ")[0], receipts: [receipt] });
     else temp[index].receipts.push(receipt);
   });
@@ -44,7 +44,7 @@ export const getTotalTaxOfReceipt = (receipt) => {
 
 export const getTaxesFromReceipt = (receipt) => {
   let taxes = { "%1": 0, "%8": 0, "%18": 0 };
-  receipt.products.map(({ price }) => {
+  receipt.products.forEach(({ price }) => {
     switch (price.tax) {
       case 1:
         taxes["%1"] += getValueByPercentege(price.cashout / 100, price.tax);
@@ -54,6 +54,8 @@ export const getTaxesFromReceipt = (receipt) => {
         break;
       case 18:
         taxes["%18"] += getValueByPercentege(price.cashout / 100, price.tax);
+        break;
+      default:
         break;
     }
   });

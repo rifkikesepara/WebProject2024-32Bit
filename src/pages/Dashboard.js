@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Grid,
   Paper,
   Skeleton,
@@ -35,10 +34,8 @@ import {
   getMonthString,
 } from "../Utils/utilities";
 import useStore from "../Hooks/useStore";
-import usePreferences from "../Hooks/usePreferences";
 import { useTranslation } from "react-i18next";
 import LOG from "../Debug/Console";
-import { LoadingButton } from "@mui/lab";
 import ShiftButton from "../Components/Shift";
 
 const menuItems = [
@@ -288,7 +285,6 @@ export default function Dashboard() {
 
   const { breakpoints } = useTheme();
   const matchesTablet = useMediaQuery(breakpoints.up("md"));
-  const { theme } = usePreferences();
 
   const date = new Date();
   let stringDate = useMemo(() => {
@@ -301,7 +297,7 @@ export default function Dashboard() {
   return (
     <Box
       sx={{
-        backgroundColor: theme.palette.background.default,
+        backgroundColor: "background.default",
         display: "flex",
         height: "100vh",
         position: "relative",

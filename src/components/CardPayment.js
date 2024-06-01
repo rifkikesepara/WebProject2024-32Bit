@@ -6,7 +6,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function CardPayment({
   open = false,
@@ -37,14 +37,14 @@ export default function CardPayment({
       onClose={onClose}
     >
       <Stack alignItems={"center"} justifyContent={"center"} height={"100%"}>
-        {state == 0 ? (
+        {state === 0 ? (
           <>
             <IconButton onClick={handleClick} sx={{ fontSize: 100 }}>
               <CreditCard fontSize="inherit" />
             </IconButton>
             <Typography fontSize={20}>Ödeme Bekleniyor</Typography>
           </>
-        ) : state == 1 ? (
+        ) : state === 1 ? (
           <CircularProgress />
         ) : (
           <>

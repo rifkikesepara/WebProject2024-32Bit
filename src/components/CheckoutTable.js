@@ -21,7 +21,6 @@ import { Box } from "@mui/system";
 import { forwardRef, useMemo, useState } from "react";
 import ProductDetail from "./ProductDetail";
 import { useTranslation } from "react-i18next";
-import usePreferences from "../Hooks/usePreferences";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import LOG from "../Debug/Console";
 import { GetFromSessionStorage } from "../Utils/utilities";
@@ -47,7 +46,6 @@ const CheckoutTable = forwardRef(
     });
     const [offerDetail, setOfferDetail] = useState(false);
     const { t } = useTranslation();
-    const { theme } = usePreferences();
 
     const totals = useMemo(() => {
       LOG("total calculated!", "yellow");
@@ -96,7 +94,7 @@ const CheckoutTable = forwardRef(
                   <TableCell
                     sx={{
                       width: 50,
-                      backgroundColor: theme.palette.background.paper,
+                      backgroundColor: "background.paper",
                     }}
                   >
                     {t("amount")}
@@ -104,14 +102,14 @@ const CheckoutTable = forwardRef(
                   <TableCell
                     align="center"
                     width={"100%"}
-                    sx={{ backgroundColor: theme.palette.background.paper }}
+                    sx={{ backgroundColor: "background.paper" }}
                   >
                     {t("product")}
                   </TableCell>
                   <TableCell
                     align="right"
                     width={50}
-                    sx={{ backgroundColor: theme.palette.background.paper }}
+                    sx={{ backgroundColor: "background.paper" }}
                   >
                     {t("price")}
                   </TableCell>

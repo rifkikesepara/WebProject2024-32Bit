@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dashboard";
-import Theme, { usePreferences } from "./Context/Theme";
+import Theme from "./Context/Theme";
 import AlertProvider, { AlertPopUp } from "./Context/AlertProvider";
 import Sale from "./Pages/Sale";
 import Test from "./Pages/Test";

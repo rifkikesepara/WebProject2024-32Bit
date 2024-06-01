@@ -2,7 +2,6 @@ import { ArrowBack, Edit, Print } from "@mui/icons-material";
 import {
   Box,
   Dialog,
-  Divider,
   IconButton,
   MenuItem,
   Paper,
@@ -21,14 +20,12 @@ import { GetFromLocalStorage } from "../Utils/utilities";
 import { useReactToPrint } from "react-to-print";
 
 const Setting = ({ sx, children }) => {
-  const { theme } = usePreferences();
-
   return (
     <Stack
       sx={{
         ...sx,
         alignSelf: "center",
-        backgroundColor: theme.palette.background.default,
+        backgroundColor: "background.default",
         borderRadius: 10,
         height: 80,
         paddingInline: 5,

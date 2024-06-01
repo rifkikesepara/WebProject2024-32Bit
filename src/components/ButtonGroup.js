@@ -23,7 +23,7 @@ export default function ButtonGroup({
   elevation = 0,
 }) {
   const { t } = useTranslation();
-  const { theme, isThemeDark } = usePreferences();
+  const { isThemeDark } = usePreferences();
   const [selected, setSelected] = useState(intialSelected);
   const scrollRef = useRef();
 

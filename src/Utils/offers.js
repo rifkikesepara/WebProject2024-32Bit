@@ -12,9 +12,9 @@ const getPriceWithPercentege = (price, percentege) => {
 const offerUsed = (offer, payback) => {
   const usedOffers = GetFromSessionStorage("usedOffers");
   const index = usedOffers.indexOf(
-    usedOffers.find((data) => data.id == offer.id)
+    usedOffers.find((data) => data.id === offer.id)
   );
-  if (index == -1) {
+  if (index === -1) {
     usedOffers.push({
       ...offer,
       payback: payback,
@@ -27,8 +27,8 @@ const offerUsed = (offer, payback) => {
 
 const removeOffer = (id) => {
   const usedOffers = GetFromSessionStorage("usedOffers");
-  const index = usedOffers.indexOf(usedOffers.find((data) => data.id == id));
-  if (index != -1) usedOffers.splice(index, 1);
+  const index = usedOffers.indexOf(usedOffers.find((data) => data.id === id));
+  if (index !== -1) usedOffers.splice(index, 1);
   SaveToSessionStorage("usedOffers", usedOffers);
 };
 
@@ -37,7 +37,7 @@ const applyOfferToProduct = (offer, product) => {
   let test, discount;
   test = { ...product, offer: undefined };
 
-  if (offer.discount.split(":")[2] != undefined) {
+  if (offer.discount.split(":")[2] !== undefined) {
     discount =
       parseInt(test.count / offer.discount.split(":")[0]) *
       offer.discount.split(":")[1] *
@@ -55,7 +55,7 @@ const applyOfferToProduct = (offer, product) => {
   test.price.cashout -= discount;
 
   if (product.count >= parseInt(offer.discount.split(":")[0])) {
-    if (test.offer?.offerName != offer.offerName) {
+    if (test.offer?.offerName !== offer.offerName) {
       test.offer = {
         ...offer,
         offerApplied: parseInt(test.count / offer.discount.split(":")[0]),
@@ -80,17 +80,17 @@ export const CheckAndApplyOffer = (product, checkoutData) => {
     ({ activated }) => activated
   );
 
-  activeOffers.map((offer) => {
+  activeOffers.forEach((offer) => {
     if (!offer.categoryID && !offer.productID) {
       // console.log("for all " + offer.offerName);
-      if (temp.offer == undefined || temp.offer?.length == 0)
+      if (temp.offer === undefined || temp.offer?.length === 0)
         temp = { ...applyOfferToProduct(offer, product) };
     } else {
       if (offer.productID != null && product.id == offer.productID) {
         temp = { ...applyOfferToProduct(offer, product) };
       } else if (
         offer.categoryID != null &&
-        product.category == offer.categoryID
+        product.category === offer.categoryID
       ) {
         // console.log(product);
       }

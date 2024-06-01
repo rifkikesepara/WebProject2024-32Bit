@@ -1,5 +1,5 @@
 import { Close } from "@mui/icons-material";
-import { Box, Button, Dialog, IconButton, Paper } from "@mui/material";
+import { Box, Dialog, IconButton, Paper } from "@mui/material";
 import React, { useRef } from "react";
 import ScrollButtons from "./ScrollButtons";
 

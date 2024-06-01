@@ -1,7 +1,6 @@
-import { Box, Dialog, IconButton, Slide, Typography } from "@mui/material";
-import { forwardRef, useMemo, useState } from "react";
+import { Box, Dialog, IconButton, Slide } from "@mui/material";
+import { forwardRef, useMemo } from "react";
 
-import usePreferences from "../Hooks/usePreferences";
 import Products from "./Products";
 import { Close } from "@mui/icons-material";
 
@@ -17,9 +16,6 @@ export default function ProductsDialog({
       }),
     []
   );
-
-  const { theme } = usePreferences();
-  const [productAmount, setProductAmount] = useState(0);
 
   return (
     <Dialog
@@ -38,7 +34,7 @@ export default function ProductsDialog({
           borderBottomRightRadius: { xs: 0, md: 30 },
           maxHeight: "90vh",
           marginTop: { xs: "auto", md: 0 },
-          backgroundColor: theme.palette.background.paper,
+          backgroundColor: "background.paper",
         },
       }}
     >
@@ -54,20 +50,8 @@ export default function ProductsDialog({
         <Close />
       </IconButton>
       <Box height={"100vh"}>
-        <Products
-          onCount={(amount) => setProductAmount(amount)}
-          onSelectProduct={onSelectProduct}
-        />
+        <Products onSelectProduct={onSelectProduct} />
       </Box>
-      {/* <Typography
-        sx={{
-          textAlign: "center",
-          boxShadow: "10px 20px 50px 70px " + theme.palette.background.paper,
-          zIndex: 100,
-        }}
-      >
-        Ürün Sayısı: {productAmount}
-      </Typography> */}
     </Dialog>
   );
 }

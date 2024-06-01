@@ -7,10 +7,8 @@ import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import { Receipt } from "../Components/Receipt";
 import { useReactToPrint } from "react-to-print";
 import { useTranslation } from "react-i18next";
-import usePreferences from "../Hooks/usePreferences";
 
 export default function PaymentResult() {
-  const { theme } = usePreferences();
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -44,7 +42,7 @@ export default function PaymentResult() {
         alignItems: "center",
         width: "100%",
         overflow: "hidden",
-        backgroundColor: theme.palette.background.default,
+        backgroundColor: "background.default",
       }}
     >
       <Box
