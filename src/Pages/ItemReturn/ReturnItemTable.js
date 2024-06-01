@@ -25,16 +25,18 @@ import { useTranslation } from "react-i18next";
 
 export function ReturnItemDialog({
   open = false,
-  receipt,
-  onClose = () => {},
-  onSelected = (items) => {},
-  onDone = (items) => {},
+  receipt, //receipt data for show the products to select to return
+  onClose = () => {}, //callback function that is executed when the dialog is closed
+  onSelected = (items) => {}, //callback function that executes whenever a product selected
+  onDone = (items) => {}, //callback function that provides selected products
 }) {
   const { t } = useTranslation();
-  const [selectedItems, setSelectedItems] = useState([]);
-  const scrollRef = useRef();
   const { isDesktop } = usePreferences();
 
+  const scrollRef = useRef();
+  const [selectedItems, setSelectedItems] = useState([]);
+
+  //handles the selected products to return
   const handleClick = (event) => {
     const temp = [];
     selectedItems.map((item) => temp.push({ ...item, bought: item.count }));
@@ -104,8 +106,17 @@ export function ReturnItemDialog({
   );
 }
 
+//item box that show the product which has been bought, from the receipt
 const ReturnItem = forwardRef(
-  ({ product, selected, returnable, onSelect = (product) => {} }, ref) => {
+  (
+    {
+      product, //product data to show
+      selected, //boolean to indicate that this product has been selected
+      returnable, //shows if the product is returnable or not
+      onSelect = (product) => {}, //callback function that is executed whenever this product is selected
+    },
+    ref
+  ) => {
     const [showDetail, setShowDetail] = useState(false);
 
     return (
@@ -229,21 +240,17 @@ const ReturnItem = forwardRef(
 export const ReturnItemTable = forwardRef(
   (
     {
-      receipt = GetFromLocalStorage("receipts")[3],
-      onSelected = (selectedItems) => {},
+      receipt = GetFromLocalStorage("receipts")[3], //receipt data to show the product to return
+      onSelected = (selectedItems) => {}, //callback function that provides the selected items on the table
     },
     ref
   ) => {
-    const [selectedItems, setSelectedItems] = useState([]);
     const animationRef = useRef();
-    useEffect(() => {
-      animationRef?.current?.getAnimations({ subtree: true }).map((anim) => {
-        anim.startTime = 0;
-      });
-    }, [selectedItems]);
+    const [selectedItems, setSelectedItems] = useState([]);
 
+    //function to add product to the selected items array and executes the callback function
     function addSelectedItems(product) {
-      let temp = [...selectedItems];
+      const temp = [...selectedItems];
       const doesContain = temp.find(({ id }) => id == product.id);
       if (doesContain == undefined) {
         temp = [...temp, { ...product, selected: true }];
@@ -257,6 +264,7 @@ export const ReturnItemTable = forwardRef(
       onSelected(temp);
     }
 
+    //checks if the product has been returned before if it has then reduces the amount of product that is returnable
     function alreadyReturnedItems() {
       const temp = [];
       GetFromLocalStorage("returnReceipts")
@@ -288,15 +296,27 @@ export const ReturnItemTable = forwardRef(
         else return { ...product };
       });
     }
-    useMemo(() => {
-      alreadyReturnedItems();
-    }, []);
+
+    //checks the date if the product is still returnable or not
     function isReturnValid(product) {
       const date = getDateFromString(receipt.date);
       if (product.attributes.returnDay >= dateDiffInDays(date, new Date()))
         return true;
       else return false;
     }
+
+    //the hook that executes whenever a new product select, syncs the animation
+    useEffect(() => {
+      animationRef?.current?.getAnimations({ subtree: true }).map((anim) => {
+        anim.startTime = 0;
+      });
+    }, [selectedItems]);
+
+    //calculates the amount of product that is returnable whenever the table is opened
+    useMemo(() => {
+      alreadyReturnedItems();
+    }, []);
+
     return (
       <Stack
         ref={ref}

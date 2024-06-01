@@ -11,9 +11,9 @@ import { Switch, ThemeProvider, useMediaQuery } from "@mui/material";
 
 export const ThemeContext = createContext({
   theme: LightTheme, //intial theme
-  isDesktop: true,
-  isThemeDark: false,
-  toggleTheme: () => {},
+  isDesktop: true, //boolean that shows if the screen big enough for desktop version
+  isThemeDark: false, //boolean that show if the theme is dark or not
+  toggleTheme: () => {}, //the function toggles the theme between dark and light
 });
 
 export default function Theme({ children }) {

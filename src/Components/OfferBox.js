@@ -18,6 +18,7 @@ import {
 import DialogWithButtons from "./DialogWithButtons";
 import { useTranslation } from "react-i18next";
 
+//shows the offers that is used and the payback amount from that offer
 export const UsedOffersDialog = ({ open, onClose = () => {} }) => {
   return (
     <Dialog
@@ -43,15 +44,19 @@ export const UsedOffersDialog = ({ open, onClose = () => {} }) => {
   );
 };
 
+//a dialog to set the activeness of the offers
 export const OffersDialog = ({
   open,
   onClose = () => {},
   readOnly = false,
 }) => {
-  const scrollRef = useRef();
   const { t } = useTranslation();
 
+  const scrollRef = useRef();
+
   const [offers, setOffers] = useState(GetFromLocalStorage("offers"));
+
+  //changes the activeness of the offer
   const changeActiveOffers = (offer, active) => {
     const temp = [...offers];
     const index = temp.indexOf(temp.find((data) => data.id == offer.id));
@@ -108,19 +113,13 @@ export default function OfferBox() {
   const [openDialog, setOpenDialog] = useState(false);
   const [offers, setOffers] = useState(GetFromLocalStorage("offers"));
 
+  //getting active offers
   const activeOffers = useMemo(
     () => offers.filter(({ activated }) => activated),
     [offers]
   );
 
-  const setOffer = (offerID, active) => {
-    const array = offers;
-    const index = offers.indexOf(offers.find(({ id }) => id == offerID));
-    array[index].activated = active;
-    setOffers(array);
-    SaveToLocalStorage("offers", array);
-  };
-
+  //fetching the offers datas
   useData("./offers.json", (data) => {
     LOG("fetching offers...", "red");
     const array = [];

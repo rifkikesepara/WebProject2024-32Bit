@@ -21,6 +21,7 @@ import TimerProvider from "./Context/TimerProvider";
 import Reports from "./Pages/Reports/Reports";
 import Error from "./Pages/Error";
 
+//page paths
 const router = createBrowserRouter([
   {
     path: "/*",

@@ -13,11 +13,9 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
-import DeleteIcon from "@mui/icons-material/Delete";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useEffect, useMemo, useRef, useState } from "react";
 import VirtualKeyboard from "../../Components/VirtualKeyboard";
-import LOG from "../../Debug/Console";
 import CheckoutTable from "../../Components/CheckoutTable";
 import { useAlert } from "../../Hooks/useAlert";
 import { useTranslation } from "react-i18next";
@@ -40,48 +38,20 @@ export default function Payment() {
   const keyboard = useRef();
   const checkoutRef = useRef();
 
-  const [selectedItems, setSelectedItems] = useState([]);
-  const [payment, setPayment] = useState({ cash: 0, card: 0, change: 0 });
-  const [inputFields, setInputFields] = useState({ amount: "" });
-  const [selectedInputField, setSelectedInputField] = useState("");
-  const [cashout, setCashout] = useState(GetFromSessionStorage("cashout"));
+  const cashout = GetFromSessionStorage("cashout");
+  const totalsObject = GetFromSessionStorage("totals");
+
+  const [payment, setPayment] = useState({ cash: 0.0, card: 0.0, change: 0.0 });
+  const [input, setInput] = useState("");
   const [showCardPayment, setShowCardPayment] = useState(false);
-  const [testID, setID] = useState();
 
-  const deleteSelected = () => {
-    LOG("deletedSelected", "yellow");
-    let array = cashout;
-    selectedItems.map((data) => {
-      let index = array.indexOf(cashout.find(({ id }) => id == data));
-      array.splice(index, 1);
-    });
-    setCashout(array);
-    setSelectedItems([]);
-  };
-
-  const changeProductAmount = (amount, id) => {
-    let newArray = cashout.map((a) => {
-      var returnValue = { ...a };
-      if (a.id == id && amount != 0) {
-        let unitPrice = cashout.find(({ id }) => a.id == id).price.discounted;
-        console.log("Unit Price: " + unitPrice);
-        returnValue = {
-          ...returnValue,
-          price: { ...a.price, cashout: unitPrice * amount },
-          count: amount,
-        };
-      }
-
-      return returnValue;
-    });
-    setCashout(newArray);
-  };
-
+  //handles if the payment is by card or cash
   const handleClick = (e) => {
-    let paymentAmount = parseFloat(inputFields.amount);
+    const paymentAmount = parseFloat(input);
 
     switch (e.target.name) {
       case "card":
+        //checks if the amount is bigger than the due
         if (paymentAmount <= due) {
           setShowCardPayment(true);
         } else {
@@ -89,11 +59,12 @@ export default function Payment() {
             text: t("tooMuchCredit"),
             type: "error",
           });
-          setInputFields({ ...inputFields, amount: "" });
+          setInput("");
           keyboard.current.setInput("");
         }
         break;
       case "cash":
+        //checks if the amount is bigger than due and calculates the change
         if (paymentAmount <= due) {
           setPayment({
             ...payment,
@@ -103,16 +74,20 @@ export default function Payment() {
         } else {
           setPayment({
             ...payment,
-            cash: paymentAmount,
-            change: (paymentAmount - (total - payment.card)).toFixed(2),
+            cash: paymentAmount.toFixed(2),
+            change: (
+              paymentAmount -
+              (totalsObject.total - payment.card)
+            ).toFixed(2),
           });
         }
-        setInputFields({ ...inputFields, amount: "" });
+        setInput("");
         keyboard.current.setInput("");
         break;
     }
   };
 
+  //pushes the receipt after finishing the payment
   const pushReceipt = () => {
     const receipts = GetFromLocalStorage("receipts");
     const currentReceipt = {
@@ -131,20 +106,13 @@ export default function Payment() {
     SaveToLocalStorage("receipts", receipts);
   };
 
-  const total = useMemo(() => {
-    LOG("total calculated!", "yellow");
-    let total = 0;
-    cashout.map(({ price }) => (total = total + price.cashout));
-    return total / 100;
-  }, [cashout, cashout.length]);
-  let due =
-    payment.change > 0
+  //calculates the due whenever payment changes
+  const due = useMemo(() => {
+    return payment.change > 0
       ? 0
-      : total - (parseFloat(payment.cash) + parseFloat(payment.card));
-
-  useEffect(() => {
-    keyboard.current.setInput(inputFields[selectedInputField]);
-  }, [selectedInputField]);
+      : totalsObject.total -
+          (parseFloat(payment.cash) + parseFloat(payment.card));
+  }, [payment]);
 
   return (
     <Box
@@ -228,15 +196,6 @@ export default function Payment() {
             >
               <ArrowDownward />
             </IconButton>
-            <IconButton
-              onClick={deleteSelected}
-              disabled={selectedItems.length == 0 ? true : false}
-              aria-label="delete"
-              sx={{ fontSize: 40, marginRight: 2 }}
-              color="black"
-            >
-              <DeleteIcon fontSize="inherit" color="inherit" />
-            </IconButton>
           </Box>
         </Paper>
         <Paper
@@ -252,15 +211,9 @@ export default function Payment() {
           elevation={5}
         >
           <CheckoutTable
+            disabled={true}
             ref={checkoutRef}
             data={cashout}
-            inputValues={inputFields}
-            onFocus={(e, { id }) => {
-              setSelectedInputField(e.target.name);
-              setID(id);
-            }}
-            selectionValues={selectedItems}
-            onChange={(newformats) => setSelectedItems(newformats)}
             accordionVisible={false}
           />
           <Accordion
@@ -278,20 +231,18 @@ export default function Payment() {
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
               <Typography>
-                {t("total")}: {total}₺
+                {t("total")}: {totalsObject.total}₺
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                {t("subTotal")}: {GetFromSessionStorage("totals").subTotal}₺
+                {t("subTotal")}: {totalsObject.subTotal}₺
               </Typography>
               <Typography color={"text.discount"}>
-                {t("discounts").toUpperCase()}:{" "}
-                {GetFromSessionStorage("totals").discount}₺
+                {t("discounts").toUpperCase()}: {totalsObject.discount}₺
               </Typography>
               <Typography color={"text.discount"}>
-                {t("campaigns").toUpperCase()}:{" "}
-                {GetFromSessionStorage("totals").payback}₺
+                {t("campaigns").toUpperCase()}: {totalsObject.payback}₺
               </Typography>
             </AccordionDetails>
             <Divider />
@@ -339,8 +290,7 @@ export default function Payment() {
               name="amount"
               autoComplete="off"
               label={t("enterAmountText")}
-              onFocus={(e) => setSelectedInputField(e.target.name)}
-              value={inputFields.amount}
+              value={input}
               sx={{
                 height: "inherit",
                 width: "90%",
@@ -348,10 +298,7 @@ export default function Payment() {
                 marginLeft: 2,
               }}
               onChange={(e) => {
-                setInputFields({
-                  ...inputFields,
-                  [selectedInputField]: e.target.value,
-                });
+                setInput(e.target.value);
                 keyboard.current.setInput(e.target.value);
               }}
             />
@@ -363,7 +310,7 @@ export default function Payment() {
                 ml: 1,
               }}
               onClick={() => {
-                setInputFields({ ...inputFields, amount: due });
+                setInput(due);
                 keyboard.current.setInput(due.toString());
               }}
             >
@@ -378,7 +325,7 @@ export default function Payment() {
             }}
           >
             <Button
-              disabled={inputFields.amount == "" ? true : false}
+              disabled={input == "" ? true : false}
               name="cash"
               variant="contained"
               disableElevation
@@ -391,7 +338,7 @@ export default function Payment() {
               {t("cash")}
             </Button>
             <Button
-              disabled={inputFields.amount == "" ? true : false}
+              disabled={input == "" ? true : false}
               name="card"
               variant="contained"
               disableElevation
@@ -409,9 +356,9 @@ export default function Payment() {
               onDone={() => {
                 setPayment({
                   ...payment,
-                  card: inputFields.amount,
+                  card: parseFloat(input).toFixed(2),
                 });
-                setInputFields({ ...inputFields, amount: "" });
+                setInput("");
                 keyboard.current.setInput("");
               }}
             />
@@ -429,17 +376,7 @@ export default function Payment() {
               ref={keyboard}
               layout="cashier"
               onChangeInput={(input) => {
-                if (selectedInputField != "") {
-                  setInputFields({
-                    ...inputFields,
-                    [selectedInputField]: input,
-                  });
-                  if (selectedInputField != "amount")
-                    changeProductAmount(input, testID);
-                }
-              }}
-              onDone={() => {
-                setSelectedInputField("");
+                setInput(input);
               }}
             />
             <Box

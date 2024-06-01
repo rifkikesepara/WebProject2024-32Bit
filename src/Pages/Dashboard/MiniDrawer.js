@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState, useRef, forwardRef } from "react";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import {
@@ -22,8 +22,16 @@ import usePreferences from "../../Hooks/usePreferences";
 
 const drawerWidth = 500;
 
-const DrawerItems = React.forwardRef(
-  ({ open, menuItems, oriantation, onScroll }, ref) => {
+const DrawerItems = forwardRef(
+  (
+    {
+      open,
+      menuItems, //data of buttons that will be shown on the drawer
+      oriantation, //oriantation of the drawer ("vertical","horizontal")
+      onScroll = (event) => {}, //callback function that executed when drawer is scrolled
+    },
+    ref
+  ) => {
     const { t } = useTranslation();
     const navigate = useNavigate();
 
@@ -100,21 +108,23 @@ const DrawerItems = React.forwardRef(
 );
 
 export default function MiniDrawer({
-  expand = false,
-  onOpen = () => {},
-  items,
-  oriantation = "vertical",
+  expand = false, //boolean to expand the drawer
+  oriantation = "vertical", //indicates the oriantation of the drawer ("vertical","horizontal")
+  items = [], //menu items data to be shown as buttons
+  onOpen = (opened) => {}, //callback function that shows if the drawer has been expanded or not
 }) {
   const { isThemeDark } = usePreferences();
 
   const buttonImageColor = !isThemeDark ? "255,255,255" : "60,60,60";
-  const [open, setOpen] = React.useState(expand);
 
-  const [top, setTop] = React.useState(0);
-  const [bottom, setBottom] = React.useState(10);
-  const scrollRefVertical = React.useRef();
-  const scrollRefHorizontal = React.useRef();
+  const [open, setOpen] = useState(expand);
+  const [top, setTop] = useState(0);
+  const [bottom, setBottom] = useState(10);
 
+  const scrollRefVertical = useRef();
+  const scrollRefHorizontal = useRef();
+
+  //function that handles scrolling drawer with buttons
   const handleScroll = (amount) => {
     const ref =
       oriantation == "vertical" ? scrollRefVertical : scrollRefHorizontal;
@@ -136,11 +146,13 @@ export default function MiniDrawer({
     else setBottom(ref.current.scrollWidth - ref.current.clientWidth);
   };
 
+  //handles opening of the drawer
   const handleDrawerOpen = () => {
     setOpen(true);
     onOpen(true);
   };
 
+  //handles closing of the drawer
   const handleDrawerClose = () => {
     setOpen(false);
     onOpen(false);

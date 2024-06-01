@@ -28,6 +28,7 @@ import { Print } from "@mui/icons-material";
 import { useReactToPrint } from "react-to-print";
 import { useTranslation } from "react-i18next";
 
+//shows the receipts data and provides button to select the receipt or show the receipt
 const ReceiptBox = ({ data, onSelect = (receipt) => {} }) => {
   const [showReceipt, setShowReceipt] = useState(false);
   const { t } = useTranslation();
@@ -86,6 +87,7 @@ const ReceiptBox = ({ data, onSelect = (receipt) => {} }) => {
   );
 };
 
+//shows the receipts from the latest sales
 const LastReceipts = forwardRef(({ onSelect = (receipt) => {} }, ref) => {
   const receipts = GetFromLocalStorage("receipts");
 
@@ -112,6 +114,7 @@ const LastReceipts = forwardRef(({ onSelect = (receipt) => {} }, ref) => {
   );
 });
 
+//shows the receipts from the latest sales as dialog
 const ReceiptsDialog = ({
   open,
   onClose = () => {},
@@ -136,6 +139,7 @@ const ReceiptsDialog = ({
   );
 };
 
+//the function that returns the receipt by indicated receipt id
 const findTheReceiptByID = (receiptID) => {
   return GetFromLocalStorage("receipts").find(({ id }) => id == receiptID);
 };
@@ -161,14 +165,19 @@ export default function ItemReturn() {
     receipt: -1,
   });
 
+  //handles the change of product amount
   const handleInputChange = (input) => {
     const amount = input != "" ? input : 0;
+
+    //if this is a product that an offer is applied then must return whole amount of it
     if (selectedProduct.offer) {
       setAlert({
         text: "Kampanya ile alınan ürünün tamamı iade gerektirir",
         type: "error",
       });
-    } else if (amount > selectedProduct.bought) {
+    }
+    //else if amount is more than the amount of that has been bought show an alert
+    else if (amount > selectedProduct.bought) {
       setAlert({ text: "Satın Alınan Sayı Geçildi", type: "error" });
     } else
       setSelectedProducts(
@@ -176,10 +185,12 @@ export default function ItemReturn() {
       );
   };
 
+  //handles printing the return receipt
   const handlePrint = useReactToPrint({
     content: () => returnReceiptRef.current,
   });
 
+  //handles returning the products pushes the return receipt to the storage
   const handleReturn = () => {
     setLoading(true);
     setTimeout(() => {

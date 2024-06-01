@@ -11,15 +11,18 @@ import { Typography } from "@mui/material";
 import { useAlert } from "../Hooks/useAlert";
 import { useTranslation } from "react-i18next";
 
+//the component button for starting and ending a shift
 export default function ShiftButton({ disabled }) {
   const { t } = useTranslation();
   const { setAlert } = useAlert();
+  const { addTimer, getTimerValue, stopTheTimer } = useTimer();
+
   const [loading, setLoading] = useState(false);
   const [shift, setShift] = useState(GetFromSessionStorage("shift"));
 
-  const { addTimer, getTimerValue, stopTheTimer } = useTimer();
   const timer = getTimerValue("shiftTimer");
 
+  //handles if the shift will be started or be finished
   const handleClick = () => {
     setLoading(true);
     let shiftTemp = { ...shift };

@@ -2,6 +2,7 @@ import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
 import { IconButton, Paper, Stack } from "@mui/material";
 import React from "react";
 
+//scroll buttons to scroll the div of given referebce
 export default function ScrollButtons({
   sx,
   scrollRef,

@@ -5,6 +5,7 @@ import {
   isBetweenDates,
 } from "./utilities";
 
+//returns the receipts between indicated string dates
 export const getReceiptsBetweenDates = (beginDate = "", endDate = "") => {
   const bD = getDateFromString(beginDate);
   const eD = getDateFromString(endDate);
@@ -17,6 +18,7 @@ export const getReceiptsBetweenDates = (beginDate = "", endDate = "") => {
   });
 };
 
+//returns an receipt array collapsed by their date
 export const getCollapsedReceiptsByDate = () => {
   const temp = [];
   const receipts = GetFromLocalStorage("receipts");
@@ -32,8 +34,8 @@ export const getCollapsedReceiptsByDate = () => {
   return temp;
 };
 
+//calculates and returns total tax amount of products in the receipt
 export const getTotalTaxOfReceipt = (receipt) => {
-  console.log(receipt);
   return receipt.products
     .map(({ price }) => {
       return getValueByPercentege(price.cashout / 100, price.tax);
@@ -42,6 +44,7 @@ export const getTotalTaxOfReceipt = (receipt) => {
     .toFixed(2);
 };
 
+//returns a tax object which the total taxes are seperated by their percentage
 export const getTaxesFromReceipt = (receipt) => {
   let taxes = { "%1": 0, "%8": 0, "%18": 0 };
   receipt.products.forEach(({ price }) => {

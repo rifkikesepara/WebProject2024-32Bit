@@ -1,9 +1,16 @@
-import { Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+} from "@mui/material";
 import { useTranslation } from "react-i18next";
 
-export default function LastSalesTable(data = []) {
+//the table that shows the latest 4 sales
+export default function LastSalesTable({ data = [] }) {
   const { t } = useTranslation();
-  const temp = [...data.data];
+  const temp = [...data];
   return (
     <Table size="small">
       <TableHead>

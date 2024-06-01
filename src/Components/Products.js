@@ -27,7 +27,9 @@ import LOG from "../Debug/Console";
 import { GetFromLocalStorage, SaveToLocalStorage } from "../Utils/utilities";
 import ScrollButtons from "./ScrollButtons";
 import { useTranslation } from "react-i18next";
+import usePreferences from "../Hooks/usePreferences";
 
+//the array of the data is for categories of the product
 const categories = [
   { name: "favourites", value: "favourites" },
   { name: "all", value: "all" },
@@ -86,20 +88,22 @@ const categories = [
 ];
 
 export default function Products({
-  onSelectProduct = (product) => {},
-  onCount = (amount) => {},
+  onSelectProduct = (product) => {}, //callback function that is executed whenever a product is selected
+  onCount = (amount) => {}, //callback function that is executed whenever category of the products changes to show the amount of the product
 }) {
+  const { theme } = usePreferences();
   const { t } = useTranslation();
-
-  const { products, getAllProducts, getCategorizedProducts, getSubCategories } =
+  const { getAllProducts, getCategorizedProducts, getSubCategories } =
     useProduct();
 
-  const scrollRef = useRef();
-  var tempdata = useRef(GetFromLocalStorage("favourites"));
-  var filteredProducts = useRef(GetFromLocalStorage("favourites"));
   let sortType = -1;
+
+  const scrollRef = useRef();
+  var tempdata = useRef(GetFromLocalStorage("favourites")); //temp data that will be holding the whole raw product datas
+  var filteredProducts = useRef(GetFromLocalStorage("favourites")); //filtered data that will be holding whole filtered product datas
   const productAmount = useRef(GetFromLocalStorage("favourites").length);
 
+  //product data that will be shown on the screen
   const [productsData, setProductsData] = useState(
     GetFromLocalStorage("favourites")
   );
@@ -108,17 +112,19 @@ export default function Products({
 
   const [category, setCategory] = useState();
   const [subCategories, setSubCategories] = useState([]);
-  const [search, setSearch] = useState(true);
+  const [showFilters, setShowFilters] = useState(true);
   const [favourites, setFavourites] = useState(
     GetFromLocalStorage("favourites")
   );
 
+  //clears the products datas
   const clear = () => {
     setSubCategories([]);
     setProductsData([]);
     tempdata.current = [];
     filteredProducts.current = [];
   };
+  //sets the products datas
   const set = (array) => {
     setProductsData(array);
     filteredProducts.current = array;
@@ -126,15 +132,7 @@ export default function Products({
     productAmount.current = array.length;
   };
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     const favourites = GetFromLocalStorage("favourites");
-  //     set(favourites);
-  //     tempdata.current = favourites;
-  //     setFavourites(favourites);
-  //   }, 1000);
-  // }, [products]);
-
+  //handles the selected product
   const selectProduct = (product, addToCart = true) => {
     //adjusting product data to pass into the chekout section
     let data = {
@@ -151,6 +149,7 @@ export default function Products({
     setSelectedProduct(data);
   };
 
+  //filters the product by the input
   const filterProducts = (filter) => {
     LOG("filterProducts", "green");
     let array = [];
@@ -161,6 +160,8 @@ export default function Products({
     set(array);
     sortProducts(sortType);
   };
+
+  //sorts the products by the sort type
   const sortProducts = (type) => {
     LOG("sortProducts", "green");
     var array = [...filteredProducts.current];
@@ -190,6 +191,7 @@ export default function Products({
     setProductsData(array);
   };
 
+  //adding a product to favourites
   const setFavourite = (product) => {
     var array = [...favourites];
     if (!isFavourite(product)) {
@@ -202,6 +204,7 @@ export default function Products({
     SaveToLocalStorage("favourites", array);
   };
 
+  //checking if the product is in favourites
   const isFavourite = (product) => {
     if (
       GetFromLocalStorage("favourites").find(({ id }) => id == product.id) ==
@@ -258,6 +261,7 @@ export default function Products({
     [subCategories]
   );
 
+  //content of the cell of virtualized grid
   const CellContent = (productsData, index) => {
     return (
       <Box
@@ -373,8 +377,9 @@ export default function Products({
     );
   };
 
+  //cell of the virtualized grid
   const Cell = ({ columnIndex, rowIndex, style }) => {
-    //adjusting index as ascending number
+    //adjusting index as ascending numbers
     let index =
       rowIndex != 0 ? columnIndex + rowIndex * 3 : columnIndex + rowIndex;
 
@@ -472,13 +477,13 @@ export default function Products({
             >
               <IconButton
                 sx={{ fontSize: 30 }}
-                onClick={() => setSearch(!search)}
+                onClick={() => setShowFilters(!showFilters)}
               >
                 <FilterList fontSize="inherit" />
               </IconButton>
             </Box>
           </Stack>
-          <FilterBox open={search} />
+          <FilterBox open={showFilters} />
         </Paper>
         {productsData?.length == 0 ? (
           <Box
@@ -530,7 +535,7 @@ export default function Products({
             marginLeft: "auto",
             marginRight: "auto",
             textAlign: "center",
-            boxShadow: "10px 20px 50px 70px " + "background.paper",
+            boxShadow: "10px 20px 50px 70px " + theme.palette.background.paper,
             backgroundColor: "background.paper",
           }}
         >

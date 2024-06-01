@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect } from "react";
 
+//the hook for fetching the data from an API and manipulating data by passing a function
 export default function useData(api, data, fnc = () => {}, dependencies = []) {
   const isArray = Array.isArray(api);
   const array = [];

@@ -5,10 +5,12 @@ import {
   SaveToSessionStorage,
 } from "./utilities";
 
+//returns the calculated price with discount precentage
 const getPriceWithPercentege = (price, percentege) => {
   return (price / 100) * (100 - percentege);
 };
 
+//pushes the used offer to the storage with paramters
 const offerUsed = (offer, payback) => {
   const usedOffers = GetFromSessionStorage("usedOffers");
   const index = usedOffers.indexOf(
@@ -25,6 +27,7 @@ const offerUsed = (offer, payback) => {
   SaveToSessionStorage("usedOffers", usedOffers);
 };
 
+//if offer is not being used anymore removes the offer from storage
 const removeOffer = (id) => {
   const usedOffers = GetFromSessionStorage("usedOffers");
   const index = usedOffers.indexOf(usedOffers.find((data) => data.id === id));
@@ -32,47 +35,57 @@ const removeOffer = (id) => {
   SaveToSessionStorage("usedOffers", usedOffers);
 };
 
+//applies the indicated offer to the product
 const applyOfferToProduct = (offer, product) => {
-  LOG("applyamounttoPRoduct", "blue");
-  let test, discount;
-  test = { ...product, offer: undefined };
+  LOG("applyamounToPRoduct", "blue");
+  let newProduct, discount;
+  newProduct = { ...product, offer: undefined };
 
+  //checking if there is any percentage discount in the offer if there is then applies
   if (offer.discount.split(":")[2] !== undefined) {
     discount =
-      parseInt(test.count / offer.discount.split(":")[0]) *
+      parseInt(newProduct.count / offer.discount.split(":")[0]) *
       offer.discount.split(":")[1] *
-      (test.price.discounted -
+      (newProduct.price.discounted -
         getPriceWithPercentege(
-          test.price.discounted,
+          newProduct.price.discounted,
           offer.discount.split(":")[2]
         ));
   } else {
+    //applying the offer as just amount not with the percentage
     discount =
-      test.price.discounted *
-      (parseInt(test.count / offer.discount.split(":")[0]) *
+      newProduct.price.discounted *
+      (parseInt(newProduct.count / offer.discount.split(":")[0]) *
         offer.discount.split(":")[1]);
   }
-  test.price.cashout -= discount;
+  newProduct.price.cashout -= discount;
 
+  //checking if the minimum amount is proper considering the offer
   if (product.count >= parseInt(offer.discount.split(":")[0])) {
-    if (test.offer?.offerName !== offer.offerName) {
-      test.offer = {
+    if (newProduct.offer?.offerName !== offer.offerName) {
+      //offer is applied to the product first time
+      newProduct.offer = {
         ...offer,
-        offerApplied: parseInt(test.count / offer.discount.split(":")[0]),
+        offerApplied: parseInt(newProduct.count / offer.discount.split(":")[0]),
       };
-      console.log(test.offer);
+      // console.log(test.offer);
     } else {
-      test.offer.offerApplied++;
+      //offer applied multiple times to the product
+      newProduct.offer.offerApplied++;
     }
     offerUsed(offer, discount);
   } else {
-    test.offer = undefined;
+    //offer is not being used anymore
+    newProduct.offer = undefined;
     removeOffer(offer.id);
   }
-  return test;
+
+  //returning the new product's data
+  return newProduct;
 };
 
-export const CheckAndApplyOffer = (product, checkoutData) => {
+//checks if there is an offer for the product and if there is then applies to the product
+export const CheckAndApplyOffer = (product) => {
   LOG("checkandapplyoffer", "orange");
   let temp = { ...product };
   temp.price.cashout = temp.price.discounted * temp.count;
@@ -96,6 +109,6 @@ export const CheckAndApplyOffer = (product, checkoutData) => {
       }
     }
   });
-  console.log(temp);
+  // console.log(temp);
   return temp;
 };

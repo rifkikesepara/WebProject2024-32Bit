@@ -19,6 +19,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import ScrollButtons from "../../Components/ScrollButtons";
 
+//Shift item that shows data about the shift and a button to open detailed information about the shift
 const ShiftBox = ({ data, onSelect = (shift) => {} }) => {
   const { t } = useTranslation();
   const [showReceipt, setShowReceipt] = useState(false);
@@ -78,6 +79,7 @@ const ShiftBox = ({ data, onSelect = (shift) => {} }) => {
   );
 };
 
+//Z-Reports Item that shows the date and a button to open the report
 const ZReportBox = ({ data, onSelect = (zReport) => {} }) => {
   const { t } = useTranslation();
   const [showReport, setShowReport] = useState(false);

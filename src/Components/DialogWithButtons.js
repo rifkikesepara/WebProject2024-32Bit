@@ -41,15 +41,16 @@ const DialogPaper = (props) => {
   );
 };
 
+//custom dialog component that includes scrolling buttons
 export default function DialogWithButtons({
-  children,
-  startAdornment = <></>,
-  endAdornment = <></>,
-  buttons = { startAdornment: <></>, endAdornment: <></> },
+  scrollRef, //the ref of the div that will be scrolled by the scrolling buttons
+  children, //dialog content
   open = true,
-  sx = {},
-  onClose = (e) => {},
-  scrollRef,
+  sx = {}, //styling object
+  startAdornment = <></>, //adding new elements to dialog's start
+  endAdornment = <></>, //adding new elments to dialog's end
+  buttons = { startAdornment: <></>, endAdornment: <></> }, //adding new button to start and end of the scrolling button
+  onClose = (e) => {}, //callback function that is executed whenever dialog is closed
 }) {
   return (
     <Dialog

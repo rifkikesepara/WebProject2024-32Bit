@@ -17,6 +17,8 @@ export default function CardPayment({
   const { t } = useTranslation();
 
   const [state, setState] = useState(0);
+
+  //demonstrating the credit card payment
   const handleClick = () => {
     setState(1);
     setTimeout(() => {

@@ -14,11 +14,7 @@ export const TimerContext = createContext({
 export default function TimerProvider({ children }) {
   const [timers, setTimers] = useState([]);
 
-  useEffect(() => {
-    if (GetFromSessionStorage("timers").length)
-      setTimers(GetFromSessionStorage("timers"));
-  }, []);
-
+  //adding a new timer that has been indicated by a name
   const addTimer = (name) => {
     const timerExists = timers.find(({ timerName }) => timerName == name);
     console.log("Adding Timer: " + name + " - TimerProvider");
@@ -29,6 +25,7 @@ export default function TimerProvider({ children }) {
     setTimers([...temp, { timerName: name, time: 0, stopped: false }]);
   };
 
+  //getting the value object of the timer that has been requested by the timer name
   const getTimerValue = (name) => {
     const timerValue = timers.find(({ timerName }) => timerName == name)?.time;
     // console.log("timerValue: " + timerValue.time);
@@ -52,6 +49,7 @@ export default function TimerProvider({ children }) {
     };
   };
 
+  //stops the timer that has been indicated by its name
   const stopTheTimer = (name) => {
     const timer = timers.find(({ timerName }) => timerName == name);
     const index = timers.indexOf(timer);
@@ -60,6 +58,7 @@ export default function TimerProvider({ children }) {
     setTimers(temp);
   };
 
+  //incrementing the time of the timers that has been intialized
   useEffect(() => {
     const interval = setInterval(() => {
       const temp = [...timers];
@@ -72,6 +71,12 @@ export default function TimerProvider({ children }) {
     SaveToSessionStorage("timers", timers);
     return () => clearInterval(interval);
   }, [timers]);
+
+  //the hook for to keep continue the timers that has been intialized even though the page reloads
+  useEffect(() => {
+    if (GetFromSessionStorage("timers").length)
+      setTimers(GetFromSessionStorage("timers"));
+  }, []);
 
   const values = {
     timers,

@@ -1,3 +1,4 @@
+//returns the name of the day by it's index
 export const getDayString = (index) => {
   switch (index) {
     case 1:
@@ -19,6 +20,7 @@ export const getDayString = (index) => {
   }
 };
 
+//returns the name of the month by it's index
 export const getMonthString = (index) => {
   switch (index) {
     case 0:
@@ -50,14 +52,16 @@ export const getMonthString = (index) => {
   }
 };
 
-export const getDateFromString = (dateStr) => {
+//returns Date object by indicated date string(12.10.2024 12:12)
+export const getDateFromString = (dateStr = "12.10.2024 12:12") => {
   const dateAndTimeStr = dateStr.split(" ");
   const date = dateAndTimeStr[0].split(".");
   const time = dateAndTimeStr[1].split(":");
   return new Date(date[2], date[1] - 1, date[0], time[0], time[1], time[2]);
 };
 
-export function dateDiffInDays(a, b) {
+//calculates the day difference between the dates a and b
+export function dateDiffInDays(a = Date, b = Date) {
   const _MS_PER_DAY = 1000 * 60 * 60 * 24;
   // Discard the time and time-zone information.
   const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
@@ -66,16 +70,23 @@ export function dateDiffInDays(a, b) {
   return Math.floor((utc2 - utc1) / _MS_PER_DAY);
 }
 
-export const isBetweenDates = (startDate, endDate, date) => {
+//checks if the date is between startDate and endDate
+export const isBetweenDates = (
+  startDate = Date,
+  endDate = Date,
+  date = Date
+) => {
   return (
     date.getTime() >= startDate.getTime() && date.getTime() <= endDate.getTime()
   );
 };
 
+//returns the value of the number by the percentage
 export const getValueByPercentege = (value, percentege) => {
   return (value / 100) * percentege;
 };
 
+//returns the new cashout data by changing the amount of indicated product
 export function ChangeProductAmount(amount, product, cashout) {
   const temp = [...cashout];
   const index = temp.findIndex(({ id }) => id === product.id);
