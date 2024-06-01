@@ -215,5 +215,7 @@
   "added": "Eklendi",
   "startTime": "Başlangıç",
   "endTime": "Bitiş",
-  "createReport": "Raporu Oluştur"
+  "createReport": "Raporu Oluştur",
+  "shifts": "Mesailer",
+  "zReports": "Z-Raporları"
 }

@@ -159,7 +159,7 @@ export default function Reports() {
       >
         <Box width={"100%"}>
           <Typography variant="h4" textAlign={"center"} color={"primary"}>
-            Shifts
+            {t("shifts").toUpperCase()}
           </Typography>
           <Paper
             sx={{
@@ -200,7 +200,7 @@ export default function Reports() {
 
         <Box width={"100%"}>
           <Typography variant="h4" textAlign={"center"} color={"primary"}>
-            Z-Reports
+            {t("zReports").toUpperCase()}
           </Typography>
           <Paper
             sx={{
