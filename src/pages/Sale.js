@@ -12,14 +12,14 @@ import {
 import { useNavigate } from "react-router-dom";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import VirtualKeyboard from "../Components/VirtualKeyboard";
 import ProductsDialog from "../Components/ProductsDialog";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import { closeSnackbar, enqueueSnackbar } from "notistack";
 import LOG from "../Debug/Console";
 import CheckoutTable from "../Components/CheckoutTable";
-import { ArrowDownward, ArrowUpward, Done, Info } from "@mui/icons-material";
+import { ArrowDownward, ArrowUpward, Done } from "@mui/icons-material";
 import { useAlert } from "../Hooks/useAlert";
 import useStore from "../Hooks/useStore";
 import useProduct from "../Hooks/useProduct";
@@ -36,7 +36,7 @@ import {
 export default function Sale() {
   const storeInfo = useStore();
   const navigate = useNavigate();
-  const { theme, isDesktop } = usePreferences();
+  const { isDesktop } = usePreferences();
   const { t } = useTranslation();
   const { setAlert } = useAlert();
   const { getAllProducts } = useProduct();
@@ -53,7 +53,7 @@ export default function Sale() {
 
   const addProductToCashout = (productData) => {
     var product = cashout.find(
-      (data) => data.attributes.name == productData.attributes.name
+      (data) => data.attributes.name === productData.attributes.name
     );
     console.log(productData);
     var data = {
@@ -85,12 +85,12 @@ export default function Sale() {
     LOG("deletedSelected", "yellow");
     let array = cashout;
     const usedOffers = GetFromSessionStorage("usedOffers");
-    selectedItems.map((data) => {
-      let index = array.indexOf(cashout.find(({ id }) => id == data));
+    selectedItems.forEach((data) => {
+      let index = array.indexOf(cashout.find(({ id }) => id === data));
       console.log(array[index]);
 
       const isThereOffer = usedOffers.find(
-        ({ id }) => id == array[index].offer?.id
+        ({ id }) => id === array[index].offer?.id
       );
       if (isThereOffer) {
         usedOffers.splice(usedOffers.indexOf(isThereOffer), 1);
@@ -105,7 +105,7 @@ export default function Sale() {
   const changeProductAmount = (amount, product) => {
     let newArray = cashout.map((a) => {
       var returnValue = { ...a };
-      if (a.id == product.id) {
+      if (a.id === product.id) {
         if (amount <= a.stock) {
           returnValue = {
             ...returnValue,
@@ -140,8 +140,8 @@ export default function Sale() {
   };
 
   const barcodeToProduct = () => {
-    getAllProducts().map(({ attributes, id, images, price, stock }) => {
-      if (inputFields.barcode == attributes.barcodes[0]) {
+    getAllProducts().forEach(({ attributes, id, images, price, stock }) => {
+      if (inputFields.barcode === attributes.barcodes[0]) {
         addProductToCashout({
           attributes: attributes,
           id: id,
@@ -156,12 +156,12 @@ export default function Sale() {
 
   useEffect(() => {
     keyboard.current.setInput(inputFields[selectedInputField]);
-  }, [selectedInputField]);
+  }, [inputFields, selectedInputField]);
 
   useEffect(() => {
     // sessionStorage.clear();
     const cachedProducts = [];
-    cashout.map((product) => {
+    cashout.forEach((product) => {
       cachedProducts.push(CheckAndApplyOffer(product, cashout));
     });
     setCashout(cachedProducts);
@@ -176,7 +176,7 @@ export default function Sale() {
         width: "100%",
         overflow: "hidden",
         flexDirection: { sm: "row", md: "row", xs: "column" },
-        backgroundColor: theme.palette.background.default,
+        backgroundColor: "background.default",
       }}
     >
       {isDesktop && (
@@ -185,7 +185,7 @@ export default function Sale() {
             maxWidth: { md: 600, xs: "100%" },
             minWidth: 550,
             height: "100vh",
-            backgroundColor: theme.palette.background.default,
+            backgroundColor: "background.default",
             zIndex: 2,
             display: "flex",
             alignItems: "center",
@@ -201,7 +201,7 @@ export default function Sale() {
               borderBottomRightRadius: { xs: 0, md: 30 },
               // maxHeight: "90vh",
               marginTop: { xs: "auto", md: 0 },
-              backgroundColor: theme.palette.background.paper,
+              backgroundColor: "background.paper",
               overflowY: "hidden",
               width: "100%",
               height: "96%",
@@ -226,7 +226,7 @@ export default function Sale() {
           justifyContent: "center",
           overflowY: "hidden",
           height: "100vh",
-          backgroundColor: theme.palette.background.default,
+          backgroundColor: "background.default",
           zIndex: 2,
         }}
       >
@@ -249,7 +249,7 @@ export default function Sale() {
               sx={{
                 ml: 1,
                 overflow: "hidden",
-                color: theme.palette.text.primary,
+                color: "text.primary",
               }}
             >
               <QrCodeScannerIcon sx={{ fontSize: 40 }} />
@@ -289,7 +289,7 @@ export default function Sale() {
             </IconButton>
             <IconButton
               onClick={deleteSelected}
-              disabled={selectedItems.length == 0 ? true : false}
+              disabled={selectedItems.length === 0 ? true : false}
               aria-label="delete"
               sx={{ fontSize: 40, marginRight: 2 }}
               color="black"
@@ -331,7 +331,7 @@ export default function Sale() {
           flexDirection: "column",
           justifyContent: "space-between",
           alignItems: "center",
-          backgroundColor: theme.palette.background.default,
+          backgroundColor: "background.default",
         }}
       >
         <Box sx={{ marginBlock: "auto" }}>
@@ -356,7 +356,7 @@ export default function Sale() {
               });
             }}
             onKeyDown={(e) => {
-              if (e.key == "Enter") barcodeToProduct();
+              if (e.key === "Enter") barcodeToProduct();
             }}
             InputProps={{
               endAdornment: (
@@ -417,12 +417,12 @@ export default function Sale() {
                 ref={keyboard}
                 layout="cashier"
                 onChangeInput={(input) => {
-                  if (selectedInputField != "") {
+                  if (selectedInputField !== "") {
                     setInputFields({
                       ...inputFields,
                       [selectedInputField]: input,
                     });
-                    if (selectedInputField != "barcode") {
+                    if (selectedInputField !== "barcode") {
                       changeProductAmount(input, selectedProduct);
                     }
                   }
@@ -449,7 +449,7 @@ export default function Sale() {
               <Button
                 disabled={
                   !storeInfo.online ||
-                  cashout.length == 0 ||
+                  cashout.length === 0 ||
                   !GetFromSessionStorage("shift").started
                 }
                 variant="contained"
@@ -473,7 +473,7 @@ export default function Sale() {
           sx={{
             position: "sticky",
             bottom: 0,
-            backgroundColor: theme.palette.background.default,
+            backgroundColor: "background.default",
             width: "100%",
             display: "flex",
             justifyContent: "flex-start",

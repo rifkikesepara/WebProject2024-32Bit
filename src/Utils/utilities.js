@@ -14,6 +14,8 @@ export const getDayString = (index) => {
       return "Saturday";
     case 0:
       return "Sunday";
+    default:
+      break;
   }
 };
 
@@ -43,6 +45,8 @@ export const getMonthString = (index) => {
       return "November";
     case 11:
       return "December";
+    default:
+      break;
   }
 };
 
@@ -74,7 +78,7 @@ export const getValueByPercentege = (value, percentege) => {
 
 export function ChangeProductAmount(amount, product, cashout) {
   const temp = [...cashout];
-  const index = temp.findIndex(({ id }) => id == product.id);
+  const index = temp.findIndex(({ id }) => id === product.id);
   temp[index].count = amount;
   temp[index].price.cashout = temp[index].price.discounted * amount;
   return temp;
@@ -85,7 +89,7 @@ export const SaveToLocalStorage = (item = "", data = JSON) => {
   localStorage.setItem(item, JSON.stringify(data));
 };
 export const GetFromLocalStorage = (item = "") => {
-  if (localStorage.getItem(item) == undefined) {
+  if (localStorage.getItem(item) === undefined) {
     localStorage.setItem(item, JSON.stringify([]));
     return [];
   } else return JSON.parse(localStorage.getItem(item));
@@ -97,7 +101,7 @@ export const SaveToSessionStorage = (item = "", data = JSON) => {
   sessionStorage.setItem(item, JSON.stringify(data));
 };
 export const GetFromSessionStorage = (item = "") => {
-  if (sessionStorage.getItem(item) == undefined) {
+  if (sessionStorage.getItem(item) === undefined) {
     sessionStorage.setItem(item, JSON.stringify([]));
     return [];
   } else return JSON.parse(sessionStorage.getItem(item));

@@ -28,7 +28,7 @@ export const VirtualKeyboard = forwardRef(
     ref
   ) => {
     const { i18n } = useTranslation();
-    const { isThemeDark, theme } = usePreferences();
+    const { isThemeDark } = usePreferences();
     const [state, setState] = useState({ layoutName: "default", input: "" });
     const boxRef = useRef();
 
@@ -111,8 +111,8 @@ export const VirtualKeyboard = forwardRef(
           },
           ".hg-button": {
             ...buttonSX,
-            backgroundColor: theme.palette.background.paper,
-            color: theme.palette.text.primary,
+            backgroundColor: "background.paper",
+            color: "text.primary",
             border: () => {
               if (layout === "default" && isThemeDark) return "1px solid white";
               else if (layout === "default" && !isThemeDark)

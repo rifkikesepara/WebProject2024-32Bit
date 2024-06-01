@@ -1,11 +1,4 @@
-import {
-  Box,
-  MenuItem,
-  Paper,
-  Select,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Box, MenuItem, Paper, Select, Typography } from "@mui/material";
 import { AccountCircle } from "@mui/icons-material";
 import HttpsIcon from "@mui/icons-material/Https";
 import { useState } from "react";
@@ -13,7 +6,6 @@ import { LoadingButton } from "@mui/lab";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import { useAlert } from "../Hooks/useAlert";
-import usePreferences from "../Hooks/usePreferences";
 import TextFieldVK from "../Components/TextFieldVK";
 import useStore from "../Hooks/useStore";
 import { useTranslation } from "react-i18next";
@@ -30,11 +22,9 @@ export default function Login() {
 
   const navigate = useNavigate();
   const storeInfo = useStore();
+  const { setAlert } = useAlert();
 
   const [loading, setLoading] = useState(false);
-
-  const { theme, toggleTheme } = usePreferences();
-  const { setAlert } = useAlert();
 
   const formik = useFormik({
     initialValues: {
@@ -89,9 +79,7 @@ export default function Login() {
         },
         justifyContent: { xs: "center", sm: "center" },
         alignItems: { xs: "center", sm: "center" },
-        backgroundColor: theme.palette.background.default,
-        // backgroundColor: theme.background,
-        // backgroundColor: "#e7ecf1",
+        backgroundColor: "background.default",
       }}
     >
       <Paper

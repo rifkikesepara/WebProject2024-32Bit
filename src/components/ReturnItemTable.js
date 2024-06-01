@@ -104,7 +104,6 @@ export function ReturnItemDialog({
 
 const ReturnItem = forwardRef(
   ({ product, selected, returnable, onSelect = (product) => {} }, ref) => {
-    const { theme } = usePreferences();
     const [showDetail, setShowDetail] = useState(false);
 
     return (
@@ -132,16 +131,12 @@ const ReturnItem = forwardRef(
             justifyContent: "flex-end",
             transition: "transform 0.2s ease", //animation
             boxShadow: "0px 0px 20px -1px rgba(0, 0, 0, 0.3)",
-            backgroundColor: selected
-              ? "green"
-              : theme.palette.background.paper,
+            backgroundColor: selected ? "green" : "background.paper",
             "&:hover": {
               transition: "transform 0.2s ease",
               cursor: "pointer",
               transform: "scale(1.05)",
-              backgroundColor: selected
-                ? "green"
-                : theme.palette.background.paper,
+              backgroundColor: selected ? "green" : "background.paper",
             },
             "@keyframes myEffect": {
               "0%": {
@@ -237,7 +232,6 @@ export const ReturnItemTable = forwardRef(
     },
     ref
   ) => {
-    const { theme } = usePreferences();
     const [selectedItems, setSelectedItems] = useState([]);
     const animationRef = useRef();
     useEffect(() => {
@@ -311,14 +305,14 @@ export const ReturnItemTable = forwardRef(
           overflowX: "hidden",
           justifyContent: "flex-start",
           alignItems: "center",
-          backgroundColor: theme.palette.background.paper,
+          backgroundColor: "background.paper",
         }}
       >
         <Stack
           ref={animationRef}
           sx={{
             width: "100%",
-            backgroundColor: theme.palette.background.paper,
+            backgroundColor: "background.paper",
             pb: 10,
             // paddingInline: 2,
           }}
