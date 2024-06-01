@@ -74,6 +74,7 @@ export default function ButtonGroup({
         </IconButton>
 
         {buttons.map(({ name, value }, index) => {
+          console.log(name);
           return (
             <ToggleButton
               key={index}

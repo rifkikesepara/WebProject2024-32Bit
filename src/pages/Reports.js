@@ -17,8 +17,10 @@ import DialogWithButtons from "../Components/DialogWithButtons";
 import { Print } from "@mui/icons-material";
 import { useReactToPrint } from "react-to-print";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const ShiftBox = ({ data, onSelect = (shift) => {} }) => {
+  const { t } = useTranslation();
   const [showReceipt, setShowReceipt] = useState(false);
 
   return (
@@ -30,10 +32,16 @@ const ShiftBox = ({ data, onSelect = (shift) => {} }) => {
       }}
     >
       <Stack spacing={1}>
-        <Typography>Employee ID: {data.employeeID}</Typography>
+        <Typography>
+          {t("cashierID")}: {data.employeeID}
+        </Typography>
         {/* <Typography>Toplam Tutar: {data.payment.cash}₺</Typography> */}
-        <Typography>Start Time: {data.startTime}</Typography>
-        <Typography>Finish Time: {data.endTime}</Typography>
+        <Typography>
+          {t("startTime")}: {data.startTime}
+        </Typography>
+        <Typography>
+          {t("endTime")}: {data.endTime}
+        </Typography>
         <Button
           variant="contained"
           onClick={() => {
@@ -53,7 +61,7 @@ const ShiftBox = ({ data, onSelect = (shift) => {} }) => {
           onClick={() => onSelect(data)}
           sx={{ paddingBlock: 2 }}
         >
-          Seç
+          {t("choose")}
         </Button>
         <Dialog
           maxWidth="xl"
@@ -71,6 +79,7 @@ const ShiftBox = ({ data, onSelect = (shift) => {} }) => {
 };
 
 const ZReportBox = ({ data, onSelect = (zReport) => {} }) => {
+  const { t } = useTranslation();
   const [showReport, setShowReport] = useState(false);
   const scrollRef = useRef();
   const reportRef = useRef();
@@ -89,7 +98,9 @@ const ZReportBox = ({ data, onSelect = (zReport) => {} }) => {
     >
       <Stack spacing={1}>
         {/* <Typography>Toplam Tutar: {data.payment.cash}₺</Typography> */}
-        <Typography alignSelf={"center"}>Date: {data.date}</Typography>
+        <Typography alignSelf={"center"}>
+          {t("date")}: {data.date}
+        </Typography>
 
         <Button
           color="secondary"
@@ -97,10 +108,11 @@ const ZReportBox = ({ data, onSelect = (zReport) => {} }) => {
           onClick={() => {
             setShowReport(true);
             onSelect(data);
+            console.log(data);
           }}
           sx={{ paddingBlock: 2 }}
         >
-          Raporu oluştur
+          {t("createReport")}
         </Button>
         <DialogWithButtons
           scrollRef={scrollRef}
@@ -126,6 +138,7 @@ const ZReportBox = ({ data, onSelect = (zReport) => {} }) => {
 };
 
 export default function Reports() {
+  const { t } = useTranslation();
   const shifts = GetFromLocalStorage("shifts");
   const navigate = useNavigate();
 
@@ -166,7 +179,7 @@ export default function Reports() {
               <Stack direction={"row"} justifyContent={"space-evenly"}>
                 <TextFieldVK divSX={{ width: "50%" }} />
                 <Button sx={{ maxWidth: 200 }} variant="contained">
-                  Giriş
+                  {t("enter")}
                 </Button>
               </Stack>
             </Paper>
@@ -206,7 +219,7 @@ export default function Reports() {
               <Stack direction={"row"} justifyContent={"space-evenly"}>
                 <TextFieldVK divSX={{ width: "50%" }} />
                 <Button sx={{ maxWidth: 200 }} variant="contained">
-                  Giriş
+                  {t("enter")}
                 </Button>
               </Stack>
             </Paper>
@@ -230,7 +243,7 @@ export default function Reports() {
         onClick={() => navigate("../home")}
         sx={{ width: 400, height: 60 }}
       >
-        Geri Dön
+        {t("goBack")}
       </Button>
     </Stack>
   );

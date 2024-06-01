@@ -132,7 +132,7 @@ export default function PaymentResult() {
               {t("creditCard").toUpperCase()}: {payment.card}₺
             </Typography>
             <Typography sx={{ fontSize: 20 }}>
-              PARA ÜSTÜ: {payment.change}₺
+              {t("change").toUpperCase()}: {payment.change}₺
             </Typography>
           </Paper>
         </Box>

@@ -36,60 +36,61 @@ import LOG from "../Debug/Console";
 import usePreferences from "../Hooks/usePreferences";
 import { GetFromLocalStorage, SaveToLocalStorage } from "../Utils/utilities";
 import ScrollButtons from "./ScrollButtons";
+import { useTranslation } from "react-i18next";
 
 const categories = [
-  { name: "Favoriler", value: "favourites" },
-  { name: "Tüm Ürünler", value: "all" },
+  { name: "favourites", value: "favourites" },
+  { name: "all", value: "all" },
   {
-    name: "Fırın Ürünleri",
+    name: "bakery",
     value: "C02",
   },
   {
-    name: "Kahvaltılık",
+    name: "breakfast",
     value: "C05",
   },
   {
-    name: "Meyve ve Sebzeler",
+    name: "fruit-vegetables",
     value: "C01",
   },
   {
-    name: "Elektronik",
+    name: "electronics",
     value: "C18",
   },
   {
-    name: "Et ve Balık",
+    name: "meat-fish",
     value: "C04",
   },
   {
-    name: "Atıştırmalıklar",
+    name: "junkFood",
     value: "C06",
   },
   {
-    name: "Dondurmalar",
+    name: "icecream",
     value: "C09",
   },
   {
-    name: "Kişisel Bakım",
+    name: "bodyCareStuff",
     value: "C12",
   },
   {
-    name: "Tatlılar",
+    name: "desert",
     value: "C03",
   },
   {
-    name: "Dondurlumuş Yiyecekler",
+    name: "fastFood",
     value: "C10",
   },
   {
-    name: "İçecekler",
+    name: "drinks",
     value: "C08",
   },
   {
-    name: "Temel Gıdalar",
+    name: "basicGrocery",
     value: "C07",
   },
   {
-    name: "Temizlik",
+    name: "cleaningStuff",
     value: "C11",
   },
 ];
@@ -98,6 +99,7 @@ export default function Products({
   onSelectProduct = (product) => {},
   onCount = (amount) => {},
 }) {
+  const { t } = useTranslation();
   const { theme } = usePreferences();
 
   const { products, getAllProducts, getCategorizedProducts, getSubCategories } =
@@ -243,7 +245,7 @@ export default function Products({
           }}
         >
           <TextFieldVK
-            placeholder="Ürün Ara"
+            placeholder={t("searchProduct")}
             inputSX={{ boxSizing: "inherit", height: "100%" }}
             onChange={(e, value) => filterProducts(value)}
             startAdornment={<Search />}
@@ -256,11 +258,11 @@ export default function Products({
               sortProducts(e.target.value);
             }}
           >
-            <MenuItem value={-1}>None</MenuItem>
-            <MenuItem value={0}>Fiyat Artan</MenuItem>
-            <MenuItem value={1}>Fiyat Azalan</MenuItem>
+            <MenuItem value={-1}>{t("none")}</MenuItem>
+            <MenuItem value={0}>{t("increasingPrice")}</MenuItem>
+            <MenuItem value={1}>{t("decreasingPrice")}</MenuItem>
             <MenuItem value={2}>A-Z</MenuItem>
-            <MenuItem value={3}>Favoriler</MenuItem>
+            <MenuItem value={3}>{t("favourites")}</MenuItem>
           </Select>
         </Box>
       );

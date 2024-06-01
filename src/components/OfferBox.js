@@ -16,6 +16,7 @@ import {
   SaveToLocalStorage,
 } from "../Utils/utilities";
 import DialogWithButtons from "./DialogWithButtons";
+import { useTranslation } from "react-i18next";
 
 export const UsedOffersDialog = ({ open, onClose = () => {} }) => {
   return (
@@ -48,6 +49,7 @@ export const OffersDialog = ({
   readOnly = false,
 }) => {
   const scrollRef = useRef();
+  const { t } = useTranslation();
 
   const [offers, setOffers] = useState(GetFromLocalStorage("offers"));
   const changeActiveOffers = (offer, active) => {
@@ -66,7 +68,7 @@ export const OffersDialog = ({
       sx={{ width: "50%" }}
     >
       <Stack paddingBlock={3} justifyContent={"center"} alignItems={"center"}>
-        <Typography variant="h4">Teklifler</Typography>
+        <Typography variant="h4">{t("offers")}</Typography>
         <Box
           ref={scrollRef}
           sx={{

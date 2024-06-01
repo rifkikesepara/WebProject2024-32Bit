@@ -21,6 +21,7 @@ import ProductDetail from "./ProductDetail";
 import { forwardRef, useEffect, useMemo, useRef, useState } from "react";
 import DialogWithButtons from "./DialogWithButtons";
 import { ReceiptWithScrollButtons } from "./Receipt";
+import { useTranslation } from "react-i18next";
 
 export function ReturnItemDialog({
   open = false,
@@ -29,6 +30,7 @@ export function ReturnItemDialog({
   onSelected = (items) => {},
   onDone = (items) => {},
 }) {
+  const { t } = useTranslation();
   const [selectedItems, setSelectedItems] = useState([]);
   const scrollRef = useRef();
   const { isDesktop } = usePreferences();
@@ -75,7 +77,7 @@ export function ReturnItemDialog({
         elevation={3}
       >
         <Typography fontSize={20} textAlign={"center"}>
-          Select Items To Return
+          {t("selectItemsToReturn")}
         </Typography>
       </Paper>
       <ReturnItemTable
@@ -96,7 +98,7 @@ export function ReturnItemDialog({
         }}
         onClick={handleClick}
       >
-        Return the Items
+        {t("returnTheItems")}
       </Button>
     </DialogWithButtons>
   );
@@ -264,7 +266,7 @@ export const ReturnItemTable = forwardRef(
     function alreadyReturnedItems() {
       const temp = [];
       GetFromLocalStorage("returnReceipts")
-        .map((returnReceipt) => {
+        .filter((returnReceipt) => {
           if (returnReceipt.receiptID == receipt.id) return returnReceipt;
         })
         .map(({ returnedItems }) => {

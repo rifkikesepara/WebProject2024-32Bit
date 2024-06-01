@@ -62,7 +62,7 @@ const menuItems = [
     },
   },
   {
-    name: "returnitems",
+    name: "returnItems",
     icon: (
       <UndoIcon
         sx={{
@@ -148,7 +148,7 @@ const menuItems = [
     ),
   },
   {
-    name: "Settings",
+    name: "settings",
     icon: (
       <SettingsIcon
         sx={{
@@ -163,7 +163,7 @@ const menuItems = [
     path: "../settings",
   },
   {
-    name: "Logout",
+    name: "logout",
     icon: (
       <LogoutIcon
         sx={{
@@ -356,9 +356,11 @@ export default function Dashboard() {
                     {storeInfo.online ? t("storeOnline") : t("storeOffline")}
                   </Typography>
                 </Box>
-                <Typography>Version: {storeInfo.version}</Typography>
+                <Typography>
+                  {t("version")}: {storeInfo.version}
+                </Typography>
                 <Typography sx={{ display: { xs: "none", md: "block" } }}>
-                  Last Login: {employee.loginTime.split(" ")[0]}{" "}
+                  {t("lastLogin")}: {employee.loginTime.split(" ")[0]}{" "}
                   {employee.loginTime.split(" ")[1].split(":")[0]}
                   {":"}
                   {employee.loginTime.split(" ")[1].split(":")[1]}
@@ -381,7 +383,9 @@ export default function Dashboard() {
               <Stack
                 sx={{ position: "absolute", right: 15, alignItems: "center" }}
               >
-                <Typography>CashierID: {employee.employeeID}</Typography>
+                <Typography>
+                  {t("cashierID")}: {employee.employeeID}
+                </Typography>
                 <ShiftButton disabled={!storeInfo.online} />
               </Stack>
             </Paper>
@@ -439,7 +443,7 @@ export default function Dashboard() {
                     labelStyle: { fontWeight: "bold", fontSize: 20 },
                     dataKey: "amount",
                     // data: chartData.map(({ amount }) => amount),
-                    valueFormatter: (v) => v + "TL",
+                    valueFormatter: (v) => v + "₺",
                     disableLine: true,
                   },
                 ]}
@@ -459,7 +463,7 @@ export default function Dashboard() {
                     showMark: false,
                     // data: chartData.map(({ amount }) => amount),
 
-                    valueFormatter: (v) => "Total: " + v + "TL",
+                    valueFormatter: (v) => t("total") + ": " + v + "TL",
                   },
                 ]}
                 sx={{
@@ -516,7 +520,8 @@ export default function Dashboard() {
                   {total}₺
                 </Typography>
                 <Typography sx={{}}>
-                  {date.getDate()} {getMonthString(date.getMonth())}{" "}
+                  {date.getDate()}{" "}
+                  {t(getMonthString(date.getMonth()).toLocaleLowerCase())}{" "}
                   {date.getFullYear()}
                 </Typography>
               </Box>

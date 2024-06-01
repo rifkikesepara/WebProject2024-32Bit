@@ -37,8 +37,9 @@ export const ZReport = forwardRef(({ data }, ref) => {
       income += receipt.payment.cash;
       outcome += parseFloat(receipt.payment.change);
       total +=
-        receipt.payment.card + (receipt.payment.cash - receipt.payment.change);
-      totalCard += receipt.payment.card;
+        parseFloat(receipt.payment.card) +
+        (parseFloat(receipt.payment.cash) - parseFloat(receipt.payment.change));
+      totalCard += parseFloat(receipt.payment.card);
       taxes["%1"] += getTaxesFromReceipt(receipt)["%1"];
       taxes["%8"] += getTaxesFromReceipt(receipt)["%8"];
       taxes["%18"] += getTaxesFromReceipt(receipt)["%18"];
@@ -187,7 +188,9 @@ export const ZReport = forwardRef(({ data }, ref) => {
       />
       <Section
         title="Kredi Kartı"
-        data={[{ header: "TOPLAM:", value: calculated.totalCard + "₺" }]}
+        data={[
+          { header: "TOPLAM:", value: calculated.totalCard.toFixed(2) + "₺" },
+        ]}
       />
       <Divider
         sx={{ width: "100%", borderColor: "text.primary", mt: 2, mb: 1 }}
@@ -204,7 +207,7 @@ export const ZReport = forwardRef(({ data }, ref) => {
           TOPLAM CİRO
         </Typography>
         <Typography fontSize={"inherit"} fontWeight={"inherit"}>
-          {calculated.total.toFixed(2) + "₺"}
+          {calculated.total + calculated.totalCard + "₺"}
         </Typography>
       </Stack>
     </Stack>
