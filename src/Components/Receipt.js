@@ -24,17 +24,15 @@ export const ReceiptWithScrollButtons = forwardRef(
   }
 );
 
-export const ReturnReceipt = forwardRef(({ sx, returnedItems = [] }, ref) => {
+export const ReturnReceipt = forwardRef(({ sx, receiptData }, ref) => {
   const { t } = useTranslation();
-  console.log(returnedItems);
-  // const date = returnedItems.date.split(" ")[0].split(".");
-  // const time = returnedItems.date.split(" ")[1].split(":");
+  console.log(receiptData);
 
   const total = useMemo(() => {
     let total = 0;
-    returnedItems.products.map(({ price }) => (total += price.cashout));
+    receiptData.products.map(({ price }) => (total += price.cashout));
     return total / 100;
-  }, [returnedItems]);
+  }, [receiptData]);
 
   return (
     <Box
@@ -70,18 +68,17 @@ export const ReturnReceipt = forwardRef(({ sx, returnedItems = [] }, ref) => {
         }}
       >
         <Box>
-          <Typography>{returnedItems?.date.toLocaleDateString()}</Typography>
+          <Typography>{receiptData?.date.toLocaleDateString()}</Typography>
           <Typography>
-            {t("time").toUpperCase()}:{" "}
-            {returnedItems?.date.toLocaleTimeString()}
+            {t("time").toUpperCase()}: {receiptData?.date.toLocaleTimeString()}
           </Typography>
         </Box>
         <Typography>
-          {t("receiptID")}: {returnedItems.receipt.id}
+          {t("receiptID")}: {receiptData.receipt.id}
         </Typography>
       </Box>
       <Box mt={3} width={"100%"}>
-        {returnedItems.products.map(({ attributes, price, count }, index) => {
+        {receiptData.products.map(({ attributes, price, count }, index) => {
           return (
             <Box
               key={index}

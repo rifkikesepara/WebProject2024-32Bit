@@ -52,13 +52,13 @@ export default function Theme({ children }) {
   return (
     <ThemeContext.Provider value={preferences}>
       <ThemeProvider theme={theme}>
-        <Switch
+        {/* <Switch
           checked={isThemeDark}
           sx={{ position: "absolute", right: 0, zIndex: 1000 }}
           onChange={(e, checked) => {
             toggleTheme();
           }}
-        />
+        /> */}
 
         {children}
       </ThemeProvider>

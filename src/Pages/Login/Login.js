@@ -22,6 +22,7 @@ export default function Login() {
 
   const navigate = useNavigate();
   const storeInfo = useStore();
+  console.log(storeInfo);
   const { setAlert } = useAlert();
 
   const [loading, setLoading] = useState(false);
@@ -150,7 +151,9 @@ export default function Login() {
             alignItems: "center",
           }}
         >
-          <Typography>Version {storeInfo.version}</Typography>
+          <Typography>
+            {t("version")} {storeInfo.version}
+          </Typography>
           <Select
             value={localStorage.getItem("language")}
             onChange={(e) => {

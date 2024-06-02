@@ -10,6 +10,7 @@ import {
   Paper,
   Divider,
   Tooltip,
+  Stack,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
@@ -31,12 +32,16 @@ import {
   SaveToLocalStorage,
   SaveToSessionStorage,
 } from "../../Utils/utilities";
+import ShiftButton from "../../Components/Shift";
+import useStore from "../../Hooks/useStore";
 
 export default function Payment() {
   const { isDesktop } = usePreferences();
   const { t } = useTranslation();
   const navigate = useNavigate();
   const { setAlert } = useAlert();
+  const storeInfo = useStore();
+
   const keyboard = useRef();
   const checkoutRef = useRef();
 
@@ -490,18 +495,27 @@ export default function Payment() {
             zIndex: 1,
           }}
         >
-          <div
-            style={{
-              marginLeft: 10,
-              height: 15,
-              width: 15,
-              backgroundColor: "green",
-              // boxShadow: "0px 0px 8px 0.5px green",
-              borderRadius: 200,
-              marginRight: 10,
-            }}
-          ></div>
-          <Typography color={"primary"}>{t("storeOnline")}</Typography>
+          <Stack width={"100%"} justifyContent={"space-between"}>
+            <Stack justifyContent={"space-between"} direction={"row"}>
+              <Stack direction={"row"} alignItems={"center"}>
+                <div
+                  style={{
+                    marginLeft: 10,
+                    height: 15,
+                    width: 15,
+                    backgroundColor: storeInfo.online ? "green" : "red",
+                    borderRadius: 200,
+                    marginRight: 10,
+                  }}
+                ></div>
+                <Typography color={"primary"}>{t("storeOnline")}</Typography>
+              </Stack>
+              <Typography marginRight={1} color={"primary"} fontWeight={"bold"}>
+                {t("cashierID")}: {GetFromSessionStorage("employee").employeeID}
+              </Typography>
+            </Stack>
+            <ShiftButton disabled={true} />
+          </Stack>
         </Box>
       </Box>
     </Box>

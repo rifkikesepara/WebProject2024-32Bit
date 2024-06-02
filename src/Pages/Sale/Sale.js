@@ -12,7 +12,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import VirtualKeyboard from "../../Components/VirtualKeyboard";
 import ProductsDialog from "../../Components/ProductsDialog";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
@@ -32,6 +32,8 @@ import {
   GetFromSessionStorage,
   SaveToSessionStorage,
 } from "../../Utils/utilities";
+import useTimer from "../../Hooks/useTimer";
+import ShiftButton from "../../Components/Shift";
 
 export default function Sale() {
   const storeInfo = useStore();
@@ -485,27 +487,26 @@ export default function Sale() {
             zIndex: 1,
           }}
         >
-          <Stack
-            direction={"row"}
-            width={"100%"}
-            justifyContent={"space-between"}
-          >
-            <Stack direction={"row"} alignItems={"center"}>
-              <div
-                style={{
-                  marginLeft: 10,
-                  height: 15,
-                  width: 15,
-                  backgroundColor: storeInfo.online ? "green" : "red",
-                  borderRadius: 200,
-                  marginRight: 10,
-                }}
-              ></div>
-              <Typography color={"primary"}>{t("storeOnline")}</Typography>
+          <Stack width={"100%"} justifyContent={"space-between"}>
+            <Stack justifyContent={"space-between"} direction={"row"}>
+              <Stack direction={"row"} alignItems={"center"}>
+                <div
+                  style={{
+                    marginLeft: 10,
+                    height: 15,
+                    width: 15,
+                    backgroundColor: storeInfo.online ? "green" : "red",
+                    borderRadius: 200,
+                    marginRight: 10,
+                  }}
+                ></div>
+                <Typography color={"primary"}>{t("storeOnline")}</Typography>
+              </Stack>
+              <Typography marginRight={1} color={"primary"} fontWeight={"bold"}>
+                {t("cashierID")}: {GetFromSessionStorage("employee").employeeID}
+              </Typography>
             </Stack>
-            <Typography marginRight={1} color={"primary"} fontWeight={"bold"}>
-              {t("cashierID")}: {GetFromSessionStorage("employee").employeeID}
-            </Typography>
+            <ShiftButton disabled={true} />
           </Stack>
         </Box>
       </Box>

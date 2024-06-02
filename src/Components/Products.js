@@ -313,9 +313,6 @@ export default function Products({
               productsData[index].price.discounted && (
               <Typography
                 sx={{
-                  color:
-                    productsData[index].price.normal !=
-                      productsData[index].price.discounted && "green",
                   fontWeight: "bold",
                   mr: 1,
                 }}
@@ -327,7 +324,7 @@ export default function Products({
               sx={{
                 color:
                   productsData[index].price.normal !=
-                    productsData[index].price.discounted && "red",
+                    productsData[index].price.discounted && "text.discount",
                 fontWeight: "bold",
                 textDecoration:
                   productsData[index].price.normal !=

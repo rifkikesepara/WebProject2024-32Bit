@@ -9,6 +9,9 @@ export const TimerContext = createContext({
   addTimer: (name = "") => {},
   getTimerValue: (name) => ({ hours: 0, minutes: 0, seconds: 0 }),
   stopTheTimer: (name) => {},
+  isStopped: (name) => {
+    return false;
+  },
 });
 
 export default function TimerProvider({ children }) {
@@ -60,6 +63,14 @@ export default function TimerProvider({ children }) {
     setTimers(temp);
   };
 
+  const isStopped = (name) => {
+    const timer = timers.find(({ timerName }) => timerName == name);
+    if (timer) {
+      if (timer.stopped) return true;
+      else return false;
+    }
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       const temp = [...timers];
@@ -78,6 +89,7 @@ export default function TimerProvider({ children }) {
     addTimer,
     getTimerValue,
     stopTheTimer,
+    isStopped,
   };
 
   return (

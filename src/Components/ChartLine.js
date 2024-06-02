@@ -52,7 +52,7 @@ export default function ChartLine({ chartData }) {
           disableHighlight: true,
           data: chartData.map(({ amount }) => amount),
           color: "yellow",
-          valueFormatter: (v) => t("discounts") + ": " + v.toFixed(2) + "₺",
+          valueFormatter: (v) => t("discounts") + ": " + v?.toFixed(2) + "₺",
         },
         {
           dataKey: "payback",
@@ -61,7 +61,7 @@ export default function ChartLine({ chartData }) {
           disableHighlight: true,
           data: chartData.map(({ amount }) => amount),
           color: "yellow",
-          valueFormatter: (v) => t("campaigns") + ": " + v.toFixed(2) + "₺",
+          valueFormatter: (v) => t("campaigns") + ": " + v?.toFixed(2) + "₺",
         },
         {
           dataKey: "amount",
@@ -70,7 +70,7 @@ export default function ChartLine({ chartData }) {
           color: "#72ccff",
           // data: chartData.map(({ amount }) => amount),
 
-          valueFormatter: (v) => t("total") + ": " + v.toFixed(2) + "₺",
+          valueFormatter: (v) => t("total") + ": " + v?.toFixed(2) + "₺",
         },
       ]}
       sx={{

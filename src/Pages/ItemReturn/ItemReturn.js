@@ -384,7 +384,7 @@ export default function ItemReturn() {
           <Paper>
             <ReturnReceipt
               ref={returnReceiptRef}
-              returnedItems={{
+              receiptData={{
                 receipt: returnItemDialog.receipt,
                 date: new Date(),
                 products: selectedProducts,
