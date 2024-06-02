@@ -1,0 +1,71 @@
+.hg-theme-default {
+  width: 100%;
+}
+
+.hg-button.hg-red {
+  background: rgb(255, 0, 0, 0.7);
+  color: white;
+  border: none;
+}
+
+/* .hg-theme-default .hg-button {
+  max-height: 100px;
+} */
+
+.simple-keyboard.hg-layout-default .hg-button {
+  min-height: 80px;
+  /* width: 80px; */
+}
+
+.simple-keyboard.hg-layout-numeric .hg-button {
+  min-height: 90px;
+  min-width: 110px;
+  max-width: 140px;
+  box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.3);
+  /* font-weight: bold; */
+  font-size: 30px;
+  /* box-shadow: none; */
+  /*outlined*/
+  /* border: 1px solid black; */
+  /* border: none; */
+}
+
+.simple-keyboard.hg-layout-numeric {
+  /* width: 300px; */
+  background-color: transparent;
+}
+
+.simple-keyboard.hg-layout-default {
+  /* width: 300px; */
+  background-color: transparent;
+}
+
+/*
+  Theme: myTheme1
+*/
+
+.simple-keyboard.myTheme1 .hg-button {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2a2a2a;
+  color: white;
+  border: 0.5px solid white;
+  /* box-shadow: 0px 0px 4px -1px rgba(255, 255, 255, 0.3); */
+  /* border: none; */
+}
+
+.simple-keyboard.myTheme1 .hg-button:active {
+  background: #1c4995;
+  color: white;
+}
+
+.simple-keyboard.myTheme1 .hg-button.hg-red {
+  background-color: red;
+  border: none;
+}
+
+#root .simple-keyboard.myTheme1 + .simple-keyboard-preview {
+  background: #1c4995;
+}

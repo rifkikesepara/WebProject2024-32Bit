@@ -1,0 +1,15 @@
+{
+  "fruit-vegetables": "./products/meyve-sebze.json",
+  "meat-fish": "./products/et-balik-tavuk.json",
+  "breakfast": "./products/suturunleri-kahvaltilik.json",
+  "bakery": "./products/firindan.json",
+  "basicGrocery": "./products/temelgida.json",
+  "junkFood": "./products/atistirmalik.json",
+  "drinks": "./products/icecek.json",
+  "fastFood": "./products/donuk-hazir-yemekler.json",
+  "desert": "./products/tatli.json",
+  "icecream": "./products/dondurma.json",
+  "cleaningStuff": "./products/temizlik-urunleri.json",
+  "bodyCareStuff": "./products/kisisel-bakim.json",
+  "electronics": "./products/elektronik.json"
+}

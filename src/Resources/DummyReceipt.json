@@ -1,0 +1,403 @@
+{
+  "id": 0,
+  "date": "01.06.2024 16:49:15",
+  "products": [
+    {
+      "id": "11002425",
+      "attributes": {
+        "returnDay": 15,
+        "collections": ["aldin-aldin-gida"],
+        "brand": "B O Ş",
+        "HEMEN_maxQty": 8,
+        "categoryRank": 503000,
+        "netWeight": 1012,
+        "depolamaKosulu": "Gıda",
+        "name": "Yumurta L Boy 15'li ",
+        "SLOT_minQty": 1,
+        "salesUnitOfMeasure": "ADT",
+        "HEMEN_minQty": 1,
+        "seoUrl": "https://www.a101.com.tr/kapida/ramazan/yumurta-l-boy-15li-_p-11002425",
+        "baseUnitOfMeasure": "ADT",
+        "SLOT_maxQty": 10,
+        "nitelikAdi": "Regüler",
+        "barcodes": [
+          "2060000108555",
+          "8697445064029",
+          "8699383750019",
+          "8682811605814",
+          "8698573420220",
+          "8683880472130",
+          "8697550050290",
+          "8693944190290",
+          "8697853270067",
+          "8697853270326",
+          "8681469068354",
+          "8694293060111",
+          "8699956030388",
+          "8699856330069",
+          "8699316990116",
+          "8697831790075",
+          "8697581700010",
+          "8697461552371",
+          "8697409380059",
+          "8697048001308",
+          "8695895101738",
+          "8693880060718",
+          "8698445090193",
+          "8699158210014",
+          "8697435860235",
+          "8695905000228",
+          "8681682009516",
+          "8680734284062",
+          "8691365000099",
+          "8691365000174",
+          "8697880560605",
+          "8697581700591",
+          "8692510600331",
+          "8699425632228",
+          "8692196000142"
+        ],
+        "grossWeight": 1062,
+        "stepper": 1,
+        "hediye": true
+      },
+      "images": [
+        {
+          "id": "yerliUretim",
+          "isExternal": false,
+          "imageType": "badge",
+          "tags": [],
+          "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+        },
+        {
+          "id": "V-X10Fn3x-",
+          "isExternal": false,
+          "imageType": "product",
+          "tags": [],
+          "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/V-X10Fn3x-_256x256.png"
+        }
+      ],
+      "price": {
+        "normal": 5500,
+        "normalStr": "₺55,00",
+        "discounted": 5500,
+        "discountedStr": "₺55,00",
+        "tax": 8,
+        "cashout": 11000
+      },
+      "stock": 47,
+      "count": 3,
+      "offer": {
+        "id": 1,
+        "offerName": "Yumurta 3 Al 2 Öde",
+        "productID": 11002425,
+        "categoryID": null,
+        "type": "amount",
+        "discount": "3:1",
+        "activated": true,
+        "offerApplied": 1
+      }
+    },
+    {
+      "id": "20000761",
+      "attributes": {
+        "returnDay": 3,
+        "collections": ["", "seciliurunler"],
+        "HEMEN_maxWeight": 7500,
+        "HEMEN_minWeight": 500,
+        "brand": null,
+        "categoryRank": 102002,
+        "netWeight": 1000,
+        "depolamaKosulu": "Meyve-Sebze",
+        "name": "Domates Kg",
+        "salesUnitOfMeasure": "KG",
+        "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/domates-kg_p-20000761",
+        "baseUnitOfMeasure": "KG",
+        "nitelikAdi": "Regüler",
+        "SLOT_minWeight": 500,
+        "barcodes": ["2060000001436", "2890642", "2920761"],
+        "grossWeight": 1000,
+        "stepper": 100,
+        "SLOT_maxWeight": 10000,
+        "hediye": true
+      },
+      "images": [
+        {
+          "id": "yerliUretim",
+          "isExternal": false,
+          "imageType": "badge",
+          "tags": [],
+          "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+        },
+        {
+          "id": "0YOQeAIoZ0",
+          "isExternal": false,
+          "imageType": "product",
+          "tags": [],
+          "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/0YOQeAIoZ0_256x256.png"
+        }
+      ],
+      "price": {
+        "normal": 3875,
+        "normalStr": "₺38,75",
+        "discounted": 2995,
+        "discountedStr": "₺29,95",
+        "discountRate": 23,
+        "discountRateStr": "%23 İNDİRİM",
+        "tax": 8,
+        "cashout": 2995
+      },
+      "stock": 26000,
+      "count": 1
+    },
+    {
+      "id": "20000794",
+      "attributes": {
+        "returnDay": 3,
+        "collections": ["seciliurunler"],
+        "HEMEN_maxWeight": 7500,
+        "HEMEN_minWeight": 500,
+        "brand": null,
+        "categoryRank": 102000,
+        "netWeight": 1000,
+        "depolamaKosulu": "Meyve-Sebze",
+        "name": "Patates Kg",
+        "salesUnitOfMeasure": "KG",
+        "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/patates-kg_p-20000794",
+        "baseUnitOfMeasure": "KG",
+        "nitelikAdi": "Regüler",
+        "SLOT_minWeight": 500,
+        "barcodes": ["2060000002105", "2920794"],
+        "grossWeight": 1000,
+        "stepper": 100,
+        "SLOT_maxWeight": 10000,
+        "hediye": true
+      },
+      "images": [
+        {
+          "id": "yerliUretim",
+          "isExternal": false,
+          "imageType": "badge",
+          "tags": [],
+          "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+        },
+        {
+          "id": "e6oHnfxd91",
+          "isExternal": false,
+          "imageType": "product",
+          "tags": [],
+          "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/e6oHnfxd91_256x256.png"
+        }
+      ],
+      "price": {
+        "normal": 1975,
+        "normalStr": "₺19,75",
+        "discounted": 1550,
+        "discountedStr": "₺15,50",
+        "discountRate": 22,
+        "discountRateStr": "%22 İNDİRİM",
+        "tax": 8,
+        "cashout": 1550
+      },
+      "stock": 218000,
+      "count": 1
+    },
+    {
+      "id": "20000023",
+      "attributes": {
+        "returnDay": 3,
+        "collections": ["seciliurunler"],
+        "brand": null,
+        "HEMEN_maxQty": 8,
+        "categoryRank": 102004,
+        "netWeight": 300,
+        "depolamaKosulu": "Meyve-Sebze",
+        "name": "Çarliston Biber Paket 300 Gr",
+        "SLOT_minQty": 1,
+        "salesUnitOfMeasure": "ADT",
+        "HEMEN_minQty": 1,
+        "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/carliston-biber-paket-300-gr_p-20000023",
+        "baseUnitOfMeasure": "ADT",
+        "SLOT_maxQty": 10,
+        "nitelikAdi": "Regüler",
+        "barcodes": [
+          "2703173003455",
+          "2703173003608",
+          "2000220",
+          "2060000191939"
+        ],
+        "grossWeight": 500,
+        "stepper": 1,
+        "hediye": true
+      },
+      "images": [
+        {
+          "id": "yerliUretim",
+          "isExternal": false,
+          "imageType": "badge",
+          "tags": [],
+          "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+        },
+        {
+          "id": "YXqDTE6PbB",
+          "isExternal": false,
+          "imageType": "product",
+          "tags": [],
+          "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/YXqDTE6PbB_256x256.png"
+        }
+      ],
+      "price": {
+        "normal": 2495,
+        "normalStr": "₺24,95",
+        "discounted": 1750,
+        "discountedStr": "₺17,50",
+        "discountRate": 30,
+        "discountRateStr": "%30 İNDİRİM",
+        "tax": 8,
+        "cashout": 1750
+      },
+      "stock": 42,
+      "count": 1
+    },
+    {
+      "id": "20000026",
+      "attributes": {
+        "returnDay": 3,
+        "incrementInfo": "<!DOCTYPE html>\r\r\r\r\r\r\r\r\r\r\r\r\r\n<html>\r\r\r\r\r\r\r\r\r\r\r\r\r\n<head>\r\r\r\r\r\r\r\r\r\r\r\r\r\n</head>\r\r\r\r\r\r\r\r\r\r\r\r\r\n<body>\r\r\r\r\r\r\r\r\r\r\r\r\r\n\r\r\r\r\r\r\r\r\r\r\r\r\r\n</body>\r\r\r\r\r\r\r\r\r\r\r\r\r\n</html>",
+        "collections": ["seciliurunler"],
+        "brand": null,
+        "HEMEN_maxQty": 8,
+        "categoryRank": 102008,
+        "netWeight": 300,
+        "depolamaKosulu": "Meyve-Sebze",
+        "name": "Kırmızı Biber Paket 300 Gr",
+        "SLOT_minQty": 1,
+        "salesUnitOfMeasure": "ADT",
+        "HEMEN_minQty": 1,
+        "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/kirmizi-biber-paket-300-gr_p-20000026",
+        "baseUnitOfMeasure": "ADT",
+        "SLOT_maxQty": 10,
+        "nitelikAdi": "Regüler",
+        "barcodes": ["2060000191960", "2000268"],
+        "grossWeight": 500,
+        "stepper": 1,
+        "hediye": true
+      },
+      "images": [
+        {
+          "id": "yerliUretim",
+          "isExternal": false,
+          "imageType": "badge",
+          "tags": [],
+          "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+        },
+        {
+          "id": "KnYP0ACo88",
+          "isExternal": false,
+          "imageType": "product",
+          "tags": [],
+          "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/KnYP0ACo88_256x256.png"
+        }
+      ],
+      "price": {
+        "normal": 2995,
+        "normalStr": "₺29,95",
+        "discounted": 2995,
+        "discountedStr": "₺29,95",
+        "tax": 8,
+        "cashout": 2995
+      },
+      "stock": 2,
+      "count": 1
+    },
+    {
+      "id": "21000883",
+      "attributes": {
+        "returnDay": 15,
+        "brand": "ALGİDA",
+        "HEMEN_maxQty": 8,
+        "categoryRank": 901035,
+        "netWeight": 68,
+        "depolamaKosulu": "Donuk(-18)",
+        "name": "Algida Boom Boom Dondurma 85 Ml",
+        "SLOT_minQty": 1,
+        "salesUnitOfMeasure": "ADT",
+        "HEMEN_minQty": 1,
+        "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-boom-boom-dondurma-85-ml_p-21000883",
+        "baseUnitOfMeasure": "ADT",
+        "SLOT_maxQty": 10,
+        "nitelikAdi": "GrupSpot",
+        "barcodes": ["8683130015995", "8690637809279"],
+        "grossWeight": 68,
+        "stepper": 1,
+        "hediye": true
+      },
+      "images": [
+        {
+          "id": "donukUrun",
+          "imageType": "badge",
+          "tags": [],
+          "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+          "isExternal": false
+        },
+        {
+          "id": "yerliUretim",
+          "imageType": "badge",
+          "tags": [],
+          "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+          "isExternal": false
+        },
+        {
+          "id": "1mwZWRpkbN",
+          "imageType": "product",
+          "tags": [],
+          "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/1mwZWRpkbN_256x256.png",
+          "isExternal": false
+        },
+        {
+          "id": "Smm-fMFL3m",
+          "imageType": "product",
+          "tags": [],
+          "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Smm-fMFL3m_256x256.png",
+          "isExternal": false
+        },
+        {
+          "id": "tqBpD8mmTd",
+          "imageType": "product",
+          "tags": [],
+          "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/tqBpD8mmTd_256x256.png",
+          "isExternal": false
+        }
+      ],
+      "price": {
+        "normal": 2000,
+        "normalStr": "₺20,00",
+        "discounted": 2000,
+        "discountedStr": "₺20,00",
+        "tax": 8,
+        "cashout": 5500
+      },
+      "stock": 10,
+      "count": 3,
+      "offer": {
+        "id": 2,
+        "offerName": "Algida Boom Boom Alana İkincisi %25 İndirimli",
+        "productID": 21000883,
+        "categoryID": null,
+        "type": "amount",
+        "discount": "2:1:25",
+        "activated": true,
+        "offerApplied": 1
+      }
+    }
+  ],
+  "payment": {
+    "cash": 200,
+    "card": 100,
+    "change": 42.1,
+    "total": 257.9,
+    "subTotal": 338.4,
+    "payback": 60,
+    "discount": 20.5
+  }
+}

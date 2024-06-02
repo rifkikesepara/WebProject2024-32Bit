@@ -1,14 +1,97 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./Styles/index.css";
+import reportWebVitals from "./reportWebVitals";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Login from "./Pages/Login/Login";
+import Dashboard from "./Pages/Dashboard/Dashboard";
+import Theme from "./Context/Theme";
+import AlertProvider, { AlertPopUp } from "./Context/AlertProvider";
+import Sale from "./Pages/Sale/Sale";
+import Test from "./Pages/Test";
+import { SnackbarProvider } from "notistack";
+import { ProductSnackbar } from "./Components/ProductSnackbar";
+import Payment from "./Pages/Sale/Payment";
+import PaymentResult from "./Pages/Sale/PaymentResult";
+import ProductProvider from "./Context/ProductProvider";
+import "./config";
+import SettingsDialog from "./Components/SettingsDialog";
+import ItemReturn from "./Pages/ItemReturn/ItemReturn";
+import TimerProvider from "./Context/TimerProvider";
+import Reports from "./Pages/Reports/Reports";
+import Error from "./Pages/Error";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+//page paths
+const router = createBrowserRouter([
+  {
+    path: "/*",
+    element: <Error />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/home",
+    element: <Dashboard />,
+  },
+  {
+    path: "/",
+    element: <Login />,
+  },
+  {
+    path: "/sale",
+    element: <Sale />,
+  },
+  {
+    path: "/sale/payment",
+    element: <Payment />,
+  },
+  {
+    path: "/sale/payment/result",
+    element: <PaymentResult />,
+  },
+  {
+    path: "/settings",
+    element: <SettingsDialog open={true} />,
+  },
+  {
+    path: "/return",
+    element: <ItemReturn />,
+  },
+  {
+    path: "/reports",
+    element: <Reports />,
+  },
+  {
+    path: "/test",
+    element: <Test />,
+  },
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Theme>
+    <SnackbarProvider
+      anchorOrigin={{
+        vertical: "bottom",
+        horizontal: "center",
+      }}
+      maxSnack={1}
+      Components={{
+        product: ProductSnackbar,
+      }}
+      preventDuplicate
+      autoHideDuration={1000}
+    >
+      <ProductProvider>
+        <AlertProvider>
+          <AlertPopUp />
+          <TimerProvider>
+            <RouterProvider router={router} />
+          </TimerProvider>
+        </AlertProvider>
+      </ProductProvider>
+    </SnackbarProvider>
+  </Theme>
 );
 
 // If you want to start measuring performance in your app, pass a function

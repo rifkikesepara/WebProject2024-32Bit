@@ -1,0 +1,2338 @@
+{
+  "parentId": "master",
+  "id": "C03",
+  "name": "Tatlı",
+  "children": [
+    {
+      "parentId": "C03",
+      "id": "C0301",
+      "name": "Toz Tatlılar",
+      "products": [
+        {
+          "id": "28000651",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "5VggFT285Q",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/5VggFT285Q_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 108,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 301001,
+            "netWeight": 330,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Kakaolu/ Fındıklı/ Orman Meyveli Puding 3'lü 330 Gr ",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690629446512"],
+            "grossWeight": 340,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/dr-oetker-kakaolu-findikli-orman-meyveli-puding-3lu-330-gr-_p-28000651"
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0301", "name": "Toz Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4850,
+            "discounted": 4850,
+            "normalStr": "₺48,50",
+            "discountedStr": "₺48,50"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000480",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "8v9CTdCdoi",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/8v9CTdCdoi_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 301003,
+            "netWeight": 115,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Çikolata Parçacıklı Puding 115 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/dr-oetker-cikolata-parcacikli-puding-115-gr_p-28000480",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690629430290", "2060000176189"],
+            "grossWeight": 115,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0301", "name": "Toz Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2390,
+            "normalStr": "₺23,90",
+            "discounted": 2390,
+            "discountedStr": "₺23,90"
+          },
+          "stock": 18,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000481",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "58A1liEoJP",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/58A1liEoJP_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 301004,
+            "netWeight": 111,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Bitter Çikolatalı Puding 111 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/dr-oetker-bitter-cikolatali-puding-111-gr_p-28000481",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690629433574", "2060000176196"],
+            "grossWeight": 111,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0301", "name": "Toz Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2390,
+            "normalStr": "₺23,90",
+            "discounted": 2390,
+            "discountedStr": "₺23,90"
+          },
+          "stock": 25,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000487",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "I5G-Yddi9h",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/I5G-Yddi9h_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DORBİ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 301006,
+            "netWeight": 125,
+            "depolamaKosulu": "Gıda",
+            "name": "Dorbi Muzlu Puding 125 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/dorbi-muzlu-puding-125-gr_p-28000487",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118003281", "2060000176257"],
+            "grossWeight": 125,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0301", "name": "Toz Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 950,
+            "normalStr": "₺9,50",
+            "discounted": 950,
+            "discountedStr": "₺9,50"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000577",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "4ZXYdonmmV",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/4ZXYdonmmV_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DORBİ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 301007,
+            "netWeight": 150,
+            "depolamaKosulu": "Gıda",
+            "name": "Dorbi Kakaolu Puding 150 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/dorbi-kakaolu-puding-150-gr_p-28000577",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118032328", "8699118029878", "8699118003267"],
+            "grossWeight": 155,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0301", "name": "Toz Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1200,
+            "normalStr": "₺12,00",
+            "discounted": 1200,
+            "discountedStr": "₺12,00"
+          },
+          "stock": 21,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000486",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "haAJsFt-SU",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/haAJsFt-SU_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DORBİ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 301008,
+            "netWeight": 125,
+            "depolamaKosulu": "Gıda",
+            "name": "Dorbi Vanilyalı Puding 125 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/dorbi-vanilyali-puding-125-gr_p-28000486",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["2060000176240", "8699118003274"],
+            "grossWeight": 125,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0301", "name": "Toz Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 950,
+            "normalStr": "₺9,50",
+            "discounted": 950,
+            "discountedStr": "₺9,50"
+          },
+          "stock": 9,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14000121",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "46sW-XZPIm",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/46sW-XZPIm_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 301014,
+            "netWeight": 143,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Supangle 143 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/dr-oetker-supangle-143-gr_p-14000121",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690629201128"],
+            "grossWeight": 145,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0301", "name": "Toz Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1750,
+            "normalStr": "₺17,50",
+            "discounted": 1750,
+            "discountedStr": "₺17,50"
+          },
+          "stock": 48,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14000894",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "sqHrvn-0jZ",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/sqHrvn-0jZ_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["asureurunleri"],
+            "rank": 84,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 301015,
+            "netWeight": 222,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Aşure 222 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690629219673"],
+            "grossWeight": 222,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/dr-oetker-asure-222-gr_p-14000894"
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0301", "name": "Toz Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2900,
+            "normalStr": "₺29,00",
+            "discounted": 2900,
+            "discountedStr": "₺29,00"
+          },
+          "stock": 39,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000667",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "wO8CZFtZjA",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/wO8CZFtZjA_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 170,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 301030,
+            "netWeight": 86,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Mousse Çikolatalı Toz Karışım 86 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690629446109"],
+            "grossWeight": 90,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/dr-oetker-mousse-cikolatali-toz-karisim-86-gr_p-28000667"
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0301", "name": "Toz Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1850,
+            "discounted": 1850,
+            "normalStr": "₺18,50",
+            "discountedStr": "₺18,50"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000145",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "89DiD1zOtv",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/89DiD1zOtv_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 2002078,
+            "netWeight": 196,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Kakaolu Puding 196 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/dr-oetker-kakaolu-puding-196-gr_p-28000145",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690629431730"],
+            "grossWeight": 196,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2002",
+              "name": "Temel Gıda, Hazır Yemek",
+              "parentId": "master"
+            },
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0301", "name": "Toz Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3000,
+            "normalStr": "₺30,00",
+            "discounted": 3000,
+            "discountedStr": "₺30,00"
+          },
+          "stock": 11,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000760",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "A8pyDaldpN",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/A8pyDaldpN_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 102,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "netWeight": 300,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Sakızlı Muhallebi 2'li 300 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/dr-oetker-sakizli-muhallebi-2li-300-gr_p-28000760",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690629446000"],
+            "grossWeight": 302,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2002",
+              "name": "Temel Gıda, Hazır Yemek",
+              "parentId": "master"
+            },
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0301", "name": "Toz Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z110",
+            "name": "AldınAldın",
+            "badgeId": "promotion-aldinaldin",
+            "badgeType": "default",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710374399000,
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-aldinaldin_256x256.png",
+            "type": "regular",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aldin-aldin_256x256.png"
+          },
+          "price": {
+            "normal": 2750,
+            "discounted": 2750,
+            "normalStr": "₺27,50",
+            "discountedStr": "₺27,50"
+          },
+          "stock": 10,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000758",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "WbTqlRFlMV",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/WbTqlRFlMV_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 101,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "netWeight": 258,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Tavuk Göğsü 2'li 258 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/dr-oetker-tavuk-gogsu-2li-258-gr_p-28000758",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690629445980"],
+            "grossWeight": 260,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2002",
+              "name": "Temel Gıda, Hazır Yemek",
+              "parentId": "master"
+            },
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0301", "name": "Toz Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z110",
+            "name": "AldınAldın",
+            "badgeId": "promotion-aldinaldin",
+            "badgeType": "default",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710374399000,
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-aldinaldin_256x256.png",
+            "type": "regular",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aldin-aldin_256x256.png"
+          },
+          "price": {
+            "normal": 2750,
+            "discounted": 2750,
+            "normalStr": "₺27,50",
+            "discountedStr": "₺27,50"
+          },
+          "stock": 12,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14000802",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "OZ4jSH1kWb",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/OZ4jSH1kWb_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 121,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "netWeight": 127,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Tiramisu Yap Toz Karışım 127 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690629436544"],
+            "grossWeight": 130,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/dr-oetker-tiramisu-yap-toz-karisim-127-gr_p-14000802"
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0301", "name": "Toz Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2500,
+            "discounted": 2500,
+            "normalStr": "₺25,00",
+            "discountedStr": "₺25,00"
+          },
+          "stock": 20,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Toz Tatlılar & Puding Çeşitleri ve Fiyatları | A101 KAPIDA",
+      "seoDescription": "Toz Tatlılar & Puding çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Toz Tatlılar & Puding çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/tatli/toz-tatlilar"
+    },
+    {
+      "parentId": "C03",
+      "id": "C0304",
+      "name": "Kuru Tatlılar",
+      "products": [
+        {
+          "id": "28000096",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "-f2COdfkSN",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/-f2COdfkSN_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 96,
+            "brand": "ŞANAL",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 304002,
+            "netWeight": 250,
+            "depolamaKosulu": "Gıda",
+            "name": "Şanal Şekerpare 250 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/sanal-sekerpare-250-gr_p-28000096",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8697446620125"],
+            "grossWeight": 250,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0304", "name": "Kuru Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z110",
+            "name": "AldınAldın",
+            "badgeId": "promotion-aldinaldin",
+            "badgeType": "default",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710374399000,
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-aldinaldin_256x256.png",
+            "type": "regular",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aldin-aldin_256x256.png"
+          },
+          "price": {
+            "normal": 1950,
+            "normalStr": "₺19,50",
+            "discounted": 1950,
+            "discountedStr": "₺19,50"
+          },
+          "stock": 70,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000648",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "LIc8pPVr40",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/LIc8pPVr40_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "rank": 91,
+            "brand": "ABDULLAH SAFFET OĞULLARI",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 2001013,
+            "netWeight": 100,
+            "depolamaKosulu": "Gıda",
+            "name": "Abdullah Saffet Oğulları Güllaç 100 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/abdullah-saffet-ogullari-gullac-100-gr_p-28000648",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8699329100236"],
+            "grossWeight": 110,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            { "id": "C2001", "name": "Ramazana Özel", "parentId": "master" },
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0304", "name": "Kuru Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z110",
+            "name": "AldınAldın",
+            "badgeId": "promotion-aldinaldin",
+            "badgeType": "default",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710374399000,
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-aldinaldin_256x256.png",
+            "type": "regular",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aldin-aldin_256x256.png"
+          },
+          "price": {
+            "normal": 3290,
+            "discounted": 3290,
+            "normalStr": "₺32,90",
+            "discountedStr": "₺32,90"
+          },
+          "stock": 27,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000649",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "8FofGPsrBC",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/8FofGPsrBC_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "rank": 94,
+            "brand": "BİZİM GÜLLAÇ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 2001014,
+            "netWeight": 300,
+            "depolamaKosulu": "Gıda",
+            "name": "Bizim Güllaç 300 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/bizim-gullac-300-gr_p-28000649",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8697550790158"],
+            "grossWeight": 310,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            { "id": "C2001", "name": "Ramazana Özel", "parentId": "master" },
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0304", "name": "Kuru Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z110",
+            "name": "AldınAldın",
+            "badgeId": "promotion-aldinaldin",
+            "badgeType": "default",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710374399000,
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-aldinaldin_256x256.png",
+            "type": "regular",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aldin-aldin_256x256.png"
+          },
+          "price": {
+            "normal": 4450,
+            "discounted": 4450,
+            "normalStr": "₺44,50",
+            "discountedStr": "₺44,50"
+          },
+          "stock": 122,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14000258",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "sAL3ItFeKk",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/sAL3ItFeKk_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "rank": 92,
+            "brand": "ŞANAL",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 2001015,
+            "netWeight": 400,
+            "depolamaKosulu": "Gıda",
+            "name": "Şanal Tepsi Kadayıf 400 Gr ",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/sanal-tepsi-kadayif-400-gr-_p-14000258",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690650090142"],
+            "grossWeight": 415,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            { "id": "C2001", "name": "Ramazana Özel", "parentId": "master" },
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0304", "name": "Kuru Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z110",
+            "name": "AldınAldın",
+            "badgeId": "promotion-aldinaldin",
+            "badgeType": "default",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710374399000,
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-aldinaldin_256x256.png",
+            "type": "regular",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aldin-aldin_256x256.png"
+          },
+          "price": {
+            "normal": 3590,
+            "normalStr": "₺35,90",
+            "discounted": 3590,
+            "discountedStr": "₺35,90"
+          },
+          "stock": 17,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000658",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "p2TMzDBhU1",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/p2TMzDBhU1_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "rank": 95,
+            "brand": "ŞANAL",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 2001018,
+            "netWeight": 200,
+            "depolamaKosulu": "Gıda",
+            "name": "Şanal Kalburabastı 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/sanal-kalburabasti-200-gr_p-28000658",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690650083601"],
+            "grossWeight": 210,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            { "id": "C2001", "name": "Ramazana Özel", "parentId": "master" },
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0304", "name": "Kuru Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z110",
+            "name": "AldınAldın",
+            "badgeId": "promotion-aldinaldin",
+            "badgeType": "default",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710374399000,
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-aldinaldin_256x256.png",
+            "type": "regular",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aldin-aldin_256x256.png"
+          },
+          "price": {
+            "normal": 1950,
+            "discounted": 1950,
+            "normalStr": "₺19,50",
+            "discountedStr": "₺19,50"
+          },
+          "stock": 33,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000657",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "RGiAhAxkFp",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/RGiAhAxkFp_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "rank": 97,
+            "brand": "ŞANAL",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 2001019,
+            "netWeight": 200,
+            "depolamaKosulu": "Gıda",
+            "name": "Ege Tepsi Kadayıf 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/ege-tepsi-kadayif-200-gr_p-28000657",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690650000011"],
+            "grossWeight": 210,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            { "id": "C2001", "name": "Ramazana Özel", "parentId": "master" },
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0304", "name": "Kuru Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z110",
+            "name": "AldınAldın",
+            "badgeId": "promotion-aldinaldin",
+            "badgeType": "default",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710374399000,
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-aldinaldin_256x256.png",
+            "type": "regular",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aldin-aldin_256x256.png"
+          },
+          "price": {
+            "normal": 1990,
+            "discounted": 1990,
+            "normalStr": "₺19,90",
+            "discountedStr": "₺19,90"
+          },
+          "stock": 31,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000168",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "cW6npJrPB0",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/cW6npJrPB0_256x256.png"
+            },
+            {
+              "id": "z5hOr9l7bp",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/z5hOr9l7bp_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "rank": 93,
+            "brand": "HASTEL",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 2001022,
+            "netWeight": 350,
+            "depolamaKosulu": "Gıda",
+            "name": "Hastel Hazır Sarma Kadayıf veya Gül Kadayıf 300 Gr/350 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/hastel-hazir-sarma-kadayif-veya-gul-kadayif-300-gr350-gr_p-28000168",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8691837004259", "8691837004327"],
+            "grossWeight": 416.67,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            { "id": "C2001", "name": "Ramazana Özel", "parentId": "master" },
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0304", "name": "Kuru Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z110",
+            "name": "AldınAldın",
+            "badgeId": "promotion-aldinaldin",
+            "badgeType": "default",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710374399000,
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-aldinaldin_256x256.png",
+            "type": "regular",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aldin-aldin_256x256.png"
+          },
+          "price": {
+            "normal": 4290,
+            "discounted": 4290,
+            "normalStr": "₺42,90",
+            "discountedStr": "₺42,90"
+          },
+          "stock": 47,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000576",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "28D4TNwKmX",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/28D4TNwKmX_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "rank": 99,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 2001023,
+            "netWeight": 200,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Muhallebilik Kadayıf 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/nimet-muhallebilik-kadayif-200-gr_p-28000576",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8699118043829", "8699118027720"],
+            "grossWeight": 205,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            { "id": "C2001", "name": "Ramazana Özel", "parentId": "master" },
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0304", "name": "Kuru Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z110",
+            "name": "AldınAldın",
+            "badgeId": "promotion-aldinaldin",
+            "badgeType": "default",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710374399000,
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-aldinaldin_256x256.png",
+            "type": "regular",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aldin-aldin_256x256.png"
+          },
+          "price": {
+            "normal": 1950,
+            "discounted": 1950,
+            "normalStr": "₺19,50",
+            "discountedStr": "₺19,50"
+          },
+          "stock": 31,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000750",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "WUm9g2Gaoz",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/WUm9g2Gaoz_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 89,
+            "brand": "TADAL",
+            "HEMEN_maxQty": 5,
+            "netWeight": 300,
+            "depolamaKosulu": "Gıda",
+            "name": "Tadal Revani 300 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/tadal-revani-300-gr_p-28000750",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690204260458"],
+            "grossWeight": 310,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0304", "name": "Kuru Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z110",
+            "name": "AldınAldın",
+            "badgeId": "promotion-aldinaldin",
+            "badgeType": "default",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710374399000,
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-aldinaldin_256x256.png",
+            "type": "regular",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aldin-aldin_256x256.png"
+          },
+          "price": {
+            "normal": 3900,
+            "discounted": 3900,
+            "normalStr": "₺39,00",
+            "discountedStr": "₺39,00"
+          },
+          "stock": 30,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000733",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "6fwpY3ETTK",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/6fwpY3ETTK_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 98,
+            "brand": "ÖĞÜN",
+            "HEMEN_maxQty": 5,
+            "netWeight": 140,
+            "depolamaKosulu": "Gıda",
+            "name": "Öğün Kemalpaşa 140 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/ogun-kemalpasa-140-gr_p-28000733",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690877021165"],
+            "grossWeight": 150,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0304", "name": "Kuru Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z110",
+            "name": "AldınAldın",
+            "badgeId": "promotion-aldinaldin",
+            "badgeType": "default",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710374399000,
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-aldinaldin_256x256.png",
+            "type": "regular",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aldin-aldin_256x256.png"
+          },
+          "price": {
+            "normal": 1650,
+            "discounted": 1650,
+            "normalStr": "₺16,50",
+            "discountedStr": "₺16,50"
+          },
+          "stock": 112,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000732",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "yJ7S5rlfOO",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yJ7S5rlfOO_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "rank": 90,
+            "brand": "ABDULLAH SAFFET OĞULLARI",
+            "HEMEN_maxQty": 5,
+            "netWeight": 300,
+            "depolamaKosulu": "Gıda",
+            "name": "Abdullah Saffet Oğulları Güllaç 300 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/abdullah-saffet-ogullari-gullac-300-gr_p-28000732",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8699329100014"],
+            "grossWeight": 310,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            { "id": "C2001", "name": "Ramazana Özel", "parentId": "master" },
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0304", "name": "Kuru Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z110",
+            "name": "AldınAldın",
+            "badgeId": "promotion-aldinaldin",
+            "badgeType": "default",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710374399000,
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-aldinaldin_256x256.png",
+            "type": "regular",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aldin-aldin_256x256.png"
+          },
+          "price": {
+            "normal": 7450,
+            "discounted": 7450,
+            "normalStr": "₺74,50",
+            "discountedStr": "₺74,50"
+          },
+          "stock": 25,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Kuru Tatlılar ve Çeşitleri | A101 KAPIDA",
+      "seoDescription": "Kuru Tatlı çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Kuru Tatlı çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/tatli/kuru-tatlilar"
+    },
+    {
+      "parentId": "C03",
+      "id": "C0302",
+      "name": "Hazır Tatlılar",
+      "products": [
+        {
+          "id": "12002673",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "dxIQYAzbmg",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/dxIQYAzbmg_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 46,
+            "brand": "DANONE",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 302007,
+            "netWeight": 375,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Danette Hindistan Cevizli ve Çikolatalı Puding 375 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/danette-hindistan-cevizli-ve-cikolatali-puding-375-gr_p-12002673",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8696368271644"],
+            "grossWeight": 403,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0302", "name": "Hazır Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z130",
+            "name": "AylıkFırsatÜrünü",
+            "source": "SAP",
+            "startDate": 1708732800000,
+            "endDate": 1709942399000,
+            "type": "regular"
+          },
+          "price": {
+            "normal": 3750,
+            "normalStr": "₺37,50",
+            "discounted": 2450,
+            "discountedStr": "₺24,50",
+            "discountRate": 35,
+            "discountRateStr": "%35 İNDİRİM"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "12001525",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "IhyAvkO5wk",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/IhyAvkO5wk_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DANONE",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 302008,
+            "netWeight": 188,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Danone Çilek ve Vanilyalı Milkshake 188 Ml",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8696368905464"],
+            "grossWeight": 200,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/danone-cilek-ve-vanilyali-milkshake-188-ml_p-12001525"
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0302", "name": "Hazır Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2400,
+            "normalStr": "₺24,00",
+            "discounted": 2400,
+            "discountedStr": "₺24,00"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "12001750",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "nTxxwMi7LA",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/nTxxwMi7LA_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 35,
+            "brand": "MİLKTEN",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 302009,
+            "netWeight": 400,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Milkten Çikolatalı Puding 4x100 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118016632"],
+            "grossWeight": 431.45,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/milkten-cikolatali-puding-4x100-gr_p-12001750"
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0302", "name": "Hazır Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3100,
+            "normalStr": "₺31,00",
+            "discounted": 3100,
+            "discountedStr": "₺31,00"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "12001998",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "c7iKHHbstW",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/c7iKHHbstW_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 29,
+            "brand": "DANONE",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 302010,
+            "netWeight": 375,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Danette Çikolatalı Puding 375 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8696368232546"],
+            "grossWeight": 403.77,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/danette-cikolatali-puding-375-gr_p-12001998"
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0302", "name": "Hazır Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4450,
+            "normalStr": "₺44,50",
+            "discounted": 4450,
+            "discountedStr": "₺44,50"
+          },
+          "stock": 8,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "12001803",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "SJxguOnzn5",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/SJxguOnzn5_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 33,
+            "brand": "MİLKTEN",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 302011,
+            "netWeight": 375,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Milkten Çikolatalı Puding 375 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/milkten-cikolatali-puding-375-gr_p-12001803",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118017707"],
+            "grossWeight": 403.66,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0302", "name": "Hazır Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2425,
+            "normalStr": "₺24,25",
+            "discounted": 2425,
+            "discountedStr": "₺24,25"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "12000163",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "1mpqCPDgZi",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/1mpqCPDgZi_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DANONE",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 302013,
+            "netWeight": 210,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Danone Muzlu Puding 210 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/danone-muzlu-puding-210-gr_p-12000163",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["86902656", "8696368230528", "86962650"],
+            "grossWeight": 218.2,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0302", "name": "Hazır Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1600,
+            "normalStr": "₺16,00",
+            "discounted": 1600,
+            "discountedStr": "₺16,00"
+          },
+          "stock": 8,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "12000339",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "xy2beloZcQ",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/xy2beloZcQ_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "EKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 302016,
+            "netWeight": 65,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Eker Puding Çikolatalı 65 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Deneme",
+            "barcodes": ["8691316521789"],
+            "grossWeight": 94,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/eker-puding-cikolatali-65-gr_p-12000339"
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0302", "name": "Hazır Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1390,
+            "normalStr": "₺13,90",
+            "discounted": 1390,
+            "discountedStr": "₺13,90"
+          },
+          "stock": 1,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "12002553",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "y-1lnTYP2R",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/y-1lnTYP2R_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "UTRPSOYBD7",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/UTRPSOYBD7_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "HANIMDAN",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 302017,
+            "netWeight": 140,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Hanımdan Kadife Tatlısı 140 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118053156"],
+            "grossWeight": 162,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/hanimdan-kadife-tatlisi-140-gr_p-12002553"
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0302", "name": "Hazır Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2000,
+            "normalStr": "₺20,00",
+            "discounted": 2000,
+            "discountedStr": "₺20,00"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "12000577",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "c7xGtuTz2m",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/c7xGtuTz2m_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "HANIMDAN",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 302024,
+            "netWeight": 180,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Hanımdan Hazır Tatlı Kazandibi 180 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/hanimdan-hazir-tatli-kazandibi-180-gr_p-12000577",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118001874",
+              "8699118019435",
+              "8699118030348",
+              "8699118033424"
+            ],
+            "grossWeight": 224.17,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0302", "name": "Hazır Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1850,
+            "normalStr": "₺18,50",
+            "discounted": 1850,
+            "discountedStr": "₺18,50"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "12000578",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "7SEvLU2ZSN",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/7SEvLU2ZSN_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "HANIMDAN",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 302025,
+            "netWeight": 200,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Hanımdan Fırın Sütlaç 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/hanimdan-firin-sutlac-200-gr_p-12000578",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118033417",
+              "8699118030331",
+              "8699118019442",
+              "8699118001881"
+            ],
+            "grossWeight": 220.25,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0302", "name": "Hazır Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1850,
+            "normalStr": "₺18,50",
+            "discounted": 1850,
+            "discountedStr": "₺18,50"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "12000574",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "uzSguKoPrJ",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/uzSguKoPrJ_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "HANIMDAN",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 302027,
+            "netWeight": 200,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Hanımdan Profiterol 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/hanimdan-profiterol-200-gr_p-12000574",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118001850",
+              "8699118019411",
+              "8699118030362",
+              "8699118033448"
+            ],
+            "grossWeight": 221.75,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0302", "name": "Hazır Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2000,
+            "normalStr": "₺20,00",
+            "discounted": 2000,
+            "discountedStr": "₺20,00"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "12003245",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "Lr6E0OtblQ",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Lr6E0OtblQ_256x256.png"
+            },
+            {
+              "id": "UqqHd7vQ2v",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/UqqHd7vQ2v_256x256.png"
+            },
+            {
+              "id": "5-BePVxUQv",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/5-BePVxUQv_256x256.png"
+            },
+            {
+              "id": "FFTJoicSqP",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/FFTJoicSqP_256x256.png"
+            },
+            {
+              "id": "nuckNLScyM",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/nuckNLScyM_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DANONE",
+            "HEMEN_maxQty": 8,
+            "netWeight": 70,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Disney Hüpper Çikolatalı&Muzlu Puding Hazır Tatlı 70 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/tatli/disney-hupper-cikolatalimuzlu-puding-hazir-tatli-70-gr_p-12003245",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8696368907277", "8696368907147"],
+            "grossWeight": 87,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0302", "name": "Hazır Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1800,
+            "discounted": 1800,
+            "normalStr": "₺18,00",
+            "discountedStr": "₺18,00"
+          },
+          "stock": 9,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "12003102",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "WXnM6YjwpD",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/WXnM6YjwpD_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 100,
+            "brand": "ÖZSÜT",
+            "HEMEN_maxQty": 8,
+            "netWeight": 140,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Özsüt Şam Hazır Tatlı 140 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/ozsut-sam-hazir-tatli-140-gr_p-12003102",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8699025203231"],
+            "grossWeight": 150,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2002",
+              "name": "Temel Gıda, Hazır Yemek",
+              "parentId": "master"
+            },
+            { "id": "C03", "name": "Tatlı", "parentId": "master" },
+            { "id": "C0302", "name": "Hazır Tatlılar", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z110",
+            "name": "AldınAldın",
+            "badgeId": "promotion-aldinaldin",
+            "badgeType": "default",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710374399000,
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-aldinaldin_256x256.png",
+            "type": "regular",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aldin-aldin_256x256.png"
+          },
+          "price": {
+            "normal": 2250,
+            "discounted": 2250,
+            "normalStr": "₺22,50",
+            "discountedStr": "₺22,50"
+          },
+          "stock": 8,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Hazır Tatlılar ve Çeşitleri | A101 KAPIDA",
+      "seoDescription": "Hazır Tatlı çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Hazır Tatlı çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/tatli/hazir-tatlilar"
+    }
+  ],
+  "seoTitle": "",
+  "seoDescription": "",
+  "seoUrl": "https://www.a101.com.tr/kapida/tatli",
+  "products": []
+}
