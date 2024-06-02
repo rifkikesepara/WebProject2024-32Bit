@@ -38,7 +38,9 @@ import LOG from "../../Debug/Console";
 import ShiftButton from "../../Components/Shift";
 import LastSalesTable from "./LastSalesTable";
 import ChartLine from "../../Components/ChartLine";
+import Clock from "../../Components/Clock";
 
+//mini drawer menu items
 const menuItems = [
   {
     name: "sale",
@@ -177,23 +179,6 @@ const menuItems = [
   },
 ];
 
-const Clock = ({ sx }) => {
-  const [date, setDate] = useState(new Date());
-  // const [time, setTime] = useState(new Date().toLocaleTimeString("tr-TR"));
-
-  const updateTime = () => {
-    setDate(new Date());
-  };
-  const clock = date.toLocaleTimeString("tr-TR");
-  setInterval(updateTime, 1000);
-
-  return (
-    <Typography sx={{ ...sx }}>
-      {clock.split(":")[0]}:{clock.split(":")[1]}
-    </Typography>
-  );
-};
-
 const getTotalAmount = (data) => {
   console.log("total amount");
   let total = 0;
@@ -208,13 +193,21 @@ export default function Dashboard() {
   LOG("re-render Dashboard", "red");
 
   const { t } = useTranslation();
-  const [data, setData] = useState(undefined);
   const storeInfo = useStore();
+  const { breakpoints } = useTheme();
+  const matchesTablet = useMediaQuery(breakpoints.up("md"));
 
-  const employee = GetFromSessionStorage("employee");
+  const date = new Date();
+  const employee = GetFromSessionStorage("employee"); //getting logged in epmloyee information
+
+  //getting the receipts that sorted the oldest to the newest
   const sales = GetFromLocalStorage("receipts").sort(
     (a, b) => getDateFromString(a.date) - getDateFromString(b.date)
   );
+
+  const [data, setData] = useState(undefined);
+
+  //adjusting the receipts for line chart data
   const chartData = useMemo(() => {
     const temp = [];
     sales.map((receipt) => {
@@ -227,9 +220,11 @@ export default function Dashboard() {
           payback: receipt.payment.payback,
         });
     });
+    console.log(temp);
     return temp;
   }, [data]);
 
+  //setting the chartData
   useEffect(() => {
     setTimeout(() => {
       console.log(chartData);
@@ -237,13 +232,11 @@ export default function Dashboard() {
     }, 1000);
   }, []);
 
+  //calculating the total earnings whenever a chart data changes
   const total = useMemo(() => getTotalAmount(data), [data]);
 
-  const { breakpoints } = useTheme();
-  const matchesTablet = useMediaQuery(breakpoints.up("md"));
-
-  const date = new Date();
-  let stringDate = useMemo(() => {
+  //parsing the date as day string and month string
+  const stringDate = useMemo(() => {
     return {
       day: getDayString(date.getDay()),
       month: getMonthString(date.getMonth()),

@@ -1,36 +1,29 @@
 import { Box, Typography, Paper, Divider, Button, Dialog } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { useMemo, useRef, useState } from "react";
-import LOG from "../../Debug/Console";
+import { useRef, useState } from "react";
 import CheckoutTable from "../../Components/CheckoutTable";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import { Receipt } from "../../Components/Receipt";
 import { useReactToPrint } from "react-to-print";
 import { useTranslation } from "react-i18next";
+import {
+  GetFromSessionStorage,
+  SaveToSessionStorage,
+} from "../../Utils/utilities";
 
 export default function PaymentResult() {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
+  const salesReceipt = GetFromSessionStorage("currentReceipt");
+
   const [selectedItems, setSelectedItems] = useState([]);
   const [showReceipt, setShowReceipt] = useState(false);
   const receiptRef = useRef();
 
-  const payment = JSON.parse(sessionStorage.getItem("payment"));
-  const cashout = JSON.parse(sessionStorage.getItem("cashout"));
-
   const handlePrint = useReactToPrint({
     content: () => receiptRef.current,
   });
-
-  const total = useMemo(() => {
-    console.log(receiptRef);
-    LOG("total calculated!", "yellow");
-    let total = 0;
-    cashout.map(({ price }) => (total = total + price.cashout));
-    return total / 100;
-  }, [cashout, cashout.length]);
-  let due = total - (payment.cash + payment.card);
 
   return (
     <Box
@@ -95,7 +88,7 @@ export default function PaymentResult() {
             <CheckoutTable
               sx={{ padding: 0 }}
               disabled={true}
-              data={cashout}
+              data={salesReceipt.products}
               selectionValues={selectedItems}
               onChange={(newformats) => setSelectedItems(newformats)}
             />
@@ -120,17 +113,17 @@ export default function PaymentResult() {
               sx={{ fontSize: 28 }}
             >
               {t("total").toUpperCase()}: <br />
-              {total}₺
+              {salesReceipt.payment.total}₺
             </Typography>
             <Divider sx={{ borderWidth: 2, width: "70%" }} />
             <Typography sx={{ fontSize: 20 }}>
-              {t("cash").toUpperCase()}: {payment.cash}₺
+              {t("cash").toUpperCase()}: {salesReceipt.payment.cash}₺
             </Typography>
             <Typography sx={{ fontSize: 20 }}>
-              {t("creditCard").toUpperCase()}: {payment.card}₺
+              {t("creditCard").toUpperCase()}: {salesReceipt.payment.card}₺
             </Typography>
             <Typography sx={{ fontSize: 20 }}>
-              {t("change").toUpperCase()}: {payment.change}₺
+              {t("change").toUpperCase()}: {salesReceipt.payment.change}₺
             </Typography>
           </Paper>
         </Box>
@@ -152,8 +145,9 @@ export default function PaymentResult() {
               borderRadius: 7,
             }}
             onClick={() => {
-              sessionStorage.setItem("cashout", JSON.stringify([]));
-              sessionStorage.setItem("payment", JSON.stringify({}));
+              SaveToSessionStorage("currentReceipt", {});
+              SaveToSessionStorage("payment", {});
+              SaveToSessionStorage("cashout", []);
               navigate("../sale");
             }}
           >
@@ -167,7 +161,6 @@ export default function PaymentResult() {
               borderRadius: 7,
             }}
             onClick={() => {
-              console.log(receiptRef);
               setShowReceipt(true);
             }}
           >

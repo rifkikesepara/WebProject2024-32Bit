@@ -11,16 +11,16 @@ import { useTranslation } from "react-i18next";
 import usePreferences from "../Hooks/usePreferences";
 
 export default function ButtonGroup({
-  sx,
-  force = false,
-  buttonSX = { height: 50, minWidth: 150 },
-  buttons = [],
-  spacing,
-  borderRadius = 0,
-  border = "none",
-  onSelect = () => {},
-  intialSelected = "",
+  sx, //styling object
+  intialSelected = "", //indicates the initial selected button
+  force = false, //boolean that indicates at least one of the button must be selected
+  buttonSX = { height: 50, minWidth: 150 }, //styling object of the buttons
+  buttons = [], //data array of the button
+  spacing, //indicates the spacing between the buttons
+  borderRadius = 0, //indicates the border radius of the buttons
+  border = "none", //indicates the border of the buttons
   elevation = 0,
+  onSelect = (value, event) => {}, //callback function that is executed whenever selected button is changed
 }) {
   const { t } = useTranslation();
   const { isThemeDark } = usePreferences();

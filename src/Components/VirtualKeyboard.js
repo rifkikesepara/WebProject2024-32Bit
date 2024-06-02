@@ -15,15 +15,15 @@ import { useTranslation } from "react-i18next";
 export const VirtualKeyboard = forwardRef(
   (
     {
-      initialInput = "",
-      onChangeInput = () => {},
-      sx,
-      onBlur = () => {},
-      onInit = () => {},
-      onDone = () => {},
-      onPress = () => {},
-      buttonSX = {},
-      layout = "default",
+      initialInput = "", //virtual keyboard's initial value
+      onChangeInput = (input) => {}, //the callback function that shows the current input of the keyboard
+      sx, //styling object
+      onBlur = () => {}, //the callback function that executes whenever user clicks outside of the keyboard's div
+      onInit = () => {}, //the function that is executed when the keyboard is being initialized
+      onDone = () => {}, //the function that is executed when the tick button on the virtual keyboard is clicked
+      onPress = (key) => {}, //the callback function that shows which button on the virtual keyboard has been clicked
+      buttonSX = {}, //styling object of the keyboard buttons
+      layout = "default", //defining tthe layout (default,numeric,cashier)
     },
     ref
   ) => {
@@ -32,6 +32,7 @@ export const VirtualKeyboard = forwardRef(
     const [state, setState] = useState({ layoutName: "default", input: "" });
     const boxRef = useRef();
 
+    //the function that adjust the layout by indicated layout prop
     const adjustLayout = () => {
       switch (layout) {
         case "default":
@@ -52,6 +53,7 @@ export const VirtualKeyboard = forwardRef(
       }
     };
 
+    //the hook to check if the user clicked outside of the keyboard's div
     useEffect(() => {
       //event of clicked outside of the keyboard
       function handleClickOutside(event) {
@@ -67,15 +69,17 @@ export const VirtualKeyboard = forwardRef(
       };
     }, [boxRef]);
 
+    //setting the initial input if it is given
     useEffect(() => {
       ref.current.setInput(initialInput);
     }, [initialInput]);
 
+    //handling the change of input of the keyboard
     const onChange = (input) => {
       onChangeInput(input);
-      // setState({ input });
     };
 
+    //handling the shift event to change the layout
     const handleShift = () => {
       const layoutName = state.layoutName;
 
@@ -84,6 +88,7 @@ export const VirtualKeyboard = forwardRef(
       });
     };
 
+    //function to specify events whenever specific button is clicked
     const onKeyPress = (button, e) => {
       onPress(button);
       if (button === "{enter}") e.preventDefault(); //preventing default event to not clicking somthing else behind the keyboard

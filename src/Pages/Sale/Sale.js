@@ -43,22 +43,34 @@ export default function Sale() {
   const { setAlert } = useAlert();
   const { getAllProducts } = useProduct();
 
-  const checkoutRef = useRef(null);
-  const keyboard = useRef();
-  const totalsObject = useRef();
+  const checkoutRef = useRef(); //checkoutTable Ref
+  const keyboard = useRef(); //virtual keyboard Ref
+  const totalsObject = useRef(); //total values object of the checkout table
 
-  const [selectedItems, setSelectedItems] = useState([]);
   const [inputFields, setInputFields] = useState({ barcode: "" });
   const [selectedInputField, setSelectedInputField] = useState("");
   const [cashout, setCashout] = useState(GetFromSessionStorage("cashout"));
-  const [selectListOpen, setSelectListOpen] = useState(false);
+  const [selectedItems, setSelectedItems] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState();
+  const [selectListOpen, setSelectListOpen] = useState(false);
 
+  const handleKeyboardInput = (input) => {
+    if (selectedInputField !== "") {
+      setInputFields({
+        ...inputFields,
+        [selectedInputField]: input,
+      });
+      if (selectedInputField !== "barcode") {
+        changeProductAmount(input, selectedProduct);
+      }
+    }
+  };
+
+  //adds the indicated product to the cashout
   const addProductToCashout = (productData) => {
     var product = cashout.find(
       (data) => data.attributes.name === productData.attributes.name
     );
-    console.log(productData);
     var data = {
       ...productData,
       price: {
@@ -68,6 +80,7 @@ export default function Sale() {
       count: 1,
     };
 
+    //if product has already been in the checkout table then increment the amount of it
     if (!product) {
       data = CheckAndApplyOffer(data, cashout);
       setCashout([...cashout, data]);
@@ -84,6 +97,7 @@ export default function Sale() {
     });
   };
 
+  //deletes the selected products from the checkout table
   const deleteSelected = () => {
     LOG("deletedSelected", "yellow");
     let array = cashout;
@@ -95,6 +109,8 @@ export default function Sale() {
       const isThereOffer = usedOffers.find(
         ({ id }) => id === array[index].offer?.id
       );
+
+      //if there are offers are being used by these products remove them from the used offers
       if (isThereOffer) {
         usedOffers.splice(usedOffers.indexOf(isThereOffer), 1);
         SaveToSessionStorage("usedOffers", usedOffers);
@@ -105,10 +121,12 @@ export default function Sale() {
     setSelectedItems([]);
   };
 
+  //changes the indicated product's amount
   const changeProductAmount = (amount, product) => {
-    let newArray = cashout.map((a) => {
+    const newArray = cashout.map((a) => {
       var returnValue = { ...a };
       if (a.id === product.id) {
+        //if indicated amount is above than the stock then change the amount as the stock amount
         if (amount <= a.stock) {
           returnValue = {
             ...returnValue,
@@ -142,6 +160,7 @@ export default function Sale() {
     setCashout(newArray);
   };
 
+  //adds the product which has been indicated by barcode, to the checkout table
   const barcodeToProduct = () => {
     getAllProducts().forEach(({ attributes, id, images, price, stock }) => {
       if (inputFields.barcode === attributes.barcodes[0]) {
@@ -157,12 +176,13 @@ export default function Sale() {
     setInputFields({ ...inputFields, barcode: "" });
   };
 
+  //changes the virtual keyboard's input whenever user focuses another textfield
   useEffect(() => {
     keyboard.current.setInput(inputFields[selectedInputField]);
-  }, [inputFields, selectedInputField]);
+  }, [selectedInputField]);
 
+  //bringing back the products that has been added, from the session storage if page reloads
   useEffect(() => {
-    // sessionStorage.clear();
     const cachedProducts = [];
     cashout.forEach((product) => {
       cachedProducts.push(CheckAndApplyOffer(product, cashout));
@@ -353,12 +373,12 @@ export default function Sale() {
               marginBottom: 1.5,
               marginLeft: 2,
             }}
-            onChange={(e) => {
+            onChange={(e) =>
               setInputFields({
                 ...inputFields,
                 [selectedInputField]: e.target.value,
-              });
-            }}
+              })
+            }
             onKeyDown={(e) => {
               if (e.key === "Enter") barcodeToProduct();
             }}
@@ -372,6 +392,7 @@ export default function Sale() {
               ),
             }}
           />
+
           <ProductsDialog
             open={selectListOpen}
             onClose={() => {
@@ -411,6 +432,7 @@ export default function Sale() {
                 {t("addProductText")}
               </Button>
             )}
+
             <Box
               sx={{
                 display: "flex",
@@ -420,17 +442,7 @@ export default function Sale() {
               <VirtualKeyboard
                 ref={keyboard}
                 layout="cashier"
-                onChangeInput={(input) => {
-                  if (selectedInputField !== "") {
-                    setInputFields({
-                      ...inputFields,
-                      [selectedInputField]: input,
-                    });
-                    if (selectedInputField !== "barcode") {
-                      changeProductAmount(input, selectedProduct);
-                    }
-                  }
-                }}
+                onChangeInput={handleKeyboardInput}
                 onDone={() => {
                   setSelectedInputField("");
                 }}

@@ -4,7 +4,7 @@ import { useAlert } from "../Hooks/useAlert";
 
 export const AlertContext = createContext({
   alert: "",
-  setAlert: ({ text = "Test", type = "success", duration = 2000 }) => {},
+  setAlert: ({ text = "Test", type = "success", duration = 2000 }) => {}, //the function that sets and alert with indicated parameters
 });
 
 export const AlertPopUp = () => {

@@ -2,12 +2,13 @@ import { Box, Dialog, Paper, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
 export default function ProductDetail({
-  product,
   open = false,
-  onClose = (e) => {},
+  product, //product's data
+  onClose = (e) => {}, //callback function that is executed whenever product detail window is closed
 }) {
   const { t } = useTranslation();
 
+  //getting badge images of the product
   const getBadgeImages = () => {
     let array = [];
     product?.images.map(({ imageType, url, id }) => {

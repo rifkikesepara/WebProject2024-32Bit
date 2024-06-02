@@ -13,21 +13,22 @@ import React, { useEffect, useRef, useState } from "react";
 import VirtualKeyboard from "./VirtualKeyboard";
 import { KeyboardAlt } from "@mui/icons-material";
 
+//the text field component combined with virtual keyboard
 export default function TextFieldVK({
-  disabled = false,
-  value = "",
-  name = "",
-  type = "text",
-  inputSX,
-  divSX,
-  placeholder,
+  disabled = false, //disabled indicator of the TextField
+  value = "", //value of the TextField
+  name = "", //name value of the TextField
+  type = "text", //type of the TextField
+  inputSX, //styling object of the TextField
+  divSX, //styling object of the container div
+  placeholder, //placeholder of the TextField
   autoComplete = "off",
-  layout = "default",
+  layout = "default", //layout of the virtual keyboard
   elevation = 0,
-  dialog = false,
-  startAdornment,
-  onChange = (event, value) => {},
-  onClear = () => {},
+  dialog = false, //indicates if the virtual keyboard is gonna be shown as dialog or not
+  startAdornment, //start adornments of the TextField
+  onChange = (event, value) => {}, //callback function that is executed whenever the input of TextField changes
+  onClear = () => {}, //callback function that is executed whenever TextFiled input has been cleared
 }) {
   const keyboard = useRef();
 

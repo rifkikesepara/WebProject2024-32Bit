@@ -1,5 +1,5 @@
 import { createContext, useMemo, useState } from "react";
-import API from "../productsAPI.json";
+import API from "../Resources/productsAPI.json";
 import useData from "../Hooks/useData";
 import LOG from "../Debug/Console";
 

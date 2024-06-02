@@ -2,6 +2,7 @@ import { Divider, Stack, Typography } from "@mui/material";
 import { forwardRef, useMemo } from "react";
 import { getTaxesFromReceipt } from "../Utils/receipts";
 
+//the section component for the ZReport
 const Section = ({ title = "", data = [] }) => {
   return (
     <Stack direction={"row"} width={"100%"} justifyContent={"space-between"}>
@@ -27,6 +28,7 @@ const Section = ({ title = "", data = [] }) => {
 };
 
 export const ZReport = forwardRef(({ data }, ref) => {
+  //calculates the required values for the zReport whenever a data of receipt is changed
   const calculated = useMemo(() => {
     let income = 0,
       outcome = 0,
@@ -124,8 +126,8 @@ export const ZReport = forwardRef(({ data }, ref) => {
 
       <Section
         data={[
-          { header: "GİRİŞ:", value: calculated.income + "₺" },
-          { header: "ÇIKIŞ:", value: calculated.outcome + "₺" },
+          { header: "GİRİŞ:", value: calculated.income.toFixed(2) + "₺" },
+          { header: "ÇIKIŞ:", value: calculated.outcome.toFixed(2) + "₺" },
           {
             header: "BAKİYE:",
             value: (calculated.income - calculated.outcome).toFixed(2) + "₺",
@@ -190,7 +192,9 @@ export const ZReport = forwardRef(({ data }, ref) => {
 
       <Section
         title="Nakit"
-        data={[{ header: "TOPLAM:", value: calculated.income + "₺" }]}
+        data={[
+          { header: "TOPLAM:", value: calculated.income.toFixed(2) + "₺" },
+        ]}
       />
       <Section
         title="Kredi Kartı"

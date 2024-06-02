@@ -9,6 +9,7 @@ import {
 } from "../Utils/utilities";
 import { getTotalTaxOfReceipt } from "../Utils/receipts";
 
+//receipt with scroll buttons to scroll with
 export const ReceiptWithScrollButtons = forwardRef(
   ({ sx, receiptData = GetFromSessionStorage("currentReceipt") }, ref) => {
     const scrollRef = useRef();
@@ -26,8 +27,8 @@ export const ReceiptWithScrollButtons = forwardRef(
 
 export const ReturnReceipt = forwardRef(({ sx, receiptData }, ref) => {
   const { t } = useTranslation();
-  console.log(receiptData);
 
+  //calculating the total value of the returned products
   const total = useMemo(() => {
     let total = 0;
     receiptData.products.map(({ price }) => (total += price.cashout));
@@ -126,7 +127,7 @@ export const Receipt = forwardRef(
     const date = receiptData.date.split(" ")[0].split(".");
     const time = receiptData.date.split(" ")[1].split(":");
 
-    console.log(getTotalTaxOfReceipt(receiptData));
+    //calculating total vaule of the products and their taxes
     const total = useMemo(() => {
       let total = 0,
         taxesTotal = 0;

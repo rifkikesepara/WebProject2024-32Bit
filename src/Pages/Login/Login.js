@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 import { SaveToSessionStorage } from "../../Utils/utilities";
 
 export default function Login() {
-  const { t, i18n } = useTranslation();
+  //mock user data
   const user = {
     userCode: "rifki",
     password: 123,
@@ -20,6 +20,7 @@ export default function Login() {
     name: "Rıfkı Kesepara",
   };
 
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const storeInfo = useStore();
   console.log(storeInfo);
@@ -27,45 +28,43 @@ export default function Login() {
 
   const [loading, setLoading] = useState(false);
 
+  const validateUser = (values) => {
+    setLoading(true);
+    // alert(JSON.stringify(values, null, 2));
+    if (values.userCode == user.userCode && values.password == user.password) {
+      console.log(values.userCode);
+      setTimeout(() => {
+        setAlert({ text: t("loginSuccessful"), type: "success" });
+      }, 2000);
+      setTimeout(() => {
+        navigate("/home");
+        SaveToSessionStorage("employee", {
+          employeeID: 254,
+          employeeName: user.name,
+          loginTime: new Date().toLocaleString(),
+        });
+        SaveToSessionStorage("shift", {
+          started: false,
+          employeeID: 254,
+          startTime: null,
+          endTime: null,
+          duration: null,
+        });
+      }, 3500);
+    } else {
+      setTimeout(() => {
+        setAlert({ text: t("undefinedUser"), type: "error" });
+        setLoading(false);
+      }, 2000);
+    }
+  };
+
   const formik = useFormik({
     initialValues: {
       userCode: "",
       password: "",
     },
-    onSubmit: (values) => {
-      console.log(values);
-      setLoading(true);
-      // alert(JSON.stringify(values, null, 2));
-      if (
-        values.userCode == user.userCode &&
-        values.password == user.password
-      ) {
-        console.log(values.userCode);
-        setTimeout(() => {
-          setAlert({ text: t("loginSuccessful"), type: "success" });
-        }, 2000);
-        setTimeout(() => {
-          navigate("/home");
-          SaveToSessionStorage("employee", {
-            employeeID: 254,
-            employeeName: user.name,
-            loginTime: new Date().toLocaleString(),
-          });
-          SaveToSessionStorage("shift", {
-            started: false,
-            employeeID: 254,
-            startTime: null,
-            endTime: null,
-            duration: null,
-          });
-        }, 3500);
-      } else {
-        setTimeout(() => {
-          setAlert({ text: t("undefinedUser"), type: "error" });
-          setLoading(false);
-        }, 2000);
-      }
-    },
+    onSubmit: validateUser,
   });
 
   return (

@@ -29,14 +29,14 @@ import { UsedOffersDialog } from "./OfferBox";
 const CheckoutTable = forwardRef(
   (
     {
-      sx,
+      sx, //styling object
       disabled = false,
-      data,
-      selectionValues,
-      accordionVisible = true,
-      onFocus = (event, product) => {},
-      onChange = () => {},
-      onTotal = (total) => {},
+      data, //the products array that will be shown in the table
+      selectionValues, //selected product values from the table
+      accordionVisible = true, //setting visibility of the default accordion
+      onFocus = (event, product) => {}, //callback function that is executed for the changing the amount of the selected product
+      onChange = (event, newFormat) => {}, //callback function that provides the selected products
+      onTotal = (total) => {}, //callback function that provides the object of calculated values of the products, is executed whenever the table's data changed
     },
     ref
   ) => {
@@ -82,7 +82,11 @@ const CheckoutTable = forwardRef(
               onChange(newFormat);
             }}
             orientation="vertical"
-            sx={{ width: "100%", paddingBottom: 10, ...sx }}
+            sx={{
+              width: "100%",
+              paddingBottom: 10,
+              ...sx,
+            }}
           >
             <Table
               stickyHeader
@@ -177,6 +181,7 @@ const CheckoutTable = forwardRef(
                             <InfoRounded sx={{ opacity: 0 }} />
                           </IconButton>
                           <ToggleButton
+                            disabled={true}
                             key={index}
                             value={product.id}
                             sx={{
@@ -186,6 +191,10 @@ const CheckoutTable = forwardRef(
                               width: "100%",
                               paddingBlock: 2,
                               color: "text.primary",
+                              "&.Mui-disabled": {
+                                color: "unset",
+                                border: "none",
+                              },
                             }}
                           >
                             <Box

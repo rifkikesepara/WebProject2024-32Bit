@@ -1,7 +1,7 @@
 import { LineChart, axisClasses } from "@mui/x-charts";
 import { useTranslation } from "react-i18next";
 
-export default function ChartLine({ chartData }) {
+export default function ChartLine({ chartData = [] }) {
   const { t } = useTranslation();
   return (
     <LineChart
