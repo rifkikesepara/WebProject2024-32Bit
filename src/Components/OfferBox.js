@@ -120,7 +120,7 @@ export default function OfferBox() {
   );
 
   //fetching the offers datas
-  useData("./offers.json", (data) => {
+  useData("../offers.json", (data) => {
     LOG("fetching offers...", "red");
     const array = [];
     data.map((data) => {

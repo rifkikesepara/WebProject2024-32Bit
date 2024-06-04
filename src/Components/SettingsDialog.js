@@ -1,4 +1,4 @@
-import { ArrowBack, Edit, Print } from "@mui/icons-material";
+import { ArrowBack, Delete, Edit, Print } from "@mui/icons-material";
 import {
   Box,
   Dialog,
@@ -16,7 +16,7 @@ import { ThemeToggleSwitch } from "./ThemeToggleSwitch";
 import { OffersDialog, UsedOffersDialog } from "./OfferBox";
 import { useRef, useState } from "react";
 import { Receipt } from "./Receipt";
-import { GetFromLocalStorage } from "../Utils/utilities";
+import { ClearCache, GetFromLocalStorage } from "../Utils/utilities";
 import { useReactToPrint } from "react-to-print";
 import DummyReceipt from "../Resources/DummyReceipt.json";
 
@@ -124,6 +124,12 @@ export default function SettingsDialog({ open }) {
             <Typography fontSize={30}>{t("printerTest")}</Typography>
             <IconButton sx={{ fontSize: 30 }} onClick={handlePrint}>
               <Print fontSize="inherit" />
+            </IconButton>
+          </Setting>
+          <Setting>
+            <Typography fontSize={30}>{t("clearCache")}</Typography>
+            <IconButton sx={{ fontSize: 30 }} onClick={ClearCache}>
+              <Delete fontSize="inherit" />
             </IconButton>
           </Setting>
         </Stack>

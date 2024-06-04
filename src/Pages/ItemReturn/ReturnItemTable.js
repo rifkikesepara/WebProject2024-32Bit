@@ -250,7 +250,7 @@ export const ReturnItemTable = forwardRef(
 
     //function to add product to the selected items array and executes the callback function
     function addSelectedItems(product) {
-      const temp = [...selectedItems];
+      let temp = [...selectedItems];
       const doesContain = temp.find(({ id }) => id == product.id);
       if (doesContain == undefined) {
         temp = [...temp, { ...product, selected: true }];

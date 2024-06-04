@@ -448,12 +448,10 @@ export default function Sale() {
                 }}
               />
             </Box>
-            <Box
-              sx={{
-                display: "flex",
-                width: "100%",
-                justifyContent: "space-around",
-              }}
+            <Stack
+              direction={"row"}
+              justifyContent={"space-between"}
+              width={"96%"}
             >
               <Button
                 variant="contained"
@@ -474,6 +472,7 @@ export default function Sale() {
                 sx={{
                   height: 80,
                   fontSize: 20,
+                  width: 220,
                 }}
                 onClick={() => {
                   SaveToSessionStorage("cashout", cashout);
@@ -483,7 +482,7 @@ export default function Sale() {
               >
                 {t("goPayment")}
               </Button>
-            </Box>
+            </Stack>
           </Box>
         </Box>
         <Box

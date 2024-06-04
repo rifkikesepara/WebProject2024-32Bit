@@ -37,7 +37,7 @@ export const ZReport = forwardRef(({ data }, ref) => {
       discount = 0,
       taxes = { "%8": 0, "%1": 0, "%18": 0 };
     data.receipts.map((receipt) => {
-      income += receipt.payment.cash;
+      income += parseFloat(receipt.payment.cash);
       outcome += parseFloat(receipt.payment.change);
       total +=
         parseFloat(receipt.payment.card) +
