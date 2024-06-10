@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/my-app/static/css/main.71ee6b84.css",
-    "main.js": "/my-app/static/js/main.e9e1f7d2.js",
-    "static/js/787.c7d2e1a8.chunk.js": "/my-app/static/js/787.c7d2e1a8.chunk.js",
-    "index.html": "/my-app/index.html",
-    "main.71ee6b84.css.map": "/my-app/static/css/main.71ee6b84.css.map",
-    "main.e9e1f7d2.js.map": "/my-app/static/js/main.e9e1f7d2.js.map",
-    "787.c7d2e1a8.chunk.js.map": "/my-app/static/js/787.c7d2e1a8.chunk.js.map"
+    "main.css": "/WebProject2024-32Bit/static/css/main.71ee6b84.css",
+    "main.js": "/WebProject2024-32Bit/static/js/main.36a1353c.js",
+    "static/js/787.c7d2e1a8.chunk.js": "/WebProject2024-32Bit/static/js/787.c7d2e1a8.chunk.js",
+    "index.html": "/WebProject2024-32Bit/index.html",
+    "main.71ee6b84.css.map": "/WebProject2024-32Bit/static/css/main.71ee6b84.css.map",
+    "main.36a1353c.js.map": "/WebProject2024-32Bit/static/js/main.36a1353c.js.map",
+    "787.c7d2e1a8.chunk.js.map": "/WebProject2024-32Bit/static/js/787.c7d2e1a8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.71ee6b84.css",
-    "static/js/main.e9e1f7d2.js"
+    "static/js/main.36a1353c.js"
   ]
 }
