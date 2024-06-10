@@ -1,0 +1,5677 @@
+{
+  "parentId": "master",
+  "id": "C02",
+  "name": "Fırından",
+  "children": [
+    {
+      "parentId": "C02",
+      "id": "C0201",
+      "name": "Ekmek",
+      "products": [
+        {
+          "id": "14000041",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "VpqV-kVxkD",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/VpqV-kVxkD_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "B O Ş",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201000,
+            "netWeight": 200,
+            "depolamaKosulu": "Ekmek",
+            "name": "Ekmek",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/ekmek_p-14000041",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["2050000000102", "2001814", "14000041"],
+            "grossWeight": 200,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 750,
+            "normalStr": "₺7,50",
+            "discounted": 750,
+            "discountedStr": "₺7,50"
+          },
+          "stock": 47,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14000091",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "CZmoVyeUY9",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/CZmoVyeUY9_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "B O Ş",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201001,
+            "netWeight": 250,
+            "depolamaKosulu": "Ekmek",
+            "name": "Taş Fırın Ekmeği Adet",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/tas-firin-ekmegi-adet_p-14000091",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["14000091", "2001845", "2050000000508"],
+            "grossWeight": 250,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 800,
+            "normalStr": "₺8,00",
+            "discounted": 800,
+            "discountedStr": "₺8,00"
+          },
+          "stock": 48,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000348",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "gTLd9ZxgPi",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/gTLd9ZxgPi_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201012,
+            "netWeight": 200,
+            "depolamaKosulu": "Ekmek",
+            "name": "Nimet Sivas Katmer Ekmek 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Bölgesel",
+            "barcodes": ["8698823992231"],
+            "grossWeight": 200,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-sivas-katmer-ekmek-200-gr_p-28000348"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2995,
+            "normalStr": "₺29,95",
+            "discounted": 2995,
+            "discountedStr": "₺29,95"
+          },
+          "stock": 1,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14000221",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "Aa77OQTryL",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Aa77OQTryL_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "B O Ş",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201015,
+            "netWeight": 200,
+            "depolamaKosulu": "Ekmek",
+            "name": "Dürümlük Lavaş 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/durumluk-lavas-200-gr_p-14000221",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Bölgesel",
+            "barcodes": ["8698823997533", "8632145600689"],
+            "grossWeight": 220,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2550,
+            "normalStr": "₺25,50",
+            "discounted": 2550,
+            "discountedStr": "₺25,50"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14000687",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "NceAu9tjyV",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/NceAu9tjyV_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "B O Ş",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201018,
+            "netWeight": 300,
+            "depolamaKosulu": "Ekmek",
+            "name": "Bazlama Ekmek 300 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Bölgesel",
+            "barcodes": ["8698823995423"],
+            "grossWeight": 310,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/bazlama-ekmek-300-gr_p-14000687"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2495,
+            "normalStr": "₺24,95",
+            "discounted": 2495,
+            "discountedStr": "₺24,95"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14001036",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "tRyIJF3O9j",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/tRyIJF3O9j_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "B O Ş",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201019,
+            "netWeight": 150,
+            "depolamaKosulu": "Ekmek",
+            "name": "Bazlama Ekmek 150 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/bazlama-ekmek-150-gr_p-14001036",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Bölgesel",
+            "barcodes": ["8698823997182", "14001036"],
+            "grossWeight": 152,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1450,
+            "normalStr": "₺14,50",
+            "discounted": 1450,
+            "discountedStr": "₺14,50"
+          },
+          "stock": 9,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14000025",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "JtcD-Flvwc",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/JtcD-Flvwc_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "IjZMi1RZkL",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/IjZMi1RZkL_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 8,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201022,
+            "netWeight": 840,
+            "depolamaKosulu": "Ekmek",
+            "name": "Nimet Lavaş 12'li 840 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-lavas-12li-840-gr_p-14000025",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118051305",
+              "8699118033721",
+              "8699118016298",
+              "8699118009191",
+              "8693601000689"
+            ],
+            "grossWeight": 845,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3450,
+            "normalStr": "₺34,50",
+            "discounted": 3450,
+            "discountedStr": "₺34,50"
+          },
+          "stock": 8,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000019",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "jquEVs5lgi",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/jquEVs5lgi_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201024,
+            "netWeight": 276,
+            "depolamaKosulu": "Ekmek",
+            "name": "Nimet Tandır Lavaş Ekmeği 4'lü 276 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118041351"],
+            "grossWeight": 276,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-tandir-lavas-ekmegi-4lu-276-gr_p-28000019"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3200,
+            "normalStr": "₺32,00",
+            "discounted": 3200,
+            "discountedStr": "₺32,00"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000729",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "eFWwbbLDxV",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/eFWwbbLDxV_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201027,
+            "netWeight": 550,
+            "depolamaKosulu": "Ekmek",
+            "name": "Nimet Tost Ekmek 550 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-tost-ekmek-550-gr_p-28000729",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118061144"],
+            "grossWeight": 560,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2250,
+            "discounted": 2250,
+            "normalStr": "₺22,50",
+            "discountedStr": "₺22,50"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000196",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "Tkea5xMtol",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Tkea5xMtol_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201034,
+            "netWeight": 500,
+            "depolamaKosulu": "Ekmek",
+            "name": "Nimet Kepekli Tost Ekmeği 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-kepekli-tost-ekmegi-500-gr_p-28000196",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118014089", "8699118011149", "2060000073174"],
+            "grossWeight": 503,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2825,
+            "normalStr": "₺28,25",
+            "discounted": 2825,
+            "discountedStr": "₺28,25"
+          },
+          "stock": 1,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000193",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "ICCduPUGJV",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ICCduPUGJV_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201037,
+            "netWeight": 350,
+            "depolamaKosulu": "Ekmek",
+            "name": "Nimet Tam Buğday Ekmeği 350 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-tam-bugday-ekmegi-350-gr_p-28000193",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118014010", "8699118024330", "2060000073112"],
+            "grossWeight": 360,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2000,
+            "normalStr": "₺20,00",
+            "discounted": 2000,
+            "discountedStr": "₺20,00"
+          },
+          "stock": 14,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000191",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "2QaDs45uD0",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/2QaDs45uD0_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201039,
+            "netWeight": 600,
+            "depolamaKosulu": "Ekmek",
+            "name": "Nimet Köy Ekmeği 600 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-koy-ekmegi-600-gr_p-28000191",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118014072",
+              "8699118024361",
+              "8699118011385",
+              "2060000072474"
+            ],
+            "grossWeight": 605,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z130",
+            "name": "AylıkFırsatÜrünü",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710115199000,
+            "type": "regular"
+          },
+          "price": {
+            "normal": 2800,
+            "normalStr": "₺28,00",
+            "discounted": 2525,
+            "discountedStr": "₺25,25",
+            "discountRate": 10,
+            "discountRateStr": "%10 İNDİRİM"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000379",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "rcuxEzZkPR",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/rcuxEzZkPR_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "UNO",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201059,
+            "netWeight": 500,
+            "depolamaKosulu": "Ekmek",
+            "name": "Uno Tost Ekmek 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/uno-tost-ekmek-500-gr_p-28000379",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690698511883"],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4400,
+            "normalStr": "₺44,00",
+            "discounted": 4400,
+            "discountedStr": "₺44,00"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000377",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "jpBANWe17i",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/jpBANWe17i_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "UNO",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201060,
+            "netWeight": 460,
+            "depolamaKosulu": "Ekmek",
+            "name": "Uno Çok Tahıllı Ekmek 460 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690698511760"],
+            "grossWeight": 460,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/uno-cok-tahilli-ekmek-460-gr_p-28000377"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3750,
+            "normalStr": "₺37,50",
+            "discounted": 3750,
+            "discountedStr": "₺37,50"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000673",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "iy4DdBpKxf",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/iy4DdBpKxf_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "UNO",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201065,
+            "netWeight": 450,
+            "depolamaKosulu": "Ekmek",
+            "name": "Uno Tam Buğday Unlu Tava Ekmeği 450 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690698514969"],
+            "grossWeight": 460,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/uno-tam-bugday-unlu-tava-ekmegi-450-gr_p-28000673"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4050,
+            "discounted": 4050,
+            "normalStr": "₺40,50",
+            "discountedStr": "₺40,50"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000195",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "ADv6h5HapX",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ADv6h5HapX_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201070,
+            "netWeight": 420,
+            "depolamaKosulu": "Ekmek",
+            "name": "Nimet Susamlı Hamburger Ekmeği 6x70 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-susamli-hamburger-ekmegi-6x70-gr_p-28000195",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["2060000073150", "8699118011187", "8699118014096"],
+            "grossWeight": 423,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3250,
+            "normalStr": "₺32,50",
+            "discounted": 3250,
+            "discountedStr": "₺32,50"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000200",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "aX9k-Dwfg6",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aX9k-Dwfg6_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201073,
+            "netWeight": 432,
+            "depolamaKosulu": "Ekmek",
+            "name": "Nimet Hamburger Ekmeği 8x54 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-hamburger-ekmegi-8x54-gr_p-28000200",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["2060000074317", "8699118011224", "8699118014102"],
+            "grossWeight": 435,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3000,
+            "normalStr": "₺30,00",
+            "discounted": 3000,
+            "discountedStr": "₺30,00"
+          },
+          "stock": 1,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000197",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "BqHSGljXhm",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/BqHSGljXhm_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201083,
+            "netWeight": 455,
+            "depolamaKosulu": "Ekmek",
+            "name": "Nimet Sandviç Ekmeği 7x65 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-sandvic-ekmegi-7x65-gr_p-28000197",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118014058", "8699118011101", "2060000073198"],
+            "grossWeight": 458,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z130",
+            "name": "AylıkFırsatÜrünü",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710115199000,
+            "type": "regular"
+          },
+          "price": {
+            "normal": 3125,
+            "normalStr": "₺31,25",
+            "discounted": 2850,
+            "discountedStr": "₺28,50",
+            "discountRate": 9,
+            "discountRateStr": "%9 İNDİRİM"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000416",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "S5U0QWeKc0",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/S5U0QWeKc0_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201085,
+            "netWeight": 200,
+            "depolamaKosulu": "Ekmek",
+            "name": "Nimet Kanepe Sandviç 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Bölgesel",
+            "barcodes": ["8699118041849"],
+            "grossWeight": 200,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-kanepe-sandvic-200-gr_p-28000416"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2795,
+            "normalStr": "₺27,95",
+            "discounted": 2495,
+            "discountedStr": "₺24,95",
+            "discountRate": 11,
+            "discountRateStr": "%11 İNDİRİM"
+          },
+          "stock": 1,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14000891",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "E1ohcSqJbh",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/E1ohcSqJbh_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201086,
+            "netWeight": 200,
+            "depolamaKosulu": "Ekmek",
+            "name": "Mini Sade Atıştırmalık Kanepe 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/mini-sade-atistirmalik-kanepe-200-gr_p-14000891",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Bölgesel",
+            "barcodes": ["8693601001563", "14000891"],
+            "grossWeight": 200,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2795,
+            "normalStr": "₺27,95",
+            "discounted": 2495,
+            "discountedStr": "₺24,95",
+            "discountRate": 11,
+            "discountRateStr": "%11 İNDİRİM"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14000049",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yNCpFNLpbx",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yNCpFNLpbx_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201090,
+            "netWeight": 500,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Nimet Yufka 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-yufka-500-gr_p-14000049",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8693601310375", "8699118008552", "14000049"],
+            "grossWeight": 503,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2750,
+            "normalStr": "₺27,50",
+            "discounted": 2750,
+            "discountedStr": "₺27,50"
+          },
+          "stock": 14,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14000048",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "nycEA47nfu",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/nycEA47nfu_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201093,
+            "netWeight": 360,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Nimet Üçgen Yufka 360 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-ucgen-yufka-360-gr_p-14000048",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118010838", "8699118008330", "8693601310436"],
+            "grossWeight": 366,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2575,
+            "normalStr": "₺25,75",
+            "discounted": 2575,
+            "discountedStr": "₺25,75"
+          },
+          "stock": 8,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14000548",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "8leX1j86iY",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/8leX1j86iY_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201094,
+            "netWeight": 700,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Nimet Su Böreklik Yufka 700 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-su-boreklik-yufka-700-gr_p-14000548",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Bölgesel",
+            "barcodes": ["8693601001983", "14000548"],
+            "grossWeight": 710,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4450,
+            "normalStr": "₺44,50",
+            "discounted": 4450,
+            "discountedStr": "₺44,50"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14000138",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "mRFxvE6Qt1",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/mRFxvE6Qt1_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "JjCf63oGJ2",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/JjCf63oGJ2_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 1,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 201095,
+            "netWeight": 800,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Nimet Baklavalık Yufka 800 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-baklavalik-yufka-800-gr_p-14000138",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8698823997465", "8699118008545"],
+            "grossWeight": 835,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4900,
+            "normalStr": "₺49,00",
+            "discounted": 4900,
+            "discountedStr": "₺49,00"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14001211",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "5cWIE1UcOw",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/5cWIE1UcOw_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["aldin-aldin-gida"],
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 2002073,
+            "netWeight": 1000,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Nimet Yufka 1000 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/nimet-yufka-1000-gr_p-14001211",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8698823997595", "8699118008538", "14001211"],
+            "grossWeight": 1050,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2002",
+              "name": "Temel Gıda, Hazır Yemek",
+              "parentId": "master"
+            },
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0201", "name": "Ekmek", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4900,
+            "normalStr": "₺49,00",
+            "discounted": 4900,
+            "discountedStr": "₺49,00"
+          },
+          "stock": 14,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Ekmek Fiyatları ve Ekmek Çeşitleri | A101 KAPIDA",
+      "seoDescription": "Ekmek çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Ekmek çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/firindan/ekmek"
+    },
+    {
+      "parentId": "C02",
+      "id": "C0203",
+      "name": "Unlu Mamüller",
+      "products": [
+        {
+          "id": "28000036",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "RUc9tesmnK",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/RUc9tesmnK_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "hbMaBLuX1T",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/hbMaBLuX1T_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203001,
+            "netWeight": 500,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Kurabiye 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-kurabiye-500-gr_p-28000036",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118008507", "8699118008514"],
+            "grossWeight": 623,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4950,
+            "discounted": 4950,
+            "normalStr": "₺49,50",
+            "discountedStr": "₺49,50"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000020",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "S-Wv21tQdX",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/S-Wv21tQdX_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "ZU-UuErzkr",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ZU-UuErzkr_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203005,
+            "netWeight": 500,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Yağlı Gevrek 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118008101"],
+            "grossWeight": 538,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-yagli-gevrek-500-gr_p-28000020"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4950,
+            "normalStr": "₺49,50",
+            "discounted": 4950,
+            "discountedStr": "₺49,50"
+          },
+          "stock": 15,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000343",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "CWBMHZtf3C",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/CWBMHZtf3C_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203006,
+            "netWeight": 500,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Sütlü Mahlepli Kurabiye 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118032496"],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-sutlu-mahlepli-kurabiye-500-gr_p-28000343"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4950,
+            "normalStr": "₺49,50",
+            "discounted": 4950,
+            "discountedStr": "₺49,50"
+          },
+          "stock": 17,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000299",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "jW-aOeiRRS",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/jW-aOeiRRS_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "FkC4IfVfgB",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/FkC4IfVfgB_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203007,
+            "netWeight": 400,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Süt Kaymaklı Kurabiye 400 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118027706"],
+            "grossWeight": 400,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-sut-kaymakli-kurabiye-400-gr_p-28000299"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4950,
+            "normalStr": "₺49,50",
+            "discounted": 4950,
+            "discountedStr": "₺49,50"
+          },
+          "stock": 9,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000383",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "dtJySQyU4H",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/dtJySQyU4H_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203008,
+            "netWeight": 290,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Kavala Kurabiyesi 290 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118032557"],
+            "grossWeight": 290,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-kavala-kurabiyesi-290-gr_p-28000383"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3350,
+            "normalStr": "₺33,50",
+            "discounted": 3350,
+            "discountedStr": "₺33,50"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000461",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "moS4bxOWUz",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/moS4bxOWUz_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "OYNkV26xaL",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/OYNkV26xaL_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 16,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203009,
+            "netWeight": 500,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Hindistan Cevizli Çikolata Parçalı Kurabiye 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-hindistan-cevizli-cikolata-parcali-kurabiye-500-gr_p-28000461",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["2060000175724", "8699118032489"],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4950,
+            "normalStr": "₺49,50",
+            "discounted": 4950,
+            "discountedStr": "₺49,50"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000463",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "6bp79CyfzW",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/6bp79CyfzW_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "Eg-ARP6oFb",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Eg-ARP6oFb_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203010,
+            "netWeight": 500,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Tahinli Susamlı Kurabiye 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-tahinli-susamli-kurabiye-500-gr_p-28000463",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118027713", "2060000175915"],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4950,
+            "normalStr": "₺49,50",
+            "discounted": 4950,
+            "discountedStr": "₺49,50"
+          },
+          "stock": 20,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000460",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "jC2MXewXbN",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/jC2MXewXbN_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "WmXtXGQM0z",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/WmXtXGQM0z_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203011,
+            "netWeight": 500,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Portakal Aromalı Kurabiye 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118032465", "2060000175717"],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-portakal-aromali-kurabiye-500-gr_p-28000460"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4950,
+            "normalStr": "₺49,50",
+            "discounted": 4950,
+            "discountedStr": "₺49,50"
+          },
+          "stock": 10,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000071",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "45SFiYGkL5",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/45SFiYGkL5_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203012,
+            "netWeight": 300,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Çıtır Tahinli Kurabiye 300 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-citir-tahinli-kurabiye-300-gr_p-28000071",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Delist",
+            "barcodes": ["8699118010180", "8680474792001"],
+            "grossWeight": 324,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4090,
+            "normalStr": "₺40,90",
+            "discounted": 4090,
+            "discountedStr": "₺40,90"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000001",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "ZLFqJp0ZfI",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ZLFqJp0ZfI_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ETİ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203013,
+            "netWeight": 143,
+            "depolamaKosulu": "Gıda",
+            "name": "Eti Etimek 143 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690526057019"],
+            "grossWeight": 143,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/eti-etimek-143-gr_p-28000001"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2700,
+            "normalStr": "₺27,00",
+            "discounted": 2700,
+            "discountedStr": "₺27,00"
+          },
+          "stock": 8,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000498",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "fqYvQUpg0Y",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/fqYvQUpg0Y_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "pQ1avO8oYi",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/pQ1avO8oYi_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203015,
+            "netWeight": 200,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Tam Buğdaylı Yaprak Galeta 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-tam-bugdayli-yaprak-galeta-200-gr_p-28000498",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118025153", "2060000176400"],
+            "grossWeight": 200,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2500,
+            "normalStr": "₺25,00",
+            "discounted": 2500,
+            "discountedStr": "₺25,00"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000578",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "t6IFCfuGiG",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/t6IFCfuGiG_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203016,
+            "netWeight": 400,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Elmalı Kurabiye 400 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-elmali-kurabiye-400-gr_p-28000578",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699273041999", "8699118026570", "8699118023425"],
+            "grossWeight": 405,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4950,
+            "normalStr": "₺49,50",
+            "discounted": 4950,
+            "discountedStr": "₺49,50"
+          },
+          "stock": 10,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000452",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "LHOBxeHdOB",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/LHOBxeHdOB_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "P9p0lKEZFH",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/P9p0lKEZFH_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 27,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203017,
+            "netWeight": 125,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Kepekli Grissini 125 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-kepekli-grissini-125-gr_p-28000452",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118036197", "2060000175328"],
+            "grossWeight": 125,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2500,
+            "normalStr": "₺25,00",
+            "discounted": 2500,
+            "discountedStr": "₺25,00"
+          },
+          "stock": 11,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000497",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "KulKMQjScw",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/KulKMQjScw_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "R0A53pGxoz",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/R0A53pGxoz_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203020,
+            "netWeight": 200,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Çörek Otlu Yaprak Galeta 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-corek-otlu-yaprak-galeta-200-gr_p-28000497",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118026129", "2060000176387"],
+            "grossWeight": 200,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2500,
+            "normalStr": "₺25,00",
+            "discounted": 2500,
+            "discountedStr": "₺25,00"
+          },
+          "stock": 14,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000230",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "YprAwL8pJt",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/YprAwL8pJt_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203021,
+            "netWeight": 200,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Kepekli Galeta 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-kepekli-galeta-200-gr_p-28000230",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118008293", "2060000175038"],
+            "grossWeight": 205,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1650,
+            "normalStr": "₺16,50",
+            "discounted": 1650,
+            "discountedStr": "₺16,50"
+          },
+          "stock": 11,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000465",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "LiDzyZuX4O",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/LiDzyZuX4O_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203022,
+            "netWeight": 500,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Tereyağlı Çörek Otlu Kurabiye 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-tereyagli-corek-otlu-kurabiye-500-gr_p-28000465",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118027690", "2060000175946"],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4950,
+            "normalStr": "₺49,50",
+            "discounted": 4950,
+            "discountedStr": "₺49,50"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000231",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "KvuZ4vqCzj",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/KvuZ4vqCzj_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203023,
+            "netWeight": 200,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Sade Galeta 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118008309", "2060000175052"],
+            "grossWeight": 205,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-sade-galeta-200-gr_p-28000231"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1650,
+            "normalStr": "₺16,50",
+            "discounted": 1650,
+            "discountedStr": "₺16,50"
+          },
+          "stock": 17,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000500",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "4wElAG8m4k",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/4wElAG8m4k_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203024,
+            "netWeight": 250,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Kakaolu Mini Kurabiye 250 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-kakaolu-mini-kurabiye-250-gr_p-28000500",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118070689", "8699118035305", "2060000176448"],
+            "grossWeight": 250,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4950,
+            "normalStr": "₺49,50",
+            "discounted": 4950,
+            "discountedStr": "₺49,50"
+          },
+          "stock": 1,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000496",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "ubEenHynKD",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ubEenHynKD_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203025,
+            "netWeight": 200,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Sade Yaprak Galeta 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-sade-yaprak-galeta-200-gr_p-28000496",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118026136", "2060000176363"],
+            "grossWeight": 200,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2500,
+            "normalStr": "₺25,00",
+            "discounted": 2500,
+            "discountedStr": "₺25,00"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000219",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "Ey3mOnY3Gt",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Ey3mOnY3Gt_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203026,
+            "netWeight": 200,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Susamlı Galeta 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-susamli-galeta-200-gr_p-28000219",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118008286", "2060000175007"],
+            "grossWeight": 205,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1650,
+            "normalStr": "₺16,50",
+            "discounted": 1650,
+            "discountedStr": "₺16,50"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000501",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "kARE-6a9-m",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/kARE-6a9-m_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203027,
+            "netWeight": 250,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Mahlepli Susamlı Mini Kurabiye 250 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-mahlepli-susamli-mini-kurabiye-250-gr_p-28000501",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["2060000176462", "8699118035282", "8699118070672"],
+            "grossWeight": 250,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4950,
+            "normalStr": "₺49,50",
+            "discounted": 4950,
+            "discountedStr": "₺49,50"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000451",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "6JhV7QIpf2",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/6JhV7QIpf2_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "lfBXz7YkaT",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/lfBXz7YkaT_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 28,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203028,
+            "netWeight": 125,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Sade Grissini 125 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-sade-grissini-125-gr_p-28000451",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118036203", "2060000175311"],
+            "grossWeight": 125,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2500,
+            "normalStr": "₺25,00",
+            "discounted": 2500,
+            "discountedStr": "₺25,00"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000241",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "6qonih29ya",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/6qonih29ya_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203029,
+            "netWeight": 200,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Çörekotlu Galeta 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-corekotlu-galeta-200-gr_p-28000241",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118019121", "2060000175069"],
+            "grossWeight": 205,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1650,
+            "normalStr": "₺16,50",
+            "discounted": 1650,
+            "discountedStr": "₺16,50"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000494",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "QW3N4a-EcX",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/QW3N4a-EcX_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "GmgX0tK3HH",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/GmgX0tK3HH_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203030,
+            "netWeight": 500,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Tam Buğdaylı Tandır Gevreği 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-tam-bugdayli-tandir-gevregi-500-gr_p-28000494",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118033622", "2060000176325"],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4900,
+            "normalStr": "₺49,00",
+            "discounted": 4900,
+            "discountedStr": "₺49,00"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000502",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "Pdl3PGStGS",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Pdl3PGStGS_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203031,
+            "netWeight": 250,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Ay Çekirdekli Mini Kurabiye 250 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-ay-cekirdekli-mini-kurabiye-250-gr_p-28000502",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118070665", "8699118035299", "2060000176479"],
+            "grossWeight": 250,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4950,
+            "normalStr": "₺49,50",
+            "discounted": 4950,
+            "discountedStr": "₺49,50"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000493",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "xrHj80tsyX",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/xrHj80tsyX_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "FwO3-frtCE",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/FwO3-frtCE_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203032,
+            "netWeight": 500,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Sade Tandır Gevreği 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-sade-tandir-gevregi-500-gr_p-28000493",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118032472", "2060000176318"],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4900,
+            "normalStr": "₺49,00",
+            "discounted": 4900,
+            "discountedStr": "₺49,00"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000058",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "MWvNs0FE5G",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/MWvNs0FE5G_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203042,
+            "netWeight": 200,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Ay Çekirdekli El Yapımı Galeta 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Bölgesel",
+            "barcodes": ["8699118043928"],
+            "grossWeight": 200,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-ay-cekirdekli-el-yapimi-galeta-200-gr_p-28000058"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3295,
+            "normalStr": "₺32,95",
+            "discounted": 3295,
+            "discountedStr": "₺32,95"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000749",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "JMwMK-3hkW",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/JMwMK-3hkW_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 49,
+            "brand": "MARETTI",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203066,
+            "netWeight": 70,
+            "depolamaKosulu": "Gıda",
+            "name": "Maretti Fırınlanmış Pizza Ekmek 70 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/maretti-firinlanmis-pizza-ekmek-70-gr_p-28000749",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["3800205871255"],
+            "grossWeight": 70,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1990,
+            "discounted": 1990,
+            "normalStr": "₺19,90",
+            "discountedStr": "₺19,90"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000607",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "-xhVvPBUwQ",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/-xhVvPBUwQ_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203068,
+            "netWeight": 300,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Çikolatalı Kruvasan 300 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118014126"],
+            "grossWeight": 310,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-cikolatali-kruvasan-300-gr_p-28000607"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4450,
+            "normalStr": "₺44,50",
+            "discounted": 4450,
+            "discountedStr": "₺44,50"
+          },
+          "stock": 14,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000692",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "xuMMdkMMp-",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/xuMMdkMMp-_256x256.png"
+            },
+            {
+              "id": "H5S1H56ap7",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/H5S1H56ap7_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 268,
+            "brand": "7DAYS",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 203070,
+            "netWeight": 240,
+            "depolamaKosulu": "Gıda",
+            "name": "7Days Kakaolu veya Fındıklı Kruvasan 5x48 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/7days-kakaolu-veya-findikli-kruvasan-5x48-gr_p-28000692",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["5201360598014", "5201360593002"],
+            "grossWeight": 245,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            { "id": "C0203", "name": "Unlu Mamüller", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4700,
+            "discounted": 4700,
+            "normalStr": "₺47,00",
+            "discountedStr": "₺47,00"
+          },
+          "stock": 1,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Unlu Mamüller Fiyatları ve Çeşitleri | A101 KAPIDA",
+      "seoDescription": "Unlu Mamüller'in çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da! Sepete ekle, Unlu Mamül çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/firindan/unlu-mamuller"
+    },
+    {
+      "parentId": "C02",
+      "id": "C0202",
+      "name": "Hamur Pasta Malzemeleri",
+      "products": [
+        {
+          "id": "28000695",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "DKDaQBpCBO",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/DKDaQBpCBO_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DORBİ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202011,
+            "netWeight": 150,
+            "depolamaKosulu": "Gıda",
+            "name": "Dorbi Sade Krem Şanti 150 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dorbi-sade-krem-santi-150-gr_p-28000695",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118008811", "2060000175366"],
+            "grossWeight": 150,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1950,
+            "discounted": 1950,
+            "normalStr": "₺19,50",
+            "discountedStr": "₺19,50"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000573",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yzlZgbWwdR",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yzlZgbWwdR_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "Nl9sbzCD1c",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Nl9sbzCD1c_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DORBİ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202014,
+            "netWeight": 100,
+            "depolamaKosulu": "Gıda",
+            "name": "Dorbi Hamur Kabartma Tozu 10x10 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dorbi-hamur-kabartma-tozu-10x10-gr_p-28000573",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118029892", "8699118006312", "8699118036852"],
+            "grossWeight": 105,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 900,
+            "normalStr": "₺9,00",
+            "discounted": 900,
+            "discountedStr": "₺9,00"
+          },
+          "stock": 1,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000574",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "RE6GoCJTbo",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/RE6GoCJTbo_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "QQ38uN3sCe",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/QQ38uN3sCe_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DORBİ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202019,
+            "netWeight": 50,
+            "depolamaKosulu": "Gıda",
+            "name": "Dorbi Şekerli Vanilin 10x5 Gr ",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dorbi-sekerli-vanilin-10x5-gr-_p-28000574",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118006329", "8699118036845", "8699118029885"],
+            "grossWeight": 55,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 900,
+            "normalStr": "₺9,00",
+            "discounted": 900,
+            "discountedStr": "₺9,00"
+          },
+          "stock": 17,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000161",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "LhJv61n2Bq",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/LhJv61n2Bq_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 23,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202024,
+            "netWeight": 100,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Dark Kakao 100 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690629442293"],
+            "grossWeight": 100,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dr-oetker-dark-kakao-100-gr_p-28000161"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4990,
+            "normalStr": "₺49,90",
+            "discounted": 4990,
+            "discountedStr": "₺49,90"
+          },
+          "stock": 14,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000575",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "BrBpirmu5w",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/BrBpirmu5w_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "v7qDKYMqCX",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/v7qDKYMqCX_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DORBİ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202026,
+            "netWeight": 50,
+            "depolamaKosulu": "Gıda",
+            "name": "Dorbi Kakao 50 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dorbi-kakao-50-gr_p-28000575",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118029939", "8699118008798"],
+            "grossWeight": 57,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 975,
+            "normalStr": "₺9,75",
+            "discounted": 975,
+            "discountedStr": "₺9,75"
+          },
+          "stock": 27,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14000315",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "6uk0oUthQu",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/6uk0oUthQu_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "-LXPIVHajI",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/-LXPIVHajI_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DORBİ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202029,
+            "netWeight": 55,
+            "depolamaKosulu": "Gıda",
+            "name": "Dorbi Kuru Instant Maya 5x11 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118043379"],
+            "grossWeight": 60,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dorbi-kuru-instant-maya-5x11-gr_p-14000315"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1225,
+            "normalStr": "₺12,25",
+            "discounted": 1225,
+            "discountedStr": "₺12,25"
+          },
+          "stock": 19,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14001941",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "ndN70jiAbL",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ndN70jiAbL_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DORBİ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202030,
+            "netWeight": 168,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Dorbi Yaş Maya 4x42 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dorbi-yas-maya-4x42-gr_p-14001941",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118036654", "8699118006886", "2060000108197"],
+            "grossWeight": 175,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 775,
+            "normalStr": "₺7,75",
+            "discounted": 775,
+            "discountedStr": "₺7,75"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14001477",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "h2IoLRai3R",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/h2IoLRai3R_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "YUVA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202032,
+            "netWeight": 33,
+            "depolamaKosulu": "Gıda",
+            "name": "Yuva Kuru Maya 3x11 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/yuva-kuru-maya-3x11-gr_p-14001477",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8695738000013", "8691241002148"],
+            "grossWeight": 35,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1645,
+            "normalStr": "₺16,45",
+            "discounted": 1645,
+            "discountedStr": "₺16,45"
+          },
+          "stock": 18,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14002212",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "1C3bnz7M8f",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/1C3bnz7M8f_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 97,
+            "brand": "YUVA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202034,
+            "netWeight": 300,
+            "depolamaKosulu": "Gıda",
+            "name": "Yuva Aktif Kuru Maya 3x100 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8680202113788"],
+            "grossWeight": 325,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/yuva-aktif-kuru-maya-3x100-gr_p-14002212"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5290,
+            "discounted": 5290,
+            "normalStr": "₺52,90",
+            "discountedStr": "₺52,90"
+          },
+          "stock": 34,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14001780",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "ZjDr5MORKA",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ZjDr5MORKA_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "6IFBxvAcyz",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/6IFBxvAcyz_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "sf1Zel9Zhc",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/sf1Zel9Zhc_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "H0SOS37kAL",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/H0SOS37kAL_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 22,
+            "brand": "PAKMAYA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202036,
+            "netWeight": 100,
+            "depolamaKosulu": "Gıda",
+            "name": "Pakmaya Aktif Kuru Maya 100 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/pakmaya-aktif-kuru-maya-100-gr_p-14001780",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690770322215"],
+            "grossWeight": 105,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3225,
+            "normalStr": "₺32,25",
+            "discounted": 3225,
+            "discountedStr": "₺32,25"
+          },
+          "stock": 12,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14002164",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "iJbrasKnob",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/iJbrasKnob_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 88,
+            "brand": "PAKMAYA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202037,
+            "netWeight": 90,
+            "depolamaKosulu": "Gıda",
+            "name": "Pakmaya Instant Maya 9x10 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/pakmaya-instant-maya-9x10-gr_p-14002164",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690770323373"],
+            "grossWeight": 95,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2002",
+              "name": "Temel Gıda, Hazır Yemek",
+              "parentId": "master"
+            },
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z110",
+            "name": "AldınAldın",
+            "badgeId": "promotion-aldinaldin",
+            "badgeType": "default",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710374399000,
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-aldinaldin_256x256.png",
+            "type": "regular",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aldin-aldin_256x256.png"
+          },
+          "price": {
+            "normal": 3750,
+            "discounted": 3750,
+            "normalStr": "₺37,50",
+            "discountedStr": "₺37,50"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14002208",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "onRIyB8pHh",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/onRIyB8pHh_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 92,
+            "brand": "YUVA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202038,
+            "netWeight": 35,
+            "depolamaKosulu": "Gıda",
+            "name": "Yuva Ekşi Hamur Maya 35 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/yuva-eksi-hamur-maya-35-gr_p-14002208",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8680202111241"],
+            "grossWeight": 40,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z130",
+            "name": "AylıkFırsatÜrünü",
+            "source": "SAP",
+            "startDate": 1709164800000,
+            "endDate": 1710979199000,
+            "type": "regular"
+          },
+          "price": {
+            "normal": 690,
+            "discounted": 495,
+            "normalStr": "₺6,90",
+            "discountedStr": "₺4,95",
+            "discountRate": 28,
+            "discountRateStr": "%28 İNDİRİM"
+          },
+          "stock": 1,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14000544",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "aJrYdzJaGf",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aJrYdzJaGf_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": [""],
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202039,
+            "netWeight": 400,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker İrmik Helvası 400 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dr-oetker-irmik-helvasi-400-gr_p-14000544",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690629446086", "8690629430337"],
+            "grossWeight": 405,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3200,
+            "normalStr": "₺32,00",
+            "discounted": 3200,
+            "discountedStr": "₺32,00"
+          },
+          "stock": 16,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000475",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "rd7xJ9O0w-",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/rd7xJ9O0w-_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DORBİ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202044,
+            "netWeight": 160,
+            "depolamaKosulu": "Gıda",
+            "name": "Dorbi Kakaolu Pasta Kreması 160 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118008859", "2060000176134"],
+            "grossWeight": 160,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dorbi-kakaolu-pasta-kremasi-160-gr_p-28000475"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2100,
+            "normalStr": "₺21,00",
+            "discounted": 2100,
+            "discountedStr": "₺21,00"
+          },
+          "stock": 9,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000737",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "x6DIth5qML",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/x6DIth5qML_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 122,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202046,
+            "netWeight": 205,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Bitter Çikolata+Meyveli Sos 205 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690629447601"],
+            "grossWeight": 206,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dr-oetker-bitter-cikolatameyveli-sos-205-gr_p-28000737"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3200,
+            "discounted": 3200,
+            "normalStr": "₺32,00",
+            "discountedStr": "₺32,00"
+          },
+          "stock": 10,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14001075",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "GC5gwgHiDE",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/GC5gwgHiDE_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "5bCQIMxaGu",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/5bCQIMxaGu_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "PETEK",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202048,
+            "netWeight": 250,
+            "depolamaKosulu": "Gıda",
+            "name": "Petek Pudra Şekeri 250 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118004684"],
+            "grossWeight": 255,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/petek-pudra-sekeri-250-gr_p-14001075"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1350,
+            "normalStr": "₺13,50",
+            "discounted": 1350,
+            "discountedStr": "₺13,50"
+          },
+          "stock": 14,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000594",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "U-dJJYeAKy",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/U-dJJYeAKy_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "xTsLzsykPC",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/xTsLzsykPC_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DORBİ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202049,
+            "netWeight": 100,
+            "depolamaKosulu": "Gıda",
+            "name": "Dorbi Damla Çikolata 100 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118057529"],
+            "grossWeight": 105,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dorbi-damla-cikolata-100-gr_p-28000594"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1525,
+            "normalStr": "₺15,25",
+            "discounted": 1525,
+            "discountedStr": "₺15,25"
+          },
+          "stock": 21,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000579",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "Kl58TP13ye",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Kl58TP13ye_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "nzxoqhwnZ4",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/nzxoqhwnZ4_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DORBİ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202050,
+            "netWeight": 128,
+            "depolamaKosulu": "Gıda",
+            "name": "Dorbi Çikolatalı Sos 128 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dorbi-cikolatali-sos-128-gr_p-28000579",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118008804", "8699118029922"],
+            "grossWeight": 132,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1200,
+            "normalStr": "₺12,00",
+            "discounted": 1200,
+            "discountedStr": "₺12,00"
+          },
+          "stock": 24,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000474",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "YG9q0nKZx6",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/YG9q0nKZx6_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DORBİ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202053,
+            "netWeight": 140,
+            "depolamaKosulu": "Gıda",
+            "name": "Dorbi Sade Pasta Kreması 140 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dorbi-sade-pasta-kremasi-140-gr_p-28000474",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118008828", "2060000176127"],
+            "grossWeight": 140,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2100,
+            "normalStr": "₺21,00",
+            "discounted": 2100,
+            "discountedStr": "₺21,00"
+          },
+          "stock": 14,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000551",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "DaHyw8edBI",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/DaHyw8edBI_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "KENTON",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202054,
+            "netWeight": 60,
+            "depolamaKosulu": "Gıda",
+            "name": "Kenton Dekor Pasta Süsü 3'lü 60 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/kenton-dekor-pasta-susu-3lu-60-gr_p-28000551",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GeçiciDelist",
+            "barcodes": ["8690547194168"],
+            "grossWeight": 60,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2350,
+            "normalStr": "₺23,50",
+            "discounted": 2350,
+            "discountedStr": "₺23,50"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000552",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "y3H7XXn0P3",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/y3H7XXn0P3_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "KENTON",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202056,
+            "netWeight": 60,
+            "depolamaKosulu": "Gıda",
+            "name": "Kenton Dekor Kahverengi Pasta Süsü 60 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/kenton-dekor-kahverengi-pasta-susu-60-gr_p-28000552",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GeçiciDelist",
+            "barcodes": ["8690547194175"],
+            "grossWeight": 60,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2350,
+            "normalStr": "₺23,50",
+            "discounted": 2350,
+            "discountedStr": "₺23,50"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000550",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "mTMyxQdXVa",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/mTMyxQdXVa_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "KENTON",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202057,
+            "netWeight": 60,
+            "depolamaKosulu": "Gıda",
+            "name": "Kenton Çikolatalı Pasta Süsü 3'lü 60 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/kenton-cikolatali-pasta-susu-3lu-60-gr_p-28000550",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GeçiciDelist",
+            "barcodes": ["8690547194151"],
+            "grossWeight": 60,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2350,
+            "normalStr": "₺23,50",
+            "discounted": 2350,
+            "discountedStr": "₺23,50"
+          },
+          "stock": 13,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000616",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "hhXdeh9VCp",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/hhXdeh9VCp_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202061,
+            "netWeight": 134,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Sade Pasta Kreması 134 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690629446178"],
+            "grossWeight": 135,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dr-oetker-sade-pasta-kremasi-134-gr_p-28000616"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4350,
+            "normalStr": "₺43,50",
+            "discounted": 4350,
+            "discountedStr": "₺43,50"
+          },
+          "stock": 12,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000615",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "ZWZ6ep4UYr",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ZWZ6ep4UYr_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202062,
+            "netWeight": 154,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Çikolatalı Pasta Kreması 154 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690629446185"],
+            "grossWeight": 155,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dr-oetker-cikolatali-pasta-kremasi-154-gr_p-28000615"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4350,
+            "normalStr": "₺43,50",
+            "discounted": 4350,
+            "discountedStr": "₺43,50"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "18001383",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "qhRyGvqjH9",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/qhRyGvqjH9_256x256.png"
+            },
+            {
+              "id": "BctUTvse65",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/BctUTvse65_256x256.png"
+            },
+            {
+              "id": "tN1QMimFCq",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/tN1QMimFCq_256x256.png"
+            },
+            {
+              "id": "YiPXNE9MdE",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/YiPXNE9MdE_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 28,
+            "brand": "KENT BORİNGER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202065,
+            "netWeight": 750,
+            "depolamaKosulu": "Gıda",
+            "name": "Kent Boringer Topping Pasta Sosu 750 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/kent-boringer-topping-pasta-sosu-750-gr_p-18001383",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8694587134696",
+              "8694587134733",
+              "8694587126707",
+              "8694587134726"
+            ],
+            "grossWeight": 817,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 8990,
+            "normalStr": "₺89,90",
+            "discounted": 8990,
+            "discountedStr": "₺89,90"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000242",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "3i1fnVbQzq",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/3i1fnVbQzq_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 109,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202068,
+            "netWeight": 156,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Pastacı Kreması 156 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690629443191"],
+            "grossWeight": 156,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dr-oetker-pastaci-kremasi-156-gr_p-28000242"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1800,
+            "normalStr": "₺18,00",
+            "discounted": 1800,
+            "discountedStr": "₺18,00"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000511",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "5OdeLzBDpr",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/5OdeLzBDpr_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "HCoFkTPLJI",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/HCoFkTPLJI_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 108,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202082,
+            "netWeight": 175,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Pirinç Unu 5x35 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Bölgesel",
+            "barcodes": ["8690629310943"],
+            "grossWeight": 175,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dr-oetker-pirinc-unu-5x35-gr_p-28000511"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2590,
+            "normalStr": "₺25,90",
+            "discounted": 2590,
+            "discountedStr": "₺25,90"
+          },
+          "stock": 25,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000080",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "fbigE5RKBn",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/fbigE5RKBn_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "İNCİ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202083,
+            "netWeight": 200,
+            "depolamaKosulu": "Gıda",
+            "name": "İnci Mısır Nişastası 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/inci-misir-nisastasi-200-gr_p-28000080",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8691865110816", "8699118017837", "8691865122109"],
+            "grossWeight": 215,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 975,
+            "normalStr": "₺9,75",
+            "discounted": 975,
+            "discountedStr": "₺9,75"
+          },
+          "stock": 8,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000081",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "qmtZivFPzT",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/qmtZivFPzT_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "İNCİ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202084,
+            "netWeight": 200,
+            "depolamaKosulu": "Gıda",
+            "name": "İnci Buğday Nişastası 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/inci-bugday-nisastasi-200-gr_p-28000081",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118017820", "8691865122093"],
+            "grossWeight": 216,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2002",
+              "name": "Temel Gıda, Hazır Yemek",
+              "parentId": "master"
+            },
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 900,
+            "normalStr": "₺9,00",
+            "discounted": 900,
+            "discountedStr": "₺9,00"
+          },
+          "stock": 9,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14000054",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "TAAXrDcddz",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/TAAXrDcddz_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 21,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202087,
+            "netWeight": 102,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Çikolatalı Sos 102 Gr ",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dr-oetker-cikolatali-sos-102-gr-_p-14000054",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690629442842"],
+            "grossWeight": 103,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2075,
+            "normalStr": "₺20,75",
+            "discounted": 2075,
+            "discountedStr": "₺20,75"
+          },
+          "stock": 19,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000469",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "Sye9zqUcPL",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Sye9zqUcPL_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202089,
+            "netWeight": 280,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Kakaolu Pasta Altı 280 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-kakaolu-pasta-alti-280-gr_p-28000469",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118007999", "2060000175878"],
+            "grossWeight": 280,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4250,
+            "normalStr": "₺42,50",
+            "discounted": 4250,
+            "discountedStr": "₺42,50"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000468",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "hnPD3DgFls",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/hnPD3DgFls_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202092,
+            "netWeight": 280,
+            "depolamaKosulu": "Gıda",
+            "name": "Nimet Sade Pasta Altı 280 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-sade-pasta-alti-280-gr_p-28000468",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118007982", "2060000175861"],
+            "grossWeight": 280,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4250,
+            "normalStr": "₺42,50",
+            "discounted": 4250,
+            "discountedStr": "₺42,50"
+          },
+          "stock": 8,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000514",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "1ppk244Pl-",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/1ppk244Pl-_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "BELLUCCİ",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202097,
+            "netWeight": 200,
+            "depolamaKosulu": "Gıda",
+            "name": "Savoiardi Bellucci Pasta Altlığı 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8682780788327"],
+            "grossWeight": 200,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/savoiardi-bellucci-pasta-altligi-200-gr_p-28000514"
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3250,
+            "normalStr": "₺32,50",
+            "discounted": 3250,
+            "discountedStr": "₺32,50"
+          },
+          "stock": 18,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000731",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "wTq5T-SYzf",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/wTq5T-SYzf_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 113,
+            "brand": "ÜLKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202105,
+            "netWeight": 100,
+            "depolamaKosulu": "Gıda",
+            "name": "Ülker Bitter Pul Çikolata 100 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/ulker-bitter-pul-cikolata-100-gr_p-28000731",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690504180913"],
+            "grossWeight": 110,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2900,
+            "discounted": 2900,
+            "normalStr": "₺29,00",
+            "discountedStr": "₺29,00"
+          },
+          "stock": 12,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000317",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "0RQEwVCjDT",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/0RQEwVCjDT_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "MVOFYe5TA4",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/MVOFYe5TA4_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 117,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202116,
+            "netWeight": 10,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker İnci/Yıldız Pasta Süsü 10 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dr-oetker-inciyildiz-pasta-susu-10-gr_p-28000317",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690629442385", "8690629442507"],
+            "grossWeight": 10,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 950,
+            "discounted": 950,
+            "normalStr": "₺9,50",
+            "discountedStr": "₺9,50"
+          },
+          "stock": 1,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000315",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "MaPn2TnX80",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/MaPn2TnX80_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "iLIW009yF8",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/iLIW009yF8_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 116,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 202118,
+            "netWeight": 10,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Şekerli Çubuk/Kakao Pasta Süsü 10 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/firindan/dr-oetker-sekerli-cubukkakao-pasta-susu-10-gr_p-28000315",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690629442422", "8690629442408"],
+            "grossWeight": 10,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 950,
+            "discounted": 950,
+            "normalStr": "₺9,50",
+            "discountedStr": "₺9,50"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000202",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "KZbcfCSveF",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/KZbcfCSveF_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "rank": 33,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 2002074,
+            "netWeight": 225,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Krem Şanti 3x75 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/dr-oetker-krem-santi-3x75-gr_p-28000202",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690629442699"],
+            "grossWeight": 225,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2002",
+              "name": "Temel Gıda, Hazır Yemek",
+              "parentId": "master"
+            },
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 8225,
+            "normalStr": "₺82,25",
+            "discounted": 8225,
+            "discountedStr": "₺82,25"
+          },
+          "stock": 18,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000225",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "DA5RyxxzCO",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/DA5RyxxzCO_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "rank": 12,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 2002075,
+            "netWeight": 200,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Hamur Kabartma Tozu 20x10 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/dr-oetker-hamur-kabartma-tozu-20x10-gr_p-28000225",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690629442941"],
+            "grossWeight": 200,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2002",
+              "name": "Temel Gıda, Hazır Yemek",
+              "parentId": "master"
+            },
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4200,
+            "normalStr": "₺42,00",
+            "discounted": 4200,
+            "discountedStr": "₺42,00"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000227",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "SHaa0GAoqn",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/SHaa0GAoqn_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "rank": 11,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 2002076,
+            "netWeight": 100,
+            "depolamaKosulu": "Gıda",
+            "name": "Dr. Oetker Şekerli Vanilin 20x5 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/dr-oetker-sekerli-vanilin-20x5-gr_p-28000227",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690629442880"],
+            "grossWeight": 100,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2002",
+              "name": "Temel Gıda, Hazır Yemek",
+              "parentId": "master"
+            },
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2950,
+            "normalStr": "₺29,50",
+            "discounted": 2950,
+            "discountedStr": "₺29,50"
+          },
+          "stock": 14,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "14001930",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "3kHV66I9rh",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/3kHV66I9rh_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": ["aldin-aldin-gida"],
+            "brand": "BENDO",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 2002077,
+            "netWeight": 500,
+            "depolamaKosulu": "Gıda",
+            "name": "Bendo İrmik 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/ramazan/bendo-irmik-500-gr_p-14001930",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "2060000128645",
+              "8699118056188",
+              "8699118047162",
+              "8699118035060",
+              "8699118034957",
+              "8699118027584",
+              "8699118026198",
+              "8699118005995"
+            ],
+            "grossWeight": 505,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C20", "name": "Ramazan", "parentId": "master" },
+            {
+              "id": "C2002",
+              "name": "Temel Gıda, Hazır Yemek",
+              "parentId": "master"
+            },
+            { "id": "C02", "name": "Fırından", "parentId": "master" },
+            {
+              "id": "C0202",
+              "name": "Hamur Pasta Malzemeleri",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1200,
+            "normalStr": "₺12,00",
+            "discounted": 1200,
+            "discountedStr": "₺12,00"
+          },
+          "stock": 55,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Hamur Pasta Malzemeleri ve Fiyatları | A101 KAPIDA",
+      "seoDescription": "Hamur Pasta Malzeme çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Hamur Pasta Malzeme çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/firindan/hamur-pasta-malzemeleri"
+    }
+  ],
+  "seoTitle": "",
+  "seoDescription": "",
+  "seoUrl": "https://www.a101.com.tr/kapida/firindan",
+  "products": []
+}

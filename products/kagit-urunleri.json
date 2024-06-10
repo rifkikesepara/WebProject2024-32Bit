@@ -1,0 +1,1827 @@
+{
+  "parentId": "master",
+  "id": "C13",
+  "name": "Kağıt Ürünleri",
+  "children": [
+    {
+      "parentId": "C13",
+      "id": "C1301",
+      "name": "Tuvalet Kağıdı",
+      "products": [
+        {
+          "id": "23000721",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "aGtn4EhDfo",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aGtn4EhDfo_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 31,
+            "brand": "MİSTRAL",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1301010,
+            "netWeight": 1467,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Mistral 2 Katlı Tuvalet Kağıdı 16'lı",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/mistral-2-katli-tuvalet-kagidi-16li_p-23000721",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118064657", "8699118057956", "8699118037507"],
+            "grossWeight": 1544.21,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1301", "name": "Tuvalet Kağıdı", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 9000,
+            "normalStr": "₺90,00",
+            "discounted": 9000,
+            "discountedStr": "₺90,00"
+          },
+          "stock": 39,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23000720",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "nrATMOE1ee",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/nrATMOE1ee_256x256.png"
+            },
+            {
+              "id": "c25RrtVTPb",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/c25RrtVTPb_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 3,
+            "brand": "MİSTRAL",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1301012,
+            "netWeight": 1407,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Mistral 3 Katlı Tuvalet Kağıdı 12'li",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/mistral-3-katli-tuvalet-kagidi-12li_p-23000720",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118022442",
+              "8699118017134",
+              "8699118057949",
+              "8699118050766",
+              "8699118031116",
+              "8699118030072",
+              "8699118021865"
+            ],
+            "grossWeight": 1481.05,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1301", "name": "Tuvalet Kağıdı", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 9675,
+            "normalStr": "₺96,75",
+            "discounted": 9675,
+            "discountedStr": "₺96,75"
+          },
+          "stock": 95,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23001337",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "PaDrXDIARp",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/PaDrXDIARp_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 0,
+            "brand": "SOLO",
+            "HEMEN_maxQty": 2,
+            "categoryRank": 1301016,
+            "netWeight": 660,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Solo Bambu Tuvalet Kağıdı 2 Katlı 32'li",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/solo-bambu-tuvalet-kagidi-2-katli-32li_p-23001337",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 2,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690530056664"],
+            "grossWeight": 666,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1301", "name": "Tuvalet Kağıdı", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 23475,
+            "discounted": 23475,
+            "normalStr": "₺234,75",
+            "discountedStr": "₺234,75"
+          },
+          "stock": 10,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23001271",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "R30dDDRuCj",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/R30dDDRuCj_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 211,
+            "brand": "FAMİLİA",
+            "HEMEN_maxQty": 2,
+            "categoryRank": 1301019,
+            "netWeight": 2971,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Familia Plus Natural 3 Katlı Tuvalet Kağıdı 40'lı",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/familia-plus-natural-3-katli-tuvalet-kagidi-40li_p-23001271",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 2,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690536026166"],
+            "grossWeight": 2981,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1301", "name": "Tuvalet Kağıdı", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z110",
+            "name": "AldınAldın",
+            "badgeId": "promotion-aldinaldin",
+            "badgeType": "default",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710374399000,
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-aldinaldin_256x256.png",
+            "type": "regular",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aldin-aldin_256x256.png"
+          },
+          "price": {
+            "normal": 19900,
+            "discounted": 19900,
+            "normalStr": "₺199,00",
+            "discountedStr": "₺199,00"
+          },
+          "stock": 22,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Tuvalet Kağıdı Fiyatları & Çeşitleri | A101 KAPIDA",
+      "seoDescription": "Tuvalet Kağıdı çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Tuvalet Kağıdı çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/tuvalet-kagidi"
+    },
+    {
+      "parentId": "C13",
+      "id": "C1303",
+      "name": "Kağıt Havlu",
+      "products": [
+        {
+          "id": "23001367",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "upImiRWIJT",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/upImiRWIJT_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": [],
+            "rank": 15,
+            "brand": "PAPİA",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1303000,
+            "netWeight": 1019,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Papia Biocare Kağıt Havlu 3 Katlı 8'li",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/papia-biocare-kagit-havlu-3-katli-8li_p-23001367",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "KasaAktivitesi",
+            "barcodes": ["8690536026296"],
+            "grossWeight": 1029.67,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1303", "name": "Kağıt Havlu", "parentId": "master" }
+          ],
+          "campaigns": [
+            {
+              "name": " 10 TL ve Üzeri Alışverişe Papia Biocare Kağıt Havlu 3 Katlı 8'li 74,90 TL (23001367)",
+              "description": " 10 TL ve Üzeri Alışverişe Papia Biocare Kağıt Havlu 3 Katlı 8'li 74,90 TL (23001367)",
+              "id": "23238"
+            }
+          ],
+          "promotion": {
+            "code": "Z010",
+            "name": "10 TL ve Üzeri",
+            "badgeId": "promotion-10-tl-ve-uzeri-1",
+            "badgeType": "priced",
+            "source": "back-office",
+            "qty": 1,
+            "price": 15990,
+            "discountedPrice": 7490,
+            "profit": 8500,
+            "startDate": 1709337600000,
+            "endDate": 1709942398999,
+            "priceStr": "₺159,90",
+            "discountedPriceStr": "₺74,90",
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-10-tl-ve-uzeri-1_256x256.png",
+            "importDate": 1709327438870,
+            "type": "singlePriced",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/10-tl-urunleri_256x256.png"
+          },
+          "price": {
+            "normal": 17990,
+            "discounted": 17990,
+            "normalStr": "₺179,90",
+            "discountedStr": "₺179,90"
+          },
+          "stock": 29,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23001177",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "y95gDCbZ3h",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/y95gDCbZ3h_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "collections": [],
+            "rank": 13,
+            "brand": "SELPAK",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1303002,
+            "netWeight": 940,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Selpak Yağ Emici 3 Katlı Kağıt Havlu 8'li",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/selpak-yag-emici-3-katli-kagit-havlu-8li_p-23001177",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "KasaAktivitesi",
+            "barcodes": ["8690530045361"],
+            "grossWeight": 950.67,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1303", "name": "Kağıt Havlu", "parentId": "master" }
+          ],
+          "campaigns": [
+            {
+              "name": "10 TL ve Üzeri Alışverişe Selpak 3 Kat 8'li Yağ Emici Kağıt Havlu 74,90 TL (23001177)",
+              "description": "10 TL ve Üzeri Alışverişe Selpak 3 Kat 8'li Yağ Emici Kağıt Havlu 74,90 TL (23001177)",
+              "id": "23236"
+            }
+          ],
+          "promotion": {
+            "code": "Z010",
+            "name": "10 TL ve Üzeri",
+            "badgeId": "promotion-10-tl-ve-uzeri-1",
+            "badgeType": "priced",
+            "source": "back-office",
+            "qty": 1,
+            "price": 17990,
+            "discountedPrice": 7490,
+            "profit": 8500,
+            "startDate": 1709337600000,
+            "endDate": 1709942398999,
+            "priceStr": "₺179,90",
+            "discountedPriceStr": "₺74,90",
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-10-tl-ve-uzeri-1_256x256.png",
+            "importDate": 1709538656165,
+            "type": "singlePriced",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/10-tl-urunleri_256x256.png"
+          },
+          "price": {
+            "normal": 17990,
+            "normalStr": "₺179,90",
+            "discounted": 17990,
+            "discountedStr": "₺179,90"
+          },
+          "stock": 259,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23000636",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "cltlnGqGXh",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/cltlnGqGXh_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 23,
+            "brand": "MİSTRAL",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1303008,
+            "netWeight": 743,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Mistral Çift Katlı Kağıt Havlu 6'lı",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/mistral-cift-katli-kagit-havlu-6li_p-23000636",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118009436",
+              "8699118057932",
+              "8699118031123",
+              "8699118030102",
+              "8699118010722"
+            ],
+            "grossWeight": 782.11,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1303", "name": "Kağıt Havlu", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5850,
+            "normalStr": "₺58,50",
+            "discounted": 5850,
+            "discountedStr": "₺58,50"
+          },
+          "stock": 37,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23000671",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "YKp0StVppy",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/YKp0StVppy_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 17,
+            "brand": "MİSTRAL",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1303010,
+            "netWeight": 1000,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Mistral Perforeli Kağıt Havlu 1 Kg",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/mistral-perforeli-kagit-havlu-1-kg_p-23000671",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118057925",
+              "8699118051312",
+              "8699118048732",
+              "8699118022695",
+              "8699118017363",
+              "8699118012900"
+            ],
+            "grossWeight": 1052.63,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1303", "name": "Kağıt Havlu", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 9900,
+            "normalStr": "₺99,00",
+            "discounted": 9900,
+            "discountedStr": "₺99,00"
+          },
+          "stock": 9,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23001338",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "rt-6HgSvnp",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/rt-6HgSvnp_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "SOLO",
+            "HEMEN_maxQty": 2,
+            "categoryRank": 1303014,
+            "netWeight": 300,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Solo Bambu Kağıt Havlu 2 Katlı 12'li",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/solo-bambu-kagit-havlu-2-katli-12li_p-23001338",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 2,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690530056695"],
+            "grossWeight": 310,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1303", "name": "Kağıt Havlu", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 15475,
+            "discounted": 15475,
+            "normalStr": "₺154,75",
+            "discountedStr": "₺154,75"
+          },
+          "stock": 12,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23001272",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "j9jAMKFGJj",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/j9jAMKFGJj_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 212,
+            "brand": "FAMİLİA",
+            "HEMEN_maxQty": 2,
+            "categoryRank": 1303017,
+            "netWeight": 1916,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Familia Plus Natural 3 Katlı Kağıt Havlu 16'lı",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/familia-plus-natural-3-katli-kagit-havlu-16li_p-23001272",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 2,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690536026173"],
+            "grossWeight": 1926,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1303", "name": "Kağıt Havlu", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "promotion": {
+            "code": "Z110",
+            "name": "AldınAldın",
+            "badgeId": "promotion-aldinaldin",
+            "badgeType": "default",
+            "source": "SAP",
+            "startDate": 1709769600000,
+            "endDate": 1710374399000,
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-aldinaldin_256x256.png",
+            "type": "regular",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aldin-aldin_256x256.png"
+          },
+          "price": {
+            "normal": 12900,
+            "discounted": 12900,
+            "normalStr": "₺129,00",
+            "discountedStr": "₺129,00"
+          },
+          "stock": 12,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Kağıt Havlu Çeşitleri & Fiyatları | A101 KAPIDA",
+      "seoDescription": "Kağıt Havlu çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Kağıt Havlu çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/kagit-havlu"
+    },
+    {
+      "parentId": "C13",
+      "id": "C1302",
+      "name": "Kağıt Peçete, Mendil",
+      "products": [
+        {
+          "id": "23000604",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "ypPKunsHYF",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ypPKunsHYF_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "MİSTRAL",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1302000,
+            "netWeight": 221,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Mistral Peçete 200'lü 24x27 Cm",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/mistral-pecete-200lu-24x27-cm_p-23000604",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118008415",
+              "8699118009504",
+              "8699118031130",
+              "8699118030089"
+            ],
+            "grossWeight": 232.63,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            {
+              "id": "C1302",
+              "name": "Kağıt Peçete, Mendil",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1750,
+            "normalStr": "₺17,50",
+            "discounted": 1750,
+            "discountedStr": "₺17,50"
+          },
+          "stock": 57,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23000082",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "K7qfIVzX8R",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/K7qfIVzX8R_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 27,
+            "brand": "MİSTRAL",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1302001,
+            "netWeight": 198,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Mistral Peçete 100'lü 30x30 Cm ",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/mistral-pecete-100lu-30x30-cm-_p-23000082",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118001201",
+              "8699118031161",
+              "8699118030065",
+              "8697690330368"
+            ],
+            "grossWeight": 208.42,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            {
+              "id": "C1302",
+              "name": "Kağıt Peçete, Mendil",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2000,
+            "normalStr": "₺20,00",
+            "discounted": 2000,
+            "discountedStr": "₺20,00"
+          },
+          "stock": 8,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23000634",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "oUmZpElxaq",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/oUmZpElxaq_256x256.png"
+            },
+            {
+              "id": "Q-49lM1FWY",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Q-49lM1FWY_256x256.png"
+            },
+            {
+              "id": "LzOPjAmP7R",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/LzOPjAmP7R_256x256.png"
+            },
+            {
+              "id": "1gf0z4um0U",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/1gf0z4um0U_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 380,
+            "brand": "PAPİA",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1302008,
+            "netWeight": 110,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Papia Desenli Peçete 20'li",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/papia-desenli-pecete-20li_p-23000634",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": [
+              "2060000389770",
+              "2060000389763",
+              "2060000389756",
+              "8690536012176"
+            ],
+            "grossWeight": 121.46,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            {
+              "id": "C1302",
+              "name": "Kağıt Peçete, Mendil",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1790,
+            "normalStr": "₺17,90",
+            "discounted": 1790,
+            "discountedStr": "₺17,90"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23000576",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "sKtpt4iLD1",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/sKtpt4iLD1_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "MİSTRAL",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1302016,
+            "netWeight": 198,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Mistral 3 Katlı Kağıt Mendil 10'lu",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/mistral-3-katli-kagit-mendil-10lu_p-23000576",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118031147", "8699118030096", "8699118007050"],
+            "grossWeight": 208.42,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            {
+              "id": "C1302",
+              "name": "Kağıt Peçete, Mendil",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1900,
+            "normalStr": "₺19,00",
+            "discounted": 1900,
+            "discountedStr": "₺19,00"
+          },
+          "stock": 33,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23000657",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "oXcc5FojhO",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/oXcc5FojhO_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "c86qvM5Xu2",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/c86qvM5Xu2_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "MENDİVA",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1302020,
+            "netWeight": 110,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Mendiva Gözlük Temizleme Mendili 40'lı",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118011798"],
+            "grossWeight": 115.79,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/mendiva-gozluk-temizleme-mendili-40li_p-23000657"
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            {
+              "id": "C1302",
+              "name": "Kağıt Peçete, Mendil",
+              "parentId": "master"
+            }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2950,
+            "normalStr": "₺29,50",
+            "discounted": 2950,
+            "discountedStr": "₺29,50"
+          },
+          "stock": 15,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Kağıt Peçete/Mendil Çeşitleri & Fiyatları | A101 KAPIDA",
+      "seoDescription": "Kağıt Peçete/Mendil çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Kağıt Peçete/Mendil çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/kagit-pecete-mendil"
+    },
+    {
+      "parentId": "C13",
+      "id": "C1304",
+      "name": "Islak Mendil",
+      "products": [
+        {
+          "id": "23000471",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "mNm06fmULj",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/mNm06fmULj_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 22,
+            "brand": "MENDİVA",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1304000,
+            "netWeight": 605,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Mendiva Islak Havlu 101'li",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/mendiva-islak-havlu-101li_p-23000471",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8690510100820",
+              "8699118006756",
+              "8699118009559",
+              "8699118020035",
+              "8699118061397",
+              "8699118040781",
+              "8699118040774"
+            ],
+            "grossWeight": 636.84,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1304", "name": "Islak Mendil", "parentId": "master" }
+          ],
+          "campaigns": [
+            {
+              "name": "Çok Al, Az Öde Mendiva Islak Havlu 101'li (23000471)",
+              "description": "Çok Al, Az Öde Mendiva Islak Havlu 101'li (23000471)",
+              "id": "23036"
+            }
+          ],
+          "promotion": {
+            "code": "ZP01",
+            "name": "Çok Al Az Öde",
+            "badgeId": "promotion-cok-al-az-ode-2",
+            "badgeType": "priced",
+            "source": "back-office",
+            "qty": 2,
+            "price": 5500,
+            "discountedPrice": 4950,
+            "profit": 550,
+            "startDate": 1708732800000,
+            "endDate": 32503679999000,
+            "priceStr": "₺55,00",
+            "discountedPriceStr": "₺49,50",
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-cok-al-az-ode-2_256x256.png",
+            "importDate": 1708722525518,
+            "type": "multiplePriced",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/cok-al-az-ode_256x256.png"
+          },
+          "price": {
+            "normal": 2750,
+            "normalStr": "₺27,50",
+            "discounted": 2750,
+            "discountedStr": "₺27,50"
+          },
+          "stock": 65,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23001327",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "tzyskykDjN",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/tzyskykDjN_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 21,
+            "brand": "SLEEPY",
+            "HEMEN_maxQty": 2,
+            "categoryRank": 1304004,
+            "netWeight": 590,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Sleepy Yüzey Temizleme Havlusu 50'li",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/sleepy-yuzey-temizleme-havlusu-50li_p-23001327",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 2,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8682241211623"],
+            "grossWeight": 598,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1304", "name": "Islak Mendil", "parentId": "master" }
+          ],
+          "campaigns": [
+            {
+              "name": "Çok Al, Az Öde Sleepy Yüzey Temizleme Havlusu 50'li (23001327)",
+              "description": "Çok Al, Az Öde Sleepy Yüzey Temizleme Havlusu 50'li (23001327)",
+              "id": "23037"
+            }
+          ],
+          "promotion": {
+            "code": "ZP01",
+            "name": "Çok Al Az Öde",
+            "badgeId": "promotion-cok-al-az-ode-2",
+            "badgeType": "priced",
+            "source": "back-office",
+            "qty": 2,
+            "price": 9950,
+            "discountedPrice": 8450,
+            "profit": 1500,
+            "startDate": 1708732800000,
+            "endDate": 32503679999000,
+            "priceStr": "₺99,50",
+            "discountedPriceStr": "₺84,50",
+            "badgeURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/promotion-cok-al-az-ode-2_256x256.png",
+            "importDate": 1708722525518,
+            "type": "multiplePriced",
+            "imageURL": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/cok-al-az-ode_256x256.png"
+          },
+          "price": {
+            "normal": 4975,
+            "discounted": 4975,
+            "normalStr": "₺49,75",
+            "discountedStr": "₺49,75"
+          },
+          "stock": 49,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23001320",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "8swo-YDSC0",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/8swo-YDSC0_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 193,
+            "brand": "CLEAN&FUN",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1304008,
+            "netWeight": 253,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Clean&Fun Beyaz Sirkeli Yüzey Temizleme Mendili 30'lu",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/cleanfun-beyaz-sirkeli-yuzey-temizleme-mendili-30lu_p-23001320",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8699118065982"],
+            "grossWeight": 283,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1304", "name": "Islak Mendil", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2200,
+            "discounted": 2200,
+            "normalStr": "₺22,00",
+            "discountedStr": "₺22,00"
+          },
+          "stock": 67,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23001353",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "gXzEPkhptj",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/gXzEPkhptj_256x256.png"
+            },
+            {
+              "id": "M6R9DrL70R",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/M6R9DrL70R_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 194,
+            "brand": "CLEAN&FUN",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1304009,
+            "netWeight": 290,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Clean&Fun Arap Sabunlu Yüzey Temizleme Mendili 30'lu",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/cleanfun-arap-sabunlu-yuzey-temizleme-mendili-30lu_p-23001353",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8699118066514"],
+            "grossWeight": 300,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1304", "name": "Islak Mendil", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2200,
+            "discounted": 2200,
+            "normalStr": "₺22,00",
+            "discountedStr": "₺22,00"
+          },
+          "stock": 31,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23001374",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "00-1o4g3Uz",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/00-1o4g3Uz_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 184,
+            "brand": "CLEAN&FUN",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1304010,
+            "netWeight": 930,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Clean&Fun Sirkeli Yüzey Temizleme Havlusu 100'lü",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/cleanfun-sirkeli-yuzey-temizleme-havlusu-100lu_p-23001374",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8699118068471"],
+            "grossWeight": 950,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1304", "name": "Islak Mendil", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5990,
+            "discounted": 5990,
+            "normalStr": "₺59,90",
+            "discountedStr": "₺59,90"
+          },
+          "stock": 1,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23001375",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "gZQJWqAIuK",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/gZQJWqAIuK_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 298,
+            "brand": "CLEAN&FUN",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1304011,
+            "netWeight": 935,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Clean&Fun Arap Sabunlu Yüzey Temizleme Havlusu 100'lü",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/cleanfun-arap-sabunlu-yuzey-temizleme-havlusu-100lu_p-23001375",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8699118068464"],
+            "grossWeight": 961,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1304", "name": "Islak Mendil", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5900,
+            "discounted": 5900,
+            "normalStr": "₺59,00",
+            "discountedStr": "₺59,00"
+          },
+          "stock": 9,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23001387",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "2vuOmGN83c",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/2vuOmGN83c_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 185,
+            "brand": "CLEAN&FUN",
+            "HEMEN_maxQty": 3,
+            "categoryRank": 1304012,
+            "netWeight": 930,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Clean&Fun Yüzey Temizleme Havlusu 100'lü",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/cleanfun-yuzey-temizleme-havlusu-100lu_p-23001387",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 3,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8699118069195"],
+            "grossWeight": 950,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1304", "name": "Islak Mendil", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5990,
+            "discounted": 5990,
+            "normalStr": "₺59,90",
+            "discountedStr": "₺59,90"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23001192",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "rrEFQlnSzz",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/rrEFQlnSzz_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 182,
+            "brand": "KOROPLAST",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1304016,
+            "netWeight": 390,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Koroplast Çok Amaçlı Islak Havlu 30'lu",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/koroplast-cok-amacli-islak-havlu-30lu_p-23001192",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8690741701681"],
+            "grossWeight": 400,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1304", "name": "Islak Mendil", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2975,
+            "discounted": 2975,
+            "normalStr": "₺29,75",
+            "discountedStr": "₺29,75"
+          },
+          "stock": 65,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23001342",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "CtTlh4vNbI",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/CtTlh4vNbI_256x256.png"
+            }
+          ],
+          "attributes": {
+            "rank": 442,
+            "brand": "DEEP FRESH",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1304017,
+            "netWeight": 155,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Deep Fresh Menekşe Islak Mendil 15'li",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/deep-fresh-menekse-islak-mendil-15li_p-23001342",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8681554602593"],
+            "grossWeight": 162,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1304", "name": "Islak Mendil", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 550,
+            "discounted": 550,
+            "normalStr": "₺5,50",
+            "discountedStr": "₺5,50"
+          },
+          "stock": 77,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23000761",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "LrqnExNRHa",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/LrqnExNRHa_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "MENDİVA",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1304026,
+            "netWeight": 258.3,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Mendiva Islak Havlu 56'lı ",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/mendiva-islak-havlu-56li-_p-23000761",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118019343",
+              "8699118029373",
+              "8699118040743",
+              "8699118040736"
+            ],
+            "grossWeight": 287,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1304", "name": "Islak Mendil", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1950,
+            "normalStr": "₺19,50",
+            "discounted": 1950,
+            "discountedStr": "₺19,50"
+          },
+          "stock": 31,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23000680",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "FPz2bJWIKJ",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/FPz2bJWIKJ_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "MENDİVA",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1304027,
+            "netWeight": 157,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Mendiva Islak Mendil 3x15 Adet",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/mendiva-islak-mendil-3x15-adet_p-23000680",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118014300",
+              "2060000116475",
+              "8699118040842",
+              "8699118040835",
+              "8699118040828",
+              "8699118029380",
+              "8699118020042"
+            ],
+            "grossWeight": 165.26,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1304", "name": "Islak Mendil", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1250,
+            "normalStr": "₺12,50",
+            "discounted": 1250,
+            "discountedStr": "₺12,50"
+          },
+          "stock": 25,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23001209",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "e57StFDAYA",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/e57StFDAYA_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "MENDİVA",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1304030,
+            "netWeight": 258,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Mendiva Gül Kokulu Islak Havlu 60'lı",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/mendiva-gul-kokulu-islak-havlu-60li_p-23001209",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118061410"],
+            "grossWeight": 271.58,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1304", "name": "Islak Mendil", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1990,
+            "discounted": 1990,
+            "normalStr": "₺19,90",
+            "discountedStr": "₺19,90"
+          },
+          "stock": 23,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "23001210",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "cgm6nnS07P",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/cgm6nnS07P_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "MENDİVA",
+            "HEMEN_maxQty": 5,
+            "categoryRank": 1304031,
+            "netWeight": 258,
+            "depolamaKosulu": "GıdaDışı",
+            "name": "Mendiva Sabun Kokulu Islak Havlu 60'lı",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/mendiva-sabun-kokulu-islak-havlu-60li_p-23001210",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 5,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118061403"],
+            "grossWeight": 271.58,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C13", "name": "Kağıt Ürünleri", "parentId": "master" },
+            { "id": "C1304", "name": "Islak Mendil", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1990,
+            "discounted": 1990,
+            "normalStr": "₺19,90",
+            "discountedStr": "₺19,90"
+          },
+          "stock": 35,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Islak Mendil Fiyatları & Çeşitleri | A101 KAPIDA",
+      "seoDescription": "Islak Mendil çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Islak Mendil çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri/islak-mendil"
+    }
+  ],
+  "seoTitle": "",
+  "seoDescription": "",
+  "seoUrl": "https://www.a101.com.tr/kapida/kagit-urunleri",
+  "products": []
+}
