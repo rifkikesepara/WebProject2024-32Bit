@@ -1,0 +1,3125 @@
+{
+  "parentId": "master",
+  "id": "C10",
+  "name": "Donuk, Hazır Yemek, Meze",
+  "children": [
+    {
+      "parentId": "C10",
+      "id": "C1002",
+      "name": "Dondurulmuş Gıda",
+      "products": [
+        {
+          "id": "21001107",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "K-2IvySAtH",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/K-2IvySAtH_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002001,
+            "netWeight": 1000,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Nimet Dondurulmuş Patates 1000 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/nimet-dondurulmus-patates-1000-gr_p-21001107",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "2060000138262",
+              "8699118005711",
+              "8699118009498",
+              "8699118049937",
+              "8699118055792",
+              "8699118058373"
+            ],
+            "grossWeight": 1000,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5500,
+            "normalStr": "₺55,00",
+            "discounted": 5500,
+            "discountedStr": "₺55,00"
+          },
+          "stock": 26,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001045",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "nx3sedhOaT",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/nx3sedhOaT_256x256.png"
+            },
+            {
+              "id": "tELuVodSeK",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/tELuVodSeK_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 28,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002002,
+            "netWeight": 500,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Nimet Patlıcanlı Rulo Börek 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/nimet-patlicanli-rulo-borek-500-gr_p-21001045",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118042044"],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4490,
+            "normalStr": "₺44,90",
+            "discounted": 4490,
+            "discountedStr": "₺44,90"
+          },
+          "stock": 12,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000942",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "CTYqMHDmEX",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/CTYqMHDmEX_256x256.png"
+            },
+            {
+              "id": "Go7CuRzs3A",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Go7CuRzs3A_256x256.png"
+            },
+            {
+              "id": "nwsBETxcak",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/nwsBETxcak_256x256.png"
+            },
+            {
+              "id": "BbgEkP565j",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/BbgEkP565j_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 29,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002003,
+            "netWeight": 500,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Nimet Patatesli Rulo Börek 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/nimet-patatesli-rulo-borek-500-gr_p-21000942",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118028710"],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4490,
+            "normalStr": "₺44,90",
+            "discounted": 4490,
+            "discountedStr": "₺44,90"
+          },
+          "stock": 16,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000939",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "ams2VydEbW",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ams2VydEbW_256x256.png"
+            },
+            {
+              "id": "z32nsfN0sA",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/z32nsfN0sA_256x256.png"
+            },
+            {
+              "id": "Ov7j8O1NyU",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Ov7j8O1NyU_256x256.png"
+            },
+            {
+              "id": "ElQhqqIxes",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ElQhqqIxes_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 30,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002004,
+            "netWeight": 500,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Nimet Ispanaklı Peynirli Mini Rulo Börek 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/nimet-ispanakli-peynirli-mini-rulo-borek-500-gr_p-21000939",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118028703"],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4490,
+            "normalStr": "₺44,90",
+            "discounted": 4490,
+            "discountedStr": "₺44,90"
+          },
+          "stock": 10,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001104",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "iMaAxePETG",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/iMaAxePETG_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002006,
+            "netWeight": 1000,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Nimet Dondurulmuş Milföy Hamuru 1000 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/nimet-dondurulmus-milfoy-hamuru-1000-gr_p-21001104",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "2060000135926",
+              "8690612515829",
+              "8693601302219",
+              "8699118005735",
+              "8699118051275"
+            ],
+            "grossWeight": 1010,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4250,
+            "normalStr": "₺42,50",
+            "discounted": 4250,
+            "discountedStr": "₺42,50"
+          },
+          "stock": 15,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001196",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "0bJ7ToS8tf",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/0bJ7ToS8tf_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ÇOKÇA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002008,
+            "netWeight": 450,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Çokça Dondurulmuş Mısır 450 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/cokca-dondurulmus-misir-450-gr_p-21001196",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118040613", "2060000196002", "8699118055303"],
+            "grossWeight": 450,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3450,
+            "discounted": 3450,
+            "normalStr": "₺34,50",
+            "discountedStr": "₺34,50"
+          },
+          "stock": 18,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000875",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "f1zQgV94jN",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/f1zQgV94jN_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 22,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002014,
+            "netWeight": 676,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Dr. Oetker Pizza 4'lü 676 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/dr-oetker-pizza-4lu-676-gr_p-21000875",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690629442279"],
+            "grossWeight": 816.5,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 14990,
+            "normalStr": "₺149,90",
+            "discounted": 14990,
+            "discountedStr": "₺149,90"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001010",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "ZQxJWiy8uJ",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ZQxJWiy8uJ_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "B9EisnFuST",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/B9EisnFuST_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "TORKU",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002024,
+            "netWeight": 1000,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Torku Pratiko Elma Dilim Patates 1000 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurulmus/torku-pratiko-elma-dilim-patates-1000-gr_p-21001010",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690120057071", "8690120103990"],
+            "grossWeight": 1000,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C10", "name": "Dondurulmuş", "parentId": "master" },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5950,
+            "normalStr": "₺59,50",
+            "discounted": 5950,
+            "discountedStr": "₺59,50"
+          },
+          "stock": 11,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000698",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "uL5IfxS8xq",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/uL5IfxS8xq_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 60,
+            "brand": "FEAST",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002031,
+            "netWeight": 450,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Feast Dondurulmuş Bezelye 450 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/feast-dondurulmus-bezelye-450-gr_p-21000698",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8697343550013"],
+            "grossWeight": 465,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2350,
+            "discounted": 2350,
+            "normalStr": "₺23,50",
+            "discountedStr": "₺23,50"
+          },
+          "stock": 1,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001037",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "vmqBwBNfA5",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/vmqBwBNfA5_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ÇOKÇA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002032,
+            "netWeight": 450,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Çokça Dondurulmuş Bezelye 450 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/cokca-dondurulmus-bezelye-450-gr_p-21001037",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Sezonluk",
+            "barcodes": ["8699118040545"],
+            "grossWeight": 450,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2500,
+            "normalStr": "₺25,00",
+            "discounted": 2500,
+            "discountedStr": "₺25,00"
+          },
+          "stock": 12,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000154",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "PHYqzappjq",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/PHYqzappjq_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ÇOKÇA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002040,
+            "netWeight": 450,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Çokça Dondurulmuş Bamya 450 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/cokca-dondurulmus-bamya-450-gr_p-21000154",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Sezonluk",
+            "barcodes": ["8699118048725"],
+            "grossWeight": 450,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4950,
+            "normalStr": "₺49,50",
+            "discounted": 4950,
+            "discountedStr": "₺49,50"
+          },
+          "stock": 24,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000961",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "07RPKZzlBl",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/07RPKZzlBl_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "PqZ0-g7PHy",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/PqZ0-g7PHy_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 15,
+            "brand": "BESLER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002050,
+            "netWeight": 350,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Beşler Mantı 350 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurulmus/besler-manti-350-gr_p-21000961",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8681594301678"],
+            "grossWeight": 350,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C10", "name": "Dondurulmuş", "parentId": "master" },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4690,
+            "normalStr": "₺46,90",
+            "discounted": 4690,
+            "discountedStr": "₺46,90"
+          },
+          "stock": 11,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000005",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "IRC-RDxQ2l",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/IRC-RDxQ2l_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002053,
+            "netWeight": 450,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Nimet Dondurulmuş Soyalı Mantı 450 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/nimet-dondurulmus-soyali-manti-450-gr_p-21000005",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690612515843", "8693601310191"],
+            "grossWeight": 453,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2350,
+            "normalStr": "₺23,50",
+            "discounted": 2350,
+            "discountedStr": "₺23,50"
+          },
+          "stock": 20,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000534",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "zsS2QHMpfq",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/zsS2QHMpfq_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "8ZQHfcI0AH",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/8ZQHfcI0AH_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 12,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002057,
+            "netWeight": 960,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Nimet Dondurulmuş Pizza Karışık 4x240 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurulmus/nimet-dondurulmus-pizza-karisik-4x240-gr_p-21000534",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118005728"],
+            "grossWeight": 980,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C10", "name": "Dondurulmuş", "parentId": "master" },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 6950,
+            "normalStr": "₺69,50",
+            "discounted": 6950,
+            "discountedStr": "₺69,50"
+          },
+          "stock": 8,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000035",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "TPceHtp0tl",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/TPceHtp0tl_256x256.png"
+            },
+            {
+              "id": "YpAoT6L1hG",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/YpAoT6L1hG_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "BERONA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002059,
+            "netWeight": 405,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Berona Dondurulmuş Pizza 405 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurulmus/berona-dondurulmus-pizza-405-gr_p-21000035",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118042921"],
+            "grossWeight": 405,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C10", "name": "Dondurulmuş", "parentId": "master" },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 6500,
+            "normalStr": "₺65,00",
+            "discounted": 6500,
+            "discountedStr": "₺65,00"
+          },
+          "stock": 11,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000705",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "M-8IxKK41B",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/M-8IxKK41B_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "DR.OETKER",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002061,
+            "netWeight": 405,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Dr. Oetker Guseppe Dondurulmuş Karışık Pizza 405 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurulmus/dr-oetker-guseppe-dondurulmus-karisik-pizza-405-gr_p-21000705",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690629440374"],
+            "grossWeight": 425,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C10", "name": "Dondurulmuş", "parentId": "master" },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 9795,
+            "normalStr": "₺97,95",
+            "discounted": 9795,
+            "discountedStr": "₺97,95"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001209",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "rM1ewTgonb",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/rM1ewTgonb_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ÇEŞİDİM",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002069,
+            "netWeight": 400,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Sinangil Çeşidim Dondurulmuş Simit 4x100 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/sinangil-cesidim-dondurulmus-simit-4x100-gr_p-21001209",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 1,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8680869194045"],
+            "grossWeight": 420,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5490,
+            "discounted": 5490,
+            "normalStr": "₺54,90",
+            "discountedStr": "₺54,90"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001157",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "IICyhi5TE9",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/IICyhi5TE9_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "SUPERFRESH",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002077,
+            "netWeight": 600,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Superfresh Dondurulmuş Pizza King 600 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/superfresh-dondurulmus-pizza-king-600-gr_p-21001157",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690612518233", "8690612518219"],
+            "grossWeight": 600,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 8975,
+            "normalStr": "₺89,75",
+            "discounted": 8975,
+            "discountedStr": "₺89,75"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000808",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "qF6BSdxnSC",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/qF6BSdxnSC_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002080,
+            "netWeight": 800,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Nimet Dondurulmuş Ispanaklı Tepsi Böreği 800 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurulmus/nimet-dondurulmus-ispanakli-tepsi-boregi-800-gr_p-21000808",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118014614"],
+            "grossWeight": 820,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C10", "name": "Dondurulmuş", "parentId": "master" },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 6000,
+            "normalStr": "₺60,00",
+            "discounted": 6000,
+            "discountedStr": "₺60,00"
+          },
+          "stock": 8,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000807",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "JaSCtj0Mx5",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/JaSCtj0Mx5_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002081,
+            "netWeight": 800,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Nimet Dondurulmuş Peynirli Tepsi Börek 800 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurulmus/nimet-dondurulmus-peynirli-tepsi-borek-800-gr_p-21000807",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118014621"],
+            "grossWeight": 820,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C10", "name": "Dondurulmuş", "parentId": "master" },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 6000,
+            "normalStr": "₺60,00",
+            "discounted": 6000,
+            "discountedStr": "₺60,00"
+          },
+          "stock": 10,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001105",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "Z9fs8sVqB-",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Z9fs8sVqB-_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002086,
+            "netWeight": 800,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Nimet Dondurulmuş Su Böreği 800 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurulmus/nimet-dondurulmus-su-boregi-800-gr_p-21001105",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118051947",
+              "8699118042679",
+              "8699118024316",
+              "8699118024170",
+              "8698636383318",
+              "2060000126146"
+            ],
+            "grossWeight": 800,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C10", "name": "Dondurulmuş", "parentId": "master" },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 9950,
+            "normalStr": "₺99,50",
+            "discounted": 9950,
+            "discountedStr": "₺99,50"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000009",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "Hp64L5rVJv",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Hp64L5rVJv_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002087,
+            "netWeight": 400,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Nimet Dondurulmuş Kalem Böreği 400 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurulmus/nimet-dondurulmus-kalem-boregi-400-gr_p-21000009",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8690612515867",
+              "8699118006879",
+              "8699118010784",
+              "8699118019077",
+              "8693601302134"
+            ],
+            "grossWeight": 437.5,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C10", "name": "Dondurulmuş", "parentId": "master" },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2975,
+            "normalStr": "₺29,75",
+            "discounted": 2975,
+            "discountedStr": "₺29,75"
+          },
+          "stock": 12,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "12000558",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "e7c0sqmrJW",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/e7c0sqmrJW_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "FEAST",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002090,
+            "netWeight": 300,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Feast Gurme Dondurulmuş Kaplamalı Peynir Çubukları 300 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurulmus/feast-gurme-dondurulmus-kaplamali-peynir-cubuklari-300-gr_p-12000558",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8697343111832", "8697343111764"],
+            "grossWeight": 320,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C10", "name": "Dondurulmuş", "parentId": "master" },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 8500,
+            "normalStr": "₺85,00",
+            "discounted": 8500,
+            "discountedStr": "₺85,00"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001024",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "as7HasXNgP",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/as7HasXNgP_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "NİMET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1002091,
+            "netWeight": 360,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Nimet Dondurulmuş Boyoz 6x60 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/nimet-dondurulmus-boyoz-6x60-gr_p-21001024",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Bölgesel",
+            "barcodes": ["8699118036319"],
+            "grossWeight": 360,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1002", "name": "Dondurulmuş Gıda", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3750,
+            "normalStr": "₺37,50",
+            "discounted": 3750,
+            "discountedStr": "₺37,50"
+          },
+          "stock": 13,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Dondurulmuş Gıda Çeşitleri ve Fiyatları | A101 KAPIDA",
+      "seoDescription": "Dondurulmuş Gıda çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Dondurulmuş Gıda çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/dondurulmus-gida"
+    },
+    {
+      "parentId": "C10",
+      "id": "C1001",
+      "name": "Pratik Yemekler",
+      "products": [
+        {
+          "id": "18002121",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "59i4kBViBL",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/59i4kBViBL_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ÇOKÇA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1001006,
+            "netWeight": 120,
+            "depolamaKosulu": "Gıda",
+            "name": "Çokça Konserve Hindi Fileto 120 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118056201"],
+            "grossWeight": 170,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/cokca-konserve-hindi-fileto-120-gr_p-18002121"
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1001", "name": "Pratik Yemekler", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3990,
+            "normalStr": "₺39,90",
+            "discounted": 3990,
+            "discountedStr": "₺39,90"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "18002479",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "piwk2YVf66",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/piwk2YVf66_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 116,
+            "brand": "BAHAR",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1001009,
+            "netWeight": 160,
+            "depolamaKosulu": "Gıda",
+            "name": "Bahar Hindi Döner Konservesi 160 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8698720405025"],
+            "grossWeight": 200,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/bahar-hindi-doner-konservesi-160-gr_p-18002479"
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1001", "name": "Pratik Yemekler", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3490,
+            "discounted": 3490,
+            "normalStr": "₺34,90",
+            "discountedStr": "₺34,90"
+          },
+          "stock": 1,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "18002122",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "jnXa4Xni01",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/jnXa4Xni01_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ÇOKÇA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1001010,
+            "netWeight": 120,
+            "depolamaKosulu": "Gıda",
+            "name": "Çokça Konserve Hindi Tandır 120 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118056195"],
+            "grossWeight": 170,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/cokca-konserve-hindi-tandir-120-gr_p-18002122"
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1001", "name": "Pratik Yemekler", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3990,
+            "normalStr": "₺39,90",
+            "discounted": 3990,
+            "discountedStr": "₺39,90"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "18000069",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "3oK6-casDr",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/3oK6-casDr_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 139,
+            "brand": "YURT",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1001012,
+            "netWeight": 400,
+            "depolamaKosulu": "Gıda",
+            "name": "Yurt Konserve Yaprak Sarma 400 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8691004154022"],
+            "grossWeight": 420,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/yurt-konserve-yaprak-sarma-400-gr_p-18000069"
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1001", "name": "Pratik Yemekler", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3990,
+            "normalStr": "₺39,90",
+            "discounted": 3990,
+            "discountedStr": "₺39,90"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "18000178",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "VaFrTojCJA",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/VaFrTojCJA_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "BURCU",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1001013,
+            "netWeight": 200,
+            "depolamaKosulu": "Gıda",
+            "name": "Burcu Yaprak Sarma 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/burcu-yaprak-sarma-200-gr_p-18000178",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8691573071515", "8691573071591"],
+            "grossWeight": 250,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1001", "name": "Pratik Yemekler", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3090,
+            "normalStr": "₺30,90",
+            "discounted": 3090,
+            "discountedStr": "₺30,90"
+          },
+          "stock": 15,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "18001805",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "Gn226Hkz4E",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Gn226Hkz4E_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "YAYLA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1001017,
+            "netWeight": 400,
+            "depolamaKosulu": "Gıda",
+            "name": "Yayla Barbunya Pilaki 400 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8693374255477"],
+            "grossWeight": 415,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/yayla-barbunya-pilaki-400-gr_p-18001805"
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1001", "name": "Pratik Yemekler", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3990,
+            "normalStr": "₺39,90",
+            "discounted": 3990,
+            "discountedStr": "₺39,90"
+          },
+          "stock": 20,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "18002035",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "rTjTVlQlkU",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/rTjTVlQlkU_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ÇOKÇA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1001020,
+            "netWeight": 400,
+            "depolamaKosulu": "Gıda",
+            "name": "Çokça Barbunya Pilaki 400 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/cokca-barbunya-pilaki-400-gr_p-18002035",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118070771",
+              "8699118036814",
+              "8699118054498",
+              "8699118006343"
+            ],
+            "grossWeight": 478,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1001", "name": "Pratik Yemekler", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2950,
+            "normalStr": "₺29,50",
+            "discounted": 2950,
+            "discountedStr": "₺29,50"
+          },
+          "stock": 14,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "18001464",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "kazQNgClYP",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/kazQNgClYP_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "YURT",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1001027,
+            "netWeight": 400,
+            "depolamaKosulu": "Gıda",
+            "name": "Yurt Kuru Fasulye 400 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8691004490922"],
+            "grossWeight": 405,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/yurt-kuru-fasulye-400-gr_p-18001464"
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1001", "name": "Pratik Yemekler", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3990,
+            "normalStr": "₺39,90",
+            "discounted": 3990,
+            "discountedStr": "₺39,90"
+          },
+          "stock": 15,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "18002534",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "uNswGqa-Ia",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/uNswGqa-Ia_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 89,
+            "brand": "KNORR",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1001044,
+            "netWeight": 110,
+            "depolamaKosulu": "Gıda",
+            "name": "Knorr Kıtırlı Domates Çorbası 5x22 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/knorr-kitirli-domates-corbasi-5x22-gr_p-18002534",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8683130053690"],
+            "grossWeight": 120,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1001", "name": "Pratik Yemekler", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3490,
+            "discounted": 3490,
+            "normalStr": "₺34,90",
+            "discountedStr": "₺34,90"
+          },
+          "stock": 14,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "18002550",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "cGM7urV3c9",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/cGM7urV3c9_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 88,
+            "brand": "KNORR",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1001045,
+            "netWeight": 110,
+            "depolamaKosulu": "Gıda",
+            "name": "Knorr Mercimek Çorbası 5x22 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/knorr-mercimek-corbasi-5x22-gr_p-18002550",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8683130053706"],
+            "grossWeight": 120,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1001", "name": "Pratik Yemekler", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3490,
+            "discounted": 3490,
+            "normalStr": "₺34,90",
+            "discountedStr": "₺34,90"
+          },
+          "stock": 13,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Pratik & Hazır Yemek Çeşitleri ve Fiyatları | A101 KAPIDA",
+      "seoDescription": "Pratik & Hazır Yemek çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Pratik & Hazır Yemek çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/pratik-yemekler"
+    },
+    {
+      "parentId": "C10",
+      "id": "C1004",
+      "name": "Meze",
+      "products": [
+        {
+          "id": "18001890",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "UX4BKKU77x",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/UX4BKKU77x_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "DvLDGwuAd-",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/DvLDGwuAd-_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "uUsODc1SjO",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/uUsODc1SjO_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ÇOKÇA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1004009,
+            "netWeight": 384,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Çokça Meze Çiğ Köfte 384 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/cokca-meze-cig-kofte-384-gr_p-18001890",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118040576"],
+            "grossWeight": 390,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1004", "name": "Meze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2350,
+            "normalStr": "₺23,50",
+            "discounted": 2350,
+            "discountedStr": "₺23,50"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "18002335",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "AFPHuGjyDA",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/AFPHuGjyDA_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "dp-p0fC8AG",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/dp-p0fC8AG_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "SIRA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1004011,
+            "netWeight": 135,
+            "depolamaKosulu": "Gıda",
+            "name": "Sıra Etsiz Çiğ Köfte Harcı 135 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/sira-etsiz-cig-kofte-harci-135-gr_p-18002335",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": ["8695820016663"],
+            "grossWeight": 150,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1004", "name": "Meze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 690,
+            "discounted": 690,
+            "normalStr": "₺6,90",
+            "discountedStr": "₺6,90"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "18000234",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "efBLwRy3ci",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/efBLwRy3ci_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "MEZE TURKO",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1004012,
+            "netWeight": 250,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Meze Turko Rus Salatası 250 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/meze-turko-rus-salatasi-250-gr_p-18000234",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8696881005153"],
+            "grossWeight": 300,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1004", "name": "Meze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1900,
+            "normalStr": "₺19,00",
+            "discounted": 1900,
+            "discountedStr": "₺19,00"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "18002368",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "Bni0d2IP6K",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Bni0d2IP6K_256x256.png"
+            },
+            {
+              "id": "LHWm-H4T1y",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/LHWm-H4T1y_256x256.png"
+            },
+            {
+              "id": "qAOS0hZfUc",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/qAOS0hZfUc_256x256.png"
+            },
+            {
+              "id": "2PRgOxIVxf",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/2PRgOxIVxf_256x256.png"
+            },
+            {
+              "id": "nQzxJkOhby",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/nQzxJkOhby_256x256.png"
+            },
+            {
+              "id": "BYsl2Fc4a4",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/BYsl2Fc4a4_256x256.png"
+            },
+            {
+              "id": "acUDz0zHYQ",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/acUDz0zHYQ_256x256.png"
+            },
+            {
+              "id": "fmZOCJopT3",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/fmZOCJopT3_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 62,
+            "brand": "MEZZET",
+            "HEMEN_maxQty": 8,
+            "netWeight": 200,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Mezzet Meze Çeşitleri 200 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/mezzet-meze-cesitleri-200-gr_p-18002368",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "GrupSpot",
+            "barcodes": [
+              "8699177401417",
+              "8699177413564",
+              "8699177403688",
+              "8697677560139"
+            ],
+            "grossWeight": 250,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1004", "name": "Meze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2190,
+            "discounted": 2190,
+            "normalStr": "₺21,90",
+            "discountedStr": "₺21,90"
+          },
+          "stock": 1,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Meze Çeşitleri ve Fiyatları | A101 KAPIDA",
+      "seoDescription": "Meze çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Meze çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/meze"
+    },
+    {
+      "parentId": "C10",
+      "id": "C1005",
+      "name": "Sandviç, Dürümler",
+      "products": [
+        {
+          "id": "18002588",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "KeD9Jk6A4e",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/KeD9Jk6A4e_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 11,
+            "brand": "ÇOKÇA",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1005001,
+            "netWeight": 260,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Çokça Meze Çiğköfte Dürüm 260 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/cokca-meze-cigkofte-durum-260-gr_p-18002588",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699118065142"],
+            "grossWeight": 300,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1005", "name": "Sandviç, Dürümler", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1990,
+            "discounted": 1990,
+            "normalStr": "₺19,90",
+            "discountedStr": "₺19,90"
+          },
+          "stock": 9,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "28000693",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "6q85Ekne89",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/6q85Ekne89_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "kTyIJ4g-yL",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/kTyIJ4g-yL_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "MİSTER NO",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1005004,
+            "netWeight": 130,
+            "depolamaKosulu": "Soğuk(+4)",
+            "name": "Dardanel Mr. No Kaşarlı Salamlı veya Bol Peynirli Sandviç 130 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8690559024033", "8690559024026"],
+            "grossWeight": 130,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/dardanel-mr-no-kasarli-salamli-veya-bol-peynirli-sandvic-130-gr_p-28000693"
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1005", "name": "Sandviç, Dürümler", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2500,
+            "discounted": 2500,
+            "normalStr": "₺25,00",
+            "discountedStr": "₺25,00"
+          },
+          "stock": 11,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Dürüm ve Sandviç Çeşitleri & Fiyatları | A101 KAPIDA",
+      "seoDescription": "Dürüm ve Sandviç çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Dürüm ve Sandviç çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/sandvic-durumler"
+    },
+    {
+      "parentId": "C10",
+      "id": "C1003",
+      "name": "Dondurulmuş Tatlı",
+      "products": [
+        {
+          "id": "21001198",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "U96eP2tWln",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/U96eP2tWln_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ÇEŞİDİM",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1003007,
+            "netWeight": 400,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Sinangil Soğuk Baklava 400 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8680869193864"],
+            "grossWeight": 400,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/sinangil-soguk-baklava-400-gr_p-21001198"
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1003", "name": "Dondurulmuş Tatlı", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 13390,
+            "discounted": 13390,
+            "normalStr": "₺133,90",
+            "discountedStr": "₺133,90"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001103",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "vX86PwHgmh",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/vX86PwHgmh_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "rank": 13,
+            "brand": "KEKSPIR",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1003008,
+            "netWeight": 220,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Kekspır Dondurulmuş Çikolatalı Sufle 2x100 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/kekspir-dondurulmus-cikolatali-sufle-2x100-gr_p-21001103",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8699118013884",
+              "8699118055174",
+              "8699118025832",
+              "2060000135476"
+            ],
+            "grossWeight": 220,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1003", "name": "Dondurulmuş Tatlı", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5000,
+            "normalStr": "₺50,00",
+            "discounted": 5000,
+            "discountedStr": "₺50,00"
+          },
+          "stock": 14,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000898",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "KgshCci508",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/KgshCci508_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "eVADtZ3guN",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/eVADtZ3guN_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "SAM",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1003009,
+            "netWeight": 135,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Sam Dondurulmuş Katmer 135 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8681008059119"],
+            "grossWeight": 135,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/sam-dondurulmus-katmer-135-gr_p-21000898"
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1003", "name": "Dondurulmuş Tatlı", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3490,
+            "normalStr": "₺34,90",
+            "discounted": 3490,
+            "discountedStr": "₺34,90"
+          },
+          "stock": 9,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21000749",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "5r1vn8ncd2",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/5r1vn8ncd2_256x256.png"
+            },
+            {
+              "id": "ba-lXknTsK",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ba-lXknTsK_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "returnConditions": null,
+            "brand": "SAM",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1003012,
+            "netWeight": 135,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Sam Dondurulmuş Künefe 135 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/dondurulmus/sam-dondurulmus-kunefe-135-gr_p-21000749",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8681008059010"],
+            "grossWeight": 145,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C10", "name": "Dondurulmuş", "parentId": "master" },
+            { "id": "C1003", "name": "Dondurulmuş Tatlı", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2025,
+            "normalStr": "₺20,25",
+            "discounted": 2025,
+            "discountedStr": "₺20,25"
+          },
+          "stock": 12,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001067",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "pm0gbofScG",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/pm0gbofScG_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "ÖZSÜT",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1003013,
+            "netWeight": 650,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Özsüt Sefer Usta Dondurulmuş Çikolatalı Pasta 650 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8699025202456"],
+            "grossWeight": 650,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/ozsut-sefer-usta-dondurulmus-cikolatali-pasta-650-gr_p-21001067"
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1003", "name": "Dondurulmuş Tatlı", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 10200,
+            "normalStr": "₺102,00",
+            "discounted": 10200,
+            "discountedStr": "₺102,00"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "21001077",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "donukUrun",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "vH64u8q-Xl",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/vH64u8q-Xl_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "fRsWadhRTH",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/fRsWadhRTH_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 15,
+            "brand": "COQUET",
+            "HEMEN_maxQty": 8,
+            "categoryRank": 1003018,
+            "netWeight": 650,
+            "depolamaKosulu": "Donuk(-18)",
+            "name": "Coquette Dondurulmuş Limonlu Cheesecake 650 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8680256600968"],
+            "grossWeight": 652,
+            "stepper": 1,
+            "hediye": true,
+            "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/coquette-dondurulmus-limonlu-cheesecake-650-gr_p-21001077"
+          },
+          "categories": [
+            {
+              "id": "C10",
+              "name": "Donuk, Hazır Yemek, Meze",
+              "parentId": "master"
+            },
+            { "id": "C1003", "name": "Dondurulmuş Tatlı", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 10900,
+            "normalStr": "₺109,00",
+            "discounted": 10900,
+            "discountedStr": "₺109,00"
+          },
+          "stock": 6,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Dondurulmuş Tatlı & Pasta Çeşitleri ve Fiyatları | A101 KAPIDA",
+      "seoDescription": "Dondurulmuş Tatlı & Pasta çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Dondurulmuş Tatlı & Pasta çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze/dondurulmus-tatli"
+    }
+  ],
+  "seoTitle": "",
+  "seoDescription": "",
+  "seoUrl": "https://www.a101.com.tr/kapida/donuk-hazir-yemek-meze",
+  "products": []
+}

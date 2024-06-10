@@ -1,0 +1,2090 @@
+{
+  "parentId": "master",
+  "id": "C01",
+  "name": "Meyve, Sebze",
+  "children": [
+    {
+      "parentId": "C01",
+      "id": "C0101",
+      "name": "Meyve",
+      "products": [
+        {
+          "id": "20000820",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "kws6H6hzyw",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/kws6H6hzyw_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "categoryRank": 101000,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Mandalina Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/mandalina-kg_p-20000820",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "Sezonluk",
+            "SLOT_minWeight": 500,
+            "barcodes": ["2060000002785", "2920820"],
+            "grossWeight": 1000,
+            "stepper": 100,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0101", "name": "Meyve", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2475,
+            "normalStr": "₺24,75",
+            "discounted": 2475,
+            "discountedStr": "₺24,75"
+          },
+          "stock": 46000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000816",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "NasX2-Zzqm",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/NasX2-Zzqm_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "seoDescription": "",
+            "categoryRank": 101001,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Portakal Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/portakal-kg_p-20000816",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "Sezonluk",
+            "SLOT_minWeight": 500,
+            "barcodes": ["2920816", "2060000002211"],
+            "grossWeight": 1000,
+            "stepper": 100,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0101", "name": "Meyve", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1975,
+            "normalStr": "₺19,75",
+            "discounted": 1975,
+            "discountedStr": "₺19,75"
+          },
+          "stock": 9000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000800",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "wBVi1VFk1Q",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/wBVi1VFk1Q_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "categoryRank": 101002,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Limon Kg",
+            "salesUnitOfMeasure": "KG",
+            "HEMEN_minQty": 500,
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/limon-kg_p-20000800",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "Regüler",
+            "SLOT_minWeight": 500,
+            "barcodes": [
+              "2060000002686",
+              "2920800007000",
+              "2890648",
+              "2920800"
+            ],
+            "grossWeight": 1000,
+            "stepper": 100,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0101", "name": "Meyve", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1875,
+            "normalStr": "₺18,75",
+            "discounted": 1875,
+            "discountedStr": "₺18,75"
+          },
+          "stock": 61000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000804",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "JnrjCnCtB9",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/JnrjCnCtB9_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "categoryRank": 101003,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Yerli Muz Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/yerli-muz-kg_p-20000804",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "TekSeferlik",
+            "SLOT_minWeight": 500,
+            "barcodes": ["2920804", "2832410", "2060000002716"],
+            "grossWeight": 1000,
+            "stepper": 100,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0101", "name": "Meyve", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4995,
+            "normalStr": "₺49,95",
+            "discounted": 4995,
+            "discountedStr": "₺49,95"
+          },
+          "stock": 1000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000805",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "G8n35nxTDx",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/G8n35nxTDx_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "categoryRank": 101004,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Starking Elma Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/starking-elma-kg_p-20000805",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "Sezonluk",
+            "SLOT_minWeight": 500,
+            "barcodes": [
+              "2920805",
+              "2910001",
+              "2910001008005",
+              "2060000002167"
+            ],
+            "grossWeight": 1000,
+            "stepper": 100,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0101", "name": "Meyve", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2975,
+            "normalStr": "₺29,75",
+            "discounted": 2975,
+            "discountedStr": "₺29,75"
+          },
+          "stock": 25000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000802",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "zXcoeSRFt-",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/zXcoeSRFt-_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "categoryRank": 101005,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "İthal Muz Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/ithal-muz-kg_p-20000802",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "Regüler",
+            "SLOT_minWeight": 500,
+            "barcodes": [
+              "2920802",
+              "2832275",
+              "5425003613241",
+              "2060000002150"
+            ],
+            "grossWeight": 1000,
+            "stepper": 100,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0101", "name": "Meyve", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 8790,
+            "normalStr": "₺87,90",
+            "discounted": 8790,
+            "discountedStr": "₺87,90"
+          },
+          "stock": 9000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000812",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "gvlMjF3pcq",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/gvlMjF3pcq_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "categoryRank": 101006,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Deveci Armut Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/deveci-armut-kg_p-20000812",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "Sezonluk",
+            "SLOT_minWeight": 500,
+            "barcodes": ["2060000002198", "2920812"],
+            "grossWeight": 1000,
+            "stepper": 100,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0101", "name": "Meyve", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3975,
+            "normalStr": "₺39,75",
+            "discounted": 3975,
+            "discountedStr": "₺39,75"
+          },
+          "stock": 24000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000809",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "BB6Ileqn17",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/BB6Ileqn17_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "categoryRank": 101009,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Granny Smith Elma Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/granny-smith-elma-kg_p-20000809",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "Sezonluk",
+            "SLOT_minWeight": 500,
+            "barcodes": ["2920809", "2060000002181"],
+            "grossWeight": 1000,
+            "stepper": 100,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0101", "name": "Meyve", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3975,
+            "normalStr": "₺39,75",
+            "discounted": 3975,
+            "discountedStr": "₺39,75"
+          },
+          "stock": 10000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000824",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "1UtkKY-a9R",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/1UtkKY-a9R_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "categoryRank": 101010,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Greyfurt Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/greyfurt-kg_p-20000824",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "Sezonluk",
+            "SLOT_minWeight": 500,
+            "barcodes": ["2920824", "2060000002235"],
+            "grossWeight": 1000,
+            "stepper": 100,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0101", "name": "Meyve", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1950,
+            "normalStr": "₺19,50",
+            "discounted": 1950,
+            "discountedStr": "₺19,50"
+          },
+          "stock": 27000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000807",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "DB7g6AJshC",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/DB7g6AJshC_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "categoryRank": 101011,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Golden Elma Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/golden-elma-kg_p-20000807",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "TekSeferlik",
+            "SLOT_minWeight": 500,
+            "barcodes": ["2920807", "2060000002174"],
+            "grossWeight": 1000,
+            "stepper": 100,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0101", "name": "Meyve", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3475,
+            "normalStr": "₺34,75",
+            "discounted": 3475,
+            "discountedStr": "₺34,75"
+          },
+          "stock": 12000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000834",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "1DJ9sFx5SV",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/1DJ9sFx5SV_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "categoryRank": 101012,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Kivi Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/kivi-kg_p-20000834",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "Sezonluk",
+            "SLOT_minWeight": 500,
+            "barcodes": ["2920834", "2060000002860", "2050000021893"],
+            "grossWeight": 1000,
+            "stepper": 100,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0101", "name": "Meyve", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5890,
+            "normalStr": "₺58,90",
+            "discounted": 5890,
+            "discountedStr": "₺58,90"
+          },
+          "stock": 4000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000815",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "1LtQQ7p2Cm",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/1LtQQ7p2Cm_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "categoryRank": 101015,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Ayva Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/ayva-kg_p-20000815",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "TekSeferlik",
+            "SLOT_minWeight": 500,
+            "barcodes": ["2060000002204", "2920815"],
+            "grossWeight": 1000,
+            "stepper": 100,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0101", "name": "Meyve", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4950,
+            "normalStr": "₺49,50",
+            "discounted": 4950,
+            "discountedStr": "₺49,50"
+          },
+          "stock": 1000,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Doğal & Organik Meyve Çeşitleri ve Fiyatları | A101 KAPIDA",
+      "seoDescription": "Doğal & Organik Meyve çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Doğal & Organik Meyve çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/meyve"
+    },
+    {
+      "parentId": "C01",
+      "id": "C0102",
+      "name": "Sebze",
+      "products": [
+        {
+          "id": "20000794",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "e6oHnfxd91",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/e6oHnfxd91_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "categoryRank": 102000,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Patates Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/patates-kg_p-20000794",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "Regüler",
+            "SLOT_minWeight": 500,
+            "barcodes": ["2060000002105", "2920794"],
+            "grossWeight": 1000,
+            "stepper": 100,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0102", "name": "Sebze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1975,
+            "normalStr": "₺19,75",
+            "discounted": 1550,
+            "discountedStr": "₺15,50",
+            "discountRate": 22,
+            "discountRateStr": "%22 İNDİRİM"
+          },
+          "stock": 218000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000796",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "x-vb-ATL7m",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/x-vb-ATL7m_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "categoryRank": 102001,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Soğan Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/sogan-kg_p-20000796",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "Regüler",
+            "SLOT_minWeight": 500,
+            "barcodes": ["2060000002112", "2920796"],
+            "grossWeight": 1000,
+            "stepper": 100,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0102", "name": "Sebze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1275,
+            "normalStr": "₺12,75",
+            "discounted": 1275,
+            "discountedStr": "₺12,75"
+          },
+          "stock": 181000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000761",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "0YOQeAIoZ0",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/0YOQeAIoZ0_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["", "seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "categoryRank": 102002,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Domates Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/domates-kg_p-20000761",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "Regüler",
+            "SLOT_minWeight": 500,
+            "barcodes": ["2060000001436", "2890642", "2920761"],
+            "grossWeight": 1000,
+            "stepper": 100,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0102", "name": "Sebze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3875,
+            "normalStr": "₺38,75",
+            "discounted": 2995,
+            "discountedStr": "₺29,95",
+            "discountRate": 23,
+            "discountRateStr": "%23 İNDİRİM"
+          },
+          "stock": 26000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20001097",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "SyG1QypBac",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/SyG1QypBac_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "brand": null,
+            "HEMEN_maxQty": 8,
+            "categoryRank": 102003,
+            "netWeight": 500,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Kokteyl Domates Paket 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/kokteyl-domates-paket-500-gr_p-20001097",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "2060000004321",
+              "2001258",
+              "2001258005005",
+              "8699118042143",
+              "8699118040910"
+            ],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0102", "name": "Sebze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3795,
+            "normalStr": "₺37,95",
+            "discounted": 3795,
+            "discountedStr": "₺37,95"
+          },
+          "stock": 17,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000023",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "YXqDTE6PbB",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/YXqDTE6PbB_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "brand": null,
+            "HEMEN_maxQty": 8,
+            "categoryRank": 102004,
+            "netWeight": 300,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Çarliston Biber Paket 300 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/carliston-biber-paket-300-gr_p-20000023",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "2703173003455",
+              "2703173003608",
+              "2000220",
+              "2060000191939"
+            ],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0102", "name": "Sebze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2495,
+            "normalStr": "₺24,95",
+            "discounted": 1750,
+            "discountedStr": "₺17,50",
+            "discountRate": 30,
+            "discountRateStr": "%30 İNDİRİM"
+          },
+          "stock": 42,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000764",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "aucWrFYW7r",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/aucWrFYW7r_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "categoryRank": 102005,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "maxWeightForSales": 1000,
+            "name": "Salatalık Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/salatalik-kg_p-20000764",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "Regüler",
+            "SLOT_minWeight": 500,
+            "barcodes": ["2060000001962", "2890643", "2920764"],
+            "grossWeight": 1000,
+            "stepper": 100,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0102", "name": "Sebze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3975,
+            "normalStr": "₺39,75",
+            "discounted": 3975,
+            "discountedStr": "₺39,75"
+          },
+          "stock": 3000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20001051",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "09SSD-GcCM",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/09SSD-GcCM_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "brand": null,
+            "HEMEN_maxQty": 8,
+            "categoryRank": 102006,
+            "netWeight": 300,
+            "depolamaKosulu": "MeyveSebzeSoğuk+4",
+            "name": "Mantar Paket 300 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/mantar-paket-300-gr_p-20001051",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "8682615184805",
+              "8682340840700",
+              "8681695431014",
+              "8683020031401",
+              "8680905500885",
+              "8697686290010",
+              "8169104726802",
+              "8683543380055",
+              "8683675686308",
+              "8683400290206",
+              "8684127621519",
+              "8697686616018",
+              "2060000249760",
+              "8697458270028",
+              "2000909",
+              "8697911330016",
+              "200",
+              "8680186740291",
+              "8680287350054",
+              "8680782090011",
+              "8681338000768",
+              "8682016398900",
+              "8682190000002",
+              "8690142001458",
+              "8695725000026",
+              "8697419880099",
+              "8697686291222",
+              "8697686616056",
+              "8699336470223",
+              "8682016307100",
+              "8699237510066",
+              "8699889130087",
+              "8698749841026",
+              "8698885161231",
+              "8698885161699"
+            ],
+            "grossWeight": 300,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0102", "name": "Sebze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3495,
+            "normalStr": "₺34,95",
+            "discounted": 3495,
+            "discountedStr": "₺34,95"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000026",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "KnYP0ACo88",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/KnYP0ACo88_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "incrementInfo": "<!DOCTYPE html>\r\r\r\r\r\r\r\r\r\r\r\r\r\n<html>\r\r\r\r\r\r\r\r\r\r\r\r\r\n<head>\r\r\r\r\r\r\r\r\r\r\r\r\r\n</head>\r\r\r\r\r\r\r\r\r\r\r\r\r\n<body>\r\r\r\r\r\r\r\r\r\r\r\r\r\n\r\r\r\r\r\r\r\r\r\r\r\r\r\n</body>\r\r\r\r\r\r\r\r\r\r\r\r\r\n</html>",
+            "collections": ["seciliurunler"],
+            "brand": null,
+            "HEMEN_maxQty": 8,
+            "categoryRank": 102008,
+            "netWeight": 300,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Kırmızı Biber Paket 300 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/kirmizi-biber-paket-300-gr_p-20000026",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["2060000191960", "2000268"],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0102", "name": "Sebze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2995,
+            "normalStr": "₺29,95",
+            "discounted": 2995,
+            "discountedStr": "₺29,95"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20001129",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "OQfBdzmGbD",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/OQfBdzmGbD_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "brand": null,
+            "HEMEN_maxQty": 8,
+            "categoryRank": 102009,
+            "netWeight": 500,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Çengelköy Salatalık Paket 500 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/cengelkoy-salatalik-paket-500-gr_p-20001129",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": [
+              "2060000012876",
+              "2001210",
+              "8699118042150",
+              "8682016398924"
+            ],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0102", "name": "Sebze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3195,
+            "normalStr": "₺31,95",
+            "discounted": 3195,
+            "discountedStr": "₺31,95"
+          },
+          "stock": 10,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000774",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "RBk4UPlupI",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/RBk4UPlupI_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 10000,
+            "HEMEN_minWeight": 5000,
+            "brand": null,
+            "categoryRank": 102010,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Beyaz Lahana Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/beyaz-lahana-kg_p-20000774",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "TekSeferlik",
+            "SLOT_minWeight": 5000,
+            "barcodes": ["2920774", "2060000002044"],
+            "grossWeight": 1000,
+            "stepper": 5000,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0102", "name": "Sebze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 695,
+            "normalStr": "₺6,95",
+            "discounted": 695,
+            "discountedStr": "₺6,95"
+          },
+          "stock": 11000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000772",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "nrjXGWrsOq",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/nrjXGWrsOq_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "categoryRank": 102011,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Patlıcan Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/patlican-kg_p-20000772",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "Regüler",
+            "SLOT_minWeight": 500,
+            "barcodes": ["2920772", "2060000002020"],
+            "grossWeight": 1000,
+            "stepper": 100,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0102", "name": "Sebze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 5990,
+            "normalStr": "₺59,90",
+            "discounted": 5990,
+            "discountedStr": "₺59,90"
+          },
+          "stock": 6000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20001227",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "GnpFvlUUMh",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/GnpFvlUUMh_256x256.png"
+            },
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "brand": null,
+            "HEMEN_maxQty": 8,
+            "categoryRank": 102013,
+            "netWeight": 250,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Şeker Domates Paket",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/seker-domates-paket_p-20001227",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Sezonluk",
+            "barcodes": ["2060000023422", "2000381", "2060000114723"],
+            "grossWeight": 270,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0102", "name": "Sebze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3475,
+            "normalStr": "₺34,75",
+            "discounted": 3475,
+            "discountedStr": "₺34,75"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000762",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "Qshmd5I0MQ",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Qshmd5I0MQ_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "categoryRank": 102014,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Salkım Domates Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/salkim-domates-kg_p-20000762",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "Regüler",
+            "SLOT_minWeight": 500,
+            "barcodes": ["2060000001955", "2920762"],
+            "grossWeight": 1000,
+            "stepper": 500,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0102", "name": "Sebze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 4750,
+            "normalStr": "₺47,50",
+            "discounted": 4750,
+            "discountedStr": "₺47,50"
+          },
+          "stock": 2000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000025",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "3FCxj44VDV",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/3FCxj44VDV_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "brand": null,
+            "HEMEN_maxQty": 8,
+            "categoryRank": 102015,
+            "netWeight": 300,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Dolma Biber Paket 300 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/dolma-biber-paket-300-gr_p-20000025",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Sezonluk",
+            "barcodes": [
+              "2060000191953",
+              "2031581003454",
+              "2703158003104",
+              "2703158003302",
+              "2703158003753",
+              "2000251"
+            ],
+            "grossWeight": 500,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0102", "name": "Sebze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2495,
+            "normalStr": "₺24,95",
+            "discounted": 2495,
+            "discountedStr": "₺24,95"
+          },
+          "stock": 4,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000773",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "Np6g774JS8",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Np6g774JS8_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "categoryRank": 102016,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Kabak Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/kabak-kg_p-20000773",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "Regüler",
+            "SLOT_minWeight": 500,
+            "barcodes": ["2920773", "2060000002037"],
+            "grossWeight": 1000,
+            "stepper": 100,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0102", "name": "Sebze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3490,
+            "normalStr": "₺34,90",
+            "discounted": 3490,
+            "discountedStr": "₺34,90"
+          },
+          "stock": 10000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000784",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "fCnk3r307j",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/fCnk3r307j_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "collections": ["seciliurunler"],
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 2000,
+            "brand": null,
+            "categoryRank": 102017,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Karnabahar Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/karnabahar-kg_p-20000784",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "Sezonluk",
+            "SLOT_minWeight": 2000,
+            "barcodes": ["2060000002624", "2920784"],
+            "grossWeight": 1000,
+            "stepper": 2000,
+            "SLOT_maxWeight": 4000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0102", "name": "Sebze", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2975,
+            "normalStr": "₺29,75",
+            "discounted": 2975,
+            "discountedStr": "₺29,75"
+          },
+          "stock": 5000,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Taze Sebze Çeşitleri ve Fiyatları | A101 KAPIDA",
+      "seoDescription": "Taze Sebze çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Taze Sebze çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/sebze"
+    },
+    {
+      "parentId": "C01",
+      "id": "C0103",
+      "name": "Yeşillik",
+      "products": [
+        {
+          "id": "20000766",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "AmfeZGA1QC",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/AmfeZGA1QC_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": null,
+            "HEMEN_maxQty": 8,
+            "categoryRank": 103000,
+            "netWeight": 350,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Havuç Paket 350 Gr",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/havuc-paket-350-gr_p-20000766",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["2060000001979", "2920766", "2000015"],
+            "grossWeight": 400,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0103", "name": "Yeşillik", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1290,
+            "discounted": 1290,
+            "normalStr": "₺12,90",
+            "discountedStr": "₺12,90"
+          },
+          "stock": 10,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000781",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "xoJ9-jWPlS",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/xoJ9-jWPlS_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": null,
+            "HEMEN_maxQty": 8,
+            "categoryRank": 103001,
+            "netWeight": 80,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Maydanoz Adet",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/maydanoz-adet_p-20000781",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8681057040007", "2000077000000", "2000077"],
+            "grossWeight": 80,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0103", "name": "Yeşillik", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1290,
+            "normalStr": "₺12,90",
+            "discounted": 1290,
+            "discountedStr": "₺12,90"
+          },
+          "stock": 3,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000782",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "zjkDZnYzu2",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/zjkDZnYzu2_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": null,
+            "HEMEN_maxQty": 8,
+            "categoryRank": 103002,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Kıvırcık Adet",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/kivircik-adet_p-20000782",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8681057040052", "2060000002075", "2000084"],
+            "grossWeight": 1000,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0103", "name": "Yeşillik", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2990,
+            "normalStr": "₺29,90",
+            "discounted": 2990,
+            "discountedStr": "₺29,90"
+          },
+          "stock": 5,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000776",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "fOx7ER4fKz",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/fOx7ER4fKz_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": null,
+            "HEMEN_maxQty": 8,
+            "categoryRank": 103003,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Marul Göbek Adet",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/marul-gobek-adet_p-20000776",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Regüler",
+            "barcodes": ["8681057140196", "2000022000000", "2000022"],
+            "grossWeight": 1000,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0103", "name": "Yeşillik", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 3275,
+            "normalStr": "₺32,75",
+            "discounted": 3275,
+            "discountedStr": "₺32,75"
+          },
+          "stock": 7,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000775",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+              "isExternal": false
+            },
+            {
+              "id": "006OtgYPOZ",
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/006OtgYPOZ_256x256.png",
+              "isExternal": false
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 1500,
+            "brand": null,
+            "categoryRank": 103004,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Kırmızı Lahana Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/kirmizi-lahana-kg_p-20000775",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "Regüler",
+            "SLOT_minWeight": 1500,
+            "barcodes": ["2920775", "2060000002051"],
+            "grossWeight": 1000,
+            "stepper": 1500,
+            "SLOT_maxWeight": 3000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0103", "name": "Yeşillik", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1595,
+            "normalStr": "₺15,95",
+            "discounted": 1595,
+            "discountedStr": "₺15,95"
+          },
+          "stock": 15000,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000777",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "EdilebNMOR",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/EdilebNMOR_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": null,
+            "HEMEN_maxQty": 8,
+            "categoryRank": 103005,
+            "netWeight": 250,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Taze Soğan Adet",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/taze-sogan-adet_p-20000777",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Sezonluk",
+            "barcodes": ["8681057040045", "2060000002068", "2000039"],
+            "grossWeight": 250,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0103", "name": "Yeşillik", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 2990,
+            "normalStr": "₺29,90",
+            "discounted": 2990,
+            "discountedStr": "₺29,90"
+          },
+          "stock": 1,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000778",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "qGsqnbQiVJ",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/qGsqnbQiVJ_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "brand": null,
+            "HEMEN_maxQty": 8,
+            "categoryRank": 103007,
+            "netWeight": 80,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Roka Adet",
+            "SLOT_minQty": 1,
+            "salesUnitOfMeasure": "ADT",
+            "HEMEN_minQty": 1,
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/roka-adet_p-20000778",
+            "baseUnitOfMeasure": "ADT",
+            "SLOT_maxQty": 10,
+            "nitelikAdi": "Sezonluk",
+            "barcodes": ["8681057040182", "2060000002488", "2000046"],
+            "grossWeight": 80,
+            "stepper": 1,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0103", "name": "Yeşillik", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1790,
+            "normalStr": "₺17,90",
+            "discounted": 1790,
+            "discountedStr": "₺17,90"
+          },
+          "stock": 2,
+          "isBlacklisted": false,
+          "rS": 0
+        },
+        {
+          "id": "20000789",
+          "isEnabled": true,
+          "images": [
+            {
+              "id": "yerliUretim",
+              "isExternal": false,
+              "imageType": "badge",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+            },
+            {
+              "id": "cgAvw8oREr",
+              "isExternal": false,
+              "imageType": "product",
+              "tags": [],
+              "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/cgAvw8oREr_256x256.png"
+            }
+          ],
+          "attributes": {
+            "returnDay": 3,
+            "HEMEN_maxWeight": 7500,
+            "HEMEN_minWeight": 500,
+            "brand": null,
+            "categoryRank": 103008,
+            "netWeight": 1000,
+            "depolamaKosulu": "Meyve-Sebze",
+            "name": "Kırmızı Turp Kg",
+            "salesUnitOfMeasure": "KG",
+            "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/kirmizi-turp-kg_p-20000789",
+            "baseUnitOfMeasure": "KG",
+            "nitelikAdi": "Sezonluk",
+            "SLOT_minWeight": 500,
+            "barcodes": ["2060000002655", "2920789"],
+            "grossWeight": 1000,
+            "stepper": 100,
+            "SLOT_maxWeight": 10000,
+            "hediye": true
+          },
+          "categories": [
+            { "id": "C01", "name": "Meyve, Sebze", "parentId": "master" },
+            { "id": "C0103", "name": "Yeşillik", "parentId": "master" }
+          ],
+          "campaigns": [],
+          "price": {
+            "normal": 1990,
+            "discounted": 1990,
+            "normalStr": "₺19,90",
+            "discountedStr": "₺19,90"
+          },
+          "stock": 6000,
+          "isBlacklisted": false,
+          "rS": 0
+        }
+      ],
+      "seoTitle": "Yeşillik Çeşitleri ve Fiyatları | A101 KAPIDA",
+      "seoDescription": "Yeşillik çeşitleri, uygun fiyatlarıyla A101 KAPIDA'da!. Sepete ekle, Yeşillik çeşitleri saatler içerisinde kapına gelsin!",
+      "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/yesillik"
+    }
+  ],
+  "seoTitle": "",
+  "seoDescription": "",
+  "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze",
+  "products": []
+}
