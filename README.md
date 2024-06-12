@@ -5,6 +5,9 @@
 <h3 align="center">Managing sales of the store</h3>
 
 <h4 align="center"> 
+	<a href="https://rifkikesepara.github.io/WebProject2024-32Bit/">LIVE DEMO</a>
+</h4>
+<h4 align="center"> 
 	 Status: On Progress
 </h4>
 
