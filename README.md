@@ -96,7 +96,7 @@ The following tools were used in the construction of the project:
 - **[react-to-print](https://github.com/MatthewHerbst/react-to-print/tree/master)**
 - **[react-window](https://react-window.vercel.app/#/examples/grid/fixed-size)**
 
-> See the file [package.json](https://github.com/evelinsteiger/README-template/blob/master/package.json)
+> See the file [package.json](https://github.com/rifkikesepara/WebProject2024-32Bit/blob/master/package.json)
 
 #### [](#)**Documentation**
 
