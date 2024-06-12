@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 //clock component that shows the current time
 export default function Clock({ sx }) {
@@ -10,7 +10,12 @@ export default function Clock({ sx }) {
     setDate(new Date());
   };
   const clock = date.toLocaleTimeString("tr-TR");
-  setInterval(updateTime, 1000);
+
+  useEffect(() => {
+    const intervalID = setInterval(updateTime, 1000);
+
+    return () => clearInterval(intervalID);
+  }, [date]);
 
   return (
     <Typography sx={{ ...sx }}>

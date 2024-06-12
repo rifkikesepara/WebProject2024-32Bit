@@ -105,11 +105,14 @@ const LastReceipts = forwardRef(({ onSelect = (receipt) => {} }, ref) => {
       alignSelf={"center"}
       spacing={3}
     >
-      {receipts.map((receipt) => {
-        return (
-          <ReceiptBox key={receipt.id} data={receipt} onSelect={onSelect} />
-        );
-      })}
+      {receipts
+        .reverse()
+        .slice(0, 10)
+        .map((receipt) => {
+          return (
+            <ReceiptBox key={receipt.id} data={receipt} onSelect={onSelect} />
+          );
+        })}
     </Stack>
   );
 });
