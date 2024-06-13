@@ -2398,5 +2398,1219 @@
       "payback": 55,
       "discount": 0
     }
+  },
+  {
+    "id": 13,
+    "date": "12.06.2024 20:01:08",
+    "products": [
+      {
+        "id": "20000816",
+        "attributes": {
+          "returnDay": 3,
+          "collections": ["seciliurunler"],
+          "HEMEN_maxWeight": 7500,
+          "HEMEN_minWeight": 500,
+          "brand": null,
+          "seoDescription": "",
+          "categoryRank": 101001,
+          "netWeight": 1000,
+          "depolamaKosulu": "Meyve-Sebze",
+          "name": "Portakal Kg",
+          "salesUnitOfMeasure": "KG",
+          "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/portakal-kg_p-20000816",
+          "baseUnitOfMeasure": "KG",
+          "nitelikAdi": "Sezonluk",
+          "SLOT_minWeight": 500,
+          "barcodes": ["2920816", "2060000002211"],
+          "grossWeight": 1000,
+          "stepper": 100,
+          "SLOT_maxWeight": 10000,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "yerliUretim",
+            "isExternal": false,
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+          },
+          {
+            "id": "NasX2-Zzqm",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/NasX2-Zzqm_256x256.png"
+          }
+        ],
+        "price": {
+          "normal": 1975,
+          "normalStr": "₺19,75",
+          "discounted": 1975,
+          "discountedStr": "₺19,75",
+          "tax": 8,
+          "cashout": 1975
+        },
+        "stock": 9000,
+        "count": 1
+      },
+      {
+        "id": "20000805",
+        "attributes": {
+          "returnDay": 3,
+          "collections": ["seciliurunler"],
+          "HEMEN_maxWeight": 7500,
+          "HEMEN_minWeight": 500,
+          "brand": null,
+          "categoryRank": 101004,
+          "netWeight": 1000,
+          "depolamaKosulu": "Meyve-Sebze",
+          "name": "Starking Elma Kg",
+          "salesUnitOfMeasure": "KG",
+          "seoUrl": "https://www.a101.com.tr/kapida/meyve-sebze/starking-elma-kg_p-20000805",
+          "baseUnitOfMeasure": "KG",
+          "nitelikAdi": "Sezonluk",
+          "SLOT_minWeight": 500,
+          "barcodes": ["2920805", "2910001", "2910001008005", "2060000002167"],
+          "grossWeight": 1000,
+          "stepper": 100,
+          "SLOT_maxWeight": 10000,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "yerliUretim",
+            "isExternal": false,
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+          },
+          {
+            "id": "G8n35nxTDx",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/G8n35nxTDx_256x256.png"
+          }
+        ],
+        "price": {
+          "normal": 2975,
+          "normalStr": "₺29,75",
+          "discounted": 2975,
+          "discountedStr": "₺29,75",
+          "tax": 8,
+          "cashout": 5950
+        },
+        "stock": 25000,
+        "count": 2
+      },
+      {
+        "id": "14000041",
+        "attributes": {
+          "returnDay": 3,
+          "brand": "B O Ş",
+          "HEMEN_maxQty": 8,
+          "categoryRank": 201000,
+          "netWeight": 200,
+          "depolamaKosulu": "Ekmek",
+          "name": "Ekmek",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/firindan/ekmek_p-14000041",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 10,
+          "nitelikAdi": "Regüler",
+          "barcodes": ["2050000000102", "2001814", "14000041"],
+          "grossWeight": 200,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "yerliUretim",
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "VpqV-kVxkD",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/VpqV-kVxkD_256x256.png",
+            "isExternal": false
+          }
+        ],
+        "price": {
+          "normal": 750,
+          "normalStr": "₺7,50",
+          "discounted": 750,
+          "discountedStr": "₺7,50",
+          "tax": 1,
+          "cashout": 1500
+        },
+        "stock": 47,
+        "count": 4,
+        "offer": {
+          "id": 3,
+          "offerName": "Ekmek 2+2 Kampanyası",
+          "productID": 14000041,
+          "categoryID": null,
+          "type": "amount",
+          "discount": "4:2",
+          "activated": true,
+          "offerApplied": 1
+        }
+      }
+    ],
+    "payment": {
+      "cash": 94.25,
+      "card": 0,
+      "change": 0,
+      "total": 94.25,
+      "subTotal": 109.25,
+      "payback": 15,
+      "discount": 0
+    }
+  },
+  {
+    "id": 14,
+    "date": "12.06.2024 20:01:54",
+    "products": [
+      {
+        "id": "28000348",
+        "attributes": {
+          "returnDay": 3,
+          "brand": "NİMET",
+          "HEMEN_maxQty": 8,
+          "categoryRank": 201012,
+          "netWeight": 200,
+          "depolamaKosulu": "Ekmek",
+          "name": "Nimet Sivas Katmer Ekmek 200 Gr",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 10,
+          "nitelikAdi": "Bölgesel",
+          "barcodes": ["8698823992231"],
+          "grossWeight": 200,
+          "stepper": 1,
+          "hediye": true,
+          "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-sivas-katmer-ekmek-200-gr_p-28000348"
+        },
+        "images": [
+          {
+            "id": "gTLd9ZxgPi",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/gTLd9ZxgPi_256x256.png"
+          },
+          {
+            "id": "yerliUretim",
+            "isExternal": false,
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+          }
+        ],
+        "price": {
+          "normal": 2995,
+          "normalStr": "₺29,95",
+          "discounted": 2995,
+          "discountedStr": "₺29,95",
+          "tax": 1,
+          "cashout": 2995
+        },
+        "stock": 1,
+        "count": 1
+      }
+    ],
+    "payment": {
+      "cash": 0,
+      "card": 29.95,
+      "change": 0,
+      "total": 29.95,
+      "subTotal": 29.95,
+      "payback": 0,
+      "discount": 0
+    }
+  },
+  {
+    "id": 15,
+    "date": "12.06.2024 23:40:54",
+    "products": [
+      {
+        "id": "11002425",
+        "attributes": {
+          "returnDay": 15,
+          "collections": ["aldin-aldin-gida"],
+          "brand": "B O Ş",
+          "HEMEN_maxQty": 8,
+          "categoryRank": 503000,
+          "netWeight": 1012,
+          "depolamaKosulu": "Gıda",
+          "name": "Yumurta L Boy 15'li ",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/ramazan/yumurta-l-boy-15li-_p-11002425",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 10,
+          "nitelikAdi": "Regüler",
+          "barcodes": [
+            "2060000108555",
+            "8697445064029",
+            "8699383750019",
+            "8682811605814",
+            "8698573420220",
+            "8683880472130",
+            "8697550050290",
+            "8693944190290",
+            "8697853270067",
+            "8697853270326",
+            "8681469068354",
+            "8694293060111",
+            "8699956030388",
+            "8699856330069",
+            "8699316990116",
+            "8697831790075",
+            "8697581700010",
+            "8697461552371",
+            "8697409380059",
+            "8697048001308",
+            "8695895101738",
+            "8693880060718",
+            "8698445090193",
+            "8699158210014",
+            "8697435860235",
+            "8695905000228",
+            "8681682009516",
+            "8680734284062",
+            "8691365000099",
+            "8691365000174",
+            "8697880560605",
+            "8697581700591",
+            "8692510600331",
+            "8699425632228",
+            "8692196000142"
+          ],
+          "grossWeight": 1062,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "yerliUretim",
+            "isExternal": false,
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+          },
+          {
+            "id": "V-X10Fn3x-",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/V-X10Fn3x-_256x256.png"
+          }
+        ],
+        "price": {
+          "normal": 5500,
+          "normalStr": "₺55,00",
+          "discounted": 5500,
+          "discountedStr": "₺55,00",
+          "tax": 8,
+          "cashout": 11000
+        },
+        "stock": 47,
+        "count": 3,
+        "offer": {
+          "id": 1,
+          "offerName": "Yumurta 3 Al 2 Öde",
+          "productID": 11002425,
+          "categoryID": null,
+          "type": "amount",
+          "discount": "3:1",
+          "activated": true,
+          "offerApplied": 1
+        }
+      },
+      {
+        "id": "21000883",
+        "attributes": {
+          "returnDay": 15,
+          "brand": "ALGİDA",
+          "HEMEN_maxQty": 8,
+          "categoryRank": 901035,
+          "netWeight": 68,
+          "depolamaKosulu": "Donuk(-18)",
+          "name": "Algida Boom Boom Dondurma 85 Ml",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-boom-boom-dondurma-85-ml_p-21000883",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 10,
+          "nitelikAdi": "GrupSpot",
+          "barcodes": ["8683130015995", "8690637809279"],
+          "grossWeight": 68,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "donukUrun",
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "yerliUretim",
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "1mwZWRpkbN",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/1mwZWRpkbN_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "Smm-fMFL3m",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Smm-fMFL3m_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "tqBpD8mmTd",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/tqBpD8mmTd_256x256.png",
+            "isExternal": false
+          }
+        ],
+        "price": {
+          "normal": 2000,
+          "normalStr": "₺20,00",
+          "discounted": 2000,
+          "discountedStr": "₺20,00",
+          "tax": 8,
+          "cashout": 5500
+        },
+        "stock": 10,
+        "count": 3,
+        "offer": {
+          "id": 2,
+          "offerName": "Algida Boom Boom Alana İkincisi %25 İndirimli",
+          "productID": 21000883,
+          "categoryID": null,
+          "type": "amount",
+          "discount": "2:1:25",
+          "activated": true,
+          "offerApplied": 1
+        }
+      },
+      {
+        "id": "14000041",
+        "attributes": {
+          "returnDay": 3,
+          "brand": "B O Ş",
+          "HEMEN_maxQty": 8,
+          "categoryRank": 201000,
+          "netWeight": 200,
+          "depolamaKosulu": "Ekmek",
+          "name": "Ekmek",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/firindan/ekmek_p-14000041",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 10,
+          "nitelikAdi": "Regüler",
+          "barcodes": ["2050000000102", "2001814", "14000041"],
+          "grossWeight": 200,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "yerliUretim",
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "VpqV-kVxkD",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/VpqV-kVxkD_256x256.png",
+            "isExternal": false
+          }
+        ],
+        "price": {
+          "normal": 750,
+          "normalStr": "₺7,50",
+          "discounted": 750,
+          "discountedStr": "₺7,50",
+          "tax": 1,
+          "cashout": 3750
+        },
+        "stock": 47,
+        "count": 9,
+        "offer": {
+          "id": 3,
+          "offerName": "Ekmek 2+2 Kampanyası",
+          "productID": 14000041,
+          "categoryID": null,
+          "type": "amount",
+          "discount": "4:2",
+          "activated": true,
+          "offerApplied": 2
+        }
+      }
+    ],
+    "payment": {
+      "cash": "500.00",
+      "card": 0,
+      "change": 297.5,
+      "total": 202.5,
+      "subTotal": 292.5,
+      "payback": 90,
+      "discount": 0
+    }
+  },
+  {
+    "id": 16,
+    "date": "12.06.2024 23:42:05",
+    "products": [
+      {
+        "id": "28000452",
+        "attributes": {
+          "returnDay": 15,
+          "rank": 27,
+          "brand": "NİMET",
+          "HEMEN_maxQty": 8,
+          "categoryRank": 203017,
+          "netWeight": 125,
+          "depolamaKosulu": "Gıda",
+          "name": "Nimet Kepekli Grissini 125 Gr",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-kepekli-grissini-125-gr_p-28000452",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 10,
+          "nitelikAdi": "Regüler",
+          "barcodes": ["8699118036197", "2060000175328"],
+          "grossWeight": 125,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "yerliUretim",
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "LHOBxeHdOB",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/LHOBxeHdOB_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "P9p0lKEZFH",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/P9p0lKEZFH_256x256.png",
+            "isExternal": false
+          }
+        ],
+        "price": {
+          "normal": 2500,
+          "normalStr": "₺25,00",
+          "discounted": 2500,
+          "discountedStr": "₺25,00",
+          "tax": 1,
+          "cashout": 5000
+        },
+        "stock": 11,
+        "count": 2
+      },
+      {
+        "id": "28000231",
+        "attributes": {
+          "returnDay": 15,
+          "brand": "NİMET",
+          "HEMEN_maxQty": 8,
+          "categoryRank": 203023,
+          "netWeight": 200,
+          "depolamaKosulu": "Gıda",
+          "name": "Nimet Sade Galeta 200 Gr",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 10,
+          "nitelikAdi": "Regüler",
+          "barcodes": ["8699118008309", "2060000175052"],
+          "grossWeight": 205,
+          "stepper": 1,
+          "hediye": true,
+          "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-sade-galeta-200-gr_p-28000231"
+        },
+        "images": [
+          {
+            "id": "yerliUretim",
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "KvuZ4vqCzj",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/KvuZ4vqCzj_256x256.png",
+            "isExternal": false
+          }
+        ],
+        "price": {
+          "normal": 1650,
+          "normalStr": "₺16,50",
+          "discounted": 1650,
+          "discountedStr": "₺16,50",
+          "tax": 1,
+          "cashout": 4950
+        },
+        "stock": 17,
+        "count": 3
+      },
+      {
+        "id": "28000496",
+        "attributes": {
+          "returnDay": 15,
+          "brand": "NİMET",
+          "HEMEN_maxQty": 8,
+          "categoryRank": 203025,
+          "netWeight": 200,
+          "depolamaKosulu": "Gıda",
+          "name": "Nimet Sade Yaprak Galeta 200 Gr",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/firindan/nimet-sade-yaprak-galeta-200-gr_p-28000496",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 10,
+          "nitelikAdi": "Regüler",
+          "barcodes": ["8699118026136", "2060000176363"],
+          "grossWeight": 200,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "yerliUretim",
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "ubEenHynKD",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/ubEenHynKD_256x256.png",
+            "isExternal": false
+          }
+        ],
+        "price": {
+          "normal": 2500,
+          "normalStr": "₺25,00",
+          "discounted": 2500,
+          "discountedStr": "₺25,00",
+          "tax": 1,
+          "cashout": 5000
+        },
+        "stock": 2,
+        "count": 2
+      }
+    ],
+    "payment": {
+      "cash": 49.5,
+      "card": 100,
+      "change": 0,
+      "total": 149.5,
+      "subTotal": 149.5,
+      "payback": 0,
+      "discount": 0
+    }
+  },
+  {
+    "id": 17,
+    "date": "12.06.2024 23:43:31",
+    "products": [
+      {
+        "id": "21001015",
+        "attributes": {
+          "returnDay": 15,
+          "brand": "ALGİDA",
+          "HEMEN_maxQty": 8,
+          "categoryRank": 902004,
+          "netWeight": 345,
+          "depolamaKosulu": "Donuk(-18)",
+          "name": "Algida Magnum Mini Classic/Badem/Beyaz Dondurma 6x57,5 Ml",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/dondurma/algida-magnum-mini-classicbadembeyaz-dondurma-6x575-ml_p-21001015",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 10,
+          "nitelikAdi": "Regüler",
+          "barcodes": ["8690637911675", "8690637910821"],
+          "grossWeight": 345,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "donukUrun",
+            "isExternal": false,
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/donukUrun_256x256.png"
+          },
+          {
+            "id": "yerliUretim",
+            "isExternal": false,
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+          },
+          {
+            "id": "Q7VogwuHZM",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/Q7VogwuHZM_256x256.png"
+          },
+          {
+            "id": "cbXNm3ux65",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/cbXNm3ux65_256x256.png"
+          },
+          {
+            "id": "yAVIpeOmss",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yAVIpeOmss_256x256.png"
+          }
+        ],
+        "price": {
+          "normal": 15990,
+          "normalStr": "₺159,90",
+          "discounted": 15990,
+          "discountedStr": "₺159,90",
+          "tax": 8,
+          "cashout": 15990
+        },
+        "stock": 6,
+        "count": 1
+      },
+      {
+        "id": "13002293",
+        "attributes": {
+          "returnDay": 15,
+          "collections": ["tiktok-izlemedenonce"],
+          "rank": 23,
+          "brand": "COCA COLA",
+          "HEMEN_maxQty": 5,
+          "categoryRank": 801004,
+          "netWeight": 2500,
+          "depolamaKosulu": "Gıda",
+          "name": "Coca Cola 2,5 Lt",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/icecek/coca-cola-25-lt_p-13002293",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 5,
+          "nitelikAdi": "Regüler",
+          "barcodes": ["5000112670882", "5000112664553", "5449000264718"],
+          "grossWeight": 2600,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "yerliUretim",
+            "isExternal": false,
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png"
+          },
+          {
+            "id": "z3fmNMkOxW",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/z3fmNMkOxW_256x256.png"
+          }
+        ],
+        "price": {
+          "normal": 5000,
+          "discounted": 5000,
+          "normalStr": "₺50,00",
+          "discountedStr": "₺50,00",
+          "tax": 8,
+          "cashout": 5000
+        },
+        "stock": 46,
+        "count": 1
+      },
+      {
+        "id": "13000541",
+        "attributes": {
+          "returnDay": 15,
+          "collections": ["tiktok-izlemedenonce"],
+          "brand": "Bİ",
+          "HEMEN_maxQty": 8,
+          "categoryRank": 801133,
+          "netWeight": 1500,
+          "depolamaKosulu": "Gıda",
+          "name": "Bi Cola 1,5 Lt",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/icecek/bi-cola-15-lt_p-13000541",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 10,
+          "nitelikAdi": "Regüler",
+          "barcodes": [
+            "8699118999980",
+            "8699118064732",
+            "8699118022688",
+            "8699118002031"
+          ],
+          "grossWeight": 1575,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "yerliUretim",
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "KZQR0N4y4A",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/KZQR0N4y4A_256x256.png",
+            "isExternal": false
+          }
+        ],
+        "price": {
+          "normal": 2850,
+          "normalStr": "₺28,50",
+          "discounted": 2850,
+          "discountedStr": "₺28,50",
+          "tax": 8,
+          "cashout": 2850
+        },
+        "stock": 3,
+        "count": 1
+      }
+    ],
+    "payment": {
+      "cash": "100.00",
+      "card": 205,
+      "change": 66.6,
+      "total": 238.4,
+      "subTotal": 238.4,
+      "payback": 0,
+      "discount": 0
+    }
+  },
+  {
+    "id": 18,
+    "date": "12.06.2024 23:44:46",
+    "products": [
+      {
+        "id": "25001750",
+        "attributes": {
+          "returnDay": 15,
+          "returnConditions": "<!DOCTYPE html>\r\r\n\r\r\n\r\r\n\r\r\n<html>\r\r\n\r\r\n\r\r\n\r\r\n<head>\r\r\n\r\r\n\r\r\n\r\r\n</head>\r\r\n\r\r\n\r\r\n\r\r\n<body>\r\r\n\r\r\n\r\r\n\r\r\n<p><strong>İptal ve İade Koşulları</strong><br />A101 Kapıda web sitesi veya mobil uygulaması &uuml;zerinden satın almış olduğunuz &uuml;r&uuml;nlerimizden; cayma hakkı istisnası kapsamında olmayan &uuml;r&uuml;nlerimizi teslim tarihinden itibaren 15 g&uuml;n i&ccedil;inde cayma hakkınızı kullanarak veya ayıplı olan &uuml;r&uuml;nlerimizi ayıplı olması gerek&ccedil;esiyle iptal veya iade edebilirsiniz. <br /><br />Siparişinizi iptal etmek veya &uuml;r&uuml;nlerinizi iade etmek i&ccedil;in uygulamamız/web sitemizde yer alan &ldquo;Profilim&rdquo; men&uuml;s&uuml;ndeki &ldquo;Siparişlerim&rdquo; sayfasına giderek iade etmek istediğiniz &uuml;r&uuml;n/&uuml;r&uuml;nleri se&ccedil;ip iade talebinizi oluşturabilirsiniz. Ayrıca, 09:00 &ndash; 22:00 saatleri arasında Canlı Destek &uuml;zerinden bize yazabilir, 0850 808 21 01 numarasından M&uuml;şteri Hizmetlerimizi arayabilirsiniz. Mağazalarımızdan iade se&ccedil;eneğimiz bulunmamaktadır. <br /><br /><strong>İptal/İade Koşulları</strong><br />İade edilmek istenen &uuml;r&uuml;nlerin, teslimat adresinize y&ouml;nlendirilecek olan kurye vasıtasıyla tarafımıza g&ouml;nderilmesi gerekmektedir. <br /><br />İade edilmek istenen &uuml;r&uuml;nlerin orijinal kutuları veya ambalajları bozulmamış, yeniden satılabilirlik &ouml;zelliğini yitirmemiş ve hasar almamış olması gerekmektedir. <br /><br />Televizyon, g&ouml;r&uuml;nt&uuml; sistemleri, cep telefonu, tablet, notebook, buzdolabı, bulaşık makinesi gibi elektronik &uuml;r&uuml;nlerin &uuml;r&uuml;n iadeleri, &uuml;r&uuml;nlerin iadeye uygun olduğuna ilişkin yetkili servis raporu alınması halinde yapılabilmektedir. Bu &uuml;r&uuml;nlerin, t&uuml;m aksesuarları ile birlikte tarafımıza iade edilmesi gerekmektedir. <br /><br />Kurulumu yetkili servis tarafından yapılması gereken &uuml;r&uuml;nlerin yetkili servis dışındaki kişiler tarafından kurulması halinde &uuml;r&uuml;n&uuml;n garanti kapsamında değerlendirilmesi ve iade işleminin ger&ccedil;ekleştirilmesi m&uuml;mk&uuml;n olmamaktadır. <br /><br />Kurulum esnasında yetkili servis tarafından &uuml;r&uuml;nde bir ayıp tespit edilmesi halinde hasar tespit tutanağı d&uuml;zenlenmesi gerekmektedir. B&ouml;yle bir tespit tutanağı bulunmaması halinde iade işlemi ger&ccedil;ekleştirilmemektedir. <br /><br />Teslimat esnasında; kurye tarafından teslim edilen koli/paketlerde hasar bulunması, siparişinizde yer alan &uuml;r&uuml;nlerin eksik olması, kutudan &ccedil;ıkan &uuml;r&uuml;nlerde kırık, &ccedil;atlak vb. hasarların bulunması halinde bu durumu kuryeye bildirerek &uuml;r&uuml;nleri teslim almadan tarafımıza geri g&ouml;ndermelisiniz. Aksi halde, &uuml;r&uuml;nlerin ve koli/paketlerin tarafınıza hasarsız ve ayıpsız şekilde teslim edilmiş olduğunu kabul etmiş olursunuz.. <br /><br />Tarafınıza teslim edilen elektronik &uuml;r&uuml;nler, ilgili mevzuatta belirtilen kapsam ve s&uuml;re dahilinde, yetkili servis garantisinde bulunmaktadır. Elektronik &uuml;r&uuml;nlerde yaşanan sorunlar ya da ayıplı mal sebebiyle yapılacak iadeler ancak yetkili servis tarafından iadeye uygun olduğu belgelendikten sonra t&uuml;m aksesuarları ile birlikte ger&ccedil;ekleştirilebilmektedir. Bazı elektronik &uuml;r&uuml;nlerde garanti belgesinin kaşelenmesi i&ccedil;in elektronik &uuml;r&uuml;nlerin kutusu a&ccedil;ılmakta ve orjinal ambalajı a&ccedil;ık şekilde teslim edilmektedir. S&ouml;z konusu elektronik &uuml;r&uuml;nlerde bu nedenle kutunun a&ccedil;ık olması iade sebebi olarak kabul edilmemektedir. <br /><br />Siparişinize ilişkin fatura oluşturulmuş ise s&ouml;z konusu siparişin iptal edilmesi m&uuml;mk&uuml;n değildir. B&ouml;yle bir durumda, bu siparişlere ilişkin olarak iade talebi oluşturmanız veya tarafınıza g&ouml;nderilen siparişi teslim almayarak iade s&uuml;recini başlatmanız gerekmektedir. <br /><br /><strong>Cayma Hakkının Ge&ccedil;erli Olmadığı Durumlar</strong><br />Son olarak mevzuatımız gereğince, aşağıdaki s&ouml;zleşmelere ilişkin olarak cayma hakkının kullanılamadığını belirtmek isteriz. Bu s&ouml;zleşmeleri aşağıda bulabilirsiniz: </p>\r\r\n\r\r\n\r\r\n\r\r\n<ul>\r\r\n\r\r\n\r\r\n\r\r\n<li>&Ccedil;abuk bozulabilen veya son kullanma tarihi ge&ccedil;ebilecek malların teslimine ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n<li>Tesliminden sonra ambalaj, bant, m&uuml;h&uuml;r, paket gibi koruyucu unsurları a&ccedil;ılmış olan mallardan; iadesi sağlık ve hijyen a&ccedil;ısından uygun olmayanların teslimine ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n<li>Malın tesliminden sonra ambalaj, bant, m&uuml;h&uuml;r, paket gibi koruyucu unsurları a&ccedil;ılmış olması halinde maddi ortamda sunulan kitap, dijital i&ccedil;erik ve bilgisayar sarf malzemelerine ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n<li>Abonelik s&ouml;zleşmesi kapsamında sağlananlar dışında, gazete ve dergi gibi s&uuml;reli yayınların teslimine ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n<li>Belirli bir tarihte veya d&ouml;nemde yapılması gereken, konaklama, eşya taşıma, araba kiralama, yiyecek-i&ccedil;ecek tedariki ve eğlence veya dinlenme amacıyla yapılan boş zamanın değerlendirilmesine ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n<li>Elektronik ortamda anında ifa edilen hizmetler veya t&uuml;keticiye anında teslim edilen gayrimaddi mallara ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n<li>Cayma hakkı s&uuml;resi sona ermeden &ouml;nce, t&uuml;keticinin onayı ile ifasına başlanan hizmetlere ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n<li>Fiyatı finansal piyasalardaki dalgalanmalara bağlı olarak değişen ve satıcı veya sağlayıcının kontrol&uuml;nde olmayan mal veya hizmetlere ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n<li>T&uuml;keticinin istekleri veya kişisel ihtiya&ccedil;ları doğrultusunda hazırlanan mallara ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n<li>Tesliminden sonra başka &uuml;r&uuml;nlerle karışan ve doğası gereği ayrıştırılması m&uuml;mk&uuml;n olmayan mallara ilişkin s&ouml;zleşmeler.</li>\r\r\n\r\r\n\r\r\n\r\r\n</ul>\r\r\n\r\r\n\r\r\n\r\r\n<p>İptal ve iade s&uuml;re&ccedil;lerimizde 6502 sayılı Kanun, Mesafeli S&ouml;zleşmeler Y&ouml;netmeliği ve sair mevzuata uygun hareket ettiğimizi, İptal ve İade Koşullarımızda yazmayan konularda ilgili mevzuat h&uuml;k&uuml;mlerini inceleyebileceğinizi belirtmek isteriz.</p>\r\r\n\r\r\n\r\r\n\r\r\n</body>\r\r\n\r\r\n\r\r\n\r\r\n</html>",
+          "brand": "GO MOBILE",
+          "HEMEN_maxQty": 8,
+          "categoryRank": 1811007,
+          "netWeight": 0,
+          "depolamaKosulu": "GıdaDışı",
+          "name": "Go Mobile Kulak İçi Kulaklık",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/elektronik/go-mobile-kulak-ici-kulaklik_p-25001750",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 2,
+          "nitelikAdi": "Regüler",
+          "barcodes": [
+            "8698829037165",
+            "8698829037264",
+            "8699118049401",
+            "8699118049395",
+            "8699118049388",
+            "8699118049371",
+            "8699118049364",
+            "8699118049357",
+            "8699118049340"
+          ],
+          "grossWeight": 32,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "k-2BvsxFI1",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/k-2BvsxFI1_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "gNmsIitStS",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/gNmsIitStS_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "-MUHm5OKjp",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/-MUHm5OKjp_256x256.png",
+            "isExternal": false
+          }
+        ],
+        "price": {
+          "normal": 3990,
+          "normalStr": "₺39,90",
+          "discounted": 3990,
+          "discountedStr": "₺39,90",
+          "tax": 18,
+          "cashout": 3990
+        },
+        "stock": 12,
+        "count": 1
+      },
+      {
+        "id": "25004472",
+        "attributes": {
+          "returnDay": 15,
+          "returnConditions": "<!DOCTYPE html>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<html>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<head>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n</head>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<body>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<p><strong>İptal ve İade Koşulları</strong><br />A101 Kapıda web sitesi veya mobil uygulaması &uuml;zerinden satın almış olduğunuz &uuml;r&uuml;nlerimizden; cayma hakkı istisnası kapsamında olmayan &uuml;r&uuml;nlerimizi teslim tarihinden itibaren 15 g&uuml;n i&ccedil;inde cayma hakkınızı kullanarak veya ayıplı olan &uuml;r&uuml;nlerimizi ayıplı olması gerek&ccedil;esiyle iptal veya iade edebilirsiniz. <br /><br />Siparişinizi iptal etmek veya &uuml;r&uuml;nlerinizi iade etmek i&ccedil;in uygulamamız/web sitemizde yer alan &ldquo;Profilim&rdquo; men&uuml;s&uuml;ndeki &ldquo;Siparişlerim&rdquo; sayfasına giderek iade etmek istediğiniz &uuml;r&uuml;n/&uuml;r&uuml;nleri se&ccedil;ip iade talebinizi oluşturabilirsiniz. Ayrıca, 09:00 &ndash; 22:00 saatleri arasında Canlı Destek &uuml;zerinden bize yazabilir, 0850 808 21 01 numarasından M&uuml;şteri Hizmetlerimizi arayabilirsiniz. Mağazalarımızdan iade se&ccedil;eneğimiz bulunmamaktadır. <br /><br /><strong>İptal/İade Koşulları</strong><br />İade edilmek istenen &uuml;r&uuml;nlerin, teslimat adresinize y&ouml;nlendirilecek olan kurye vasıtasıyla tarafımıza g&ouml;nderilmesi gerekmektedir. <br /><br />İade edilmek istenen &uuml;r&uuml;nlerin orijinal kutuları veya ambalajları bozulmamış, yeniden satılabilirlik &ouml;zelliğini yitirmemiş ve hasar almamış olması gerekmektedir. <br /><br />Televizyon, g&ouml;r&uuml;nt&uuml; sistemleri, cep telefonu, tablet, notebook, buzdolabı, bulaşık makinesi gibi elektronik &uuml;r&uuml;nlerin &uuml;r&uuml;n iadeleri, &uuml;r&uuml;nlerin iadeye uygun olduğuna ilişkin yetkili servis raporu alınması halinde yapılabilmektedir. Bu &uuml;r&uuml;nlerin, t&uuml;m aksesuarları ile birlikte tarafımıza iade edilmesi gerekmektedir. <br /><br />Kurulumu yetkili servis tarafından yapılması gereken &uuml;r&uuml;nlerin yetkili servis dışındaki kişiler tarafından kurulması halinde &uuml;r&uuml;n&uuml;n garanti kapsamında değerlendirilmesi ve iade işleminin ger&ccedil;ekleştirilmesi m&uuml;mk&uuml;n olmamaktadır. <br /><br />Kurulum esnasında yetkili servis tarafından &uuml;r&uuml;nde bir ayıp tespit edilmesi halinde hasar tespit tutanağı d&uuml;zenlenmesi gerekmektedir. B&ouml;yle bir tespit tutanağı bulunmaması halinde iade işlemi ger&ccedil;ekleştirilmemektedir. <br /><br />Teslimat esnasında; kurye tarafından teslim edilen koli/paketlerde hasar bulunması, siparişinizde yer alan &uuml;r&uuml;nlerin eksik olması, kutudan &ccedil;ıkan &uuml;r&uuml;nlerde kırık, &ccedil;atlak vb. hasarların bulunması halinde bu durumu kuryeye bildirerek &uuml;r&uuml;nleri teslim almadan tarafımıza geri g&ouml;ndermelisiniz. Aksi halde, &uuml;r&uuml;nlerin ve koli/paketlerin tarafınıza hasarsız ve ayıpsız şekilde teslim edilmiş olduğunu kabul etmiş olursunuz.. <br /><br />Tarafınıza teslim edilen elektronik &uuml;r&uuml;nler, ilgili mevzuatta belirtilen kapsam ve s&uuml;re dahilinde, yetkili servis garantisinde bulunmaktadır. Elektronik &uuml;r&uuml;nlerde yaşanan sorunlar ya da ayıplı mal sebebiyle yapılacak iadeler ancak yetkili servis tarafından iadeye uygun olduğu belgelendikten sonra t&uuml;m aksesuarları ile birlikte ger&ccedil;ekleştirilebilmektedir. Bazı elektronik &uuml;r&uuml;nlerde garanti belgesinin kaşelenmesi i&ccedil;in elektronik &uuml;r&uuml;nlerin kutusu a&ccedil;ılmakta ve orjinal ambalajı a&ccedil;ık şekilde teslim edilmektedir. S&ouml;z konusu elektronik &uuml;r&uuml;nlerde bu nedenle kutunun a&ccedil;ık olması iade sebebi olarak kabul edilmemektedir. <br /><br />Siparişinize ilişkin fatura oluşturulmuş ise s&ouml;z konusu siparişin iptal edilmesi m&uuml;mk&uuml;n değildir. B&ouml;yle bir durumda, bu siparişlere ilişkin olarak iade talebi oluşturmanız veya tarafınıza g&ouml;nderilen siparişi teslim almayarak iade s&uuml;recini başlatmanız gerekmektedir. <br /><br /><strong>Cayma Hakkının Ge&ccedil;erli Olmadığı Durumlar</strong><br />Son olarak mevzuatımız gereğince, aşağıdaki s&ouml;zleşmelere ilişkin olarak cayma hakkının kullanılamadığını belirtmek isteriz. Bu s&ouml;zleşmeleri aşağıda bulabilirsiniz: </p>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<ul>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>&Ccedil;abuk bozulabilen veya son kullanma tarihi ge&ccedil;ebilecek malların teslimine ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>Tesliminden sonra ambalaj, bant, m&uuml;h&uuml;r, paket gibi koruyucu unsurları a&ccedil;ılmış olan mallardan; iadesi sağlık ve hijyen a&ccedil;ısından uygun olmayanların teslimine ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>Malın tesliminden sonra ambalaj, bant, m&uuml;h&uuml;r, paket gibi koruyucu unsurları a&ccedil;ılmış olması halinde maddi ortamda sunulan kitap, dijital i&ccedil;erik ve bilgisayar sarf malzemelerine ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>Abonelik s&ouml;zleşmesi kapsamında sağlananlar dışında, gazete ve dergi gibi s&uuml;reli yayınların teslimine ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>Belirli bir tarihte veya d&ouml;nemde yapılması gereken, konaklama, eşya taşıma, araba kiralama, yiyecek-i&ccedil;ecek tedariki ve eğlence veya dinlenme amacıyla yapılan boş zamanın değerlendirilmesine ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>Elektronik ortamda anında ifa edilen hizmetler veya t&uuml;keticiye anında teslim edilen gayrimaddi mallara ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>Cayma hakkı s&uuml;resi sona ermeden &ouml;nce, t&uuml;keticinin onayı ile ifasına başlanan hizmetlere ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>Fiyatı finansal piyasalardaki dalgalanmalara bağlı olarak değişen ve satıcı veya sağlayıcının kontrol&uuml;nde olmayan mal veya hizmetlere ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>T&uuml;keticinin istekleri veya kişisel ihtiya&ccedil;ları doğrultusunda hazırlanan mallara ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>Tesliminden sonra başka &uuml;r&uuml;nlerle karışan ve doğası gereği ayrıştırılması m&uuml;mk&uuml;n olmayan mallara ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n</ul>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<p>İptal ve iade s&uuml;re&ccedil;lerimizde 6502 sayılı Kanun, Mesafeli S&ouml;zleşmeler Y&ouml;netmeliği ve sair mevzuata uygun hareket ettiğimizi, İptal ve İade Koşullarımızda yazmayan konularda ilgili mevzuat h&uuml;k&uuml;mlerini inceleyebileceğinizi belirtmek isteriz.</p>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n</body>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n</html>",
+          "rank": 38,
+          "brand": "",
+          "HEMEN_maxQty": 8,
+          "categoryRank": 1804001,
+          "netWeight": 0,
+          "depolamaKosulu": "Spot",
+          "name": "Tesla AAA Alkalin İnce Kalem Pil ",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 10,
+          "nitelikAdi": "Spot",
+          "barcodes": ["8594183396675"],
+          "grossWeight": 100,
+          "stepper": 1,
+          "hediye": true,
+          "seoUrl": "https://www.a101.com.tr/kapida/elektronik/tesla-aaa-alkalin-ince-kalem-pil-_p-25004472"
+        },
+        "images": [
+          {
+            "id": "QF7yJl2dNE",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/QF7yJl2dNE_256x256.png",
+            "isExternal": false
+          }
+        ],
+        "price": {
+          "normal": 4990,
+          "discounted": 4990,
+          "normalStr": "₺49,90",
+          "discountedStr": "₺49,90",
+          "tax": 18,
+          "cashout": 4990
+        },
+        "stock": 12,
+        "count": 1
+      },
+      {
+        "id": "25003285",
+        "attributes": {
+          "returnDay": 15,
+          "returnConditions": "<!DOCTYPE html>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<html>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<head>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n</head>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<body>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<p><strong>İptal ve İade Koşulları</strong><br />A101 Kapıda web sitesi veya mobil uygulaması &uuml;zerinden satın almış olduğunuz &uuml;r&uuml;nlerimizden; cayma hakkı istisnası kapsamında olmayan &uuml;r&uuml;nlerimizi teslim tarihinden itibaren 15 g&uuml;n i&ccedil;inde cayma hakkınızı kullanarak veya ayıplı olan &uuml;r&uuml;nlerimizi ayıplı olması gerek&ccedil;esiyle iptal veya iade edebilirsiniz. <br /><br />Siparişinizi iptal etmek veya &uuml;r&uuml;nlerinizi iade etmek i&ccedil;in uygulamamız/web sitemizde yer alan &ldquo;Profilim&rdquo; men&uuml;s&uuml;ndeki &ldquo;Siparişlerim&rdquo; sayfasına giderek iade etmek istediğiniz &uuml;r&uuml;n/&uuml;r&uuml;nleri se&ccedil;ip iade talebinizi oluşturabilirsiniz. Ayrıca, 09:00 &ndash; 22:00 saatleri arasında Canlı Destek &uuml;zerinden bize yazabilir, 0850 808 21 01 numarasından M&uuml;şteri Hizmetlerimizi arayabilirsiniz. Mağazalarımızdan iade se&ccedil;eneğimiz bulunmamaktadır. <br /><br /><strong>İptal/İade Koşulları</strong><br />İade edilmek istenen &uuml;r&uuml;nlerin, teslimat adresinize y&ouml;nlendirilecek olan kurye vasıtasıyla tarafımıza g&ouml;nderilmesi gerekmektedir. <br /><br />İade edilmek istenen &uuml;r&uuml;nlerin orijinal kutuları veya ambalajları bozulmamış, yeniden satılabilirlik &ouml;zelliğini yitirmemiş ve hasar almamış olması gerekmektedir. <br /><br />Televizyon, g&ouml;r&uuml;nt&uuml; sistemleri, cep telefonu, tablet, notebook, buzdolabı, bulaşık makinesi gibi elektronik &uuml;r&uuml;nlerin &uuml;r&uuml;n iadeleri, &uuml;r&uuml;nlerin iadeye uygun olduğuna ilişkin yetkili servis raporu alınması halinde yapılabilmektedir. Bu &uuml;r&uuml;nlerin, t&uuml;m aksesuarları ile birlikte tarafımıza iade edilmesi gerekmektedir. <br /><br />Kurulumu yetkili servis tarafından yapılması gereken &uuml;r&uuml;nlerin yetkili servis dışındaki kişiler tarafından kurulması halinde &uuml;r&uuml;n&uuml;n garanti kapsamında değerlendirilmesi ve iade işleminin ger&ccedil;ekleştirilmesi m&uuml;mk&uuml;n olmamaktadır. <br /><br />Kurulum esnasında yetkili servis tarafından &uuml;r&uuml;nde bir ayıp tespit edilmesi halinde hasar tespit tutanağı d&uuml;zenlenmesi gerekmektedir. B&ouml;yle bir tespit tutanağı bulunmaması halinde iade işlemi ger&ccedil;ekleştirilmemektedir. <br /><br />Teslimat esnasında; kurye tarafından teslim edilen koli/paketlerde hasar bulunması, siparişinizde yer alan &uuml;r&uuml;nlerin eksik olması, kutudan &ccedil;ıkan &uuml;r&uuml;nlerde kırık, &ccedil;atlak vb. hasarların bulunması halinde bu durumu kuryeye bildirerek &uuml;r&uuml;nleri teslim almadan tarafımıza geri g&ouml;ndermelisiniz. Aksi halde, &uuml;r&uuml;nlerin ve koli/paketlerin tarafınıza hasarsız ve ayıpsız şekilde teslim edilmiş olduğunu kabul etmiş olursunuz.. <br /><br />Tarafınıza teslim edilen elektronik &uuml;r&uuml;nler, ilgili mevzuatta belirtilen kapsam ve s&uuml;re dahilinde, yetkili servis garantisinde bulunmaktadır. Elektronik &uuml;r&uuml;nlerde yaşanan sorunlar ya da ayıplı mal sebebiyle yapılacak iadeler ancak yetkili servis tarafından iadeye uygun olduğu belgelendikten sonra t&uuml;m aksesuarları ile birlikte ger&ccedil;ekleştirilebilmektedir. Bazı elektronik &uuml;r&uuml;nlerde garanti belgesinin kaşelenmesi i&ccedil;in elektronik &uuml;r&uuml;nlerin kutusu a&ccedil;ılmakta ve orjinal ambalajı a&ccedil;ık şekilde teslim edilmektedir. S&ouml;z konusu elektronik &uuml;r&uuml;nlerde bu nedenle kutunun a&ccedil;ık olması iade sebebi olarak kabul edilmemektedir. <br /><br />Siparişinize ilişkin fatura oluşturulmuş ise s&ouml;z konusu siparişin iptal edilmesi m&uuml;mk&uuml;n değildir. B&ouml;yle bir durumda, bu siparişlere ilişkin olarak iade talebi oluşturmanız veya tarafınıza g&ouml;nderilen siparişi teslim almayarak iade s&uuml;recini başlatmanız gerekmektedir. <br /><br /><strong>Cayma Hakkının Ge&ccedil;erli Olmadığı Durumlar</strong><br />Son olarak mevzuatımız gereğince, aşağıdaki s&ouml;zleşmelere ilişkin olarak cayma hakkının kullanılamadığını belirtmek isteriz. Bu s&ouml;zleşmeleri aşağıda bulabilirsiniz: </p>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<ul>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>&Ccedil;abuk bozulabilen veya son kullanma tarihi ge&ccedil;ebilecek malların teslimine ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>Tesliminden sonra ambalaj, bant, m&uuml;h&uuml;r, paket gibi koruyucu unsurları a&ccedil;ılmış olan mallardan; iadesi sağlık ve hijyen a&ccedil;ısından uygun olmayanların teslimine ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>Malın tesliminden sonra ambalaj, bant, m&uuml;h&uuml;r, paket gibi koruyucu unsurları a&ccedil;ılmış olması halinde maddi ortamda sunulan kitap, dijital i&ccedil;erik ve bilgisayar sarf malzemelerine ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>Abonelik s&ouml;zleşmesi kapsamında sağlananlar dışında, gazete ve dergi gibi s&uuml;reli yayınların teslimine ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>Belirli bir tarihte veya d&ouml;nemde yapılması gereken, konaklama, eşya taşıma, araba kiralama, yiyecek-i&ccedil;ecek tedariki ve eğlence veya dinlenme amacıyla yapılan boş zamanın değerlendirilmesine ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>Elektronik ortamda anında ifa edilen hizmetler veya t&uuml;keticiye anında teslim edilen gayrimaddi mallara ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>Cayma hakkı s&uuml;resi sona ermeden &ouml;nce, t&uuml;keticinin onayı ile ifasına başlanan hizmetlere ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>Fiyatı finansal piyasalardaki dalgalanmalara bağlı olarak değişen ve satıcı veya sağlayıcının kontrol&uuml;nde olmayan mal veya hizmetlere ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>T&uuml;keticinin istekleri veya kişisel ihtiya&ccedil;ları doğrultusunda hazırlanan mallara ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<li>Tesliminden sonra başka &uuml;r&uuml;nlerle karışan ve doğası gereği ayrıştırılması m&uuml;mk&uuml;n olmayan mallara ilişkin s&ouml;zleşmeler.</li>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n</ul>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n<p>İptal ve iade s&uuml;re&ccedil;lerimizde 6502 sayılı Kanun, Mesafeli S&ouml;zleşmeler Y&ouml;netmeliği ve sair mevzuata uygun hareket ettiğimizi, İptal ve İade Koşullarımızda yazmayan konularda ilgili mevzuat h&uuml;k&uuml;mlerini inceleyebileceğinizi belirtmek isteriz.</p>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n</body>\r\r\r\n\r\r\r\n\r\r\r\n\r\r\r\n</html>",
+          "rank": 25,
+          "brand": null,
+          "HEMEN_maxQty": 8,
+          "categoryRank": 1804003,
+          "netWeight": 200,
+          "depolamaKosulu": "GıdaDışı",
+          "name": "Varta Alkalin Kalem Pil 8'li",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/elektronik/varta-alkalin-kalem-pil-8li_p-25003285",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 10,
+          "nitelikAdi": "GrupSpot",
+          "barcodes": ["4008496626496"],
+          "grossWeight": 100,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "jXihXvjf5h",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/jXihXvjf5h_256x256.png"
+          }
+        ],
+        "price": {
+          "normal": 5990,
+          "normalStr": "₺59,90",
+          "discounted": 5990,
+          "discountedStr": "₺59,90",
+          "tax": 18,
+          "cashout": 5990
+        },
+        "stock": 6,
+        "count": 1
+      }
+    ],
+    "payment": {
+      "cash": 149.7,
+      "card": 0,
+      "change": 0,
+      "total": 149.7,
+      "subTotal": 149.7,
+      "payback": 0,
+      "discount": 0
+    }
+  },
+  {
+    "id": 19,
+    "date": "12.06.2024 23:46:09",
+    "products": [
+      {
+        "id": "22002259",
+        "attributes": {
+          "returnDay": 15,
+          "collections": ["pg-urunleri"],
+          "rank": 2,
+          "brand": "FAIRY",
+          "HEMEN_maxQty": 5,
+          "categoryRank": 1102002,
+          "netWeight": 970.2,
+          "depolamaKosulu": "GıdaDışı",
+          "name": "Fairy Hepsi 1 Arada Bulaşık Makinesi Kapsülü 60'lı",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/temizlik-urunleri/fairy-hepsi-1-arada-bulasik-makinesi-kapsulu-60li_p-22002259",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 5,
+          "nitelikAdi": "KasaAktivitesi",
+          "barcodes": ["8001090587206"],
+          "grossWeight": 993.04,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "pbIUQyZcnX",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/pbIUQyZcnX_256x256.png"
+          }
+        ],
+        "price": {
+          "normal": 44500,
+          "discounted": 44500,
+          "normalStr": "₺445,00",
+          "discountedStr": "₺445,00",
+          "tax": 8,
+          "cashout": 44500
+        },
+        "stock": 181,
+        "count": 1
+      },
+      {
+        "id": "22002240",
+        "attributes": {
+          "returnDay": 15,
+          "collections": ["", "pg-urunleri"],
+          "rank": 7,
+          "brand": "FAIRY",
+          "HEMEN_maxQty": 5,
+          "categoryRank": 1102004,
+          "netWeight": 2827.2,
+          "depolamaKosulu": "GıdaDışı",
+          "name": "Fairy Platinum Plus Bulaşık Makinesi Kapsülü 40'lı",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/temizlik-urunleri/fairy-platinum-plus-bulasik-makinesi-kapsulu-40li_p-22002240",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 5,
+          "nitelikAdi": "GrupSpot",
+          "barcodes": ["8001090983381"],
+          "grossWeight": 3160.42,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "cBCEzdg7cf",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/cBCEzdg7cf_256x256.png"
+          }
+        ],
+        "price": {
+          "normal": 19900,
+          "discounted": 19900,
+          "normalStr": "₺199,00",
+          "discountedStr": "₺199,00",
+          "tax": 8,
+          "cashout": 19900
+        },
+        "stock": 73,
+        "count": 1
+      },
+      {
+        "id": "22002508",
+        "attributes": {
+          "returnDay": 15,
+          "brand": "FAIRY",
+          "HEMEN_maxQty": 3,
+          "categoryRank": 1102010,
+          "netWeight": 895.5,
+          "depolamaKosulu": "GıdaDışı",
+          "name": "Fairy Platinum Plus Bulaşık Makinesi Kapsülü 50'li",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/temizlik-urunleri/fairy-platinum-plus-bulasik-makinesi-kapsulu-50li_p-22002508",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 3,
+          "nitelikAdi": "Regüler",
+          "barcodes": ["8001841911410"],
+          "grossWeight": 912.41,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "qCqExlaCQT",
+            "isExternal": false,
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/qCqExlaCQT_256x256.png"
+          }
+        ],
+        "price": {
+          "normal": 49875,
+          "discounted": 49875,
+          "normalStr": "₺498,75",
+          "discountedStr": "₺498,75",
+          "tax": 8,
+          "cashout": 49875
+        },
+        "stock": 4,
+        "count": 1
+      },
+      {
+        "id": "22002298",
+        "attributes": {
+          "returnDay": 15,
+          "brand": "ÇİÇEĞİM",
+          "HEMEN_maxQty": 5,
+          "categoryRank": 1102033,
+          "netWeight": 772,
+          "depolamaKosulu": "GıdaDışı",
+          "name": "Çiçeğim Limon Bulaşık Deterjanı 750 Ml",
+          "SLOT_minQty": 1,
+          "salesUnitOfMeasure": "ADT",
+          "HEMEN_minQty": 1,
+          "seoUrl": "https://www.a101.com.tr/kapida/temizlik-urunleri/cicegim-limon-bulasik-deterjani-750-ml_p-22002298",
+          "baseUnitOfMeasure": "ADT",
+          "SLOT_maxQty": 5,
+          "nitelikAdi": "Regüler",
+          "barcodes": ["8699118064794"],
+          "grossWeight": 836,
+          "stepper": 1,
+          "hediye": true
+        },
+        "images": [
+          {
+            "id": "yerliUretim",
+            "imageType": "badge",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/yerliUretim_256x256.png",
+            "isExternal": false
+          },
+          {
+            "id": "vxPG5wohOJ",
+            "imageType": "product",
+            "tags": [],
+            "url": "https://api.a101kapida.com/dbmk89vnr/CALL/Image/get/vxPG5wohOJ_256x256.png",
+            "isExternal": false
+          }
+        ],
+        "price": {
+          "normal": 3075,
+          "discounted": 3075,
+          "normalStr": "₺30,75",
+          "discountedStr": "₺30,75",
+          "tax": 8,
+          "cashout": 6150
+        },
+        "stock": 25,
+        "count": 2
+      }
+    ],
+    "payment": {
+      "cash": 0,
+      "card": 1204.25,
+      "change": 0,
+      "total": 1204.25,
+      "subTotal": 1204.25,
+      "payback": 0,
+      "discount": 0
+    }
   }
 ]

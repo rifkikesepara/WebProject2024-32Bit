@@ -2,7 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./Styles/index.css";
 import reportWebVitals from "./reportWebVitals";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  HashRouter,
+  Route,
+  RouterProvider,
+  Routes,
+  createBrowserRouter,
+} from "react-router-dom";
 import Login from "./Pages/Login/Login";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Theme from "./Context/Theme";
@@ -86,7 +92,24 @@ root.render(
         <AlertProvider>
           <AlertPopUp />
           <TimerProvider>
-            <RouterProvider router={router} />
+            <HashRouter>
+              <Routes>
+                <Route path="/" element={<Login />} />
+                <Route path="/home" element={<Dashboard />} />
+                <Route path="/sale" element={<Sale />} />
+                <Route path="/sale/payment" element={<Payment />} />
+                <Route
+                  path="/sale/payment/result"
+                  element={<PaymentResult />}
+                />
+                <Route path="/reports" element={<Reports />} />
+                <Route path="/return" element={<ItemReturn />} />
+                <Route
+                  path="/settings"
+                  element={<SettingsDialog open={true} />}
+                />
+              </Routes>
+            </HashRouter>
           </TimerProvider>
         </AlertProvider>
       </ProductProvider>
