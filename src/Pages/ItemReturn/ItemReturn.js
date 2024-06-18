@@ -27,6 +27,7 @@ import { Receipt, ReturnReceipt } from "../../Components/Receipt";
 import { Print } from "@mui/icons-material";
 import { useReactToPrint } from "react-to-print";
 import { useTranslation } from "react-i18next";
+import { getReceiptFromID } from "../../Utils/receipts";
 
 //shows the receipts data and provides button to select the receipt or show the receipt
 const ReceiptBox = ({ data, onSelect = (receipt) => {} }) => {
@@ -142,11 +143,6 @@ const ReceiptsDialog = ({
   );
 };
 
-//the function that returns the receipt by indicated receipt id
-const findTheReceiptByID = (receiptID) => {
-  return GetFromLocalStorage("receipts").find(({ id }) => id == receiptID);
-};
-
 export default function ItemReturn() {
   const { setAlert } = useAlert();
   const navigate = useNavigate();
@@ -209,11 +205,6 @@ export default function ItemReturn() {
       SaveToLocalStorage("returnReceipts", returnReceipts);
     }, 1000);
   };
-
-  // useData("./fakeReceipts.json", (data) => {
-  //   if (!GetFromLocalStorage("receipts").length)
-  //     SaveToLocalStorage("receipts", data);
-  // });
 
   return (
     <Stack
@@ -306,14 +297,14 @@ export default function ItemReturn() {
               />
               <Button
                 disabled={
-                  !receiptInput.length || !findTheReceiptByID(receiptInput)
+                  !receiptInput.length || !getReceiptFromID(receiptInput)
                 }
                 color="secondary"
                 sx={{ paddingBlock: 3 }}
                 variant="contained"
                 onClick={() =>
                   setReturnItemDialog({
-                    receipt: findTheReceiptByID(receiptInput),
+                    receipt: getReceiptFromID(receiptInput),
                     show: true,
                   })
                 }

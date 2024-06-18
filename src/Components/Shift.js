@@ -38,6 +38,7 @@ export default function ShiftButton({ disabled }) {
         shiftTemp.started = false;
         shiftTemp.endTime = new Date().toLocaleString();
         shiftTemp.duration = timer;
+        shiftTemp.employeeID = GetFromSessionStorage("employee").employeeID;
         SaveToLocalStorage("shifts", [
           ...GetFromLocalStorage("shifts"),
           { ...shiftTemp },

@@ -127,6 +127,7 @@ const menuItems = [
         }}
       />
     ),
+    path: "../collections",
   },
   {
     name: "otherOptions",
@@ -434,7 +435,7 @@ export default function Dashboard() {
               <Typography sx={{ fontWeight: "bold", fontSize: 20 }}>
                 {t("lastSales")}
               </Typography>
-              <LastSalesTable data={chartData} />
+              <LastSalesTable data={chartData} slice={chartData.length} />
             </Paper>
           </Grid>
         )}

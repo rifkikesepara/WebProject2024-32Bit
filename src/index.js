@@ -1,25 +1,30 @@
-import React from "react";
+import React, { lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./Styles/index.css";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Login from "./Pages/Login/Login";
-import Dashboard from "./Pages/Dashboard/Dashboard";
 import Theme from "./Context/Theme";
 import AlertProvider, { AlertPopUp } from "./Context/AlertProvider";
-import Sale from "./Pages/Sale/Sale";
 import Test from "./Pages/Test";
 import { SnackbarProvider } from "notistack";
 import { ProductSnackbar } from "./Components/ProductSnackbar";
-import Payment from "./Pages/Sale/Payment";
-import PaymentResult from "./Pages/Sale/PaymentResult";
 import ProductProvider from "./Context/ProductProvider";
-import "./config";
-import SettingsDialog from "./Components/SettingsDialog";
-import ItemReturn from "./Pages/ItemReturn/ItemReturn";
 import TimerProvider from "./Context/TimerProvider";
-import Reports from "./Pages/Reports/Reports";
-import Error from "./Pages/Error";
+import "./config";
+import { CircularProgress, Stack } from "@mui/material";
+import VirtualKeyboard from "./Components/VirtualKeyboard";
+
+//Code Splitting
+const Login = lazy(() => import("./Pages/Login/Login"));
+const Dashboard = lazy(() => import("./Pages/Dashboard/Dashboard"));
+const Sale = lazy(() => import("./Pages/Sale/Sale"));
+const Payment = lazy(() => import("./Pages/Sale/Payment"));
+const PaymentResult = lazy(() => import("./Pages/Sale/PaymentResult"));
+const ItemReturn = lazy(() => import("./Pages/ItemReturn/ItemReturn"));
+const Reports = lazy(() => import("./Pages/Reports/Reports"));
+const SettingsDialog = lazy(() => import("./Components/SettingsDialog"));
+const Collections = lazy(() => import("./Pages/Collections/Collections"));
+const Error = lazy(() => import("./Pages/Error"));
 
 //page paths
 const router = createBrowserRouter([
@@ -61,6 +66,10 @@ const router = createBrowserRouter([
     element: <Reports />,
   },
   {
+    path: "/collections",
+    element: <Collections />,
+  },
+  {
     path: "/test",
     element: <Test />,
   },
@@ -86,7 +95,21 @@ root.render(
         <AlertProvider>
           <AlertPopUp />
           <TimerProvider>
-            <RouterProvider router={router} />
+            <React.Suspense
+              fallback={
+                <Stack
+                  alignItems={"center"}
+                  justifyContent={"center"}
+                  width={"100%"}
+                  height={"100vh"}
+                  sx={{ backgroundColor: "background.default" }}
+                >
+                  <CircularProgress />
+                </Stack>
+              }
+            >
+              <RouterProvider router={router} />
+            </React.Suspense>
           </TimerProvider>
         </AlertProvider>
       </ProductProvider>

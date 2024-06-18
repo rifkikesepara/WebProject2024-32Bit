@@ -189,7 +189,7 @@ export default function Reports() {
               spacing={2}
               paddingBlock={2}
             >
-              {shifts.map((shift, index) => {
+              {shifts.reverse().map((shift, index) => {
                 return <ShiftBox key={index} data={shift} />;
               })}
             </Stack>
@@ -236,9 +236,11 @@ export default function Reports() {
               spacing={2}
               paddingBlock={2}
             >
-              {getCollapsedReceiptsByDate().map((receipt, index) => {
-                return <ZReportBox key={index} data={receipt} />;
-              })}
+              {getCollapsedReceiptsByDate()
+                .reverse()
+                .map((receipt, index) => {
+                  return <ZReportBox key={index} data={receipt} />;
+                })}
             </Stack>
           </Paper>
         </Box>

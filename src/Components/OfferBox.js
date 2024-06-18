@@ -156,7 +156,7 @@ export default function OfferBox() {
           <Typography
             sx={{
               width: "100%",
-              fontSize: { xs: 13, md: "1vw", sm: "1.7vw" },
+              fontSize: { xs: 13, md: "1.35vw", sm: "1.7vw" },
             }}
           >
             {activeOffers[i.current]?.offerName}

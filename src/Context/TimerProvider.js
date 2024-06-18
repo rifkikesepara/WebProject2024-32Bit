@@ -15,7 +15,7 @@ export const TimerContext = createContext({
 });
 
 export default function TimerProvider({ children }) {
-  const [timers, setTimers] = useState([]);
+  const [timers, setTimers] = useState(GetFromSessionStorage("timers"));
 
   //adding a new timer that has been indicated by a name
   const addTimer = (name) => {
