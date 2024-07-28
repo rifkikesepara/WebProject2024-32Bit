@@ -135,7 +135,9 @@ For a conculasion, I have learned so many new things about React from this proje
 ![Screenshot](https://github.com/rifkikesepara/WebProject2024-32Bit/assets/74590423/be3be7c5-7b9c-47c2-8b66-f14f1c7eef8a)
 ![Screenshot](https://github.com/rifkikesepara/WebProject2024-32Bit/assets/74590423/a3027387-9343-4803-b8ca-92d0e0d7cebf)
 ![Screenshot](https://github.com/rifkikesepara/WebProject2024-32Bit/assets/74590423/eb1e58e7-d88d-40ee-ac48-1716174c7937)
+![Screenshot](https://github.com/user-attachments/assets/dc33c3e7-778b-4409-b773-cc90700f3512)
 ![Screenshot](https://github.com/rifkikesepara/WebProject2024-32Bit/assets/74590423/126167c1-a66a-4cca-af32-e324c25f2402)
+
 
 ---
 
