@@ -27,7 +27,7 @@ const Section = ({ title = "", data = [] }) => {
   );
 };
 
-export const ZReport = forwardRef(({ data }, ref) => {
+export const ReportPaper = forwardRef(({ data, type = "zreport" }, ref) => {
   //calculates the required values for the zReport whenever a data of receipt is changed
   const calculated = useMemo(() => {
     let income = 0,
@@ -61,10 +61,30 @@ export const ZReport = forwardRef(({ data }, ref) => {
 
   return (
     <Stack ref={ref} alignItems={"center"} sx={{ width: 450, p: 1 }}>
-      <Typography fontSize={30}>Z-Raporu</Typography>
-      <Typography fontWeight={"bold"}>
-        Tarih: {data.date.split(" ")[0]}
+      <Typography fontSize={30}>
+        {type == "zreport" ? "Z-Raporu" : "X-Raporu"}
       </Typography>
+      {type == "zreport" ? (
+        <Typography fontWeight={"bold"}>
+          Tarih: {data.date.split(" ")[0]}
+        </Typography>
+      ) : (
+        <Typography fontWeight={"bold"}>
+          KasiyerNO: {data.employeeID}
+        </Typography>
+      )}
+      {type == "xreport" && (
+        <Stack direction={"column"} width={"70%"}>
+          <Stack direction={"row"} justifyContent={"space-between"}>
+            <Typography>Mesai Başlangıç:</Typography>
+            {data.startTime}
+          </Stack>
+          <Stack direction={"row"} justifyContent={"space-between"}>
+            <Typography>Mesai Bitiş:</Typography>
+            {data.endTime}
+          </Stack>
+        </Stack>
+      )}
       <Stack
         direction={"row"}
         justifyContent={"space-evenly"}
@@ -224,4 +244,4 @@ export const ZReport = forwardRef(({ data }, ref) => {
   );
 });
 
-export default ZReport;
+export default ReportPaper;

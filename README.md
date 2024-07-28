@@ -38,20 +38,21 @@ This project allows a store to manage and hold their sales and see the sales rep
 - [x] Returning the selected products.
 - [x] Showing the receipts about the sale and returning products.
 - [x] Toggling theme between dark and light.
-- [X] Changing the language of the application. (Turkish, English)
+- [x] Changing the language of the application. (Turkish, English)
 - [x] Showing the end of the day report (Z-Report)
-- [ ] Showing the report about the shifts.
+- [x] Showing the report about the shifts. (X-Report)
 
 ---
 
 ## How it works
 
-This project uses mock API as the backend. If you want to change any data of a product or anything else you should check the JSON file in the directory of  `{PROJECT_DIR}/public/`
+This project uses mock API as the backend. If you want to change any data of a product or anything else you should check the JSON file in the directory of `{PROJECT_DIR}/public/`
 
 ### Pre-requisites
 
 Before you begin, you will need to have the following tools installed on your machine:
-- [Git](https://git-scm.com) 
+
+- [Git](https://git-scm.com)
 - [Node.js](https://nodejs.org/en/)
 
 #### Running the web application
@@ -95,11 +96,13 @@ The following tools were used in the construction of the project:
 > See the file [package.json](https://github.com/evelinsteiger/README-template/blob/master/package.json)
 
 #### [](#)**Documentation**
+
 To see the documentation about components, custom hooks, and utils you can check [here](docs/DOCUMENTATION.md)
 
 ---
 
 ## Summary
+
 I have been working on this project for a couple of months now. This is my second journey with 32-Bit recruitment event. One of my main goals when I started this project was to make the design as minimalist and elegant as possible. One of the other ones was to make the functionality as simple as possible so that almost everyone could use the application without going through some learning process before starting to use it.
 
 One of the biggest difficulties that I faced during the project was about the layout of the sales page. I did not want it to look too crowded with buttons or the other things. I wanted it to be as simple as it can be. During my period of making the project I almost changed the layout of it 6 times. They weren't simple and functional enough for me. I did lots of research about it. I visited different supermarkets and I think I got the closest one that is similiar to my imagination.
@@ -108,9 +111,7 @@ The other difficulty that I bared was connecting all of the product and sales da
 
 For a conculasion, I have learned so many new things about React from this project. Unlike the <a href="https://github.com/rifkikesepara/toyota32bitproject" target="_blank">project of the last year</a>, I paid attention to the optimization as well. I checked every component if it is being rendered unnecessarily or not. I have used the hooks that I hadn't used last year. As for the components, I have tried to make them as abstract as possible. So I can tell that it was a quite fun and teaching experince for me.
 
-
-
-<!-- ## Author 
+<!-- ## Author
 
 <a href="https://www.linkedin.com/in/evelinsteiger/">
  <img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4E03AQFY3bB4gWUEVw/profile-displayphoto-shrink_200_200/0/1638286563108?e=1651708800&v=beta&t=WQhkU4GF5vPmHiAb788WkvXJaXnyKhYz5oarqqcfGBA" width="70px;" alt="Evelin Steiger"/>
@@ -133,8 +134,8 @@ For a conculasion, I have learned so many new things about React from this proje
 ![Screenshot](https://github.com/rifkikesepara/WebProject2024-32Bit/assets/74590423/eb1e58e7-d88d-40ee-ac48-1716174c7937)
 ![Screenshot](https://github.com/rifkikesepara/WebProject2024-32Bit/assets/74590423/126167c1-a66a-4cca-af32-e324c25f2402)
 
-
 ---
+
 ## Learn More
 
 This project was created and bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

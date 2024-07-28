@@ -7,9 +7,12 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import ZReport from "../../Components/ZReport";
+import ReportPaper from "../../Components/ReportPaper";
 import { useRef, useState } from "react";
-import { getCollapsedReceiptsByDate } from "../../Utils/receipts";
+import {
+  getCollapsedReceiptsByDate,
+  getReceiptsBetweenDates,
+} from "../../Utils/receipts";
 import { GetFromLocalStorage } from "../../Utils/utilities";
 import TextFieldVK from "../../Components/TextFieldVK";
 import DialogWithButtons from "../../Components/DialogWithButtons";
@@ -20,9 +23,8 @@ import { useTranslation } from "react-i18next";
 import ScrollButtons from "../../Components/ScrollButtons";
 
 //Shift item that shows data about the shift and a button to open detailed information about the shift
-const ShiftBox = ({ data, onSelect = (shift) => {} }) => {
+const XReportBox = ({ data, onSelect = (shift) => {} }) => {
   const { t } = useTranslation();
-  const [showReceipt, setShowReceipt] = useState(false);
 
   return (
     <Paper
@@ -46,21 +48,20 @@ const ShiftBox = ({ data, onSelect = (shift) => {} }) => {
         <Button
           color="secondary"
           variant="contained"
-          onClick={() => onSelect(data)}
+          onClick={() =>
+            onSelect({
+              startTime: data.startTime,
+              endTime: data.endTime,
+              receipts: getReceiptsBetweenDates(data.startTime, data.endTime),
+              date: new Date().toLocaleDateString(),
+              employeeID: data.employeeID,
+              type: "xreport",
+            })
+          }
           sx={{ paddingBlock: 2 }}
         >
           {t("choose")}
         </Button>
-        <Dialog
-          maxWidth="xl"
-          open={showReceipt}
-          onClose={() => setShowReceipt(false)}
-          scroll="body"
-        >
-          <Box>
-            {/* <Receipt payment={data.payment} cashout={data.products} /> */}
-          </Box>
-        </Dialog>
       </Stack>
     </Paper>
   );
@@ -69,13 +70,6 @@ const ShiftBox = ({ data, onSelect = (shift) => {} }) => {
 //Z-Reports Item that shows the date and a button to open the report
 const ZReportBox = ({ data, onSelect = (zReport) => {} }) => {
   const { t } = useTranslation();
-  const [showReport, setShowReport] = useState(false);
-  const scrollRef = useRef();
-  const reportRef = useRef();
-
-  const handlePrint = useReactToPrint({
-    content: () => reportRef.current,
-  });
 
   return (
     <Paper
@@ -94,33 +88,11 @@ const ZReportBox = ({ data, onSelect = (zReport) => {} }) => {
         <Button
           color="secondary"
           variant="contained"
-          onClick={() => {
-            setShowReport(true);
-            onSelect(data);
-            console.log(data);
-          }}
+          onClick={() => onSelect({ ...data, type: "zreport" })}
           sx={{ paddingBlock: 2 }}
         >
           {t("createReport")}
         </Button>
-        <DialogWithButtons
-          scrollRef={scrollRef}
-          open={showReport}
-          onClose={() => setShowReport(false)}
-          buttons={{
-            endAdornment: (
-              <Paper>
-                <IconButton onClick={handlePrint} sx={{ borderRadius: 0 }}>
-                  <Print />
-                </IconButton>
-              </Paper>
-            ),
-          }}
-        >
-          <Box ref={scrollRef} sx={{ height: "80vh", overflowY: "scroll" }}>
-            <ZReport ref={reportRef} data={data} />
-          </Box>
-        </DialogWithButtons>
       </Stack>
     </Paper>
   );
@@ -131,8 +103,18 @@ export default function Reports() {
   const shifts = GetFromLocalStorage("shifts");
   const navigate = useNavigate();
 
+  const [showReport, setShowReport] = useState(false);
+  const [reportData, setReportData] = useState({ type: "zreport" });
+
+  const scrollRef = useRef();
+  const reportRef = useRef();
+
   const shiftsScrollRef = useRef();
   const zReportsScrollRef = useRef();
+
+  const handlePrint = useReactToPrint({
+    content: () => reportRef.current,
+  });
 
   return (
     <Stack
@@ -151,7 +133,7 @@ export default function Reports() {
       >
         <Box width={"100%"} position={"relative"}>
           <Typography variant="h4" textAlign={"center"} color={"primary"}>
-            {t("shifts").toUpperCase()}
+            {t("xReports").toUpperCase()}
           </Typography>
           <ScrollButtons
             scrollRef={shiftsScrollRef}
@@ -190,7 +172,16 @@ export default function Reports() {
               paddingBlock={2}
             >
               {shifts.reverse().map((shift, index) => {
-                return <ShiftBox key={index} data={shift} />;
+                return (
+                  <XReportBox
+                    key={index}
+                    data={shift}
+                    onSelect={(data) => {
+                      setReportData(data);
+                      setShowReport(true);
+                    }}
+                  />
+                );
               })}
             </Stack>
           </Paper>
@@ -239,12 +230,43 @@ export default function Reports() {
               {getCollapsedReceiptsByDate()
                 .reverse()
                 .map((receipt, index) => {
-                  return <ZReportBox key={index} data={receipt} />;
+                  return (
+                    <ZReportBox
+                      key={index}
+                      data={receipt}
+                      onSelect={(data) => {
+                        setReportData(data);
+                        setShowReport(true);
+                      }}
+                    />
+                  );
                 })}
             </Stack>
           </Paper>
         </Box>
       </Stack>
+      <DialogWithButtons
+        scrollRef={scrollRef}
+        open={showReport}
+        onClose={() => setShowReport(false)}
+        buttons={{
+          endAdornment: (
+            <Paper>
+              <IconButton onClick={handlePrint} sx={{ borderRadius: 0 }}>
+                <Print />
+              </IconButton>
+            </Paper>
+          ),
+        }}
+      >
+        <Box ref={scrollRef} sx={{ height: "80vh", overflowY: "scroll" }}>
+          <ReportPaper
+            type={reportData.type}
+            ref={reportRef}
+            data={reportData}
+          />
+        </Box>
+      </DialogWithButtons>
       <Button
         variant="contained"
         onClick={() => navigate("../home")}
