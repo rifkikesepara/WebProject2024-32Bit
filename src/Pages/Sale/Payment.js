@@ -39,6 +39,7 @@ export default function Payment() {
   const navigate = useNavigate();
   const { setAlert } = useAlert();
   const storeInfo = useStore();
+  console.log(storeInfo);
 
   const keyboard = useRef();
   const checkoutRef = useRef();
@@ -384,12 +385,10 @@ export default function Payment() {
                 setInput(input);
               }}
             />
-            <Box
-              sx={{
-                display: "flex",
-                width: "100%",
-                justifyContent: "space-around",
-              }}
+            <Stack
+              direction={"row"}
+              width={"96%"}
+              justifyContent={"space-between"}
             >
               <Button
                 variant="contained"
@@ -399,13 +398,14 @@ export default function Payment() {
                 {t("goBack")}
               </Button>
               <Button
-                disabled={due}
+                disabled={due != 0}
                 variant="contained"
                 disableElevation
                 color="secondary"
                 sx={{
                   height: 80,
                   fontSize: 20,
+                  width: 220,
                 }}
                 onClick={() => {
                   SaveToSessionStorage("cashout", cashout);
@@ -416,7 +416,7 @@ export default function Payment() {
               >
                 {t("pay")}
               </Button>
-            </Box>
+            </Stack>
           </Box>
         </Box>
         <Box

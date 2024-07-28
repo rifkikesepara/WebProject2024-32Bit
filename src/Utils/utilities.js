@@ -118,3 +118,9 @@ export const GetFromSessionStorage = (item = "") => {
   } else return JSON.parse(sessionStorage.getItem(item));
 };
 //----------------------------------------------
+
+export function ClearCache() {
+  sessionStorage.removeItem("timers");
+  sessionStorage.removeItem("totals");
+  localStorage.removeItem("offers");
+}

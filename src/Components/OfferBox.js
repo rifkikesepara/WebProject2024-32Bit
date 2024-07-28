@@ -120,7 +120,7 @@ export default function OfferBox() {
   );
 
   //fetching the offers datas
-  useData("./offers.json", (data) => {
+  useData("../offers.json", (data) => {
     LOG("fetching offers...", "red");
     const array = [];
     data.map((data) => {
@@ -156,7 +156,7 @@ export default function OfferBox() {
           <Typography
             sx={{
               width: "100%",
-              fontSize: { xs: 13, md: 16, sm: "1.7vw" },
+              fontSize: { xs: 13, md: "1.35vw", sm: "1.7vw" },
             }}
           >
             {activeOffers[i.current]?.offerName}

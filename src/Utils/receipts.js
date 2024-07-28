@@ -65,3 +65,8 @@ export const getTaxesFromReceipt = (receipt) => {
 
   return taxes;
 };
+
+//returns the receipt by indicated receiptID
+export const getReceiptFromID = (receiptID) => {
+  return GetFromLocalStorage("receipts").find(({ id }) => id == receiptID);
+};

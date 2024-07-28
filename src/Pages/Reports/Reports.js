@@ -44,19 +44,6 @@ const ShiftBox = ({ data, onSelect = (shift) => {} }) => {
           {t("endTime")}: {data.endTime}
         </Typography>
         <Button
-          variant="contained"
-          onClick={() => {
-            console.log(data);
-            setShowReceipt(true);
-          }}
-          sx={{
-            paddingBlock: 2,
-            display: { md: "none", sm: "block", xs: "block" },
-          }}
-        >
-          {t("show")}
-        </Button>
-        <Button
           color="secondary"
           variant="contained"
           onClick={() => onSelect(data)}
@@ -202,7 +189,7 @@ export default function Reports() {
               spacing={2}
               paddingBlock={2}
             >
-              {shifts.map((shift, index) => {
+              {shifts.reverse().map((shift, index) => {
                 return <ShiftBox key={index} data={shift} />;
               })}
             </Stack>
@@ -231,6 +218,7 @@ export default function Reports() {
                 position: "sticky",
                 top: 0,
                 paddingBlock: 2,
+                zIndex: 20,
               }}
             >
               <Stack direction={"row"} justifyContent={"space-evenly"}>
@@ -248,9 +236,11 @@ export default function Reports() {
               spacing={2}
               paddingBlock={2}
             >
-              {getCollapsedReceiptsByDate().map((receipt, index) => {
-                return <ZReportBox key={index} data={receipt} />;
-              })}
+              {getCollapsedReceiptsByDate()
+                .reverse()
+                .map((receipt, index) => {
+                  return <ZReportBox key={index} data={receipt} />;
+                })}
             </Stack>
           </Paper>
         </Box>

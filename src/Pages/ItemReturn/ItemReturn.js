@@ -27,6 +27,7 @@ import { Receipt, ReturnReceipt } from "../../Components/Receipt";
 import { Print } from "@mui/icons-material";
 import { useReactToPrint } from "react-to-print";
 import { useTranslation } from "react-i18next";
+import { getReceiptFromID } from "../../Utils/receipts";
 
 //shows the receipts data and provides button to select the receipt or show the receipt
 const ReceiptBox = ({ data, onSelect = (receipt) => {} }) => {
@@ -105,11 +106,14 @@ const LastReceipts = forwardRef(({ onSelect = (receipt) => {} }, ref) => {
       alignSelf={"center"}
       spacing={3}
     >
-      {receipts.map((receipt) => {
-        return (
-          <ReceiptBox key={receipt.id} data={receipt} onSelect={onSelect} />
-        );
-      })}
+      {receipts
+        .reverse()
+        .slice(0, 10)
+        .map((receipt) => {
+          return (
+            <ReceiptBox key={receipt.id} data={receipt} onSelect={onSelect} />
+          );
+        })}
     </Stack>
   );
 });
@@ -137,11 +141,6 @@ const ReceiptsDialog = ({
       <LastReceipts ref={scrollRef} onSelect={onSelect} />
     </DialogWithButtons>
   );
-};
-
-//the function that returns the receipt by indicated receipt id
-const findTheReceiptByID = (receiptID) => {
-  return GetFromLocalStorage("receipts").find(({ id }) => id == receiptID);
 };
 
 export default function ItemReturn() {
@@ -206,11 +205,6 @@ export default function ItemReturn() {
       SaveToLocalStorage("returnReceipts", returnReceipts);
     }, 1000);
   };
-
-  // useData("./fakeReceipts.json", (data) => {
-  //   if (!GetFromLocalStorage("receipts").length)
-  //     SaveToLocalStorage("receipts", data);
-  // });
 
   return (
     <Stack
@@ -303,14 +297,14 @@ export default function ItemReturn() {
               />
               <Button
                 disabled={
-                  !receiptInput.length || !findTheReceiptByID(receiptInput)
+                  !receiptInput.length || !getReceiptFromID(receiptInput)
                 }
                 color="secondary"
                 sx={{ paddingBlock: 3 }}
                 variant="contained"
                 onClick={() =>
                   setReturnItemDialog({
-                    receipt: findTheReceiptByID(receiptInput),
+                    receipt: getReceiptFromID(receiptInput),
                     show: true,
                   })
                 }

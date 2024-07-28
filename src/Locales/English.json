@@ -216,5 +216,6 @@
   "added": "Added",
   "startTime": "Start",
   "endTime": "End",
-  "createReport": "Create Report"
+  "createReport": "Create Report",
+  "clearCache": "Clear Cache"
 }

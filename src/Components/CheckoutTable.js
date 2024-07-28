@@ -181,7 +181,7 @@ const CheckoutTable = forwardRef(
                             <InfoRounded sx={{ opacity: 0 }} />
                           </IconButton>
                           <ToggleButton
-                            disabled={true}
+                            disabled={disabled}
                             key={index}
                             value={product.id}
                             sx={{

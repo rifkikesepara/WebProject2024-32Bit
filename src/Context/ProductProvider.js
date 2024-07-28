@@ -2,6 +2,7 @@ import { createContext, useMemo, useState } from "react";
 import API from "../Resources/productsAPI.json";
 import useData from "../Hooks/useData";
 import LOG from "../Debug/Console";
+import { GetFromLocalStorage, SaveToLocalStorage } from "../Utils/utilities";
 
 export const ProductContext = createContext({
   products: [],
@@ -23,6 +24,12 @@ export default function ProductProvider({ children }) {
     () => {},
     [API]
   );
+
+  useData("./fakeReceipts.json", (data) => {
+    const receipts = GetFromLocalStorage("receipts");
+    if (receipts.length > data.length) SaveToLocalStorage("receipts", receipts);
+    else SaveToLocalStorage("receipts", data);
+  });
 
   const getAllProducts = () => {
     var array = [];
