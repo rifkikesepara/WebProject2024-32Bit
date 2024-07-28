@@ -43,7 +43,7 @@ This project allows a store to manage and hold their sales and see the sales rep
 - [x] Toggling theme between dark and light.
 - [x] Changing the language of the application. (Turkish, English)
 - [x] Showing the end of the day report (Z-Report)
-- [ ] Showing the report about the shifts.
+- [x] Showing the report about the shifts. (X-Report)
 
 ---
 
@@ -137,7 +137,6 @@ For a conculasion, I have learned so many new things about React from this proje
 ![Screenshot](https://github.com/rifkikesepara/WebProject2024-32Bit/assets/74590423/eb1e58e7-d88d-40ee-ac48-1716174c7937)
 ![Screenshot](https://github.com/user-attachments/assets/dc33c3e7-778b-4409-b773-cc90700f3512)
 ![Screenshot](https://github.com/rifkikesepara/WebProject2024-32Bit/assets/74590423/126167c1-a66a-4cca-af32-e324c25f2402)
-
 
 ---
 
