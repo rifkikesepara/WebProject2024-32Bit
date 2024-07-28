@@ -22,10 +22,12 @@ import LastSalesTable from "../Dashboard/LastSalesTable";
 import { Receipt } from "../../Components/Receipt";
 import usePreferences from "../../Hooks/usePreferences";
 import DialogWithButtons from "../../Components/DialogWithButtons";
+import { useTranslation } from "react-i18next";
 
 export default function Collections() {
+  const navigate = useNavigate();
   const { isDesktop } = usePreferences();
-
+  const { t } = useTranslation();
   const receiptRef = useRef();
 
   const [selectedDate, setSelectedDate] = useState(
@@ -34,7 +36,6 @@ export default function Collections() {
   const [showReceipt, setShowReceipt] = useState(false);
   const [selectedReceipt, setSelectedReceipt] = useState();
   const user = GetFromSessionStorage("employee");
-  const navigate = useNavigate();
 
   const receipts = getCollapsedReceiptsByDate();
 
@@ -80,7 +81,9 @@ export default function Collections() {
           position={"relative"}
         >
           <Stack position={"absolute"} left={0}>
-            <Typography>Total Earnings: {total.toFixed(2)}₺</Typography>
+            <Typography>
+              {t("totalEarning")}: {total.toFixed(2)}₺
+            </Typography>
           </Stack>
           <Stack alignItems={"center"} justifyContent={"center"}>
             <Typography variant="h4">{user.employeeName}</Typography>
@@ -122,7 +125,7 @@ export default function Collections() {
                   setSelectedReceipt(getReceiptFromID(data.id));
                 }}
               >
-                Göster
+                {t("show")}
               </Button>
             )}
           />
@@ -148,7 +151,7 @@ export default function Collections() {
         onClick={() => navigate("../home")}
         sx={{ paddingBlock: isDesktop ? 4 : 1, borderRadius: 5, width: 400 }}
       >
-        Geri Dön
+        {t("goBack")}
       </Button>
     </Stack>
   );
