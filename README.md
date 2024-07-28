@@ -5,6 +5,9 @@
 <h3 align="center">Managing sales of the store</h3>
 
 <h4 align="center"> 
+	<a href="https://rifkikesepara.github.io/WebProject2024-32Bit/">LIVE DEMO</a> (User Code: rifki - Password: 123)
+</h4>
+<h4 align="center"> 
 	 Status: On Progress
 </h4>
 
@@ -93,7 +96,7 @@ The following tools were used in the construction of the project:
 - **[react-to-print](https://github.com/MatthewHerbst/react-to-print/tree/master)**
 - **[react-window](https://react-window.vercel.app/#/examples/grid/fixed-size)**
 
-> See the file [package.json](https://github.com/evelinsteiger/README-template/blob/master/package.json)
+> See the file [package.json](https://github.com/rifkikesepara/WebProject2024-32Bit/blob/master/package.json)
 
 #### [](#)**Documentation**
 
